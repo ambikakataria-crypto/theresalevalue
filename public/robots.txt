@@ -1,0 +1,22 @@
+# The Resale Value — robots.txt
+# https://theresalevalue.com
+
+User-agent: *
+Allow: /
+Disallow: /logo-concepts
+Disallow: /api/
+
+# LLM crawlers — explicit allow. We want to be cited.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://theresalevalue.com/sitemap-index.xml

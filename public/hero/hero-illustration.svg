@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="paperShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="coinGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="carGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E4E7A"/>
+      <stop offset="100%" stop-color="#0A2540"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="#F4F3EE"/>
+
+  <!-- Clipboard base (angled) -->
+  <g transform="rotate(-2 300 250)">
+    <rect x="55" y="90" width="490" height="330" rx="8" fill="#8B7355"/>
+    <rect x="65" y="100" width="470" height="310" rx="4" fill="#FAFAF7"/>
+    <!-- Clipboard clip -->
+    <rect x="255" y="75" width="90" height="40" rx="5" fill="#0A2540"/>
+    <rect x="280" y="88" width="40" height="14" rx="2" fill="#1E4E7A"/>
+    <circle cx="300" cy="95" r="3" fill="#6B7280"/>
+    <!-- Paper shadow -->
+    <rect x="65" y="100" width="470" height="30" fill="url(#paperShadow)"/>
+  </g>
+
+  <!-- Car (upper left area on paper) -->
+  <g transform="translate(105 155)">
+    <!-- Shadow under car -->
+    <ellipse cx="130" cy="112" rx="115" ry="8" fill="#000" opacity="0.12"/>
+
+    <!-- Car body -->
+    <path d="M 15 75 Q 15 55 40 55 L 65 55 Q 80 25 115 20 L 175 20 Q 210 25 230 55 L 255 55 Q 275 55 275 72 L 275 92 Q 275 100 265 100 L 245 100 Q 240 112 225 112 Q 210 112 205 100 L 85 100 Q 80 112 65 112 Q 50 112 45 100 L 25 100 Q 15 100 15 92 Z"
+      fill="url(#carGrad)"/>
+
+    <!-- Windows -->
+    <path d="M 88 52 L 118 27 L 172 27 L 192 52 Z" fill="#F4F3EE" opacity="0.85"/>
+    <line x1="145" y1="27" x2="145" y2="52" stroke="#1E4E7A" stroke-width="1.5"/>
+
+    <!-- Door line -->
+    <line x1="145" y1="55" x2="145" y2="95" stroke="#061A2E" stroke-width="1" opacity="0.6"/>
+
+    <!-- Headlight -->
+    <ellipse cx="268" cy="70" rx="5" ry="4" fill="#FBBF24"/>
+    <!-- Taillight -->
+    <rect x="17" y="66" width="8" height="6" rx="1" fill="#DC2626"/>
+
+    <!-- Front wheel -->
+    <circle cx="65" cy="105" r="16" fill="#1A1A1A"/>
+    <circle cx="65" cy="105" r="11" fill="#3D3D3D"/>
+    <circle cx="65" cy="105" r="5" fill="#6B7280"/>
+    <!-- Rear wheel -->
+    <circle cx="225" cy="105" r="16" fill="#1A1A1A"/>
+    <circle cx="225" cy="105" r="11" fill="#3D3D3D"/>
+    <circle cx="225" cy="105" r="5" fill="#6B7280"/>
+
+    <!-- Door handle -->
+    <rect x="180" y="72" width="14" height="3" rx="1" fill="#061A2E"/>
+  </g>
+
+  <!-- Coin stack (bottom left area) -->
+  <g transform="translate(150 320)">
+    <!-- Coin 3 (bottom) -->
+    <ellipse cx="0" cy="52" rx="34" ry="9" fill="#B45309"/>
+    <rect x="-34" y="42" width="68" height="10" fill="#F59E0B"/>
+    <ellipse cx="0" cy="42" rx="34" ry="9" fill="url(#coinGrad)"/>
+
+    <!-- Coin 2 (middle) -->
+    <ellipse cx="8" cy="30" rx="30" ry="8" fill="#B45309"/>
+    <rect x="-22" y="22" width="60" height="8" fill="#F59E0B"/>
+    <ellipse cx="8" cy="22" rx="30" ry="8" fill="url(#coinGrad)"/>
+
+    <!-- Coin 1 (top) -->
+    <ellipse cx="16" cy="10" rx="28" ry="7" fill="#B45309"/>
+    <rect x="-12" y="3" width="56" height="7" fill="#F59E0B"/>
+    <ellipse cx="16" cy="3" rx="28" ry="7" fill="url(#coinGrad)"/>
+    <!-- ₹ mark on top coin -->
+    <text x="16" y="8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" fill="#0A2540">₹</text>
+
+    <!-- Loose coin (in front, lying flat) -->
+    <ellipse cx="-40" cy="65" rx="18" ry="17" fill="url(#coinGrad)"/>
+    <ellipse cx="-40" cy="65" rx="14" ry="13" fill="none" stroke="#B45309" stroke-width="1" opacity="0.5"/>
+    <text x="-40" y="70" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="12" fill="#0A2540">₹</text>
+  </g>
+
+  <!-- Calculator (right side) -->
+  <g transform="translate(340 210)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="180" height="200" rx="14" fill="#000" opacity="0.15"/>
+    <!-- Body -->
+    <rect x="0" y="0" width="180" height="200" rx="14" fill="#1A1A1A"/>
+    <!-- Top brand strip -->
+    <rect x="12" y="12" width="60" height="6" rx="2" fill="#3D3D3D"/>
+
+    <!-- Display -->
+    <rect x="12" y="26" width="156" height="42" rx="4" fill="#3B4A5C"/>
+    <rect x="16" y="30" width="148" height="34" rx="2" fill="#2A3948"/>
+    <text x="160" y="56" text-anchor="end" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="20" fill="#10B981">6.55</text>
+    <text x="20" y="42" font-family="'Inter', system-ui, sans-serif" font-size="7" fill="#10B981" opacity="0.7">FAIR VALUE</text>
+
+    <!-- Buttons: 4 cols x 5 rows -->
+    <g>
+      <!-- Row 1: function keys -->
+      <rect x="12" y="76" width="36" height="22" rx="3" fill="#3D3D3D"/>
+      <rect x="52" y="76" width="36" height="22" rx="3" fill="#3D3D3D"/>
+      <rect x="92" y="76" width="36" height="22" rx="3" fill="#3D3D3D"/>
+      <rect x="132" y="76" width="36" height="22" rx="3" fill="#DC2626"/>
+
+      <!-- Row 2 -->
+      <rect x="12" y="102" width="36" height="22" rx="3" fill="#4A5563"/>
+      <rect x="52" y="102" width="36" height="22" rx="3" fill="#4A5563"/>
+      <rect x="92" y="102" width="36" height="22" rx="3" fill="#4A5563"/>
+      <rect x="132" y="102" width="36" height="22" rx="3" fill="#4A5563"/>
+
+      <!-- Row 3 -->
+      <rect x="12" y="128" width="36" height="22" rx="3" fill="#4A5563"/>
+      <rect x="52" y="128" width="36" height="22" rx="3" fill="#4A5563"/>
+      <rect x="92" y="128" width="36" height="22" rx="3" fill="#4A5563"/>
+      <rect x="132" y="128" width="36" height="22" rx="3" fill="#4A5563"/>
+
+      <!-- Row 4 -->
+      <rect x="12" y="154" width="36" height="22" rx="3" fill="#4A5563"/>
+      <rect x="52" y="154" width="36" height="22" rx="3" fill="#4A5563"/>
+      <rect x="92" y="154" width="36" height="22" rx="3" fill="#4A5563"/>
+      <rect x="132" y="154" width="36" height="22" rx="3" fill="#4A5563"/>
+
+      <!-- Row 5 (bottom) -->
+      <rect x="12" y="180" width="36" height="18" rx="3" fill="#4A5563"/>
+      <rect x="52" y="180" width="36" height="18" rx="3" fill="#4A5563"/>
+      <rect x="92" y="180" width="36" height="18" rx="3" fill="#4A5563"/>
+      <rect x="132" y="180" width="36" height="18" rx="3" fill="#10B981"/>
+    </g>
+
+    <!-- Button glyphs (subtle) -->
+    <g font-family="'Inter', sans-serif" font-size="8" fill="#F4F3EE" opacity="0.65" text-anchor="middle">
+      <text x="30" y="91">MRC</text>
+      <text x="70" y="91">M-</text>
+      <text x="110" y="91">M+</text>
+      <text x="150" y="91" fill="#F4F3EE" opacity="0.9">ON/C</text>
+
+      <text x="30" y="117">7</text><text x="70" y="117">8</text><text x="110" y="117">9</text><text x="150" y="117">÷</text>
+      <text x="30" y="143">4</text><text x="70" y="143">5</text><text x="110" y="143">6</text><text x="150" y="143">×</text>
+      <text x="30" y="169">1</text><text x="70" y="169">2</text><text x="110" y="169">3</text><text x="150" y="169">−</text>
+      <text x="30" y="192">0</text><text x="70" y="192">.</text><text x="110" y="192">+</text><text x="150" y="192" fill="#F4F3EE" opacity="0.9">=</text>
+    </g>
+  </g>
+
+  <!-- Subtle pencil at top right -->
+  <g transform="rotate(28 500 130)">
+    <rect x="440" y="118" width="120" height="8" rx="1" fill="#F59E0B"/>
+    <polygon points="560,118 575,122 560,126" fill="#1A1A1A"/>
+    <rect x="435" y="118" width="10" height="8" fill="#DC2626"/>
+  </g>
+</svg>

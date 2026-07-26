@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ValuationCalculator from '../components/ValuationCalculator.tsx';
+
+const title = 'Used Car Valuation & Car Value Calculator: Fair Price India';
+const description = 'Get a used car valuation and fair car value in 30 seconds with our free calculator. Price band from 10M+ India transactions. No signup, no dealer calls.';
+---
+<BaseLayout title={title} description={description}>
+  <section class="py-12 md:py-16 bg-cream-100 border-b border-cream-200">
+    <div class="container-tight">
+      <div class="max-w-2xl">
+        <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">Used car valuation</div>
+        <h1 class="text-3xl md:text-5xl font-serif text-navy-900 mb-4">
+          Used car valuation: a fair price band in 30 seconds.
+        </h1>
+        <p class="text-lg text-graphite leading-relaxed">
+          Our free car value calculator gives you an honest, market-tested price for any used car in India. No phone number. No data sold. Just the number you need to decide what to do with your car.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="container-tight">
+      <ValuationCalculator client:load />
+    </div>
+  </section>
+
+  <section class="py-16 bg-cream-100">
+    <div class="container-tight max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-6">Frequently asked</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-semibold text-navy-900 text-lg mb-2">Why a price band and not a single number?</h3>
+          <p class="text-graphite">Because "the price" doesn't exist. Any car has a fair range based on colour, condition, service history, buyer type, and negotiation. We show you the range within which 80% of similar transactions land, so you know what's fair, what's under-market, and what's above-market.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-navy-900 text-lg mb-2">Whose data is this based on?</h3>
+          <p class="text-graphite">Real transaction data from <a href="https://www.cars24.com">Cars24</a> — India's largest used-car platform with 10M+ vehicle inspections. Read our full <a href="/methodology">methodology</a> and <a href="/about">about page</a> for the details of our data partnership and independence.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-navy-900 text-lg mb-2">Will you call me to sell my car?</h3>
+          <p class="text-graphite">No. We don't collect your contact details. We're not a marketplace, dealer, or lead-gen site. We're a data product. If you want to sell, that's your decision to make, with the right number in hand.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-navy-900 text-lg mb-2">Is the valuation guaranteed?</h3>
+          <p class="text-graphite">No valuation is guaranteed. The actual price you get depends on the condition of your vehicle, the buyer, and market timing. Our band represents fair-market expectation based on comparable recent transactions. Treat it as informed guidance, not a contract.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

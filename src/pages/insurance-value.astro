@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ComingSoon from '../components/ComingSoon.astro';
+---
+<BaseLayout
+  title="Car Insurance IDV Calculator India: Coming Soon"
+  description="Neutral Insured Declared Value for your car. Know what your insurer should actually be paying you. Launching 2026."
+  noindex
+>
+  <ComingSoon
+    icon="🛡️"
+    category="Insurance IDV"
+    headline="What your insurer should actually be paying you."
+    description="Insured Declared Value determines both your premium and your payout in case of total loss. Insurers underquote IDV by an average of 12%. We'll show you the fair number."
+    bullets={[
+      'Fair IDV for your specific make, model, year, variant, and city',
+      'Comparison against 10+ insurance providers\' quoted IDVs',
+      'Renewal-time negotiation script for what to ask and what to push back on',
+      'Coverage: motor, comprehensive, third-party across all major Indian insurers',
+    ]}
+    eta="Q1 2027"
+  />
+</BaseLayout>

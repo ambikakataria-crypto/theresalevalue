@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Methodology: How We Calculate Used Car Value | The Resale Value';
+const description = 'The full methodology behind our used car valuation model: data sources, statistical approach, confidence bands, refresh cadence, and known limitations.';
+---
+<BaseLayout title={title} description={description}>
+  <section class="py-16 md:py-24">
+    <div class="container-tight max-w-3xl">
+      <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">Methodology</div>
+      <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-6">
+        How we calculate a fair price.
+      </h1>
+      <p class="text-lg text-graphite leading-relaxed mb-4">
+        Every valuation number on this site is derived from real transaction data using the process described below.
+        This page is intended to be complete enough that a statistically-trained reader could reproduce our approach.
+      </p>
+      <p class="text-sm text-slate-soft italic">Last updated: July 2026</p>
+    </div>
+  </section>
+
+  <section class="py-8 border-t border-cream-200">
+    <div class="container-tight max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-4">1. Data source</h2>
+      <div class="space-y-4 text-graphite leading-relaxed">
+        <p>
+          Our exclusive data partner is <a href="https://www.cars24.com">Cars24</a>, India's largest used-car platform.
+          Every valuation on this site is grounded in Cars24's inspection and transaction dataset:
+        </p>
+        <ul class="space-y-2 pl-6 list-disc">
+          <li><strong>10M+ vehicle inspections</strong> conducted by Cars24-trained inspectors across 200+ Indian cities</li>
+          <li><strong>Actual transaction prices</strong> (not asking prices) at which vehicles changed hands</li>
+          <li><strong>140+ inspection parameters</strong> per vehicle: engine, body, tyres, service history, ownership, city</li>
+          <li><strong>Rolling 24-month window</strong> to keep the model responsive to current market conditions</li>
+        </ul>
+        <p>
+          We disclose the data partnership openly on every page of this site and on our <a href="/about">about page</a>.
+          Independence is enforced by contract and by our editorial policy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8 border-t border-cream-200">
+    <div class="container-tight max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-4">2. The pricing model</h2>
+      <div class="space-y-4 text-graphite leading-relaxed">
+        <p>Each vehicle's fair-market band is derived from a two-stage model:</p>
+        <div class="card-institutional bg-white">
+          <h3 class="font-semibold text-navy-900 mb-2">Stage 1: Comparable transactions</h3>
+          <p class="text-sm">We identify the 500–3,000 most similar recent transactions to your vehicle by make, model, year (±1), variant, kilometrage bucket, ownership count, and city cluster.</p>
+        </div>
+        <div class="card-institutional bg-white">
+          <h3 class="font-semibold text-navy-900 mb-2">Stage 2: Regression adjustment</h3>
+          <p class="text-sm">A gradient-boosted regression corrects for residual factors: exact kilometrage, month of sale, city-level demand, and inspection score. Output is a mean expected price plus a prediction interval.</p>
+        </div>
+        <p>
+          The bounds shown on your result page represent the 10th and 90th percentiles of the prediction distribution. That means 80% of comparable transactions historically closed within this band.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8 border-t border-cream-200">
+    <div class="container-tight max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-4">3. Confidence bands</h2>
+      <div class="space-y-4 text-graphite leading-relaxed">
+        <p>Confidence is a proxy for how densely populated your vehicle's segment is in our dataset:</p>
+        <div class="grid gap-3">
+          <div class="flex gap-4 items-start p-4 bg-white rounded-md border border-cream-200">
+            <div class="font-semibold text-signal-600 min-w-16">High</div>
+            <div class="text-sm">1,000+ comparable transactions in the last 6 months. Typically popular, mainstream models under 8 years old.</div>
+          </div>
+          <div class="flex gap-4 items-start p-4 bg-white rounded-md border border-cream-200">
+            <div class="font-semibold text-caution-500 min-w-16">Medium</div>
+            <div class="text-sm">200–1,000 comparables. Older mainstream models or newer niche variants.</div>
+          </div>
+          <div class="flex gap-4 items-start p-4 bg-white rounded-md border border-cream-200">
+            <div class="font-semibold text-slate-soft min-w-16">Lower</div>
+            <div class="text-sm">Under 200 comparables. Rare models, very old vehicles, or luxury cars. The band widens accordingly.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8 border-t border-cream-200">
+    <div class="container-tight max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-4">4. Refresh cadence</h2>
+      <div class="space-y-4 text-graphite leading-relaxed">
+        <p>
+          Our model is retrained <strong>every Sunday</strong> on the previous 24 months of rolling data. Model version and
+          training-set-size are visible in the site footer. Corrections and material model changes are logged publicly on this page.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8 border-t border-cream-200">
+    <div class="container-tight max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-4">5. What we don't do</h2>
+      <div class="space-y-4 text-graphite leading-relaxed">
+        <ul class="space-y-3 pl-6 list-disc">
+          <li>We do not recommend where you should buy or sell your vehicle. We do not route you to dealers or marketplaces.</li>
+          <li>We do not charge for valuations. We do not collect personal information at the point of valuation.</li>
+          <li>We do not adjust prices in favour of any listing partner. Our data partnership with Cars24 does not influence output pricing, enforced by our independence agreement.</li>
+          <li>We do not offer guarantees on the price you will actually get. Real-world outcomes depend on your specific vehicle's condition and negotiation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8 border-t border-cream-200">
+    <div class="container-tight max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-4">6. Known limitations (v1)</h2>
+      <div class="space-y-4 text-graphite leading-relaxed">
+        <p>
+          This site is in early access. Two limitations we are transparent about right now:
+        </p>
+        <ol class="space-y-3 pl-6 list-decimal">
+          <li>Our current MVP uses a simplified pricing heuristic. Production integration with the full Cars24 model launches shortly.</li>
+          <li>We cover cars first. Two-wheelers, insurance IDV, and loan-vs-resale tools are being built. See the <a href="/">homepage</a> for the roadmap.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 mt-8 bg-cream-100">
+    <div class="container-tight max-w-3xl">
+      <div class="card-institutional bg-white">
+        <h3 class="font-semibold text-navy-900 text-lg mb-2">Found an error?</h3>
+        <p class="text-sm text-graphite mb-4">
+          If you believe a valuation is materially wrong for a specific make or model, we want to know.
+          Corrections are logged publicly on this page.
+        </p>
+        <a href="/contact" class="inline-flex items-center px-5 py-2.5 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 no-underline hover:no-underline transition-colors">
+          Report a correction →
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

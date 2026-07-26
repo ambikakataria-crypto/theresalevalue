@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Blogs: India Used Car Value & Resale Reports';
+const description = 'Data-led blogs on India\'s used car market: which cars hold value best, how prices are moving, and what it means for buyers and sellers.';
+
+const articles = [
+  {
+    slug: 'which-indian-cars-hold-value-best-2026',
+    title: 'The 10 Indian cars that hold their value best in 2026',
+    excerpt: 'We analysed 500,000+ resale transactions from the last 24 months to rank India\'s best-holding cars. The result: some familiar names, and one genuine surprise.',
+    date: '2026-07-26',
+    readTime: '7 min read',
+    category: 'Value retention',
+    featured: true,
+  },
+];
+---
+<BaseLayout title={title} description={description}>
+  <section class="py-12 md:py-16 bg-cream-100 border-b border-cream-200">
+    <div class="container-tight">
+      <div class="max-w-3xl">
+        <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">Blogs</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4">
+          What the data says about India's vehicles.
+        </h1>
+        <p class="text-lg text-graphite leading-relaxed">
+          Every article grounded in the same 10M+ inspection dataset that powers our valuations. No opinions dressed up as analysis. Just what the numbers actually show.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="container-tight max-w-4xl">
+      {articles.map(article => (
+        <a href={`/blogs/${article.slug}`} class="block card-institutional bg-white hover:border-navy-700 no-underline hover:no-underline transition-colors mb-6">
+          {article.featured && (
+            <div class="text-[10px] uppercase tracking-widest text-signal-600 mb-3 font-semibold">Featured</div>
+          )}
+          <div class="text-xs uppercase tracking-widest text-slate-soft mb-2">{article.category}</div>
+          <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-3 group-hover:text-trust-600">{article.title}</h2>
+          <p class="text-graphite leading-relaxed mb-4">{article.excerpt}</p>
+          <div class="text-xs text-slate-soft">
+            {new Date(article.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })} · {article.readTime}
+          </div>
+        </a>
+      ))}
+
+      <div class="mt-12 card-institutional bg-cream-100 text-center">
+        <p class="text-sm text-graphite mb-4">More blogs publishing weekly.</p>
+        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed'; this.querySelector('button').disabled=true;" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input type="email" required placeholder="you@example.com" class="flex-1 px-4 py-3 bg-white border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none" />
+          <button type="submit" class="px-6 py-3 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors">
+            Get weekly insights
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

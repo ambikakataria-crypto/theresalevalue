@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/*
+  The Resale Value — Design System (Direction A + Consumer Warmth)
+  Institutional data authority meets human, readable copy.
+*/
+
+@theme {
+  /* Brand — deep navy for authority */
+  --color-navy-950: #061A2E;
+  --color-navy-900: #0A2540;
+  --color-navy-800: #133A5C;
+  --color-navy-700: #1E4E7A;
+
+  /* Trust blue accent (used sparingly, for links + CTAs) */
+  --color-trust-500: #0071E3;
+  --color-trust-600: #0057B0;
+
+  /* Neutral warmth — cream not white, consumer-friendly */
+  --color-cream: #FAFAF7;
+  --color-cream-100: #F4F3EE;
+  --color-cream-200: #E8E6DE;
+
+  /* Text — warm charcoal, not pure black */
+  --color-charcoal: #1A1A1A;
+  --color-graphite: #3D3D3D;
+  --color-slate-soft: #6B7280;
+
+  /* Success — soft green for "great resale value" signals */
+  --color-signal-500: #10B981;
+  --color-signal-600: #059669;
+
+  /* Alert — soft amber for "below average" signals (keeps consumer tone) */
+  --color-caution-500: #F59E0B;
+
+  /* Type */
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+
+  /* Radii — slight rounding for consumer warmth */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-navy-900);
+  line-height: 1.15;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--color-navy-900);
+}
+
+.font-data,
+.tabular-nums {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@layer base {
+  a {
+    color: var(--color-trust-600);
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+  a:hover {
+    color: var(--color-navy-900);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-trust-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.container-tight {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.card-institutional {
+  background: white;
+  border: 1px solid var(--color-cream-200);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}

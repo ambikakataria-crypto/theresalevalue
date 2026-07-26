@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { make: 'maruti', model: 'swift' }, props: {
+      make: 'Maruti', model: 'Swift', variant: 'VXi',
+      overview: 'India\'s best-selling hatchback. Excellent resale value driven by parts availability, fuel economy, and universal dealer coverage.',
+      priceRange5y: { low: 3.8, expected: 4.9, high: 6.1 },
+      priceRange3y: { low: 5.2, expected: 6.1, high: 6.9 },
+      priceRange1y: { low: 6.4, expected: 6.9, high: 7.4 },
+      exShowroom: 7.5,
+      dep5y: 35,
+      demandCity: [
+        { city: 'Bengaluru', trend: 'Strong', premium: '+2%' },
+        { city: 'Mumbai', trend: 'Strong', premium: '+3%' },
+        { city: 'Delhi NCR', trend: 'Strong', premium: '+2%' },
+        { city: 'Kolkata', trend: 'Moderate', premium: '-2%' },
+        { city: 'Lucknow', trend: 'Moderate', premium: '-3%' },
+      ],
+      insights: [
+        'Depreciation curve is 8 to 12% shallower than segment average, one of the strongest hold-value hatchbacks in India.',
+        'Petrol variants (VXi/ZXi) hold 4–6% more value than diesel variants at 5 years.',
+        'AMT variants have caught up to manual in resale value since 2023.',
+        'Colour matters less than you\'d think. White, silver, and red are within 1% of each other. Bright orange trades 2 to 3% below.',
+      ],
+    } },
+  ];
+}
+
+const { make, model, variant, overview, priceRange5y, priceRange3y, priceRange1y, exShowroom, dep5y, demandCity, insights } = Astro.props;
+const title = `${make} ${model} Resale Value in India: Fair-Market Price Report`;
+const description = `Independent ${make} ${model} resale value analysis with 5-year price forecast, city-level demand, and depreciation insights for Indian owners.`;
+---
+<BaseLayout title={title} description={description}>
+  <section class="py-12 md:py-16 bg-cream-100 border-b border-cream-200">
+    <div class="container-tight">
+      <div class="max-w-3xl">
+        <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/">Home</a> · <a href="/valuation">Used Car Valuation</a> · {make} {model}
+        </div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4">
+          {make} {model}: Resale Value Report
+        </h1>
+        <p class="text-lg text-graphite leading-relaxed">{overview}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="container-tight">
+      <div class="mb-6 text-sm uppercase tracking-widest text-slate-soft">Fair-market price bands</div>
+      <div class="grid md:grid-cols-3 gap-4 mb-12">
+        {[
+          { label: '1 year old', data: priceRange1y },
+          { label: '3 years old', data: priceRange3y },
+          { label: '5 years old', data: priceRange5y },
+        ].map(({ label, data }) => (
+          <div class="card-institutional bg-white">
+            <div class="text-xs uppercase tracking-widest text-slate-soft mb-2">{label}</div>
+            <div class="font-data text-3xl text-navy-900 mb-1">₹{data.expected}L</div>
+            <div class="text-sm text-slate-soft mb-3">expected · ~{Math.round(((exShowroom - data.expected) / exShowroom) * 100)}% off ex-showroom</div>
+            <div class="text-xs font-data text-graphite">
+              Band: ₹{data.low}L – ₹{data.high}L
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="card-institutional bg-white">
+          <h3 class="text-lg font-serif text-navy-900 mb-4">City-level demand snapshot</h3>
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-xs uppercase text-slate-soft">
+                <th class="pb-2">City</th>
+                <th class="pb-2">Demand</th>
+                <th class="pb-2 text-right">Price premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              {demandCity.map(c => (
+                <tr class="border-t border-cream-200">
+                  <td class="py-2.5 text-navy-900">{c.city}</td>
+                  <td class="py-2.5 text-graphite">{c.trend}</td>
+                  <td class="py-2.5 text-right font-data">{c.premium}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div class="card-institutional bg-white">
+          <h3 class="text-lg font-serif text-navy-900 mb-4">Depreciation summary</h3>
+          <div class="mb-4">
+            <div class="text-xs uppercase text-slate-soft mb-1">5-year value retention</div>
+            <div class="font-data text-3xl text-signal-600">{100 - dep5y}%</div>
+            <div class="text-xs text-slate-soft mt-1">vs segment average of ~50%</div>
+          </div>
+          <p class="text-sm text-graphite">The {model} is a top-quartile resale performer in India, driven by universal parts availability, fuel economy, and Maruti's dealer coverage.</p>
+        </div>
+      </div>
+
+      <div class="card-institutional bg-white mb-8">
+        <h3 class="text-lg font-serif text-navy-900 mb-4">What our data says about the {make} {model}</h3>
+        <ul class="space-y-3">
+          {insights.map(insight => (
+            <li class="flex items-start gap-3 text-sm text-graphite leading-relaxed">
+              <span class="text-signal-500 mt-1 flex-shrink-0">▸</span>
+              <span>{insight}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="card-institutional bg-navy-950 text-cream">
+        <h3 class="font-serif text-xl text-white mb-2">Get a personalised valuation for your specific {model}</h3>
+        <p class="text-sm text-cream-200 mb-4">Enter your exact year, kilometres, and city for a price band tailored to your vehicle.</p>
+        <a href="/valuation" class="inline-flex items-center px-6 py-3 bg-white text-navy-900 text-sm font-medium rounded-md hover:bg-cream-100 no-underline hover:no-underline transition-colors">
+          Value my {model} →
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

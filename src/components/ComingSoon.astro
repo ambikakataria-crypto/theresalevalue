@@ -1,0 +1,57 @@
+---
+interface Props {
+  icon: string;
+  category: string;
+  headline: string;
+  description: string;
+  bullets: string[];
+  eta?: string;
+}
+const { icon, category, headline, description, bullets, eta = 'Q4 2026' } = Astro.props;
+---
+<section class="py-16 md:py-24">
+  <div class="container-tight max-w-3xl">
+    <div class="text-3xl mb-4">{icon}</div>
+    <div class="inline-flex items-center gap-2 mb-4 px-3 py-1 bg-cream-100 rounded-full text-xs font-medium text-navy-900">
+      <span class="w-1.5 h-1.5 rounded-full bg-caution-500"></span>
+      Coming soon · {eta}
+    </div>
+    <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">{category}</div>
+    <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-6">{headline}</h1>
+    <p class="text-lg text-graphite leading-relaxed mb-8">{description}</p>
+
+    <div class="card-institutional bg-white mb-8">
+      <h3 class="text-sm font-semibold text-navy-900 uppercase tracking-wider mb-4">What we're building</h3>
+      <ul class="space-y-3">
+        {bullets.map(b => (
+          <li class="flex items-start gap-3 text-sm text-graphite">
+            <span class="text-signal-500 mt-1">✓</span>
+            <span>{b}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="card-institutional bg-navy-950 text-cream">
+      <h3 class="font-serif text-xl text-white mb-2">Get notified when we launch</h3>
+      <p class="text-sm text-cream-200 mb-4">Be first to try it. No spam, one email at launch.</p>
+      <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thanks, we will notify you.'; this.querySelector('button').disabled=true;">
+        <input
+          type="email"
+          required
+          placeholder="you@example.com"
+          class="flex-1 px-4 py-3 bg-navy-900 border border-navy-800 rounded-md text-white placeholder:text-cream-200/60 focus:border-trust-500 focus:outline-none text-sm"
+        />
+        <button type="submit" class="px-6 py-3 bg-white text-navy-900 text-sm font-medium rounded-md hover:bg-cream-100 transition-colors">
+          Notify me
+        </button>
+      </form>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-cream-200">
+      <p class="text-sm text-slate-soft">
+        In the meantime, we're live for used-car valuations. <a href="/valuation" class="font-medium">Value your car now →</a>
+      </p>
+    </div>
+  </div>
+</section>

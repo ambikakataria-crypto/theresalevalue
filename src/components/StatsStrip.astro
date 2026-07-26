@@ -1,0 +1,27 @@
+---
+// Institutional stats strip — density + authority signal
+const stats = [
+  { value: '10M+', label: 'Inspections' },
+  { value: '4,200+', label: 'Model variants' },
+  { value: '200+', label: 'Cities' },
+  { value: '24 mo', label: 'Rolling data' },
+  { value: 'Weekly', label: 'Refresh' },
+  { value: 'Open', label: 'Methodology' },
+  { value: '₹0', label: 'To use' },
+];
+---
+<section class="py-6 bg-navy-950 text-cream">
+  <div class="container-tight">
+    <div class="grid grid-cols-3 md:grid-cols-7 gap-4 md:gap-2 text-center">
+      {stats.map((s, i) => (
+        <div class:list={[
+          'py-2',
+          i > 0 && 'md:border-l md:border-navy-800'
+        ]}>
+          <div class="font-data text-xl md:text-2xl font-medium text-white leading-none mb-1">{s.value}</div>
+          <div class="text-[10px] md:text-xs uppercase tracking-widest text-cream-200">{s.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

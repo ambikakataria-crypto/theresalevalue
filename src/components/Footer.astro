@@ -1,0 +1,76 @@
+---
+const year = new Date().getFullYear();
+
+const columns = [
+  {
+    title: 'Value your vehicle',
+    links: [
+      { href: '/valuation', label: 'Used Car Valuation' },
+      { href: '/new-car-depreciation', label: 'New Car Depreciation' },
+      { href: '/bikes', label: 'Two-Wheeler Value (coming soon)' },
+    ]
+  },
+  {
+    title: 'Financial tools',
+    links: [
+      { href: '/insurance-value', label: 'Insurance IDV (coming soon)' },
+      { href: '/loan-resale', label: 'Loan vs Resale Calculator (coming soon)' },
+      { href: '/scrappage', label: 'Scrappage Value (coming soon)' },
+    ]
+  },
+  {
+    title: 'Company',
+    links: [
+      { href: '/about', label: 'About Us' },
+      { href: '/methodology', label: 'Our Methodology' },
+      { href: '/data-partners', label: 'Data Partners' },
+      { href: '/blogs', label: 'Blogs' },
+    ]
+  },
+  {
+    title: 'Legal',
+    links: [
+      { href: '/privacy', label: 'Privacy Policy' },
+      { href: '/terms', label: 'Terms of Use' },
+      { href: '/contact', label: 'Contact' },
+    ]
+  }
+];
+---
+<footer class="bg-navy-950 text-cream-100 mt-24">
+  <div class="container-tight py-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+      {columns.map(col => (
+        <div>
+          <h4 class="text-cream text-sm font-semibold uppercase tracking-wider mb-4">{col.title}</h4>
+          <ul class="space-y-3">
+            {col.links.map(link => (
+              <li>
+                <a href={link.href} class="text-sm text-cream-200 hover:text-white no-underline hover:no-underline transition-colors">{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- Data disclosure — required, upfront, honest -->
+    <div class="border-t border-navy-800 pt-8 mt-8">
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+        <div class="max-w-2xl">
+          <p class="text-xs text-cream-200 leading-relaxed">
+            <strong class="text-white">Data partner:</strong> The Resale Value is powered by transaction data from
+            <a href="https://www.cars24.com" class="text-white underline hover:no-underline" rel="noopener">Cars24</a>,
+            India's largest used-car platform with 10M+ vehicle inspections. Our methodology is independent and published in full on our
+            <a href="/methodology" class="text-white underline hover:no-underline">Methodology</a> page. Read more on our
+            <a href="/about" class="text-white underline hover:no-underline">About Us</a> page.
+          </p>
+        </div>
+        <div class="text-xs text-cream-200 md:text-right">
+          <div class="font-serif text-cream text-base mb-1">The Resale Value</div>
+          <div>© {year} · Made in India</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

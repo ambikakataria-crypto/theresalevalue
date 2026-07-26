@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ComingSoon from '../components/ComingSoon.astro';
+---
+<BaseLayout
+  title="Two-Wheeler Valuation India: Coming Soon | The Resale Value"
+  description="Fair-market valuation for motorcycles and scooters in India. Launching Q4 2026. Get notified."
+  noindex
+>
+  <ComingSoon
+    icon="🏍️"
+    category="Two-Wheeler Valuation"
+    headline="A neutral price for every bike and scooter in India."
+    description="India buys 15 million two-wheelers a year and there's no neutral valuation source. We're fixing that."
+    bullets={[
+      'Fair-market price band for used motorcycles and scooters',
+      'Coverage across Hero, Honda, TVS, Bajaj, Yamaha, Royal Enfield, KTM and more',
+      'City-level pricing across 30+ Indian cities',
+      'API access for banks and insurers underwriting two-wheeler loans/insurance',
+    ]}
+    eta="Q4 2026"
+  />
+</BaseLayout>

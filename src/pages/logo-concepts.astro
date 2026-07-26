@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const concepts = [
+  {
+    id: 1,
+    name: 'Editorial masthead',
+    file: 'concept-1-masthead.svg',
+    favicon: 'favicon-1-masthead.svg',
+    rationale: 'Hairline rule and all-lowercase Fraunces. Reads like FT, The Economist, or a financial index. Maximum institutional authority. Best when the brand needs to be taken seriously by journalists, banks, and insurers.',
+    tradeoff: 'Quiet. Does not stand out in a crowded scroll. Assumes the wordmark itself carries recognition, which we have not earned yet.',
+  },
+  {
+    id: 2,
+    name: 'Price-band accent',
+    file: 'concept-2-priceband.svg',
+    favicon: 'favicon-2-priceband.svg',
+    rationale: 'Wordmark plus a tiny price-band mark that echoes the calculator UI. Signals what we do (visualise value) in one glyph. Favicon is a strong standalone symbol.',
+    tradeoff: 'The symbol only makes sense once you have seen the product. New visitors read it as a decorative flourish.',
+  },
+  {
+    id: 3,
+    name: 'Bracketed serif',
+    file: 'concept-3-brackets.svg',
+    favicon: 'favicon-3-brackets.svg',
+    rationale: 'Brackets frame the brand as a citation, a reference, a source. Perfect for the "neutral third-party index" positioning. Very distinctive at wordmark scale.',
+    tradeoff: 'Brackets can feel niche or overly editorial. Favicon uses ₹ inside brackets, which is a nice mnemonic but risks looking like a financial ticker.',
+  },
+  {
+    id: 4,
+    name: 'Monogram plus wordmark',
+    file: 'concept-4-monogram.svg',
+    favicon: 'favicon-4-monogram.svg',
+    rationale: 'Navy square with "trv" cream monogram. Doubles as favicon, app icon, and social avatar. Most versatile across surfaces. Works when the monogram alone needs to represent the brand (e.g., mobile nav, notifications).',
+    tradeoff: 'Slightly more startuppy than the others. TRV as a monogram takes longer for people to associate with the full name.',
+  },
+  {
+    id: 5,
+    name: 'R with price-band accent',
+    file: 'concept-5-r-priceband.svg',
+    favicon: 'favicon-5-r-priceband.svg',
+    rationale: 'Single serif "R" (for Resale) with the price-band mark tucked underneath it. Combines the anchor letter approach with the product-native price-band symbol. Reads as a bold editorial masthead initial — think a broadsheet drop cap that has become the mark itself.',
+    tradeoff: 'The R only means "Resale" once you know the brand name. Standalone it could read as any R-brand. Mitigated by pairing with the full wordmark on all above-the-fold surfaces.',
+  },
+  {
+    id: '5b',
+    name: 'R inside navy tile (variant)',
+    file: 'concept-5b-r-inline.svg',
+    favicon: 'favicon-5-r-priceband.svg',
+    rationale: 'Same R concept but contained inside the rounded navy tile from Concept 4. Price-band mark sits inside the tile as a subtle detail. Best of both worlds — the letterform anchor plus the tile favicon versatility.',
+    tradeoff: 'The price-band detail is very small inside the tile, so its meaning is easier to miss than in the open Concept 5. Reads more like a monogram badge than an editorial mark.',
+  },
+];
+---
+<BaseLayout title="Logo concepts — internal preview" description="Four logo directions for The Resale Value" noindex={true}>
+  <section class="py-12">
+    <div class="container-tight max-w-4xl">
+      <div class="mb-8">
+        <div class="text-sm uppercase tracking-widest text-slate-soft mb-2">Internal · Not for search</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-3">Logo concepts</h1>
+        <p class="text-lg text-graphite">Four directions. Each is shown at wordmark scale on cream and navy, and at favicon scale (32px) beside a real Chrome tab context.</p>
+      </div>
+
+      {concepts.map(c => (
+        <div class="mb-12 pb-12 border-b border-cream-200 last:border-0">
+          <div class="flex items-baseline gap-3 mb-4">
+            <div class="text-xs font-data text-slate-soft">CONCEPT {c.id}</div>
+            <h2 class="text-2xl font-serif text-navy-900">{c.name}</h2>
+          </div>
+
+          {/* Cream background, navy ink */}
+          <div class="rounded-lg border border-cream-200 bg-cream p-8 mb-3 text-navy-900">
+            <img src={`/logos/${c.file}`} alt={`${c.name} on cream`} class="max-w-full h-auto" />
+          </div>
+
+          {/* Navy background, cream ink */}
+          <div class="rounded-lg border border-navy-900 bg-navy-950 p-8 mb-4 text-cream">
+            <img src={`/logos/${c.file}`} alt={`${c.name} on navy`} class="max-w-full h-auto" style="filter: brightness(0) invert(1);" />
+          </div>
+
+          {/* Favicon at real scale */}
+          <div class="flex items-center gap-4 mb-4">
+            <div class="text-xs uppercase tracking-widest text-slate-soft">Favicon</div>
+            <img src={`/logos/${c.favicon}`} alt="Favicon 32px" width="32" height="32" class="border border-cream-200 rounded" />
+            <img src={`/logos/${c.favicon}`} alt="Favicon 16px" width="16" height="16" style="image-rendering: crisp-edges;" />
+            <span class="text-xs text-slate-soft">32px · 16px</span>
+          </div>
+
+          {/* Rationale + tradeoff */}
+          <div class="grid md:grid-cols-2 gap-4 text-sm">
+            <div class="p-4 bg-cream-100 rounded-md">
+              <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-1">Why it works</div>
+              <p class="text-graphite leading-relaxed">{c.rationale}</p>
+            </div>
+            <div class="p-4 bg-cream-100 rounded-md">
+              <div class="text-xs uppercase tracking-widest text-caution-500 font-semibold mb-1">Trade-off</div>
+              <p class="text-graphite leading-relaxed">{c.tradeoff}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      <div class="p-6 card-institutional bg-cream-100">
+        <h3 class="font-serif text-xl text-navy-900 mb-2">Pick one and I will wire it in</h3>
+        <p class="text-sm text-graphite">Tell me which concept and I will (a) replace the current text wordmark in the header with the chosen SVG, (b) set the matching favicon in BaseLayout, and (c) generate the OG image using the same mark. Existing concept files stay in /public/logos/ for reference.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

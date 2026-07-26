@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ComingSoon from '../components/ComingSoon.astro';
+---
+<BaseLayout
+  title="Car Loan vs Resale Value Calculator: Coming Soon"
+  description="Should you keep paying EMIs or sell your car now? A data-driven answer, coming soon to The Resale Value."
+  noindex
+>
+  <ComingSoon
+    icon="💰"
+    category="Loan vs Resale"
+    headline="Keep paying EMIs, or sell now?"
+    description="If your car's resale value is depreciating faster than your loan is amortising, you're underwater, and every month you keep it costs you real money. We'll show you exactly where you stand."
+    bullets={[
+      'Compare current outstanding loan against fair-market resale value',
+      'See break-even month and total loss/gain if you sell today',
+      'Refinance scenario modelling to check if it is worth switching lenders',
+      'For buyers: see the "true cost of ownership" before you take the loan',
+    ]}
+    eta="Q4 2026"
+  />
+</BaseLayout>

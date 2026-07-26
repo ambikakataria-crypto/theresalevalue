@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <line x1="20" y1="22" x2="380" y2="22" stroke="currentColor" stroke-width="1"/>
+  <text x="200" y="62" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="30" fill="currentColor" letter-spacing="-0.5">the resale value</text>
+  <text x="200" y="84" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="9" letter-spacing="4" fill="currentColor" opacity="0.65">INDIA · SINCE 2026</text>
+</svg>

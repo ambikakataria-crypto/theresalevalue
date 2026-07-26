@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'New Car Depreciation Calculator India: 5-Year Value Forecast';
+const description = 'See how much your new car will depreciate in year 1, 3, and 5. India-specific curves by make and model, backed by real resale transaction data.';
+
+// Sample forecast data. Curve = value at year 0 through year 5.
+const models = [
+  {
+    slug: 'maruti-swift-2026',
+    href: '/new-car-depreciation/maruti/swift',
+    make: 'Maruti',
+    model: 'Swift',
+    year: 2026,
+    exShowroom: 7.5,
+    curve: [7.5, 6.4, 5.7, 5.0, 4.4, 3.9],
+    verdict: 'Excellent',
+    note: 'Segment-leading retention. Parts, fuel economy, universal appeal.',
+  },
+  {
+    slug: 'hyundai-creta-2026',
+    href: '/new-car-depreciation/hyundai/creta',
+    make: 'Hyundai',
+    model: 'Creta',
+    year: 2026,
+    exShowroom: 13.5,
+    curve: [13.5, 11.5, 10.2, 8.9, 7.9, 7.0],
+    verdict: 'Very good',
+    note: 'Strong SUV demand keeps values sticky through year 5.',
+  },
+];
+
+// Segment average curve used as a benchmark comparison overlay (percentage retention year 0..5)
+const segmentAvgRetentionPct = [100, 85, 74, 65, 57, 50];
+---
+<BaseLayout title={title} description={description}>
+  <section class="py-12 md:py-16 bg-cream-100 border-b border-cream-200">
+    <div class="container-tight">
+      <div class="max-w-3xl">
+        <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">New Car Depreciation</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4">
+          New car depreciation calculator: what your new car will be worth.
+        </h1>
+        <p class="text-lg text-graphite leading-relaxed">
+          <strong class="text-navy-900">Car depreciation is the loss in value your new car takes on over time.</strong> On average, a new car in India loses 15% of its value the day it leaves the showroom and 45 to 55% of its value by year 5. Some models hold value far better than others. See the data below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="container-tight">
+      <div class="mb-8">
+        <div class="text-sm uppercase tracking-widest text-slate-soft mb-2">Sample forecasts</div>
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900">Popular new cars, 5-year value trajectory</h2>
+        <p class="text-sm text-graphite mt-2">The navy curve is the model. The dashed grey curve is the segment average. Higher curve, better resale value.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        {models.map(m => {
+          // Chart geometry
+          const w = 480;
+          const h = 220;
+          const padL = 44;
+          const padR = 16;
+          const padT = 16;
+          const padB = 32;
+
+          const years = [0, 1, 2, 3, 4, 5];
+          const modelMax = Math.max(...m.curve);
+          const modelMin = Math.min(...m.curve);
+          // Y axis rounded up nicely
+          const yTop = Math.ceil(modelMax);
+          const yBot = Math.floor(modelMin - 0.5);
+
+          const x = (i: number) => padL + (i / (years.length - 1)) * (w - padL - padR);
+          const y = (v: number) => padT + (1 - (v - yBot) / (yTop - yBot)) * (h - padT - padB);
+
+          // Model curve path
+          const modelPath = m.curve.map((v, i) => `${i === 0 ? 'M' : 'L'} ${x(i)} ${y(v)}`).join(' ');
+          const modelArea = `${modelPath} L ${x(years.length - 1)} ${h - padB} L ${x(0)} ${h - padB} Z`;
+
+          // Segment average curve (scaled to this car's ex-showroom price)
+          const segCurve = segmentAvgRetentionPct.map(p => (p / 100) * m.exShowroom);
+          const segPath = segCurve.map((v, i) => `${i === 0 ? 'M' : 'L'} ${x(i)} ${y(v)}`).join(' ');
+
+          // Retention pct at year 5
+          const retentionY5 = Math.round((m.curve[5] / m.curve[0]) * 100);
+          const segRetentionY5 = segmentAvgRetentionPct[5];
+          const outperformance = retentionY5 - segRetentionY5;
+
+          // Y-axis tick values
+          const yTicks = [yTop, (yTop + yBot) / 2, yBot];
+
+          const chartId = `chart-${m.slug}`;
+
+          return (
+            <div class="card-institutional bg-white">
+              <div class="flex items-start justify-between mb-4">
+                <div>
+                  <div class="text-xs uppercase tracking-widest text-slate-soft">{m.year}</div>
+                  <div class="text-xl font-serif text-navy-900">{m.make} {m.model}</div>
+                  <div class="text-sm text-graphite mt-1">Ex-showroom <span class="font-data text-navy-900">₹{m.exShowroom}L</span></div>
+                </div>
+                <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded-full bg-signal-500/10 text-signal-600 font-semibold">
+                  {m.verdict}
+                </span>
+              </div>
+
+              {/* Depreciation curve */}
+              <svg viewBox={`0 0 ${w} ${h}`} class="w-full h-auto" role="img" aria-label={`${m.make} ${m.model} 5-year depreciation curve`}>
+                <defs>
+                  <linearGradient id={`grad-${chartId}`} x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0A2540" stop-opacity="0.15"/>
+                    <stop offset="100%" stop-color="#0A2540" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+
+                {/* Y-axis ticks and gridlines */}
+                {yTicks.map(t => (
+                  <>
+                    <line x1={padL} y1={y(t)} x2={w - padR} y2={y(t)} stroke="#E8E6DE" stroke-width="1"/>
+                    <text x={padL - 8} y={y(t) + 3} text-anchor="end" font-size="10" fill="#6B7280" font-family="'JetBrains Mono', monospace">₹{t.toFixed(1)}L</text>
+                  </>
+                ))}
+
+                {/* Segment average (benchmark) */}
+                <path d={segPath} fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
+
+                {/* Model curve area + line */}
+                <path d={modelArea} fill={`url(#grad-${chartId})`}/>
+                <path d={modelPath} fill="none" stroke="#0A2540" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                {/* Data point dots */}
+                {m.curve.map((v, i) => (
+                  <circle cx={x(i)} cy={y(v)} r="3.5" fill="#0A2540" stroke="white" stroke-width="1.5"/>
+                ))}
+
+                {/* Highlight year 5 with green marker */}
+                <circle cx={x(5)} cy={y(m.curve[5])} r="5" fill="#10B981" stroke="white" stroke-width="2"/>
+                <text x={x(5) - 8} y={y(m.curve[5]) - 10} text-anchor="end" font-size="11" font-weight="600" fill="#0A2540" font-family="'JetBrains Mono', monospace">₹{m.curve[5]}L</text>
+
+                {/* X-axis year labels */}
+                {years.map(yr => (
+                  <text x={x(yr)} y={h - padB + 18} text-anchor="middle" font-size="10" fill="#6B7280" font-family="'Inter', sans-serif">Y{yr}</text>
+                ))}
+              </svg>
+
+              {/* Retention summary */}
+              <div class="grid grid-cols-3 gap-3 pt-4 mt-2 border-t border-cream-200 text-sm">
+                <div>
+                  <div class="text-[10px] uppercase text-slate-soft mb-1">Y5 value</div>
+                  <div class="font-data text-navy-900 font-semibold">₹{m.curve[5]}L</div>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase text-slate-soft mb-1">Y5 retention</div>
+                  <div class="font-data text-signal-600 font-semibold">{retentionY5}%</div>
+                </div>
+                <div>
+                  <div class="text-[10px] uppercase text-slate-soft mb-1">vs segment avg</div>
+                  <div class="font-data text-navy-900 font-semibold">{outperformance > 0 ? '+' : ''}{outperformance} pts</div>
+                </div>
+              </div>
+
+              <p class="text-xs text-graphite leading-relaxed mt-3">{m.note}</p>
+
+              <a href={m.href} class="mt-4 inline-flex items-center text-sm font-medium text-trust-600 hover:text-navy-900 no-underline hover:no-underline transition-colors">
+                See full 10-year forecast + calculator →
+              </a>
+            </div>
+          );
+        })}
+      </div>
+
+      <div class="mt-12 card-institutional bg-cream-100">
+        <p class="text-sm text-graphite leading-relaxed">
+          <strong class="text-navy-900">Coming soon.</strong> Full depreciation forecasts for 200+ new car models in India,
+          plus a compare-two-cars-over-5-years tool and total-cost-of-ownership calculator.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'About Us: India\'s Independent Vehicle Valuation Index | The Resale Value';
+const description = 'The Resale Value is India\'s independent used car valuation index, powered by Cars24 transaction data. Read our full origin, independence, and editorial policy.';
+---
+<BaseLayout title={title} description={description}>
+  <section class="py-16 md:py-24">
+    <div class="container-tight max-w-3xl">
+      <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">About</div>
+      <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-6">
+        A neutral price for every vehicle India drives.
+      </h1>
+      <p class="text-lg text-graphite leading-relaxed">
+        The Resale Value is India's independent vehicle valuation index. We publish fair-market prices for
+        used cars, and over time for two-wheelers and other assets on wheels, so that
+        Indian consumers, banks, insurers, and journalists can make decisions using the same source of truth.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-8 border-t border-cream-200">
+    <div class="container-tight max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-4">Where we come from</h2>
+      <div class="space-y-4 text-graphite leading-relaxed">
+        <p>
+          The Resale Value began as a data science project inside <a href="https://www.cars24.com">Cars24</a>, India's largest used-car platform.
+          Over eight years, Cars24 built the country's most comprehensive vehicle-transaction dataset: 10 million+ inspections
+          across every state, every mainstream make and model, and thousands of variants.
+        </p>
+        <p>
+          That dataset is a public good, but it was locked inside a company that also sells cars. To make it useful
+          for anyone (a consumer deciding whether to sell, a bank underwriting a loan, an insurer setting an IDV, a
+          journalist writing about the market), it needed to live somewhere that had no incentive to skew the number.
+        </p>
+        <p>
+          That's why The Resale Value exists as a separate, editorially independent property.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The disclosure, front and center, not buried -->
+  <section class="py-8 border-t border-cream-200 bg-cream-100">
+    <div class="container-tight max-w-3xl">
+      <div class="card-institutional bg-white border-navy-900 border-2">
+        <h2 class="text-xl md:text-2xl font-serif text-navy-900 mb-4">Our data partnership with Cars24, in plain English</h2>
+        <div class="space-y-4 text-graphite leading-relaxed text-[15px]">
+          <p>
+            We think you deserve to know exactly how we're funded and where our data comes from, without reading a
+            10-page policy. Here it is:
+          </p>
+          <ul class="space-y-3 pl-6 list-disc">
+            <li>
+              <strong class="text-navy-900">Data:</strong> Cars24 is our exclusive data partner and supplies us with anonymised transaction records for our pricing model.
+            </li>
+            <li>
+              <strong class="text-navy-900">Funding:</strong> We are backed by Cars24 as an initial data-licensing venture.
+              Over time, we intend to build a paid API business (banks, insurers, OEMs) so that we're commercially self-sustaining.
+            </li>
+            <li>
+              <strong class="text-navy-900">Independence:</strong> Our methodology is not adjusted to favour any specific
+              buyer, seller, dealer, or marketplace, including Cars24 itself. This is a written contractual condition
+              of our data agreement, not just a nice thing to say.
+            </li>
+            <li>
+              <strong class="text-navy-900">Editorial policy:</strong> Corrections, model updates, and material changes
+              are published publicly on our <a href="/methodology">methodology page</a>. If you believe a valuation is materially wrong,
+              you can <a href="/contact">tell us</a> and we log the correction.
+            </li>
+            <li>
+              <strong class="text-navy-900">What we don't do:</strong> We do not route users to Cars24 to sell.
+              We do not embed Cars24 offers in our valuation flow. We do not collect your personal data at the point of valuation.
+            </li>
+          </ul>
+          <p class="text-sm italic text-slate-soft pt-2">
+            If any of the above changes, we will announce it publicly on this page and via our newsletter, before it takes effect.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8 border-t border-cream-200">
+    <div class="container-tight max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-4">Why we exist</h2>
+      <div class="space-y-4 text-graphite leading-relaxed">
+        <p>
+          Look at any category where large purchases happen, whether property, art, gold, or bonds, and there's a public,
+          neutral price benchmark that everyone consults. Property has 99acres/Magicbricks indices. Gold has a
+          published daily price. Bonds have yield curves.
+        </p>
+        <p>
+          Vehicles in India have never had this. Everyone quoting you a price, whether dealer, marketplace, or aggregator, is optimising for their outcome, not yours. The Resale Value is the first attempt to publish that
+          benchmark for Indian vehicles, transparently.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8 border-t border-cream-200">
+    <div class="container-tight max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-4">Who this is for</h2>
+      <div class="grid md:grid-cols-2 gap-4 mt-6">
+        <div class="card-institutional bg-white">
+          <div class="text-2xl mb-3">🧍</div>
+          <h3 class="font-semibold text-navy-900 mb-2">Consumers</h3>
+          <p class="text-sm text-graphite">Before you sell, insure, or trade in, see what your vehicle is truly worth.</p>
+        </div>
+        <div class="card-institutional bg-white">
+          <div class="text-2xl mb-3">🏦</div>
+          <h3 class="font-semibold text-navy-900 mb-2">Banks & lenders</h3>
+          <p class="text-sm text-graphite">Underwrite used-vehicle loans on a neutral valuation, not a dealer's word.</p>
+        </div>
+        <div class="card-institutional bg-white">
+          <div class="text-2xl mb-3">🛡️</div>
+          <h3 class="font-semibold text-navy-900 mb-2">Insurers</h3>
+          <p class="text-sm text-graphite">Set fair Insured Declared Values without leaving money on either side of the table.</p>
+        </div>
+        <div class="card-institutional bg-white">
+          <div class="text-2xl mb-3">📰</div>
+          <h3 class="font-semibold text-navy-900 mb-2">Journalists & researchers</h3>
+          <p class="text-sm text-graphite">Cite a public benchmark for stories about the Indian auto market. Everything on this site is free to reference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 mt-8 bg-navy-950 text-cream">
+    <div class="container-tight max-w-3xl text-center">
+      <h2 class="text-3xl md:text-4xl font-serif text-white mb-4">Try the valuation.</h2>
+      <p class="text-cream-200 mb-8">30 seconds. No signup. No dealer calls.</p>
+      <a href="/valuation" class="inline-flex items-center px-8 py-4 bg-white text-navy-900 font-medium rounded-md hover:bg-cream-100 no-underline hover:no-underline transition-colors">
+        Value my vehicle →
+      </a>
+    </div>
+  </section>
+</BaseLayout>

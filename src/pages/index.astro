@@ -1,0 +1,288 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TrustBar from '../components/TrustBar.astro';
+
+const title = 'Car Valuation India: Free Used Car Value Check & Calculator';
+const description = 'Check car valuation and get a fair-market used car value in 30 seconds. India\'s neutral index, backed by 10M+ Cars24 transactions. Free calculator.';
+
+const categories = [
+  { icon: '🚗', href: '/valuation', label: 'Used Car Valuation', status: 'Live', desc: 'Fair-market price band for your car. Free, instant.' },
+  { icon: '📉', href: '/new-car-depreciation', label: 'New Car Depreciation', status: 'Live', desc: 'See how much value your new car will lose year-by-year.' },
+  { icon: '🏍️', href: '/bikes', label: 'Two-Wheeler Value', status: 'Coming soon', desc: 'Fair price for bikes and scooters. Notify me.' },
+  { icon: '🛡️', href: '/insurance-value', label: 'Insurance IDV', status: 'Coming soon', desc: 'What your insurer should be paying you.' },
+  { icon: '💰', href: '/loan-resale', label: 'Loan vs Resale', status: 'Coming soon', desc: 'Should you keep paying EMIs or sell now?' },
+];
+
+const howItWorks = [
+  { step: '1', title: 'Tell us about your vehicle', desc: 'Make, model, year, kilometres, city. 30 seconds.' },
+  { step: '2', title: 'We compute a fair price band', desc: 'Not one number. A low, expected, and high price with our confidence level.' },
+  { step: '3', title: 'Decide with confidence', desc: 'Sell, keep, insure, or refinance, knowing what the market truly says.' },
+];
+---
+<BaseLayout title={title} description={description}>
+  <!-- Hero -->
+  <section class="pt-12 pb-10 md:pt-20 md:pb-16">
+    <div class="container-tight">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-navy-900 leading-[1.05] mb-5">
+            Check car valuation, <em class="italic">the fair way.</em>
+          </h1>
+          <p class="text-lg text-graphite leading-relaxed mb-7">
+            India's neutral vehicle valuation index. Get a fair-market price band for your car before you sell, insure, or trade it in.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="/valuation" class="inline-flex items-center justify-center px-6 py-3 bg-navy-900 !text-white text-base font-medium rounded-md hover:bg-navy-800 no-underline hover:no-underline transition-colors">
+              Check car valuation →
+            </a>
+            <a href="/methodology" class="inline-flex items-center justify-center px-6 py-3 bg-white border border-cream-200 !text-navy-900 text-base font-medium rounded-md hover:border-navy-900 no-underline hover:no-underline transition-colors">
+              How we calculate
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero visual: sample valuation result card -->
+        <div class="relative">
+          <div class="card-institutional bg-white shadow-lg">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <div class="text-[10px] uppercase tracking-widest text-slate-soft mb-1">Sample valuation</div>
+                <div class="text-lg font-serif text-navy-900">2020 Maruti Swift VXi</div>
+                <div class="text-xs text-graphite mt-0.5">45,000 km · Bengaluru · Petrol</div>
+              </div>
+              <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded-full bg-signal-500/10 text-signal-600 font-semibold whitespace-nowrap">
+                High confidence
+              </span>
+            </div>
+
+            <div class="bg-cream-100 rounded-lg p-5 mb-4">
+              <div class="text-[10px] uppercase tracking-widest text-slate-soft mb-1">Fair-market value</div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="font-data text-4xl md:text-5xl text-navy-900 font-semibold">₹5.4L</span>
+                <span class="text-sm text-graphite">expected</span>
+              </div>
+
+              {/* Price band */}
+              <div class="relative h-2 bg-cream-200 rounded-full mb-2">
+                <div class="absolute inset-y-0 left-[15%] right-[15%] bg-signal-500 rounded-full"></div>
+                <div class="absolute left-1/2 -translate-x-1/2 -top-1 w-1 h-4 bg-navy-900 rounded-full"></div>
+              </div>
+              <div class="flex justify-between text-[11px] font-data text-graphite">
+                <span>₹5.1L low</span>
+                <span>₹5.7L high</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-center mb-4">
+              <div class="border border-cream-200 rounded-md py-2">
+                <div class="text-[9px] uppercase tracking-widest text-slate-soft">Private</div>
+                <div class="font-data text-sm text-navy-900 font-semibold">₹5.7L</div>
+              </div>
+              <div class="border border-cream-200 rounded-md py-2">
+                <div class="text-[9px] uppercase tracking-widest text-slate-soft">Dealer</div>
+                <div class="font-data text-sm text-navy-900 font-semibold">₹5.0L</div>
+              </div>
+              <div class="border border-cream-200 rounded-md py-2">
+                <div class="text-[9px] uppercase tracking-widest text-slate-soft">Instant</div>
+                <div class="font-data text-sm text-navy-900 font-semibold">₹4.9L</div>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-slate-soft leading-relaxed">
+              Based on 1,247 comparable transactions in Bengaluru over the last 90 days. Updated weekly.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- How it works -->
+  <section class="py-16 md:py-24">
+    <div class="container-tight">
+      <div class="max-w-2xl mb-12">
+        <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">How it works</div>
+        <h2 class="text-3xl md:text-4xl font-serif text-navy-900">
+          A price band, not a guess.
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        {howItWorks.map(({ step, title, desc }) => (
+          <div class="card-institutional">
+            <div class="font-data text-sm text-trust-600 mb-3">STEP {step}</div>
+            <h3 class="text-xl font-serif text-navy-900 mb-2">{title}</h3>
+            <p class="text-sm text-graphite leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="py-16 md:py-24 bg-cream-100">
+    <div class="container-tight">
+      <div class="max-w-2xl mb-12">
+        <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">What we value</div>
+        <h2 class="text-3xl md:text-4xl font-serif text-navy-900">
+          One index, every vehicle Indians drive.
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {categories.map(cat => (
+          <a href={cat.href} class="card-institutional block hover:border-navy-700 no-underline hover:no-underline transition-colors group">
+            <div class="flex items-start justify-between mb-3">
+              <div class="text-2xl">{cat.icon}</div>
+              <span class:list={[
+                'text-[10px] uppercase tracking-widest px-2 py-1 rounded-full',
+                cat.status === 'Live' ? 'bg-signal-500/10 text-signal-600' : 'bg-cream-200 text-slate-soft'
+              ]}>
+                {cat.status}
+              </span>
+            </div>
+            <h3 class="text-lg font-serif text-navy-900 mb-2 group-hover:text-trust-600 transition-colors">{cat.label}</h3>
+            <p class="text-sm text-graphite">{cat.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why it matters, the trust anchor -->
+  <section class="py-16 md:py-24">
+    <div class="container-tight">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">Why an index</div>
+          <h2 class="text-3xl md:text-4xl font-serif text-navy-900 mb-6">
+            Neutrality is a feature, not a slogan.
+          </h2>
+          <div class="space-y-4 text-graphite leading-relaxed">
+            <p>
+              Everywhere else you look up your car's value, someone stands to gain from the number they show you. Dealers underquote to buy low. Marketplaces inflate to attract sellers.
+            </p>
+            <p>
+              The Resale Value has no listing to close and no dealer margin to protect. We publish a fair-market price band based on real Indian transaction data, and we publish the method by which we calculate it.
+            </p>
+            <p>
+              <a href="/methodology" class="font-medium">Read our full methodology →</a>
+            </p>
+          </div>
+        </div>
+        <div class="card-institutional bg-white">
+          <div class="text-xs uppercase tracking-widest text-slate-soft mb-2">Same car. Three sources.</div>
+          <div class="text-sm text-graphite mb-5">2020 Maruti Swift VXi · 45,000 km · Bengaluru</div>
+
+          <div class="space-y-4">
+            {/* Dealer */}
+            <div>
+              <div class="flex items-baseline justify-between mb-1.5">
+                <div class="text-sm text-graphite">Dealer offer</div>
+                <div class="font-data text-lg text-navy-900">₹4.6L</div>
+              </div>
+              <div class="relative h-1.5 bg-cream-200 rounded-full">
+                <div class="absolute left-0 h-1.5 bg-caution-500 rounded-full" style="width: 55%;"></div>
+              </div>
+              <div class="text-[11px] text-slate-soft mt-1">Incentive: buy low, resell higher</div>
+            </div>
+
+            {/* Marketplace */}
+            <div>
+              <div class="flex items-baseline justify-between mb-1.5">
+                <div class="text-sm text-graphite">Marketplace listing</div>
+                <div class="font-data text-lg text-navy-900">₹6.4L</div>
+              </div>
+              <div class="relative h-1.5 bg-cream-200 rounded-full">
+                <div class="absolute left-0 h-1.5 bg-caution-500 rounded-full" style="width: 92%;"></div>
+              </div>
+              <div class="text-[11px] text-slate-soft mt-1">Incentive: inflate to attract sellers</div>
+            </div>
+
+            {/* Our index */}
+            <div>
+              <div class="flex items-baseline justify-between mb-1.5">
+                <div class="text-sm text-navy-900 font-medium">The Resale Value index</div>
+                <div class="font-data text-lg text-signal-600 font-semibold">₹5.4L</div>
+              </div>
+              <div class="relative h-1.5 bg-cream-200 rounded-full">
+                <div class="absolute left-0 h-1.5 bg-signal-500 rounded-full" style="width: 73%;"></div>
+              </div>
+              <div class="text-[11px] text-slate-soft mt-1">Incentive: none. We do not buy, sell, or list.</div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-cream-200 text-xs text-graphite leading-relaxed">
+            The spread between the lowest and highest quote is <strong class="text-navy-900">₹1.8L</strong> on a ₹5.4L car. That is the cost of not knowing.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is a car valuation? Direct-answer + FAQ for GEO citability -->
+  <section class="py-16 md:py-20 bg-white border-t border-cream-200">
+    <div class="container-tight max-w-3xl">
+      <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">Car valuation, explained</div>
+      <h2 class="text-3xl md:text-4xl font-serif text-navy-900 mb-6">
+        What is a car valuation?
+      </h2>
+      <p class="text-lg text-graphite leading-relaxed mb-8">
+        <strong class="text-navy-900">A car valuation is the fair-market price a used car should sell for today</strong>, based on real transactions of comparable vehicles. It considers make, model, year, kilometres driven, city, and condition. A good car valuation gives a price band, not a single number, because every buyer, seller, and route to sale prices a used car differently.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-4 mb-10">
+        <div class="card-institutional bg-cream-100">
+          <div class="text-[10px] uppercase tracking-widest text-slate-soft mb-2">Head term</div>
+          <div class="font-serif text-lg text-navy-900 mb-1">Used car value</div>
+          <p class="text-sm text-graphite">The price a used car changes hands at between an ordinary buyer and seller. Always a range, never one number.</p>
+        </div>
+        <div class="card-institutional bg-cream-100">
+          <div class="text-[10px] uppercase tracking-widest text-slate-soft mb-2">Tool</div>
+          <div class="font-serif text-lg text-navy-900 mb-1">Car value calculator</div>
+          <p class="text-sm text-graphite">A tool that computes fair-market car value from inputs like year, kilometres, city, and condition. Ours is free and instant.</p>
+        </div>
+        <div class="card-institutional bg-cream-100">
+          <div class="text-[10px] uppercase tracking-widest text-slate-soft mb-2">Method</div>
+          <div class="font-serif text-lg text-navy-900 mb-1">Fair-market band</div>
+          <p class="text-sm text-graphite">The 10th to 90th percentile range of comparable recent sales. 80% of similar cars sold inside this band.</p>
+        </div>
+      </div>
+
+      <div class="text-sm uppercase tracking-widest text-slate-soft mb-4">Frequently asked</div>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-semibold text-navy-900 text-lg mb-2">How do I check car valuation for free in India?</h3>
+          <p class="text-graphite leading-relaxed">Use a neutral car value calculator like The Resale Value. Enter make, model, year, kilometres, and city, and you get a fair-market price band in under a minute. No signup, no phone number, no dealer calls.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-navy-900 text-lg mb-2">How accurate is an online used car valuation?</h3>
+          <p class="text-graphite leading-relaxed">A good online used car valuation is accurate to within 5 to 8% of the actual sale price for mainstream models. Accuracy drops for rare models, very old vehicles, and cars with unusual histories. That is why we show a band, plus a confidence rating.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-navy-900 text-lg mb-2">What affects the resale value of my car?</h3>
+          <p class="text-graphite leading-relaxed">Five factors dominate: age, kilometres driven, service history, city demand, and route to sale. A private-sale price is typically 5 to 12% higher than an instant-buy quote for the same car. Colour, insurance status, and number of previous owners add a smaller correction.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-navy-900 text-lg mb-2">Is a car valuation the same as an IDV?</h3>
+          <p class="text-graphite leading-relaxed">No. A car valuation is a fair-market price for a private sale. IDV, or Insured Declared Value, is a separate figure used by insurers to cap claim payouts, and it is typically 10 to 15% below fair-market value. Our IDV tool is on the way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 bg-navy-950 text-cream">
+    <div class="container-tight text-center max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-serif text-white mb-4">
+        See what your vehicle is worth, in 30 seconds.
+      </h2>
+      <p class="text-cream-200 mb-8 text-lg">
+        Free. No signup. No dealer calls. Just the number.
+      </p>
+      <a href="/valuation" class="inline-flex items-center px-8 py-4 bg-white text-navy-900 text-base font-medium rounded-md hover:bg-cream-100 no-underline hover:no-underline transition-colors">
+        Get my free valuation →
+      </a>
+    </div>
+  </section>
+</BaseLayout>

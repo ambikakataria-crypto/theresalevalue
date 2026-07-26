@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="420" height="100">
+  <!-- price band mark -->
+  <rect x="24" y="46" width="70" height="4" rx="2" fill="currentColor"/>
+  <circle cx="66" cy="48" r="6" fill="#10B981" stroke="#FAFAF7" stroke-width="2"/>
+  <!-- wordmark -->
+  <text x="110" y="54" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="28" fill="currentColor" letter-spacing="-0.5">The Resale Value</text>
+  <text x="110" y="72" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="10" letter-spacing="1.5" fill="currentColor" opacity="0.65">INDIA'S NEUTRAL VEHICLE VALUATION</text>
+</svg>
