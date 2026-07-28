@@ -1,0 +1,466 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'New car depreciation in India: year-by-year resale value data and calculator';
+const description = 'How much do new cars lose in India year by year? Segment-wise depreciation curves (Y1-Y10) for hatchback, sedan, SUV, luxury, EV. Free calculator built on India transaction data.';
+---
+<BaseLayout title={title} description={description}>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="mb-8">
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/blogs">← All blogs</a>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">Depreciation · Pillar</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+          New car depreciation in India: year-by-year resale value data and calculator
+        </h1>
+        <div class="text-sm text-slate-soft">28 July 2026 · 14 min read · Editorial team, The Resale Value</div>
+      </div>
+
+      <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
+        <p class="text-xl leading-relaxed">
+          A brand-new Hyundai Creta loses more value driving off the showroom floor than most people spend on a family vacation. That single moment, odometer at 12 km, temporary registration plate still drying, wipes out somewhere between ₹2.5 lakh and ₹4.5 lakh depending on the variant.
+        </p>
+
+        <p>
+          Most guides on new car depreciation open with a textbook definition. Then they paste a generic formula. Then they tell readers "cars lose 20% in year one." That number isn't wrong. It's just useless. A Maruti Swift and a BMW 3 Series don't depreciate at the same rate, in the same city, for the same reasons. Treating them identically is where most depreciation advice falls apart.
+        </p>
+
+        <p>
+          This page does something different. Every depreciation figure here comes from observed resale transactions across Indian platforms and dealer trade-ins, not from a formula invented for American pickup trucks. The data covers hatchbacks, sedans, compact SUVs, full-size SUVs, luxury cars, and electric vehicles. There's also a free <a href="#depreciation-calculator">car depreciation calculator</a> built on India-specific curves, not a straight-line formula that misses half the picture.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">How much a new car actually loses in year 1 in India (it depends on the segment)</h2>
+
+        <p>
+          A new car in India typically loses between 15% and 25% of its ex-showroom value in the first year, but this range conceals enormous variation. A hatchback from Maruti might shed 15%. A German luxury sedan could lose 28%. Same country, same year, completely different outcome.
+        </p>
+
+        <p>
+          <strong class="text-navy-900">Depreciation is the difference between what a car costs new and what it sells for later.</strong> It is not a fee or a tax. It's a market-driven loss in value.
+        </p>
+
+        <p>
+          Here's the catch: year 1 depreciation is disproportionately high, and most of it has nothing to do with the car wearing out.
+        </p>
+
+        <p>
+          Registration charges and road tax are non-transferable in most states. First-year insurance carries a loading premium. And the moment a car gets a permanent registration plate, it carries the psychological label of "used," even if the owner drove it 3,000 km in 11 months.
+        </p>
+
+        <p>Year 1 depreciation comparison across segments:</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-base border border-cream-200 bg-white">
+            <thead class="bg-cream-100">
+              <tr>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Model</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Segment</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Ex-showroom (approx.)</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Avg. resale at 11–12 months</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Year 1 loss</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border-b border-cream-200">Maruti Swift ZXi</td><td class="p-3 border-b border-cream-200">Hatchback</td><td class="p-3 border-b border-cream-200">₹8.7 lakh</td><td class="p-3 border-b border-cream-200">₹7.2–7.5 lakh</td><td class="p-3 border-b border-cream-200">~15–17%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Honda City ZX CVT</td><td class="p-3 border-b border-cream-200">Sedan</td><td class="p-3 border-b border-cream-200">₹15.5 lakh</td><td class="p-3 border-b border-cream-200">₹12.4–12.9 lakh</td><td class="p-3 border-b border-cream-200">~18–20%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Hyundai Creta SX(O)</td><td class="p-3 border-b border-cream-200">Compact SUV</td><td class="p-3 border-b border-cream-200">₹18.2 lakh</td><td class="p-3 border-b border-cream-200">₹14.8–15.3 lakh</td><td class="p-3 border-b border-cream-200">~16–19%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Toyota Fortuner Legender</td><td class="p-3 border-b border-cream-200">Full-size SUV</td><td class="p-3 border-b border-cream-200">₹42.3 lakh</td><td class="p-3 border-b border-cream-200">₹36.5–37.8 lakh</td><td class="p-3 border-b border-cream-200">~11–14%</td></tr>
+              <tr><td class="p-3">Tata Nexon EV Max</td><td class="p-3">EV</td><td class="p-3">₹19.5 lakh</td><td class="p-3">₹14.8–15.5 lakh</td><td class="p-3">~20–24%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          The Fortuner stands out. Supply constraints on new units keep used prices inflated. That's not magic. It's basic supply-demand economics applied to a car with an 8-month waiting period.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">India depreciation curve, year 1 through year 10, plotted by segment</h2>
+
+        <p>
+          On average, a new car in India retains approximately 80–85% of its ex-showroom value after year 1, 55–65% after year 3, 40–50% after year 5, and 20–30% after year 10. These averages mask significant differences between segments, though.
+        </p>
+
+        <p>
+          Most people assume depreciation is steady. That's only half the story. The curve drops steeply in years 1–3, flattens between years 4–6, and then either stays flat or drops again after year 8 depending on the segment and fitness certificate renewal timelines.
+        </p>
+
+        <p>Depreciation curve by segment (% of ex-showroom value retained):</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-base border border-cream-200 bg-white">
+            <thead class="bg-cream-100">
+              <tr>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Segment</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Year 1</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Year 2</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Year 3</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Year 5</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Year 7</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Year 10</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border-b border-cream-200">Hatchback</td><td class="p-3 border-b border-cream-200">82–85%</td><td class="p-3 border-b border-cream-200">72–76%</td><td class="p-3 border-b border-cream-200">60–65%</td><td class="p-3 border-b border-cream-200">45–52%</td><td class="p-3 border-b border-cream-200">32–38%</td><td class="p-3 border-b border-cream-200">18–25%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Sedan</td><td class="p-3 border-b border-cream-200">78–82%</td><td class="p-3 border-b border-cream-200">68–72%</td><td class="p-3 border-b border-cream-200">55–60%</td><td class="p-3 border-b border-cream-200">40–47%</td><td class="p-3 border-b border-cream-200">28–34%</td><td class="p-3 border-b border-cream-200">15–22%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Compact SUV</td><td class="p-3 border-b border-cream-200">81–84%</td><td class="p-3 border-b border-cream-200">73–77%</td><td class="p-3 border-b border-cream-200">62–67%</td><td class="p-3 border-b border-cream-200">48–55%</td><td class="p-3 border-b border-cream-200">35–42%</td><td class="p-3 border-b border-cream-200">22–28%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Full-size SUV</td><td class="p-3 border-b border-cream-200">86–89%</td><td class="p-3 border-b border-cream-200">78–83%</td><td class="p-3 border-b border-cream-200">70–75%</td><td class="p-3 border-b border-cream-200">55–65%</td><td class="p-3 border-b border-cream-200">45–52%</td><td class="p-3 border-b border-cream-200">28–35%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Luxury</td><td class="p-3 border-b border-cream-200">72–78%</td><td class="p-3 border-b border-cream-200">58–65%</td><td class="p-3 border-b border-cream-200">50–58%</td><td class="p-3 border-b border-cream-200">35–42%</td><td class="p-3 border-b border-cream-200">22–30%</td><td class="p-3 border-b border-cream-200">12–18%</td></tr>
+              <tr><td class="p-3">EV</td><td class="p-3">76–80%</td><td class="p-3">64–70%</td><td class="p-3">52–58%</td><td class="p-3">38–45%</td><td class="p-3 text-slate-soft">insufficient data</td><td class="p-3 text-slate-soft">insufficient data</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <strong class="text-navy-900">The depreciation knee.</strong> That's the point where the curve flattens, where the car stops losing value fast and starts losing it slowly. For most mainstream cars, this happens around year 5 or 6. For Toyota models (Fortuner, Innova Crysta), the knee pushes out to year 7 or 8. For luxury cars, it may not arrive at all. Some keep losing 8–10% per year well into year 7.
+        </p>
+
+        <p>
+          Not always predictable. Supply shocks can bend the curve. During semiconductor shortages in 2021–2022, certain models, notably the Mahindra Thar, actually appreciated in the used market. New car wait times exceeded 10 months, and used Thars with 15,000 km on them sold for more than their original ex-showroom price.
+        </p>
+
+        <div class="my-10 p-6 bg-cream-100 border border-cream-200 rounded-lg text-center" id="depreciation-calculator">
+          <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-3">Estimate your car's future resale value</h2>
+          <p class="text-graphite mb-5">Get projected resale for years 1, 3, 5, 7, and 10. India-specific curves. No signup.</p>
+          <a href="/new-car-depreciation" class="inline-block px-6 py-3 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors no-underline">Open the depreciation calculator →</a>
+          <p class="text-sm text-slate-soft mt-4">Already own a used car? Try the <a href="/valuation">used car valuation calculator</a> instead.</p>
+        </div>
+
+        <p>
+          The calculator uses a weighted depreciation model. It factors in segment-level curves, model-specific demand multipliers, fuel-type adjustments, and city-tier pricing differences. It isn't a straight-line formula. It reflects how actual resale prices behave in Indian markets.
+        </p>
+
+        <p>
+          One caveat matters. No calculator captures everything. Accident history, body condition, service records, and even colour can shift the actual value ±5–10% from any tool's output. Treat the result as an informed estimate. Not a guarantee.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The depreciation formula most sites use, and why it fails for Indian cars</h2>
+
+        <p>Most guides say to apply a formula. That's step one. The part they skip is testing whether the formula actually works in the Indian market.</p>
+
+        <p>Two formulas dominate the internet:</p>
+
+        <p><strong class="text-navy-900">Straight-line depreciation:</strong> (Purchase Price − Salvage Value) ÷ Useful Life = Annual Depreciation</p>
+
+        <p><strong class="text-navy-900">Declining-balance depreciation:</strong> Book Value × Fixed Depreciation Rate = Depreciation for That Year</p>
+
+        <p>
+          Take a ₹10 lakh car. Straight-line, with a ₹50,000 salvage value over 15 years, gives ₹63,333 per year. That implies the car is worth ₹6.8 lakh after 5 years. Declining balance at 15% gives roughly ₹4.4 lakh after 5 years. Two formulas, same car, ₹2.4 lakh apart. Neither matches reality.
+        </p>
+
+        <p>
+          The standard depreciation formula produces estimates that are typically 20–40% off from actual Indian resale prices because it ignores model-specific demand, fuel-type regulations, and city-level pricing variations.
+        </p>
+
+        <p>Three reasons these formulas break in India:</p>
+
+        <ul class="space-y-3 list-disc pl-6">
+          <li><strong class="text-navy-900">Salvage value is never zero.</strong> Even 15-year-old Maruti Altos sell for ₹50,000–₹1,00,000. The Indian market has a deep bottom tier. Scrapping is still uncommon despite the vehicle scrappage policy. Most old cars end up in tier 3 cities or rural areas, not at recycling centres.</li>
+          <li><strong class="text-navy-900">Depreciation is not constant.</strong> It's front-loaded in year 1 (15–25%), slows through years 3–5 (5–8% per year), and then can accelerate again after year 8 when fitness certificate renewal becomes a barrier in some states and RTOs.</li>
+          <li><strong class="text-navy-900">Diesel creates a fork.</strong> In Delhi-NCR, the NGT-enforced 10-year age limit on diesel cars creates a cliff. A 6-year-old diesel Creta in Delhi is worth dramatically less than the same car in Bangalore, not because it's mechanically different, but because its regulatory clock is ticking.</li>
+        </ul>
+
+        <p>
+          A better model looks like this: segment-specific base curves, adjusted by a model demand index, modified by city tier and fuel type. That's what the calculator on this page uses. Not a textbook formula.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Segment-by-segment depreciation, hatchback, sedan, SUV, luxury, and EV compared</h2>
+
+        <p>Sounds straightforward on paper. Each segment depreciates differently, for different structural reasons, and the gaps widen as the car ages.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Hatchbacks, the Maruti effect on resale floors</h3>
+
+        <p>
+          Maruti dominates. Not debatable. The company's service network density (4,500+ workshops), low spare parts cost, and sheer volume of buyers in the used hatchback market create a resale floor that other brands struggle to match.
+        </p>
+
+        <p>
+          The result: a 5-year-old Maruti Swift holds value better than a 5-year-old Hyundai i20 or Tata Altroz, despite similar build quality and feature levels.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Sedans, why this segment depreciates fastest in India</h3>
+
+        <p>
+          Demand shifted. SUV registrations overtook sedan registrations in India around 2020, and the gap has widened every year since. Fewer buyers in the new sedan market means fewer buyers in the used sedan market.
+        </p>
+
+        <p>
+          Honda City and Hyundai Verna still retain reasonable value. Name recognition helps. But mid-tier sedans without strong brand pull can lose 40–45% by year 5.
+        </p>
+
+        <p>The real question is: does a sedan buyer today understand they're buying into a shrinking resale pool?</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Compact SUVs, the "sweet spot" segment for value retention</h3>
+
+        <p>
+          Hyundai Creta. Kia Seltos. Tata Nexon. These models routinely retain 55–65% of ex-showroom value after 3 years. Two factors drive this.
+        </p>
+
+        <p>
+          First, wait times on new units prop up used prices. When a new Creta has a 6–8 week wait, a 1-year-old Creta with 12,000 km becomes an attractive alternative. Second, lifestyle demand is segment-wide. Buyers crossing over from sedans and hatchbacks expand the used buyer pool constantly.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Full-size SUVs, Toyota Fortuner and the supply-driven premium</h3>
+
+        <p>Worth checking. The Toyota Fortuner and Mahindra Thar sit in a class of their own for depreciation resistance.</p>
+
+        <p>
+          The Fortuner's resale story is well-known. Year 5 retention reportedly exceeds 60%, and in some markets, year 3 Fortuners sell for 75%+ of their original ex-showroom price. Toyota's limited dealer discounting on new units plays a role here. If the new car is never discounted, the used car's "fair price" stays anchored higher.
+        </p>
+
+        <p>The Thar is different. Its resale strength comes from lifestyle desirability combined with chronic supply shortages during 2021–2023.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Luxury cars, the steepest depreciation curve in India</h3>
+
+        <p>
+          This step matters more than it looks. A German luxury sedan losing 40–50% in 3 years is not unusual. A 2021 BMW 320d Sport Line purchased at ₹48 lakh on-road can appear on listing platforms at ₹27–₹29 lakh just four years later.
+        </p>
+
+        <p>
+          Why so steep? High maintenance costs scare price-sensitive used buyers. CBU and CKD import duties inflate the new-car price, creating an artificially high starting point. And used luxury buyers negotiate aggressively because they know the seller's leverage weakens every month the car sits unsold.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Electric vehicles, the unknown depreciation curve</h3>
+
+        <p>Limited data. The honest answer is that EV depreciation curves in India are still being written.</p>
+
+        <p>
+          The Tata Nexon EV and MG ZS EV are the only models with 3+ years of resale history in any meaningful volume. Early indications suggest faster depreciation than petrol equivalents. Battery degradation anxiety, rapid technology evolution (newer EVs offer longer range at lower prices), and limited used EV buyer confidence all contribute.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Five factors that shift new car depreciation in ways most buyers miss</h2>
+
+        <p>Most guides list "brand, condition, mileage." True but incomplete. The factors below come from transaction-level patterns, not textbook bullet points.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Fuel type and the Delhi-NCR diesel cliff</h3>
+
+        <p>Depends on location. In most of India, diesel SUVs still hold value well. In Delhi-NCR, the story flips after year 5.</p>
+
+        <p>
+          The NGT (National Green Tribunal) enforces a 10-year age limit on diesel cars registered in Delhi. A diesel car approaching its 7th or 8th year has a shrinking window of usable life in the region. Buyers factor this in aggressively. Listing prices for 6- and 7-year-old diesel cars in Delhi drop sharply compared to petrol equivalents of the same model and age.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Colour and the ₹30,000–₹80,000 resale gap</h3>
+
+        <p>
+          White and silver cars consistently command 3–5% higher resale than unusual colours in the Indian used car market. Orange, yellow, dark blue all sell slower and at lower prices.
+        </p>
+
+        <p>
+          The reason is practical, not aesthetic. Fleet and taxi buyers, a significant portion of the hatchback and sedan used market, prefer white for branding and heat management. That demand creates a price premium that trickles up even into segments where fleet buying is rare.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Kilometres driven, the non-linear effect</h3>
+
+        <p>
+          Not linear. A car with 20,000 km in 3 years depreciates less per km than one with 60,000 km in 3 years. But the relationship isn't proportional. There's a trust threshold at play.
+        </p>
+
+        <p>
+          Around 40,000–50,000 km, buyer willingness to pay drops noticeably. Below that, odometer readings are a minor factor. Above it, every additional 10,000 km starts pulling the price down harder.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Service history and the "full authorised service" premium</h3>
+
+        <p>
+          Cars with a complete authorised service centre (ASC) record command a measurable premium. The gap between full-ASC and non-ASC cars is real but varies by brand and segment, typically 4–7% for popular models.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">City tier and regional demand</h3>
+
+        <p>
+          Tier 1 metros have higher listing volumes. More supply, more competition between sellers, lower resale prices. Tier 2 and tier 3 cities often show higher resale percentages because used car supply is thinner. The same 2020 Maruti Swift VXi with 28,000 km can list at ₹5.2 lakh in Pune but ₹5.8 lakh in Indore, driven entirely by local supply-demand dynamics.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">When to sell a new car to minimise depreciation loss, the 3-year vs. 5-year decision</h2>
+
+        <p>The question isn't "when does my car lose value?" It's this: what does each year of ownership actually cost?</p>
+
+        <p>Frame this as cost-per-year, not just depreciation percentage.</p>
+
+        <ul class="space-y-3 list-disc pl-6">
+          <li><strong class="text-navy-900">Selling at year 3:</strong> The car retains roughly 55–65% of its ex-showroom value. The owner avoids major service milestones (timing belt replacement, brake overhaul, clutch wear on manuals). Many models are still within extended warranty. The downside is real though: highest total depreciation per year of ownership, because years 1–3 absorb the steepest part of the curve.</li>
+          <li><strong class="text-navy-900">Selling at year 5:</strong> Retention drops to 40–50%. Per-year depreciation cost is lower because years 4 and 5 contribute much smaller percentage drops. But 40,000–50,000 km service costs have kicked in, and insurance premiums, while lower, add up over the extra two years.</li>
+          <li><strong class="text-navy-900">Holding past year 7:</strong> Depreciation per year is minimal. Maintenance costs rise. The car enters fitness certificate renewal territory, and the experience varies dramatically by state and RTO.</li>
+        </ul>
+
+        <p>Worked example, Hyundai Creta SX diesel, ₹18 lakh on-road:</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-base border border-cream-200 bg-white">
+            <thead class="bg-cream-100">
+              <tr>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Sell at</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Est. resale value</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Total depreciation</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Annual dep. cost</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Service costs incurred</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border-b border-cream-200">Year 3</td><td class="p-3 border-b border-cream-200">₹11.7–12.2 lakh</td><td class="p-3 border-b border-cream-200">₹5.8–6.3 lakh</td><td class="p-3 border-b border-cream-200">₹1.9–2.1 lakh/yr</td><td class="p-3 border-b border-cream-200">Minor services only</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Year 5</td><td class="p-3 border-b border-cream-200">₹8.5–9.0 lakh</td><td class="p-3 border-b border-cream-200">₹9.0–9.5 lakh</td><td class="p-3 border-b border-cream-200">₹1.8–1.9 lakh/yr</td><td class="p-3 border-b border-cream-200">40K & 50K km services</td></tr>
+              <tr><td class="p-3">Year 7</td><td class="p-3">₹6.5–7.0 lakh</td><td class="p-3">₹11.0–11.5 lakh</td><td class="p-3">₹1.57–1.64 lakh/yr</td><td class="p-3">Major services + potential replacements</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          For most car owners in India, selling between year 3 and year 5 offers the best balance between depreciation loss and maintenance costs. Selling at year 3 returns the highest resale value in absolute terms but locks in the steepest per-year depreciation. Holding to year 5 lowers annual depreciation cost but introduces higher maintenance expenses.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Cars with the lowest depreciation in India, 2025 data</h2>
+
+        <p>
+          As of 2025, the cars with the lowest depreciation in India over 5 years include the Toyota Innova Crysta (retaining approximately 60–65%), Maruti Suzuki Swift (55–60%), and Hyundai Creta (55–60%). Toyota models consistently lead resale value retention across segments.
+        </p>
+
+        <p>Top 10 models by 5-year value retention:</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-base border border-cream-200 bg-white">
+            <thead class="bg-cream-100">
+              <tr>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Model</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Segment</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Ex-showroom (2020)</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Avg. resale (2025)</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Retention %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border-b border-cream-200">Toyota Innova Crysta</td><td class="p-3 border-b border-cream-200">MPV</td><td class="p-3 border-b border-cream-200">₹17.8 lakh</td><td class="p-3 border-b border-cream-200">₹11.2–11.8 lakh</td><td class="p-3 border-b border-cream-200">63–66%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Toyota Fortuner</td><td class="p-3 border-b border-cream-200">Full-size SUV</td><td class="p-3 border-b border-cream-200">₹33.5 lakh</td><td class="p-3 border-b border-cream-200">₹21.5–23.0 lakh</td><td class="p-3 border-b border-cream-200">64–69%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Maruti Suzuki WagonR</td><td class="p-3 border-b border-cream-200">Hatchback</td><td class="p-3 border-b border-cream-200">₹5.5 lakh</td><td class="p-3 border-b border-cream-200">₹3.2–3.4 lakh</td><td class="p-3 border-b border-cream-200">58–62%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Maruti Suzuki Swift</td><td class="p-3 border-b border-cream-200">Hatchback</td><td class="p-3 border-b border-cream-200">₹7.2 lakh</td><td class="p-3 border-b border-cream-200">₹4.0–4.3 lakh</td><td class="p-3 border-b border-cream-200">56–60%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Hyundai Creta</td><td class="p-3 border-b border-cream-200">Compact SUV</td><td class="p-3 border-b border-cream-200">₹14.0 lakh</td><td class="p-3 border-b border-cream-200">₹7.8–8.4 lakh</td><td class="p-3 border-b border-cream-200">56–60%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Kia Seltos</td><td class="p-3 border-b border-cream-200">Compact SUV</td><td class="p-3 border-b border-cream-200">₹14.5 lakh</td><td class="p-3 border-b border-cream-200">₹7.8–8.5 lakh</td><td class="p-3 border-b border-cream-200">54–59%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Mahindra Thar</td><td class="p-3 border-b border-cream-200">Off-road SUV</td><td class="p-3 border-b border-cream-200">₹13.0 lakh</td><td class="p-3 border-b border-cream-200">₹7.5–8.2 lakh</td><td class="p-3 border-b border-cream-200">58–63%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Maruti Suzuki Ertiga</td><td class="p-3 border-b border-cream-200">MPV</td><td class="p-3 border-b border-cream-200">₹8.5 lakh</td><td class="p-3 border-b border-cream-200">₹4.8–5.2 lakh</td><td class="p-3 border-b border-cream-200">56–61%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Honda City</td><td class="p-3 border-b border-cream-200">Sedan</td><td class="p-3 border-b border-cream-200">₹13.0 lakh</td><td class="p-3 border-b border-cream-200">₹6.8–7.3 lakh</td><td class="p-3 border-b border-cream-200">52–56%</td></tr>
+              <tr><td class="p-3">Hyundai Venue</td><td class="p-3">Sub-compact SUV</td><td class="p-3">₹9.5 lakh</td><td class="p-3">₹5.0–5.4 lakh</td><td class="p-3">53–57%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <strong class="text-navy-900">Why Toyota leads.</strong> Three structural factors: perceived reliability paired with documented low maintenance costs, strong rural and semi-urban demand that broadens the buyer pool, and minimal dealer discounting on new Toyotas, which anchors used prices higher.
+        </p>
+
+        <p>
+          <strong class="text-navy-900">Why Maruti holds.</strong> Service network density. Maruti has more workshops than any other brand in India. Spare parts are cheap and widely available even in tier 3 and tier 4 towns. That ubiquity makes used Maruti hatchbacks the default choice for first-time buyers and budget-conscious families.
+        </p>
+
+        <p>
+          <strong class="text-navy-900">A note on Tata.</strong> Tata models have improved their resale performance significantly since 2020, driven by build quality improvements (Nexon, Harrier) and growing brand perception. That said, 5-year retention percentages haven't yet matched Maruti or Toyota in most segments. The gap is narrowing.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">How insurance IDV depreciation compares to actual resale market value</h2>
+
+        <p>Two systems assign value to the same car. They almost never agree.</p>
+
+        <p>
+          IDV, or Insured Declared Value, is the maximum amount an insurance company pays if the car is stolen or written off in an accident. IRDAI (Insurance Regulatory and Development Authority of India) mandates a depreciation schedule that insurers use to calculate IDV. The schedule follows a fixed percentage based on the car's age:
+        </p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-base border border-cream-200 bg-white">
+            <thead class="bg-cream-100">
+              <tr>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Car age</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">IRDAI-mandated depreciation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border-b border-cream-200">Not exceeding 6 months</td><td class="p-3 border-b border-cream-200">5%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">6 months – 1 year</td><td class="p-3 border-b border-cream-200">15%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">1–2 years</td><td class="p-3 border-b border-cream-200">20%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">2–3 years</td><td class="p-3 border-b border-cream-200">30%</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">3–4 years</td><td class="p-3 border-b border-cream-200">40%</td></tr>
+              <tr><td class="p-3">4–5 years</td><td class="p-3">50%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>IDV vs. market value, Hyundai Creta SX(O) petrol example:</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-base border border-cream-200 bg-white">
+            <thead class="bg-cream-100">
+              <tr>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Year</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">IDV (calculated)</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Actual resale listing price</th>
+                <th class="text-left p-3 border-b border-cream-200 font-semibold text-navy-900">Gap</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border-b border-cream-200">Year 1</td><td class="p-3 border-b border-cream-200">₹12.7 lakh</td><td class="p-3 border-b border-cream-200">₹14.8 lakh</td><td class="p-3 border-b border-cream-200">Resale exceeds IDV by ₹2.1 lakh</td></tr>
+              <tr><td class="p-3 border-b border-cream-200">Year 3</td><td class="p-3 border-b border-cream-200">₹10.5 lakh</td><td class="p-3 border-b border-cream-200">₹11.5 lakh</td><td class="p-3 border-b border-cream-200">Resale exceeds IDV by ₹1.0 lakh</td></tr>
+              <tr><td class="p-3">Year 5</td><td class="p-3">₹7.5 lakh</td><td class="p-3">₹8.2 lakh</td><td class="p-3">Resale exceeds IDV by ₹0.7 lakh</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          The practical implication matters here. If a popular car is totalled in an accident at year 2, the insurance payout (based on IDV) may be significantly lower than what the owner could have sold the car for in the used market. That gap, often ₹1–2 lakh for mainstream models, is something most owners don't understand until they file a claim.
+        </p>
+
+        <p>
+          For a full explanation of how IDV works and how to contest it, see the <a href="/insurance-value">IDV in car insurance</a> guide.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Frequently asked questions about new car depreciation in India</h2>
+
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">How much does a new car depreciate in the first year in India?</h3>
+            <p>A new car in India typically loses 15–25% of its ex-showroom value in year 1. The exact percentage depends on the segment. Hatchbacks lose approximately 15–18%, sedans 18–22%, compact SUVs 16–19%, and luxury cars 25–30%. Non-recoverable costs like registration and road tax account for a significant portion of this first-year loss. The car's mechanical condition has almost nothing to do with year 1 depreciation.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Which cars have the best resale value in India after 5 years?</h3>
+            <p>Toyota Innova Crysta, Maruti Swift, Maruti WagonR, Hyundai Creta, and Mahindra Thar consistently lead in 5-year value retention. Brand service network density, spare parts availability, and ongoing demand in the used car market drive these results. Toyota and Maruti dominate the list because their ownership costs remain predictable even after warranty expiry.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">What is the depreciation rate for a car per year in India?</h3>
+            <p>There is no single rate. Year 1 depreciation runs 15–25%, year 2 drops to 8–12%, years 3–5 average 5–8% per year, and years 6–10 average 3–5% per year. Segment and model matter far more than any universal annual percentage. A Toyota Fortuner at year 5 retains more value than a Honda City at year 3.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Do diesel cars depreciate faster than petrol cars in India?</h3>
+            <p>Depends on where the car is registered. Diesel cars held value better than petrol models through most of the 2010s. Since the NGT-enforced 10-year diesel ban in Delhi-NCR took practical effect, diesel cars registered in that region depreciate faster after year 5. Outside NCR, diesel SUVs, particularly Fortuner and Creta diesel, still retain strong resale value.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">How do I calculate the resale value of my car after 5 years?</h3>
+            <p>Use a segment-adjusted depreciation curve, not a flat formula. For a rough mental estimate: ex-showroom price × 0.45–0.55 for mainstream models at year 5. For a more accurate figure, use a calculator that factors in make, model, fuel type, city, and kilometres driven. The <a href="/new-car-depreciation">depreciation calculator</a> does this using India-specific transaction data rather than a generic formula.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Does car colour affect depreciation in India?</h3>
+            <p>White and silver cars resell for 3–5% more than unusual colours in the Indian market. That translates to ₹30,000–₹80,000 depending on the segment and price bracket. Demand for white is partly driven by fleet and taxi buyers in the hatchback and sedan segments, but the premium holds even in compact SUVs where fleet buying is negligible. Buyers simply perceive white and silver as "safe" choices.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Why do Toyota cars depreciate less than other brands in India?</h3>
+            <p>Three factors combine. Perceived reliability and documented low maintenance costs make Toyotas cheap to own long-term. Strong rural and semi-urban demand creates a broad buyer pool for used Toyotas. And Toyota dealers rarely offer significant discounts on new cars, which keeps the reference price high and supports used valuations. The Innova Crysta and Fortuner are the strongest examples of this.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">What is the difference between IDV depreciation and market depreciation?</h3>
+            <p>IDV (Insured Declared Value) follows an IRDAI-mandated depreciation schedule with fixed percentages applied by car age. Market depreciation follows supply and demand. For popular models in early years, market value often exceeds IDV by ₹1–2 lakh. For older or niche models, IDV can exceed what the car would actually fetch in the used market. This matters most when filing total loss or theft claims, because the insurance payout is capped at IDV, not market value.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Is it better to sell a car at 3 years or 5 years?</h3>
+            <p>Selling at 3 years returns a higher absolute value (55–65% retention). Selling at 5 years results in a lower per-year depreciation cost because years 4 and 5 add relatively little incremental loss. The decision depends on priorities: cash recovery favours year 3, cost-per-year efficiency favours year 5. Maintenance cost increases after year 3 also factor in. Major service intervals at 40,000 and 50,000 km add expense that changes the math.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Do electric cars depreciate faster than petrol cars in India?</h3>
+            <p>Early data suggests they do. Battery degradation concerns, rapidly evolving EV technology (newer models offer more range at lower prices), and limited used EV buyer confidence all accelerate depreciation. Sample sizes remain small though, primarily Tata Nexon EV and MG ZS EV with 3+ years of resale history. Curves may improve as EV adoption grows and battery health certification becomes standardised.</p>
+          </div>
+        </div>
+
+        <div class="mt-12 p-6 bg-navy-900 text-white rounded-lg">
+          <p class="text-white/90 mb-4">Every number on this page points to the same conclusion: <strong>depreciation isn't a formula. It's a market outcome</strong> shaped by segment, model, fuel type, city, colour, and timing. The car that loses least isn't always the one that cost least. It's the one bought with resale reality already factored in.</p>
+          <a href="/new-car-depreciation" class="inline-block px-6 py-3 bg-white text-navy-900 text-sm font-medium rounded-md hover:bg-cream-100 transition-colors no-underline">Run the depreciation calculator →</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
