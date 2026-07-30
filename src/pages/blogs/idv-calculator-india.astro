@@ -1,0 +1,306 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'IDV calculator India: how insured declared value is calculated and where it falls short of market value';
+const description = 'Insured Declared Value explained. The IRDAI depreciation schedule, why IDV drops every year, and where it diverges from actual resale value on popular Indian cars.';
+---
+<BaseLayout title={title} description={description}>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="mb-8">
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/blogs">← All blogs</a>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">Insurance · Explainer</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+          IDV calculator India: how insured declared value is calculated and where it falls short of market value
+        </h1>
+        <div class="text-sm text-slate-soft">30 July 2026 · 10 min read · Editorial team, The Resale Value</div>
+      </div>
+
+      <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
+
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
+          <strong class="text-navy-900">Disclosure:</strong> TheResaleValue is an informational publisher and vehicle valuation platform. We are not a licensed insurer, corporate agent, or IRDAI-registered web aggregator. Nothing on this page is a policy offer or insurance advice. All IDV figures are illustrative. Individual insurer underwriting will vary. For a policy decision, consult a licensed insurance advisor.
+        </div>
+
+        <p class="text-xl leading-relaxed">
+          The gap between what an insurer declares a car is worth and what that car actually commands on the open market is not a rounding error. It is baked into how Insured Declared Value works in India, structurally, by design. Knowing what goes into an IDV calculation, from the formula itself to the depreciation schedule to whatever negotiation room actually exists, separates the informed policyholder from one who only discovers the shortfall after filing a total loss claim.
+        </p>
+
+        <p>
+          This page breaks IDV into its moving parts, presents the IRDAI depreciation schedule, and puts hard framing on the IDV-versus-resale-value gap for popular models.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">IDV full form and what insured declared value actually represents</h2>
+
+        <p>
+          <strong class="text-navy-900">IDV stands for Insured Declared Value.</strong> It is the maximum sum insured under the own-damage (OD) section of a motor insurance policy, the absolute ceiling of what an insurer will pay if the car is stolen or declared a total loss. IDV is not the car's market resale value, not the original purchase price, and not a guarantee of payout.
+        </p>
+
+        <p>
+          That distinction matters more than most policyholders realise. IDV represents the insurer's maximum liability, calculated using a standardised depreciation formula prescribed by IRDAI (Insurance Regulatory and Development Authority of India). It is set at the time of policy issuance or renewal, printed on the policy schedule, and stays fixed for the policy year regardless of what happens to the car's actual market worth during that period.
+        </p>
+
+        <p>
+          One clarification that trips people up constantly: IDV applies only to comprehensive and standalone own-damage policies. It does not apply to third-party-only policies. Third-party cover, mandatory under Section 146 of the Motor Vehicles Act, 1988, covers liability to other people and their property. Not the policyholder's own car. Comprehensive cover, which includes OD protection, is optional.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">How IDV is calculated: the IRDAI depreciation formula that decides your payout ceiling</h2>
+
+        <p>
+          IDV is calculated by applying age-based depreciation to the current ex-showroom price of the car's exact make, model, and variant, then adjusting for non-factory accessories and removed parts.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The base formula</h3>
+
+        <p>
+          IDV = (Current ex-showroom price of the same model and variant × (1 − depreciation rate for vehicle age)) + (value of non-factory-fitted accessories × (1 − their depreciation)) − (value of any items removed from the vehicle)
+        </p>
+
+        <p>
+          Two elements in this formula trip up car owners consistently. First, "current ex-showroom price" means the manufacturer's listed selling price for that model and variant as of today. Not the price originally paid at purchase. If the car was bought for ₹8.5 lakh in 2022 but the same variant now lists at ₹9.2 lakh in 2026, the ₹9.2 lakh figure is the base. Second, if the model has been discontinued, no current ex-showroom price exists. IDV then gets determined by mutual agreement between the insurer and the policyholder, based on the last known price and comparable models.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The IRDAI depreciation schedule by vehicle age</h3>
+
+        <p>
+          IRDAI prescribes fixed depreciation percentages based on how old the car is. These are applied to the current ex-showroom price to arrive at the IDV.
+        </p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-base border-collapse">
+            <thead class="bg-cream-100">
+              <tr>
+                <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Vehicle age</th>
+                <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Depreciation applied to ex-showroom price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border border-cream-200">Not exceeding 6 months</td><td class="p-3 border border-cream-200">5%</td></tr>
+              <tr><td class="p-3 border border-cream-200">Exceeding 6 months but not exceeding 1 year</td><td class="p-3 border border-cream-200">15%</td></tr>
+              <tr><td class="p-3 border border-cream-200">Exceeding 1 year but not exceeding 2 years</td><td class="p-3 border border-cream-200">20%</td></tr>
+              <tr><td class="p-3 border border-cream-200">Exceeding 2 years but not exceeding 3 years</td><td class="p-3 border border-cream-200">30%</td></tr>
+              <tr><td class="p-3 border border-cream-200">Exceeding 3 years but not exceeding 4 years</td><td class="p-3 border border-cream-200">40%</td></tr>
+              <tr><td class="p-3 border border-cream-200">Exceeding 4 years but not exceeding 5 years</td><td class="p-3 border border-cream-200">50%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          For a car aged 4 to 5 years, IRDAI prescribes 50% depreciation on the current ex-showroom price to arrive at IDV, meaning the insurer's maximum payout ceiling is half the car's listed new price. For cars older than 5 years, the schedule stops. IDV is determined by mutual agreement between the insurer and the car owner.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Why the same car returns different IDVs on different insurer portals</h3>
+
+        <p>
+          Most people think the depreciation schedule produces one fixed IDV number. That is only half the story. The same car, same age, same city can return different IDVs depending on which insurer generates the quote. Post-detariffing of motor OD pricing in 2007, insurers have underwriting discretion within a permissible band. The IRDAI schedule sets the reference point, not an exact payout. The variation across portals for the same car often runs into several thousand rupees, which is worth checking before locking in a policy.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The IDV vs market value gap: what actually happens after year 3</h2>
+
+        <p>
+          IDV and resale market value start close together in year one and then diverge. Sometimes dramatically. The direction and size of that divergence depends almost entirely on the car model's resale demand, which the IRDAI depreciation schedule does not and cannot account for.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Why they diverge</h3>
+
+        <p>
+          The IRDAI depreciation schedule is linear and aggressive. A car loses 50% of its ex-showroom value for IDV purposes by year five. Real-world resale depreciation follows a different curve entirely.
+        </p>
+
+        <p>
+          Models with strong resale demand hold value far better than the IRDAI schedule assumes. Maruti Suzuki, Toyota, and certain Hyundai variants are the obvious ones. A 5-year-old Maruti Swift in good condition does not sell for 50% of its ex-showroom price. It sells for considerably more, because buyer demand for affordable, reliable petrol hatchbacks stays high in the used market. The IRDAI schedule cannot capture that.
+        </p>
+
+        <p>
+          The opposite pattern also exists. Certain segments, including large luxury sedans, niche European imports, and models with high maintenance costs, depreciate faster in the real market than the schedule would suggest. For these cars, the IDV can actually exceed what the car would realistically fetch from a buyer.
+        </p>
+
+        <p>
+          To see how this plays out for any specific car, cross-check the calculated IDV against a resale estimate using TheResaleValue's <a href="/valuation">free car value calculator</a>. For the underlying depreciation curve by segment and age, see <a href="/blogs/new-car-depreciation-india">new car depreciation in India</a>.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The total loss trap: IDV is not what you actually receive</h3>
+
+        <p>
+          In a total loss claim, the insurer pays the IDV minus applicable deductions. Those deductions include:
+        </p>
+
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong class="text-navy-900">Salvage value:</strong> if the insurer does not take the wreck, its estimated salvage value is deducted from the payout.</li>
+          <li><strong class="text-navy-900">Compulsory deductible:</strong> as per the standard motor policy wording (varies by vehicle cubic capacity).</li>
+          <li><strong class="text-navy-900">Voluntary deductible:</strong> if the policyholder opted for one to reduce premium, that amount is also deducted.</li>
+        </ul>
+
+        <p>
+          The actual cheque is always less than the IDV number printed on the policy schedule.
+        </p>
+
+        <p>
+          For partial damage claims, dents, scratches, accident repairs, IDV does not directly affect the repair payout. The insurer covers the repair cost minus deductibles and depreciation on parts, per the policy terms. IDV primarily matters at the extremes: total loss and theft.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Minimum and maximum IDV: the flexibility band most buyers don't know about</h2>
+
+        <p>
+          Post-detariffing of motor OD rates in 2007, insurers gained flexibility in setting IDV. The published IRDAI depreciation schedule is the reference point, but insurers can offer IDV within a permissible range. Not a single fixed number.
+        </p>
+
+        <p>
+          Car owners have room to request a higher or lower IDV than the default number an insurer shows at quote stage. Limited room, but real.
+        </p>
+
+        <p>
+          Opting for minimum IDV reduces the OD premium. The trade-off: a lower payout ceiling at total loss or theft. Opting for maximum IDV increases the OD premium. The trade-off: a marginally higher payout ceiling, closer, though still not equal, to the car's actual resale worth.
+        </p>
+
+        <p>
+          Insurer approval is required for any IDV adjustment. The request may be subject to vehicle inspection, particularly for older cars or high-IDV requests. There is no guarantee of approval.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">How IDV affects premium and claim payout: the trade-off</h2>
+
+        <p>
+          The relationship between IDV, premium, and claim payout is straightforward in theory and consistently misunderstood in practice. It reduces to one structural fact: the own-damage premium is calculated as a rate applied to the IDV. Higher IDV means higher premium. Lower IDV means lower premium.
+        </p>
+
+        <p>
+          Third-party premium is entirely separate. IRDAI fixes it based on engine capacity for cars, and IDV has zero bearing on it.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The break-even framework</h3>
+
+        <p>
+          For a 3-year-old Maruti Swift in Delhi, the annual OD premium difference between minimum and maximum IDV can run a few hundred to a couple of thousand rupees. The IDV difference can be tens of thousands. The owner is essentially paying that premium increment each year to insure additional value. Whether that trade-off makes sense depends on the probability of total loss or theft over the policy year, which for a well-maintained car in a low-risk location is genuinely small.
+        </p>
+
+        <p>
+          The data suggests this decision depends on the car's absolute value, the owner's risk tolerance, and the city's theft rates. It is not a "always choose higher IDV" answer.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">For cars older than 5 years: how IDV works when the schedule ends</h2>
+
+        <p>
+          For cars older than 5 years, the IRDAI depreciation schedule provides no further guidance. IDV is determined by agreement between the insurer and the policyholder.
+        </p>
+
+        <p>
+          In practice, the word "agreement" is generous. The insurer proposes a number. The car owner can accept, negotiate, or walk. Most accept without question.
+        </p>
+
+        <p>
+          For cars older than 5 years, knowing the actual resale market value transforms the IDV discussion from passive acceptance into informed negotiation. A car owner who walks into a renewal conversation with a current market valuation, backed by transaction data rather than guesswork, has leverage the insurer's default algorithm does not expect.
+        </p>
+
+        <p>
+          Check any car's current market value on the <a href="/valuation">used car valuation calculator</a> before the next renewal.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">IDV at policy renewal: why it drops every year</h2>
+
+        <p>
+          At each renewal, IDV is recalculated. The car is one year older. The depreciation band shifts. The IDV drops automatically, silently, and often without the owner noticing until it is too late.
+        </p>
+
+        <p>A practical checklist before confirming any renewal:</p>
+
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Check whether the ex-showroom price used is the current listed price for the same model and variant. If the variant has been updated, facelifted, or repriced since the last renewal, the base price in the calculation should reflect the current figure.</li>
+          <li>Confirm the depreciation band matches the car's actual age. Errors do occur. A car crossing from the 2-to-3-year band into the 3-to-4-year band should show a jump from 30% to 40% depreciation, not stay at 30%.</li>
+          <li>Compare IDV against resale market value using TheResaleValue's <a href="/valuation">valuation tool</a>. If the IDV sits significantly lower, consider requesting an upward adjustment.</li>
+          <li>If the gap is large, request the IDV adjustment before confirming renewal. Contact the insurer or agent before payment, not after. Once the policy is issued, the IDV is locked for the policy year.</li>
+        </ul>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Common IDV mistakes that surface only at claim time</h2>
+
+        <p>
+          The real cost of IDV errors stays invisible until a claim is filed. Three specific mistakes account for the majority of total-loss payout disappointments, and all three are preventable at policy issuance or renewal.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Accepting default IDV without checking the ex-showroom price used</h3>
+
+        <p>
+          Insurers sometimes use an outdated or incorrect ex-showroom price for the model and variant. This can happen when a variant has been renamed, facelifted, or repriced mid-year. The ex-showroom price is the foundation of the entire IDV calculation. If the base number is wrong, everything built on top of it, the depreciation, the accessories, the final IDV, is wrong proportionally.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Not declaring accessories and losing them in a total loss claim</h3>
+
+        <p>
+          Non-factory-fitted accessories must be declared separately and added to the IDV with their own depreciation. Aftermarket alloy wheels, music systems, seat covers above a certain value threshold, and CNG or LPG kits fall into this category. If not declared at policy issuance, they are not covered.
+        </p>
+
+        <p>
+          A Maruti WagonR with an aftermarket CNG kit worth ₹65,000 to ₹75,000 installed at a third-party workshop is a common example. If the kit was not declared to the insurer, the total loss payout covers only the base car. The CNG kit receives zero coverage. The owner discovers this only when the claim is settled.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Confusing IDV with claim payout</h3>
+
+        <p>
+          Most people think IDV is the amount they will receive in a total loss. That is only half the story. In a total loss, the payout works out to IDV minus salvage value minus compulsory deductible minus voluntary deductible if applicable.
+        </p>
+
+        <p>
+          Salvage is the larger variable. If the wreck has resale value for parts or scrap, the insurer either takes the wreck and pays full IDV minus deductibles, or leaves the wreck with the owner and deducts its estimated salvage value from the payout. The salvage deduction can range from 10% to 30% of IDV depending on the car's condition post-accident. Sometimes more.
+        </p>
+
+        <p>
+          The actual cheque is always less than the IDV figure the owner sees on the policy schedule. This is not a hidden clause. It is standard motor policy wording. But it catches owners off guard because IDV is the only number most people remember from the policy document.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Frequently asked questions</h2>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What is IDV full form in car insurance?</h3>
+        <p>
+          IDV stands for Insured Declared Value. It is the maximum amount an insurer will pay in case of total loss or theft of the insured vehicle. IDV is not the car's market value, purchase price, or resale value. It is a depreciated value calculated using the IRDAI-prescribed schedule at the time of policy issuance.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">How is IDV calculated for a car in India?</h3>
+        <p>
+          IDV equals the current ex-showroom price of the same car model and variant minus IRDAI-prescribed depreciation based on vehicle age. Non-factory-fitted accessories are added separately with their own depreciation applied. For vehicles older than 5 years, no fixed depreciation schedule applies, IDV is determined by mutual agreement between the insurer and the policyholder.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What is the IRDAI depreciation rate for IDV calculation?</h3>
+        <p>
+          The IRDAI depreciation schedule is: 5% for cars up to 6 months old, 15% for 6 months to 1 year, 20% for 1 to 2 years, 30% for 2 to 3 years, 40% for 3 to 4 years, and 50% for 4 to 5 years. Beyond 5 years, no fixed schedule applies.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What is the difference between IDV and market value of a car?</h3>
+        <p>
+          IDV follows a fixed, age-based depreciation schedule set by IRDAI. Market resale value is driven by supply, demand, vehicle condition, kilometres driven, service history, and city-level pricing factors. For popular models like the Maruti Swift or Toyota Innova, market resale value often exceeds IDV after year 3 because buyer demand sustains prices above the depreciation-schedule level. For low-demand models, market value may fall below IDV.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Can the IDV of a car insurance policy be increased?</h3>
+        <p>
+          IDV can be adjusted within the permissible range set by the insurer at the time of policy issuance or renewal. Increasing IDV increases the own-damage premium proportionally. The request is subject to insurer approval and may require a vehicle inspection, particularly for older cars or significant upward adjustments. There is no guarantee that the insurer will accept the requested IDV.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does IDV affect third-party car insurance premium?</h3>
+        <p>
+          No. Third-party premium is fixed annually by IRDAI based on the car's engine capacity and is completely independent of IDV. IDV affects only the own-damage component of a comprehensive car insurance policy. A standalone third-party policy has no IDV at all.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What happens to IDV when car insurance is renewed?</h3>
+        <p>
+          IDV is recalculated at each renewal based on the car's updated age and the current ex-showroom price of the same model and variant. Because the car moves into a higher depreciation band each year, IDV decreases at every renewal. Car owners should review the IDV stated in the renewal notice or policy schedule before confirming payment.
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">How is IDV decided for a car older than 5 years?</h3>
+        <p>
+          The IRDAI depreciation schedule applies only up to 5 years. For cars older than 5 years, IDV is set by negotiation between the insurer and the car owner. In practice, the insurer typically proposes a number based on internal depreciation models, and the owner can accept or negotiate. Knowing the car's current resale market value from a platform like <a href="/valuation">TheResaleValue</a> provides leverage in this negotiation.
+        </p>
+
+        <div class="card-institutional bg-cream-100 mt-10">
+          <h3 class="text-xl font-serif text-navy-900 mb-3">Check your car's resale value before your next renewal</h3>
+          <p class="text-graphite mb-4">Compare the IDV your insurer proposes against a real market estimate for your exact car. Free, no signup.</p>
+          <a href="/valuation" class="inline-block px-6 py-3 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors no-underline">Check car value →</a>
+        </div>
+
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite mt-8">
+          <strong class="text-navy-900">Disclaimer:</strong> This article is published by TheResaleValue for informational and educational purposes only. TheResaleValue is not a licensed insurer, insurance broker, corporate agent, or IRDAI-registered web aggregator. Nothing on this page is insurance advice, a policy offer, or a guarantee of claim approval or payout. All IDV figures, depreciation rates, and worked examples are illustrative. Actual IDV, premium, and claim settlement depend on the specific insurer's policy wording, underwriting guidelines, and applicable IRDAI regulations at the time of issuance. Readers should consult a licensed insurance advisor for personalised guidance.
+        </div>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>
