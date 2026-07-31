@@ -218,6 +218,28 @@ const description = `${data.make} ${data.model} resale value in India: current m
         </div>
       </section>
 
+      <!-- Mid-page CTA: bridges from generic band to personalised valuation -->
+      <aside aria-labelledby="midcta-heading" class="card-institutional bg-cream-100 border-l-4 border-signal-600 mb-12">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-2">Personalised valuation</div>
+            <h2 id="midcta-heading" class="text-xl md:text-2xl font-serif text-navy-900 mb-2 leading-snug">
+              These bands are calculated from the parameters you selected above.
+            </h2>
+            <p class="text-base text-graphite leading-relaxed">
+              For a resale value tuned to your specific car's fingerprint — exact variant, service history, ownership count, city RTO, inspection score, and colour — use the full valuation calculator.
+            </p>
+          </div>
+          <a
+            href="/valuation"
+            class="inline-flex items-center justify-center px-6 py-3 bg-signal-600 text-white text-sm font-semibold rounded-md hover:bg-signal-700 no-underline hover:no-underline transition-colors shrink-0 whitespace-nowrap"
+            aria-label={`Get a personalised valuation for your specific ${data.make} ${data.model}`}
+          >
+            Value my exact {data.model} →
+          </a>
+        </div>
+      </aside>
+
       <!-- 6. Model context block (human-written / editable) -->
       <section aria-labelledby="ctx-heading" class="mb-12">
         <h2 id="ctx-heading" class="text-2xl font-serif text-navy-900 mb-3">What drives the {data.model}'s resale value</h2>
