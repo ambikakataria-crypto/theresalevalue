@@ -1,0 +1,164 @@
+{
+  "slug": { "make": "maruti", "model": "swift" },
+  "make": "Maruti Suzuki",
+  "model": "Swift",
+  "segment": "B-segment hatchback",
+  "bodyType": "Hatchback",
+  "launchYear": 2005,
+  "currentGeneration": {
+    "genNumber": 4,
+    "launchedIndia": "May 2024",
+    "engine": "1.2L Z12E 3-cylinder petrol, 82 bhp / 112 Nm",
+    "gearbox": "5MT, AMT (Manual, AGS)",
+    "fuelOptions": ["Petrol", "CNG (bi-fuel factory-fitted, ZXi and ZXi+ variants)"]
+  },
+  "priorGeneration": {
+    "genNumber": 3,
+    "yearsInIndia": "2018–2024",
+    "engine": "1.2L K12N Dualjet petrol"
+  },
+  "currentExShowroomRange": { "low": 6.5, "high": 9.6, "unit": "lakh" },
+  "lastRefreshedISO": "2026-07-31",
+  "refreshCadence": "Monthly",
+  "dataSourceNote": "Prices aggregated from Cars24 wholesale-transaction bands across metros. Non-metro adjustments applied via cityVariance below.",
+  "heroImage": {
+    "src": "/models/maruti-swift-hero.jpg",
+    "alt": "Maruti Suzuki Swift 4th generation front three-quarter in Metallic Splendid Silver on an Indian city road"
+  },
+  "variants": [
+    { "name": "LXi",     "fuel": "Petrol", "transmission": "5MT", "exShowroom": 6.55 },
+    { "name": "VXi",     "fuel": "Petrol", "transmission": "5MT", "exShowroom": 7.50 },
+    { "name": "VXi AGS", "fuel": "Petrol", "transmission": "AMT", "exShowroom": 8.05 },
+    { "name": "ZXi",     "fuel": "Petrol", "transmission": "5MT", "exShowroom": 8.55 },
+    { "name": "ZXi AGS", "fuel": "Petrol", "transmission": "AMT", "exShowroom": 9.10 },
+    { "name": "ZXi+",    "fuel": "Petrol", "transmission": "5MT", "exShowroom": 9.10 },
+    { "name": "ZXi+ AGS","fuel": "Petrol", "transmission": "AMT", "exShowroom": 9.65 },
+    { "name": "VXi CNG", "fuel": "CNG",    "transmission": "5MT", "exShowroom": 8.20 },
+    { "name": "ZXi CNG", "fuel": "CNG",    "transmission": "5MT", "exShowroom": 9.20 }
+  ],
+  "permutations": [
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Petrol", "low": 5.95, "mid": 6.40, "high": 6.85 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "Petrol", "low": 5.70, "mid": 6.15, "high": 6.60 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Petrol", "low": 5.35, "mid": 5.80, "high": 6.20 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Petrol", "low": 4.95, "mid": 5.40, "high": 5.80 },
+    { "year": 2024, "kmBand": "75k+",   "fuel": "Petrol", "low": 4.60, "mid": 5.00, "high": 5.40 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Petrol", "low": 5.20, "mid": 5.60, "high": 6.00 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "Petrol", "low": 4.95, "mid": 5.35, "high": 5.75 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Petrol", "low": 4.60, "mid": 5.00, "high": 5.40 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Petrol", "low": 4.25, "mid": 4.60, "high": 5.00 },
+    { "year": 2023, "kmBand": "75k+",   "fuel": "Petrol", "low": 3.85, "mid": 4.20, "high": 4.55 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Petrol", "low": 4.70, "mid": 5.10, "high": 5.45 },
+    { "year": 2022, "kmBand": "10-25k", "fuel": "Petrol", "low": 4.45, "mid": 4.80, "high": 5.15 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "Petrol", "low": 4.15, "mid": 4.50, "high": 4.85 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Petrol", "low": 3.80, "mid": 4.15, "high": 4.50 },
+    { "year": 2022, "kmBand": "75k+",   "fuel": "Petrol", "low": 3.50, "mid": 3.80, "high": 4.10 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "Petrol", "low": 4.15, "mid": 4.50, "high": 4.85 },
+    { "year": 2021, "kmBand": "10-25k", "fuel": "Petrol", "low": 3.90, "mid": 4.25, "high": 4.60 },
+    { "year": 2021, "kmBand": "25-50k", "fuel": "Petrol", "low": 3.65, "mid": 3.95, "high": 4.25 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "Petrol", "low": 3.35, "mid": 3.65, "high": 3.95 },
+    { "year": 2021, "kmBand": "75k+",   "fuel": "Petrol", "low": 3.05, "mid": 3.30, "high": 3.55 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "Petrol", "low": 3.65, "mid": 4.00, "high": 4.30 },
+    { "year": 2020, "kmBand": "10-25k", "fuel": "Petrol", "low": 3.45, "mid": 3.75, "high": 4.05 },
+    { "year": 2020, "kmBand": "25-50k", "fuel": "Petrol", "low": 3.15, "mid": 3.45, "high": 3.75 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "Petrol", "low": 2.90, "mid": 3.15, "high": 3.40 },
+    { "year": 2020, "kmBand": "75k+",   "fuel": "Petrol", "low": 2.60, "mid": 2.85, "high": 3.10 },
+
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "CNG", "low": 6.25, "mid": 6.70, "high": 7.15 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "CNG", "low": 6.00, "mid": 6.45, "high": 6.90 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "CNG", "low": 5.60, "mid": 6.05, "high": 6.50 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "CNG", "low": 5.20, "mid": 5.65, "high": 6.10 },
+    { "year": 2024, "kmBand": "75k+",   "fuel": "CNG", "low": 4.85, "mid": 5.25, "high": 5.65 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "CNG", "low": 5.45, "mid": 5.85, "high": 6.25 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "CNG", "low": 5.20, "mid": 5.60, "high": 6.00 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "CNG", "low": 4.85, "mid": 5.25, "high": 5.65 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "CNG", "low": 4.50, "mid": 4.85, "high": 5.25 },
+    { "year": 2023, "kmBand": "75k+",   "fuel": "CNG", "low": 4.10, "mid": 4.45, "high": 4.80 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "CNG", "low": 4.25, "mid": 4.60, "high": 4.95 },
+    { "year": 2022, "kmBand": "10-25k", "fuel": "CNG", "low": 4.00, "mid": 4.35, "high": 4.70 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "CNG", "low": 3.75, "mid": 4.05, "high": 4.35 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "CNG", "low": 3.40, "mid": 3.70, "high": 4.00 },
+    { "year": 2022, "kmBand": "75k+",   "fuel": "CNG", "low": 3.10, "mid": 3.35, "high": 3.60 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "CNG", "low": 3.75, "mid": 4.05, "high": 4.35 },
+    { "year": 2021, "kmBand": "10-25k", "fuel": "CNG", "low": 3.50, "mid": 3.80, "high": 4.10 },
+    { "year": 2021, "kmBand": "25-50k", "fuel": "CNG", "low": 3.25, "mid": 3.55, "high": 3.85 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "CNG", "low": 3.00, "mid": 3.25, "high": 3.50 },
+    { "year": 2021, "kmBand": "75k+",   "fuel": "CNG", "low": 2.70, "mid": 2.90, "high": 3.15 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "CNG", "low": 3.25, "mid": 3.55, "high": 3.85 },
+    { "year": 2020, "kmBand": "10-25k", "fuel": "CNG", "low": 3.10, "mid": 3.35, "high": 3.60 },
+    { "year": 2020, "kmBand": "25-50k", "fuel": "CNG", "low": 2.80, "mid": 3.05, "high": 3.30 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "CNG", "low": 2.55, "mid": 2.80, "high": 3.05 },
+    { "year": 2020, "kmBand": "75k+",   "fuel": "CNG", "low": 2.30, "mid": 2.50, "high": 2.70 }
+  ],
+  "cngNote": "Factory-fitted Swift CNG was launched in 2023 on the 3rd-generation Swift, and continues on the 4th-generation ZXi and ZXi+ from 2024. Pre-2023 CNG figures reflect aftermarket-fitted kits, which typically trade 6–10% below equivalent petrol due to buyer diligence around approvals and tank certification.",
+  "cityVariance": [
+    { "city": "Delhi NCR",  "variancePct":  2, "note": "CNG-friendly, high liquidity" },
+    { "city": "Mumbai",     "variancePct":  3, "note": "Tight supply, RTO premium" },
+    { "city": "Bengaluru",  "variancePct":  3, "note": "Strong petrol demand, IT-corridor buyers" },
+    { "city": "Hyderabad",  "variancePct":  1, "note": "Steady demand, moderate liquidity" },
+    { "city": "Chennai",    "variancePct":  0, "note": "Baseline; automatic variants slightly firmer" },
+    { "city": "Pune",       "variancePct":  2, "note": "Follows Mumbai band, slightly softer" },
+    { "city": "Kolkata",    "variancePct": -2, "note": "Softer prices, longer selling cycle" },
+    { "city": "Ahmedabad",  "variancePct":  0, "note": "CNG-heavy, near-baseline overall" }
+  ],
+  "retentionCurve": [
+    { "ageYears": 1, "retentionPct": 85 },
+    { "ageYears": 2, "retentionPct": 75 },
+    { "ageYears": 3, "retentionPct": 67 },
+    { "ageYears": 4, "retentionPct": 60 },
+    { "ageYears": 5, "retentionPct": 53 }
+  ],
+  "segmentAverageRetention": {
+    "3year": 60,
+    "5year": 46
+  },
+  "context": [
+    "The Swift has been India's highest-volume hatchback in most years since its 2005 launch, and that scale is the single biggest driver of its resale strength. Parts availability at Maruti's Arena network, mechanic familiarity in every town, and buyer trust in the badge together create a resale floor no direct competitor matches.",
+    "The 4th-generation Swift launched in India in May 2024 with the new 1.2-litre Z12E 3-cylinder petrol engine, replacing the K12N Dualjet unit. The 3-cylinder switch is the most-discussed change on owner forums, and it has slightly compressed the price band between latest-gen (2024+) and prior-gen (2018–2024) cars in the used market, in the prior generation's favour, for the first 12 months of the new generation.",
+    "Factory-fitted CNG was introduced on the Swift in 2023, on VXi and ZXi variants. In the used market, factory CNG trades 3–5% above equivalent petrol in NCR, Ahmedabad, and pockets of Gujarat. Aftermarket CNG kits, common on 2018–2022 units, are penalised by 6–10%.",
+    "Automatic (AMT / AGS) variants have closed most of the historical resale gap with manuals. As of mid-2026, an AMT Swift trades within 1% of an equivalent manual across metros, driven by rising automatic preference in city-only ownership patterns.",
+    "Colour has a smaller impact than most owners assume. Metallic Splendid Silver, Pearl Arctic White, and Sizzling Red hold within 1% of each other. Bright Yellow and Rustic Orange trade 2–3% below the model average because of narrower buyer preference at resale."
+  ],
+  "commonIssues": [
+    "Head-unit software glitches on 2023–2024 units before the March-2024 OTA patch. Verify software version at inspection; a serviced unit usually clears within one dealer visit.",
+    "AGS (AMT) shudder in stop-go traffic on 2018–2020 units above 60,000 km. Not a defect flag, but budget ₹8,000–15,000 for actuator recalibration or clutch service.",
+    "Rear suspension bush wear appears around 55,000–70,000 km on 2018+ Swifts driven on poor roads. Replacement is a routine service item, roughly ₹3,000–5,000 at Arena.",
+    "Some 2020 CNG (aftermarket) units surface with expired RTO endorsement or missing hydro-test certificates for the tank. Non-negotiable inspection item — a valid endorsement is mandatory for transfer.",
+    "Paint fade on Rustic Orange and Solid Fire Red is visible on 2018–2020 units parked without cover. Cosmetic, but factors into resale negotiation."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Maruti Swift in India?",
+      "a": "A well-maintained Maruti Swift retains approximately 75% of its ex-showroom price after two years, 67% after three years, and 53% after five years, based on transaction data across Indian metros as of July 2026. For a 2022 VXi petrol with 25,000–50,000 km, the current fair-market band is roughly ₹4.15–4.85 lakh."
+    },
+    {
+      "q": "Does a Swift CNG hold value better than a Swift petrol?",
+      "a": "Yes, factory-fitted CNG Swift (2023 onwards) holds 3–5% more value than the equivalent petrol variant, particularly in Delhi NCR, Ahmedabad, and Mumbai. Aftermarket CNG kits fitted to older Swifts trade 6–10% below equivalent petrol, because of buyer concerns around kit approval and tank certification."
+    },
+    {
+      "q": "Is the 4th-generation Swift's 3-cylinder engine hurting resale?",
+      "a": "Not materially, though the market has partly re-rated the prior-generation (2018–2024) K12N 4-cylinder Swift on the used market during the 4th generation's first year. As of mid-2026, a 2023 3rd-gen VXi with 10,000–25,000 km trades in a band that overlaps significantly with a 2024 4th-gen VXi at the same km — a compression that did not exist between the 2nd and 3rd generations."
+    },
+    {
+      "q": "How much does a Swift depreciate per year?",
+      "a": "The Maruti Swift depreciates roughly 15% in year one, an additional 10% in year two, then 7–8% per year for years three to five. The five-year retention of about 53% is 6–8 percentage points above the B-segment hatchback average."
+    },
+    {
+      "q": "Which city gives the best resale price for a Swift?",
+      "a": "Mumbai and Bengaluru currently trade at approximately +3% above the national mid, driven by tight used-car supply and strong hatchback demand. Kolkata trades at approximately −2%, and non-metro locations typically land 3–5% below the national mid depending on RTO and buyer pool."
+    }
+  ],
+  "relatedModels": [
+    { "make": "maruti", "model": "baleno", "label": "Maruti Baleno" },
+    { "make": "hyundai", "model": "i20", "label": "Hyundai i20" },
+    { "make": "tata", "model": "altroz", "label": "Tata Altroz" }
+  ],
+  "authorSlug": "a-verma"
+}
