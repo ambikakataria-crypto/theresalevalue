@@ -26,10 +26,10 @@ const howItWorks = [
        On desktop the image floats right, spanning both text rows. -->
   <section class="pt-14 pb-16 md:pt-20 md:pb-24">
     <div class="container-tight">
-      <div class="grid md:grid-cols-12 gap-y-6 md:gap-y-8 gap-x-0 md:gap-x-14 md:items-center">
+      <div class="grid md:grid-cols-12 gap-y-6 md:gap-y-8 gap-x-0 md:gap-x-10 md:items-center">
 
         <!-- Row 1 (desktop) / mobile block 1: byline + H1 -->
-        <div class="md:col-span-7 md:col-start-1 md:row-start-1">
+        <div class="md:col-span-6 md:col-start-1 md:row-start-1">
           <!-- Byline strip, first human signal on the page -->
           <div class="flex items-center gap-3 mb-6 text-xs text-slate-soft">
             <div class="w-8 h-8 rounded-full bg-signal-600 text-white flex items-center justify-center font-semibold text-xs shrink-0" aria-hidden="true">TE</div>
@@ -43,20 +43,20 @@ const howItWorks = [
         <!-- Hero photo. HTML order sits between H1 and paragraph so mobile reads:
              byline > H1 > photo > paragraph > CTAs. On desktop the image occupies
              the right column across both text rows. -->
-        <div class="md:col-span-5 md:col-start-8 md:row-start-1 md:row-span-2 md:self-center">
+        <div class="md:col-span-6 md:col-start-7 md:row-start-1 md:row-span-2 md:self-stretch">
           <img
             src="/hero/key-handover.jpg"
             alt="A woman in a red saree receiving car keys from a dealer beside a red Maruti Swift"
-            width="820"
-            height="1024"
+            width="1672"
+            height="941"
             loading="eager"
             fetchpriority="high"
-            class="w-full h-auto object-cover rounded-md shadow-lg"
+            class="w-full h-full object-cover rounded-md shadow-lg"
           />
         </div>
 
         <!-- Row 2 (desktop) / mobile block 3: paragraph + CTAs -->
-        <div class="md:col-span-7 md:col-start-1 md:row-start-2">
+        <div class="md:col-span-6 md:col-start-1 md:row-start-2">
           <p class="text-lg text-graphite leading-relaxed mb-7 max-w-xl">
             India's neutral vehicle valuation index. Get a fair-market price band for your car before you sell, insure, or trade it in.
           </p>
