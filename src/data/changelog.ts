@@ -14,6 +14,15 @@ export const changelog: ChangelogEntry[] = [
     date: '2026-08-02',
     editor: 'The Editor',
     items: [
+      'Maruti Swift resale value page cleared for indexing. Byline, dated editor\'s take, last-refresh stamp and ban-list check are all in place.',
+      'Author profile pages blocked in robots.txt (Disallow: /authors/) and excluded from the sitemap while they remain placeholders. noindex meta stays on as well.',
+      'Home hero rebuilt: real handover photo, editor-in-the-margin scribbles on the neutrality callout and the 3-step timeline, Caveat font wired in.',
+    ],
+  },
+  {
+    date: '2026-08-02',
+    editor: 'The Editor',
+    items: [
       'Reworked bylines and author pages after E-E-A-T review. Author profile pages set to noindex until real writer profiles are wired in.',
       'Added "The editor\'s take" callouts across the Swift model page and the four July blog posts. Dated, signed opinions sit above the AI-drafted data now.',
       'Published this changelog. Weekly updates from here.',
