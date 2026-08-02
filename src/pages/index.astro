@@ -97,13 +97,25 @@ const howItWorks = [
               <h3 class="text-xl md:text-2xl font-serif text-navy-900 mb-3 leading-snug">{title}</h3>
               <p class="text-base text-graphite leading-relaxed">{desc}</p>
 
+              {step === '1' && (
+                <div class="hidden md:block absolute -top-14 left-0 max-w-[260px] pointer-events-none" aria-hidden="true">
+                  <span class="handwritten-note" style="transform: rotate(-3deg); display:inline-block;">guess the inputs, get a guess back. one wrong field can swing the band 30%.</span>
+                </div>
+              )}
+
               {step === '2' && (
-                <div class="hidden md:flex items-start gap-2 absolute -top-16 left-0 max-w-[220px] pointer-events-none" aria-hidden="true">
-                  <span class="handwritten-note" style="transform: rotate(-3deg); display:inline-block;">not one number, on purpose.</span>
-                  <svg viewBox="0 0 40 60" width="30" height="46" class="shrink-0 mt-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="color: var(--color-signal-600);">
+                <div class="hidden md:flex items-start gap-2 absolute -top-20 left-0 max-w-[260px] pointer-events-none" aria-hidden="true">
+                  <span class="handwritten-note" style="transform: rotate(-2deg); display:inline-block;">one 'true price' is a myth. the market is a spread.</span>
+                  <svg viewBox="0 0 40 60" width="28" height="42" class="shrink-0 mt-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="color: var(--color-signal-600);">
                     <path d="M8 4 C 12 18, 18 30, 22 46" />
                     <path d="M14 42 L 22 46 L 22 38" />
                   </svg>
+                </div>
+              )}
+
+              {step === '3' && (
+                <div class="hidden md:block absolute -top-14 left-0 max-w-[260px] pointer-events-none" aria-hidden="true">
+                  <span class="handwritten-note" style="transform: rotate(2deg); display:inline-block;">walk in armed. the band tells you when to accept, negotiate, or walk.</span>
                 </div>
               )}
 
@@ -221,7 +233,7 @@ const howItWorks = [
               <path d="M6 30 C 18 22, 30 14, 50 8" />
               <path d="M44 4 L 50 8 L 46 14" />
             </svg>
-            <span class="handwritten-note" style="transform: rotate(-3deg); display:inline-block;">this gap is the whole point.</span>
+            <span class="handwritten-note" style="transform: rotate(-3deg); display:inline-block;">the market never has one price. it has a spread. seeing it end-to-end is your edge.</span>
           </div>
         </div>
       </div>
