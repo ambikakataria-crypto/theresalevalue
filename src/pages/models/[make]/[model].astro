@@ -41,7 +41,7 @@ const linePath = curve
 const segAvg5y = data.segmentAverageRetention['5year'];
 
 // Meta
-const title = `${data.make} ${data.model} resale value in India — ${currentYear} price range, depreciation & variants | TheResaleValue`;
+const title = `${data.make} ${data.model} resale value in India, ${currentYear} price range, depreciation & variants | TheResaleValue`;
 const description = `${data.make} ${data.model} resale value in India: current market range ₹${rangeLow}–${rangeHigh} lakh across years, kilometres and fuel types. Depreciation curve, variant table and city-wise adjustments. Refreshed monthly.`;
 ---
 <BaseLayout title={title} description={description}>
@@ -54,7 +54,7 @@ const description = `${data.make} ${data.model} resale value in India: current m
       </div>
       <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">{data.segment} · Resale report</div>
       <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
-        {data.make} {data.model} resale value in India — {currentYear} market range
+        {data.make} {data.model} resale value in India, {currentYear} market range
       </h1>
       <p class="text-lg text-graphite leading-relaxed mb-4">
         The {data.model} is India's highest-volume {data.bodyType.toLowerCase()} and one of the strongest resale performers in its segment. Below is the current fair-market range across year, kilometres, and fuel type, alongside the depreciation curve, variant-wise ex-showroom prices, and city-level adjustments.
@@ -78,7 +78,7 @@ const description = `${data.make} ${data.model} resale value in India: current m
       <!-- 2. Interactive calculator -->
       <section aria-labelledby="calc-heading" class="card-institutional bg-white mb-12">
         <h2 id="calc-heading" class="text-2xl font-serif text-navy-900 mb-2">Check your {data.model}'s resale value</h2>
-        <p class="text-sm text-slate-soft mb-5">Select year, kilometres and fuel type. Values are refreshed monthly from wholesale transaction data — no live API call. For a personalised report including RC and inspection scoring, use the <a href="/valuation" class="text-signal-600 hover:underline">full valuation tool</a>.</p>
+        <p class="text-sm text-slate-soft mb-5">Select year, kilometres and fuel type. Values are refreshed monthly from wholesale transaction data, no live API call. For a personalised report including RC and inspection scoring, use the <a href="/valuation" class="text-signal-600 hover:underline">full valuation tool</a>.</p>
 
         <div class="grid md:grid-cols-3 gap-4 mb-6">
           <label class="block text-sm">
@@ -162,7 +162,7 @@ const description = `${data.make} ${data.model} resale value in India: current m
               </>
             ))}
           </svg>
-          <div class="text-xs text-slate-soft mt-3">Chart values are aggregated across all variants and fuel types. Individual permutations vary — use the calculator above for a specific year/km/fuel combination.</div>
+          <div class="text-xs text-slate-soft mt-3">Chart values are aggregated across all variants and fuel types. Individual permutations vary, use the calculator above for a specific year/km/fuel combination.</div>
         </div>
       </section>
 
@@ -193,8 +193,8 @@ const description = `${data.make} ${data.model} resale value in India: current m
                     <td class="p-3 border border-cream-200">{v.fuel}</td>
                     <td class="p-3 border border-cream-200">{v.transmission}</td>
                     <td class="p-3 border border-cream-200 text-right font-data">{v.exShowroom.toFixed(2)}</td>
-                    <td class="p-3 border border-cream-200 text-right font-data">{perm3yr ? perm3yr.mid.toFixed(2) : '—'}</td>
-                    <td class="p-3 border border-cream-200 text-right font-data">{retention ? `${retention}%` : '—'}</td>
+                    <td class="p-3 border border-cream-200 text-right font-data">{perm3yr ? perm3yr.mid.toFixed(2) : '-'}</td>
+                    <td class="p-3 border border-cream-200 text-right font-data">{retention ? `${retention}%` : '-'}</td>
                   </tr>
                 );
               })}
@@ -228,7 +228,7 @@ const description = `${data.make} ${data.model} resale value in India: current m
               These bands are calculated from the parameters you selected above.
             </h2>
             <p class="text-base text-graphite leading-relaxed">
-              For a resale value tuned to your specific car's fingerprint — exact variant, service history, ownership count, city RTO, inspection score, and colour — use the full valuation calculator.
+              For a resale value tuned to your specific car's fingerprint, exact variant, service history, ownership count, city RTO, inspection score, and colour, use the full valuation calculator.
             </p>
           </div>
           <a
@@ -241,7 +241,7 @@ const description = `${data.make} ${data.model} resale value in India: current m
         </div>
       </aside>
 
-      <!-- Editor's take — dated, opinionated POV that sits above the AI-drafted context -->
+      <!-- Editor's take, dated, opinionated POV that sits above the AI-drafted context -->
       <EditorsTake date="Aug 2026" title="The most interesting used-Swift trade right now">
         The used market hasn't fully re-priced the switch from the 4-cylinder K12N (up to 2024) to the 3-cylinder Z12E (2024+). A well-kept 2023 ZXi under 20,000 km is trading maybe 5% below a 2024 equivalent right now, and most buyers we speak to still prefer the 4-cylinder unit. That gap will close by year-end as inventory of the old generation dries up. If you're buying anyway, buy the 3rd gen this quarter.
       </EditorsTake>
@@ -267,7 +267,7 @@ const description = `${data.make} ${data.model} resale value in India: current m
         </ul>
         {data.cngNote && (
           <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite mt-6">
-            <strong class="text-navy-900">On CNG variants —</strong> {data.cngNote}
+            <strong class="text-navy-900">On CNG variants:</strong> {data.cngNote}
           </div>
         )}
       </section>
@@ -340,7 +340,7 @@ const description = `${data.make} ${data.model} resale value in India: current m
         const cityPct = parseFloat(cityEl.value) || 0;
         const match = perms.find(p => p.year === year && p.kmBand === km && p.fuel === fuel);
         if (!match) {
-          midEl.textContent = '—';
+          midEl.textContent = '-';
           bandEl.textContent = 'No data for this combination';
           return;
         }

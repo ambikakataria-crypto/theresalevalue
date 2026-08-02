@@ -9,7 +9,7 @@ export function getStaticPaths() {
 
 const { author } = Astro.props as { author: Author };
 const initials = author.name.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
-const title = `${author.name} — ${author.role} · TheResaleValue`;
+const title = `${author.name}, ${author.role} · TheResaleValue`;
 const description = author.bio;
 ---
 <BaseLayout title={title} description={description} noindex={author.isPlaceholder}>

@@ -58,18 +58,23 @@ body {
   font-feature-settings: "ss01", "cv11";
 }
 
-h1, h2, h3 {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--color-navy-900);
-  line-height: 1.15;
-}
-
-h4, h5, h6 {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  color: var(--color-navy-900);
+@layer base {
+  /* Raw heading rules live inside base so Tailwind utility classes
+     (e.g. text-white, text-signal-600) can override the default color.
+     Previously these lived outside any @layer and won specificity fights,
+     which made text-white silently invisible on navy backgrounds. */
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-navy-900);
+    line-height: 1.15;
+  }
+  h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--color-navy-900);
+  }
 }
 
 .font-data,
@@ -98,7 +103,14 @@ h4, h5, h6 {
 }
 
 .container-tight {
-  max-width: 1120px;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Narrow prose column, used inside long-form sections (FAQ, CTA copy) */
+.container-prose {
+  max-width: 720px;
   margin-inline: auto;
   padding-inline: 1.25rem;
 }

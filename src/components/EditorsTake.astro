@@ -1,5 +1,5 @@
 ---
-// Editor's take — dated, signed opinion callout that sits ON TOP of
+// Editor's take, dated, signed opinion callout that sits ON TOP of
 // AI-drafted content. This is the highest-visibility "human signal"
 // component on the site. Use one per page, placed at a decision
 // point where the reader needs a POV to act on.
@@ -8,7 +8,7 @@
 // - Must be dated (month + year, e.g. "Aug 2026")
 // - Must state a clear opinion, not a summary
 // - Must be under 90 words
-// - Must be first-person or use "we" — never third-person analytical voice
+// - Must be first-person or use "we", never third-person analytical voice
 // - Must be edited by a real human before shipping (no raw AI drafts)
 
 interface Props {
@@ -30,5 +30,5 @@ const { date, editor = 'The Editor', title } = Astro.props;
   <div class="text-base text-graphite leading-relaxed italic">
     <slot />
   </div>
-  <div class="text-xs text-slate-soft mt-3 not-italic">— {editor}</div>
+  <div class="text-xs text-slate-soft mt-3 not-italic">Signed, {editor}</div>
 </aside>

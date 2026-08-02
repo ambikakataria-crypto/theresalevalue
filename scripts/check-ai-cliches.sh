@@ -67,6 +67,46 @@ for pat in "${PATTERNS[@]}"; do
   fi
 done
 
+# --- Typography tells ---------------------------------------------------
+# Em-dashes are the single most reliable AI signal — commas, periods, or
+# parentheses do the same job without giving the piece away. En-dashes are
+# fine ONLY inside numeric ranges (5–10 km); banned as sentence connectors.
+# Curly quotes and ellipsis characters get auto-inserted by AI tooling and
+# should be replaced with straight quotes and three periods.
+TYPO_PATTERNS=(
+  # em-dash anywhere
+  $'\xe2\x80\x94'
+  # curly single quotes
+  $'\xe2\x80\x98'
+  $'\xe2\x80\x99'
+  # curly double quotes
+  $'\xe2\x80\x9c'
+  $'\xe2\x80\x9d'
+  # ellipsis character
+  $'\xe2\x80\xa6'
+)
+TYPO_LABELS=(
+  'em-dash (—) — use commas, periods, or parentheses'
+  "curly single-quote open (') — use straight '"
+  "curly single-quote close (') — use straight '"
+  'curly double-quote open (") — use straight "'
+  'curly double-quote close (") — use straight "'
+  'ellipsis character (…) — use three periods ...'
+)
+for i in "${!TYPO_PATTERNS[@]}"; do
+  pat="${TYPO_PATTERNS[$i]}"
+  label="${TYPO_LABELS[$i]}"
+  # shellcheck disable=SC2086
+  matches=$(grep -rn $GREP_OPTS -F "$pat" "${SCAN_PATHS[@]}" 2>/dev/null || true)
+  if [ -n "$matches" ]; then
+    echo "── FLAG: $label"
+    echo "$matches"
+    echo
+    hit_count=$(printf '%s\n' "$matches" | wc -l | tr -d ' ')
+    hits=$((hits + hit_count))
+  fi
+done
+
 if [ "$hits" -gt 0 ]; then
   echo "───────────────────────────────────────────"
   echo "AI-cliché check: $hits flagged line(s)."

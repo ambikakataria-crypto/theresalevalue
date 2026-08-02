@@ -1,5 +1,5 @@
 // TheResaleValue public changelog
-// Human-updated weekly. Each entry is a real, dated edit — no automation.
+// Human-updated weekly. Each entry is a real, dated edit, no automation.
 // Keep entries specific: "Refreshed Swift CNG bands +2% for Delhi liquidity"
 // beats "Updated data".
 
@@ -23,7 +23,7 @@ export const changelog: ChangelogEntry[] = [
     date: '2026-07-31',
     editor: 'The Editor',
     items: [
-      'Shipped the Maruti Swift reference make/model page — variant grid, city variance, on-page calculator running off a 50-permutation static JSON.',
+      'Shipped the Maruti Swift reference make/model page, variant grid, city variance, on-page calculator running off a 50-permutation static JSON.',
       'Added mid-page CTA linking to the full valuation flow.',
     ],
   },
@@ -32,7 +32,7 @@ export const changelog: ChangelogEntry[] = [
     editor: 'The Editor',
     items: [
       'Published four July blogs: IDV calculator explainer, car loan vs resale, scrappage guide, and how-to-check-value.',
-      'Applied YMYL hardening — non-licensed disclosure banners on the two insurance and finance posts.',
+      'Applied YMYL hardening, non-licensed disclosure banners on the two insurance and finance posts.',
     ],
   },
 ];
