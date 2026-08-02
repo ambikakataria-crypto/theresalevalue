@@ -24,13 +24,13 @@ const initials = author.name.split(/\s+/).map(w => w[0]).slice(0, 2).join('').to
     <div class="leading-tight">
       <div class="text-graphite">
         <span class="text-slate-soft">By</span>{' '}
-        <a href={`/authors/${author.slug}`} class="font-semibold text-navy-900 hover:text-signal-600">{author.name}</a>
+        <span class="font-semibold text-navy-900">{author.name}</span>
         {author.role && <span class="text-slate-soft"> · {author.role}</span>}
       </div>
       {reviewer && (
         <div class="text-slate-soft mt-0.5">
           Reviewed by{' '}
-          <a href={`/authors/${reviewer.slug}`} class="text-navy-900 hover:text-signal-600 font-medium">{reviewer.name}</a>
+          <span class="text-navy-900 font-medium">{reviewer.name}</span>
           {reviewer.credentials && <span> · {reviewer.credentials}</span>}
         </div>
       )}

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Byline from '../../../components/Byline.astro';
+import EditorsTake from '../../../components/EditorsTake.astro';
 import swiftData from '../../../data/models/maruti-swift.json';
 
 // Prototype: one model wired. To scale, import all /data/models/*.json and
@@ -239,6 +240,11 @@ const description = `${data.make} ${data.model} resale value in India: current m
           </a>
         </div>
       </aside>
+
+      <!-- Editor's take — dated, opinionated POV that sits above the AI-drafted context -->
+      <EditorsTake date="Aug 2026" title="The most interesting used-Swift trade right now">
+        The used market hasn't fully re-priced the switch from the 4-cylinder K12N (up to 2024) to the 3-cylinder Z12E (2024+). A well-kept 2023 ZXi under 20,000 km is trading maybe 5% below a 2024 equivalent right now, and most buyers we speak to still prefer the 4-cylinder unit. That gap will close by year-end as inventory of the old generation dries up. If you're buying anyway, buy the 3rd gen this quarter.
+      </EditorsTake>
 
       <!-- 6. Model context block (human-written / editable) -->
       <section aria-labelledby="ctx-heading" class="mb-12">
