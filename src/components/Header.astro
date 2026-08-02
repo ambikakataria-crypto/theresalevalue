@@ -7,6 +7,13 @@ const nav = [
   { href: '/new-car-depreciation', label: 'New Car Depreciation' },
   { href: '/blogs', label: 'Blogs' },
 ];
+
+// Models dropdown, resale value reports per make/model.
+// Add new entries here as more model pages ship.
+const modelPages = [
+  { href: '/models/maruti/swift', label: 'Maruti Swift', tag: 'B-segment hatch' },
+];
+const modelsActive = pathname.startsWith('/models/');
 ---
 <header class="border-b border-cream-200 bg-cream/95 backdrop-blur-sm sticky top-0 z-50">
   <div class="container-tight flex items-center justify-between h-16">
@@ -32,6 +39,38 @@ const nav = [
           {label}
         </a>
       ))}
+
+      <!-- Models dropdown. Uses <details> for zero-JS click-to-open, works on
+           desktop and mobile-viewport-at-md+. Hover also opens on desktop via
+           a small style block below. -->
+      <details class="relative nav-dropdown">
+        <summary
+          class:list={[
+            'list-none cursor-pointer select-none px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1.5',
+            modelsActive
+              ? 'text-navy-900 bg-cream-100'
+              : 'text-graphite hover:text-navy-900 hover:bg-cream-100'
+          ]}
+        >
+          Models
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true" class="opacity-70">
+            <path d="M3 4.5 L6 7.5 L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </summary>
+        <div class="absolute top-full left-0 mt-1 min-w-[240px] bg-white border border-cream-200 rounded-md shadow-lg z-50 overflow-hidden">
+          {modelPages.map((m) => (
+            <a
+              href={m.href}
+              class="block px-4 py-2.5 text-sm hover:bg-cream-100 no-underline hover:no-underline border-b border-cream-200 last:border-b-0"
+            >
+              <div class="font-medium text-navy-900">{m.label}</div>
+              <div class="text-xs text-slate-soft mt-0.5">{m.tag}</div>
+            </a>
+          ))}
+          <div class="px-4 py-2.5 text-xs text-slate-soft bg-cream-100">More models coming. See the <a href="/changelog" class="text-signal-600 hover:underline">changelog</a>.</div>
+        </div>
+      </details>
+
       <a
         href="/valuation"
         class="ml-2 px-4 py-2 bg-navy-900 !text-white text-sm font-medium rounded-md hover:bg-navy-800 no-underline hover:no-underline transition-colors"
@@ -39,6 +78,15 @@ const nav = [
         Check car valuation →
       </a>
     </nav>
+
+    <style is:global>
+      /* Kill the default disclosure triangle on <summary> */
+      details.nav-dropdown > summary::-webkit-details-marker { display: none; }
+      details.nav-dropdown > summary::marker { content: ''; }
+      /* Rotate the chevron when open */
+      details.nav-dropdown[open] > summary svg { transform: rotate(180deg); transition: transform 120ms ease; }
+      details.nav-dropdown > summary svg { transition: transform 120ms ease; }
+    </style>
 
     <!-- Mobile menu button (functional wire-up later) -->
     <button class="md:hidden p-2 text-navy-900" aria-label="Open menu">
