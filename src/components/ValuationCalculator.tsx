@@ -1,43 +1,26 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import {
+  fetchVehicleScreenItems,
+  fetchVariants,
+  fetchPricing,
+  type City,
+  type Variant,
+  type PricingResult,
+} from '../lib/cars24';
 
-// Mock base prices (ex-showroom equivalent, ₹ lakh) for popular models.
-// For MVP only. Real integration with production pricing API is Week 2.
-const MODEL_BASE_PRICES: Record<string, Record<string, number>> = {
-  maruti: {
-    swift: 7.5, baleno: 8.5, 'wagon-r': 6.2, 'alto-k10': 5.0, 'brezza': 10.5, dzire: 8.2, ertiga: 11.5,
-  },
-  hyundai: {
-    'grand-i10-nios': 6.8, i20: 8.4, creta: 13.5, venue: 10.2, verna: 12.8, aura: 7.5,
-  },
-  tata: {
-    nexon: 11.5, punch: 8.2, altroz: 8.0, harrier: 17.5, tiago: 6.5, safari: 20.0,
-  },
-  mahindra: {
-    'xuv700': 18.5, thar: 16.5, 'xuv3xo': 10.5, 'scorpio-n': 17.5, bolero: 11.0,
-  },
-  honda: {
-    city: 13.5, amaze: 8.5, elevate: 13.0,
-  },
-  kia: {
-    seltos: 13.5, sonet: 11.0, carens: 12.5,
-  },
-  toyota: {
-    innova: 22.5, fortuner: 38.0, glanza: 8.5,
-  },
-};
+interface ScreenItem {
+  id: string;
+  title: string;
+  logoUrl: string;
+}
 
-const MAKES = Object.keys(MODEL_BASE_PRICES);
+function slugify(s: string) {
+  return s.toLowerCase().replace(/\s+/g, '-');
+}
 
-const CITIES = [
-  'bengaluru', 'mumbai', 'delhi-ncr', 'hyderabad', 'chennai', 'pune', 'kolkata',
-  'ahmedabad', 'jaipur', 'lucknow', 'kochi', 'chandigarh', 'other',
-];
-
-const CITY_MULTIPLIER: Record<string, number> = {
-  bengaluru: 1.02, mumbai: 1.03, 'delhi-ncr': 1.02, hyderabad: 1.01, chennai: 1.01,
-  pune: 1.01, kolkata: 0.98, ahmedabad: 0.99, jaipur: 0.98, lucknow: 0.97,
-  kochi: 1.00, chandigarh: 1.00, other: 0.96,
-};
+function toLakhs(v: number) {
+  return Math.round((v / 100000) * 10) / 10;
+}
 
 // Route multipliers applied to fair-market expected value.
 // Pattern is industry-wide, not platform-specific: private sale sits highest,
@@ -49,72 +32,14 @@ const ROUTE_MULT = {
   buy: 1.10,
 };
 
-// Condition multipliers. "Good" is the market baseline the model assumes.
-const CONDITION_MULT: Record<'fair' | 'good' | 'excellent', number> = {
-  fair: 0.90,
-  good: 1.00,
-  excellent: 1.08,
-};
-
-const CONDITION_LABEL: Record<'fair' | 'good' | 'excellent', string> = {
+const CONDITION_LABEL = {
   fair: 'Fair',
   good: 'Good',
+  veryGood: 'Very Good',
   excellent: 'Excellent',
-};
+} as const;
 
-type Condition = 'fair' | 'good' | 'excellent';
-
-function yearlyDep(i: number) {
-  if (i === 0) return 1.0;
-  if (i === 1) return 0.85;
-  if (i <= 3) return 0.88;
-  if (i <= 5) return 0.90;
-  return 0.92;
-}
-
-function computePriceBand(make: string, model: string, year: number, km: number, city: string) {
-  const base = MODEL_BASE_PRICES[make]?.[model];
-  if (!base) return null;
-
-  const currentYear = new Date().getFullYear();
-  const age = Math.max(0, currentYear - year);
-
-  let depreciation = 1.0;
-  for (let i = 1; i <= age; i++) depreciation *= yearlyDep(i);
-
-  const expectedKm = age * 10000;
-  const excessKm = Math.max(0, km - expectedKm);
-  const kmPenalty = 1 - (excessKm / 20000) * 0.03;
-
-  const cityMult = CITY_MULTIPLIER[city] ?? 1.0;
-
-  const expected = base * depreciation * kmPenalty * cityMult;
-  const low = expected * 0.92;
-  const high = expected * 1.08;
-
-  // Year-by-year value curve from manufacture year to one year forward.
-  // Uses the same depreciation stack but ignores kilometrage (curve is for the model, not this specific car).
-  const curve: { year: number; value: number; isToday: boolean }[] = [];
-  let curveDep = 1.0;
-  for (let i = 0; i <= age + 1; i++) {
-    curveDep *= yearlyDep(i);
-    const v = base * curveDep * cityMult;
-    curve.push({
-      year: year + i,
-      value: Math.round(v * 10) / 10,
-      isToday: year + i === currentYear,
-    });
-  }
-
-  return {
-    expected: Math.round(expected * 10) / 10,
-    low: Math.round(low * 10) / 10,
-    high: Math.round(high * 10) / 10,
-    confidence: age < 8 && ['maruti', 'hyundai', 'tata'].includes(make) ? 'High' : age < 12 ? 'Medium' : 'Lower',
-    comparables: Math.floor(Math.random() * 2000 + 500),
-    curve,
-  };
-}
+type Condition = keyof typeof CONDITION_LABEL;
 
 function computeRoutes(expected: number) {
   return {
@@ -125,92 +50,146 @@ function computeRoutes(expected: number) {
   };
 }
 
-function DepreciationCurve({ curve }: { curve: { year: number; value: number; isToday: boolean }[] }) {
-  if (curve.length < 2) return null;
-  const w = 560;
-  const h = 140;
-  const padX = 24;
-  const padY = 20;
-  const values = curve.map(p => p.value);
-  const maxV = Math.max(...values);
-  const minV = Math.min(...values);
-  const range = Math.max(0.1, maxV - minV);
-
-  const x = (i: number) => padX + (i / (curve.length - 1)) * (w - padX * 2);
-  const y = (v: number) => padY + (1 - (v - minV) / range) * (h - padY * 2);
-
-  const pathLine = curve.map((p, i) => `${i === 0 ? 'M' : 'L'} ${x(i)} ${y(p.value)}`).join(' ');
-  const pathArea = `${pathLine} L ${x(curve.length - 1)} ${h - padY} L ${x(0)} ${h - padY} Z`;
-
-  const todayIdx = curve.findIndex(p => p.isToday);
-
-  return (
-    <svg viewBox={`0 0 ${w} ${h}`} className="w-full h-auto" preserveAspectRatio="none" aria-label="Depreciation curve">
-      <defs>
-        <linearGradient id="curveFill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#0A2540" stopOpacity="0.12" />
-          <stop offset="100%" stopColor="#0A2540" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      <path d={pathArea} fill="url(#curveFill)" />
-      <path d={pathLine} fill="none" stroke="#0A2540" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      {todayIdx >= 0 && (
-        <>
-          <line
-            x1={x(todayIdx)} y1={padY - 6}
-            x2={x(todayIdx)} y2={h - padY + 6}
-            stroke="#059669" strokeWidth="1" strokeDasharray="3 3"
-          />
-          <circle cx={x(todayIdx)} cy={y(curve[todayIdx].value)} r="4" fill="#10B981" stroke="white" strokeWidth="2" />
-          <text x={x(todayIdx)} y={padY - 8} textAnchor="middle" fontSize="10" fill="#059669" fontWeight="600">Today</text>
-        </>
-      )}
-      <text x={x(0)} y={h - 4} textAnchor="start" fontSize="10" fill="#6B7280">{curve[0].year} (new)</text>
-      <text x={x(curve.length - 1)} y={h - 4} textAnchor="end" fontSize="10" fill="#6B7280">{curve[curve.length - 1].year}</text>
-    </svg>
-  );
+function deriveConfidence(low: number, high: number, expected: number): 'High' | 'Medium' | 'Lower' {
+  if (expected <= 0) return 'Lower';
+  const spread = (high - low) / expected;
+  if (spread < 0.15) return 'High';
+  if (spread < 0.30) return 'Medium';
+  return 'Lower';
 }
 
 export default function ValuationCalculator() {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [year, setYear] = useState('');
+  const [variant, setVariant] = useState('');
   const [km, setKm] = useState('');
   const [city, setCity] = useState('');
-  const [result, setResult] = useState<ReturnType<typeof computePriceBand> | null>(null);
+  const [result, setResult] = useState<PricingResult | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [condition, setCondition] = useState<Condition>('good');
+  const [makes, setMakes] = useState<ScreenItem[]>([]);
+  const [makesLoading, setMakesLoading] = useState(true);
+  const [models, setModels] = useState<ScreenItem[]>([]);
+  const [modelsLoading, setModelsLoading] = useState(false);
+  const [cities, setCities] = useState<City[]>([]);
+  const [citiesLoading, setCitiesLoading] = useState(true);
+  const [years, setYears] = useState<ScreenItem[]>([]);
+  const [yearsLoading, setYearsLoading] = useState(false);
+  const [variants, setVariants] = useState<Variant[]>([]);
+  const [variantsLoading, setVariantsLoading] = useState(false);
+  const [pricingLoading, setPricingLoading] = useState(false);
+  const [pricingError, setPricingError] = useState<string | null>(null);
 
-  const availableModels = make ? Object.keys(MODEL_BASE_PRICES[make] || {}) : [];
-  const currentYear = new Date().getFullYear();
+  useEffect(() => {
+    fetch('/api/makes.json')
+      .then((res) => res.json())
+      .then((data: ScreenItem[]) => setMakes(data))
+      .catch(() => setMakes([]))
+      .finally(() => setMakesLoading(false));
 
-  const handleSubmit = (e: React.FormEvent) => {
+    fetch('/api/cities.json')
+      .then((res) => res.json())
+      .then((data: unknown) => setCities(Array.isArray(data) ? data : []))
+      .catch(() => setCities([]))
+      .finally(() => setCitiesLoading(false));
+  }, []);
+
+  const selectedMake = makes.find(m => slugify(m.title) === make);
+
+  useEffect(() => {
+    if (!selectedMake) {
+      setModels([]);
+      return;
+    }
+    let cancelled = false;
+    setModelsLoading(true);
+    fetch(`/api/models/${selectedMake.id}.json`)
+      .then((res) => res.json())
+      .then((data: ScreenItem[]) => { if (!cancelled) setModels(data); })
+      .catch(() => { if (!cancelled) setModels([]); })
+      .finally(() => { if (!cancelled) setModelsLoading(false); });
+    return () => { cancelled = true; };
+  }, [selectedMake?.id]);
+
+  const selectedModel = models.find(m => slugify(m.title) === model);
+
+  useEffect(() => {
+    if (!selectedMake || !selectedModel) {
+      setYears([]);
+      return;
+    }
+    let cancelled = false;
+    setYearsLoading(true);
+    fetchVehicleScreenItems('year_screen', 'year', {
+      make: selectedMake.id,
+      model: selectedModel.id,
+    })
+      .then((data) => { if (!cancelled) setYears(data); })
+      .catch(() => { if (!cancelled) setYears([]); })
+      .finally(() => { if (!cancelled) setYearsLoading(false); });
+    return () => { cancelled = true; };
+  }, [selectedMake?.id, selectedModel?.id]);
+
+  useEffect(() => {
+    if (!selectedMake || !selectedModel || !year) {
+      setVariants([]);
+      return;
+    }
+    let cancelled = false;
+    setVariantsLoading(true);
+    fetchVariants(selectedMake.id, selectedModel.id, year)
+      .then((data) => { if (!cancelled) setVariants(data); })
+      .catch(() => { if (!cancelled) setVariants([]); })
+      .finally(() => { if (!cancelled) setVariantsLoading(false); });
+    return () => { cancelled = true; };
+  }, [selectedMake?.id, selectedModel?.id, year]);
+
+  const selectedVariant = variants.find(v => v.id === variant);
+  const selectedCity = cities.find(c => c.slug === city);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const band = computePriceBand(make, model, Number(year), Number(km), city);
-    setResult(band);
-    setSubmitted(true);
+    if (!selectedVariant || !selectedCity) return;
+
+    setPricingLoading(true);
+    setPricingError(null);
+    try {
+      const priced = await fetchPricing({
+        variantId: selectedVariant.id,
+        year: Number(year),
+        fuelType: selectedVariant.fuelType,
+        transmissionType: selectedVariant.transmissionType,
+        kms: Number(km),
+        cityId: selectedCity.id,
+        stateId: selectedCity.stateId,
+        rtoCode: `${selectedCity.stateCode}01`,
+      });
+      setResult(priced);
+      setSubmitted(true);
+    } catch {
+      setPricingError('We could not fetch a live valuation for this vehicle right now. Please try again in a moment.');
+    } finally {
+      setPricingLoading(false);
+    }
   };
 
   const reset = () => {
     setSubmitted(false);
     setResult(null);
     setCondition('good');
+    setPricingError(null);
   };
 
-  const fmt = (val: string) => val.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-
   if (submitted && result) {
-    const cMult = CONDITION_MULT[condition];
-    const round1 = (v: number) => Math.round(v * 10) / 10;
-    const adjExpected = round1(result.expected * cMult);
-    const adjLow = round1(result.low * cMult);
-    const adjHigh = round1(result.high * cMult);
-    const bandRange = adjHigh - adjLow;
-    const expectedPos = bandRange > 0 ? ((adjExpected - adjLow) / bandRange) * 100 : 50;
-    const routes = computeRoutes(adjExpected);
-    const holdPct = result.curve.length > 1
-      ? Math.round((result.curve.find(p => p.isToday)?.value ?? result.expected) / result.curve[0].value * 100)
-      : null;
+    const tier = result.byCondition[condition];
+    const low = toLakhs(tier.low);
+    const high = toLakhs(tier.high);
+    const expected = Math.round(((low + high) / 2) * 10) / 10;
+    const bandRange = high - low;
+    const expectedPos = bandRange > 0 ? ((expected - low) / bandRange) * 100 : 50;
+    const routes = computeRoutes(expected);
+    const confidence = deriveConfidence(toLakhs(result.low), toLakhs(result.high), expected);
 
     return (
       <div className="card-institutional bg-white max-w-2xl">
@@ -218,10 +197,10 @@ export default function ValuationCalculator() {
 
         <div className="mb-6">
           <div className="text-sm text-graphite mb-2">
-            {year} {fmt(make)} {fmt(model)} · {Number(km).toLocaleString('en-IN')} km · {fmt(city)} · condition {CONDITION_LABEL[condition]}
+            {year} {selectedMake?.title} {selectedModel?.title} {selectedVariant?.title} · {Number(km).toLocaleString('en-IN')} km · {selectedCity?.name} · condition {CONDITION_LABEL[condition]}
           </div>
           <div className="flex items-baseline gap-3 mb-1">
-            <div className="font-data text-4xl font-medium text-navy-900">₹{adjExpected}L</div>
+            <div className="font-data text-4xl font-medium text-navy-900">₹{expected}L</div>
             <div className="text-sm text-slate-soft">expected value</div>
           </div>
         </div>
@@ -234,7 +213,7 @@ export default function ValuationCalculator() {
               <div className="text-xs text-graphite max-w-xs leading-relaxed">Most online estimates assume average condition. Set yours honestly, this is the #1 reason offers disappoint.</div>
             </div>
             <div className="inline-flex rounded-md border border-cream-200 bg-white overflow-hidden" role="group" aria-label="Vehicle condition">
-              {(['fair', 'good', 'excellent'] as Condition[]).map(c => (
+              {(Object.keys(CONDITION_LABEL) as Condition[]).map(c => (
                 <button
                   key={c}
                   type="button"
@@ -263,8 +242,8 @@ export default function ValuationCalculator() {
           ></div>
         </div>
         <div className="flex justify-between text-sm font-data text-navy-900 mb-6">
-          <span>₹{adjLow}L</span>
-          <span>₹{adjHigh}L</span>
+          <span>₹{low}L</span>
+          <span>₹{high}L</span>
         </div>
 
         {/* Sell / buy route breakdown */}
@@ -297,25 +276,11 @@ export default function ValuationCalculator() {
           </div>
         </div>
 
-        {/* Depreciation curve */}
-        <div className="pt-6 mt-6 border-t border-cream-200">
-          <div className="flex items-baseline justify-between mb-3">
-            <div className="text-xs uppercase tracking-widest text-slate-soft">Depreciation curve, this model</div>
-            {holdPct !== null && (
-              <div className="text-xs text-graphite">Holds <strong className="text-navy-900">~{holdPct}%</strong> of new price today</div>
-            )}
-          </div>
-          <DepreciationCurve curve={result.curve} />
-          <div className="mt-2 text-[11px] text-slate-soft">
-            Curve shows expected fair-market value from year of manufacture to one year forward. Actual retention varies with condition, city, and demand.
-          </div>
-        </div>
-
         {/* Confidence strip */}
         <div className="grid grid-cols-3 gap-4 pt-6 mt-6 border-t border-cream-200 text-sm">
           <div>
             <div className="text-xs text-slate-soft mb-1">Confidence</div>
-            <div className="font-medium text-navy-900">{result.confidence}</div>
+            <div className="font-medium text-navy-900">{confidence}</div>
           </div>
           <div>
             <div className="text-xs text-slate-soft mb-1">Comparables</div>
@@ -323,12 +288,12 @@ export default function ValuationCalculator() {
           </div>
           <div>
             <div className="text-xs text-slate-soft mb-1">Last refresh</div>
-            <div className="font-medium text-navy-900">This week</div>
+            <div className="font-medium text-navy-900">Just now</div>
           </div>
         </div>
 
         <div className="mt-6 p-4 bg-cream-100 rounded-md text-sm text-graphite leading-relaxed">
-          <strong className="text-navy-900">What this means.</strong> If you sell in the next 30 days, the market is likely to pay you between <strong>₹{adjLow}L and ₹{adjHigh}L</strong>. Any offer significantly below ₹{adjLow}L is under-market. Any offer above ₹{adjHigh}L is above-market. Good outcome, but verify buyer credibility.
+          <strong className="text-navy-900">What this means.</strong> If you sell in the next 30 days, the market is likely to pay you between <strong>₹{low}L and ₹{high}L</strong>. Any offer significantly below ₹{low}L is under-market. Any offer above ₹{high}L is above-market. Good outcome, but verify buyer credibility.
         </div>
 
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -339,15 +304,15 @@ export default function ValuationCalculator() {
             Value another vehicle
           </button>
           <a
-            href={`/models/${make}/${model}`}
+            href="/methodology"
             className="px-5 py-2.5 bg-white border border-cream-200 !text-navy-900 text-sm font-medium rounded-md hover:border-navy-900 transition-colors no-underline"
           >
-            See full {fmt(make)} {fmt(model)} report →
+            How we calculate this →
           </a>
         </div>
 
         <div className="mt-6 pt-6 border-t border-cream-200 text-xs text-slate-soft">
-          Early-access valuation using a simplified pricing model. Production model launches shortly.
+          Valuation from a live pricing model.
           <a href="/methodology" className="ml-1">See our methodology.</a>
         </div>
       </div>
@@ -359,17 +324,24 @@ export default function ValuationCalculator() {
       <div className="text-xs uppercase tracking-widest text-slate-soft mb-4">Free · 30 seconds · No signup</div>
       <h2 className="text-2xl font-serif text-navy-900 mb-6">Tell us about your vehicle</h2>
 
+      {pricingError && (
+        <div role="alert" className="mb-6 p-3 bg-caution-500/10 border border-caution-500/30 rounded-md text-xs text-graphite leading-relaxed">
+          {pricingError}
+        </div>
+      )}
+
       <div className="grid md:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-navy-900 mb-1.5">Make</label>
           <select
             required
             value={make}
-            onChange={(e) => { setMake(e.target.value); setModel(''); }}
-            className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
+            onChange={(e) => { setMake(e.target.value); setModel(''); setYear(''); setVariant(''); setPricingError(null); }}
+            disabled={makesLoading}
+            className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
           >
-            <option value="">Select make</option>
-            {MAKES.map(m => <option key={m} value={m}>{fmt(m)}</option>)}
+            <option value="">{makesLoading ? 'Loading makes…' : 'Select make'}</option>
+            {makes.map(m => <option key={m.id} value={slugify(m.title)}>{m.title}</option>)}
           </select>
         </div>
 
@@ -378,12 +350,12 @@ export default function ValuationCalculator() {
           <select
             required
             value={model}
-            onChange={(e) => setModel(e.target.value)}
-            disabled={!make}
+            onChange={(e) => { setModel(e.target.value); setYear(''); setVariant(''); setPricingError(null); }}
+            disabled={!make || modelsLoading}
             className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
           >
-            <option value="">Select model</option>
-            {availableModels.map(m => <option key={m} value={m}>{fmt(m)}</option>)}
+            <option value="">{modelsLoading ? 'Loading models…' : 'Select model'}</option>
+            {models.map(m => <option key={m.id} value={slugify(m.title)}>{m.title}</option>)}
           </select>
         </div>
 
@@ -392,13 +364,12 @@ export default function ValuationCalculator() {
           <select
             required
             value={year}
-            onChange={(e) => setYear(e.target.value)}
-            className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
+            onChange={(e) => { setYear(e.target.value); setVariant(''); setPricingError(null); }}
+            disabled={!selectedModel || yearsLoading}
+            className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
           >
-            <option value="">Select year</option>
-            {Array.from({ length: 20 }, (_, i) => currentYear - i).map(y => (
-              <option key={y} value={y}>{y}</option>
-            ))}
+            <option value="">{yearsLoading ? 'Loading years…' : 'Select year'}</option>
+            {years.map(y => <option key={y.id} value={y.id}>{y.title}</option>)}
           </select>
         </div>
 
@@ -417,24 +388,48 @@ export default function ValuationCalculator() {
         </div>
 
         <div className="md:col-span-2">
+          <label className="block text-sm font-medium text-navy-900 mb-1.5">Variant</label>
+          <select
+            required={variants.length > 0}
+            value={variant}
+            onChange={(e) => { setVariant(e.target.value); setPricingError(null); }}
+            disabled={!year || variantsLoading}
+            className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
+          >
+            <option value="">
+              {variantsLoading ? 'Loading variants…' : variants.length > 0 ? 'Select variant' : 'No variants found'}
+            </option>
+            {variants.map(v => (
+              <option key={v.id} value={v.id}>
+                {v.title} · {v.fuelType} · {v.transmissionType}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="md:col-span-2">
           <label className="block text-sm font-medium text-navy-900 mb-1.5">City</label>
           <select
-            required
+            required={cities.length > 0}
             value={city}
-            onChange={(e) => setCity(e.target.value)}
-            className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
+            onChange={(e) => { setCity(e.target.value); setPricingError(null); }}
+            disabled={citiesLoading}
+            className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
           >
-            <option value="">Select city</option>
-            {CITIES.map(c => <option key={c} value={c}>{fmt(c)}</option>)}
+            <option value="">
+              {citiesLoading ? 'Loading cities…' : cities.length > 0 ? 'Select city' : 'City list unavailable'}
+            </option>
+            {cities.map(c => <option key={c.id} value={c.slug}>{c.name}</option>)}
           </select>
         </div>
       </div>
 
       <button
         type="submit"
-        className="mt-6 w-full py-3 bg-navy-900 !text-white font-medium rounded-md hover:bg-navy-800 transition-colors"
+        disabled={pricingLoading}
+        className="mt-6 w-full py-3 bg-navy-900 !text-white font-medium rounded-md hover:bg-navy-800 transition-colors disabled:opacity-50"
       >
-        Check car valuation →
+        {pricingLoading ? 'Fetching your live valuation…' : 'Check car valuation →'}
       </button>
 
       <p className="mt-4 text-xs text-slate-soft leading-relaxed">
