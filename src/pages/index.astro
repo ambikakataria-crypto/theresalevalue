@@ -122,7 +122,105 @@ const howItWorks = [
     </div>
   </section>
 
-  <!-- CATEGORIES, full-bleed cream band -->
+  <!-- MERGED: Neutrality argument + Editor's Take + three-source proof callout,
+       anchored on the right by a real photo of the 2020 Maruti Swift VXi the
+       callout is priced against. Photo turns the abstract price spread into a
+       specific, tangible car. -->
+  <section class="py-16 md:py-24 border-t border-cream-200">
+    <div class="container-tight">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-14 items-start">
+        <div class="md:col-span-7">
+          <h2 class="text-3xl md:text-4xl font-serif text-navy-900 mb-6 leading-tight">
+            Neutrality is a feature, not a slogan.
+          </h2>
+          <div class="space-y-4 text-graphite leading-relaxed text-base mb-8">
+            <p>Everywhere else you look up your car's value, someone stands to gain from the number they show you. Dealers underquote to buy low. Marketplaces inflate to attract sellers.</p>
+            <p>The Resale Value has no listing to close and no dealer margin to protect. We publish a fair-market price band based on real Indian transaction data, and we publish the method by which we calculate it.</p>
+            <p><a href="/methodology" class="font-medium">Read our full methodology →</a></p>
+          </div>
+
+          <!-- Editor's take now lives inside this section, one continuous argument -->
+          <EditorsTake date="Aug 2026" title="Why we bothered building yet another car valuation site">
+            Every used-car price you look up in India is quoted by someone who wants to buy from you or sell to you. That's not a valuation, it's an offer. We built this because we wanted a number that had no dealer margin behind it. Whether we succeed depends on you telling us when we're wrong. The changelog page is where corrections go.
+          </EditorsTake>
+
+          <!-- Left-ruled orange callout, the proof point for everything above -->
+          <div class="bg-white border-l-4 border-signal-600 p-6 md:p-7 relative mt-10">
+            <div class="text-xs uppercase tracking-widest text-slate-soft mb-2">Same car. Three sources.</div>
+            <div class="text-sm text-graphite mb-5">2020 Maruti Swift VXi · 45,000 km · Bengaluru</div>
+
+            <div class="space-y-5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1.5">
+                  <div class="text-sm text-graphite">Dealer offer</div>
+                  <div class="font-data text-lg text-navy-900">₹4.6L</div>
+                </div>
+                <div class="relative h-1.5 bg-cream-200 rounded-full">
+                  <div class="absolute left-0 h-1.5 bg-caution-500 rounded-full" style="width: 55%;"></div>
+                </div>
+                <div class="text-[11px] text-slate-soft mt-1">Incentive: buy low, resell higher</div>
+              </div>
+
+              <div>
+                <div class="flex items-baseline justify-between mb-1.5">
+                  <div class="text-sm text-graphite">Marketplace listing</div>
+                  <div class="font-data text-lg text-navy-900">₹6.4L</div>
+                </div>
+                <div class="relative h-1.5 bg-cream-200 rounded-full">
+                  <div class="absolute left-0 h-1.5 bg-caution-500 rounded-full" style="width: 92%;"></div>
+                </div>
+                <div class="text-[11px] text-slate-soft mt-1">Incentive: inflate to attract sellers</div>
+              </div>
+
+              <div>
+                <div class="flex items-baseline justify-between mb-1.5">
+                  <div class="text-sm text-navy-900 font-medium">The Resale Value index</div>
+                  <div class="font-data text-lg text-signal-600 font-semibold">₹5.4L</div>
+                </div>
+                <div class="relative h-1.5 bg-cream-200 rounded-full">
+                  <div class="absolute left-0 h-1.5 bg-signal-500 rounded-full" style="width: 73%;"></div>
+                </div>
+                <div class="text-[11px] text-slate-soft mt-1">Incentive: none. We do not buy, sell, or list.</div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-cream-200 text-xs text-graphite leading-relaxed">
+              The spread between the lowest and highest quote is <span class="relative inline-block px-1 mx-0.5"><strong class="text-navy-900 relative z-10">₹1.8L</strong><svg aria-hidden="true" viewBox="0 0 80 40" preserveAspectRatio="none" class="absolute inset-0 w-full h-full overflow-visible pointer-events-none" style="transform: scale(1.35);"><path d="M 14 22 C 8 8, 30 4, 42 6 C 62 6, 74 14, 72 22 C 70 34, 48 38, 28 35 C 12 32, 8 28, 14 22 Z" fill="none" stroke="var(--color-signal-600)" stroke-width="2" stroke-linecap="round" /></svg></span> on a ₹5.4L car. That is the cost of not knowing.
+            </div>
+
+            <!-- Editor's scribble: arrow rises from sentence back up toward the circled ₹1.8L. -->
+            <div class="mt-5 flex items-start gap-3" aria-hidden="true">
+              <svg viewBox="0 0 50 60" width="34" height="42" class="shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="color: var(--color-signal-600);">
+                <path d="M8 54 C 6 38, 14 22, 30 10" />
+                <path d="M22 8 L 30 10 L 30 20" />
+              </svg>
+              <span class="handwritten-note block leading-tight">the market never has one price. it has a spread. seeing it end-to-end is your edge.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column: the actual car this callout references. Sticky on
+             desktop so the photo stays in view while the reader scans the
+             argument and the proof. -->
+        <div class="md:col-span-5 md:sticky md:top-24">
+          <figure>
+            <img
+              src="/hero/swift-vxi-2020.jpg"
+              alt="2020 Maruti Swift VXi hatchback parked in a Bengaluru driveway"
+              width="1200"
+              height="900"
+              loading="lazy"
+              class="w-full h-auto object-cover rounded-md shadow-lg"
+            />
+            <figcaption class="mt-3 text-xs text-slate-soft leading-relaxed">2020 Maruti Swift VXi · 45,000 km · Bengaluru. The specific car priced three ways in the callout.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES, full-bleed cream band, moved down so it lands right before
+       the direct-answer FAQ block. -->
   <section class="py-20 md:py-32 bg-cream-100">
     <div class="container-tight">
       <div class="grid md:grid-cols-12 gap-8 mb-12 items-end">
@@ -151,87 +249,6 @@ const howItWorks = [
             <p class="text-sm text-graphite">{cat.desc}</p>
           </a>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- EDITOR'S TAKE, stand-alone prose column mid-page -->
-  <section class="py-16 md:py-24">
-    <div class="container-prose">
-      <EditorsTake date="Aug 2026" title="Why we bothered building yet another car valuation site">
-        Every used-car price you look up in India is quoted by someone who wants to buy from you or sell to you. That's not a valuation, it's an offer. We built this because we wanted a number that had no dealer margin behind it. Whether we succeed depends on you telling us when we're wrong. The changelog page is where corrections go.
-      </EditorsTake>
-    </div>
-  </section>
-
-  <!-- WHY AN INDEX, asymmetric layout, left-ruled callout replaces card -->
-  <section class="py-16 md:py-24 border-t border-cream-200">
-    <div class="container-tight">
-      <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
-        <div class="md:col-span-5">
-          <h2 class="text-3xl md:text-4xl font-serif text-navy-900 mb-6 leading-tight">
-            Neutrality is a feature, not a slogan.
-          </h2>
-          <div class="space-y-4 text-graphite leading-relaxed text-base">
-            <p>Everywhere else you look up your car's value, someone stands to gain from the number they show you. Dealers underquote to buy low. Marketplaces inflate to attract sellers.</p>
-            <p>The Resale Value has no listing to close and no dealer margin to protect. We publish a fair-market price band based on real Indian transaction data, and we publish the method by which we calculate it.</p>
-            <p><a href="/methodology" class="font-medium">Read our full methodology →</a></p>
-          </div>
-        </div>
-
-        <!-- Left-ruled orange callout, NOT a card -->
-        <div class="md:col-span-7 bg-white border-l-4 border-signal-600 p-6 md:p-8 relative">
-          <div class="text-xs uppercase tracking-widest text-slate-soft mb-2">Same car. Three sources.</div>
-          <div class="text-sm text-graphite mb-5">2020 Maruti Swift VXi · 45,000 km · Bengaluru</div>
-
-          <div class="space-y-5">
-            <div>
-              <div class="flex items-baseline justify-between mb-1.5">
-                <div class="text-sm text-graphite">Dealer offer</div>
-                <div class="font-data text-lg text-navy-900">₹4.6L</div>
-              </div>
-              <div class="relative h-1.5 bg-cream-200 rounded-full">
-                <div class="absolute left-0 h-1.5 bg-caution-500 rounded-full" style="width: 55%;"></div>
-              </div>
-              <div class="text-[11px] text-slate-soft mt-1">Incentive: buy low, resell higher</div>
-            </div>
-
-            <div>
-              <div class="flex items-baseline justify-between mb-1.5">
-                <div class="text-sm text-graphite">Marketplace listing</div>
-                <div class="font-data text-lg text-navy-900">₹6.4L</div>
-              </div>
-              <div class="relative h-1.5 bg-cream-200 rounded-full">
-                <div class="absolute left-0 h-1.5 bg-caution-500 rounded-full" style="width: 92%;"></div>
-              </div>
-              <div class="text-[11px] text-slate-soft mt-1">Incentive: inflate to attract sellers</div>
-            </div>
-
-            <div>
-              <div class="flex items-baseline justify-between mb-1.5">
-                <div class="text-sm text-navy-900 font-medium">The Resale Value index</div>
-                <div class="font-data text-lg text-signal-600 font-semibold">₹5.4L</div>
-              </div>
-              <div class="relative h-1.5 bg-cream-200 rounded-full">
-                <div class="absolute left-0 h-1.5 bg-signal-500 rounded-full" style="width: 73%;"></div>
-              </div>
-              <div class="text-[11px] text-slate-soft mt-1">Incentive: none. We do not buy, sell, or list.</div>
-            </div>
-          </div>
-
-          <div class="mt-6 pt-4 border-t border-cream-200 text-xs text-graphite leading-relaxed">
-            The spread between the lowest and highest quote is <span class="relative inline-block px-1 mx-0.5"><strong class="text-navy-900 relative z-10">₹1.8L</strong><svg aria-hidden="true" viewBox="0 0 80 40" preserveAspectRatio="none" class="absolute inset-0 w-full h-full overflow-visible pointer-events-none" style="transform: scale(1.35);"><path d="M 14 22 C 8 8, 30 4, 42 6 C 62 6, 74 14, 72 22 C 70 34, 48 38, 28 35 C 12 32, 8 28, 14 22 Z" fill="none" stroke="var(--color-signal-600)" stroke-width="2" stroke-linecap="round" /></svg></span> on a ₹5.4L car. That is the cost of not knowing.
-          </div>
-
-          <!-- Editor's scribble: arrow rises from sentence back up toward the circled ₹1.8L. -->
-          <div class="mt-5 flex items-start gap-3" aria-hidden="true">
-            <svg viewBox="0 0 50 60" width="34" height="42" class="shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="color: var(--color-signal-600);">
-              <path d="M8 54 C 6 38, 14 22, 30 10" />
-              <path d="M22 8 L 30 10 L 30 20" />
-            </svg>
-            <span class="handwritten-note block leading-tight">the market never has one price. it has a spread. seeing it end-to-end is your edge.</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
