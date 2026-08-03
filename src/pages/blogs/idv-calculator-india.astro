@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Byline from '../../components/Byline.astro';
+import EditorsTake from '../../components/EditorsTake.astro';
 
 const title = 'IDV calculator India: how insured declared value is calculated and where it falls short of market value';
 const description = 'Insured Declared Value explained. The IRDAI depreciation schedule, why IDV drops every year, and where it diverges from actual resale value on popular Indian cars.';
@@ -15,13 +17,13 @@ const description = 'Insured Declared Value explained. The IRDAI depreciation sc
         <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
           IDV calculator India: how insured declared value is calculated and where it falls short of market value
         </h1>
-        <div class="text-sm text-slate-soft">30 July 2026 · 10 min read · Editorial team, The Resale Value</div>
+        <Byline authorSlug="r-nair" reviewerSlug="compliance-reviewer" publishedDate="30 July 2026" readTime="10 min read" />
       </div>
 
       <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
 
         <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
-          <strong class="text-navy-900">Important — not insurance advice.</strong> TheResaleValue is an independent editorial publisher and vehicle valuation platform. We are <strong>not a licensed insurer, corporate agent, insurance broker, or IRDAI-registered web aggregator</strong>, and we do not sell, distribute, or recommend any insurance policy. This page is a plain-English explainer of publicly available IRDAI rules only. Nothing here is a policy offer, insurance recommendation, or a guarantee of claim approval or payout. All figures are illustrative. Before making any insurance decision, please consult an IRDAI-licensed insurance advisor or the insurer's official policy wording.
+          <strong class="text-navy-900">Important, not insurance advice.</strong> TheResaleValue is an independent editorial publisher and vehicle valuation platform. We are <strong>not a licensed insurer, corporate agent, insurance broker, or IRDAI-registered web aggregator</strong>, and we do not sell, distribute, or recommend any insurance policy. This page is a plain-English explainer of publicly available IRDAI rules only. Nothing here is a policy offer, insurance recommendation, or a guarantee of claim approval or payout. All figures are illustrative. Before making any insurance decision, please consult an IRDAI-licensed insurance advisor or the insurer's official policy wording.
         </div>
 
         <p class="text-xl leading-relaxed">
@@ -102,6 +104,10 @@ const description = 'Insured Declared Value explained. The IRDAI depreciation sc
         <p>
           IDV and resale market value start close together in year one and then diverge. Sometimes dramatically. The direction and size of that divergence depends almost entirely on the car model's resale demand, which the IRDAI depreciation schedule does not and cannot account for.
         </p>
+
+        <EditorsTake date="Aug 2026" title="Check your policy schedule against our model band before you renew">
+          Most policyholders find out their IDV was too low only after they claim, by which point nothing can be done. The right moment to think about it is at renewal, and the cross-check is boringly simple: open your policy schedule, note the IDV, then compare it to the mid-band on our model page for the same year and kilometre range. If the gap is more than 10–12%, you are structurally underinsured and no calculator on the insurer's portal will surface that.
+        </EditorsTake>
 
         <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Why they diverge</h3>
 
@@ -207,7 +213,7 @@ const description = 'Insured Declared Value explained. The IRDAI depreciation sc
           At each renewal, IDV is recalculated. The car is one year older. The depreciation band shifts. The IDV drops automatically, silently, and often without the owner noticing until it is too late.
         </p>
 
-        <p>Things car owners commonly review on the renewal notice before confirming payment (informational — not a recommendation):</p>
+        <p>Things car owners commonly review on the renewal notice before confirming payment (informational, not a recommendation):</p>
 
         <ul class="list-disc pl-6 space-y-2">
           <li>Whether the ex-showroom price used is the current listed price for the same model and variant. If the variant has been updated, facelifted, or repriced since the last renewal, the base figure in the calculation would reflect the current price.</li>

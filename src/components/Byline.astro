@@ -1,0 +1,44 @@
+---
+import { getAuthor, getReviewer, type Author } from '../data/authors';
+
+interface Props {
+  authorSlug: string;         // required, falls back to editorial-team if unknown
+  reviewerSlug?: string;      // optional, only YMYL posts need a reviewer
+  publishedDate: string;      // human-readable "30 July 2026"
+  updatedDate?: string;
+  readTime?: string;          // "10 min read"
+}
+
+const { authorSlug, reviewerSlug, publishedDate, updatedDate, readTime } = Astro.props;
+const author = getAuthor(authorSlug);
+const reviewer = reviewerSlug ? getReviewer(reviewerSlug) : null;
+
+const initials = author.name.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
+---
+
+<div class="border-y border-cream-200 py-4 my-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm">
+  <div class="flex items-center gap-3">
+    <div class="w-10 h-10 rounded-full bg-signal-600 text-white flex items-center justify-center font-semibold text-sm shrink-0" aria-hidden="true">
+      {initials}
+    </div>
+    <div class="leading-tight">
+      <div class="text-graphite">
+        <span class="text-slate-soft">By</span>{' '}
+        <span class="font-semibold text-navy-900">{author.name}</span>
+        {author.role && <span class="text-slate-soft"> · {author.role}</span>}
+      </div>
+      {reviewer && (
+        <div class="text-slate-soft mt-0.5">
+          Reviewed by{' '}
+          <span class="text-navy-900 font-medium">{reviewer.name}</span>
+          {reviewer.credentials && <span> · {reviewer.credentials}</span>}
+        </div>
+      )}
+      <div class="text-slate-soft mt-0.5">
+        Published {publishedDate}
+        {updatedDate && <span> · Updated {updatedDate}</span>}
+        {readTime && <span> · {readTime}</span>}
+      </div>
+    </div>
+  </div>
+</div>

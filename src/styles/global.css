@@ -37,6 +37,7 @@
   --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", "SF Mono", monospace;
+  --font-hand: "Caveat", "Bradley Hand", "Segoe Script", cursive;
 
   /* Radii — slight rounding for consumer warmth */
   --radius-sm: 6px;
@@ -58,18 +59,23 @@ body {
   font-feature-settings: "ss01", "cv11";
 }
 
-h1, h2, h3 {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--color-navy-900);
-  line-height: 1.15;
-}
-
-h4, h5, h6 {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  color: var(--color-navy-900);
+@layer base {
+  /* Raw heading rules live inside base so Tailwind utility classes
+     (e.g. text-white, text-signal-600) can override the default color.
+     Previously these lived outside any @layer and won specificity fights,
+     which made text-white silently invisible on navy backgrounds. */
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-navy-900);
+    line-height: 1.15;
+  }
+  h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--color-navy-900);
+  }
 }
 
 .font-data,
@@ -98,7 +104,14 @@ h4, h5, h6 {
 }
 
 .container-tight {
-  max-width: 1120px;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Narrow prose column, used inside long-form sections (FAQ, CTA copy) */
+.container-prose {
+  max-width: 720px;
   margin-inline: auto;
   padding-inline: 1.25rem;
 }
@@ -108,4 +121,21 @@ h4, h5, h6 {
   border: 1px solid var(--color-cream-200);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
+}
+
+/* Margin annotation, the human-in-the-loop signal.
+   Used for editor's scribbles on data callouts and step diagrams. */
+.handwritten {
+  font-family: var(--font-hand);
+  font-weight: 500;
+  color: var(--color-navy-800);
+  line-height: 1.15;
+  letter-spacing: 0.005em;
+}
+.handwritten-note {
+  font-family: var(--font-hand);
+  font-weight: 500;
+  color: var(--color-signal-600);
+  font-size: 1.25rem;
+  line-height: 1.1;
 }

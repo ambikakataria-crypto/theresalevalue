@@ -16,7 +16,11 @@ export default defineConfig({
     react(),
     mdx(),
     sitemap({
-      filter: (page) => !page.includes('/logo-concepts'),
+      // Keep placeholder author pages out of the sitemap until real writer
+      // profiles land. /logo-concepts is an internal preview, never indexed.
+      filter: (page) =>
+        !page.includes('/logo-concepts') &&
+        !page.includes('/authors/'),
     }),
   ],
 });

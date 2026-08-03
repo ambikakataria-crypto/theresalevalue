@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { authors, reviewers, type Author } from '../../data/authors';
+
+export function getStaticPaths() {
+  const all: Author[] = [...Object.values(authors), ...Object.values(reviewers)];
+  return all.map((a) => ({ params: { slug: a.slug }, props: { author: a } }));
+}
+
+const { author } = Astro.props as { author: Author };
+const initials = author.name.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
+const title = `${author.name}, ${author.role} · TheResaleValue`;
+const description = author.bio;
+---
+<BaseLayout title={title} description={description} noindex={author.isPlaceholder}>
+  <section class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="text-xs uppercase tracking-widest text-slate-soft mb-4">
+        <a href="/blogs">← All blogs</a>
+      </div>
+
+      <div class="flex items-start gap-5 mb-8">
+        <div class="w-20 h-20 rounded-full bg-signal-600 text-white flex items-center justify-center font-semibold text-2xl shrink-0" aria-hidden="true">
+          {initials}
+        </div>
+        <div>
+          <h1 class="text-3xl md:text-4xl font-serif text-navy-900 mb-2 leading-tight">{author.name}</h1>
+          <div class="text-slate-soft">{author.role}</div>
+          {author.credentials && (
+            <div class="text-slate-soft text-sm mt-1">{author.credentials}</div>
+          )}
+        </div>
+      </div>
+
+      {author.isPlaceholder && (
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite mb-8">
+          <strong class="text-navy-900">Profile placeholder.</strong> This is a prototype author page. The final bio, credentials, photo, and links will be added once the writer profile is supplied.
+        </div>
+      )}
+
+      <div class="prose-content space-y-4 text-lg leading-relaxed text-graphite">
+        <p>{author.longBio ?? author.bio}</p>
+
+        {author.expertise?.length > 0 && (
+          <div>
+            <h2 class="text-xl font-serif text-navy-900 mt-8 mb-3">Beat &amp; expertise</h2>
+            <div class="flex flex-wrap gap-2">
+              {author.expertise.map((tag) => (
+                <span class="inline-block px-3 py-1 rounded-full bg-cream-100 border border-cream-200 text-sm text-graphite">{tag}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {(author.linkedin || author.twitter || author.email) && (
+          <div>
+            <h2 class="text-xl font-serif text-navy-900 mt-8 mb-3">Contact</h2>
+            <ul class="text-base">
+              {author.linkedin && <li><a href={author.linkedin} class="text-signal-600 hover:underline" rel="me nofollow">LinkedIn</a></li>}
+              {author.twitter && <li><a href={author.twitter} class="text-signal-600 hover:underline" rel="me nofollow">Twitter / X</a></li>}
+              {author.email && <li><a href={`mailto:${author.email}`} class="text-signal-600 hover:underline">{author.email}</a></li>}
+            </ul>
+          </div>
+        )}
+
+        <div class="card-institutional bg-white border border-cream-200 mt-10 text-sm">
+          <strong class="text-navy-900">Editorial standards.</strong> TheResaleValue is an independent editorial publisher. We are not a licensed insurer, broker, IRDAI-registered web aggregator, RBI-regulated lender, or financial advisor. Articles are informational only. Every published piece is cross-checked against public regulatory sources (MoRTH, IRDAI, RBI, CPCB, NGT). Read our full <a href="/methodology" class="text-signal-600 hover:underline">methodology</a>.
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

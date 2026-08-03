@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Byline from '../../components/Byline.astro';
+import EditorsTake from '../../components/EditorsTake.astro';
 
 const title = 'Car loan vs resale value: should you sell or keep paying EMIs in India?';
 const description = 'Break-even framework for selling a financed car in India. Outstanding loan vs resale value, foreclosure charges, hypothecation removal, NOC timelines by lender, and negative equity scenarios.';
@@ -15,13 +17,13 @@ const description = 'Break-even framework for selling a financed car in India. O
         <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
           Car loan vs resale value: should you sell or keep paying EMIs in India?
         </h1>
-        <div class="text-sm text-slate-soft">30 July 2026 · 11 min read · Editorial team, The Resale Value</div>
+        <Byline authorSlug="r-nair" reviewerSlug="compliance-reviewer" publishedDate="30 July 2026" readTime="11 min read" />
       </div>
 
       <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
 
         <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
-          <strong class="text-navy-900">Important — not financial or lending advice.</strong> TheResaleValue is an independent editorial publisher and vehicle valuation platform. We are <strong>not an RBI-regulated lender, NBFC, DSA, loan broker, or financial advisor</strong>. This page is a plain-English framework using publicly available information on car-loan mechanics and RTO processes. Nothing here is a loan recommendation, a foreclosure decision, or a promise that any specific number applies to your loan account. All figures are illustrative. Foreclosure charges, prepayment penalties, and NOC timelines are set by each lender individually and can change. Please refer to your actual loan agreement and consult your lender or a SEBI-registered financial advisor before making any decision to sell, foreclose, or refinance a car loan.
+          <strong class="text-navy-900">Important, not financial or lending advice.</strong> TheResaleValue is an independent editorial publisher and vehicle valuation platform. We are <strong>not an RBI-regulated lender, NBFC, DSA, loan broker, or financial advisor</strong>. This page is a plain-English framework using publicly available information on car-loan mechanics and RTO processes. Nothing here is a loan recommendation, a foreclosure decision, or a promise that any specific number applies to your loan account. All figures are illustrative. Foreclosure charges, prepayment penalties, and NOC timelines are set by each lender individually and can change. Please refer to your actual loan agreement and consult your lender or a SEBI-registered financial advisor before making any decision to sell, foreclose, or refinance a car loan.
         </div>
 
         <p class="text-xl leading-relaxed">
@@ -149,6 +151,10 @@ const description = 'Break-even framework for selling a financed car in India. O
           This step is procedurally identical to selling any un-financed car. The added time from steps 1 through 3 typically adds 20 to 40 days to the overall sale timeline compared to selling an outright-owned car.
         </p>
 
+        <EditorsTake date="Aug 2026" title="The numbers are honest. The decision usually isn't about numbers.">
+          The break-even math in the table above is genuinely useful, but most people we speak to who end up selling a financed car do it for reasons the calculator can't see. They are tired of the EMI hitting their salary account. The car has become a monthly reminder of a decision they no longer feel good about. That is a valid reason to sell. Just don't let a spreadsheet pretend it isn't happening, decide the emotional question first, then use the numbers to time the exit.
+        </EditorsTake>
+
         <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Negative equity on a car loan: what to do when the car is worth less than the balance</h2>
 
         <p>
@@ -159,7 +165,7 @@ const description = 'Break-even framework for selling a financed car in India. O
           Not always obvious upfront. Three conditions make it likely: a long-tenure loan of 7 years, a low or zero down payment (meaning the full on-road price was financed), and a car that depreciates faster than average.
         </p>
 
-        <p>Four routes borrowers in negative equity are commonly seen to consider (informational — not a recommendation for any specific borrower):</p>
+        <p>Four routes borrowers in negative equity are commonly seen to consider (informational, not a recommendation for any specific borrower):</p>
 
         <ol class="list-decimal pl-6 space-y-2">
           <li><strong class="text-navy-900">Continue paying EMIs until the crossover point.</strong> The framework above illustrates when that month can arrive. Whether waiting is the right call depends on total interest cost, monthly cash-flow strain, and how the specific car is depreciating.</li>

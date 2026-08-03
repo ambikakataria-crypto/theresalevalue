@@ -1,0 +1,34 @@
+---
+// Editor's take, dated, signed opinion callout that sits ON TOP of
+// AI-drafted content. This is the highest-visibility "human signal"
+// component on the site. Use one per page, placed at a decision
+// point where the reader needs a POV to act on.
+//
+// Discipline (from TRV Human Signals SOP):
+// - Must be dated (month + year, e.g. "Aug 2026")
+// - Must state a clear opinion, not a summary
+// - Must be under 90 words
+// - Must be first-person or use "we", never third-person analytical voice
+// - Must be edited by a real human before shipping (no raw AI drafts)
+
+interface Props {
+  date: string;                 // "Aug 2026"
+  editor?: string;              // Default "The Editor"
+  title?: string;               // Optional headline for the take
+}
+
+const { date, editor = 'The Editor', title } = Astro.props;
+---
+<aside class="my-8 border-l-4 border-signal-600 bg-cream-100 p-5 md:p-6" role="note" aria-label={`Editor's take, ${date}`}>
+  <div class="flex items-center gap-2 mb-2">
+    <span class="text-xs uppercase tracking-widest text-signal-600 font-semibold">The editor's take</span>
+    <span class="text-xs text-slate-soft">· {date}</span>
+  </div>
+  {title && (
+    <div class="text-lg md:text-xl font-serif text-navy-900 mb-2 leading-snug">{title}</div>
+  )}
+  <div class="text-base text-graphite leading-relaxed italic">
+    <slot />
+  </div>
+  <div class="text-xs text-slate-soft mt-3 not-italic">Signed, {editor}</div>
+</aside>

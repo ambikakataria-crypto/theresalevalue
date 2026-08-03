@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Byline from '../../components/Byline.astro';
+import EditorsTake from '../../components/EditorsTake.astro';
 
 const title = 'How to check used car value in India: why every calculator shows a different price';
 const description = 'Every online tool returns a different used car value in India. Here is how to triangulate across algorithm calculators, marketplace listings, and dealer offers to land on the real market price.';
@@ -15,13 +17,13 @@ const description = 'Every online tool returns a different used car value in Ind
         <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
           How to check used car value in India: why every calculator shows a different price
         </h1>
-        <div class="text-sm text-slate-soft">30 July 2026 · 10 min read · Editorial team, The Resale Value</div>
+        <Byline authorSlug="a-verma" publishedDate="30 July 2026" readTime="10 min read" />
       </div>
 
       <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
 
         <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
-          <strong class="text-navy-900">Editorial guide — not a valuation quote.</strong> This article is a framework for cross-checking used-car prices. Any price ranges shown are illustrative. Actual resale value depends on the specific vehicle's condition, service history, kilometres, city, and current market demand. Use the framework as a starting point, then verify against an on-ground physical inspection before buying or selling.
+          <strong class="text-navy-900">Editorial guide, not a valuation quote.</strong> This article is a framework for cross-checking used-car prices. Any price ranges shown are illustrative. Actual resale value depends on the specific vehicle's condition, service history, kilometres, city, and current market demand. Use the framework as a starting point, then verify against an on-ground physical inspection before buying or selling.
         </div>
 
         <p class="text-xl leading-relaxed">
@@ -135,6 +137,10 @@ const description = 'Every online tool returns a different used car value in Ind
         </div>
 
         <p>The framework, in summary: for any used car in India, check at least one source from each type. One algorithm-based calculator, one marketplace scan, and one dealer or platform offer. The overlap zone between all three is the car's realistic market value.</p>
+
+        <EditorsTake date="Aug 2026" title="Triangulation is a listing tool, not a pricing tool">
+          The three-source method is sound, but in practice one number always ends up "winning", usually the one closest to what a physical dealer quotes you at pickup. That is your real operating number. Use algorithm calculators to sanity-check a dealer's offer, not to price your own listing. If you list at the calculator mid, private buyers will assume the price is soft and start negotiating 15% below it. List at the mid-to-high band from marketplace comparables instead, and let the calculator be your walk-away floor.
+        </EditorsTake>
 
         <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Step 4: Adjust for condition, city, and route-to-sale</h2>
 

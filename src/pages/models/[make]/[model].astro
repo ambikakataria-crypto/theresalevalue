@@ -1,124 +1,363 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Byline from '../../../components/Byline.astro';
+import EditorsTake from '../../../components/EditorsTake.astro';
+import swiftData from '../../../data/models/maruti-swift.json';
 
+// Prototype: one model wired. To scale, import all /data/models/*.json and
+// map them through getStaticPaths. Each JSON provides its own data slice.
 export function getStaticPaths() {
-  return [
-    { params: { make: 'maruti', model: 'swift' }, props: {
-      make: 'Maruti', model: 'Swift', variant: 'VXi',
-      overview: 'India\'s best-selling hatchback. Excellent resale value driven by parts availability, fuel economy, and universal dealer coverage.',
-      priceRange5y: { low: 3.8, expected: 4.9, high: 6.1 },
-      priceRange3y: { low: 5.2, expected: 6.1, high: 6.9 },
-      priceRange1y: { low: 6.4, expected: 6.9, high: 7.4 },
-      exShowroom: 7.5,
-      dep5y: 35,
-      demandCity: [
-        { city: 'Bengaluru', trend: 'Strong', premium: '+2%' },
-        { city: 'Mumbai', trend: 'Strong', premium: '+3%' },
-        { city: 'Delhi NCR', trend: 'Strong', premium: '+2%' },
-        { city: 'Kolkata', trend: 'Moderate', premium: '-2%' },
-        { city: 'Lucknow', trend: 'Moderate', premium: '-3%' },
-      ],
-      insights: [
-        'Depreciation curve is 8 to 12% shallower than segment average, one of the strongest hold-value hatchbacks in India.',
-        'Petrol variants (VXi/ZXi) hold 4–6% more value than diesel variants at 5 years.',
-        'AMT variants have caught up to manual in resale value since 2023.',
-        'Colour matters less than you\'d think. White, silver, and red are within 1% of each other. Bright orange trades 2 to 3% below.',
-      ],
-    } },
-  ];
+  const models = [swiftData];
+  return models.map((m) => ({
+    params: { make: m.slug.make, model: m.slug.model },
+    props: { data: m },
+  }));
 }
 
-const { make, model, variant, overview, priceRange5y, priceRange3y, priceRange1y, exShowroom, dep5y, demandCity, insights } = Astro.props;
-const title = `${make} ${model} Resale Value in India: Fair-Market Price Report`;
-const description = `Independent ${make} ${model} resale value analysis with 5-year price forecast, city-level demand, and depreciation insights for Indian owners.`;
+const { data } = Astro.props;
+
+// Derived stats
+const mids = data.permutations.map((p: any) => p.mid);
+const rangeLow = Math.min(...mids);
+const rangeHigh = Math.max(...mids);
+const currentYear = 2026;
+
+// Depreciation SVG geometry
+const chartW = 600;
+const chartH = 220;
+const padL = 42;
+const padR = 16;
+const padT = 20;
+const padB = 34;
+const innerW = chartW - padL - padR;
+const innerH = chartH - padT - padB;
+const curve = data.retentionCurve;
+const maxAge = Math.max(...curve.map((c: any) => c.ageYears));
+const xFor = (age: number) => padL + (age / maxAge) * innerW;
+const yFor = (pct: number) => padT + (1 - pct / 100) * innerH;
+const linePath = curve
+  .map((c: any, i: number) => `${i === 0 ? 'M' : 'L'} ${xFor(c.ageYears)} ${yFor(c.retentionPct)}`)
+  .join(' ');
+const segAvg5y = data.segmentAverageRetention['5year'];
+
+// Meta
+const title = `${data.make} ${data.model} resale value in India, ${currentYear} price range, depreciation & variants | TheResaleValue`;
+const description = `${data.make} ${data.model} resale value in India: current market range ₹${rangeLow}–${rangeHigh} lakh across years, kilometres and fuel types. Depreciation curve, variant table and city-wise adjustments. Refreshed monthly.`;
 ---
 <BaseLayout title={title} description={description}>
+
+  <!-- 1. Institutional hero -->
   <section class="py-12 md:py-16 bg-cream-100 border-b border-cream-200">
-    <div class="container-tight">
-      <div class="max-w-3xl">
-        <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">
-          <a href="/">Home</a> · <a href="/valuation">Used Car Valuation</a> · {make} {model}
-        </div>
-        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4">
-          {make} {model}: Resale Value Report
-        </h1>
-        <p class="text-lg text-graphite leading-relaxed">{overview}</p>
+    <div class="container-tight max-w-4xl">
+      <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+        <a href="/">Home</a> · <a href="/valuation">Used car valuation</a> · {data.make} {data.model}
+      </div>
+      <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">{data.segment} · Resale report</div>
+      <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+        {data.make} {data.model} resale value in India, {currentYear} market range
+      </h1>
+      <p class="text-lg text-graphite leading-relaxed mb-4">
+        The {data.model} is India's highest-volume {data.bodyType.toLowerCase()} and one of the strongest resale performers in its segment. Below is the current fair-market range across year, kilometres, and fuel type, alongside the depreciation curve, variant-wise ex-showroom prices, and city-level adjustments.
+      </p>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-slate-soft">
+        <span>
+          <span class="text-slate-soft">Current market range:</span>{' '}
+          <span class="font-data text-navy-900">₹{rangeLow}L – ₹{rangeHigh}L</span>
+        </span>
+        <span class="text-cream-200">|</span>
+        <span>Data refreshed {new Date(data.lastRefreshedISO).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · {data.refreshCadence}</span>
       </div>
     </div>
   </section>
 
-  <section class="py-12 md:py-16">
-    <div class="container-tight">
-      <div class="mb-6 text-sm uppercase tracking-widest text-slate-soft">Fair-market price bands</div>
-      <div class="grid md:grid-cols-3 gap-4 mb-12">
-        {[
-          { label: '1 year old', data: priceRange1y },
-          { label: '3 years old', data: priceRange3y },
-          { label: '5 years old', data: priceRange5y },
-        ].map(({ label, data }) => (
-          <div class="card-institutional bg-white">
-            <div class="text-xs uppercase tracking-widest text-slate-soft mb-2">{label}</div>
-            <div class="font-data text-3xl text-navy-900 mb-1">₹{data.expected}L</div>
-            <div class="text-sm text-slate-soft mb-3">expected · ~{Math.round(((exShowroom - data.expected) / exShowroom) * 100)}% off ex-showroom</div>
-            <div class="text-xs font-data text-graphite">
-              Band: ₹{data.low}L – ₹{data.high}L
-            </div>
-          </div>
-        ))}
-      </div>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-4xl">
 
-      <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <Byline authorSlug={data.authorSlug} publishedDate="31 July 2026" readTime="12 min read" />
+
+      <!-- 2. Interactive calculator -->
+      <section aria-labelledby="calc-heading" class="card-institutional bg-white mb-12">
+        <h2 id="calc-heading" class="text-2xl font-serif text-navy-900 mb-2">Check your {data.model}'s resale value</h2>
+        <p class="text-sm text-slate-soft mb-5">Select year, kilometres and fuel type. Values are refreshed monthly from wholesale transaction data, no live API call. For a personalised report including RC and inspection scoring, use the <a href="/valuation" class="text-signal-600 hover:underline">full valuation tool</a>.</p>
+
+        <div class="grid md:grid-cols-3 gap-4 mb-6">
+          <label class="block text-sm">
+            <span class="block text-xs uppercase tracking-widest text-slate-soft mb-1.5">Manufacturing year</span>
+            <select id="calc-year" class="w-full border border-cream-200 rounded-md px-3 py-2 bg-white text-navy-900">
+              {[2024, 2023, 2022, 2021, 2020].map(y => <option value={y}>{y}</option>)}
+            </select>
+          </label>
+          <label class="block text-sm">
+            <span class="block text-xs uppercase tracking-widest text-slate-soft mb-1.5">Kilometres driven</span>
+            <select id="calc-km" class="w-full border border-cream-200 rounded-md px-3 py-2 bg-white text-navy-900">
+              {['0-10k','10-25k','25-50k','50-75k','75k+'].map(k => <option value={k}>{k}</option>)}
+            </select>
+          </label>
+          <label class="block text-sm">
+            <span class="block text-xs uppercase tracking-widest text-slate-soft mb-1.5">Fuel type</span>
+            <select id="calc-fuel" class="w-full border border-cream-200 rounded-md px-3 py-2 bg-white text-navy-900">
+              <option value="Petrol">Petrol</option>
+              <option value="CNG">CNG</option>
+            </select>
+          </label>
+        </div>
+        <label class="block text-sm mb-6">
+          <span class="block text-xs uppercase tracking-widest text-slate-soft mb-1.5">City (optional)</span>
+          <select id="calc-city" class="w-full md:w-1/2 border border-cream-200 rounded-md px-3 py-2 bg-white text-navy-900">
+            <option value="0">All-India baseline</option>
+            {data.cityVariance.map((c: any) => <option value={c.variancePct}>{c.city} ({c.variancePct >= 0 ? '+' : ''}{c.variancePct}%)</option>)}
+          </select>
+        </label>
+
+        <div id="calc-result" class="border-t border-cream-200 pt-5">
+          <div class="text-xs uppercase tracking-widest text-slate-soft mb-1">Fair-market resale range</div>
+          <div class="flex items-baseline gap-3 mb-1">
+            <span id="calc-mid" class="font-data text-4xl text-navy-900">₹6.40L</span>
+            <span id="calc-band" class="text-sm text-slate-soft">Band: ₹5.95L – ₹6.85L</span>
+          </div>
+          <div id="calc-note" class="text-xs text-slate-soft mt-2">All-India baseline. Select a city for a city-adjusted range.</div>
+        </div>
+      </section>
+
+      <!-- 3. Depreciation curve (inline SVG) -->
+      <section aria-labelledby="dep-heading" class="mb-12">
+        <h2 id="dep-heading" class="text-2xl font-serif text-navy-900 mb-3">{data.model} depreciation curve, year on year</h2>
+        <p class="text-base text-graphite leading-relaxed mb-4">The {data.model} depreciates roughly 15% in year one, another 10% in year two, then approximately 7–8% per year through years three to five. Five-year retention lands at about {curve[4].retentionPct}%, compared with a B-segment hatchback average of about {segAvg5y}%.</p>
         <div class="card-institutional bg-white">
-          <h3 class="text-lg font-serif text-navy-900 mb-4">City-level demand snapshot</h3>
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="text-left text-xs uppercase text-slate-soft">
-                <th class="pb-2">City</th>
-                <th class="pb-2">Demand</th>
-                <th class="pb-2 text-right">Price premium</th>
+          <svg
+            role="img"
+            aria-labelledby="dep-svg-title dep-svg-desc"
+            viewBox={`0 0 ${chartW} ${chartH}`}
+            class="w-full h-auto"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title id="dep-svg-title">{data.make} {data.model} value retention curve, years 1 to 5</title>
+            <desc id="dep-svg-desc">Line chart showing {data.model} resale value retention percentage against age in years: year 1 {curve[0].retentionPct}%, year 2 {curve[1].retentionPct}%, year 3 {curve[2].retentionPct}%, year 4 {curve[3].retentionPct}%, year 5 {curve[4].retentionPct}%. Segment average at year 5 is {segAvg5y}%.</desc>
+
+            {/* Y-axis gridlines and labels at 25/50/75/100 */}
+            {[100, 75, 50, 25].map((pct) => (
+              <>
+                <line x1={padL} x2={chartW - padR} y1={yFor(pct)} y2={yFor(pct)} stroke="#E5DED3" stroke-dasharray="2 3" />
+                <text x={padL - 8} y={yFor(pct) + 4} text-anchor="end" font-size="11" fill="#7A7268">{pct}%</text>
+              </>
+            ))}
+
+            {/* Segment average reference line at year 5 */}
+            <line x1={xFor(maxAge)} x2={xFor(maxAge)} y1={yFor(segAvg5y)} y2={yFor(curve[4].retentionPct)} stroke="#C4B79F" stroke-dasharray="3 3" />
+            <text x={xFor(maxAge) - 6} y={yFor(segAvg5y) + 4} text-anchor="end" font-size="10" fill="#7A7268">seg avg {segAvg5y}%</text>
+
+            {/* X-axis labels (years) */}
+            {curve.map((c: any) => (
+              <text x={xFor(c.ageYears)} y={chartH - padB + 18} text-anchor="middle" font-size="11" fill="#7A7268">Year {c.ageYears}</text>
+            ))}
+
+            {/* Retention line */}
+            <path d={linePath} fill="none" stroke="#B8412C" stroke-width="2.5" />
+
+            {/* Data points + inline labels */}
+            {curve.map((c: any) => (
+              <>
+                <circle cx={xFor(c.ageYears)} cy={yFor(c.retentionPct)} r="4" fill="#B8412C" />
+                <text x={xFor(c.ageYears)} y={yFor(c.retentionPct) - 10} text-anchor="middle" font-size="11" fill="#1B2A3F" font-weight="600">{c.retentionPct}%</text>
+              </>
+            ))}
+          </svg>
+          <div class="text-xs text-slate-soft mt-3">Chart values are aggregated across all variants and fuel types. Individual permutations vary, use the calculator above for a specific year/km/fuel combination.</div>
+        </div>
+      </section>
+
+      <!-- 4. Variant × fuel table -->
+      <section aria-labelledby="variant-heading" class="mb-12">
+        <h2 id="variant-heading" class="text-2xl font-serif text-navy-900 mb-3">{data.model} variants and ex-showroom pricing ({currentYear})</h2>
+        <p class="text-base text-graphite leading-relaxed mb-4">Current {data.model} variants and on-record ex-showroom prices, alongside the resale mid-point at three years for a car with 25,000–50,000 km on the odometer.</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-base border-collapse">
+            <caption class="sr-only">{data.make} {data.model} variant-wise ex-showroom price and three-year resale mid-point.</caption>
+            <thead class="bg-cream-100">
+              <tr>
+                <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Variant</th>
+                <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Fuel</th>
+                <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Gearbox</th>
+                <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">Ex-showroom (₹L)</th>
+                <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">3-yr resale mid (₹L)</th>
+                <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">Retention</th>
               </tr>
             </thead>
             <tbody>
-              {demandCity.map(c => (
-                <tr class="border-t border-cream-200">
-                  <td class="py-2.5 text-navy-900">{c.city}</td>
-                  <td class="py-2.5 text-graphite">{c.trend}</td>
-                  <td class="py-2.5 text-right font-data">{c.premium}</td>
-                </tr>
-              ))}
+              {data.variants.map((v: any) => {
+                const perm3yr = data.permutations.find((p: any) => p.year === 2022 && p.kmBand === '25-50k' && p.fuel === v.fuel);
+                const retention = perm3yr ? Math.round((perm3yr.mid / v.exShowroom) * 100) : null;
+                return (
+                  <tr>
+                    <td class="p-3 border border-cream-200 text-navy-900 font-medium">{v.name}</td>
+                    <td class="p-3 border border-cream-200">{v.fuel}</td>
+                    <td class="p-3 border border-cream-200">{v.transmission}</td>
+                    <td class="p-3 border border-cream-200 text-right font-data">{v.exShowroom.toFixed(2)}</td>
+                    <td class="p-3 border border-cream-200 text-right font-data">{perm3yr ? perm3yr.mid.toFixed(2) : '-'}</td>
+                    <td class="p-3 border border-cream-200 text-right font-data">{retention ? `${retention}%` : '-'}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
-        <div class="card-institutional bg-white">
-          <h3 class="text-lg font-serif text-navy-900 mb-4">Depreciation summary</h3>
-          <div class="mb-4">
-            <div class="text-xs uppercase text-slate-soft mb-1">5-year value retention</div>
-            <div class="font-data text-3xl text-signal-600">{100 - dep5y}%</div>
-            <div class="text-xs text-slate-soft mt-1">vs segment average of ~50%</div>
-          </div>
-          <p class="text-sm text-graphite">The {model} is a top-quartile resale performer in India, driven by universal parts availability, fuel economy, and Maruti's dealer coverage.</p>
-        </div>
-      </div>
+        <div class="text-xs text-slate-soft mt-3">3-yr resale mid uses the 2022 model year at 25,000–50,000 km as reference. CNG variants share the same permutation grid but at CNG mid values, which run 3–5% above equivalent petrol on factory-fitted units.</div>
+      </section>
 
-      <div class="card-institutional bg-white mb-8">
-        <h3 class="text-lg font-serif text-navy-900 mb-4">What our data says about the {make} {model}</h3>
+      <!-- 5. City variance -->
+      <section aria-labelledby="city-heading" class="mb-12">
+        <h2 id="city-heading" class="text-2xl font-serif text-navy-900 mb-3">City-wise price variance</h2>
+        <p class="text-base text-graphite leading-relaxed mb-4">Resale values for the {data.model} vary by 3–5 percentage points across Indian metros, driven by supply-demand tightness, RTO transfer friction, and CNG infrastructure. Numbers below are deltas against the all-India mid.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {data.cityVariance.map((c: any) => (
+            <div class="card-institutional bg-white text-center">
+              <div class="text-xs uppercase tracking-widest text-slate-soft mb-1">{c.city}</div>
+              <div class={`font-data text-2xl ${c.variancePct > 0 ? 'text-signal-600' : c.variancePct < 0 ? 'text-navy-900' : 'text-graphite'}`}>{c.variancePct > 0 ? '+' : ''}{c.variancePct}%</div>
+              <div class="text-xs text-slate-soft mt-1">{c.note}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Mid-page CTA: bridges from generic band to personalised valuation -->
+      <aside aria-labelledby="midcta-heading" class="card-institutional bg-cream-100 border-l-4 border-signal-600 mb-12">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-2">Personalised valuation</div>
+            <h2 id="midcta-heading" class="text-xl md:text-2xl font-serif text-navy-900 mb-2 leading-snug">
+              These bands are calculated from the parameters you selected above.
+            </h2>
+            <p class="text-base text-graphite leading-relaxed">
+              For a resale value tuned to your specific car's fingerprint, exact variant, service history, ownership count, city RTO, inspection score, and colour, use the full valuation calculator.
+            </p>
+          </div>
+          <a
+            href="/valuation"
+            class="inline-flex items-center justify-center px-6 py-3 bg-signal-600 text-white text-sm font-semibold rounded-md hover:bg-signal-700 no-underline hover:no-underline transition-colors shrink-0 whitespace-nowrap"
+            aria-label={`Get a personalised valuation for your specific ${data.make} ${data.model}`}
+          >
+            Value my exact {data.model} →
+          </a>
+        </div>
+      </aside>
+
+      <!-- Editor's take, dated, opinionated POV that sits above the AI-drafted context -->
+      <EditorsTake date="Aug 2026" title="The most interesting used-Swift trade right now">
+        The used market hasn't fully re-priced the switch from the 4-cylinder K12N (up to 2024) to the 3-cylinder Z12E (2024+). A well-kept 2023 ZXi under 20,000 km is trading maybe 5% below a 2024 equivalent right now, and most buyers we speak to still prefer the 4-cylinder unit. That gap will close by year-end as inventory of the old generation dries up. If you're buying anyway, buy the 3rd gen this quarter.
+      </EditorsTake>
+
+      <!-- 6. Model context block (human-written / editable) -->
+      <section aria-labelledby="ctx-heading" class="mb-12">
+        <h2 id="ctx-heading" class="text-2xl font-serif text-navy-900 mb-3">What drives the {data.model}'s resale value</h2>
+        <div class="prose-content space-y-4 text-base leading-relaxed text-graphite">
+          {data.context.map((para: string) => <p>{para}</p>)}
+        </div>
+      </section>
+
+      <!-- 7. Common issues to check at inspection -->
+      <section aria-labelledby="issues-heading" class="mb-12">
+        <h2 id="issues-heading" class="text-2xl font-serif text-navy-900 mb-3">What to check when buying a used {data.model}</h2>
         <ul class="space-y-3">
-          {insights.map(insight => (
-            <li class="flex items-start gap-3 text-sm text-graphite leading-relaxed">
+          {data.commonIssues.map((issue: string) => (
+            <li class="flex items-start gap-3 text-base text-graphite leading-relaxed">
               <span class="text-signal-500 mt-1 flex-shrink-0">▸</span>
-              <span>{insight}</span>
+              <span>{issue}</span>
             </li>
           ))}
         </ul>
-      </div>
+        {data.cngNote && (
+          <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite mt-6">
+            <strong class="text-navy-900">On CNG variants:</strong> {data.cngNote}
+          </div>
+        )}
+      </section>
 
-      <div class="card-institutional bg-navy-950 text-cream">
-        <h3 class="font-serif text-xl text-white mb-2">Get a personalised valuation for your specific {model}</h3>
-        <p class="text-sm text-cream-200 mb-4">Enter your exact year, kilometres, and city for a price band tailored to your vehicle.</p>
+      <!-- 8. Methodology callout -->
+      <section class="card-institutional bg-white border border-cream-200 mb-12 text-sm">
+        <h2 class="text-lg font-serif text-navy-900 mb-2">How TheResaleValue calculates these numbers</h2>
+        <p class="text-graphite leading-relaxed mb-2">Resale bands aggregate wholesale transaction prices across Indian metros, refreshed monthly. Age is calculated in whole years from the manufacturing date on the RC. Kilometre bands are self-reported and rounded to the nearest band. City adjustments apply an RTO-level multiplier on the all-India mid.</p>
+        <p class="text-slate-soft"><strong class="text-navy-900">Note:</strong> These are informational fair-market bands, not offers to purchase. For a binding valuation, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation tool</a>. Read the full <a href="/methodology" class="text-signal-600 hover:underline">methodology</a>.</p>
+      </section>
+
+      <!-- 9. FAQ -->
+      <section aria-labelledby="faq-heading" class="mb-12">
+        <h2 id="faq-heading" class="text-2xl font-serif text-navy-900 mb-4">Frequently asked questions</h2>
+        <div class="space-y-4">
+          {data.faq.map((item: any) => (
+            <details class="card-institutional bg-white">
+              <summary class="cursor-pointer font-semibold text-navy-900 text-base">{item.q}</summary>
+              <p class="mt-3 text-base text-graphite leading-relaxed">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <!-- 10. CTA -->
+      <div class="card-institutional bg-navy-950 text-cream mb-12">
+        <h2 class="font-serif text-2xl text-white mb-2">Get a personalised valuation for your {data.model}</h2>
+        <p class="text-sm text-cream-200 mb-4">Enter your exact year, kilometres, variant and city for a price band tailored to your specific vehicle.</p>
         <a href="/valuation" class="inline-flex items-center px-6 py-3 bg-white text-navy-900 text-sm font-medium rounded-md hover:bg-cream-100 no-underline hover:no-underline transition-colors">
-          Value my {model} →
+          Value my {data.model} →
         </a>
       </div>
+
+      <!-- 11. Related models -->
+      {data.relatedModels?.length > 0 && (
+        <section aria-labelledby="rel-heading" class="mb-4">
+          <h2 id="rel-heading" class="text-2xl font-serif text-navy-900 mb-4">Related models in this segment</h2>
+          <div class="grid md:grid-cols-3 gap-4">
+            {data.relatedModels.map((r: any) => (
+              <a href={`/models/${r.make}/${r.model}`} class="card-institutional bg-white hover:border-signal-600 transition-colors no-underline">
+                <div class="text-xs uppercase tracking-widest text-slate-soft mb-1">Same segment</div>
+                <div class="font-serif text-navy-900 text-lg">{r.label} resale value</div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
     </div>
-  </section>
+  </article>
+
+  <!-- Client-side calculator: pure lookup from static JSON, zero API -->
+  <script type="application/json" id="perm-data" set:html={JSON.stringify(data.permutations)}></script>
+  <script is:inline>
+    (function () {
+      const perms = JSON.parse(document.getElementById('perm-data').textContent);
+      const $ = (id) => document.getElementById(id);
+      const yearEl = $('calc-year');
+      const kmEl = $('calc-km');
+      const fuelEl = $('calc-fuel');
+      const cityEl = $('calc-city');
+      const midEl = $('calc-mid');
+      const bandEl = $('calc-band');
+      const noteEl = $('calc-note');
+
+      function update() {
+        const year = parseInt(yearEl.value, 10);
+        const km = kmEl.value;
+        const fuel = fuelEl.value;
+        const cityPct = parseFloat(cityEl.value) || 0;
+        const match = perms.find(p => p.year === year && p.kmBand === km && p.fuel === fuel);
+        if (!match) {
+          midEl.textContent = '-';
+          bandEl.textContent = 'No data for this combination';
+          return;
+        }
+        const factor = 1 + cityPct / 100;
+        const mid = (match.mid * factor).toFixed(2);
+        const low = (match.low * factor).toFixed(2);
+        const high = (match.high * factor).toFixed(2);
+        midEl.textContent = `₹${mid}L`;
+        bandEl.textContent = `Band: ₹${low}L – ₹${high}L`;
+        const cityLabel = cityEl.options[cityEl.selectedIndex].text;
+        noteEl.textContent = cityPct === 0
+          ? 'All-India baseline. Select a city for a city-adjusted range.'
+          : `Adjusted for ${cityLabel.split(' (')[0]} (${cityPct >= 0 ? '+' : ''}${cityPct}%).`;
+      }
+
+      [yearEl, kmEl, fuelEl, cityEl].forEach(el => el.addEventListener('change', update));
+      update();
+    })();
+  </script>
 </BaseLayout>
