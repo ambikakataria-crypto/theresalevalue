@@ -22,7 +22,118 @@ const description = 'Get a used car valuation and fair car value in 30 seconds w
 
   <section class="py-12 md:py-16">
     <div class="container-tight">
-      <ValuationCalculator client:load />
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-7">
+          <ValuationCalculator client:load />
+
+          <!-- Trust chips below the calculator. Same three promises across
+               breakpoints, tucked against the form so they read as part of
+               the same reassurance block. -->
+          <div class="mt-6 max-w-2xl grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div class="flex items-start gap-3 p-3 bg-signal-500/5 border border-signal-500/25 rounded-md">
+              <div class="w-9 h-9 rounded-full bg-signal-500 text-white flex items-center justify-center shrink-0" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-6 3 4 5-8"/></svg>
+              </div>
+              <div>
+                <div class="font-medium text-navy-900 text-sm leading-tight">10M+ transactions</div>
+                <div class="text-xs text-graphite leading-relaxed mt-0.5">Real Cars24 inspection + sale data. Not scraped listings.</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3 bg-trust-500/5 border border-trust-500/25 rounded-md">
+              <div class="w-9 h-9 rounded-full bg-trust-500 text-white flex items-center justify-center shrink-0" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+              </div>
+              <div>
+                <div class="font-medium text-navy-900 text-sm leading-tight">No signup, no calls</div>
+                <div class="text-xs text-graphite leading-relaxed mt-0.5">We don't ask for name, phone or email. Nothing to a dealer.</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3 bg-caution-500/5 border border-caution-500/30 rounded-md">
+              <div class="w-9 h-9 rounded-full bg-caution-500 text-white flex items-center justify-center shrink-0" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 4v5h-5"/></svg>
+              </div>
+              <div>
+                <div class="font-medium text-navy-900 text-sm leading-tight">Refreshed weekly</div>
+                <div class="text-xs text-graphite leading-relaxed mt-0.5">The Editor updates bands. See the <a href="/changelog" class="font-medium">changelog</a>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop-only right rail. Photo anchor + preview of the result
+             screen + 3 coloured trust chips. Hidden on mobile so the vertical
+             stack stays clean below 1024px. -->
+        <aside class="hidden lg:block lg:col-span-5 lg:sticky lg:top-24">
+          <!-- Photo anchor. The same couple-with-tablet shot used on the home
+               hero, reframed with a navy gradient + inset editorial caption so
+               it does not just repeat the home page verbatim. -->
+          <div class="relative rounded-lg overflow-hidden shadow-lg mb-6">
+            <img
+              src="/hero/key-handover.jpg"
+              alt="An Indian couple check their car's fair-market value on a tablet outside a dealership"
+              width="1600"
+              height="1200"
+              loading="lazy"
+              class="w-full h-56 object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/85 via-navy-900/30 to-transparent"></div>
+            <div class="absolute left-4 right-4 bottom-4 text-white">
+              <div class="text-[10px] uppercase tracking-widest text-white/70 mb-1">Real Indian transactions</div>
+              <div class="font-serif text-xl leading-tight">Know your number <em class="italic text-signal-500">before</em> you walk in.</div>
+            </div>
+          </div>
+
+          <!-- Preview card, signal-orange left rule + tinted expected value -->
+          <div class="bg-white border-l-4 border-signal-600 rounded-md p-6 relative shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-xs uppercase tracking-widest text-slate-soft">What you'll see</div>
+              <span class="text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full bg-signal-500/10 text-signal-600 font-semibold">Sample</span>
+            </div>
+
+            <div class="text-sm text-graphite mb-3">2019 Maruti Swift VXi · 45,000 km · Bengaluru · Good</div>
+            <div class="flex items-baseline gap-3 mb-1">
+              <div class="font-data text-4xl font-medium text-signal-600">₹5.0L</div>
+              <div class="text-sm text-slate-soft">expected value</div>
+            </div>
+
+            <div class="mt-5 mb-2 text-xs text-slate-soft">Fair-market price band</div>
+            <div class="relative h-2 bg-cream-200 rounded-full mb-2">
+              <div class="absolute inset-0 bg-navy-900 rounded-full"></div>
+              <div class="absolute w-3 h-3 -top-0.5 bg-signal-500 border-2 border-white rounded-full" style="left: calc(50% - 6px);"></div>
+            </div>
+            <div class="flex justify-between text-sm font-data text-navy-900 mb-6">
+              <span>₹4.6L</span>
+              <span>₹5.4L</span>
+            </div>
+
+            <div class="pt-5 border-t border-cream-200">
+              <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">What you would get, by route</div>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="border-2 border-signal-600 bg-signal-500/5 rounded-md p-2.5">
+                  <div class="text-[10px] uppercase tracking-widest text-signal-600 mb-0.5 font-semibold">Sell to individual</div>
+                  <div class="font-data text-base text-navy-900">₹5.3L</div>
+                </div>
+                <div class="border border-cream-200 rounded-md p-2.5">
+                  <div class="text-[10px] uppercase tracking-widest text-slate-soft mb-0.5">Sell to dealer</div>
+                  <div class="font-data text-base text-navy-900">₹4.7L</div>
+                </div>
+                <div class="border border-cream-200 rounded-md p-2.5">
+                  <div class="text-[10px] uppercase tracking-widest text-slate-soft mb-0.5">Instant online</div>
+                  <div class="font-data text-base text-navy-900">₹4.5L</div>
+                </div>
+                <div class="border border-cream-200 rounded-md p-2.5">
+                  <div class="text-[10px] uppercase tracking-widest text-slate-soft mb-0.5">Buy from dealer</div>
+                  <div class="font-data text-base text-navy-900">₹5.5L</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 text-[11px] text-slate-soft italic">Sample output. Fill the form on the left to get yours.</div>
+          </div>
+        </aside>
+      </div>
     </div>
   </section>
 
