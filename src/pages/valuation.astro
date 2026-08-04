@@ -8,14 +8,18 @@ const description = 'Get a used car valuation and fair car value in 30 seconds w
 <BaseLayout title={title} description={description}>
   <section class="py-12 md:py-16 bg-cream-100 border-b border-cream-200">
     <div class="container-tight">
-      <div class="max-w-2xl">
-        <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">Used car valuation</div>
-        <h1 class="text-3xl md:text-5xl font-serif text-navy-900 mb-4">
-          Used car valuation: a fair price band in 30 seconds.
-        </h1>
-        <p class="text-lg text-graphite leading-relaxed">
-          Our free car value calculator gives you an honest, market-tested price for any used car in India. No phone number. No data sold. Just the number you need to decide what to do with your car.
-        </p>
+      <div class="grid md:grid-cols-12 gap-8 md:gap-12 md:items-end">
+        <div class="md:col-span-7">
+          <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">Used car valuation</div>
+          <h1 class="text-3xl md:text-5xl font-serif text-navy-900 leading-tight">
+            Used car valuation: a fair price band in 30 seconds.
+          </h1>
+        </div>
+        <div class="md:col-span-5">
+          <p class="text-lg text-graphite leading-relaxed">
+            Our free car value calculator gives you an honest, market-tested price for any used car in India. No phone number. No data sold. Just the number you need to decide what to do with your car.
+          </p>
+        </div>
       </div>
     </div>
   </section>

@@ -154,9 +154,16 @@ const howItWorks = [
     </div>
   </section>
 
-  <!-- EDITOR'S TAKE, stand-alone prose column mid-page -->
-  <section class="py-16 md:py-24">
-    <div class="container-prose">
+  <!-- EDITOR'S TAKE, stand-alone prose column mid-page. Full-bleed showroom
+       photo sits behind, muted by a cream overlay so the callout stays the
+       loudest thing in the section. -->
+  <section
+    class="relative py-16 md:py-24 bg-cover bg-center"
+    style="background-image: url('/hero/editors-take-bg.jpg');"
+  >
+    <!-- Cream wash to knock the photo back so the callout dominates -->
+    <div class="absolute inset-0 bg-cream/60 pointer-events-none" aria-hidden="true"></div>
+    <div class="relative container-prose">
       <EditorsTake date="Aug 2026" title="Why we bothered building yet another car valuation site">
         Every used-car price you look up in India is quoted by someone who wants to buy from you or sell to you. That's not a valuation, it's an offer. We built this because we wanted a number that had no dealer margin behind it. Whether we succeed depends on you telling us when we're wrong. The changelog page is where corrections go.
       </EditorsTake>
