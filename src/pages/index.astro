@@ -90,33 +90,30 @@ const howItWorks = [
         <!-- Horizontal connecting line, desktop only -->
         <div class="hidden md:block absolute top-3 left-[8%] right-[8%] h-px bg-navy-900/20" aria-hidden="true"></div>
         <div class="grid md:grid-cols-3 gap-10 md:gap-8 relative">
-          {howItWorks.map(({ step, title, desc }) => (
-            <div class="relative">
-              <div class="w-6 h-6 rounded-full bg-signal-600 border-4 border-cream mb-6 relative z-10" aria-hidden="true"></div>
-              <div class="font-data text-xs uppercase tracking-widest text-slate-soft mb-2">Step {step}</div>
-              <h3 class="text-xl md:text-2xl font-serif text-navy-900 mb-3 leading-snug">{title}</h3>
-              <p class="text-base text-graphite leading-relaxed">{desc}</p>
+          {howItWorks.map(({ step, title, desc }) => {
+            // Handwritten editor note per step. Mobile shows it inline (above
+            // the dot, since stacked steps have no horizontal timeline to sit
+            // on). Desktop keeps the absolute-positioned scribble above the
+            // timeline row.
+            const note = step === '1'
+              ? 'guess the inputs, get a guess back. one wrong field can swing the band 30%.'
+              : step === '2'
+                ? "one 'true price' is a myth. the market is a spread."
+                : 'walk in armed. the band tells you when to accept, negotiate, or walk.';
+            return (
+              <div class="relative">
+                <span class="handwritten-note block leading-tight mb-3 md:hidden" aria-hidden="true">{note}</span>
+                <div class="w-6 h-6 rounded-full bg-signal-600 border-4 border-cream mb-6 relative z-10" aria-hidden="true"></div>
+                <div class="font-data text-xs uppercase tracking-widest text-slate-soft mb-2">Step {step}</div>
+                <h3 class="text-xl md:text-2xl font-serif text-navy-900 mb-3 leading-snug">{title}</h3>
+                <p class="text-base text-graphite leading-relaxed">{desc}</p>
 
-              {step === '1' && (
                 <div class="hidden md:block absolute -top-14 left-0 right-4 pointer-events-none" aria-hidden="true">
-                  <span class="handwritten-note block leading-tight">guess the inputs, get a guess back. one wrong field can swing the band 30%.</span>
+                  <span class="handwritten-note block leading-tight">{note}</span>
                 </div>
-              )}
-
-              {step === '2' && (
-                <div class="hidden md:block absolute -top-14 left-0 right-4 pointer-events-none" aria-hidden="true">
-                  <span class="handwritten-note block leading-tight">one 'true price' is a myth. the market is a spread.</span>
-                </div>
-              )}
-
-              {step === '3' && (
-                <div class="hidden md:block absolute -top-14 left-0 right-4 pointer-events-none" aria-hidden="true">
-                  <span class="handwritten-note block leading-tight">walk in armed. the band tells you when to accept, negotiate, or walk.</span>
-                </div>
-              )}
-
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
