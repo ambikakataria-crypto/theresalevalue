@@ -80,6 +80,29 @@ export default function ValuationCalculator() {
   const [variantsLoading, setVariantsLoading] = useState(false);
   const [pricingLoading, setPricingLoading] = useState(false);
   const [pricingError, setPricingError] = useState<string | null>(null);
+  const [loadingStep, setLoadingStep] = useState(0);
+
+  // Rotating status messages shown while the live pricing call is in flight.
+  // The call usually resolves in 3–10s; the ticker keeps the user oriented so
+  // slower responses don't feel like a broken page.
+  const LOADING_STEPS = [
+    'Pulling recent comparable sales in your city…',
+    'Adjusting for kilometres, year and variant mix…',
+    'Applying route multipliers (individual / dealer / online)…',
+    'Cross-checking against the last 90 days of transactions…',
+    'Almost there. Finalising your fair-market band…',
+  ];
+
+  useEffect(() => {
+    if (!pricingLoading) {
+      setLoadingStep(0);
+      return;
+    }
+    const id = setInterval(() => {
+      setLoadingStep((s) => Math.min(s + 1, LOADING_STEPS.length - 1));
+    }, 2200);
+    return () => clearInterval(id);
+  }, [pricingLoading]);
 
   useEffect(() => {
     fetch('/api/makes.json')
@@ -431,6 +454,29 @@ export default function ValuationCalculator() {
       >
         {pricingLoading ? 'Fetching your live valuation…' : 'Check car valuation →'}
       </button>
+
+      {pricingLoading && (
+        <div
+          className="mt-4 p-4 bg-cream-100 rounded-md border border-cream-200"
+          role="status"
+          aria-live="polite"
+        >
+          <div className="trv-ticker-track mb-3" aria-hidden="true">
+            <div className="trv-ticker-bar"></div>
+          </div>
+          <div className="flex items-baseline justify-between gap-3">
+            <div className="text-sm text-navy-900 font-medium leading-snug">
+              {LOADING_STEPS[loadingStep]}
+            </div>
+            <div className="text-[11px] text-slate-soft shrink-0 font-data">
+              ~5–10 sec
+            </div>
+          </div>
+          <div className="text-[11px] text-slate-soft mt-1 leading-relaxed">
+            We hit our live pricing model in real time, so this takes a few seconds. Please don't refresh.
+          </div>
+        </div>
+      )}
 
       <p className="mt-4 text-xs text-slate-soft leading-relaxed">
         We do not ask for your name, phone, or email. No dealer calls, no spam.

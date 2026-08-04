@@ -139,3 +139,32 @@ body {
   font-size: 1.25rem;
   line-height: 1.1;
 }
+
+/* Indeterminate progress ticker used while the live pricing call is in flight.
+   A signal-orange strip slides across a cream track to signal work happening
+   without lying about a percentage complete. */
+@keyframes trv-ticker-slide {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+.trv-ticker-track {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: var(--color-cream-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.trv-ticker-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background: var(--color-signal-600);
+  border-radius: 999px;
+  animation: trv-ticker-slide 1.4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .trv-ticker-bar { animation: none; width: 40%; }
+}
