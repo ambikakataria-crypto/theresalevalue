@@ -91,10 +91,11 @@ const howItWorks = [
         <div class="hidden md:block absolute top-3 left-[8%] right-[8%] h-px bg-navy-900/20" aria-hidden="true"></div>
         <div class="grid md:grid-cols-3 gap-10 md:gap-8 relative">
           {howItWorks.map(({ step, title, desc }) => {
-            // Handwritten editor note per step. Mobile shows it inline (above
-            // the dot, since stacked steps have no horizontal timeline to sit
-            // on). Desktop keeps the absolute-positioned scribble above the
-            // timeline row.
+            // Handwritten editor note per step. On mobile the note sits AFTER
+            // the step it belongs to (note 1 lands between step 1 and step 2,
+            // etc.) so the reader finishes each step before reading the
+            // scribbled aside. Desktop keeps the absolute-positioned scribble
+            // above the timeline row.
             const note = step === '1'
               ? 'guess the inputs, get a guess back. one wrong field can swing the band 30%.'
               : step === '2'
@@ -102,11 +103,12 @@ const howItWorks = [
                 : 'walk in armed. the band tells you when to accept, negotiate, or walk.';
             return (
               <div class="relative">
-                <span class="handwritten-note block leading-tight mb-3 md:hidden" aria-hidden="true">{note}</span>
                 <div class="w-6 h-6 rounded-full bg-signal-600 border-4 border-cream mb-6 relative z-10" aria-hidden="true"></div>
                 <div class="font-data text-xs uppercase tracking-widest text-slate-soft mb-2">Step {step}</div>
                 <h3 class="text-xl md:text-2xl font-serif text-navy-900 mb-3 leading-snug">{title}</h3>
                 <p class="text-base text-graphite leading-relaxed">{desc}</p>
+
+                <span class="handwritten-note block leading-tight mt-6 md:hidden" aria-hidden="true">{note}</span>
 
                 <div class="hidden md:block absolute -top-14 left-0 right-4 pointer-events-none" aria-hidden="true">
                   <span class="handwritten-note block leading-tight">{note}</span>
