@@ -17,10 +17,19 @@ export function getStaticPaths() {
 const { data } = Astro.props;
 
 // Derived stats
-const mids = data.permutations.map((p: any) => p.mid);
-const rangeLow = Math.min(...mids);
-const rangeHigh = Math.max(...mids);
 const currentYear = 2026;
+// Average ex-showroom by fuel, used to convert calculator mid values into
+// retention percentages (model pages carry retention %, not rupee bands;
+// rupees live only on /valuation).
+const exShowroomByFuel: Record<string, number> = data.variants.reduce((acc: any, v: any) => {
+  if (!acc[v.fuel]) acc[v.fuel] = { sum: 0, n: 0 };
+  acc[v.fuel].sum += v.exShowroom;
+  acc[v.fuel].n += 1;
+  return acc;
+}, {});
+const avgExShowroom: Record<string, number> = Object.fromEntries(
+  Object.entries(exShowroomByFuel).map(([fuel, { sum, n }]: any) => [fuel, sum / n])
+);
 
 // Depreciation SVG geometry
 const chartW = 600;
@@ -42,7 +51,7 @@ const segAvg5y = data.segmentAverageRetention['5year'];
 
 // Meta
 const title = `${data.make} ${data.model} resale value in India, ${currentYear} price range, depreciation & variants | TheResaleValue`;
-const description = `${data.make} ${data.model} resale value in India: current market range ₹${rangeLow}–${rangeHigh} lakh across years, kilometres and fuel types. Depreciation curve, variant table and city-wise adjustments. Refreshed monthly.`;
+const description = `${data.make} ${data.model} resale value in India: value retention percentages across years, kilometres and fuel types. Depreciation curve, variant table and city-wise adjustments. Refreshed monthly. For a rupee price band, use the valuation calculator.`;
 ---
 <BaseLayout title={title} description={description}>
 
@@ -57,14 +66,9 @@ const description = `${data.make} ${data.model} resale value in India: current m
         {data.make} {data.model} resale value in India, {currentYear} market range
       </h1>
       <p class="text-lg text-graphite leading-relaxed mb-4">
-        The {data.model} is India's highest-volume {data.bodyType.toLowerCase()} and one of the strongest resale performers in its segment. Below is the current fair-market range across year, kilometres, and fuel type, alongside the depreciation curve, variant-wise ex-showroom prices, and city-level adjustments.
+        The {data.model} is India's highest-volume {data.bodyType.toLowerCase()} and one of the strongest resale performers in its segment. Below is the value-retention curve across year, kilometres, and fuel type, alongside variant-wise ex-showroom prices and city-level adjustments. For a rupee price band on your specific car, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation calculator</a>.
       </p>
       <div class="flex flex-wrap items-center gap-4 text-sm text-slate-soft">
-        <span>
-          <span class="text-slate-soft">Current market range:</span>{' '}
-          <span class="font-data text-navy-900">₹{rangeLow}L – ₹{rangeHigh}L</span>
-        </span>
-        <span class="text-cream-200">|</span>
         <span>Data refreshed {new Date(data.lastRefreshedISO).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · {data.refreshCadence}</span>
       </div>
     </div>
@@ -75,10 +79,10 @@ const description = `${data.make} ${data.model} resale value in India: current m
 
       <Byline authorSlug={data.authorSlug} publishedDate="31 July 2026" readTime="12 min read" />
 
-      <!-- 2. Interactive calculator -->
+      <!-- 2. Interactive calculator (retention %, no rupees) -->
       <section aria-labelledby="calc-heading" class="card-institutional bg-white mb-12">
-        <h2 id="calc-heading" class="text-2xl font-serif text-navy-900 mb-2">Check your {data.model}'s resale value</h2>
-        <p class="text-sm text-slate-soft mb-5">Select year, kilometres and fuel type. Values are refreshed monthly from wholesale transaction data, no live API call. For a personalised report including RC and inspection scoring, use the <a href="/valuation" class="text-signal-600 hover:underline">full valuation tool</a>.</p>
+        <h2 id="calc-heading" class="text-2xl font-serif text-navy-900 mb-2">Check your {data.model}'s value retention</h2>
+        <p class="text-sm text-slate-soft mb-5">Select year, kilometres and fuel type to see what percentage of the on-road value this car typically holds. Retention percentages are refreshed monthly from wholesale transaction data. For a rupee price band on your specific car, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation calculator</a>.</p>
 
         <div class="grid md:grid-cols-3 gap-4 mb-6">
           <label class="block text-sm">
@@ -110,12 +114,12 @@ const description = `${data.make} ${data.model} resale value in India: current m
         </label>
 
         <div id="calc-result" class="border-t border-cream-200 pt-5">
-          <div class="text-xs uppercase tracking-widest text-slate-soft mb-1">Fair-market resale range</div>
+          <div class="text-xs uppercase tracking-widest text-slate-soft mb-1">Value retention</div>
           <div class="flex items-baseline gap-3 mb-1">
-            <span id="calc-mid" class="font-data text-4xl text-navy-900">₹6.40L</span>
-            <span id="calc-band" class="text-sm text-slate-soft">Band: ₹5.95L – ₹6.85L</span>
+            <span id="calc-mid" class="font-data text-4xl text-navy-900">77%</span>
+            <span id="calc-band" class="text-sm text-slate-soft">Band: 72% – 82%</span>
           </div>
-          <div id="calc-note" class="text-xs text-slate-soft mt-2">All-India baseline. Select a city for a city-adjusted range.</div>
+          <div id="calc-note" class="text-xs text-slate-soft mt-2">All-India baseline. Select a city for a city-adjusted retention band. For a rupee value on your car, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation calculator</a>.</div>
         </div>
       </section>
 
@@ -169,18 +173,17 @@ const description = `${data.make} ${data.model} resale value in India: current m
       <!-- 4. Variant × fuel table -->
       <section aria-labelledby="variant-heading" class="mb-12">
         <h2 id="variant-heading" class="text-2xl font-serif text-navy-900 mb-3">{data.model} variants and ex-showroom pricing ({currentYear})</h2>
-        <p class="text-base text-graphite leading-relaxed mb-4">Current {data.model} variants and on-record ex-showroom prices, alongside the resale mid-point at three years for a car with 25,000–50,000 km on the odometer.</p>
+        <p class="text-base text-graphite leading-relaxed mb-4">Current {data.model} variants and on-record ex-showroom prices, alongside the value retention at three years for a car with 25,000–50,000 km on the odometer.</p>
         <div class="overflow-x-auto">
           <table class="w-full text-base border-collapse">
-            <caption class="sr-only">{data.make} {data.model} variant-wise ex-showroom price and three-year resale mid-point.</caption>
+            <caption class="sr-only">{data.make} {data.model} variant-wise ex-showroom price and three-year value retention.</caption>
             <thead class="bg-cream-100">
               <tr>
                 <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Variant</th>
                 <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Fuel</th>
                 <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Gearbox</th>
                 <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">Ex-showroom (₹L)</th>
-                <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">3-yr resale mid (₹L)</th>
-                <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">Retention</th>
+                <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">3-yr retention</th>
               </tr>
             </thead>
             <tbody>
@@ -193,7 +196,6 @@ const description = `${data.make} ${data.model} resale value in India: current m
                     <td class="p-3 border border-cream-200">{v.fuel}</td>
                     <td class="p-3 border border-cream-200">{v.transmission}</td>
                     <td class="p-3 border border-cream-200 text-right font-data">{v.exShowroom.toFixed(2)}</td>
-                    <td class="p-3 border border-cream-200 text-right font-data">{perm3yr ? perm3yr.mid.toFixed(2) : '-'}</td>
                     <td class="p-3 border border-cream-200 text-right font-data">{retention ? `${retention}%` : '-'}</td>
                   </tr>
                 );
@@ -201,7 +203,7 @@ const description = `${data.make} ${data.model} resale value in India: current m
             </tbody>
           </table>
         </div>
-        <div class="text-xs text-slate-soft mt-3">3-yr resale mid uses the 2022 model year at 25,000–50,000 km as reference. CNG variants share the same permutation grid but at CNG mid values, which run 3–5% above equivalent petrol on factory-fitted units.</div>
+        <div class="text-xs text-slate-soft mt-3">3-yr retention uses the 2022 model year at 25,000–50,000 km as reference, divided by variant ex-showroom. CNG factory-fitted units retain roughly 3–5 percentage points more than equivalent petrol variants.</div>
       </section>
 
       <!-- 5. City variance -->
@@ -225,10 +227,10 @@ const description = `${data.make} ${data.model} resale value in India: current m
           <div>
             <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-2">Personalised valuation</div>
             <h2 id="midcta-heading" class="text-xl md:text-2xl font-serif text-navy-900 mb-2 leading-snug">
-              These bands are calculated from the parameters you selected above.
+              Retention percentages tell you how well the car holds value. They don't tell you the rupee number.
             </h2>
             <p class="text-base text-graphite leading-relaxed">
-              For a resale value tuned to your specific car's fingerprint, exact variant, service history, ownership count, city RTO, inspection score, and colour, use the full valuation calculator.
+              For a rupee price band tuned to your specific car's fingerprint, exact variant, service history, ownership count, city RTO, inspection score, and colour, use the full valuation calculator.
             </p>
           </div>
           <a
@@ -319,11 +321,14 @@ const description = `${data.make} ${data.model} resale value in India: current m
     </div>
   </article>
 
-  <!-- Client-side calculator: pure lookup from static JSON, zero API -->
+  <!-- Client-side calculator: pure lookup from static JSON, outputs
+       retention % only (rupee bands live on /valuation). -->
   <script type="application/json" id="perm-data" set:html={JSON.stringify(data.permutations)}></script>
+  <script type="application/json" id="avg-ex-showroom" set:html={JSON.stringify(avgExShowroom)}></script>
   <script is:inline>
     (function () {
       const perms = JSON.parse(document.getElementById('perm-data').textContent);
+      const avgEx = JSON.parse(document.getElementById('avg-ex-showroom').textContent);
       const $ = (id) => document.getElementById(id);
       const yearEl = $('calc-year');
       const kmEl = $('calc-km');
@@ -339,21 +344,23 @@ const description = `${data.make} ${data.model} resale value in India: current m
         const fuel = fuelEl.value;
         const cityPct = parseFloat(cityEl.value) || 0;
         const match = perms.find(p => p.year === year && p.kmBand === km && p.fuel === fuel);
-        if (!match) {
+        const base = avgEx[fuel];
+        if (!match || !base) {
           midEl.textContent = '-';
           bandEl.textContent = 'No data for this combination';
           return;
         }
         const factor = 1 + cityPct / 100;
-        const mid = (match.mid * factor).toFixed(2);
-        const low = (match.low * factor).toFixed(2);
-        const high = (match.high * factor).toFixed(2);
-        midEl.textContent = `₹${mid}L`;
-        bandEl.textContent = `Band: ₹${low}L – ₹${high}L`;
+        const retMid = Math.round((match.mid * factor / base) * 100);
+        const retLow = Math.round((match.low * factor / base) * 100);
+        const retHigh = Math.round((match.high * factor / base) * 100);
+        midEl.textContent = `${retMid}%`;
+        bandEl.textContent = `Band: ${retLow}% – ${retHigh}%`;
         const cityLabel = cityEl.options[cityEl.selectedIndex].text;
-        noteEl.textContent = cityPct === 0
-          ? 'All-India baseline. Select a city for a city-adjusted range.'
+        const cityText = cityPct === 0
+          ? 'All-India baseline. Select a city for a city-adjusted retention band.'
           : `Adjusted for ${cityLabel.split(' (')[0]} (${cityPct >= 0 ? '+' : ''}${cityPct}%).`;
+        noteEl.innerHTML = `${cityText} For a rupee value on your car, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation calculator</a>.`;
       }
 
       [yearEl, kmEl, fuelEl, cityEl].forEach(el => el.addEventListener('change', update));
