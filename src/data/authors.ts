@@ -59,6 +59,18 @@ export const authors: Record<string, Author> = {
     expertise: ['scrappage policy', 'RTO rules', 'NGT rulings', 'MoRTH'],
     isPlaceholder: true,
   },
+  'vaishnav-mishra': {
+    slug: 'vaishnav-mishra',
+    name: 'Vaishnav Mishra',
+    role: 'Head of Pricing Science',
+    credentials: '15+ years in data science, AI and advanced analytics; leads pricing science at The Resale Value.',
+    bio: "Vaishnav Mishra is Head of Pricing Science at The Resale Value. He brings more than 15 years in data science, AI and advanced analytics to the models and methods behind the site's resale-value analysis. He writes about used-car pricing, depreciation curves, model updates and the assumptions that can move a valuation.",
+    longBio: "Vaishnav Mishra is Head of Pricing Science at The Resale Value, where he leads the work that connects pricing models to plain-English resale guidance. His remit includes calibrating depreciation curves, running monthly model-retraining cycles and keeping the site's price-adjustment methodology current when the market moves. He brings more than 15 years of experience in data science, AI and advanced analytics, with a background spanning growth, fintech, telecom, finance, pharma and energy.\n\nAt The Resale Value, Vaishnav focuses on how a vehicle's age, ownership cycle and market signals turn into a price estimate. He writes about used-car pricing, depreciation, valuation models, methodology changes and the assumptions readers should question before using any resale-value number. His public work includes The Shift: Data, AI & Strategy, a biweekly LinkedIn newsletter for a data and AI audience. His focus is to make the reasoning visible: what changed, why it changed and what the update means for a buyer or seller, rather than treating the output as an unexplained score.",
+    expertise: ['used-car pricing', 'depreciation curves', 'vehicle valuation models', 'pricing methodology', 'automotive data science'],
+    linkedin: 'https://www.linkedin.com/in/vaishnavmishra/',
+    photo: '/authors/vaishnav-mishra.jpg',
+    isPlaceholder: false,
+  },
 };
 
 // Reviewer registry, for YMYL "reviewed by" credit line.

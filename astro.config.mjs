@@ -19,9 +19,14 @@ export default defineConfig({
     sitemap({
       // Keep placeholder author pages out of the sitemap until real writer
       // profiles land. /logo-concepts is an internal preview, never indexed.
-      filter: (page) =>
-        !page.includes('/logo-concepts') &&
-        !page.includes('/authors/'),
+      // Real author profiles (currently only Vaishnav Mishra) stay in.
+      filter: (page) => {
+        if (page.includes('/logo-concepts')) return false;
+        if (page.includes('/authors/')) {
+          return page.includes('/authors/vaishnav-mishra');
+        }
+        return true;
+      },
       // Per-page lastmod: blogs carry their real revision date from the
       // blog-lastmod registry; everything else falls back to build date.
       serialize(item) {

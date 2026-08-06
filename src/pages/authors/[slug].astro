@@ -20,9 +20,20 @@ const description = author.bio;
       </div>
 
       <div class="flex items-start gap-5 mb-8">
-        <div class="w-20 h-20 rounded-full bg-signal-600 text-white flex items-center justify-center font-semibold text-2xl shrink-0" aria-hidden="true">
-          {initials}
-        </div>
+        {author.photo ? (
+          <img
+            src={author.photo}
+            alt={`${author.name}, ${author.role}`}
+            width="80"
+            height="80"
+            loading="eager"
+            class="w-20 h-20 rounded-full object-cover shrink-0 border border-cream-200"
+          />
+        ) : (
+          <div class="w-20 h-20 rounded-full bg-signal-600 text-white flex items-center justify-center font-semibold text-2xl shrink-0" aria-hidden="true">
+            {initials}
+          </div>
+        )}
         <div>
           <h1 class="text-3xl md:text-4xl font-serif text-navy-900 mb-2 leading-tight">{author.name}</h1>
           <div class="text-slate-soft">{author.role}</div>
@@ -39,7 +50,7 @@ const description = author.bio;
       )}
 
       <div class="prose-content space-y-4 text-lg leading-relaxed text-graphite">
-        <p>{author.longBio ?? author.bio}</p>
+        {(author.longBio ?? author.bio).split(/\n\n+/).map((para) => <p>{para}</p>)}
 
         {author.expertise?.length > 0 && (
           <div>

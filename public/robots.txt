@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Allow: /authors/vaishnav-mishra
 Disallow: /logo-concepts
 Disallow: /authors/
 Disallow: /api/
@@ -16,18 +17,22 @@ Disallow: /api/
 # a subscription paywall.
 User-agent: GPTBot
 Allow: /
+Allow: /authors/vaishnav-mishra
 Disallow: /authors/
 
 User-agent: ClaudeBot
 Allow: /
+Allow: /authors/vaishnav-mishra
 Disallow: /authors/
 
 User-agent: PerplexityBot
 Allow: /
+Allow: /authors/vaishnav-mishra
 Disallow: /authors/
 
 User-agent: Google-Extended
 Allow: /
+Allow: /authors/vaishnav-mishra
 Disallow: /authors/
 
 Sitemap: https://www.theresalevalue.com/sitemap-index.xml
