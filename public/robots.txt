@@ -1,5 +1,5 @@
 # The Resale Value — robots.txt
-# https://theresalevalue.com
+# https://www.theresalevalue.com
 
 User-agent: *
 Allow: /
@@ -30,4 +30,4 @@ User-agent: Google-Extended
 Allow: /
 Disallow: /authors/
 
-Sitemap: https://theresalevalue.com/sitemap-index.xml
+Sitemap: https://www.theresalevalue.com/sitemap-index.xml
