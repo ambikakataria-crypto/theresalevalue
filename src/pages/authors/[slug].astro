@@ -50,7 +50,7 @@ const description = author.bio;
       )}
 
       <div class="prose-content space-y-4 text-lg leading-relaxed text-graphite">
-        {(author.longBio ?? author.bio).split(/\n\n+/).map((para) => <p>{para}</p>)}
+        {(author.longBio ?? author.bio).split(/\n\n+/).map((para) => <p set:html={para} />)}
 
         {author.expertise?.length > 0 && (
           <div>
