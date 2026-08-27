@@ -1,0 +1,167 @@
+{
+  "slug": { "make": "tata", "model": "nexon" },
+  "make": "Tata",
+  "model": "Nexon",
+  "segment": "Sub-4m compact SUV",
+  "bodyType": "SUV",
+  "launchYear": 2017,
+  "currentGeneration": {
+    "genNumber": 2,
+    "launchedIndia": "September 2023 (facelift on Gen-2 platform)",
+    "engine": "1.2L Revotron turbo-petrol (118 bhp), 1.5L Revotorq diesel (113 bhp), 1.2L CNG bi-fuel",
+    "gearbox": "5MT, 6MT, 7DCA (dry DCT), 6AMT",
+    "fuelOptions": ["Petrol", "Diesel", "CNG"]
+  },
+  "priorGeneration": {
+    "genNumber": 1,
+    "yearsInIndia": "2017 to 2023",
+    "engine": "1.2L Revotron petrol, 1.5L Revotorq diesel"
+  },
+  "currentExShowroomRange": { "low": 8.0, "high": 15.6, "unit": "lakh" },
+  "lastRefreshedISO": "2026-07-31",
+  "refreshCadence": "Monthly",
+  "dataSourceNote": "Prices aggregated from Cars24 wholesale-transaction bands across metros. Non-metro adjustments applied via cityVariance below.",
+  "heroImage": {
+    "src": "/models/tata-nexon-hero.jpg",
+    "alt": "Tata Nexon 2023 facelift front three-quarter in Flame Red on an Indian city road"
+  },
+  "variants": [
+    { "name": "Smart",         "fuel": "Petrol", "transmission": "5MT",  "exShowroom":  8.00 },
+    { "name": "Smart+",        "fuel": "Petrol", "transmission": "5MT",  "exShowroom":  8.70 },
+    { "name": "Pure",          "fuel": "Petrol", "transmission": "5MT",  "exShowroom":  9.50 },
+    { "name": "Pure+",         "fuel": "Petrol", "transmission": "5MT",  "exShowroom": 10.20 },
+    { "name": "Creative",      "fuel": "Petrol", "transmission": "5MT",  "exShowroom": 11.35 },
+    { "name": "Creative+ S",   "fuel": "Petrol", "transmission": "5MT",  "exShowroom": 12.80 },
+    { "name": "Fearless+",     "fuel": "Petrol", "transmission": "5MT",  "exShowroom": 13.85 },
+    { "name": "Fearless+ DCA", "fuel": "Petrol", "transmission": "7DCA", "exShowroom": 14.95 },
+    { "name": "Pure Diesel",   "fuel": "Diesel", "transmission": "6MT",  "exShowroom": 10.40 },
+    { "name": "Creative Diesel","fuel": "Diesel","transmission": "6MT",  "exShowroom": 12.25 },
+    { "name": "Fearless+ Diesel","fuel": "Diesel","transmission": "6MT", "exShowroom": 14.55 },
+    { "name": "Fearless+ Diesel AMT","fuel": "Diesel","transmission": "6AMT","exShowroom": 15.60 },
+    { "name": "Smart+ CNG",    "fuel": "CNG",    "transmission": "5MT",  "exShowroom":  9.90 },
+    { "name": "Creative CNG",  "fuel": "CNG",    "transmission": "5MT",  "exShowroom": 12.55 }
+  ],
+  "permutations": [
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Petrol", "low":  7.85, "mid":  8.45, "high":  9.05 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "Petrol", "low":  7.45, "mid":  8.05, "high":  8.65 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Petrol", "low":  7.00, "mid":  7.55, "high":  8.10 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Petrol", "low":  6.55, "mid":  7.05, "high":  7.55 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Petrol", "low":  6.90, "mid":  7.45, "high":  8.00 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "Petrol", "low":  6.55, "mid":  7.05, "high":  7.55 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Petrol", "low":  6.10, "mid":  6.60, "high":  7.10 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Petrol", "low":  5.70, "mid":  6.15, "high":  6.60 },
+    { "year": 2023, "kmBand": "75k+",   "fuel": "Petrol", "low":  5.25, "mid":  5.70, "high":  6.15 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Petrol", "low":  5.85, "mid":  6.35, "high":  6.85 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "Petrol", "low":  5.30, "mid":  5.75, "high":  6.20 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Petrol", "low":  4.85, "mid":  5.25, "high":  5.65 },
+    { "year": 2022, "kmBand": "75k+",   "fuel": "Petrol", "low":  4.45, "mid":  4.80, "high":  5.15 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "Petrol", "low":  5.15, "mid":  5.60, "high":  6.05 },
+    { "year": 2021, "kmBand": "25-50k", "fuel": "Petrol", "low":  4.60, "mid":  5.00, "high":  5.40 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "Petrol", "low":  4.20, "mid":  4.55, "high":  4.90 },
+    { "year": 2021, "kmBand": "75k+",   "fuel": "Petrol", "low":  3.85, "mid":  4.15, "high":  4.45 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "Petrol", "low":  4.50, "mid":  4.90, "high":  5.30 },
+    { "year": 2020, "kmBand": "25-50k", "fuel": "Petrol", "low":  4.05, "mid":  4.40, "high":  4.75 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "Petrol", "low":  3.70, "mid":  4.00, "high":  4.30 },
+    { "year": 2020, "kmBand": "75k+",   "fuel": "Petrol", "low":  3.35, "mid":  3.65, "high":  3.95 },
+
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Diesel", "low":  9.10, "mid":  9.85, "high": 10.60 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Diesel", "low":  8.30, "mid":  8.95, "high":  9.60 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Diesel", "low":  7.75, "mid":  8.35, "high":  8.95 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Diesel", "low":  8.05, "mid":  8.70, "high":  9.35 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Diesel", "low":  7.30, "mid":  7.90, "high":  8.50 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Diesel", "low":  6.75, "mid":  7.30, "high":  7.85 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Diesel", "low":  7.10, "mid":  7.70, "high":  8.30 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Diesel", "low":  5.95, "mid":  6.45, "high":  6.95 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "Diesel", "low":  6.15, "mid":  6.65, "high":  7.15 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "Diesel", "low":  5.15, "mid":  5.60, "high":  6.05 },
+
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "CNG",    "low":  8.85, "mid":  9.55, "high": 10.25 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "CNG",    "low":  8.00, "mid":  8.65, "high":  9.30 },
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "CNG",    "low":  7.75, "mid":  8.35, "high":  8.95 }
+  ],
+  "cngNote": "Factory CNG on the Nexon launched with the 2023 facelift on Smart+ and Creative variants. Factory units trade 4 to 6% above equivalent petrol in Delhi NCR, Ahmedabad and pockets of Gujarat. Aftermarket CNG on a Nexon is uncommon and heavily penalised at resale.",
+  "cityVariance": [
+    { "city": "Delhi NCR",  "variancePct":  2, "note": "Steady SUV demand; 10-year diesel cutoff applies to pre-2017 cars" },
+    { "city": "Mumbai",     "variancePct":  3, "note": "Tight supply, RTO premium, automatic variants firm" },
+    { "city": "Bengaluru",  "variancePct":  4, "note": "Strong SUV demand, IT-corridor buyers" },
+    { "city": "Hyderabad",  "variancePct":  2, "note": "Steady demand, moderate liquidity" },
+    { "city": "Chennai",    "variancePct":  0, "note": "Baseline" },
+    { "city": "Pune",       "variancePct":  2, "note": "Follows Mumbai band" },
+    { "city": "Kolkata",    "variancePct": -2, "note": "Softer prices, longer selling cycle" },
+    { "city": "Ahmedabad",  "variancePct":  1, "note": "CNG-heavy, near-baseline" }
+  ],
+  "retentionCurve": [
+    { "ageYears": 1, "retentionPct": 82 },
+    { "ageYears": 2, "retentionPct": 71 },
+    { "ageYears": 3, "retentionPct": 62 },
+    { "ageYears": 4, "retentionPct": 54 },
+    { "ageYears": 5, "retentionPct": 47 }
+  ],
+  "segmentAverageRetention": {
+    "3year": 63,
+    "5year": 48
+  },
+  "context": [
+    "The Nexon is Tata's best-selling model and India's top-selling sub-4m SUV in most quarters since 2022. Resale strength lags Maruti and Hyundai peers by 3 to 5 percentage points at three years, reflecting Tata's smaller service network and slower parts turnaround in tier-2 cities, though the gap has narrowed each year since the 2023 facelift.",
+    "The September 2023 facelift changed the front-end design language, moved to a dual-screen dashboard, and re-tuned the suspension for better ride comfort. Pre-facelift 2020 to 2023 Nexon units have re-rated downwards by 5 to 7% since, a bigger drop than a typical mid-cycle refresh would trigger.",
+    "The Nexon has a 5-star Global NCAP rating (2018 test protocol) and this shows up in resale, particularly for family-buyer permutations at 25,000 to 50,000 km. Safety-first buyers actively seek out the Nexon on the used market, which puts a soft floor under 2020+ prices.",
+    "Diesel Nexon retains value better than petrol by 4 to 6 percentage points at three years. Automatic diesel (AMT) variants are the highest-liquidity permutation, though the dry-clutch DCT on the turbo-petrol has a mixed reliability reputation on owner forums and is priced accordingly.",
+    "Colour matters more on the Nexon than on segment peers. Flame Red and Calgary White hold within 1% of the model average, while Foliage Green and Royal Blue trade 2 to 3% below."
+  ],
+  "commonIssues": [
+    "iRA infotainment lag on 2020 to 2022 units before the November 2022 OTA update. Verify software version at inspection.",
+    "AMT jerkiness in stop-go traffic on 2019 to 2021 units above 45,000 km, standard actuator recalibration at authorised service, roughly ₹8,000 to ₹12,000.",
+    "Water ingress into the rear tail-light housing on some 2020 monsoon-batch units, service campaign closed in early 2022. Verify service history for the fix.",
+    "Front lower control arm bush wear at 55,000 to 70,000 km on cars driven on poor roads. Routine replacement, ₹4,000 to ₹6,000.",
+    "Paint quality complaints on Foliage Green and Daytona Grey units built before 2022, particularly clear-coat peeling on the bonnet. Cosmetic but factors into resale."
+  ],
+  "recentTransactions": [
+    { "soldMonth": "2026-07", "year": 2023, "kmDriven": 21600, "fuel": "Petrol", "variant": "Creative",         "city": "Delhi NCR", "soldPriceLakh":  7.10 },
+    { "soldMonth": "2026-07", "year": 2022, "kmDriven": 37800, "fuel": "Diesel", "variant": "XZ+ Diesel",       "city": "Bengaluru", "soldPriceLakh":  7.65 },
+    { "soldMonth": "2026-07", "year": 2024, "kmDriven": 10500, "fuel": "Petrol", "variant": "Fearless+",        "city": "Mumbai",    "soldPriceLakh":  8.85 },
+    { "soldMonth": "2026-06", "year": 2021, "kmDriven": 52400, "fuel": "Diesel", "variant": "XZA+ Diesel",      "city": "Pune",      "soldPriceLakh":  5.80 },
+    { "soldMonth": "2026-06", "year": 2023, "kmDriven": 28900, "fuel": "CNG",    "variant": "Smart+ CNG",       "city": "Ahmedabad", "soldPriceLakh":  8.05 },
+    { "soldMonth": "2026-06", "year": 2020, "kmDriven": 76200, "fuel": "Petrol", "variant": "XZ+",              "city": "Hyderabad", "soldPriceLakh":  4.05 },
+    { "soldMonth": "2026-05", "year": 2022, "kmDriven": 31700, "fuel": "Petrol", "variant": "XZ+ (P)",          "city": "Chennai",   "soldPriceLakh":  5.70 },
+    { "soldMonth": "2026-05", "year": 2023, "kmDriven": 44200, "fuel": "Petrol", "variant": "Pure+",            "city": "Kolkata",   "soldPriceLakh":  6.10 },
+    { "soldMonth": "2026-05", "year": 2024, "kmDriven": 14200, "fuel": "Diesel", "variant": "Fearless+ Diesel", "city": "Delhi NCR", "soldPriceLakh":  9.75 },
+    { "soldMonth": "2026-04", "year": 2021, "kmDriven": 43100, "fuel": "Petrol", "variant": "XZ+",              "city": "Bengaluru", "soldPriceLakh":  5.20 },
+    { "soldMonth": "2026-04", "year": 2020, "kmDriven": 84600, "fuel": "Petrol", "variant": "XZ",               "city": "Kolkata",   "soldPriceLakh":  3.55 },
+    { "soldMonth": "2026-04", "year": 2022, "kmDriven": 19800, "fuel": "Petrol", "variant": "XZA+ (P)",         "city": "Mumbai",    "soldPriceLakh":  6.45 }
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Tata Nexon in India?",
+      "a": "A well-maintained Nexon retains approximately 71% of its ex-showroom price after two years, 62% after three years, and 47% after five years. For a 2022 XZ+ petrol with 25,000 to 50,000 km, the current fair-market band is roughly ₹5.30 to ₹6.20 lakh."
+    },
+    {
+      "q": "Does the Nexon hold value as well as the Brezza?",
+      "a": "Not quite. The Nexon retains about 62% at three years versus 68 to 70% for the Maruti Brezza, a 6 to 8 percentage point gap that reflects Maruti's larger service network and higher buyer familiarity in tier-2 cities. In metros with strong SUV demand like Bengaluru and Mumbai, the gap narrows to 3 to 4 percentage points."
+    },
+    {
+      "q": "Is the pre-2023 Nexon worth buying used?",
+      "a": "Yes, if the car has been serviced regularly and has less than 60,000 km. The pre-facelift Nexon has a solid safety rating, mature drivetrain, and now trades 10 to 15% below the equivalent post-facelift car. The main risks to inspect are the AMT actuator on 2019 to 2021 units and clear-coat peeling on Foliage Green and Daytona Grey paint."
+    },
+    {
+      "q": "Which city gives the best resale for a Nexon?",
+      "a": "Bengaluru and Mumbai currently trade at approximately +3 to +4% above the national mid, driven by strong SUV demand. Kolkata is soft at −2%."
+    },
+    {
+      "q": "How much does a Nexon depreciate per year?",
+      "a": "Roughly 18% in year one, 11% additional in year two, then 8 to 9% per year through year five. The five-year retention of about 47% is 1 percentage point below the sub-4m SUV segment average of 48%."
+    }
+  ],
+  "relatedModels": [
+    { "make": "maruti", "model": "brezza", "label": "Maruti Brezza" },
+    { "make": "hyundai", "model": "venue", "label": "Hyundai Venue" },
+    { "make": "mahindra", "model": "xuv-3xo", "label": "Mahindra XUV 3XO" }
+  ],
+  "authorSlug": "vaishnav-mishra"
+}

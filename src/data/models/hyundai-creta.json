@@ -1,0 +1,161 @@
+{
+  "slug": { "make": "hyundai", "model": "creta" },
+  "make": "Hyundai",
+  "model": "Creta",
+  "segment": "Mid-size SUV",
+  "bodyType": "SUV",
+  "launchYear": 2015,
+  "currentGeneration": {
+    "genNumber": 3,
+    "launchedIndia": "January 2024 facelift on 2nd gen SU2i platform",
+    "engine": "1.5L Kappa MPi petrol (115 bhp), 1.5L Kappa T-GDi turbo-petrol (158 bhp), 1.5L CRDi diesel (114 bhp)",
+    "gearbox": "6MT, IVT (CVT), 7DCT, 6AT",
+    "fuelOptions": ["Petrol", "Turbo Petrol", "Diesel"]
+  },
+  "priorGeneration": {
+    "genNumber": 2,
+    "yearsInIndia": "2020 to 2023",
+    "engine": "1.5L MPi petrol, 1.4L T-GDi, 1.5L CRDi diesel"
+  },
+  "currentExShowroomRange": { "low": 11.1, "high": 20.5, "unit": "lakh" },
+  "lastRefreshedISO": "2026-07-31",
+  "refreshCadence": "Monthly",
+  "dataSourceNote": "Prices aggregated from Cars24 wholesale-transaction bands across metros. Non-metro adjustments applied via cityVariance below.",
+  "heroImage": {
+    "src": "/models/hyundai-creta-hero.jpg",
+    "alt": "Hyundai Creta 2024 facelift front three-quarter in Titan Grey on an Indian highway"
+  },
+  "variants": [
+    { "name": "E",              "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 11.10 },
+    { "name": "EX",             "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 12.25 },
+    { "name": "S",              "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 13.50 },
+    { "name": "S IVT",          "fuel": "Petrol",       "transmission": "IVT", "exShowroom": 14.75 },
+    { "name": "SX",             "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 15.10 },
+    { "name": "SX(O)",          "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 17.35 },
+    { "name": "SX(O) Knight",   "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 17.85 },
+    { "name": "SX T-GDi DCT",   "fuel": "Turbo Petrol", "transmission": "7DCT","exShowroom": 18.20 },
+    { "name": "SX(O) T-GDi DCT","fuel": "Turbo Petrol", "transmission": "7DCT","exShowroom": 20.45 },
+    { "name": "E Diesel",       "fuel": "Diesel",       "transmission": "6MT", "exShowroom": 12.35 },
+    { "name": "S Diesel",       "fuel": "Diesel",       "transmission": "6MT", "exShowroom": 14.75 },
+    { "name": "S Diesel AT",    "fuel": "Diesel",       "transmission": "6AT", "exShowroom": 16.10 },
+    { "name": "SX Diesel",      "fuel": "Diesel",       "transmission": "6MT", "exShowroom": 16.40 },
+    { "name": "SX(O) Diesel AT","fuel": "Diesel",       "transmission": "6AT", "exShowroom": 20.20 }
+  ],
+  "permutations": [
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Petrol", "low": 10.85, "mid": 11.80, "high": 12.65 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "Petrol", "low": 10.35, "mid": 11.25, "high": 12.10 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Petrol", "low":  9.75, "mid": 10.55, "high": 11.35 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Petrol", "low":  9.10, "mid":  9.85, "high": 10.60 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Petrol", "low":  9.85, "mid": 10.70, "high": 11.55 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "Petrol", "low":  9.40, "mid": 10.20, "high": 11.00 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Petrol", "low":  8.80, "mid":  9.55, "high": 10.30 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Petrol", "low":  8.20, "mid":  8.85, "high": 9.55 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Petrol", "low":  8.95, "mid":  9.70, "high": 10.45 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "Petrol", "low":  8.05, "mid":  8.70, "high": 9.40 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Petrol", "low":  7.45, "mid":  8.05, "high": 8.65 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "Petrol", "low":  8.10, "mid":  8.75, "high": 9.45 },
+    { "year": 2021, "kmBand": "25-50k", "fuel": "Petrol", "low":  7.30, "mid":  7.90, "high": 8.50 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "Petrol", "low":  6.75, "mid":  7.30, "high": 7.85 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "Petrol", "low":  7.30, "mid":  7.90, "high": 8.50 },
+    { "year": 2020, "kmBand": "25-50k", "fuel": "Petrol", "low":  6.60, "mid":  7.15, "high": 7.70 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "Petrol", "low":  6.10, "mid":  6.60, "high": 7.10 },
+
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Diesel", "low": 11.85, "mid": 12.80, "high": 13.75 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Diesel", "low": 10.70, "mid": 11.55, "high": 12.40 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Diesel", "low": 10.00, "mid": 10.80, "high": 11.60 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Diesel", "low": 10.85, "mid": 11.75, "high": 12.65 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Diesel", "low":  9.75, "mid": 10.55, "high": 11.35 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Diesel", "low":  9.10, "mid":  9.85, "high": 10.60 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Diesel", "low":  9.90, "mid": 10.70, "high": 11.50 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Diesel", "low":  8.30, "mid":  9.00, "high": 9.70 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "Diesel", "low":  8.95, "mid":  9.70, "high": 10.45 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "Diesel", "low":  7.50, "mid":  8.15, "high": 8.80 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "Diesel", "low":  8.10, "mid":  8.75, "high": 9.45 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "Diesel", "low":  6.80, "mid":  7.40, "high": 8.00 }
+  ],
+  "cngNote": "Not applicable. The current Creta is not offered with a factory CNG option in India. Aftermarket CNG on the Creta is very rare and penalised heavily on resale, typically 12 to 18% below equivalent petrol.",
+  "cityVariance": [
+    { "city": "Delhi NCR",  "variancePct":  3, "note": "Diesel demand strong for pre-BS6.2 units; NCR emission rules apply for 10-year cutoff on diesels" },
+    { "city": "Mumbai",     "variancePct":  4, "note": "SUV demand and tight supply; automatic Creta trades at a strong premium" },
+    { "city": "Bengaluru",  "variancePct":  5, "note": "Highest SUV demand in the country, IT-corridor buyers, tight liquidity" },
+    { "city": "Hyderabad",  "variancePct":  3, "note": "Strong SUV pull, moderate liquidity" },
+    { "city": "Chennai",    "variancePct":  1, "note": "Baseline plus one; automatic diesel Creta particularly firm" },
+    { "city": "Pune",       "variancePct":  3, "note": "Follows Mumbai band" },
+    { "city": "Kolkata",    "variancePct": -2, "note": "Softer prices, longer selling cycle" },
+    { "city": "Ahmedabad",  "variancePct":  0, "note": "Baseline" }
+  ],
+  "retentionCurve": [
+    { "ageYears": 1, "retentionPct": 87 },
+    { "ageYears": 2, "retentionPct": 78 },
+    { "ageYears": 3, "retentionPct": 71 },
+    { "ageYears": 4, "retentionPct": 63 },
+    { "ageYears": 5, "retentionPct": 56 }
+  ],
+  "segmentAverageRetention": {
+    "3year": 66,
+    "5year": 51
+  },
+  "context": [
+    "The Creta has been India's best-selling mid-size SUV in most quarters since 2015 and holds value close to the top of its segment. Its resale strength is a function of two things: sustained demand for SUV body-styles across every metro and non-metro, and Hyundai's extensive service network second only to Maruti.",
+    "The January 2024 facelift brought a substantially new design language, ADAS Level 2, and a re-tuned suspension. On the used market, pre-facelift 2020 to 2023 Creta cars have re-rated downwards by 4 to 6% since the facelift's arrival, larger than a typical mid-cycle refresh would trigger.",
+    "Diesel Creta continues to hold value better than petrol despite the shrinking diesel share in new-car sales. Automatic diesel variants are the highest-liquidity permutation, particularly the SX and SX(O) trims. The 10-year NCR diesel cutoff is priced into 2015 to 2016 Creta diesels but does not yet affect 2020+ cars materially.",
+    "The 1.4L T-GDi turbo petrol offered on the 2020 to 2023 SX(O) variant has weaker resale than the naturally aspirated 1.5L petrol, driven by higher perceived running costs and lower forum reliability sentiment. That has not yet translated to the current 1.5L T-GDi (2024+), which has faced no material re-rating."
+  ],
+  "commonIssues": [
+    "BlueLink connectivity dropouts on 2020 to 2022 units before the March 2022 firmware update. Verify at inspection; the fix is a dealer-side flash.",
+    "DCT jerkiness in stop-go traffic on 2020 to 2022 T-GDi units above 40,000 km. This is characteristic of dry-clutch DCTs and not a defect, but budget 15,000 to 20,000 rupees for clutch pack service around 70,000 km.",
+    "Front suspension knock over speed breakers on 2020 to 2022 units above 50,000 km, typically a strut mount or bush replacement. Roughly ₹6,000 to ₹10,000 at authorised service.",
+    "Diesel injector rail leaks on early 2020 CRDi units, escalated to a service campaign in late 2021. Verify service history for the recall completion.",
+    "Panoramic sunroof drainage clog on 2020 to 2022 SX(O) units driven in tree-heavy areas. Routine cleaning solves it; if ignored, causes water ingress into the A-pillar. Inspect closely."
+  ],
+  "recentTransactions": [
+    { "soldMonth": "2026-07", "year": 2023, "kmDriven": 24500, "fuel": "Petrol", "variant": "SX",           "city": "Delhi NCR", "soldPriceLakh": 10.35 },
+    { "soldMonth": "2026-07", "year": 2022, "kmDriven": 38700, "fuel": "Diesel", "variant": "SX Diesel",    "city": "Bengaluru", "soldPriceLakh": 10.85 },
+    { "soldMonth": "2026-07", "year": 2024, "kmDriven": 11200, "fuel": "Petrol", "variant": "S IVT",        "city": "Mumbai",    "soldPriceLakh": 12.90 },
+    { "soldMonth": "2026-06", "year": 2021, "kmDriven": 56800, "fuel": "Diesel", "variant": "SX(O) Diesel AT","city": "Pune",     "soldPriceLakh":  9.65 },
+    { "soldMonth": "2026-06", "year": 2023, "kmDriven": 27300, "fuel": "Diesel", "variant": "S Diesel",     "city": "Hyderabad", "soldPriceLakh": 10.70 },
+    { "soldMonth": "2026-06", "year": 2020, "kmDriven": 74200, "fuel": "Petrol", "variant": "SX",           "city": "Chennai",   "soldPriceLakh":  6.75 },
+    { "soldMonth": "2026-05", "year": 2022, "kmDriven": 32100, "fuel": "Turbo Petrol", "variant": "SX T-GDi DCT","city": "Bengaluru", "soldPriceLakh":  9.80 },
+    { "soldMonth": "2026-05", "year": 2023, "kmDriven": 42600, "fuel": "Petrol", "variant": "EX",           "city": "Kolkata",   "soldPriceLakh":  9.45 },
+    { "soldMonth": "2026-05", "year": 2024, "kmDriven": 15800, "fuel": "Diesel", "variant": "SX Diesel",    "city": "Delhi NCR", "soldPriceLakh": 13.20 },
+    { "soldMonth": "2026-04", "year": 2021, "kmDriven": 47400, "fuel": "Petrol", "variant": "SX(O)",        "city": "Mumbai",    "soldPriceLakh":  8.15 },
+    { "soldMonth": "2026-04", "year": 2020, "kmDriven": 82500, "fuel": "Diesel", "variant": "SX Diesel AT", "city": "Ahmedabad", "soldPriceLakh":  7.25 },
+    { "soldMonth": "2026-04", "year": 2022, "kmDriven": 21400, "fuel": "Petrol", "variant": "S",            "city": "Bengaluru", "soldPriceLakh":  9.55 }
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Hyundai Creta in India?",
+      "a": "A well-maintained Creta retains approximately 78% of its ex-showroom price after two years, 71% after three years, and 56% after five years. For a 2022 SX petrol with 25,000 to 50,000 km, the current fair-market band is roughly ₹8.05 to ₹9.40 lakh."
+    },
+    {
+      "q": "Does the Creta hold value better than the Kia Seltos?",
+      "a": "Marginally. The Creta retains about 71% at three years versus 68 to 70% for the Seltos, driven by Hyundai's larger service network and the Creta's longer brand history in India. In smaller metros and tier-2 cities, the gap widens to 3 to 4 percentage points in Creta's favour."
+    },
+    {
+      "q": "Is a diesel Creta a good used-car buy?",
+      "a": "Yes, particularly for buyers with high annual mileage (above 15,000 km per year) or those outside NCR. The 1.5L CRDi engine has a strong reliability record, and diesel Creta trades 6 to 9% above equivalent petrol in most metros. In NCR, factor in the 10-year diesel cutoff before buying pre-2017 cars."
+    },
+    {
+      "q": "Which is the best city to sell a Creta?",
+      "a": "Bengaluru currently trades at approximately +5% above the national mid, followed by Mumbai at +4%. Chennai, Delhi NCR and Hyderabad are all at +2 to +3%. Kolkata is soft at −2%."
+    },
+    {
+      "q": "How much does a Creta depreciate per year?",
+      "a": "Roughly 13% in year one, 9% additional in year two, 7% in year three, and 7 to 8% per year through year five. The five-year retention of 56% is 5 percentage points above the mid-SUV segment average of 51%."
+    }
+  ],
+  "relatedModels": [
+    { "make": "kia", "model": "seltos", "label": "Kia Seltos" },
+    { "make": "mahindra", "model": "xuv700", "label": "Mahindra XUV700" },
+    { "make": "tata", "model": "harrier", "label": "Tata Harrier" }
+  ],
+  "authorSlug": "vaishnav-mishra"
+}

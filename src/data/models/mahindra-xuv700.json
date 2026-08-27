@@ -1,0 +1,147 @@
+{
+  "slug": { "make": "mahindra", "model": "xuv700" },
+  "make": "Mahindra",
+  "model": "XUV700",
+  "segment": "Full-size SUV",
+  "bodyType": "SUV",
+  "launchYear": 2021,
+  "currentGeneration": {
+    "genNumber": 1,
+    "launchedIndia": "October 2021 (updated MY26 refresh with new features March 2026)",
+    "engine": "2.0L mStallion turbo-petrol (197 bhp), 2.2L mHawk diesel (155 or 185 bhp)",
+    "gearbox": "6MT, 6AT",
+    "fuelOptions": ["Petrol", "Diesel"]
+  },
+  "priorGeneration": null,
+  "currentExShowroomRange": { "low": 14.0, "high": 27.0, "unit": "lakh" },
+  "lastRefreshedISO": "2026-07-31",
+  "refreshCadence": "Monthly",
+  "dataSourceNote": "Prices aggregated from Cars24 wholesale-transaction bands across metros. Non-metro adjustments applied via cityVariance below.",
+  "heroImage": {
+    "src": "/models/mahindra-xuv700-hero.jpg",
+    "alt": "Mahindra XUV700 front three-quarter in Everest White on an Indian highway"
+  },
+  "variants": [
+    { "name": "MX Petrol",           "fuel": "Petrol", "transmission": "6MT", "exShowroom": 14.00 },
+    { "name": "AX3 Petrol",          "fuel": "Petrol", "transmission": "6MT", "exShowroom": 16.65 },
+    { "name": "AX5 Petrol",          "fuel": "Petrol", "transmission": "6MT", "exShowroom": 18.55 },
+    { "name": "AX5 Petrol AT",       "fuel": "Petrol", "transmission": "6AT", "exShowroom": 19.95 },
+    { "name": "AX7 Petrol AT",       "fuel": "Petrol", "transmission": "6AT", "exShowroom": 24.30 },
+    { "name": "AX7 L Petrol AT",     "fuel": "Petrol", "transmission": "6AT", "exShowroom": 26.15 },
+    { "name": "MX Diesel",           "fuel": "Diesel", "transmission": "6MT", "exShowroom": 15.10 },
+    { "name": "AX3 Diesel",          "fuel": "Diesel", "transmission": "6MT", "exShowroom": 17.75 },
+    { "name": "AX5 Diesel",          "fuel": "Diesel", "transmission": "6MT", "exShowroom": 19.65 },
+    { "name": "AX5 Diesel AT",       "fuel": "Diesel", "transmission": "6AT", "exShowroom": 21.05 },
+    { "name": "AX7 Diesel AT",       "fuel": "Diesel", "transmission": "6AT", "exShowroom": 25.40 },
+    { "name": "AX7 L Diesel AT AWD", "fuel": "Diesel", "transmission": "6AT", "exShowroom": 26.95 }
+  ],
+  "permutations": [
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Petrol", "low": 15.80, "mid": 17.10, "high": 18.40 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "Petrol", "low": 15.15, "mid": 16.40, "high": 17.65 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Petrol", "low": 14.35, "mid": 15.50, "high": 16.65 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Petrol", "low": 13.45, "mid": 14.55, "high": 15.65 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Petrol", "low": 14.50, "mid": 15.70, "high": 16.90 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "Petrol", "low": 13.90, "mid": 15.05, "high": 16.20 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Petrol", "low": 13.10, "mid": 14.15, "high": 15.20 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Petrol", "low": 12.30, "mid": 13.30, "high": 14.30 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Petrol", "low": 13.25, "mid": 14.35, "high": 15.45 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "Petrol", "low": 11.95, "mid": 12.95, "high": 13.95 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Petrol", "low": 11.10, "mid": 12.00, "high": 12.90 },
+    { "year": 2022, "kmBand": "75k+",   "fuel": "Petrol", "low": 10.25, "mid": 11.05, "high": 11.85 },
+
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Diesel", "low": 17.05, "mid": 18.45, "high": 19.85 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "Diesel", "low": 16.30, "mid": 17.65, "high": 19.00 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Diesel", "low": 15.45, "mid": 16.70, "high": 17.95 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Diesel", "low": 14.50, "mid": 15.65, "high": 16.80 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Diesel", "low": 15.65, "mid": 16.95, "high": 18.25 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "Diesel", "low": 15.00, "mid": 16.25, "high": 17.50 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Diesel", "low": 14.15, "mid": 15.30, "high": 16.45 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Diesel", "low": 13.25, "mid": 14.35, "high": 15.45 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Diesel", "low": 14.30, "mid": 15.50, "high": 16.70 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "Diesel", "low": 12.90, "mid": 13.95, "high": 15.00 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Diesel", "low": 12.00, "mid": 13.00, "high": 14.00 },
+    { "year": 2022, "kmBand": "75k+",   "fuel": "Diesel", "low": 11.10, "mid": 12.00, "high": 12.90 }
+  ],
+  "cngNote": "Not applicable. XUV700 is not offered with a factory CNG option and aftermarket kits are extremely rare on this segment.",
+  "cityVariance": [
+    { "city": "Delhi NCR",  "variancePct":  2, "note": "Strong SUV demand; 10-year diesel cutoff applies but does not affect 2020+ cars" },
+    { "city": "Mumbai",     "variancePct":  4, "note": "Tight supply, RTO premium, automatic AWD trims particularly firm" },
+    { "city": "Bengaluru",  "variancePct":  5, "note": "Highest full-size SUV liquidity in India, IT-corridor buyers" },
+    { "city": "Hyderabad",  "variancePct":  3, "note": "Strong family-SUV demand" },
+    { "city": "Chennai",    "variancePct":  1, "note": "Baseline plus one" },
+    { "city": "Pune",       "variancePct":  3, "note": "Follows Mumbai band" },
+    { "city": "Kolkata",    "variancePct": -2, "note": "Softer prices, longer selling cycle" },
+    { "city": "Ahmedabad",  "variancePct":  1, "note": "Steady demand" }
+  ],
+  "retentionCurve": [
+    { "ageYears": 1, "retentionPct": 86 },
+    { "ageYears": 2, "retentionPct": 76 },
+    { "ageYears": 3, "retentionPct": 68 },
+    { "ageYears": 4, "retentionPct": 60 },
+    { "ageYears": 5, "retentionPct": 53 }
+  ],
+  "segmentAverageRetention": {
+    "3year": 63,
+    "5year": 48
+  },
+  "context": [
+    "The XUV700 has been Mahindra's flagship since its October 2021 launch and disrupted the full-size SUV segment by pricing at 40 to 50% below equivalent-feature Toyota Fortuner and MG Gloster trims. That launch pricing is now a resale drag: rupee depreciation is steep on the top-end AX7 L trims because the new-car ceiling has not moved much through 2026.",
+    "Percentage retention on the base MX and AX3 trims is strong, well above segment average, because these were priced aggressively at launch and demand for value-end full-size SUVs is deep in tier-2 and tier-3 India. AX3 and AX5 3-year retention beats Fortuner by 4 to 5 percentage points despite the Fortuner's stronger brand equity.",
+    "Diesel XUV700 holds value 5 to 7 percentage points better than petrol at three years. The 2.2L mHawk diesel has a solid reliability record after the initial 2022 batch was updated. Automatic diesel trims (AX5 AT and above) are the highest-liquidity permutation.",
+    "The March 2026 MY26 refresh added new features (ADAS improvements, updated infotainment, new AWD calibration) but did not change the platform. Pre-MY26 units (2021 to 2025) have re-rated downwards by 3 to 4% since, a smaller drop than a full facelift would trigger.",
+    "AWD variants (available only on top-end Diesel AT trims) trade 4 to 6% above equivalent 2WD units in NCR and Bengaluru, and are broadly flat in other metros."
+  ],
+  "commonIssues": [
+    "AdrenoX infotainment freeze on 2022 to early-2023 units before the October 2023 firmware update. Verify software version at inspection, dealer flash is free.",
+    "6-speed AT harshness on 2022 first-batch units, updated via TCU recalibration campaign in mid-2023. Verify service history for the fix.",
+    "Rear axle boom noise on 2022 to 2023 AWD units above 40,000 km, characteristic of the drivetrain, but budget 15,000 to 22,000 rupees for diff-mount replacement around 70,000 km.",
+    "Front suspension bush wear at 55,000 to 70,000 km, particularly on cars driven on poor roads. Routine replacement, ₹8,000 to ₹12,000 at authorised service.",
+    "Panoramic sunroof drainage clog on units driven in tree-heavy areas. Routine cleaning solves it, if ignored causes headliner water stains. Inspect closely."
+  ],
+  "recentTransactions": [
+    { "soldMonth": "2026-07", "year": 2023, "kmDriven": 24800, "fuel": "Diesel", "variant": "AX7 Diesel AT",       "city": "Delhi NCR", "soldPriceLakh": 15.65 },
+    { "soldMonth": "2026-07", "year": 2022, "kmDriven": 39500, "fuel": "Diesel", "variant": "AX5 Diesel AT",       "city": "Bengaluru", "soldPriceLakh": 14.15 },
+    { "soldMonth": "2026-07", "year": 2024, "kmDriven": 12300, "fuel": "Petrol", "variant": "AX5 Petrol AT",       "city": "Mumbai",    "soldPriceLakh": 16.80 },
+    { "soldMonth": "2026-06", "year": 2022, "kmDriven": 54200, "fuel": "Diesel", "variant": "AX7 L Diesel AT AWD", "city": "Pune",      "soldPriceLakh": 15.35 },
+    { "soldMonth": "2026-06", "year": 2023, "kmDriven": 28700, "fuel": "Diesel", "variant": "AX5 Diesel MT",       "city": "Hyderabad", "soldPriceLakh": 14.90 },
+    { "soldMonth": "2026-06", "year": 2022, "kmDriven": 72400, "fuel": "Petrol", "variant": "AX7 Petrol AT",       "city": "Chennai",   "soldPriceLakh": 11.85 },
+    { "soldMonth": "2026-05", "year": 2023, "kmDriven": 33500, "fuel": "Petrol", "variant": "AX5 Petrol",          "city": "Bengaluru", "soldPriceLakh": 13.75 },
+    { "soldMonth": "2026-05", "year": 2022, "kmDriven": 45300, "fuel": "Diesel", "variant": "AX7 Diesel AT",       "city": "Kolkata",   "soldPriceLakh": 13.55 },
+    { "soldMonth": "2026-05", "year": 2024, "kmDriven": 15800, "fuel": "Diesel", "variant": "AX7 L Diesel AT AWD", "city": "Delhi NCR", "soldPriceLakh": 18.95 },
+    { "soldMonth": "2026-04", "year": 2022, "kmDriven": 42600, "fuel": "Diesel", "variant": "AX3 Diesel",          "city": "Ahmedabad", "soldPriceLakh": 12.85 },
+    { "soldMonth": "2026-04", "year": 2023, "kmDriven": 41200, "fuel": "Petrol", "variant": "AX3 Petrol",          "city": "Bengaluru", "soldPriceLakh": 12.60 },
+    { "soldMonth": "2026-04", "year": 2022, "kmDriven": 22400, "fuel": "Diesel", "variant": "AX5 Diesel AT",       "city": "Mumbai",    "soldPriceLakh": 14.75 }
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Mahindra XUV700 in India?",
+      "a": "A well-maintained XUV700 retains approximately 76% of its ex-showroom price after two years, 68% after three years, and 53% after five years. For a 2022 AX5 diesel with 25,000 to 50,000 km, the current fair-market band is roughly ₹12.90 to ₹15.00 lakh."
+    },
+    {
+      "q": "Does the XUV700 hold value better than the Toyota Fortuner?",
+      "a": "In percentage terms yes for AX3 and AX5 trims, in rupee terms no. AX5 3-year retention beats the Fortuner by 4 to 5 percentage points on percentage retention, but the Fortuner's higher ex-showroom price means its absolute rupee residual is significantly higher. On top-end AX7 L trims, retention is closer to segment average."
+    },
+    {
+      "q": "Is the top-end AX7 L XUV700 worth buying used?",
+      "a": "Yes, if you can find a 2022 to 2023 unit at a 30 to 35% discount to new. The AX7 L was priced aggressively at launch, and rupee depreciation has been steep on this trim because the new-car ceiling has not moved much. Verify the ADAS calibration and AWD system at inspection."
+    },
+    {
+      "q": "Which city gives the best resale for an XUV700?",
+      "a": "Bengaluru and Mumbai currently trade at approximately +4 to +5% above the national mid, driven by strong SUV demand in the IT-corridor and tight used-car supply. Kolkata trades at −2%."
+    },
+    {
+      "q": "How much does an XUV700 depreciate per year?",
+      "a": "Roughly 14% in year one, 10% additional in year two, 8% in year three, then 7 to 8% per year through year five. The five-year retention of 53% is 5 percentage points above the full-size SUV segment average of 48%."
+    }
+  ],
+  "relatedModels": [
+    { "make": "hyundai", "model": "creta", "label": "Hyundai Creta" },
+    { "make": "toyota", "model": "innova-hycross", "label": "Toyota Innova Hycross" },
+    { "make": "kia", "model": "seltos", "label": "Kia Seltos" }
+  ],
+  "authorSlug": "vaishnav-mishra"
+}

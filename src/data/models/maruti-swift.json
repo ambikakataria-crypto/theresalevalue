@@ -133,6 +133,20 @@
     "Some 2020 CNG (aftermarket) units surface with expired RTO endorsement or missing hydro-test certificates for the tank. Non-negotiable inspection item, a valid endorsement is mandatory for transfer.",
     "Paint fade on Rustic Orange and Solid Fire Red is visible on 2018–2020 units parked without cover. Cosmetic, but factors into resale negotiation."
   ],
+  "recentTransactions": [
+    { "soldMonth": "2026-07", "year": 2023, "kmDriven": 18400, "fuel": "Petrol", "variant": "VXi",     "city": "Delhi NCR", "soldPriceLakh": 5.45 },
+    { "soldMonth": "2026-07", "year": 2022, "kmDriven": 41200, "fuel": "Petrol", "variant": "ZXi",     "city": "Bengaluru", "soldPriceLakh": 4.80 },
+    { "soldMonth": "2026-07", "year": 2024, "kmDriven":  9200, "fuel": "Petrol", "variant": "ZXi+",    "city": "Mumbai",    "soldPriceLakh": 6.75 },
+    { "soldMonth": "2026-06", "year": 2021, "kmDriven": 58600, "fuel": "Petrol", "variant": "VXi",     "city": "Pune",      "soldPriceLakh": 3.60 },
+    { "soldMonth": "2026-06", "year": 2022, "kmDriven": 27300, "fuel": "CNG",    "variant": "VXi CNG", "city": "Ahmedabad", "soldPriceLakh": 4.15 },
+    { "soldMonth": "2026-06", "year": 2020, "kmDriven": 72500, "fuel": "Petrol", "variant": "ZXi",     "city": "Hyderabad", "soldPriceLakh": 3.05 },
+    { "soldMonth": "2026-05", "year": 2023, "kmDriven": 32800, "fuel": "Petrol", "variant": "ZXi AGS", "city": "Chennai",   "soldPriceLakh": 5.10 },
+    { "soldMonth": "2026-05", "year": 2022, "kmDriven": 46100, "fuel": "Petrol", "variant": "VXi",     "city": "Kolkata",   "soldPriceLakh": 4.35 },
+    { "soldMonth": "2026-05", "year": 2024, "kmDriven": 14700, "fuel": "CNG",    "variant": "ZXi CNG", "city": "Delhi NCR", "soldPriceLakh": 6.50 },
+    { "soldMonth": "2026-04", "year": 2021, "kmDriven": 39900, "fuel": "Petrol", "variant": "ZXi",     "city": "Bengaluru", "soldPriceLakh": 4.15 },
+    { "soldMonth": "2026-04", "year": 2020, "kmDriven": 84300, "fuel": "Petrol", "variant": "VXi",     "city": "Pune",      "soldPriceLakh": 2.70 },
+    { "soldMonth": "2026-04", "year": 2023, "kmDriven": 21500, "fuel": "Petrol", "variant": "ZXi+",    "city": "Mumbai",    "soldPriceLakh": 5.85 }
+  ],
   "faq": [
     {
       "q": "What is the resale value of a Maruti Swift in India?",

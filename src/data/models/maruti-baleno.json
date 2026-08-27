@@ -1,0 +1,153 @@
+{
+  "slug": { "make": "maruti", "model": "baleno" },
+  "make": "Maruti Suzuki",
+  "model": "Baleno",
+  "segment": "Premium hatchback",
+  "bodyType": "Hatchback",
+  "launchYear": 2015,
+  "currentGeneration": {
+    "genNumber": 2,
+    "launchedIndia": "February 2022",
+    "engine": "1.2L K12N Dualjet petrol, 89 bhp / 113 Nm",
+    "gearbox": "5MT, AMT (AGS)",
+    "fuelOptions": ["Petrol", "CNG (factory-fitted on Delta and Zeta, from 2023)"]
+  },
+  "priorGeneration": {
+    "genNumber": 1,
+    "yearsInIndia": "2015 to 2022",
+    "engine": "1.2L K12M petrol"
+  },
+  "currentExShowroomRange": { "low": 7.0, "high": 9.8, "unit": "lakh" },
+  "lastRefreshedISO": "2026-07-31",
+  "refreshCadence": "Monthly",
+  "dataSourceNote": "Prices aggregated from Cars24 wholesale-transaction bands across metros. Non-metro adjustments applied via cityVariance below.",
+  "heroImage": {
+    "src": "/models/maruti-baleno-hero.jpg",
+    "alt": "Maruti Suzuki Baleno 2nd generation front three-quarter in Nexa Blue on an Indian city road"
+  },
+  "variants": [
+    { "name": "Sigma",       "fuel": "Petrol", "transmission": "5MT", "exShowroom": 7.05 },
+    { "name": "Delta",       "fuel": "Petrol", "transmission": "5MT", "exShowroom": 7.95 },
+    { "name": "Delta AGS",   "fuel": "Petrol", "transmission": "AMT", "exShowroom": 8.45 },
+    { "name": "Zeta",        "fuel": "Petrol", "transmission": "5MT", "exShowroom": 8.75 },
+    { "name": "Zeta AGS",    "fuel": "Petrol", "transmission": "AMT", "exShowroom": 9.25 },
+    { "name": "Alpha",       "fuel": "Petrol", "transmission": "5MT", "exShowroom": 9.35 },
+    { "name": "Alpha AGS",   "fuel": "Petrol", "transmission": "AMT", "exShowroom": 9.85 },
+    { "name": "Delta CNG",   "fuel": "CNG",    "transmission": "5MT", "exShowroom": 8.60 },
+    { "name": "Zeta CNG",    "fuel": "CNG",    "transmission": "5MT", "exShowroom": 9.40 }
+  ],
+  "permutations": [
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Petrol", "low": 6.35, "mid": 6.85, "high": 7.35 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "Petrol", "low": 6.10, "mid": 6.60, "high": 7.10 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Petrol", "low": 5.80, "mid": 6.25, "high": 6.70 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Petrol", "low": 5.40, "mid": 5.85, "high": 6.30 },
+    { "year": 2024, "kmBand": "75k+",   "fuel": "Petrol", "low": 5.05, "mid": 5.45, "high": 5.85 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Petrol", "low": 5.60, "mid": 6.05, "high": 6.50 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "Petrol", "low": 5.35, "mid": 5.80, "high": 6.25 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Petrol", "low": 5.00, "mid": 5.40, "high": 5.80 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Petrol", "low": 4.65, "mid": 5.05, "high": 5.45 },
+    { "year": 2023, "kmBand": "75k+",   "fuel": "Petrol", "low": 4.25, "mid": 4.60, "high": 4.95 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Petrol", "low": 5.00, "mid": 5.40, "high": 5.80 },
+    { "year": 2022, "kmBand": "10-25k", "fuel": "Petrol", "low": 4.75, "mid": 5.15, "high": 5.55 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "Petrol", "low": 4.45, "mid": 4.80, "high": 5.15 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Petrol", "low": 4.10, "mid": 4.45, "high": 4.80 },
+    { "year": 2022, "kmBand": "75k+",   "fuel": "Petrol", "low": 3.75, "mid": 4.05, "high": 4.35 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "Petrol", "low": 4.40, "mid": 4.75, "high": 5.10 },
+    { "year": 2021, "kmBand": "10-25k", "fuel": "Petrol", "low": 4.15, "mid": 4.50, "high": 4.85 },
+    { "year": 2021, "kmBand": "25-50k", "fuel": "Petrol", "low": 3.85, "mid": 4.20, "high": 4.55 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "Petrol", "low": 3.55, "mid": 3.85, "high": 4.15 },
+    { "year": 2021, "kmBand": "75k+",   "fuel": "Petrol", "low": 3.25, "mid": 3.50, "high": 3.75 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "Petrol", "low": 3.85, "mid": 4.20, "high": 4.55 },
+    { "year": 2020, "kmBand": "10-25k", "fuel": "Petrol", "low": 3.60, "mid": 3.95, "high": 4.30 },
+    { "year": 2020, "kmBand": "25-50k", "fuel": "Petrol", "low": 3.35, "mid": 3.65, "high": 3.95 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "Petrol", "low": 3.05, "mid": 3.30, "high": 3.55 },
+    { "year": 2020, "kmBand": "75k+",   "fuel": "Petrol", "low": 2.80, "mid": 3.05, "high": 3.30 },
+
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "CNG", "low": 6.75, "mid": 7.25, "high": 7.75 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "CNG", "low": 6.50, "mid": 7.00, "high": 7.50 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "CNG", "low": 6.10, "mid": 6.55, "high": 7.00 },
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "CNG", "low": 5.95, "mid": 6.40, "high": 6.85 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "CNG", "low": 5.35, "mid": 5.75, "high": 6.15 }
+  ],
+  "cngNote": "Factory-fitted Baleno CNG launched in 2023 on the 2nd-generation Baleno, on Delta and Zeta variants. Factory units trade 4 to 6% above equivalent petrol in Delhi NCR, Ahmedabad and pockets of Gujarat. Aftermarket CNG is uncommon on the Baleno and typically penalised 5 to 8%.",
+  "cityVariance": [
+    { "city": "Delhi NCR",  "variancePct":  3, "note": "CNG-friendly, strong Nexa network" },
+    { "city": "Mumbai",     "variancePct":  3, "note": "Tight supply, RTO premium" },
+    { "city": "Bengaluru",  "variancePct":  4, "note": "IT-corridor demand, premium hatch favoured" },
+    { "city": "Hyderabad",  "variancePct":  2, "note": "Steady demand, moderate liquidity" },
+    { "city": "Chennai",    "variancePct":  0, "note": "Baseline" },
+    { "city": "Pune",       "variancePct":  2, "note": "Follows Mumbai band" },
+    { "city": "Kolkata",    "variancePct": -2, "note": "Softer prices, longer selling cycle" },
+    { "city": "Ahmedabad",  "variancePct":  1, "note": "CNG-heavy, near-baseline" }
+  ],
+  "retentionCurve": [
+    { "ageYears": 1, "retentionPct": 84 },
+    { "ageYears": 2, "retentionPct": 74 },
+    { "ageYears": 3, "retentionPct": 65 },
+    { "ageYears": 4, "retentionPct": 57 },
+    { "ageYears": 5, "retentionPct": 50 }
+  ],
+  "segmentAverageRetention": {
+    "3year": 60,
+    "5year": 46
+  },
+  "context": [
+    "The Baleno is Maruti's premium hatchback and India's best-selling car in that segment for most quarters since 2016. Sold exclusively through the Nexa network, it commands a small retention premium over lower-line Maruti hatchbacks driven by the perceived brand tier and higher trim availability.",
+    "The 2nd-generation Baleno launched in India in February 2022. The used market has largely closed the price gap between the outgoing K12M generation and the current K12N generation for cars with less than 25,000 km. Above that, generation still matters and 2nd-generation cars pull a clear premium.",
+    "Automatic AGS variants have converged with manuals in resale, particularly in metros with heavy stop-go traffic. As of mid-2026 an AGS Baleno trades within 1% of the equivalent manual in Delhi NCR, Bengaluru and Hyderabad.",
+    "The Baleno's typical buyer profile at resale skews slightly older and more mileage-tolerant than the Swift's. Cars with 60,000 to 90,000 km on the odometer still find buyers within 4 to 6 weeks in metros, compared with 6 to 10 weeks for a Swift at the same km."
+  ],
+  "commonIssues": [
+    "SmartPlay Pro head-unit lag on 2022 to 2023 units before the November 2023 firmware patch. Fixed under warranty at Nexa; verify software version at inspection.",
+    "AGS jerk on take-off appears on 2020 to 2022 units above 55,000 km. Standard actuator recalibration at Nexa, roughly ₹8,000 to ₹12,000.",
+    "Rear suspension bush wear at 60,000 to 75,000 km, especially on cars driven regularly on poor roads. Routine replacement, ₹3,000 to ₹5,000.",
+    "Water leakage into the boot on some 2019 to 2020 units traced to a rear parcel-tray seal defect. Inspect the boot floor and parcel shelf carefully.",
+    "Alloy wheel corrosion on Alpha variants parked in coastal cities (Chennai, Mumbai, Kochi). Cosmetic but factors into resale."
+  ],
+  "recentTransactions": [
+    { "soldMonth": "2026-07", "year": 2023, "kmDriven": 22800, "fuel": "Petrol", "variant": "Zeta",       "city": "Delhi NCR", "soldPriceLakh": 5.95 },
+    { "soldMonth": "2026-07", "year": 2022, "kmDriven": 36400, "fuel": "Petrol", "variant": "Alpha",      "city": "Bengaluru", "soldPriceLakh": 5.30 },
+    { "soldMonth": "2026-07", "year": 2024, "kmDriven":  8500, "fuel": "Petrol", "variant": "Delta AGS",  "city": "Mumbai",    "soldPriceLakh": 7.15 },
+    { "soldMonth": "2026-06", "year": 2021, "kmDriven": 54200, "fuel": "Petrol", "variant": "Zeta",       "city": "Pune",      "soldPriceLakh": 4.05 },
+    { "soldMonth": "2026-06", "year": 2023, "kmDriven": 29700, "fuel": "CNG",    "variant": "Zeta CNG",   "city": "Ahmedabad", "soldPriceLakh": 5.90 },
+    { "soldMonth": "2026-06", "year": 2020, "kmDriven": 78200, "fuel": "Petrol", "variant": "Alpha",      "city": "Hyderabad", "soldPriceLakh": 3.20 },
+    { "soldMonth": "2026-05", "year": 2022, "kmDriven": 33500, "fuel": "Petrol", "variant": "Zeta AGS",   "city": "Chennai",   "soldPriceLakh": 4.85 },
+    { "soldMonth": "2026-05", "year": 2023, "kmDriven": 41800, "fuel": "Petrol", "variant": "Delta",      "city": "Kolkata",   "soldPriceLakh": 5.20 },
+    { "soldMonth": "2026-05", "year": 2024, "kmDriven": 12300, "fuel": "CNG",    "variant": "Delta CNG",  "city": "Delhi NCR", "soldPriceLakh": 7.05 },
+    { "soldMonth": "2026-04", "year": 2021, "kmDriven": 44600, "fuel": "Petrol", "variant": "Alpha",      "city": "Bengaluru", "soldPriceLakh": 4.35 },
+    { "soldMonth": "2026-04", "year": 2020, "kmDriven": 89400, "fuel": "Petrol", "variant": "Zeta",       "city": "Kolkata",   "soldPriceLakh": 2.95 },
+    { "soldMonth": "2026-04", "year": 2022, "kmDriven": 19700, "fuel": "Petrol", "variant": "Alpha AGS",  "city": "Mumbai",    "soldPriceLakh": 5.60 }
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Maruti Baleno in India?",
+      "a": "A well-maintained Baleno retains approximately 74% of its ex-showroom price after two years, 65% after three years, and 50% after five years. For a 2022 Zeta petrol with 25,000 to 50,000 km, the current fair-market band is roughly ₹4.45 to ₹5.15 lakh."
+    },
+    {
+      "q": "Does the Baleno hold value better than the Swift?",
+      "a": "Not by a wide margin at three years, but the gap opens after year four. Baleno retains about 50% at year five versus Swift's 53%, so on a strict percentage basis Swift edges out. In rupee terms, Baleno's higher entry price means the absolute residual value is higher, which is why owners often perceive the Baleno as holding value better."
+    },
+    {
+      "q": "Is the older K12M Baleno worth buying used?",
+      "a": "Yes, if the car has been serviced at authorised centres and has less than 70,000 km. The K12M engine has a proven reliability track record and 2020 to 2021 units currently trade at a 12 to 18% discount to the equivalent 2022 second-generation car for a broadly similar ownership experience."
+    },
+    {
+      "q": "Which city gives the best resale for a Baleno?",
+      "a": "Bengaluru, Delhi NCR and Mumbai currently trade at approximately +3 to +4% above the national mid, driven by strong premium-hatch demand and Nexa network density. Kolkata is soft at about −2%."
+    },
+    {
+      "q": "How much does a Baleno depreciate per year?",
+      "a": "Roughly 16% in year one, 10% additional in year two, then 8 to 9% per year through year five. The five-year retention of about 50% is 4 percentage points above the premium-hatch segment average."
+    }
+  ],
+  "relatedModels": [
+    { "make": "maruti", "model": "swift", "label": "Maruti Swift" },
+    { "make": "hyundai", "model": "i20", "label": "Hyundai i20" },
+    { "make": "tata", "model": "altroz", "label": "Tata Altroz" }
+  ],
+  "authorSlug": "vaishnav-mishra"
+}

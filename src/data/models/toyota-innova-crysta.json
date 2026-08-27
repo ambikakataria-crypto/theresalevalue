@@ -1,0 +1,150 @@
+{
+  "slug": { "make": "toyota", "model": "innova-crysta" },
+  "make": "Toyota",
+  "model": "Innova Crysta",
+  "segment": "Full-size MPV",
+  "bodyType": "MPV",
+  "launchYear": 2016,
+  "currentGeneration": {
+    "genNumber": 1,
+    "launchedIndia": "November 2022 (BS6.2 diesel-only, GX and VX grades)",
+    "engine": "2.4L GD 4-cylinder diesel, 148 bhp / 343 Nm",
+    "gearbox": "5MT, 6AT",
+    "fuelOptions": ["Diesel"]
+  },
+  "priorGeneration": {
+    "genNumber": 1,
+    "yearsInIndia": "2016 to 2022",
+    "engine": "2.4L GD diesel and 2.7L 2TR petrol (petrol discontinued March 2020, then re-introduced briefly, then dropped again in 2022)"
+  },
+  "currentExShowroomRange": { "low": 20.0, "high": 26.5, "unit": "lakh" },
+  "lastRefreshedISO": "2026-07-31",
+  "refreshCadence": "Monthly",
+  "dataSourceNote": "Prices aggregated from Cars24 wholesale-transaction bands across metros. Non-metro adjustments applied via cityVariance below. Innova Crysta continues as a taxi and fleet mainstay alongside the Innova Hycross for private buyers.",
+  "heroImage": {
+    "src": "/models/toyota-innova-crysta-hero.jpg",
+    "alt": "Toyota Innova Crysta 2022 facelift front three-quarter in Attitude Black Mica on an Indian highway"
+  },
+  "variants": [
+    { "name": "GX 7-str MT",        "fuel": "Diesel", "transmission": "5MT", "exShowroom": 20.00 },
+    { "name": "GX 8-str MT",        "fuel": "Diesel", "transmission": "5MT", "exShowroom": 20.10 },
+    { "name": "GX 7-str AT",        "fuel": "Diesel", "transmission": "6AT", "exShowroom": 21.65 },
+    { "name": "VX 7-str MT",        "fuel": "Diesel", "transmission": "5MT", "exShowroom": 24.10 },
+    { "name": "VX 8-str MT",        "fuel": "Diesel", "transmission": "5MT", "exShowroom": 24.20 },
+    { "name": "VX 7-str AT",        "fuel": "Diesel", "transmission": "6AT", "exShowroom": 25.75 },
+    { "name": "ZX 7-str MT (pre-22)","fuel":"Diesel", "transmission": "5MT", "exShowroom": 24.85 },
+    { "name": "ZX 7-str AT (pre-22)","fuel":"Diesel", "transmission": "6AT", "exShowroom": 26.45 },
+    { "name": "GX Petrol (pre-20)", "fuel": "Petrol", "transmission": "5MT", "exShowroom": 18.15 },
+    { "name": "VX Petrol (pre-20)", "fuel": "Petrol", "transmission": "5MT", "exShowroom": 22.40 }
+  ],
+  "permutations": [
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Diesel", "low": 19.10, "mid": 20.65, "high": 22.20 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "Diesel", "low": 18.40, "mid": 19.90, "high": 21.40 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Diesel", "low": 17.45, "mid": 18.85, "high": 20.25 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Diesel", "low": 16.35, "mid": 17.65, "high": 18.95 },
+    { "year": 2024, "kmBand": "75k+",   "fuel": "Diesel", "low": 15.20, "mid": 16.40, "high": 17.60 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Diesel", "low": 17.80, "mid": 19.25, "high": 20.70 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "Diesel", "low": 17.05, "mid": 18.45, "high": 19.85 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Diesel", "low": 16.10, "mid": 17.40, "high": 18.70 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Diesel", "low": 15.05, "mid": 16.25, "high": 17.45 },
+    { "year": 2023, "kmBand": "75k+",   "fuel": "Diesel", "low": 13.90, "mid": 15.00, "high": 16.10 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Diesel", "low": 16.35, "mid": 17.70, "high": 19.05 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "Diesel", "low": 14.85, "mid": 16.05, "high": 17.25 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Diesel", "low": 13.85, "mid": 14.95, "high": 16.05 },
+    { "year": 2022, "kmBand": "75k+",   "fuel": "Diesel", "low": 12.85, "mid": 13.85, "high": 14.85 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "Diesel", "low": 14.85, "mid": 16.05, "high": 17.25 },
+    { "year": 2021, "kmBand": "25-50k", "fuel": "Diesel", "low": 13.50, "mid": 14.60, "high": 15.70 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "Diesel", "low": 12.55, "mid": 13.55, "high": 14.55 },
+    { "year": 2021, "kmBand": "75k+",   "fuel": "Diesel", "low": 11.55, "mid": 12.45, "high": 13.35 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "Diesel", "low": 13.50, "mid": 14.60, "high": 15.70 },
+    { "year": 2020, "kmBand": "25-50k", "fuel": "Diesel", "low": 12.25, "mid": 13.25, "high": 14.25 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "Diesel", "low": 11.35, "mid": 12.25, "high": 13.15 },
+    { "year": 2020, "kmBand": "75k+",   "fuel": "Diesel", "low": 10.40, "mid": 11.25, "high": 12.10 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "Petrol", "low": 12.20, "mid": 13.20, "high": 14.20 },
+    { "year": 2020, "kmBand": "25-50k", "fuel": "Petrol", "low": 11.05, "mid": 11.95, "high": 12.85 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "Petrol", "low": 10.15, "mid": 10.95, "high": 11.75 }
+  ],
+  "cngNote": "Not applicable. Innova Crysta is not offered with a factory CNG option. Aftermarket CNG conversions are common on fleet-use Crystas, and these are penalised 8 to 12% below equivalent diesel at private-buyer resale.",
+  "cityVariance": [
+    { "city": "Delhi NCR",  "variancePct":  1, "note": "10-year diesel cutoff applies; pre-2016 Crystas cannot be re-registered in NCR" },
+    { "city": "Mumbai",     "variancePct":  4, "note": "Very tight supply; strong private-buyer and premium-taxi demand" },
+    { "city": "Bengaluru",  "variancePct":  5, "note": "Highest liquidity, family-buyer premium, IT-corridor demand" },
+    { "city": "Hyderabad",  "variancePct":  3, "note": "Strong private and taxi-fleet demand" },
+    { "city": "Chennai",    "variancePct":  2, "note": "Steady demand, plus baseline plus two" },
+    { "city": "Pune",       "variancePct":  3, "note": "Follows Mumbai band" },
+    { "city": "Kolkata",    "variancePct": -1, "note": "Softer prices, longer selling cycle" },
+    { "city": "Ahmedabad",  "variancePct":  1, "note": "Steady demand" }
+  ],
+  "retentionCurve": [
+    { "ageYears": 1, "retentionPct": 92 },
+    { "ageYears": 2, "retentionPct": 84 },
+    { "ageYears": 3, "retentionPct": 77 },
+    { "ageYears": 4, "retentionPct": 70 },
+    { "ageYears": 5, "retentionPct": 63 }
+  ],
+  "segmentAverageRetention": {
+    "3year": 70,
+    "5year": 55
+  },
+  "context": [
+    "The Innova Crysta is the highest resale-holding non-luxury vehicle sold in India, and has been for eight consecutive years. Three drivers explain it: Toyota's diesel engine reliability, the taxi and fleet buyer base which absorbs stock across the entire age range, and the private-family buyer segment which values proven durability over new-car features.",
+    "The November 2022 update removed the petrol variant permanently and introduced BS6.2 compliance on the 2.4L GD diesel. Existing BS6-phase-1 diesels (2020 to 2022) are unaffected in NCR by the 10-year diesel cutoff until 2030 to 2032, but pre-2016 first-generation Innova cars (not Crysta) are already impacted.",
+    "The petrol variant (2.7L 2TR), sold from 2016 to 2020 as an emissions hedge, has significantly weaker resale than the diesel, roughly 12 to 15% below equivalent diesel Crystas at the same year and km. This gap does not close with age.",
+    "Fleet-plate Crystas (yellow taxi board) trade at a 15 to 20% discount to private-plate equivalents, driven by higher accumulated km, tougher usage patterns, and stricter buyer diligence. Verify RC ownership history at inspection.",
+    "The Innova Hycross launched in January 2023 as the modern replacement for the Crysta in the private-buyer segment, but Toyota continues Crysta production for fleet and long-distance private buyers. This dual-lineup arrangement supports Crysta resale at the top end of the age curve."
+  ],
+  "commonIssues": [
+    "DPF regeneration warning on 2020 to 2022 BS6-phase-1 units driven mostly in city stop-go, verify the last successful regeneration cycle at inspection.",
+    "Steering rack noise on 2018 to 2020 units above 80,000 km, common on fleet-use cars, ₹18,000 to ₹25,000 at authorised service.",
+    "Rear AC blower motor failure on 2016 to 2018 units above 90,000 km, typically ₹6,000 to ₹9,000.",
+    "Timing chain rattle on 2016 to 2017 first-batch 2.4L GD units, service campaign closed in 2018, verify service history for the fix.",
+    "Middle-row captain seat rail wear on VX 7-seater units above 100,000 km, common on taxi-plate cars, budget ₹4,000 to ₹7,000."
+  ],
+  "recentTransactions": [
+    { "soldMonth": "2026-07", "year": 2023, "kmDriven": 26800, "fuel": "Diesel", "variant": "VX 7-str AT",   "city": "Delhi NCR", "soldPriceLakh": 18.35 },
+    { "soldMonth": "2026-07", "year": 2022, "kmDriven": 45300, "fuel": "Diesel", "variant": "VX 8-str MT",   "city": "Bengaluru", "soldPriceLakh": 16.75 },
+    { "soldMonth": "2026-07", "year": 2024, "kmDriven": 14200, "fuel": "Diesel", "variant": "GX 7-str MT",   "city": "Mumbai",    "soldPriceLakh": 20.20 },
+    { "soldMonth": "2026-06", "year": 2021, "kmDriven": 62400, "fuel": "Diesel", "variant": "VX 7-str AT",   "city": "Pune",      "soldPriceLakh": 13.85 },
+    { "soldMonth": "2026-06", "year": 2023, "kmDriven": 32100, "fuel": "Diesel", "variant": "GX 7-str AT",   "city": "Hyderabad", "soldPriceLakh": 18.65 },
+    { "soldMonth": "2026-06", "year": 2020, "kmDriven": 84500, "fuel": "Diesel", "variant": "VX 8-str MT",   "city": "Chennai",   "soldPriceLakh": 11.35 },
+    { "soldMonth": "2026-05", "year": 2022, "kmDriven": 38700, "fuel": "Diesel", "variant": "ZX 7-str AT",   "city": "Bengaluru", "soldPriceLakh": 16.90 },
+    { "soldMonth": "2026-05", "year": 2020, "kmDriven": 51200, "fuel": "Petrol", "variant": "VX Petrol",     "city": "Ahmedabad", "soldPriceLakh": 10.85 },
+    { "soldMonth": "2026-05", "year": 2024, "kmDriven": 18400, "fuel": "Diesel", "variant": "VX 7-str MT",   "city": "Delhi NCR", "soldPriceLakh": 19.75 },
+    { "soldMonth": "2026-04", "year": 2021, "kmDriven": 48900, "fuel": "Diesel", "variant": "VX 7-str MT",   "city": "Mumbai",    "soldPriceLakh": 14.65 },
+    { "soldMonth": "2026-04", "year": 2020, "kmDriven": 96300, "fuel": "Diesel", "variant": "GX 8-str MT",   "city": "Kolkata",   "soldPriceLakh": 10.20 },
+    { "soldMonth": "2026-04", "year": 2022, "kmDriven": 24500, "fuel": "Diesel", "variant": "VX 7-str AT",   "city": "Bengaluru", "soldPriceLakh": 17.25 }
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Toyota Innova Crysta in India?",
+      "a": "A well-maintained Innova Crysta retains approximately 84% of its ex-showroom price after two years, 77% after three years, and 63% after five years. This is the highest three-year retention in the Indian non-luxury market. For a 2022 VX diesel with 25,000 to 50,000 km, the current fair-market band is roughly ₹14.85 to ₹17.25 lakh."
+    },
+    {
+      "q": "Why does the Innova Crysta hold value so well?",
+      "a": "Three factors: Toyota's engine and drivetrain reliability record, sustained demand from both private family buyers and commercial fleet operators (which supports resale across the full age curve), and a limited supply of new private-plate Crystas since production shifted heavily to the Innova Hycross for private buyers. The Crysta is now the go-to option for long-distance intercity family use, which keeps demand tight."
+    },
+    {
+      "q": "Should I buy a petrol Innova Crysta?",
+      "a": "Only if you drive fewer than 8,000 km per year and are not sensitive to fuel cost. The 2.7L 2TR petrol was sold from 2016 to 2020 as an emissions hedge and trades 12 to 15% below the equivalent diesel Crysta on the used market. If you are buying for taxi or high-mileage private use, the diesel is the correct choice."
+    },
+    {
+      "q": "Is a taxi-plate Innova Crysta worth buying?",
+      "a": "Only at a 15 to 20% discount to a private-plate equivalent, and only after a thorough authorised inspection. Fleet Crystas typically have significantly higher km, harsher driving cycles, and more clutch and suspension wear. If those check out, they are a rational buy for private long-distance use."
+    },
+    {
+      "q": "How much does an Innova Crysta depreciate per year?",
+      "a": "Roughly 8% in year one, 8% in year two, 7% in year three, then 7% per year through year five. The five-year retention of 63% is 8 percentage points above the full-size MPV segment average of 55%."
+    }
+  ],
+  "relatedModels": [
+    { "make": "toyota", "model": "innova-hycross", "label": "Toyota Innova Hycross" },
+    { "make": "kia", "model": "carens", "label": "Kia Carens" },
+    { "make": "mahindra", "model": "marazzo", "label": "Mahindra Marazzo" }
+  ],
+  "authorSlug": "vaishnav-mishra"
+}

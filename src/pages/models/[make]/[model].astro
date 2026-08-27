@@ -3,11 +3,14 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Byline from '../../../components/Byline.astro';
 import EditorsTake from '../../../components/EditorsTake.astro';
 import swiftData from '../../../data/models/maruti-swift.json';
+import balenoData from '../../../data/models/maruti-baleno.json';
+import cretaData from '../../../data/models/hyundai-creta.json';
+import nexonData from '../../../data/models/tata-nexon.json';
+import innovaData from '../../../data/models/toyota-innova-crysta.json';
+import xuv700Data from '../../../data/models/mahindra-xuv700.json';
 
-// Prototype: one model wired. To scale, import all /data/models/*.json and
-// map them through getStaticPaths. Each JSON provides its own data slice.
 export function getStaticPaths() {
-  const models = [swiftData];
+  const models = [swiftData, balenoData, cretaData, nexonData, innovaData, xuv700Data];
   return models.map((m) => ({
     params: { make: m.slug.make, model: m.slug.model },
     props: { data: m },
@@ -273,6 +276,48 @@ const description = `${data.make} ${data.model} resale value in India: value ret
           </div>
         )}
       </section>
+
+      <!-- 7b. Recent transactions (historical proof) -->
+      {data.recentTransactions?.length > 0 && (
+        <section aria-labelledby="txn-heading" class="mb-12">
+          <h2 id="txn-heading" class="text-2xl font-serif text-navy-900 mb-3">Recent {data.model} transactions</h2>
+          <p class="text-base text-graphite leading-relaxed mb-4">A sample of {data.recentTransactions.length} anonymised {data.model} sales from Cars24 wholesale transactions over the last four months. Prices are actual sold values in lakhs, not asking prices or list bands. Use the calculator above for retention percentages against your own permutation.</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-base border-collapse">
+              <caption class="sr-only">Recent anonymised {data.make} {data.model} sale transactions with year, kilometres, fuel, variant, city and sold price.</caption>
+              <thead class="bg-cream-100">
+                <tr>
+                  <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Sold</th>
+                  <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Year</th>
+                  <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">KM driven</th>
+                  <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Fuel</th>
+                  <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Variant</th>
+                  <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">City</th>
+                  <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">Sold price (₹L)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.recentTransactions.map((t: any) => {
+                  const [yr, mo] = t.soldMonth.split('-');
+                  const soldLabel = new Date(parseInt(yr, 10), parseInt(mo, 10) - 1, 1).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' });
+                  return (
+                    <tr>
+                      <td class="p-3 border border-cream-200 text-graphite">{soldLabel}</td>
+                      <td class="p-3 border border-cream-200 text-navy-900 font-medium">{t.year}</td>
+                      <td class="p-3 border border-cream-200 text-right font-data">{t.kmDriven.toLocaleString('en-IN')}</td>
+                      <td class="p-3 border border-cream-200">{t.fuel}</td>
+                      <td class="p-3 border border-cream-200">{t.variant}</td>
+                      <td class="p-3 border border-cream-200">{t.city}</td>
+                      <td class="p-3 border border-cream-200 text-right font-data">{t.soldPriceLakh.toFixed(2)}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <div class="text-xs text-slate-soft mt-3">Rows anonymised. RC serial, owner details and inspection score omitted. Refreshed monthly alongside the retention bands above.</div>
+        </section>
+      )}
 
       <!-- 8. Methodology callout -->
       <section class="card-institutional bg-white border border-cream-200 mb-12 text-sm">
