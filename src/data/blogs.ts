@@ -1,20 +1,25 @@
 // Single source of truth for the /blogs listing.
 // Newest first at render (sorted by `date` desc).
+// Future-dated `publishDate` blogs are hidden until that date.
 //
 // TO ADD A NEW BLOG:
 //   1. Create src/pages/blogs/<slug>.astro.
 //   2. Add a row below (any position; the list is sorted at render).
 //   3. Add the URL + revision date to src/data/blog-lastmod.ts (sitemap lastmod).
-//   4. Push. @astrojs/sitemap picks up the new page automatically.
+//   4. Set `publishDate` to schedule the blog for a future daily slot.
+//      A daily scheduled task pushes an empty commit at 06:30 IST so Vercel
+//      rebuilds and unhides the day's slot. See ~/.claude/scheduled-tasks/trv-daily-blog-publish.
+//   5. Push. @astrojs/sitemap picks up the new page automatically.
 
 export type BlogArticle = {
   slug: string;
   title: string;
   excerpt: string;
-  date: string;       // ISO YYYY-MM-DD
+  date: string;         // ISO YYYY-MM-DD (display date + sort order)
   readTime: string;
   category: string;
   featured?: boolean;
+  publishDate?: string; // Optional ISO YYYY-MM-DD; if set and > today, blog is hidden from listing + sitemap
 };
 
 export const BLOG_PAGE_SIZE = 5;
@@ -70,8 +75,28 @@ const rawArticles: BlogArticle[] = [
     readTime: '12 min read',
     category: 'Scrappage · Guide',
   },
+  {
+    slug: 'factors-affecting-used-car-resale-value',
+    title: 'What affects used car resale value in India: 10 factors ranked by rupee impact',
+    excerpt: 'Age and kilometres set the base price. The other eight factors decide whether the final offer lands above or below that base. All ten ranked, with the ones an owner can still change on the day of sale.',
+    date: '2026-08-31',
+    readTime: '13 min read',
+    category: 'Valuation · Analysis',
+    publishDate: '2026-08-31',
+  },
+  {
+    slug: 'fair-market-value-vs-asking-price-vs-dealer-offer',
+    title: 'Fair market value vs asking price vs dealer offer: three prices for one car in India',
+    excerpt: 'One car, three numbers, one fortnight in Pune. Why fair market value is a band, not a figure; what asking price actually reflects; how dealer offers are built; and where each rupee of the spread sits.',
+    date: '2026-09-01',
+    readTime: '11 min read',
+    category: 'Valuation · Framework',
+    publishDate: '2026-09-01',
+  },
 ];
 
-export const allBlogs: BlogArticle[] = [...rawArticles].sort(
-  (a, b) => b.date.localeCompare(a.date),
-);
+const todayISO = new Date().toISOString().slice(0, 10);
+
+export const allBlogs: BlogArticle[] = rawArticles
+  .filter((a) => !a.publishDate || a.publishDate <= todayISO)
+  .sort((a, b) => b.date.localeCompare(a.date));

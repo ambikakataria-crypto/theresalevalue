@@ -1,0 +1,288 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Fair market value vs asking price vs dealer offer: three prices for one car in India';
+const description = 'One car, three numbers, one fortnight in Pune. Why fair market value is a band, not a figure; what asking price actually reflects; how dealer offers are built; and where each rupee of the spread sits.';
+---
+<BaseLayout title={title} description={description}>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="mb-8">
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/blogs">← All blogs</a>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">Valuation · Framework</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+          Fair market value vs asking price vs dealer offer: three prices for one car in India
+        </h1>
+        <div class="text-sm text-slate-soft">
+          <time datetime="2026-09-01">1 September 2026</time>
+          <span class="mx-2">·</span>
+          <span>11 min read</span>
+        </div>
+      </div>
+
+      <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
+
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
+          <strong class="text-navy-900">Framework, not a valuation quote.</strong> The rupee figures below describe one illustrative Pune transaction. Actual spreads vary widely by model, city, condition and current market demand. Use the structure as a way to read your own three numbers, not as a benchmark.
+        </div>
+
+        <p class="text-xl leading-relaxed">
+          One 2020 Maruti Suzuki Swift VXi. 48,000 km on the odometer, single owner, MH-12 (Pune) registration, service record intact. Three different parties put a price on it inside a fortnight, and no two agreed.
+        </p>
+
+        <p>An online valuation tool returned roughly ₹5.4 lakh. The owner listed it on a classifieds portal at ₹6.1 lakh. A dealer inspected it physically and countered at ₹4.7 lakh.</p>
+
+        <p>That is a ₹1.4 lakh spread on one car, in one city, in one two-week window. None of the three numbers is wrong. Each answers a different question, and the seller who understands which question is being answered is the one who keeps most of the gap.</p>
+
+        <blockquote class="border-l-4 border-signal-600 pl-4 my-6 text-graphite italic">
+          <p class="mb-3"><strong class="text-navy-900 not-italic">Fair market value</strong> is the price a used car would realistically sell for between an informed buyer and an unpressured seller in the current market. An estimated range, not a fixed figure.</p>
+          <p class="mb-3"><strong class="text-navy-900 not-italic">Asking price</strong> is the figure a seller lists the car at, and it typically sits above fair market value because it includes negotiation headroom and the seller's own spending on the car.</p>
+          <p><strong class="text-navy-900 not-italic">Dealer offer</strong> is the wholesale price a dealer will pay to buy the car outright, and it sits below fair market value because it deducts reconditioning, paperwork, inventory holding cost and the dealer's margin.</p>
+        </blockquote>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">What fair market value means for a used car in India (and why it is a range, not a figure)</h2>
+
+        <p>Fair market value is what a used car would change hands for between a willing, informed buyer and a willing, unpressured seller in the current market. It is an estimate of a transaction that has not happened yet, built from what comparable cars are listing and selling for.</p>
+
+        <p>Both conditions in that definition carry weight. "Informed" means the buyer knows the accident history, the service intervals, and whether the second key exists. "Unpressured" means the seller is not relocating to Bengaluru on the 30th and taking whatever comes on the 28th. Remove either condition and the price stops being fair market value and becomes something else: a distress price, or a price paid in ignorance.</p>
+
+        <p>Here is what actually happens with valuation tools. They return a single rupee figure because a single figure is easier to display than a band, and users trust precision. The honest output for that Swift was closer to ₹5.1L to ₹5.7L. A desk-based estimate is built on make, model, variant, year, kilometres, city and ownership serial. It cannot see the car.</p>
+
+        <p>What it misses shows up on inspection: tyre age against manufacture date, whether both keys exist, an aftermarket CNG kit that may or may not be endorsed on the RC, clutch travel on high-city-km cars, evidence of past panel work. Each of those, in real inspections, shifts the realistic band by a few thousand to a few tens of thousands of rupees.</p>
+
+        <p>Fair market value is not an offer. Nobody is obliged to pay it, and no dealer is obliged to match it. It is also not the same as Insured Declared Value. IDV is a contract figure calculated by an insurer from the car's listed showroom price minus a fixed depreciation schedule, and it caps the payout on total loss or theft. It is a formula output, not a market observation. More on that further down, and in detail in <a href="/blogs/idv-calculator-india">what Insured Declared Value means</a>.</p>
+
+        <p>Run the car through a <a href="/valuation">used car valuation calculator</a>, then treat the answer as the midpoint of a band rather than a price tag.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">What an asking price on a used car listing actually reflects: negotiation headroom, not value</h2>
+
+        <p>An asking price is a number the seller constructs, not a number the market produces. It almost always sits above fair market value, because it is built to be negotiated down.</p>
+
+        <p>Break the Swift's ₹6.1 lakh apart and the components separate cleanly:</p>
+
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Fair market value: ₹5.4L</li>
+          <li>Negotiation buffer the seller expects to concede: ₹25,000 to ₹40,000</li>
+          <li>Post-purchase spending the owner wants back: new tyres, an aftermarket head unit, ceramic coating</li>
+          <li>Emotional premium: the car was looked after, and the owner knows it</li>
+        </ul>
+
+        <p>Sellers lose money quietly on the third item. Money spent on a car after purchase rarely returns at cost. Accessories and cosmetic work are recovered at a small fraction of spend, because the next buyer did not choose them and may not want them. Mechanical restoration recovers better, not because it adds value, but because it removes a deduction the buyer would otherwise apply. A new battery does not raise the price. An eighteen-month-old battery with a swollen casing lowers it. That asymmetry is the whole point, and it sits on top of the ordinary <a href="/blogs/new-car-depreciation-india">new car depreciation curve</a>, which post-purchase spending does not slow down.</p>
+
+        <p>There is a structural reason Indian listing prices skew high, and it has nothing to do with individual sellers being greedy. India publishes no database of concluded private used-car sale prices. So when a seller researches, the only comparables visible are other people's asking prices on the same portal. Asking prices anchor to asking prices. The loop feeds itself upward, and the actual transacted price stays invisible to everyone.</p>
+
+        <p>Which reframes the most common buyer question. Most people think there is a standard discount off the sticker. That is only half the story: "how much less than the asking price should I offer" has no fixed answer, and the 10% rule of thumb is a guess dressed as a method. The useful question is what this car's fair market value is, and how far above that band the asking price is sitting. The negotiable amount is that gap plus verified defects. On a car listed at fair market value, there may be almost no room at all.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">How a dealer offer on your car is calculated (and why the deduction stack is not a lowball)</h2>
+
+        <p>A dealer offer is a wholesale purchase price. It is what a business will pay to own the car, recondition it, hold it, sell it retail, and stand behind it. It sits below fair market value by design, because fair market value is a retail-side estimate and the dealer's exit price is retail.</p>
+
+        <p>The deduction stack, walked from ₹5.4L down to ₹4.7L on the Swift:</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Line item</th>
+                <th class="py-2 pr-3">Typical amount</th>
+                <th class="py-2">Why the dealer carries it</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Reconditioning: detailing, minor dent and paint, tyre replacement if below tread limit</td><td class="py-2 pr-3">₹12,000 to ₹35,000</td><td class="py-2">The car must be retail-ready before a customer sees it</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">RC transfer and paperwork handling: Form 29, Form 30, NOC where applicable, hypothecation removal</td><td class="py-2 pr-3">₹3,000 to ₹8,000</td><td class="py-2">Dealer absorbs RTO follow-up and the wait for the updated Registration Certificate</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Inventory holding cost for 30 to 60 days</td><td class="py-2 pr-3">₹8,000 to ₹20,000</td><td class="py-2">Capital blocked, yard space, insurance on stock</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Warranty or return-window provision</td><td class="py-2 pr-3">₹10,000 to ₹25,000</td><td class="py-2">Set aside against post-sale engine, gearbox or electrical claims</td></tr>
+              <tr><td class="py-2 pr-3">Gross margin</td><td class="py-2 pr-3">6% to 12% of retail</td><td class="py-2">The dealer's actual earning on the unit</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Speed is being traded against price. A dealer sale typically settles payment in days and shifts the entire burden of buyer search, test drives, price haggling and RTO follow-up off the seller. A private sale at ₹5.4L that takes seven weeks and eleven test drives is not straightforwardly better than ₹4.7L on Tuesday. It depends on what the seller's time is worth and how urgently the money is needed.</p>
+
+        <p>Two dealers will quote differently on the same car on the same day. Inventory mix explains most of it. A dealer already holding three Swifts in the yard has no reason to bid aggressively for a fourth, while a dealer whose walk-in customers keep asking for a petrol hatchback under ₹6L will stretch. City buyer profile matters too. That variance is free information, which is why a second quote is worth the hour it costs.</p>
+
+        <p>One more distinction catches sellers off guard. The instant online quote and the post-inspection offer are not the same instrument. The online figure is conditional, generated from declared inputs. The post-inspection figure is the offer. Revision between the two is normal. The gap widens sharply on cars carrying undisclosed panel work, which a paint-thickness gauge picks up in minutes.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The ₹1.4L spread on one 2020 Swift VXi: where each rupee of the gap sits</h2>
+
+        <p>The three numbers stack in a fixed order. Dealer offer at the bottom, fair market value in the middle, asking price on top. What varies between cars is the distance between them.</p>
+
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong class="text-navy-900">Dealer offer: ₹4.7L</strong>, the floor. Wholesale buying price after the deduction stack.</li>
+          <li>Add back reconditioning, holding cost and dealer margin: +₹70,000. This is the cost of certainty and speed, not a penalty.</li>
+          <li><strong class="text-navy-900">Fair market value: ₹5.4L</strong>, the reference number. What an informed private buyer would realistically pay.</li>
+          <li>Add negotiation buffer (~₹35,000) and owner additions (~₹35,000): +₹70,000</li>
+          <li><strong class="text-navy-900">Asking price: ₹6.1L</strong>, the opening position, not a value statement.</li>
+        </ul>
+
+        <p>Treat fair market value as the reference for every decision. The asking price should sit above it by a buffer that can be named and defended, and the best dealer offer sets the floor beneath which a private sale is clearly worth the effort.</p>
+
+        <p>That floor is what makes the effort test possible. Count the real cost of the private route: writing the listing, fielding calls from brokers posing as buyers, arranging test drives, the RTO visit for Form 29 and Form 30, and the follow-up until the transfer reflects on VAHAN. If the achievable private price is ₹40,000 above the dealer offer, most sellers will take it. If it is ₹15,000 above, many will not.</p>
+
+        <p>Spreads narrow in liquid markets and widen in illiquid ones. A petrol hatchback under ₹7L in a metro has hundreds of active buyers, transparent comparables and dealers competing for stock, so all three numbers cluster. A large diesel SUV, a discontinued model, or a car sitting in a city with thin resale demand pulls the dealer offer down hard while the asking price stays optimistic. The mechanics behind that sit in <a href="/blogs/factors-affecting-used-car-resale-value">factors that affect resale value</a>.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Same car, three numbers: the comparison table</h2>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3"></th>
+                <th class="py-2 pr-3">Fair market value</th>
+                <th class="py-2 pr-3">Asking price</th>
+                <th class="py-2">Dealer offer</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3 font-semibold text-navy-900">What it is</td><td class="py-2 pr-3">Estimated realistic transaction price</td><td class="py-2 pr-3">Seller's listed opening figure</td><td class="py-2">Wholesale price a dealer will pay</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3 font-semibold text-navy-900">Who sets it</td><td class="py-2 pr-3">The market, estimated by tools and comparables</td><td class="py-2 pr-3">The individual seller</td><td class="py-2">The buying dealer, after inspection</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3 font-semibold text-navy-900">Question it answers</td><td class="py-2 pr-3">What is this car worth?</td><td class="py-2 pr-3">What does this seller hope to get?</td><td class="py-2">What will a business pay today?</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3 font-semibold text-navy-900">Negotiable?</td><td class="py-2 pr-3">Not negotiable; it is an estimate</td><td class="py-2 pr-3">Yes, usually by the amount it exceeds fair market value</td><td class="py-2">Yes, within a narrow band</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3 font-semibold text-navy-900">Position vs fair market value</td><td class="py-2 pr-3">Reference point</td><td class="py-2 pr-3">Typically 8% to 15% above</td><td class="py-2">Typically 10% to 18% below</td></tr>
+              <tr><td class="py-2 pr-3 font-semibold text-navy-900">When it matters to you</td><td class="py-2 pr-3">Always; it anchors both other numbers</td><td class="py-2 pr-3">When buying, as the starting point to argue down</td><td class="py-2">When selling fast, as your floor</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The short version: asking price is one person's opinion, dealer offer is one business's costed bid, and fair market value is the estimate both of them are actually orbiting.</p>
+
+        <p>There is a fourth number, and it is the only one that is a fact.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3"></th>
+                <th class="py-2">Achieved price</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3 font-semibold text-navy-900">What it is</td><td class="py-2">The amount the car actually sold for</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3 font-semibold text-navy-900">Who sets it</td><td class="py-2">Buyer and seller together, at closing</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3 font-semibold text-navy-900">Status</td><td class="py-2">Fact, not estimate</td></tr>
+              <tr><td class="py-2 pr-3 font-semibold text-navy-900">Availability in India</td><td class="py-2">Not published anywhere for private sales</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Because achieved prices are invisible in India, buyers and sellers anchor to asking prices instead, which is precisely why listing prices drift above transactable value. Before setting any number, run the car through a <a href="/valuation">used car valuation calculator</a> and treat the output as a band.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Reading each number in your favour: what changes if you are selling vs buying</h2>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">If you are selling: using fair market value as your floor, not your target</h3>
+
+        <p>Build the band before writing the listing. Two independent sources minimum, because a single tool output is one model's opinion. The method is set out in <a href="/blogs/how-to-check-used-car-value">how to check used car value across three sources</a>.</p>
+
+        <p>Set the asking price above the band by a buffer that can be justified out loud. "₹6.1L because the tyres are four months old, the insurance runs another nine months with unclaimed NCB, and there is a complete service record" survives a negotiation. A round number with no story behind it gets chipped away.</p>
+
+        <p>Collect two dealer offers, not one. The second is free information about how inventory-driven the first was.</p>
+
+        <p>Documents move the number more reliably than polish. Full service record, both keys, valid PUC certificate, insurance with No Claim Bonus intact, and a Registration Certificate with no hypothecation still showing. If a loan was closed years ago but the hypothecation was never removed from the RC, that is a live problem: the buyer cannot complete transfer cleanly, and it needs the financier's No Objection Certificate plus the prescribed form filed at the RTO. That changes the timeline. Sorting hypothecation after a buyer is committed can add weeks and cost the sale.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">If you are buying: pricing the gap between asking price and fair market value</h3>
+
+        <p>The offer is built upward from fair market value minus verified defects. Not downward from the asking price by a percentage. A car listed at fair market value has almost no room; a car listed 18% above it has plenty. Same 10% "discount" means completely different things on those two cars.</p>
+
+        <p>Deductions worth itemising at the table: tyres near the tread wear indicator, battery older than three years, a major service interval falling due within 5,000 km, a missing second key (re-coding an immobiliser key is not cheap), pending challans, and insurance expiring within weeks.</p>
+
+        <p>Verify before offering, not after. Pull the RC particulars and ownership serial, check insurance status and NCB, and run a challan check against the registration number on the state or Parivahan e-challan service.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Where fair market value, asking price and dealer offer diverge most: three Indian scenarios</h2>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Diesel hatchbacks and older diesels in NCR vs Bengaluru</h3>
+
+        <p>Vehicle age restrictions in the Delhi-NCR region cap how long diesel and petrol cars may be operated there, which shrinks the local buyer pool as a car approaches that limit. Diesel vehicles older than 10 years and petrol vehicles older than 15 years cannot be operated in the region, following orders of the National Green Tribunal and the Supreme Court.</p>
+
+        <p>The practical consequence is a split between the two numbers. A tool may return a healthy fair market value for a 9-year-old diesel because it averages national data, while NCR dealers bid far below it, since they price for where they can actually resell the car. The same model in Bengaluru or Hyderabad faces no such compression. For cars genuinely at end of life, the relevant floor is <a href="/blogs/car-scrappage-value-india">car scrappage value</a>.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The CNG-fitment and RC-endorsement gap</h3>
+
+        <p>An aftermarket CNG kit changes who the buyer is. Some buyers actively want it, many do not. The variable that moves the dealer offer most is whether the kit is endorsed on the Registration Certificate. An unendorsed kit becomes the dealer's compliance problem on resale and transfer, and gets priced accordingly. The Central Motor Vehicles Rules and state RTO retrofitment guidance require fitment through an approved retrofitment centre and endorsement on the RC.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Accident-repaired cars: where asking price and dealer offer diverge furthest</h3>
+
+        <p>This is the widest gap of the three, and the one that produces the most shocked sellers.</p>
+
+        <p>A well-repaired car looks normal to a private buyer, so the asking price stays at market level. A dealer's inspection uses a paint-thickness gauge and a look at panel gaps, weld lines and the apron, and finds the repair in minutes. The offer then drops by the resale discount the dealer expects to eat later.</p>
+
+        <p>Three separate value events get lumped together and should not be. Cosmetic panel repair costs the least. Structural or chassis repair costs considerably more, because it affects buyer confidence permanently. An insurance total-loss history on record is a different category again, and some dealers will not buy the car at any price.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Fair market value vs Insured Declared Value vs scrap value: the two other numbers on the same car</h2>
+
+        <p>Three more numbers attach to the same car, and only one of them is a market observation.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Number</th>
+                <th class="py-2 pr-3">What it is</th>
+                <th class="py-2 pr-3">Who calculates it</th>
+                <th class="py-2">Where it sits</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Fair market value</td><td class="py-2 pr-3">Estimated realistic sale price between informed parties</td><td class="py-2 pr-3">Market, via tools and comparables</td><td class="py-2">Middle</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Insured Declared Value (IDV)</td><td class="py-2 pr-3">Contract figure capping the payout on total loss or theft</td><td class="py-2 pr-3">Insurer, from showroom price minus a set depreciation schedule</td><td class="py-2">Usually below market value on older cars</td></tr>
+              <tr><td class="py-2 pr-3">Scrap value</td><td class="py-2 pr-3">Value of the car as material, by weight and recoverable parts</td><td class="py-2 pr-3">Registered scrapping facility</td><td class="py-2">Floor of all numbers</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>"Depreciation schedule" here means a fixed percentage table applied by age, not an assessment of the specific car. IRDAI motor insurance guidance publishes the standard percentages by vehicle age band.</p>
+
+        <p>The practical consequence: a low IDV does not mean the car is worth less on the market. It means the insurer applied its table. Sellers who quote their IDV as a price justification are quoting the wrong number entirely.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Frequently asked questions</h2>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What is the fair market value of a used car in India?</h3>
+        <p>Fair market value is the price a used car would realistically sell for between an informed, unpressured buyer and seller in the current market. It is estimated from recent listings and concluded sales for the same make, model, variant, year, kilometre reading and city. It is a band rather than a single figure, usually spanning several tens of thousands of rupees on a mid-segment car.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is fair market value the same as the price shown by an online car valuation tool?</h3>
+        <p>No. A tool output is an estimate of fair market value built from data the tool can see. It cannot assess tyre age, clutch condition, repainted panels, a missing second key or documentation gaps. Treat the figure as the midpoint of a band and adjust it after a physical inspection.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">How much less than the asking price should I offer on a used car in India?</h3>
+        <p>Base the offer on the car's fair market value and verified defects, not on a fixed percentage below asking. Establish the band first, then quantify deductions: tyres near the wear limit, battery age, a due major service, a missing key. If the asking price sits well above the band, that gap is the negotiating room.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Why is the dealer's offer on my car so much lower than the online valuation?</h3>
+        <p>A dealer offer is a wholesale buying price, not a retail market price. It subtracts reconditioning, paperwork handling, inventory holding cost, any warranty provision, and the dealer's margin. It also buys certainty: payment settles in days and the buyer search, test drives and RTO transfer work move off the seller entirely.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What is the difference between asking price and market value of a car?</h3>
+        <p>Asking price is set by one seller and usually contains deliberate negotiation headroom plus recovery of post-purchase spending. Market value is an estimate of what the car would actually transact for, drawn from many comparable cars. Asking price is an opinion; market value is an estimate built on a larger sample.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is a dealer offer negotiable?</h3>
+        <p>Usually, within a narrow band, and how much depends on what the dealer already has in stock. Documentation that removes risk supports a higher number: full service history, both keys, unclaimed NCB, and an RC free of pending hypothecation. Getting a second dealer offer is the most reliable test of whether the first was competitive.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Which number should I use when setting the price for my car?</h3>
+        <p>Use fair market value as the reference, set the asking price above it by a buffer you can justify item by item, and treat the best dealer offer as your floor. If the achievable private price sits only modestly above that floor, weigh the weeks of listing, calls, test drives and transfer follow-up against the difference.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does fair market value change by city in India?</h3>
+        <p>Yes. Demand for a body style, fuel type and variant varies by city, and an out-of-state registration adds NOC and transfer effort that buyers price in. Regional vehicle age rules, particularly those applying to diesel cars in certain regions, can compress value sharply.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is Insured Declared Value the same as fair market value?</h3>
+        <p>No. IDV is an insurance figure derived from the vehicle's listed showroom price less a fixed depreciation schedule, and it caps the payout on total loss or theft. Fair market value reflects what buyers are actually paying. The two routinely differ, and IDV should never be used as a selling price.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Why do two dealers quote different amounts for the same car on the same day?</h3>
+        <p>Each dealer prices against their own stock, their local buyer profile, and how fast they expect to move the car. A dealer already holding three of the same model has little reason to bid hard for a fourth. A dealer whose walk-ins keep asking for that exact car will stretch.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does spending money on a car before selling increase its market value?</h3>
+        <p>Mechanical work that removes a known defect usually protects the price by preventing a deduction: worn tyres, an ageing battery, an overdue major service. Cosmetic work and accessories are recovered at a small fraction of cost, because the next buyer did not choose them and may not value them at all.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What is the achieved price of a used car, and why is it not published in India?</h3>
+        <p>Achieved price is what the car actually sold for, and it is the only number in the set that is a fact rather than an estimate. India maintains no public database of concluded private used-car sale prices, so buyers and sellers anchor to visible asking prices instead. That feedback loop is a large part of why listing prices sit above transactable value.</p>
+
+        <p class="mt-10">Before listing a car or countering a dealer, write all three numbers on one line: the valuation band, the asking price, and the best dealer offer received. If the asking price cannot be explained by named, specific items sitting above the band, it will not survive the first serious buyer. And if the dealer offer is within about ₹25,000 to ₹30,000 of what a private sale is realistically likely to fetch, the private route is being paid for in weeks of the seller's time.</p>
+
+        <div class="card-institutional bg-cream-100 mt-10">
+          <h3 class="text-xl font-serif text-navy-900 mb-3">Get your fair-price band in 30 seconds</h3>
+          <p class="text-graphite mb-4">Free, no signup, no phone number, no dealer calls. The band you need before you list, or counter, or accept.</p>
+          <a href="/valuation" class="inline-block px-6 py-3 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors no-underline">Check car value →</a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>
