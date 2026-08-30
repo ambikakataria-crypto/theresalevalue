@@ -1,11 +1,30 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 /**
  * Standalone new-car depreciation calculator.
- * Inputs mirror the used-car valuation form structure (make, model, fuel, city, condition-of-use)
- * but replace "kms driven" with "ex-showroom price" since the vehicle is brand new.
+ * Make + Model + City come from the same live catalogue used by the used-car
+ * valuation form. Body-type is inferred silently from ex-showroom price so
+ * the user only sees inputs they actually own the answer to.
  * Output: 10-year value curve scaled to the user's ex-showroom.
  */
+
+interface ScreenItem {
+  id: string;
+  title: string;
+  logoUrl: string;
+}
+
+interface CityItem {
+  id: string;
+  slug: string;
+  name: string;
+  stateId?: string;
+  stateCode?: string;
+}
+
+function slugify(s: string) {
+  return s.toLowerCase().replace(/\s+/g, '-');
+}
 
 type Segment =
   | 'hatchback'
@@ -32,8 +51,6 @@ const BASE_CURVE: Record<Segment, number[]> = {
 };
 
 // Compounding multiplier applied per year from year 1 onwards.
-// Petrol is baseline. Diesel carries a resale penalty in metros post BS6.2.
-// EVs discounted heavily to reflect battery-replacement uncertainty (as of 2026).
 const FUEL_MULT: Record<Fuel, number> = {
   petrol: 1.000,
   diesel: 0.990,
@@ -42,21 +59,11 @@ const FUEL_MULT: Record<Fuel, number> = {
   ev:     0.965,
 };
 
-// City tier applies a light multiplier on Y3+ (metros = harsher NCAP/pollution norms + more supply).
+// City tier applies a light multiplier from Y3 onwards.
 const CITY_MULT: Record<CityTier, number> = {
   metro:  0.985,
   tier1:  1.000,
   tier2:  1.010,
-};
-
-const SEGMENT_LABEL: Record<Segment, string> = {
-  'hatchback':   'Hatchback (Swift, Baleno, i20)',
-  'sedan':       'Sedan (Dzire, Verna, City)',
-  'compact-suv': 'Compact SUV (Nexon, Brezza, Venue)',
-  'midsize-suv': 'Midsize SUV (Creta, Seltos, Grand Vitara)',
-  'large-suv':   'Large SUV (XUV700, Fortuner, Safari)',
-  'mpv':         'MPV (Innova, Ertiga, Carens)',
-  'luxury':      'Luxury (BMW, Mercedes, Audi)',
 };
 
 const FUEL_LABEL: Record<Fuel, string> = {
@@ -67,24 +74,53 @@ const FUEL_LABEL: Record<Fuel, string> = {
   ev:     'Electric (BEV)',
 };
 
-const CITY_LABEL: Record<CityTier, string> = {
-  metro:  'Metro (Delhi NCR, Mumbai, Bengaluru, Chennai, Hyderabad, Kolkata, Pune)',
-  tier1:  'Tier 1 (Ahmedabad, Jaipur, Chandigarh, Lucknow, Kochi)',
-  tier2:  'Tier 2 / rest of India',
-};
+// Metro + Tier 1 city name lookups. Everything else falls to Tier 2.
+const METRO_CITIES = new Set([
+  'delhi', 'new delhi', 'delhi ncr', 'gurgaon', 'gurugram', 'noida', 'ghaziabad', 'faridabad',
+  'mumbai', 'navi mumbai', 'thane',
+  'bengaluru', 'bangalore',
+  'chennai',
+  'hyderabad', 'secunderabad',
+  'kolkata',
+  'pune',
+]);
+
+const TIER1_CITIES = new Set([
+  'ahmedabad', 'jaipur', 'chandigarh', 'lucknow', 'kochi', 'coimbatore', 'indore', 'bhopal',
+  'nagpur', 'vadodara', 'surat', 'visakhapatnam', 'vijayawada', 'kanpur', 'nashik',
+  'mysore', 'mysuru', 'trivandrum', 'thiruvananthapuram', 'mangalore', 'mangaluru',
+  'ludhiana', 'amritsar', 'rajkot', 'patna', 'ranchi', 'bhubaneswar', 'guwahati', 'dehradun',
+]);
+
+function tierFor(cityName: string): CityTier {
+  const key = cityName.trim().toLowerCase();
+  if (METRO_CITIES.has(key)) return 'metro';
+  if (TIER1_CITIES.has(key)) return 'tier1';
+  return 'tier2';
+}
+
+// Silent segment inference from ex-showroom price. Keeps the form simple while
+// preserving segment-accurate retention curves under the hood.
+function inferSegment(exShowroom: number): Segment {
+  if (exShowroom <= 7)   return 'hatchback';
+  if (exShowroom <= 12)  return 'compact-suv';
+  if (exShowroom <= 20)  return 'midsize-suv';
+  if (exShowroom <= 35)  return 'large-suv';
+  return 'luxury';
+}
 
 function fmtInr(lakh: number): string {
   if (lakh >= 100) return `₹${(lakh / 100).toFixed(2)}Cr`;
   return `₹${lakh.toFixed(2)}L`;
 }
 
-function computeCurve(exShowroom: number, segment: Segment, fuel: Fuel, city: CityTier): number[] {
+function computeCurve(exShowroom: number, fuel: Fuel, city: CityTier): number[] {
+  const segment = inferSegment(exShowroom);
   const base = BASE_CURVE[segment];
   const fMult = FUEL_MULT[fuel];
   const cMult = CITY_MULT[city];
   return base.map((pct, y) => {
     if (y === 0) return exShowroom;
-    // Compounding fuel + city penalty. City only starts biting from Y3.
     const fCompound = Math.pow(fMult, y);
     const cCompound = y >= 3 ? Math.pow(cMult, y - 2) : 1;
     return exShowroom * (pct / 100) * fCompound * cCompound;
@@ -95,14 +131,57 @@ export default function NewCarDepreciationCalculator() {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [exShowroom, setExShowroom] = useState<number>(10);
-  const [segment, setSegment] = useState<Segment>('compact-suv');
   const [fuel, setFuel] = useState<Fuel>('petrol');
-  const [city, setCity] = useState<CityTier>('metro');
+  const [citySlug, setCitySlug] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
+  const [makes, setMakes] = useState<ScreenItem[]>([]);
+  const [makesLoading, setMakesLoading] = useState(true);
+  const [models, setModels] = useState<ScreenItem[]>([]);
+  const [modelsLoading, setModelsLoading] = useState(false);
+  const [cities, setCities] = useState<CityItem[]>([]);
+  const [citiesLoading, setCitiesLoading] = useState(true);
+
+  // Load makes + cities on mount.
+  useEffect(() => {
+    fetch('/api/makes.json')
+      .then((res) => res.json())
+      .then((data: ScreenItem[]) => setMakes(Array.isArray(data) ? data : []))
+      .catch(() => setMakes([]))
+      .finally(() => setMakesLoading(false));
+
+    fetch('/api/cities.json')
+      .then((res) => res.json())
+      .then((data: unknown) => setCities(Array.isArray(data) ? (data as CityItem[]) : []))
+      .catch(() => setCities([]))
+      .finally(() => setCitiesLoading(false));
+  }, []);
+
+  const selectedMake = makes.find((m) => slugify(m.title) === make);
+
+  // Load models when make changes.
+  useEffect(() => {
+    if (!selectedMake) {
+      setModels([]);
+      return;
+    }
+    let cancelled = false;
+    setModelsLoading(true);
+    fetch(`/api/models/${selectedMake.id}.json`)
+      .then((res) => res.json())
+      .then((data: ScreenItem[]) => { if (!cancelled) setModels(Array.isArray(data) ? data : []); })
+      .catch(() => { if (!cancelled) setModels([]); })
+      .finally(() => { if (!cancelled) setModelsLoading(false); });
+    return () => { cancelled = true; };
+  }, [selectedMake?.id]);
+
+  const selectedModel = models.find((m) => slugify(m.title) === model);
+  const selectedCity = cities.find((c) => c.slug === citySlug);
+  const cityTier: CityTier = selectedCity ? tierFor(selectedCity.name) : 'tier1';
+
   const curve = useMemo(
-    () => computeCurve(exShowroom, segment, fuel, city),
-    [exShowroom, segment, fuel, city],
+    () => computeCurve(exShowroom, fuel, cityTier),
+    [exShowroom, fuel, cityTier],
   );
 
   const y5Retention = Math.round((curve[5] / curve[0]) * 100);
@@ -145,26 +224,34 @@ export default function NewCarDepreciationCalculator() {
         <div className="grid md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-navy-900 mb-1.5">Make</label>
-            <input
-              type="text"
+            <select
               required
               value={make}
-              onChange={(e) => setMake(e.target.value)}
-              placeholder="e.g. Maruti"
-              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
-            />
+              onChange={(e) => { setMake(e.target.value); setModel(''); }}
+              disabled={makesLoading}
+              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
+            >
+              <option value="">{makesLoading ? 'Loading makes…' : 'Select make'}</option>
+              {makes.map((m) => (
+                <option key={m.id} value={slugify(m.title)}>{m.title}</option>
+              ))}
+            </select>
           </div>
 
           <div>
             <label className="block text-sm font-medium text-navy-900 mb-1.5">Model</label>
-            <input
-              type="text"
+            <select
               required
               value={model}
               onChange={(e) => setModel(e.target.value)}
-              placeholder="e.g. Swift"
-              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
-            />
+              disabled={!make || modelsLoading}
+              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
+            >
+              <option value="">{modelsLoading ? 'Loading models…' : 'Select model'}</option>
+              {models.map((m) => (
+                <option key={m.id} value={slugify(m.title)}>{m.title}</option>
+              ))}
+            </select>
           </div>
 
           <div className="md:col-span-2">
@@ -184,20 +271,6 @@ export default function NewCarDepreciationCalculator() {
             <div className="text-xs text-slate-soft mt-1">On-road adds ~10-15% but resale is anchored to ex-showroom.</div>
           </div>
 
-          <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-navy-900 mb-1.5">Body type</label>
-            <select
-              required
-              value={segment}
-              onChange={(e) => setSegment(e.target.value as Segment)}
-              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
-            >
-              {(Object.keys(SEGMENT_LABEL) as Segment[]).map(s => (
-                <option key={s} value={s}>{SEGMENT_LABEL[s]}</option>
-              ))}
-            </select>
-          </div>
-
           <div>
             <label className="block text-sm font-medium text-navy-900 mb-1.5">Fuel type</label>
             <select
@@ -206,22 +279,26 @@ export default function NewCarDepreciationCalculator() {
               onChange={(e) => setFuel(e.target.value as Fuel)}
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
             >
-              {(Object.keys(FUEL_LABEL) as Fuel[]).map(f => (
+              {(Object.keys(FUEL_LABEL) as Fuel[]).map((f) => (
                 <option key={f} value={f}>{FUEL_LABEL[f]}</option>
               ))}
             </select>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-navy-900 mb-1.5">City tier</label>
+            <label className="block text-sm font-medium text-navy-900 mb-1.5">City</label>
             <select
               required
-              value={city}
-              onChange={(e) => setCity(e.target.value as CityTier)}
-              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
+              value={citySlug}
+              onChange={(e) => setCitySlug(e.target.value)}
+              disabled={citiesLoading}
+              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
             >
-              {(Object.keys(CITY_LABEL) as CityTier[]).map(c => (
-                <option key={c} value={c}>{CITY_LABEL[c]}</option>
+              <option value="">
+                {citiesLoading ? 'Loading cities…' : cities.length > 0 ? 'Select city' : 'City list unavailable'}
+              </option>
+              {cities.map((c) => (
+                <option key={c.id} value={c.slug}>{c.name}</option>
               ))}
             </select>
           </div>
@@ -255,12 +332,12 @@ export default function NewCarDepreciationCalculator() {
           <div>
             <div className="text-xs uppercase tracking-widest text-slate-soft mb-1">10-year forecast</div>
             <div className="text-xl font-serif text-navy-900">
-              {make || 'Your'} {model || 'new car'}
+              {selectedMake?.title || 'Your'} {selectedModel?.title || 'new car'}
             </div>
             <div className="text-sm text-graphite mt-1">
               Ex-showroom <span className="font-data text-navy-900">{fmtInr(exShowroom)}</span>
-              {' · '}{SEGMENT_LABEL[segment].split(' (')[0]}
               {' · '}{FUEL_LABEL[fuel]}
+              {selectedCity && ` · ${selectedCity.name}`}
             </div>
           </div>
           <span className="text-[10px] uppercase tracking-widest px-2 py-1 rounded-full bg-signal-500/10 text-signal-600 font-semibold self-start">
@@ -411,7 +488,7 @@ export default function NewCarDepreciationCalculator() {
         </details>
 
         <p className="text-xs text-slate-soft mt-4 leading-relaxed">
-          Curve is calibrated to Indian resale patterns using segment-level retention benchmarks, adjusted for fuel type and city tier.
+          Curve is calibrated to Indian resale patterns using segment-level retention benchmarks, adjusted for fuel type and city.
           Assumes average annual usage (~12,000 km/yr), average condition, and no accident history.
           For a model-specific forecast with variant-level detail, open the report from the top 50 list below.
         </p>
