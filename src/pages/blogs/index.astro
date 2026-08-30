@@ -4,6 +4,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const title = 'Blogs: India Used Car Value & Resale Reports';
 const description = 'Data-led blogs on India\'s used car market: which cars hold value best, how prices are moving, and what it means for buyers and sellers.';
 
+// PUBLISHING WORKFLOW
+// To add a new blog:
+//   1. Create the article file: src/pages/blogs/<slug>.astro
+//   2. Add a row to `articles` below (any position; list is sorted by date desc at render).
+//   3. Add the URL + revision date to src/data/blog-lastmod.ts (sitemap uses it).
+//   4. Push. @astrojs/sitemap picks the new page up automatically.
+
 const articles = [
   {
     slug: 'used-car-valuation-india',
@@ -60,6 +67,9 @@ const articles = [
     featured: false,
   },
 ];
+
+// Newest first. Manual `featured` flag survives sorting, but shipping order = date desc.
+articles.sort((a, b) => b.date.localeCompare(a.date));
 ---
 <BaseLayout title={title} description={description}>
   <section class="py-12 md:py-16 bg-cream-100 border-b border-cream-200">
