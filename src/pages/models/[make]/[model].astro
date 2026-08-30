@@ -1,16 +1,12 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Byline from '../../../components/Byline.astro';
-import EditorsTake from '../../../components/EditorsTake.astro';
 import swiftData from '../../../data/models/maruti-swift.json';
-import balenoData from '../../../data/models/maruti-baleno.json';
 import cretaData from '../../../data/models/hyundai-creta.json';
 import nexonData from '../../../data/models/tata-nexon.json';
 import innovaData from '../../../data/models/toyota-innova-crysta.json';
-import xuv700Data from '../../../data/models/mahindra-xuv700.json';
 
 export function getStaticPaths() {
-  const models = [swiftData, balenoData, cretaData, nexonData, innovaData, xuv700Data];
+  const models = [swiftData, cretaData, nexonData, innovaData];
   return models.map((m) => ({
     params: { make: m.slug.make, model: m.slug.model },
     props: { data: m },
@@ -80,8 +76,6 @@ const description = `${data.make} ${data.model} resale value in India: value ret
   <article class="py-12 md:py-16">
     <div class="container-tight max-w-4xl">
 
-      <Byline authorSlug={data.authorSlug} publishedDate="31 July 2026" readTime="12 min read" />
-
       <!-- 2. Interactive calculator (retention %, no rupees) -->
       <section aria-labelledby="calc-heading" class="card-institutional bg-white mb-12">
         <h2 id="calc-heading" class="text-2xl font-serif text-navy-900 mb-2">Check your {data.model}'s value retention</h2>
@@ -91,13 +85,13 @@ const description = `${data.make} ${data.model} resale value in India: value ret
           <label class="block text-sm">
             <span class="block text-xs uppercase tracking-widest text-slate-soft mb-1.5">Manufacturing year</span>
             <select id="calc-year" class="w-full border border-cream-200 rounded-md px-3 py-2 bg-white text-navy-900">
-              {[2024, 2023, 2022, 2021, 2020].map(y => <option value={y}>{y}</option>)}
+              {[2024, 2023, 2022, 2021, 2020].map(y => <option value={y} selected={y === 2021}>{y}</option>)}
             </select>
           </label>
           <label class="block text-sm">
             <span class="block text-xs uppercase tracking-widest text-slate-soft mb-1.5">Kilometres driven</span>
             <select id="calc-km" class="w-full border border-cream-200 rounded-md px-3 py-2 bg-white text-navy-900">
-              {['0-10k','10-25k','25-50k','50-75k','75k+'].map(k => <option value={k}>{k}</option>)}
+              {['0-10k','10-25k','25-50k','50-75k','75k+'].map(k => <option value={k} selected={k === '25-50k'}>{k}</option>)}
             </select>
           </label>
           <label class="block text-sm">
@@ -246,35 +240,12 @@ const description = `${data.make} ${data.model} resale value in India: value ret
         </div>
       </aside>
 
-      <!-- Editor's take, dated, opinionated POV that sits above the AI-drafted context -->
-      <EditorsTake date="Aug 2026" title="The most interesting used-Swift trade right now">
-        The used market hasn't fully re-priced the switch from the 4-cylinder K12N (up to 2024) to the 3-cylinder Z12E (2024+). A well-kept 2023 ZXi under 20,000 km is trading maybe 5% below a 2024 equivalent right now, and most buyers we speak to still prefer the 4-cylinder unit. That gap will close by year-end as inventory of the old generation dries up. If you're buying anyway, buy the 3rd gen this quarter.
-      </EditorsTake>
-
       <!-- 6. Model context block (human-written / editable) -->
       <section aria-labelledby="ctx-heading" class="mb-12">
         <h2 id="ctx-heading" class="text-2xl font-serif text-navy-900 mb-3">What drives the {data.model}'s resale value</h2>
         <div class="prose-content space-y-4 text-base leading-relaxed text-graphite">
           {data.context.map((para: string) => <p>{para}</p>)}
         </div>
-      </section>
-
-      <!-- 7. Common issues to check at inspection -->
-      <section aria-labelledby="issues-heading" class="mb-12">
-        <h2 id="issues-heading" class="text-2xl font-serif text-navy-900 mb-3">What to check when buying a used {data.model}</h2>
-        <ul class="space-y-3">
-          {data.commonIssues.map((issue: string) => (
-            <li class="flex items-start gap-3 text-base text-graphite leading-relaxed">
-              <span class="text-signal-500 mt-1 flex-shrink-0">▸</span>
-              <span>{issue}</span>
-            </li>
-          ))}
-        </ul>
-        {data.cngNote && (
-          <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite mt-6">
-            <strong class="text-navy-900">On CNG variants:</strong> {data.cngNote}
-          </div>
-        )}
       </section>
 
       <!-- 7b. Recent transactions (historical proof) -->
