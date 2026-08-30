@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { displayDateFor } from '../../data/blogs';
 
 const title = 'What affects used car resale value in India: 10 factors ranked by rupee impact';
 const description = 'Age and kilometres set the base price. The other eight factors decide whether the final offer lands above or below that base. All ten ranked, with the ones an owner can still change on the day of sale.';
+const publishedOn = displayDateFor('factors-affecting-used-car-resale-value');
 ---
 <BaseLayout title={title} description={description}>
   <article class="py-12 md:py-16">
@@ -16,8 +18,12 @@ const description = 'Age and kilometres set the base price. The other eight fact
           What affects used car resale value in India: 10 factors ranked by rupee impact
         </h1>
         <div class="text-sm text-slate-soft">
-          <time datetime="2026-08-31">31 August 2026</time>
-          <span class="mx-2">·</span>
+          {publishedOn && (
+            <>
+              <time datetime={publishedOn.iso}>{publishedOn.label}</time>
+              <span class="mx-2">·</span>
+            </>
+          )}
           <span>13 min read</span>
         </div>
       </div>

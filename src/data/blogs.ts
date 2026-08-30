@@ -1,30 +1,37 @@
 // Single source of truth for the /blogs listing.
 // Newest first at render (sorted by `date` desc).
-// Future-dated `publishDate` blogs are hidden until that date.
+// Rows with `queued: true` are hidden from the listing until the publish routine
+// unqueues them and stamps them with today's date.
 //
 // TO ADD A NEW BLOG:
-//   1. Create src/pages/blogs/<slug>.astro.
-//   2. Add a row below (any position; the list is sorted at render).
-//   3. Add the URL + revision date to src/data/blog-lastmod.ts (sitemap lastmod).
-//   4. Set `publishDate` to schedule the blog for a future daily slot.
-//      A daily scheduled task pushes an empty commit at 06:30 IST so Vercel
-//      rebuilds and unhides the day's slot. See ~/.claude/scheduled-tasks/trv-daily-blog-publish.
-//   5. Push. @astrojs/sitemap picks up the new page automatically.
+//   1. Create src/pages/blogs/<slug>.astro. The page reads its display date
+//      by looking up its slug in `rawArticles` — do NOT hardcode <time> strings.
+//   2. Add a row below with `queued: true` and `date: ''` (any position;
+//      the list is sorted at render).
+//   3. Push. The blog stays hidden from /blogs until the publish routine runs.
+//
+// TO PUBLISH A QUEUED BLOG:
+//   Run the `trv-blog-publish` routine from the Routines panel. It picks the
+//   first `queued: true` entry, sets its `date` to today's ISO, flips
+//   `queued: false`, adds a `blog-lastmod` entry, and pushes. Vercel rebuilds
+//   and the blog appears on /blogs with today as its publish date.
 
 export type BlogArticle = {
   slug: string;
   title: string;
   excerpt: string;
-  date: string;         // ISO YYYY-MM-DD (display date + sort order)
+  date: string;         // ISO YYYY-MM-DD. Empty string if still queued.
   readTime: string;
   category: string;
   featured?: boolean;
-  publishDate?: string; // Optional ISO YYYY-MM-DD; if set and > today, blog is hidden from listing + sitemap
+  queued?: boolean;     // If true, hidden from /blogs listing until publish routine flips it.
 };
 
 export const BLOG_PAGE_SIZE = 5;
 
-const rawArticles: BlogArticle[] = [
+// Full registry, published and queued alike. Blog pages import this to look up
+// their own display date by slug so the date is never hardcoded in the .astro.
+export const rawArticles: BlogArticle[] = [
   {
     slug: 'used-car-valuation-india',
     title: 'Used car valuation India: check your car\'s fair-price band free',
@@ -79,24 +86,68 @@ const rawArticles: BlogArticle[] = [
     slug: 'factors-affecting-used-car-resale-value',
     title: 'What affects used car resale value in India: 10 factors ranked by rupee impact',
     excerpt: 'Age and kilometres set the base price. The other eight factors decide whether the final offer lands above or below that base. All ten ranked, with the ones an owner can still change on the day of sale.',
-    date: '2026-08-31',
+    date: '',
     readTime: '13 min read',
     category: 'Valuation · Analysis',
-    publishDate: '2026-08-31',
+    queued: true,
   },
   {
     slug: 'fair-market-value-vs-asking-price-vs-dealer-offer',
     title: 'Fair market value vs asking price vs dealer offer: three prices for one car in India',
     excerpt: 'One car, three numbers, one fortnight in Pune. Why fair market value is a band, not a figure; what asking price actually reflects; how dealer offers are built; and where each rupee of the spread sits.',
-    date: '2026-09-01',
+    date: '',
     readTime: '11 min read',
     category: 'Valuation · Framework',
-    publishDate: '2026-09-01',
+    queued: true,
+  },
+  {
+    slug: 'private-vs-dealer-vs-instant-buy',
+    title: 'Private vs dealer vs instant buy in India: what each route actually pays',
+    excerpt: 'Three exit routes, three different net cheques for the same car. Ledger-level comparison of private sale, dealer trade-in and instant-buy, with paperwork timelines, NCB retention, and where the consignment option fits.',
+    date: '',
+    readTime: '12 min read',
+    category: 'Selling · Framework',
+    queued: true,
+  },
+  {
+    slug: 'online-used-car-valuation-accuracy-india',
+    title: 'How accurate are online used car valuations in India: a benchmark of 4 tools',
+    excerpt: 'Cars24, Spinny, OLX and CarWale quotes compared against the price the seller actually received. Why the three engine types behind identical forms explain most of the spread, and how to read four quotes as a range instead of averaging them.',
+    date: '',
+    readTime: '13 min read',
+    category: 'Valuation · Benchmark',
+    queued: true,
+  },
+  {
+    slug: 'kilometres-vs-age-used-car-resale',
+    title: 'Kilometres vs age in used car resale: where the two curves cross in India',
+    excerpt: 'Age discounts are fixed by the RC. Kilometre discounts can be argued down with paperwork. The 12,000 km/year line where one force takes over from the other, plus three inspection-bay profiles that show why segment matters.',
+    date: '',
+    readTime: '12 min read',
+    category: 'Valuation · Analysis',
+    queued: true,
+  },
+  {
+    slug: 'best-time-to-sell-used-car-india',
+    title: 'Best time to sell a used car in India: the month-by-month price index',
+    excerpt: 'March and October pay for completely different reasons. The June-August trough is partly an inspection problem. Full 12-month price index, segment-wise best and worst months, and why Delhi, Mumbai, Bengaluru, Chennai and Kochi peak on different calendars.',
+    date: '',
+    readTime: '13 min read',
+    category: 'Selling · Timing',
+    queued: true,
   },
 ];
 
-const todayISO = new Date().toISOString().slice(0, 10);
-
 export const allBlogs: BlogArticle[] = rawArticles
-  .filter((a) => !a.publishDate || a.publishDate <= todayISO)
+  .filter((a) => !a.queued)
   .sort((a, b) => b.date.localeCompare(a.date));
+
+// Helper for individual blog pages to render their own publish date without
+// hardcoding a <time> string.
+export function displayDateFor(slug: string): { iso: string; label: string } | null {
+  const article = rawArticles.find((a) => a.slug === slug);
+  if (!article || !article.date) return null;
+  const d = new Date(article.date + 'T00:00:00');
+  const label = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  return { iso: article.date, label };
+}

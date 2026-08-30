@@ -6,6 +6,11 @@ import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { blogLastmod } from './src/data/blog-lastmod.ts';
+import { rawArticles } from './src/data/blogs.ts';
+
+const queuedBlogPaths = new Set(
+  rawArticles.filter((a) => a.queued).map((a) => `/blogs/${a.slug}/`)
+);
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,6 +30,10 @@ export default defineConfig({
         if (page.includes('/authors/')) {
           return page.includes('/authors/vaishnav-mishra');
         }
+        // Hide queued blog URLs from the sitemap until the publish routine
+        // unqueues them.
+        const path = new URL(page).pathname;
+        if (queuedBlogPaths.has(path)) return false;
         return true;
       },
       // Per-page lastmod: blogs carry their real revision date from the

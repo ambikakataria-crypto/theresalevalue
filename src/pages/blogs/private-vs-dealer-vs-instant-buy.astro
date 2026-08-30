@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { displayDateFor } from '../../data/blogs';
+
+const title = 'Private vs dealer vs instant buy in India: what each route actually pays';
+const description = 'Three exit routes, three different net cheques for the same car. Ledger-level comparison of private sale, dealer trade-in and instant-buy, with paperwork timelines, NCB retention, and where the consignment option fits.';
+const publishedOn = displayDateFor('private-vs-dealer-vs-instant-buy');
+---
+<BaseLayout title={title} description={description}>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="mb-8">
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/blogs">← All blogs</a>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">Selling · Framework</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+          Private vs dealer vs instant buy in India: what each route actually pays
+        </h1>
+        <div class="text-sm text-slate-soft">
+          {publishedOn && (
+            <>
+              <time datetime={publishedOn.iso}>{publishedOn.label}</time>
+              <span class="mx-2">·</span>
+            </>
+          )}
+          <span>12 min read</span>
+        </div>
+      </div>
+
+      <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
+
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
+          <strong class="text-navy-900">Framework, not a valuation quote.</strong> The rupee ranges below describe observed spreads across TheResaleValue transaction data. Actual figures vary by model, city, condition and current market demand. Use the ledger structure to read your own three quotes, not as a benchmark.
+        </div>
+
+        <p class="text-xl leading-relaxed">
+          A 2020 Maruti Baleno Zeta petrol, single owner, around 42,000 km, RC registered in Pune. The seller pulled three quotes in the same week. A private buyer through an OLX listing offered a headline number that looked strongest. A local Maruti True Value dealer offered the lowest headline. An instant-buy platform sat in the middle. When each offer was walked all the way through to the amount that actually reached the seller's bank account, the ranking flipped twice.
+        </p>
+
+        <p>The gap between the highest headline and the lowest headline was about 12%. The gap between the highest net cheque and the lowest net cheque was closer to 5%. Most of the difference came from things the quote never mentioned: how many weekends the seller spent showing the car, whether the No Claim Bonus travelled with the seller or died on the RC, and how long a hypothecation entry took to disappear from the VAHAN record after the loan was paid off.</p>
+
+        <p>This page compares the three routes on the number that actually reaches the seller, not the number written on the top of the offer sheet.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The three routes, defined by who takes the risk and who owns the wait</h2>
+
+        <p>Every used-car sale in India resolves to one of three routes. They differ on more than price. Each moves a different piece of risk and a different amount of time onto a different party.</p>
+
+        <p><strong class="text-navy-900">Private sale.</strong> The car is listed on a classifieds platform or shown through personal networks and sold directly to another individual. The seller carries the wait, the negotiation, the test drives, and the paperwork. The buyer carries the inspection risk, because there is no organised inspection layer in between.</p>
+
+        <p><strong class="text-navy-900">Dealer trade-in.</strong> A new-car or used-car dealer buys the vehicle, usually as part of a sale of another car. The dealer carries the wait and the resale risk. The seller carries the discount, because the dealer prices in refurbishment, warranty, inventory time and margin.</p>
+
+        <p><strong class="text-navy-900">Instant-buy platform.</strong> A platform such as Cars24, Spinny, CarDekho or an OEM-backed used-car channel sends an inspector, quotes a firm number after inspection, and completes payment and RC transfer on a defined timeline. The seller trades a headline discount for speed and paperwork certainty.</p>
+
+        <p>A fourth option, consignment, sits between private and dealer. The dealer displays the car on their yard without buying it, sells to the eventual buyer, and pays the original seller the transacted price minus a fixed commission. Availability is uneven across cities and segments. Where it exists, it usually beats the dealer trade-in on price and beats the private sale on time, but the seller still carries any weeks the car sits on the yard.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The ledger: what the seller actually receives on each route</h2>
+
+        <p>An offer figure is not the same as an amount received. Between the two sit inspection revisions, insurance transfer, NCB (No Claim Bonus) treatment, RC transfer at the RTO, and, if the car was financed, the closure of the hypothecation entry. Each of those has a rupee value that is usually invisible to the seller before the sale begins.</p>
+
+        <p>The ledger below applies the same logic to each route. Read the last row, not the first.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Ledger line</th>
+                <th class="py-2 pr-3">Private sale</th>
+                <th class="py-2 pr-3">Dealer trade-in</th>
+                <th class="py-2">Instant-buy platform</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Headline offer vs fair-market band</td><td class="py-2 pr-3">Top of the band</td><td class="py-2 pr-3">Bottom of the band</td><td class="py-2">Middle of the band</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Post-inspection revision</td><td class="py-2 pr-3">Buyer-led, verbal</td><td class="py-2 pr-3">Documented, small</td><td class="py-2">Documented, occasional</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">NCB retention (own next car)</td><td class="py-2 pr-3">Seller must apply within window</td><td class="py-2 pr-3">Same</td><td class="py-2">Same</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">RC transfer responsibility</td><td class="py-2 pr-3">Seller ensures buyer files Form 29 and 30</td><td class="py-2 pr-3">Dealer files</td><td class="py-2">Platform files</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Payment timing</td><td class="py-2 pr-3">Variable; often part cash, part transfer</td><td class="py-2 pr-3">On delivery of new car</td><td class="py-2">Same day or next day</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Time cost to seller</td><td class="py-2 pr-3">Weeks of listing + showings</td><td class="py-2 pr-3">A day at the showroom</td><td class="py-2">A single inspection visit</td></tr>
+              <tr><td class="py-2 pr-3">Net cheque as % of fair-market</td><td class="py-2 pr-3">92–100% (if paperwork clean)</td><td class="py-2 pr-3">80–88%</td><td class="py-2">85–92%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Two lines matter more than the rest. The RC transfer line, because an unfiled transfer leaves the seller liable for challans and, in a worst case, criminal notices tied to the vehicle. And the net-cheque line, because it strips out everything that never touches the seller's account and leaves the actual money.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Private sale: highest headline, longest wait, thinnest safety net</h2>
+
+        <p>Private sale usually shows the highest number on paper because the buyer is the end user. There is no refurbishment margin between them and the seller. On a clean, high-demand car in a metro, the private-sale price can land within 2% of the fair-market top end. Detail on how those bands are built sits in <a href="/blogs/fair-market-value-vs-asking-price-vs-dealer-offer">fair market value vs asking price vs dealer offer</a>.</p>
+
+        <p>The trade-off is time and administration. The seller writes the listing, answers messages, blocks weekend slots for test drives, and manages the negotiation. On the payment side, the seller has to insist on a full bank transfer or demand draft before the vehicle changes hands. Splitting the payment across delivery days is where private sales go wrong.</p>
+
+        <p>On paperwork, the seller must confirm that the buyer files Form 29 (intimation of transfer) and Form 30 (application for transfer) at the RTO where the vehicle is registered. Until the buyer's name reflects on the VAHAN record, the car is still the seller's on paper. This is where a stamped acknowledgement of Form 29 submission becomes non-negotiable at handover.</p>
+
+        <p>Insurance moves separately. The seller applies for an NCB retention certificate from the existing insurer if they intend to carry the accumulated discount to the next car. That has a stated validity window, and the retention has to be applied to the new policy inside it.</p>
+
+        <p>Private works best when the car is clean, common, sub-five-years old, and priced against a live valuation rather than an asking-price average. It works badly when the paperwork is complicated, the buyer pool is thin (unusual variant, restricted-city diesel), or the seller cannot spare three to six weeks of active management.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Dealer trade-in: lowest headline, cleanest exit, priced into a new-car deal</h2>
+
+        <p>Dealer trade-in is the route that most obviously shows the seller a smaller headline number. The reason is not that the dealer is undervaluing the car. The dealer has to reconditione the vehicle, hold it as inventory for weeks, provide a warranty of some form, and generate margin on the eventual resale. All four costs come out of the seller's number.</p>
+
+        <p>The offset is that the trade-in usually funds the down payment on a new car in the same transaction. That has three practical effects. First, negotiation moves onto the new-car side of the ledger, where the dealer has more room. Second, RC transfer, insurance handover and paperwork are all handled by the dealer's back office. Third, the seller walks away with a single settled amount, not a running list of open items.</p>
+
+        <p>The route works well when the seller is buying a new car anyway, when the vehicle has features (colour, variant, condition) that the dealer's own retail floor can absorb, and when the seller values a clean exit above the last few percent of price. It works badly when the vehicle is either too old or too specialised for the dealer's usual inventory, at which point the offer drops further because the dealer will have to sell it to a wholesale channel.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Instant-buy: middle headline, fastest cheque, priced for certainty</h2>
+
+        <p>An instant-buy quote sits between the two on price and above both on speed. The platform sends an inspector, runs a standardised checklist across body, mechanicals, interior and paperwork, and issues a firm quote at the end of the visit. Payment lands within 24 to 72 hours of acceptance. RC transfer is initiated by the platform.</p>
+
+        <p>Two features distinguish this route. The first is documented inspection. The seller receives a written record of what was checked and what was found, which changes the negotiation from a conversation about the seller's opinion of condition into a conversation about specific line items. The second is post-sale liability transfer. The platform takes ownership of the RC transfer process rather than leaving it to the buyer.</p>
+
+        <p>Trade-offs. The quote is anchored to what the platform can resell the car for after refurbishment, so the middle position is structural, not adjustable. Rare variants, older cars beyond a certain kilometre threshold, and cars with structural repair history often receive lower offers than the fair-market midpoint because the platform's retail pipeline cannot absorb them at full price. The counterpoint, and it is a real one, is that thin-market cars are exactly the ones where a private sale runs longest.</p>
+
+        <p>How to read the number against other quotes is covered in <a href="/blogs/how-to-check-used-car-value">how to check used car value in India</a> and <a href="/blogs/factors-affecting-used-car-resale-value">what affects used car resale value in India</a>. The <a href="/valuation">TheResaleValue calculator</a> gives a neutral fair-market band to sit alongside a platform quote.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The paperwork that decides which route is cheapest in the end</h2>
+
+        <p>The three routes disagree less on headline offers than they do on paperwork risk. On a private sale, the seller absorbs paperwork risk. On dealer and instant-buy routes, the platform or dealer absorbs it. That transfer of risk has a rupee value even when it never appears on the offer sheet.</p>
+
+        <p><strong class="text-navy-900">Form 29 and Form 30.</strong> The two documents that move ownership at the RTO. Form 29 is the intimation of transfer, filed with the RC's issuing RTO within a defined window of sale. Form 30 is the application by both parties for the transfer to be recorded. Both are downloadable from parivahan.gov.in and can also be filed online in most states.</p>
+
+        <p><strong class="text-navy-900">Hypothecation.</strong> If the car was financed, the loan closure NOC from the lender must be filed with the RTO to remove the hypothecation entry from the RC. A car with an open hypothecation entry cannot be transferred, and the entry does not clear automatically when the loan is paid off. The full sequence is walked through in <a href="/blogs/car-loan-vs-resale-value">car loan vs resale value</a>.</p>
+
+        <p><strong class="text-navy-900">Insurance transfer.</strong> The comprehensive policy transfers to the buyer for the remaining policy term, but the NCB stays with the original policyholder if a retention certificate is obtained. If retention is not applied for in time, the accumulated NCB is lost.</p>
+
+        <p><strong class="text-navy-900">Pending challans.</strong> Traffic and other e-challans against the vehicle must be cleared before RC transfer will be processed. Pulling the challan status on the state e-challan portal before listing is a five-minute check that avoids weeks of stalled transfer.</p>
+
+        <p>Cars with restricted-city registration or nearing an emission-norm threshold have their own route logic. Those are covered in <a href="/blogs/factors-affecting-used-car-resale-value">the ten factors that affect used car resale value</a>.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Consignment: the option that sits between private and dealer</h2>
+
+        <p>Some dealers offer a consignment arrangement, where the car sits on the dealer's floor without a purchase transaction. The dealer handles buyer traffic, negotiation, inspection and paperwork, and pays the seller the sale price minus a fixed commission (typically 3% to 6%) once the vehicle is sold.</p>
+
+        <p>Where available, consignment usually beats the dealer trade-in on price by 4% to 8% because the dealer is not absorbing inventory risk, and beats the private sale on time because the dealer's foot traffic is denser than a classifieds listing. The seller still carries the risk of unsold weeks, and any storage or display charges after a defined period.</p>
+
+        <p>Availability is uneven. Consignment is most common in metros, on mainstream models between two and six years old, and at established multi-brand dealerships. It is rare on entry hatchbacks (margins too thin), luxury vehicles (dealers prefer to purchase outright) and cars with any structural repair history.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Which route to choose: a decision framework, not a ranking</h2>
+
+        <p>Ranking the three routes on headline price alone gets the answer wrong for most sellers. Ranking them on net cheque received changes the ordering for cars where paperwork is complicated. Ranking them on time cost changes the ordering again for sellers whose weekends have a real opportunity cost.</p>
+
+        <p>The three questions that decide the route:</p>
+
+        <p><strong class="text-navy-900">How liquid is the car?</strong> A common variant of a common model in a metro is liquid. A rare colour on an out-of-production trim in a Tier-2 city is not. Liquid cars reward private sale. Illiquid cars reward instant-buy.</p>
+
+        <p><strong class="text-navy-900">Is the seller buying another car in the same transaction?</strong> If yes, dealer trade-in enters the conversation, because the negotiation shifts onto the new-car side of the ledger. If no, dealer trade-in usually finishes third on price.</p>
+
+        <p><strong class="text-navy-900">How clean is the paperwork?</strong> Clean RC, no hypothecation, no pending challans, in-state registration: private sale is viable. Any complication, and the routes that absorb paperwork risk (instant-buy, dealer) start closing the gap.</p>
+
+        <p>For most sellers, the honest answer is to pull one quote from each route on the same day and read them as a labelled set, not as competing headline figures. Adjust for net cheque, paperwork risk and time cost, then decide.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">FAQs</h2>
+
+        <div class="space-y-4">
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Which sells a car for the most money in India: private, dealer or instant-buy?</h3>
+            <p>On headline price, private sale usually leads, followed by instant-buy, with dealer trade-in typically lowest. On net cheque received after paperwork, insurance and time cost, the gap narrows to 5% to 8% and can flip on cars with complicated paperwork or thin buyer pools.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">How much less does a dealer offer compared to private sale?</h3>
+            <p>Typically 8% to 15% below a comparable private-sale price, before adjusting for paperwork risk and time. On mainstream cars in metros the gap is narrower. On cars the dealer cannot resell easily on their own floor, the gap widens.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Is Cars24 or Spinny better for selling a car?</h3>
+            <p>Both operate as instant-buy platforms with similar inspection protocols and payment timelines. Quotes vary car by car depending on each platform's current inventory needs. Pulling both quotes and comparing is the only reliable way to know which pays more for a specific vehicle.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Do I need to transfer the RC myself in a private sale?</h3>
+            <p>The buyer files Form 29 and Form 30 at the RTO, but the seller must confirm the filing has happened and retain a stamped acknowledgement. Until the buyer's name reflects on the VAHAN record, the car remains registered to the seller and any challans issued against the vehicle come to the seller.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Does an instant-buy platform pay the offered amount, or does it renegotiate at inspection?</h3>
+            <p>The initial online estimate is indicative. The firm quote is issued after physical inspection and can differ from the estimate, typically downward for cars where inspection surfaces items the seller did not declare (unendorsed retrofits, service gaps, cosmetic damage). Some platforms allow the seller to decline the revised quote without cost.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">What happens to my NCB when I sell the car?</h3>
+            <p>The No Claim Bonus stays with the policyholder, not the vehicle. To carry it to the next car, the seller applies for a retention certificate from the existing insurer, usually within a stated window after selling. The retention is then applied to the new vehicle's own-damage premium.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Should I clear my car loan before selling?</h3>
+            <p>Yes, because the hypothecation entry on the RC has to be removed before the vehicle can be transferred. Loan closure NOC from the lender is filed with the RTO to clear the entry. If the sale proceeds are needed to close the loan, the transaction can be structured through the buyer's bank, but it adds days to the timeline. See <a href="/blogs/car-loan-vs-resale-value">car loan vs resale value</a>.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Is selling to a friend or family member simpler than selling to a stranger?</h3>
+            <p>On paperwork, no. The same Form 29 and Form 30 filings are required, and the same RC transfer discipline applies. Skipping the formal transfer because the buyer is known leaves the seller liable for challans, and, on older cars in restricted cities, for regulatory notices. Formalise the paperwork regardless of relationship.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">How long does an instant-buy sale take from inspection to payment?</h3>
+            <p>Most instant-buy platforms complete the cycle within one to three working days from acceptance of the firm quote. Payment is transferred once the RC transfer initiation is filed. Cars with hypothecation, pending challans or out-of-state registration usually take longer as those items are cleared before the payment step.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Can I list my car on multiple instant-buy platforms and pick the best offer?</h3>
+            <p>Yes, and doing so is the practical way to see the platform-to-platform spread on a specific vehicle. Quotes are typically valid for a stated window, so pulling them within the same few days keeps the comparison fair.</p>
+          </div>
+        </div>
+
+        <hr class="my-12 border-cream-200" />
+
+        <p class="text-lg">The three routes are answering three different questions, so ranking them by headline price alone gives a partial answer. Before choosing, calculate the net cheque expected on each, add in the paperwork risk absorbed and the time cost avoided, and decide against the amount that actually reaches the seller's account. The <a href="/valuation">TheResaleValue calculator</a> gives a neutral fair-market band to anchor the three quotes against.</p>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>

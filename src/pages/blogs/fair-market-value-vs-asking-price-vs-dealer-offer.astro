@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { displayDateFor } from '../../data/blogs';
 
 const title = 'Fair market value vs asking price vs dealer offer: three prices for one car in India';
 const description = 'One car, three numbers, one fortnight in Pune. Why fair market value is a band, not a figure; what asking price actually reflects; how dealer offers are built; and where each rupee of the spread sits.';
+const publishedOn = displayDateFor('fair-market-value-vs-asking-price-vs-dealer-offer');
 ---
 <BaseLayout title={title} description={description}>
   <article class="py-12 md:py-16">
@@ -16,8 +18,12 @@ const description = 'One car, three numbers, one fortnight in Pune. Why fair mar
           Fair market value vs asking price vs dealer offer: three prices for one car in India
         </h1>
         <div class="text-sm text-slate-soft">
-          <time datetime="2026-09-01">1 September 2026</time>
-          <span class="mx-2">·</span>
+          {publishedOn && (
+            <>
+              <time datetime={publishedOn.iso}>{publishedOn.label}</time>
+              <span class="mx-2">·</span>
+            </>
+          )}
           <span>11 min read</span>
         </div>
       </div>

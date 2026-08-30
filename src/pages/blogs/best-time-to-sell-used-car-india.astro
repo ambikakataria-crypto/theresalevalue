@@ -1,0 +1,329 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { displayDateFor } from '../../data/blogs';
+
+const title = 'Best time to sell a used car in India: the month-by-month price index';
+const description = 'March and October pay for completely different reasons. The June-August trough is partly an inspection problem. Full 12-month price index, segment-wise best and worst months, and why Delhi, Mumbai, Bengaluru, Chennai and Kochi peak on different calendars.';
+const publishedOn = displayDateFor('best-time-to-sell-used-car-india');
+---
+<BaseLayout title={title} description={description}>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="mb-8">
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/blogs">← All blogs</a>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">Selling · Timing</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+          Best time to sell a used car in India: the month-by-month price index
+        </h1>
+        <div class="text-sm text-slate-soft">
+          {publishedOn && (
+            <>
+              <time datetime={publishedOn.iso}>{publishedOn.label}</time>
+              <span class="mx-2">·</span>
+            </>
+          )}
+          <span>13 min read</span>
+        </div>
+      </div>
+
+      <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
+
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
+          <strong class="text-navy-900">Framework, not a valuation quote.</strong> The index values and month-by-month behaviours below describe observed patterns across TheResaleValue transaction data. Actual monthly variance depends on model, city, condition and current market conditions. Use the framework as a timing lens, not as a guaranteed premium.
+        </div>
+
+        <p class="text-xl leading-relaxed">
+          Used-car offers in India tend to run highest in the six weeks before 31 March, then again across the Navratri-to-Dhanteras stretch in October and November. The floor sits between mid-June and late August. What is easy to miss is that the two peaks share almost no mechanics: March runs on dealer inventory books and business-buyer purchase timing before the financial year closes, October on festive retail demand from individual buyers. Both windows are short. Neither is a "season".
+        </p>
+
+        <p>The part most sellers get wrong is the size of the prize. The gap between the best month and the worst month is real but modest, and once depreciation, insurance and any EMI on a waiting car are subtracted, a long wait for the peak often ends in a net loss. Timing is a tiebreaker, not a strategy.</p>
+
+        <p>Before applying any of this to a specific car, run the registration number and kilometres through the <a href="/valuation">free used car valuation calculator</a> so the seasonal adjustment sits on top of a real base number rather than a guess.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Key findings</h2>
+
+        <p>The peak-to-trough spread across the calendar year sits at roughly 6 to 7 index points, meaning a ₹6,00,000 car swings by about ₹36,000 to ₹42,000 on timing alone.</p>
+
+        <p>Two windows totalling roughly eleven weeks hold a majority of the annual price variance: mid-February to 31 March, and Navratri to Dhanteras.</p>
+
+        <p>The remaining forty weeks of the year sit inside a band of about 3 index points, which is often narrower than one round of negotiation.</p>
+
+        <p>Wait eight months for the March peak and the car typically loses more to depreciation than the peak pays, at prevailing depreciation rates of roughly 1% to 1.5% per month in years three to six.</p>
+
+        <p>Chennai inverts the national pattern: its weakest stretch runs October to December during the north-east monsoon, exactly when the rest of India peaks.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">When to sell in India: the peak is a six-week window, not a season</h2>
+
+        <p>Price movement across the Indian used-car year is concentrated, not evenly spread. Most of the annual variance sits in about ten to twelve weeks. For the rest of the year, month-to-month movement is small enough that condition, service history and the buyer's mood matter more than the date on the calendar.</p>
+
+        <p>That distinction matters because "festive season" gets used loosely. Offers do not lift for the whole of September through December. They lift for a date-locked stretch of about four weeks and then fall away.</p>
+
+        <p>One definition has to be nailed down before any index means anything. The series used here is the dealer buying offer, the number a buying desk or organised platform commits to after inspection, not the asking price on a listing site and not the transacted private-sale price. All three move on different schedules, and the difference between them is often larger than the seasonal swing itself. That relationship is covered separately in <a href="/blogs/fair-market-value-vs-asking-price-vs-dealer-offer">fair market value vs asking price vs dealer offer</a>.</p>
+
+        <p>Scale sets the practical answer. A 6% swing on a ₹6 lakh Hyundai Creta is ₹36,000, which justifies planning. That same 6% on a ₹2.4 lakh 2014 Maruti Suzuki Wagon R comes to about ₹14,000, and a seller can lose that in one soft negotiation round regardless of the month.</p>
+
+        <p>Timing also cannot repair anything structural. An odometer past 1,20,000 km, a repaired accident with a replaced pillar, a two-year service gap, or a registration approaching its 15-year mark will price the car below the segment median in March exactly as it will in July. Those sit in <a href="/blogs/factors-affecting-used-car-resale-value">the 10 factors that decide used car resale value</a>, and none of them are seasonal.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Why March is the peak: fiscal-year-end mechanics</h2>
+
+        <p>March is the stronger of the two peaks for most segments because three separate pressures land in the same fortnight: dealer inventory books closing on 31 March, business buyers timing purchases to the financial year, and manufacturer exchange bonuses clearing calendar-year stock. All three raise the number a buying desk will commit to. None of them involve a single individual buyer wanting a car for a festival.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Dealer inventory books close on 31 March</h3>
+
+        <p>Used-car dealers and organised platforms run to the Indian financial year, April to March. Stock physically sitting on the yard on 31 March is stock carried on the books into the new year. Stock sold before that date is not.</p>
+
+        <p>So a short period opens where buying desks are doing two things at once: discounting older inventory to move it out, and restocking to open the new year against fresh targets. A seller walking in during that fortnight is talking to a desk with a live incentive to say yes. Offers come back faster, and the gap between the first quote and the final number tends to narrow.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Business buyers timing purchases before 31 March</h3>
+
+        <p>Businesses, professionals and small fleets buy vehicles near year-end for accounting reasons. A car bought and put to use before 31 March allows depreciation to be claimed against that financial year rather than the next one, which pulls purchase decisions forward into February and March.</p>
+
+        <p>The rule that shapes exactly when in the year they buy is the 180-day test. Under the Income Tax Act, if an asset is put to use for fewer than 180 days in the financial year, only half the normal depreciation rate is allowed for that year. Buying in September or earlier gets the full rate; buying in March gets half. A half-year claim still beats no claim, which is why the March window stays busy even though the rate is reduced. Specific rates and enhanced-rate provisions applicable to motor cars in a given year should be confirmed against the current Income Tax Act position before a purchase decision.</p>
+
+        <p>This demand is not spread evenly. It concentrates in commercial-friendly hatchbacks, diesel MPVs and entry SUVs. A Maruti Suzuki Ertiga diesel, a Toyota Innova Crysta or a Mahindra Bolero sees a sharper March lift than a two-door-mentality premium hatchback.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Exchange offers pull trade-ins into March</h3>
+
+        <p>Manufacturers and dealerships push year-end discounts and exchange bonuses through March to clear stock carrying the previous calendar year's build. For a seller, that creates a second bidder. An exchange quote from a new-car dealership, even one the seller has no intention of accepting, is a usable negotiating instrument against an independent buying desk.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">The March deadline that catches sellers out: paperwork, not price</h3>
+
+        <p>The premium only exists if the transaction actually closes. Money received on 29 March with the ownership transfer filed sometime in April is fine for the seller's bank balance and bad for the seller's liability position, because the car still sits against their name on the VAHAN record until the transfer is processed.</p>
+
+        <p>Transfer of ownership is applied for using Form 29 (notice of transfer, signed by the seller) and Form 30 (application for intimation and transfer, signed by both parties), submitted to the RTO where the vehicle is registered, along with the original RC, insurance, PUC and a valid address proof. The seller retains the stamped acknowledgement. The transfer is complete when the buyer's name reflects on the Parivahan/VAHAN record, not when the cash lands. Current form numbers, fee structure and intimation timelines should be confirmed on parivahan.gov.in before filing.</p>
+
+        <p>That changes the timeline. Late March is the busiest counter period of the year at most RTOs.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Car prices during festive season: what Navratri to Dhanteras does to offers</h2>
+
+        <p>The festive peak works on the opposite side of the market from March. It is a retail demand event, so the extra money comes from individual end-buyers rather than dealer buying desks. That matters for the seller's route choice: individual buyers typically pay closer to fair market value than an instant-buy desk does, because the desk has to price in reconditioning, warranty and its own margin. The trade-offs between those channels are set out in <a href="/blogs/private-vs-dealer-vs-instant-buy">private sale vs dealer vs instant-buy routes</a>.</p>
+
+        <p>Demand in this window is date-locked, and that is where the pricing power sits. Buyers want possession on a specific auspicious date: Dussehra, Dhanteras, or the day before Diwali. A seller who can hand over keys, RC, insurance papers and a signed Form 29 on the required date is negotiating from a stronger position than a seller who needs another fortnight to sort a duplicate RC or clear a pending challan.</p>
+
+        <p>There is a second driver most sellers never spot. When a new-car model carries a multi-month waiting period, buyers who need the car for a festive date pivot to a low-kilometre used example of the same model or an adjacent one. A buyer holding a booking slip for a new mid-size SUV with a four-month delivery estimate becomes a serious bidder for a two-year-old example of that exact model in October.</p>
+
+        <p>The drop after the window is faster than the climb into it. Sellers who list in early October, receive a strong offer, hold out for something better, and then find the market thinned by the second week of November are a recurring pattern.</p>
+
+        <p>Regional caveat: this national pattern does not hold in Kerala, Bengal or Chennai, where Onam, Durga Puja and the north-east monsoon sit on different dates. Those are covered in the city section below.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Worst months to sell: June to August is a monsoon inspection problem, not just low demand</h2>
+
+        <p>The demand explanation is the easy half. School admissions and relocations cluster before June, discretionary spending gets deferred once the rains set in, and buyers are reluctant to do test drives, bank visits and RTO runs in heavy weather. Fewer buyers means fewer competing bids.</p>
+
+        <p>The half nobody explains is mechanical. The same car inspected in August fails more inspection points than it does in November, and inspection findings feed straight into the offer sheet. Water does not have to have entered the cabin for the checks to flag.</p>
+
+        <p>The specific checks that flag disproportionately in July and August: damp in the spare wheel well, water-line staining on the boot floor and under the rear seat base, silt in the door drain holes, corrosion on the seat rail bolts, musty odour traced to a wet HVAC evaporator, condensation inside headlamp housings, rust at the sunroof drain outlets, corroded connector pins on underfloor wiring looms, and surface rust on brake discs after a car has stood a week.</p>
+
+        <p>A genuine flood-history car is distinguished from a merely damp one by a different set of indicators: silt above the seat rail line, ECU and airbag module corrosion, tide marks on the seatbelt webbing when pulled fully out. The two carry very different penalties and buyers routinely conflate them.</p>
+
+        <p>The consequence is asymmetric. A car with no water history can still be marked down in July, because proving the absence of history is harder in a wet month than a dry one. The countermeasure is documentation dated before the rains: a third-party inspection report from April or May, dated service records, and photographs of the boot floor and spare wheel well with the trim lifted.</p>
+
+        <p>City severity varies. Buyers in Mumbai, Chennai and parts of Kerala apply a steeper flood discount and ask harder questions about claim history than buyers in Jaipur or Indore. Some of it is verifiable by the buyer: an own-damage claim reduces or resets the No Claim Bonus, so a renewal notice showing 0% NCB on a car whose policy has run several years without a break is a signal worth asking about. What a buyer cannot do is pull another person's claim file directly. The practical check is the previous year's policy document, the renewal quote showing the NCB slab, and the insurer's confirmation to the policyholder.</p>
+
+        <p>One genuine exception runs the other way. Sellers of high-ground-clearance SUVs and 4x4s in flood-prone metros sometimes see firmer monsoon interest, because the buyer's motivation is the weather itself.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Should you wait to sell? The holding-cost test</h2>
+
+        <p>A car does not stand still while it waits for a better month. Every month of holding adds depreciation, another month of insurance cover, any parking or society charge, any service that falls due, and, if the car is financed, another EMI paid against an asset that is losing value faster than the loan is shrinking.</p>
+
+        <p>The test is arithmetic, not judgement:</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Line</th>
+                <th class="py-2">What it is</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Expected seasonal gain</td><td class="py-2">Current value × peak premium in index points</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Less depreciation over the wait</td><td class="py-2">Current value × monthly depreciation rate × months waited</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Less holding costs</td><td class="py-2">Insurance pro-rata + parking + any scheduled service falling due</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Less interest cost</td><td class="py-2">Interest portion of EMIs paid during the wait</td></tr>
+              <tr><td class="py-2 pr-3">= Net</td><td class="py-2">Positive means wait. Negative means sell now.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Most of these calculations turn on the monthly depreciation rate, and that rate is not flat across a car's life. The curve by year is in <a href="/blogs/new-car-depreciation-india">how fast a car depreciates each year in India</a>.</p>
+
+        <p><strong class="text-navy-900">Worked example 1, long wait, negative outcome.</strong> A 2018 Maruti Suzuki Swift VXi petrol, around 62,000 km, Chennai. Current value in July, roughly ₹3,80,000. The seller considers holding eight months to the March peak. Seasonal gain at a 6-point spread: about ₹23,000. Depreciation over eight months at 1.2% a month: about ₹35,000. Insurance and parking for eight months: about ₹12,000. The car also crosses a whole-year age band during the wait. Net position: negative by roughly ₹24,000 before counting a single service bill.</p>
+
+        <p><strong class="text-navy-900">Worked example 2, short wait, positive outcome.</strong> A 2022 Kia Seltos HTX, around 29,000 km, Gurugram. Current value in late August, roughly ₹13,50,000. The seller considers holding six weeks to the Dhanteras window. Seasonal gain at a 3-point lift from the August base: about ₹40,000. Depreciation over six weeks at 1.1% a month: about ₹22,000. Insurance and parking: about ₹2,500. No loan outstanding. Net position: positive by roughly ₹15,000, plus a wider pool of individual buyers competing.</p>
+
+        <p>The rule that falls out of the arithmetic: waiting pays when the wait is under about two months and the car sits in a higher-value segment; waiting loses when the wait runs beyond a quarter, when the car crosses an age or kilometre band during the wait, or when a registration or scrappage deadline sits inside the waiting period.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Monthly used car price index for India: the 12-month view</h2>
+
+        <p>The index below is built on dealer buying offers, indexed so that the annual average equals 100. A reading of 103 means offers that month run about 3% above the year's average for the same car in the same condition.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Month</th>
+                <th class="py-2 pr-3">Index</th>
+                <th class="py-2 pr-3">Buyer demand</th>
+                <th class="py-2 pr-3">Dealer buying appetite</th>
+                <th class="py-2 pr-3">Typical days to sale</th>
+                <th class="py-2">What drives it</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">January</td><td class="py-2 pr-3">97</td><td class="py-2 pr-3">Low</td><td class="py-2 pr-3">Moderate</td><td class="py-2 pr-3">26 to 32</td><td class="py-2">Post-festive spending fatigue; model-year rollover ages every car on paper</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">February</td><td class="py-2 pr-3">100</td><td class="py-2 pr-3">Moderate</td><td class="py-2 pr-3">High</td><td class="py-2 pr-3">22 to 28</td><td class="py-2">Buying desks begin restocking ahead of year-end clearance</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">March</td><td class="py-2 pr-3">103</td><td class="py-2 pr-3">Moderate</td><td class="py-2 pr-3">Very high</td><td class="py-2 pr-3">16 to 21</td><td class="py-2">Financial-year close, business-buyer purchases, exchange bonuses</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">April</td><td class="py-2 pr-3">100</td><td class="py-2 pr-3">Moderate</td><td class="py-2 pr-3">Low</td><td class="py-2 pr-3">24 to 30</td><td class="py-2">New fiscal year begins; desks reset targets and buy cautiously</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">May</td><td class="py-2 pr-3">99</td><td class="py-2 pr-3">Moderate</td><td class="py-2 pr-3">Moderate</td><td class="py-2 pr-3">24 to 30</td><td class="py-2">Pre-monsoon window; relocation buying begins</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">June</td><td class="py-2 pr-3">97</td><td class="py-2 pr-3">Low</td><td class="py-2 pr-3">Moderate</td><td class="py-2 pr-3">26 to 33</td><td class="py-2">Monsoon onset in the west and south; school-year spending competes</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">July</td><td class="py-2 pr-3">96</td><td class="py-2 pr-3">Low</td><td class="py-2 pr-3">Low</td><td class="py-2 pr-3">28 to 35</td><td class="py-2">Peak monsoon; inspection findings rise; test drives deferred</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">August</td><td class="py-2 pr-3">96</td><td class="py-2 pr-3">Low</td><td class="py-2 pr-3">Low</td><td class="py-2 pr-3">28 to 35</td><td class="py-2">Same, with Onam demand offsetting only in Kerala</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">September</td><td class="py-2 pr-3">100</td><td class="py-2 pr-3">Rising</td><td class="py-2 pr-3">High</td><td class="py-2 pr-3">20 to 26</td><td class="py-2">Navratri begins; desks stock up for the festive retail push</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">October</td><td class="py-2 pr-3">102</td><td class="py-2 pr-3">Very high</td><td class="py-2 pr-3">High</td><td class="py-2 pr-3">15 to 20</td><td class="py-2">Dussehra and Dhanteras delivery dates; date-locked buyer demand</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">November</td><td class="py-2 pr-3">101</td><td class="py-2 pr-3">High then falling</td><td class="py-2 pr-3">Moderate</td><td class="py-2 pr-3">18 to 26</td><td class="py-2">Diwali tail, then a sharp thinning after the window closes</td></tr>
+              <tr><td class="py-2 pr-3">December</td><td class="py-2 pr-3">99</td><td class="py-2 pr-3">Moderate</td><td class="py-2 pr-3">Moderate</td><td class="py-2 pr-3">22 to 28</td><td class="py-2">Year-end discounts on new cars pull trade-ins in; buyers wait for January registration</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Best and worst months by segment</h3>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Segment</th>
+                <th class="py-2 pr-3">Best month</th>
+                <th class="py-2 pr-3">Weakest month</th>
+                <th class="py-2">Peak-to-trough spread</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Entry hatchback (Alto, S-Presso)</td><td class="py-2 pr-3">March</td><td class="py-2 pr-3">July</td><td class="py-2">Narrowest</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Premium hatchback (Baleno, i20, Altroz)</td><td class="py-2 pr-3">October</td><td class="py-2 pr-3">July</td><td class="py-2">Moderate</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Compact sedan (Dzire, Amaze)</td><td class="py-2 pr-3">March</td><td class="py-2 pr-3">August</td><td class="py-2">Moderate</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Compact SUV (Nexon, Venue, Sonet)</td><td class="py-2 pr-3">October</td><td class="py-2 pr-3">July</td><td class="py-2">Moderate</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Mid-size SUV (Creta, Seltos, Grand Vitara)</td><td class="py-2 pr-3">October</td><td class="py-2 pr-3">June</td><td class="py-2">Widest</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">MPV (Ertiga, Innova Crysta)</td><td class="py-2 pr-3">March</td><td class="py-2 pr-3">August</td><td class="py-2">Wide</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Diesel (any segment)</td><td class="py-2 pr-3">March</td><td class="py-2 pr-3">July</td><td class="py-2">Segment-dependent</td></tr>
+              <tr><td class="py-2 pr-3">CNG</td><td class="py-2 pr-3" colspan="3">Tracks fuel prices, not the calendar</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Three divergences are worth calling out. CNG-fitted cars respond more to CNG price movement and city refuelling infrastructure than to any month; a price revision moves those valuations more than Diwali does. Diesel demand in NCR is deadline-driven rather than seasonal, because the registration clock overrides everything else. Entry hatchbacks show the narrowest spread of any segment, because that buyer is budget-constrained rather than discretionary and buys when the money is available, not when the calendar suits.</p>
+
+        <p>Applying an index by hand tends to compound error. Run the specific car through the <a href="/valuation">used car value calculator</a> and treat the seasonal adjustment as the last step, not the first.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Best month to sell by city: why the calendar shifts across metros</h2>
+
+        <p>National seasonality is a starting assumption. In five metros it gets overridden by something local, and in one of them the national peak month is the local trough.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Delhi NCR: a deadline market more than a seasonal one</h3>
+
+        <p>NCR selling is dominated by registration age, not by the month. Court and tribunal directions have restricted the operation of diesel vehicles beyond 10 years and petrol vehicles beyond 15 years in the region, and enforcement of fuel-supply denial to such vehicles has been revised more than once. The current position should be checked against the Delhi Transport Department and the relevant tribunal directions before pricing.</p>
+
+        <p>The practical effect: a diesel car approaching its tenth registration year loses value on a monthly clock that no festive window compensates for. The alternative route is an NOC from the Delhi RTO and re-registration in another state, which itself takes weeks and carries road-tax consequences. Sellers in this position should read <a href="/blogs/car-scrappage-value-india">vehicle scrappage rules and what a scrapped car pays</a> before waiting for any month.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Mumbai: the monsoon discount starts earlier and lasts longer</h3>
+
+        <p>Mumbai's trough opens with the first heavy spells in early June and recovers later than the national pattern, often not fully until October. The flood question gets asked more aggressively here, and asked with specifics rather than generally.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Bengaluru: the appraisal-and-relocation calendar</h3>
+
+        <p>Selling in Bengaluru clusters around IT appraisal payouts and inter-city relocation windows more than around festivals. A second factor shapes timing: a large share of cars in the city carry another state's registration, bought by owners who moved for work.</p>
+
+        <p>Selling such a car locally means the buyer will want the registration moved. That requires an NOC from the RTO where the car was originally registered, re-registration in Karnataka, and settlement of the road-tax position in the new state, with a refund claim available in the old one. The NOC alone can add several weeks. Current procedure and refund mechanics should be confirmed against parivahan.gov.in and the Karnataka Transport Department site.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Chennai: the north-east monsoon pushes the trough to October, December</h3>
+
+        <p>This is the clearest exception to "October is the best month". Chennai's heaviest rain arrives with the north-east monsoon from mid-October into December, and flood memory from previous years makes buyers unusually cautious in exactly the weeks when the rest of the country is paying a festive premium. The strong local window sits earlier, in the dry stretch from January to March.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Kochi and Kerala: Onam inverts the monsoon trough</h3>
+
+        <p>Onam falls in August or early September, inside what is nationally the weakest stretch, and it functions as Kerala's main purchase-and-delivery festival. Demand and delivery-date pressure land in a month when the national index is at its floor, which makes late August a genuinely strong local window and the national advice actively wrong for a Kochi seller.</p>
+
+        <p>The local calendar beats the national one every time the two disagree.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Does your car's registration month matter? The December vs January registration gap</h2>
+
+        <p>Yes, but the effect is one of perception, not mechanics. Buyers and pricing systems both think in model years. A car first registered on 28 December reads as a year older from 1 January, four days later, despite being materially identical to a car registered on 3 January.</p>
+
+        <p>Worth checking on the RC before deciding when to list. The consequence is asymmetric: owners of late-December-registered cars generally do better selling in the last quarter of the calendar year than in the first weeks of the next, while owners of January-to-March registered cars have room to hold into the March peak without their car ageing on paper.</p>
+
+        <p>Keep the effect in proportion. It is smaller than the effect of odometer reading, service history or accident repair, and it disappears entirely if the buyer values the car on its manufacturing year instead. The relative weight of age against kilometres is set out in <a href="/blogs/kilometres-vs-age-used-car-resale">kilometres vs age in used car resale</a>.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Timing the paperwork: insurance renewal, NCB and RC transfer decide your real window</h2>
+
+        <p>The seller's real decision point is not the peak month. It sits four to six weeks earlier, because inspection, negotiation, payment and the ownership transfer all consume time before the money and the liability are both settled.</p>
+
+        <p><strong class="text-navy-900">Insurance months remaining.</strong> A car handed over with eight months of cover left is a cleaner proposition than one with three weeks left, because the buyer inherits a valid policy and can transfer it rather than arranging fresh cover on a car not yet in their name. Listing in the four weeks before a policy expiry usually means either renewing first or pricing the gap into the offer.</p>
+
+        <p><strong class="text-navy-900">No Claim Bonus.</strong> NCB is the discount an insurer gives for claim-free years, and it belongs to the policyholder, not to the car. It does not travel to the buyer. A seller who is buying another car can obtain an NCB retention certificate from the existing insurer and apply the accumulated discount to the new vehicle's own-damage premium.</p>
+
+        <p><strong class="text-navy-900">RC transfer.</strong> Form 29 and Form 30 are submitted to the registering RTO, and the seller's obligation ends when the buyer's name reflects on the VAHAN record under the Motor Vehicles Act, not when payment clears. An open transfer leaves challans, and worse, issued against the seller's name.</p>
+
+        <p>Two common reasons a transfer stalls in practice: an unresolved hypothecation entry where the loan closure NOC was never filed with the RTO, and pending e-challans against the vehicle. The pre-check a seller should run four to six weeks before listing is short: pull the RC status on Parivahan, confirm hypothecation is cleared, and check the challan status on the state e-challan portal.</p>
+
+        <p>Working backwards from the two peaks: a seller targeting the 31 March window should have the car inspected, documented and listed by roughly the third week of February. A seller targeting Dhanteras should be listed by early-to-mid September, before Navratri opens.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">When seasonality does not apply: four seller situations where waiting costs money</h2>
+
+        <p>Seasonal timing is the last variable to optimise, and in these four situations it should be ignored entirely.</p>
+
+        <p><strong class="text-navy-900">A registration or scrappage deadline inside the waiting period.</strong> The deadline clock beats the calendar, always. A car that crosses its 15-year registration mark in January is not worth holding to March, because the value loss at the threshold dwarfs any seasonal premium. See <a href="/blogs/car-scrappage-value-india">vehicle scrappage rules and what a scrapped car pays</a>.</p>
+
+        <p><strong class="text-navy-900">A financed car where the outstanding loan is close to the car's value.</strong> Each waiting month worsens the equity position, because the car depreciates faster than the principal reduces in the early-to-middle years of a loan. The comparison is laid out in <a href="/blogs/car-loan-vs-resale-value">whether to keep paying EMIs or sell now</a>.</p>
+
+        <p><strong class="text-navy-900">A confirmed generation change or discontinuation on the model.</strong> The launch date is the price event, not the festive date. When a new generation arrives, the outgoing generation reprices within weeks regardless of the month.</p>
+
+        <p><strong class="text-navy-900">A condition issue that is actively worsening.</strong> An oil leak progressing from seep to drip. A battery already failing a load test, tyres sitting at the wear indicator, a clutch starting to slip. The deterioration and the inspection markdown that follows it outpace any seasonal premium, and the repair rarely returns its own cost at resale.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">FAQs</h2>
+
+        <div class="space-y-4">
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Is March the best month to sell a car in India?</h3>
+            <p>March is one of two annual peaks and usually the stronger one for dealer and business-buyer demand. It runs on financial-year-end inventory clearing and business purchase timing before 31 March, not on festival demand. The premium is only realised if payment and the Form 29/30 transfer complete before the year-end rush congests RTO counters.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">What is the worst month to sell a used car in India?</h3>
+            <p>Nationally, the weakest stretch runs from mid-June to late August, with July and August typically the floor. Two causes stack: reduced discretionary buying during monsoon, and a higher rate of adverse inspection findings on damp, corrosion and drain-related checks. Chennai is the main exception, where the weakest period runs October to December.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Do used car prices go up during Diwali in India?</h3>
+            <p>Offers typically strengthen across the Navratri-to-Dhanteras window because individual buyers want possession on specific auspicious dates. The extra money comes from end-buyers rather than dealer buying desks, which is why private sales benefit more than instant-buy quotes. The decline after the window closes is faster than the climb into it.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Should I wait until the festive season to sell my car?</h3>
+            <p>Worth it if the wait is roughly six to eight weeks and the car sits in a higher-value segment. Usually not worth it beyond a quarter. The arithmetic: seasonal gain equals current value times the peak premium; the cost equals monthly depreciation times months waited, plus insurance, plus any EMI interest. If the second number is larger, sell now.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Do used car prices drop during monsoon in India?</h3>
+            <p>Yes, and part of the drop is mechanical rather than demand-driven. Monsoon-period inspections flag damp in the spare wheel well, silt in door drains and corrosion on seat rail bolts more often than the same inspection run in November. A car with no water history can still be marked down because proving absence is harder in July. A dated pre-monsoon inspection report reduces the discount.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Does the registration month on my RC affect what I get for my car?</h3>
+            <p>It affects perceived age. A car registered in late December reads as a year older from 1 January, days after registration, because buyers and pricing systems work in model years. The effect is real but smaller than kilometres, service history or accident repair. Owners of late-December-registered cars generally do better selling before the calendar turns.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">How many weeks before 31 March should I list my car?</h3>
+            <p>Roughly four to six weeks, so around the third week of February. Inspection, negotiation, payment clearance and the RC transfer each take time, and RTO counters get busiest in the final fortnight of March.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Is the best month to sell a car the same in Delhi, Mumbai and Bengaluru?</h3>
+            <p>No. Delhi NCR selling is largely deadline-driven by end-of-life registration rules rather than seasonal. Mumbai's monsoon discount starts earlier with the first heavy spells and recovers later than the national pattern. Bengaluru clusters around IT appraisal payouts and relocation windows, with inter-state NOC paperwork adding weeks to the timeline.</p>
+          </div>
+        </div>
+
+        <hr class="my-12 border-cream-200" />
+
+        <p class="text-lg">The peak-to-trough spread across a used-car year in India is real but modest, and it lives inside two short windows. Everything outside those windows is decided by the car, not the calendar. Before waiting for a better month, run the holding-cost test against a current valuation, then decide against the net number, not the seasonal one. The <a href="/valuation">TheResaleValue calculator</a> gives the base to anchor the arithmetic on.</p>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>

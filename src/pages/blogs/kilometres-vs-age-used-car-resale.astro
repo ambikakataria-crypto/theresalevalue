@@ -1,0 +1,296 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { displayDateFor } from '../../data/blogs';
+
+const title = 'Kilometres vs age in used car resale: where the two curves cross in India';
+const description = 'Age discounts are fixed by the RC. Kilometre discounts can be argued down with paperwork. The 12,000 km/year line where one force takes over from the other, plus three inspection-bay profiles that show why segment matters.';
+const publishedOn = displayDateFor('kilometres-vs-age-used-car-resale');
+---
+<BaseLayout title={title} description={description}>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="mb-8">
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/blogs">← All blogs</a>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">Valuation · Analysis</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+          Kilometres vs age in used car resale: where the two curves cross in India
+        </h1>
+        <div class="text-sm text-slate-soft">
+          {publishedOn && (
+            <>
+              <time datetime={publishedOn.iso}>{publishedOn.label}</time>
+              <span class="mx-2">·</span>
+            </>
+          )}
+          <span>12 min read</span>
+        </div>
+      </div>
+
+      <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
+
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
+          <strong class="text-navy-900">Framework, not a valuation quote.</strong> The percentage bands, coefficients and profiles below describe observed patterns on TheResaleValue transaction data. Actual impact varies by specific vehicle, city and current market demand. Cross-check any sale against a physical inspection.
+        </div>
+
+        <p class="text-xl leading-relaxed">
+          Two Maruti Swift VXi petrol cars, same city, listed within three weeks of each other. One a 2019 registration with 78,000 km on the clock. The other a 2016 registration reading 31,000 km. Asking prices sat within ₹18,000 of each other. Dealer offers came in roughly ₹55,000 apart, and the newer, higher-km car took the better number.
+        </p>
+
+        <p>That gap is the whole subject of this page. Age and kilometres are not two versions of the same discount. Age is priced by rules: registration dates, emission norms, finance eligibility, city restrictions. Kilometres are priced by fear of what an inspection might find. One is fixed. The other can be argued.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The short answer: the 12,000 km/year line where the two forces flip</h2>
+
+        <p>For a car driven at or below roughly 12,000 km a year, age is the dominant discount. Above roughly 20,000 km a year, kilometres take over. Between those two rates neither force decides on its own, and segment, fuel type and city of registration determine which one wins, with the service record often breaking the tie.</p>
+
+        <p>That crossover is worth checking against a specific car rather than a rule of thumb. The <a href="/valuation">free used car valuation calculator</a> applies both adjustments in sequence and shows the split.</p>
+
+        <p>Two definitions, kept plain. Age depreciation is the value loss tied to the registration date printed on the RC (Registration Certificate, the ownership document issued by the RTO). It is a date the seller cannot change. Kilometre depreciation is the value loss tied to the odometer reading, a number buyers treat as a stand-in for wear they cannot see from the driver's seat.</p>
+
+        <p>The structural difference between them drives everything else on this page. Age triggers rule-based cliffs: emission-norm changes, city-level end-of-life restrictions, the scrappage clock, shrinking finance eligibility. Those sit outside the seller's control. Kilometres trigger inspection-based deductions, things like clutch wear, suspension bushes, injector condition and tyre life, and every one of those can be partly argued back with documentation.</p>
+
+        <p>Which produces the practical consequence: age discounts are fixed at the counter. Kilometre discounts are the only part of the offer that paperwork can move.</p>
+
+        <p>The two coefficients used throughout this page come from the site's own valuation model: approximately 10% per year of age depreciation in the first five years, and 0.4% per 1,000 km for kilometres above the 12,000 km/year baseline.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Age effect on car value: the 10% per year curve is not a straight line, it steps at years 3, 5 and 10</h2>
+
+        <p>Describing age depreciation as "about 10% a year" is convenient shorthand, and it is wrong in a specific way. The loss is front-loaded. It steps at three points where something other than wear changes.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Year</th>
+                <th class="py-2 pr-3">Retained value (% of ex-showroom)</th>
+                <th class="py-2">Drop that year</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">1</td><td class="py-2 pr-3">80%</td><td class="py-2">20%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">2</td><td class="py-2 pr-3">70%</td><td class="py-2">10%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">3</td><td class="py-2 pr-3">62%</td><td class="py-2">8%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">4</td><td class="py-2 pr-3">55%</td><td class="py-2">7%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">5</td><td class="py-2 pr-3">48%</td><td class="py-2">7%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">6</td><td class="py-2 pr-3">43%</td><td class="py-2">5%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">7</td><td class="py-2 pr-3">38%</td><td class="py-2">5%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">8</td><td class="py-2 pr-3">34%</td><td class="py-2">4%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">9</td><td class="py-2 pr-3">30%</td><td class="py-2">4%</td></tr>
+              <tr><td class="py-2 pr-3">10</td><td class="py-2 pr-3">26%</td><td class="py-2">4%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Read the year-on-year column, not the retention column. Percentage loss flattens steadily after year five, but the rupee loss in year one on a ₹9 lakh car exceeds the rupee loss in years six through nine combined. For the full year-by-year mechanics, see <a href="/blogs/new-car-depreciation-india">how India's depreciation curve behaves year by year</a>.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">The three steps that are not depreciation at all</h3>
+
+        <p><strong class="text-navy-900">Year 3.</strong> The manufacturer warranty typically ends. Nothing physical changes on the car that morning, but the buyer now carries repair risk that was previously someone else's, and offers reflect that transfer.</p>
+
+        <p><strong class="text-navy-900">Year 5.</strong> Used-car loan terms tighten. Lenders begin shortening maximum tenure or reducing the loan-to-value ratio (the share of the car's price a bank will finance), which shrinks the pool of buyers who need finance to complete a purchase. A smaller buyer pool is a lower clearing price.</p>
+
+        <p><strong class="text-navy-900">Year 10.</strong> The end-of-life clock becomes visible. In specific cities, Delhi-NCR most prominently, a diesel car approaching ten years is a car with a countable remaining life, and buyers price accordingly.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Why age depreciation cannot be argued down</h3>
+
+        <p>The registration date sits on the RC and is visible on VAHAN (the Ministry of Road Transport and Highways vehicle database) to any buyer who types in a number plate. There is no document a seller can produce, no service history and no condition report, that makes a 2015 car read as 2018.</p>
+
+        <p>Which leads to the counter-intuitive part. The largest single-year rupee loss on most cars happens before the odometer has done anything meaningful, in year one, on a car showing 9,000 km. Kilometres had nothing to do with it.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Kilometres impact: the 0.4% per 1,000 km penalty only starts above the 12,000 km/year baseline</h2>
+
+        <p>Kilometres carry no discount at all until the car exceeds roughly 12,000 km a year. Above that baseline, the penalty runs at approximately 0.4% of value per additional 1,000 km. A car sitting at or near the baseline reads as normal Indian private usage and takes no odometer-specific deduction, which means the age adjustment is doing all the work.</p>
+
+        <p>The arithmetic, spelled out. A five-year-old car "should" read about 60,000 km at the 12,000 km/year baseline. If it reads 95,000 km, it is 35,000 km over. 35 thousand-km blocks × 0.4% = 14% off the age-adjusted value. On a Hyundai i20 that the age curve alone would place at ₹4,80,000, that is a further ₹67,200 gone, landing near ₹4,12,800 before condition and city adjustments.</p>
+
+        <p>Note the order. The kilometre penalty applies to the age-adjusted figure, not to ex-showroom.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">The penalty is asymmetric: below-average km earns less than above-average km costs</h3>
+
+        <p>Reverse the example and the symmetry breaks. A five-year-old car at 30,000 km is 30,000 km under baseline. Applying the same coefficient would suggest a 12% premium. The market does not pay it.</p>
+
+        <p>Based on paired-listing patterns, below-baseline kilometres return a fraction of what above-baseline kilometres cost, and past a certain point they return nothing at all. The reason is behavioural rather than mechanical. Buyers treat high kilometres as a defect to price and low kilometres as a claim to verify. A defect gets deducted immediately. A claim gets checked, and checking has a cost the buyer would rather not absorb.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">Kilometres are the only number buyers routinely disbelieve</h3>
+
+        <p>Nobody argues about a registration year. Odometers are different, because the reading is the one figure on a used car that has historically been alterable.</p>
+
+        <p>Several cross-checks exist. Service-history entries record the odometer at each visit. Past insurance claim documents typically capture a reading at the time of assessment. PUC (Pollution Under Control) certificates carry dates that establish where the car was and when. VAHAN holds the registration record itself.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">When high km falls faster than age: three profiles from the inspection bay</h2>
+
+        <p>Averages describe a sample, not a car. Three profiles show how differently the same odometer reading behaves across segments. Condition and service history enter heavily here, so see <a href="/blogs/factors-affecting-used-car-resale-value">the ten factors that move resale value, ranked</a> for how they stack against these two.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">The 1,50,000 km MPV that priced better than a 90,000 km one</h3>
+
+        <p>A Toyota Innova Crysta diesel at roughly 1,50,000 km, single owner, highway-run, complete stamped service book. Paired against a lower-km Crysta at around 90,000 km, city-run, with two gaps in the record.</p>
+
+        <p>The higher-km car took the stronger offer. Highway kilometres accumulate on components that are cheap and visible: tyres, brake pads, injector service intervals. City kilometres accumulate on components that are expensive and hidden, like the clutch assembly, suspension bushes and gearbox synchros under constant low-speed load. An inspection reads that difference in minutes.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">The compact SUV where kilometres arrived faster than years</h3>
+
+        <p>A three-year-old Tata Nexon or Hyundai Venue reading 92,000 km. That is a ride-share or long-commute pattern compressed into a short calendar. Age discount is modest, around 30% off ex-showroom. Kilometre discount is severe: 92,000 km against an expected 36,000 km means 56,000 km over baseline, roughly 22% further off.</p>
+
+        <p>The result is a car that is young and tired at the same time, and buyers price it with unusual caution because the combination is unfamiliar. On diesel variants, the questions turn to the DPF (diesel particulate filter, an exhaust component that traps soot and needs periodic burn-off cycles) and whether short-trip usage prevented proper regeneration. On AMT (automated manual transmission) variants, gearbox shift behaviour under load gets tested specifically.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">The small hatchback where kilometres barely mattered</h3>
+
+        <p>A Maruti Swift or Wagon R at 68,000 km and six years old. On paper that is 68,000 against an expected 72,000, so under baseline, so no kilometre penalty at all. But even at 95,000 km, the observed discount in this segment runs shallower than the coefficient predicts.</p>
+
+        <p>Parts are abundant and cheap. Labour is available in every neighbourhood. The buyer for a six-year-old Wagon R has a repair budget in mind already and reads the service book more carefully than the dashboard. High kilometres in this segment are an expected condition, not a surprise.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">When age hurts more than kilometres: the Delhi-NCR diesel case and other rule-driven cliffs</h2>
+
+        <p>Sometimes the age curve stops behaving like a curve and behaves like a wall. All of those situations are regulatory, and all of them are India-specific.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">The city where age becomes binary</h3>
+
+        <p>In the Delhi-NCR region, diesel cars aged 10 years and petrol cars aged 15 years face registration and operating restrictions, per operative orders. The specific rule and its enforcement position have changed more than once, so the current situation should be checked against the Delhi Transport Department and the relevant tribunal directions before pricing a car near the threshold.</p>
+
+        <p>The practical effect on resale is not a discount. It is a change of market. The car is typically sold with an NOC (No Objection Certificate, the RTO document that permits re-registration in another state) to a buyer outside the restricted region. The offer then reflects two things: a smaller buyer pool, and the administrative effort of the transfer. Sellers weighing routes here should read <a href="/blogs/private-vs-dealer-vs-instant-buy">private vs dealer vs instant buy</a>, because the relocation sale changes which channel makes sense.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">The emission-norm step</h3>
+
+        <p>BS4 and BS6 are emission-standard labels tied to the date a car was registered, BS6 being the stricter standard applied to new registrations from April 2020. A BS4 car does not drive differently or pollute noticeably more on any given trip.</p>
+
+        <p>The market prices the label anyway, and it prices it as restriction risk rather than as performance. A buyer looking at a BS4 car is estimating the probability that some future rule treats it differently. That estimate sits inside the age discount, not the kilometre discount, and no odometer reading changes it.</p>
+
+        <h3 class="text-xl font-semibold text-navy-900 mt-8 mb-3">The scrappage clock</h3>
+
+        <p>Under India's vehicle scrappage framework, fitness-certificate renewal for older vehicles carries higher fees and stricter testing requirements. Details are covered in <a href="/blogs/car-scrappage-value-india">car scrappage value India</a>. The consequence for resale is a visible floor on how long a buyer expects to keep the car. That expectation shortens as the registration date recedes, regardless of what the odometer says.</p>
+
+        <p>Which produces the line that summarises the entire comparison: kilometres reduce what a buyer will pay; age reduces how long a buyer thinks they can keep it.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Four same-priced cars, four km-and-age combinations, four different offers</h2>
+
+        <p>Four cars with similar asking prices. Four different verdicts on which force dominated.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Car and variant</th>
+                <th class="py-2 pr-3">Reg year</th>
+                <th class="py-2 pr-3">Odometer</th>
+                <th class="py-2 pr-3">Km vs baseline</th>
+                <th class="py-2 pr-3">Age-adjusted</th>
+                <th class="py-2 pr-3">Km adjustment</th>
+                <th class="py-2 pr-3">Indicative offer</th>
+                <th class="py-2">Force in charge</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Maruti Swift VXi petrol</td><td class="py-2 pr-3">2015</td><td class="py-2 pr-3">52,000 km</td><td class="py-2 pr-3">68,000 under</td><td class="py-2 pr-3">₹2,90,000</td><td class="py-2 pr-3">₹0</td><td class="py-2 pr-3">₹2,88,000</td><td class="py-2">Age</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Hyundai Venue S petrol</td><td class="py-2 pr-3">2022</td><td class="py-2 pr-3">94,000 km</td><td class="py-2 pr-3">58,000 over</td><td class="py-2 pr-3">₹7,60,000</td><td class="py-2 pr-3">−₹1,76,000</td><td class="py-2 pr-3">₹5,84,000</td><td class="py-2">Kilometres</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Honda City VX petrol</td><td class="py-2 pr-3">2019</td><td class="py-2 pr-3">71,000 km</td><td class="py-2 pr-3">1,000 under</td><td class="py-2 pr-3">₹6,40,000</td><td class="py-2 pr-3">₹0</td><td class="py-2 pr-3">₹5,95,000</td><td class="py-2">Condition and record</td></tr>
+              <tr><td class="py-2 pr-3">Maruti Ertiga VDi diesel (Delhi RC)</td><td class="py-2 pr-3">2016</td><td class="py-2 pr-3">1,08,000 km</td><td class="py-2 pr-3">At baseline</td><td class="py-2 pr-3">₹5,10,000</td><td class="py-2 pr-3">₹0</td><td class="py-2 pr-3">₹3,95,000</td><td class="py-2">Registration rule</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Row one: the 2015 Swift carries no kilometre penalty at all, since 52,000 km in ten years is well under baseline, yet it retains only about 26% of its original value, because ten registration years did the entire job.</p>
+
+        <p>Row two: the 2022 Venue is three years old and should be the strongest car here, but 58,000 km over baseline strips roughly 23% off the age-adjusted figure, and the offer lands below a car four years older.</p>
+
+        <p>Row three: the Honda City sits at baseline kilometres and mid-curve age, so neither adjustment moves it much. The ₹45,000 gap between age-adjusted value and final offer came entirely from condition findings and a service-record gap.</p>
+
+        <p>Row four is the odd one. The Ertiga's numbers are unremarkable on both axes. The ₹1,15,000 gap between its age-adjusted value and its offer reflects the restricted registration and the NOC transfer the buyer will have to complete, a deduction neither the odometer nor the age curve predicts.</p>
+
+        <p><a href="/valuation">Check your car's current value</a> against these four patterns before setting an asking price.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Does low km reset depreciation? What an inspection finds that the odometer does not show</h2>
+
+        <p>No. Kilometres do not reset or offset the age curve. The two adjustments are applied one after the other, not against each other. A low odometer reduces the kilometre penalty to zero, but it cannot push the age penalty below its floor, and there is no mechanism in any valuation model, or in any buyer's head, that converts unused kilometres into unwound years.</p>
+
+        <p>The calculation order is fixed:</p>
+
+        <p>Base value → age adjustment → kilometre adjustment → condition adjustment → city and route adjustment.</p>
+
+        <p>Each step operates on the output of the previous one. Nothing runs in reverse.</p>
+
+        <p>The physical reason is straightforward. Rubber perishes on a calendar. So do seals, hoses, coolant, brake fluid, lead-acid batteries and tyres. A car parked for six years has aged its consumables on exactly the same schedule as a car that covered 1,20,000 km in that time, and in several respects has aged them worse, because components that sit unused develop problems that components in regular motion do not.</p>
+
+        <p>What the inspection typically finds on genuinely low-km older cars: perished rubber bushes and door seals. Tyre DOT codes (the four-digit manufacture week-and-year stamp on the sidewall) reading five or six years old despite near-full tread. Brake disc surface corrosion from standing, fuel-system deposits from long idle periods, and a battery replacement history that reveals how often the car simply refused to start.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Low mileage older cars: the garage-queen discount sellers do not expect</h2>
+
+        <p>Below roughly 5,000 km a year on a car older than five years, low kilometres stop adding value and start subtracting it.</p>
+
+        <p>At that point two questions form in the buyer's mind simultaneously. Is the odometer reading accurate? And was the car actually standing rather than being driven? Both questions carry a cost, because both require verification the buyer would rather not perform.</p>
+
+        <p>Neither question is unanswerable. What restores the premium is documentation: continuous service entries at time-based intervals rather than km-based ones, proving the car was maintained even when it was not accumulating kilometres; odometer readings on past insurance claims that track consistently with the current reading; unbroken PUC dates showing the car was road-legal throughout.</p>
+
+        <p>The practical version for sellers of low-km older cars: the documentation folder is worth more to the offer than the odometer is. A 2017 car at 22,000 km with a complete time-based service record prices well. The same car with a three-year gap in the book prices as an unknown.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Best km for reselling: the odometer band boundaries buyers filter on</h2>
+
+        <p>Marketplace search filters cluster at round numbers. Under 20,000. Under 40,000. Under 50,000. Under 60,000. Under 80,000. Under 1,00,000. A car reading 51,000 km is invisible to every buyer filtering "under 50,000", despite being materially identical to a car at 49,000 km.</p>
+
+        <p>The implication is specific and slightly odd. The cost of driving the last 2,000 km before a sale can exceed the value of those kilometres under the 0.4% coefficient, because crossing a band boundary removes the car from a filter set entirely. Two thousand kilometres at 0.4% per 1,000 costs about 0.8% of value. Dropping out of a search filter costs whatever the lost buyer volume costs, which is usually more.</p>
+
+        <p>The same boundary logic applies on the age axis. Selling before a registration anniversary keeps the car in a younger reg-year band. Selling before warranty expiry keeps it in a different risk category for the buyer.</p>
+
+        <p>The two boundaries rarely align. A car three months from crossing 80,000 km and eight months from its registration anniversary has one clear answer. Work out which boundary is closer, and sell before that one.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">FAQs</h2>
+
+        <div class="space-y-4">
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Is high km worse than old age for resale in India?</h3>
+            <p>It depends on annual usage rate. Below roughly 12,000 km a year, age dominates the discount. Above roughly 20,000 km a year, kilometres dominate. Age discounts cannot be argued down because the registration date is fixed on the RC. Kilometre discounts can be partly offset with a complete service record. In Delhi-NCR, registration rules can override both for older diesel cars.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Does low mileage reset a car's depreciation?</h3>
+            <p>No. Age and kilometre adjustments apply sequentially, not against each other. Low kilometres remove the kilometre penalty entirely but do not shrink the age penalty by a single rupee. Calendar-based wear continues regardless of the odometer, since rubber, seals, brake fluid, coolant and the battery all degrade on time, not on distance.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">What is the best km to sell a car at in India?</h3>
+            <p>Just under a marketplace filter band rather than just over it, so under 50,000 or under 80,000, not 51,000 or 82,000. Ideally also before a registration anniversary or a warranty expiry date, both of which shift the car into a different buyer perception band. The two boundaries rarely align, so the closer one usually decides the timing.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">How much does 1,00,000 km reduce a used car's value?</h3>
+            <p>It depends entirely on the car's age at that reading. On a four-year-old car, expected kilometres are about 48,000, so 1,00,000 km is 52,000 over baseline, roughly 21% off the age-adjusted value. On a nine-year-old car, expected kilometres are about 1,08,000, so 1,00,000 km is under baseline and carries no kilometre penalty at all.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Is a 2016 car with 40,000 km better than a 2020 car with 1,00,000 km?</h3>
+            <p>In most segments, the 2020 car takes the stronger offer. Its age discount is roughly four years shallower, and the 52,000 km it sits above baseline costs around 21%, less than the four extra registration years cost the 2016 car. Two facts reverse this: a restricted-city diesel registration on the 2020 car, or a documented time-based service history on the 2016 one.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Does a car's age matter more than kilometres for insurance IDV?</h3>
+            <p>Age dominates almost completely. The IRDAI (Insurance Regulatory and Development Authority of India) depreciation schedule used to calculate IDV, Insured Declared Value, the sum insured on a comprehensive policy, is keyed to vehicle age in years, not to the odometer. This is the clearest case where the two forces are not symmetric at all. Detail in <a href="/blogs/idv-calculator-india">IDV calculator India</a>.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Do highway kilometres hurt resale less than city kilometres?</h3>
+            <p>Mechanically, yes. Clutch, suspension bushes and gearbox components wear far slower at steady speeds than in stop-start traffic. Commercially, it only counts if the seller can evidence it. What evidences it: service-centre location history across multiple cities, a FASTag or toll usage pattern, and even tyre wear distribution across the tread.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Can a buyer check whether the odometer reading is genuine?</h3>
+            <p>Yes, through several cross-checks. Service-history entries record the odometer at every workshop visit. Past insurance claim documents typically capture a reading at assessment. PUC certificates establish dates and locations. The exact reach depends on what the buyer can access before ownership transfers.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">At what age does a car stop losing value quickly in India?</h3>
+            <p>Percentage loss flattens after roughly year seven, dropping to around 4% a year. Rupee loss flattens earlier; by year five, the absolute amounts are small because the base is small. Flattening does not mean safe to hold, because rule-driven cliffs at year 10 and 15 are steps, not slopes, and they arrive regardless of condition.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Does a car with 2 owners and low km sell better than 1 owner with high km?</h3>
+            <p>Usually yes, but the ownership count is a separate adjustment from both age and kilometres. A second owner typically costs 3% to 5% of value, applied after the age and kilometre steps. High kilometres at 50,000 km over baseline cost around 20%. The arithmetic favours the two-owner car in most cases.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">How many km per year is considered normal for a used car in India?</h3>
+            <p>Roughly 12,000 km a year is the model baseline for private usage. The realistic band runs from about 8,000 to 15,000 km depending on city and commute distance. Taxi and ride-share usage sits well outside it, often at 40,000 to 60,000 km a year, which is why commercially registered cars are valued on an entirely separate basis.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-navy-900 text-lg mb-2">Should a car be sold before or after it crosses 10 years?</h3>
+            <p>In Delhi-NCR, a diesel car should be sold well before the 10-year mark because registration restrictions apply from that point. Outside NCR, the 10-year boundary matters less as a rule and more as a buyer perception band. A car listed as "9 years" filters differently from one listed as "10 years", even at identical condition.</p>
+          </div>
+        </div>
+
+        <hr class="my-12 border-cream-200" />
+
+        <p class="text-lg">Two numbers on a listing, two entirely different mechanisms behind them. Kilometres reduce what a buyer will pay; age reduces how long a buyer thinks they can keep it. Before setting an asking price, calculate the annual usage rate, total kilometres divided by years since registration, and check it against 12,000. Below that figure, the odometer is not the problem and no amount of arguing about it will move the offer. Above 20,000, the service record is the only lever left.</p>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>
