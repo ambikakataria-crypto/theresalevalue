@@ -130,10 +130,15 @@ function computeCurve(exShowroom: number, fuel: Fuel, city: CityTier): number[] 
 export default function NewCarDepreciationCalculator() {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
+  const [mfgYear, setMfgYear] = useState<number>(new Date().getFullYear());
   const [exShowroom, setExShowroom] = useState<number>(10);
   const [fuel, setFuel] = useState<Fuel>('petrol');
   const [citySlug, setCitySlug] = useState('');
   const [submitted, setSubmitted] = useState(false);
+
+  // Year picker: allow current year and 4 back (used but very lightly aged buys).
+  const currentYear = new Date().getFullYear();
+  const yearOptions = Array.from({ length: 5 }, (_, i) => currentYear - i);
 
   const [makes, setMakes] = useState<ScreenItem[]>([]);
   const [makesLoading, setMakesLoading] = useState(true);
@@ -254,7 +259,23 @@ export default function NewCarDepreciationCalculator() {
             </select>
           </div>
 
-          <div className="md:col-span-2">
+          <div>
+            <label className="block text-sm font-medium text-navy-900 mb-1.5">
+              Year of manufacture
+            </label>
+            <select
+              required
+              value={mfgYear}
+              onChange={(e) => setMfgYear(Number(e.target.value))}
+              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
+            >
+              {yearOptions.map((y) => (
+                <option key={y} value={y}>{y}</option>
+              ))}
+            </select>
+          </div>
+
+          <div>
             <label className="block text-sm font-medium text-navy-900 mb-1.5">
               Ex-showroom price (₹ lakh)
             </label>
@@ -405,7 +426,7 @@ export default function NewCarDepreciationCalculator() {
             fill="#0A2540"
             fontFamily="'JetBrains Mono', monospace"
           >
-            Y5: {fmtInr(curve[5])}
+            {mfgYear + 5}: {fmtInr(curve[5])}
           </text>
           <text
             x={x(10) - 4}
@@ -416,7 +437,7 @@ export default function NewCarDepreciationCalculator() {
             fill="#0A2540"
             fontFamily="'JetBrains Mono', monospace"
           >
-            Y10: {fmtInr(curve[10])}
+            {mfgYear + 10}: {fmtInr(curve[10])}
           </text>
 
           {years.map((yr) => (
@@ -429,7 +450,7 @@ export default function NewCarDepreciationCalculator() {
               fill="#6B7280"
               fontFamily="'Inter', sans-serif"
             >
-              Y{yr}
+              {mfgYear + yr}
             </text>
           ))}
         </svg>
@@ -437,12 +458,12 @@ export default function NewCarDepreciationCalculator() {
         {/* Retention summary */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-5 mt-3 border-t border-cream-200 text-sm">
           <div>
-            <div className="text-[10px] uppercase text-slate-soft mb-1">Year 5 value</div>
+            <div className="text-[10px] uppercase text-slate-soft mb-1">{mfgYear + 5} value</div>
             <div className="font-data text-navy-900 font-semibold">{fmtInr(curve[5])}</div>
             <div className="text-[11px] text-slate-soft mt-0.5">{y5Retention}% retained</div>
           </div>
           <div>
-            <div className="text-[10px] uppercase text-slate-soft mb-1">Year 10 value</div>
+            <div className="text-[10px] uppercase text-slate-soft mb-1">{mfgYear + 10} value</div>
             <div className="font-data text-navy-900 font-semibold">{fmtInr(curve[10])}</div>
             <div className="text-[11px] text-slate-soft mt-0.5">{y10Retention}% retained</div>
           </div>
@@ -476,7 +497,7 @@ export default function NewCarDepreciationCalculator() {
               <tbody className="font-data text-navy-900">
                 {curve.map((v, i) => (
                   <tr key={i} className="border-t border-cream-200">
-                    <td className="py-2 pr-4">Y{i}</td>
+                    <td className="py-2 pr-4">{mfgYear + i}{i === 0 ? ' (new)' : ''}</td>
                     <td className="py-2 pr-4">{fmtInr(v)}</td>
                     <td className="py-2 pr-4">{Math.round((v / curve[0]) * 100)}%</td>
                     <td className="py-2 text-caution-600">{fmtInr(curve[0] - v)}</td>
