@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 /**
  * Standalone new-car depreciation calculator.
@@ -127,14 +127,36 @@ function computeCurve(exShowroom: number, fuel: Fuel, city: CityTier): number[] 
   });
 }
 
+// Default preview state: Maruti Swift, ₹6.5L ex-showroom, petrol, All-India.
+// Renders on first paint so the graph immediately shows a real Indian
+// resale curve instead of a blank ₹0 chart. The moment the user changes
+// any input, hasInteracted flips and the RHS switches to "Your new car".
+const DEFAULT_PREVIEW = {
+  makeLabel: 'Maruti',
+  modelLabel: 'Swift',
+  exShowroom: 6.5,
+  fuel: 'petrol' as Fuel,
+};
+
 export default function NewCarDepreciationCalculator() {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [mfgYear, setMfgYear] = useState<number>(new Date().getFullYear());
-  const [exShowroom, setExShowroom] = useState<number>(10);
-  const [fuel, setFuel] = useState<Fuel>('petrol');
+  const [exShowroom, setExShowroom] = useState<number>(DEFAULT_PREVIEW.exShowroom);
+  const [fuel, setFuel] = useState<Fuel>(DEFAULT_PREVIEW.fuel);
   const [citySlug, setCitySlug] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
+  const initialMount = useRef(true);
+
+  // Flip hasInteracted the first time any input changes past initial mount.
+  useEffect(() => {
+    if (initialMount.current) {
+      initialMount.current = false;
+      return;
+    }
+    setHasInteracted(true);
+  }, [make, model, mfgYear, exShowroom, fuel, citySlug]);
 
   // Year picker: allow current year and 4 back (used but very lightly aged buys).
   const currentYear = new Date().getFullYear();
@@ -353,18 +375,28 @@ export default function NewCarDepreciationCalculator() {
           <div>
             <div className="text-xs uppercase tracking-widest text-slate-soft mb-1">10-year forecast</div>
             <div className="text-xl font-serif text-navy-900">
-              {selectedMake?.title || 'Your'} {selectedModel?.title || 'new car'}
+              {hasInteracted
+                ? `${selectedMake?.title || 'Your'} ${selectedModel?.title || 'new car'}`
+                : `${DEFAULT_PREVIEW.makeLabel} ${DEFAULT_PREVIEW.modelLabel}`}
             </div>
             <div className="text-sm text-graphite mt-1">
               Ex-showroom <span className="font-data text-navy-900">{fmtInr(exShowroom)}</span>
               {' · '}{FUEL_LABEL[fuel]}
-              {selectedCity && ` · ${selectedCity.name}`}
+              {hasInteracted
+                ? (selectedCity && ` · ${selectedCity.name}`)
+                : ' · All-India'}
             </div>
           </div>
           <span className="text-[10px] uppercase tracking-widest px-2 py-1 rounded-full bg-signal-500/10 text-signal-600 font-semibold self-start">
-            Live estimate
+            {hasInteracted ? 'Live estimate' : 'Example'}
           </span>
         </div>
+
+        {!hasInteracted && (
+          <div className="text-xs text-graphite bg-cream-100 border border-cream-200 rounded-md px-3 py-2 mb-4 leading-relaxed">
+            <strong className="text-navy-900">Example curve.</strong> Change any input on the left to see your own car's 10-year forecast.
+          </div>
+        )}
 
         <svg
           viewBox={`0 0 ${chartW} ${chartH}`}
