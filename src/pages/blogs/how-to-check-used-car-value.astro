@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Byline from '../../components/Byline.astro';
 import EditorsTake from '../../components/EditorsTake.astro';
 
 const title = 'How to check used car value in India: why every calculator shows a different price';
@@ -17,7 +16,11 @@ const description = 'Every online tool returns a different used car value in Ind
         <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
           How to check used car value in India: why every calculator shows a different price
         </h1>
-        <Byline authorSlug="a-verma" publishedDate="30 July 2026" readTime="10 min read" />
+        <div class="text-sm text-slate-soft">
+          <time datetime="2026-07-30">30 July 2026</time>
+          <span class="mx-2">·</span>
+          <span>10 min read</span>
+        </div>
       </div>
 
       <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
