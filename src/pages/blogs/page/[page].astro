@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogList from '../../../components/BlogList.astro';
+import { allBlogs, BLOG_PAGE_SIZE } from '../../../data/blogs';
+
+export function getStaticPaths() {
+  const totalPages = Math.max(1, Math.ceil(allBlogs.length / BLOG_PAGE_SIZE));
+  // Page 1 lives at /blogs (index.astro). This route only serves 2..totalPages.
+  const paths = [];
+  for (let p = 2; p <= totalPages; p++) {
+    paths.push({
+      params: { page: String(p) },
+      props: {
+        currentPage: p,
+        totalPages,
+        articles: allBlogs.slice((p - 1) * BLOG_PAGE_SIZE, p * BLOG_PAGE_SIZE),
+      },
+    });
+  }
+  return paths;
+}
+
+const { currentPage, totalPages, articles } = Astro.props;
+
+const title = `Blogs, page ${currentPage}: India Used Car Value & Resale Reports`;
+const description = 'Data-led blogs on India\'s used car market: which cars hold value best, how prices are moving, and what it means for buyers and sellers.';
+---
+<BaseLayout title={title} description={description}>
+  <section class="py-12 md:py-16 bg-cream-100 border-b border-cream-200">
+    <div class="container-tight">
+      <div class="max-w-3xl">
+        <div class="text-sm uppercase tracking-widest text-slate-soft mb-3">Blogs, page {currentPage} of {totalPages}</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4">
+          What the data says about India's vehicles.
+        </h1>
+        <p class="text-lg text-graphite leading-relaxed">
+          Every article grounded in the same 10M+ inspection dataset that powers our valuations. No opinions dressed up as analysis. Just what the numbers actually show.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <BlogList articles={articles} currentPage={currentPage} totalPages={totalPages} />
+</BaseLayout>

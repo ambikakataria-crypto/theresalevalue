@@ -1,75 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogList from '../../components/BlogList.astro';
+import { allBlogs, BLOG_PAGE_SIZE } from '../../data/blogs';
 
 const title = 'Blogs: India Used Car Value & Resale Reports';
 const description = 'Data-led blogs on India\'s used car market: which cars hold value best, how prices are moving, and what it means for buyers and sellers.';
 
-// PUBLISHING WORKFLOW
-// To add a new blog:
-//   1. Create the article file: src/pages/blogs/<slug>.astro
-//   2. Add a row to `articles` below (any position; list is sorted by date desc at render).
-//   3. Add the URL + revision date to src/data/blog-lastmod.ts (sitemap uses it).
-//   4. Push. @astrojs/sitemap picks the new page up automatically.
-
-const articles = [
-  {
-    slug: 'used-car-valuation-india',
-    title: 'Used car valuation India: check your car\'s fair-price band free',
-    excerpt: 'Why the same car returns three different valuations across three websites, and how to read a fair-price band instead of chasing a single number. Six factors ranked by actual price impact, city-level trends, and the private-vs-dealer-vs-instant-buyer decision.',
-    date: '2026-07-28',
-    readTime: '12 min read',
-    category: 'Valuation · Pillar',
-    featured: true,
-  },
-  {
-    slug: 'new-car-depreciation-india',
-    title: 'New car depreciation in India: year-by-year resale value data and calculator',
-    excerpt: 'Segment-wise depreciation curves for hatchback, sedan, SUV, luxury, and EV, from year 1 to year 10. Why standard depreciation formulas fail in India, when to sell (year 3 vs year 5), and how IDV differs from actual resale.',
-    date: '2026-07-28',
-    readTime: '14 min read',
-    category: 'Depreciation · Pillar',
-    featured: true,
-  },
-  {
-    slug: 'how-to-check-used-car-value',
-    title: 'How to check used car value in India: why every calculator shows a different price',
-    excerpt: 'Every online tool returns a different used car value. The triangulation framework across algorithm calculators, marketplace listings, and dealer offers. How number-plate lookups fall short, and why calculators are accurate for hatchbacks but miss on diesel SUVs.',
-    date: '2026-07-30',
-    readTime: '10 min read',
-    category: 'Valuation · How-to',
-    featured: false,
-  },
-  {
-    slug: 'idv-calculator-india',
-    title: 'IDV calculator India: how insured declared value is calculated and where it falls short of market value',
-    excerpt: 'The IRDAI depreciation schedule (5/15/20/30/40/50%), how post-detariffing gives insurers flexibility, why IDV drops every year, and where it diverges from actual resale on Maruti, Hyundai, and Toyota models. What the total loss cheque really works out to.',
-    date: '2026-07-30',
-    readTime: '10 min read',
-    category: 'Insurance · Explainer',
-    featured: false,
-  },
-  {
-    slug: 'car-loan-vs-resale-value',
-    title: 'Car loan vs resale value: should you sell or keep paying EMIs in India?',
-    excerpt: 'Break-even framework for selling a financed car. Amortisation vs depreciation curves, foreclosure charges by lender, hypothecation removal at RTO (Delhi vs Mumbai timelines), Form 35 traps, and what to do when the car is worth less than the outstanding balance.',
-    date: '2026-07-30',
-    readTime: '11 min read',
-    category: 'Loan · Framework',
-    featured: false,
-  },
-  {
-    slug: 'car-scrappage-value-india',
-    title: 'Car scrappage value India: RVSF rates, policy rules & certificate of deposit (2026)',
-    excerpt: 'RVSF payout by vehicle type, why the kabadiwala\'s cash offer looks better than it is, Certificate of Deposit concessions (up to 25% road tax rebate), state-wise breakdown, and the break-even between private sale and formal scrappage.',
-    date: '2026-07-30',
-    readTime: '12 min read',
-    category: 'Scrappage · Guide',
-    featured: false,
-  },
-];
-
-// Newest first. Manual `featured` flag survives sorting, but shipping order = date desc.
-articles.sort((a, b) => b.date.localeCompare(a.date));
+const totalPages = Math.max(1, Math.ceil(allBlogs.length / BLOG_PAGE_SIZE));
+const pageArticles = allBlogs.slice(0, BLOG_PAGE_SIZE);
 ---
 <BaseLayout title={title} description={description}>
   <section class="py-12 md:py-16 bg-cream-100 border-b border-cream-200">
@@ -86,31 +24,5 @@ articles.sort((a, b) => b.date.localeCompare(a.date));
     </div>
   </section>
 
-  <section class="py-12 md:py-16">
-    <div class="container-tight max-w-4xl">
-      {articles.map(article => (
-        <a href={`/blogs/${article.slug}`} class="block card-institutional bg-white hover:border-navy-700 no-underline hover:no-underline transition-colors mb-6">
-          {article.featured && (
-            <div class="text-[10px] uppercase tracking-widest text-signal-600 mb-3 font-semibold">Featured</div>
-          )}
-          <div class="text-xs uppercase tracking-widest text-slate-soft mb-2">{article.category}</div>
-          <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-3 group-hover:text-trust-600">{article.title}</h2>
-          <p class="text-graphite leading-relaxed mb-4">{article.excerpt}</p>
-          <div class="text-xs text-slate-soft">
-            {new Date(article.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })} · {article.readTime}
-          </div>
-        </a>
-      ))}
-
-      <div class="mt-12 card-institutional bg-cream-100 text-center">
-        <p class="text-sm text-graphite mb-4">More blogs publishing weekly.</p>
-        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed'; this.querySelector('button').disabled=true;" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-          <input type="email" required placeholder="you@example.com" class="flex-1 px-4 py-3 bg-white border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none" />
-          <button type="submit" class="px-6 py-3 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors">
-            Get weekly insights
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
+  <BlogList articles={pageArticles} currentPage={1} totalPages={totalPages} />
 </BaseLayout>

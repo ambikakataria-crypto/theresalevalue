@@ -9,7 +9,7 @@
 export const blogLastmod: Record<string, string> = {
   '/blogs/used-car-valuation-india/': '2026-07-28',
   '/blogs/new-car-depreciation-india/': '2026-07-28',
-  '/blogs/how-to-check-used-car-value/': '2026-07-30',
+  '/blogs/how-to-check-used-car-value/': '2026-08-30',
   '/blogs/car-loan-vs-resale-value/': '2026-07-30',
   '/blogs/idv-calculator-india/': '2026-07-30',
   '/blogs/car-scrappage-value-india/': '2026-07-30',

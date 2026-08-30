@@ -1,0 +1,90 @@
+---
+import type { BlogArticle } from '../data/blogs';
+
+interface Props {
+  articles: BlogArticle[];
+  currentPage: number;
+  totalPages: number;
+}
+
+const { articles, currentPage, totalPages } = Astro.props;
+
+function pageHref(p: number) {
+  return p === 1 ? '/blogs' : `/blogs/page/${p}`;
+}
+---
+<section class="py-12 md:py-16">
+  <div class="container-tight max-w-4xl">
+    {articles.map((article) => (
+      <a
+        href={`/blogs/${article.slug}`}
+        class="block card-institutional bg-white hover:border-navy-700 no-underline hover:no-underline transition-colors mb-6"
+      >
+        {article.featured && (
+          <div class="text-[10px] uppercase tracking-widest text-signal-600 mb-3 font-semibold">Featured</div>
+        )}
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-2">{article.category}</div>
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mb-3 group-hover:text-trust-600">{article.title}</h2>
+        <p class="text-graphite leading-relaxed mb-4">{article.excerpt}</p>
+        <div class="text-xs text-slate-soft">
+          {new Date(article.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })} · {article.readTime}
+        </div>
+      </a>
+    ))}
+
+    {totalPages > 1 && (
+      <nav class="mt-10 flex items-center justify-between border-t border-cream-200 pt-6" aria-label="Blog pagination">
+        {currentPage > 1 ? (
+          <a
+            href={pageHref(currentPage - 1)}
+            rel="prev"
+            class="text-sm font-medium text-navy-900 hover:text-signal-600 no-underline hover:no-underline"
+          >
+            ← Newer posts
+          </a>
+        ) : <span></span>}
+
+        <div class="flex items-center gap-2">
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+            p === currentPage ? (
+              <span
+                aria-current="page"
+                class="w-8 h-8 flex items-center justify-center rounded-md bg-navy-900 text-white text-sm font-data font-semibold"
+              >
+                {p}
+              </span>
+            ) : (
+              <a
+                href={pageHref(p)}
+                class="w-8 h-8 flex items-center justify-center rounded-md border border-cream-200 text-navy-900 text-sm font-data hover:border-navy-900 no-underline hover:no-underline"
+                aria-label={`Go to page ${p}`}
+              >
+                {p}
+              </a>
+            )
+          ))}
+        </div>
+
+        {currentPage < totalPages ? (
+          <a
+            href={pageHref(currentPage + 1)}
+            rel="next"
+            class="text-sm font-medium text-navy-900 hover:text-signal-600 no-underline hover:no-underline"
+          >
+            Older posts →
+          </a>
+        ) : <span></span>}
+      </nav>
+    )}
+
+    <div class="mt-12 card-institutional bg-cream-100 text-center">
+      <p class="text-sm text-graphite mb-4">More blogs publishing weekly.</p>
+      <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed'; this.querySelector('button').disabled=true;" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" required placeholder="you@example.com" class="flex-1 px-4 py-3 bg-white border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none" />
+        <button type="submit" class="px-6 py-3 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors">
+          Get weekly insights
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
