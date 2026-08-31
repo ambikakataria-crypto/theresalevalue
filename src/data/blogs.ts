@@ -86,10 +86,9 @@ export const rawArticles: BlogArticle[] = [
     slug: 'factors-affecting-used-car-resale-value',
     title: 'What affects used car resale value in India: 10 factors ranked by rupee impact',
     excerpt: 'Age and kilometres set the base price. The other eight factors decide whether the final offer lands above or below that base. All ten ranked, with the ones an owner can still change on the day of sale.',
-    date: '',
+    date: '2026-08-31',
     readTime: '13 min read',
     category: 'Valuation · Analysis',
-    queued: true,
   },
   {
     slug: 'fair-market-value-vs-asking-price-vs-dealer-offer',
