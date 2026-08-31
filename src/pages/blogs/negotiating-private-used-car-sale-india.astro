@@ -1,0 +1,322 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { displayDateFor } from '../../data/blogs';
+
+const title = 'Negotiating a private used car sale in India: the buyer\'s playbook and its counters';
+const description = 'The four-move sequence most private buyers run to reduce an asking price, the split-the-difference trap, the documentation folder that stops arguments before they start, and the walkaway number worth writing down before the first buyer calls.';
+const publishedOn = displayDateFor('negotiating-private-used-car-sale-india');
+---
+<BaseLayout title={title} description={description}>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="mb-8">
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/blogs">← All blogs</a>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">Selling · Negotiation</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+          Negotiating a private used car sale in India: the buyer's playbook and its counters
+        </h1>
+        <div class="text-sm text-slate-soft">
+          {publishedOn && (
+            <>
+              <time datetime={publishedOn.iso}>{publishedOn.label}</time>
+              <span class="mx-2">·</span>
+            </>
+          )}
+          <span>13 min read</span>
+        </div>
+      </div>
+
+      <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
+
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
+          <strong class="text-navy-900">Scope note.</strong> This covers private, individual-to-individual sales in India. Not dealer trade-ins, not instant-buy platforms. Those are different transactions with different levers.
+        </div>
+
+        <p class="text-xl leading-relaxed">A 2019 Maruti Baleno Zeta petrol, roughly 52,000 km, second owner, listed privately in Pune. Eleven days on the listing. Six enquiries. Five of those six opened the same way: a photograph of the kerbed front-left alloy, sent before anyone had asked about the service book.</p>
+
+        <p>Coincidence does not explain that. Private buyers are not improvising. Most run a short, repeatable sequence, and a seller who can name the sequence stops reacting to it and starts answering it.</p>
+
+        <p>In a private used car sale in India, the seller's negotiating position rests on three things: an asking price anchored above the fair-market band, a documentation set that is complete before the first enquiry, and a walkaway number decided before any buyer calls. Everything below is built on those three.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">What private buyers actually do to your price: the four-move sequence behind most lowball offers</h2>
+
+        <p>Private used car buyers in India typically run one of four moves to reduce an asking price: bundling minor condition issues into a lump deduction, trading immediate cash payment for a steep cut, negotiating on behalf of an absent third party, or staying silent after naming a number.</p>
+
+        <p>Most guides tell sellers to "stay firm and know your car's value." That is step one, and it is not wrong. The part they skip is that firmness without recognition is just stubbornness. The seller still does not know which of the four moves is being run, so every response gets improvised on the spot.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Buyer move</th>
+                <th class="py-2 pr-3">What it sounds like</th>
+                <th class="py-2 pr-3">What it is actually testing</th>
+                <th class="py-2">The tell that it worked</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">A. The condition audit</td><td class="py-2 pr-3">"The alloy's kerbed, roof paint has gone, and that tyre's nearly finished. Realistically that's ₹40,000 off."</td><td class="py-2 pr-3">Whether condition is already priced in, or whether the seller will pay for it twice</td><td class="py-2">Seller accepts a lump figure without asking which item costs what</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">B. The cash compression</td><td class="py-2 pr-3">"I can transfer the full amount today if you come down to ₹X."</td><td class="py-2 pr-3">How urgently the seller needs the money</td><td class="py-2">Seller drops price before establishing that speed has value</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">C. The absent decision-maker</td><td class="py-2 pr-3">"I like it, but my brother-in-law does cars and he says ₹X is the number."</td><td class="py-2 pr-3">Whether the seller will negotiate against someone not in the room</td><td class="py-2">Seller starts arguing with the brother-in-law's logic</td></tr>
+              <tr><td class="py-2 pr-3">D. The silence</td><td class="py-2 pr-3">States a figure. Says nothing.</td><td class="py-2 pr-3">Whether the seller will bid against themselves</td><td class="py-2">Seller fills the pause with a lower number</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Underneath all four sits the same question. How quickly does this person need the money? That is what the buyer is trying to answer, and price is just the instrument being used to answer it.</p>
+
+        <p>Move D is the cheapest for the buyer to run and the most costly to mishandle. No research required, no inspection, no argument. Just a number and a closed mouth.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Setting your asking price: why anchoring above the fair-market high is not the same as overpricing</h2>
+
+        <p>Fair-market value is a band, not a point. It is the spread between what a well-informed private buyer would pay for the car and what a dealer would offer for the same car on the same day. Both numbers are legitimate. They are just answers to different questions.</p>
+
+        <p>Start by establishing the <a href="/valuation">fair-market value band for your car</a> before writing the listing. Without it, the asking price is a guess wearing a decimal point.</p>
+
+        <p>The anchoring logic is simple arithmetic. An asking price at or slightly above the top of the band leaves room to concede. An asking price set at the band's midpoint means the first counter pushes the seller below fair value, and every round after that goes deeper.</p>
+
+        <p>Here is the catch. Anchoring only works while the price stays inside the conversation, and if the number is pushed far enough above the band the listing stops generating enquiries entirely, at which point nobody is negotiating because nobody is calling. That is not a strong anchor. It is a listing nobody reads.</p>
+
+        <p>Enquiry volume is the diagnostic. A listing that draws no genuine enquiries in the first seven to ten days is priced outside the band, not anchored above it. Adjust before the listing goes stale, because a re-listed car at a lower price reads as a distressed sale.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">How to describe your asking price so it does not read as arbitrary</h3>
+
+        <p>A round number invites a round counter. ₹6,00,000 gets answered with ₹5,00,000, because both parties understand neither figure came from anywhere.</p>
+
+        <p>A justified number behaves differently. "₹6,15,000, single owner, full service history at the authorised workshop, all four tyres replaced in March, insurance valid until next November." The buyer can still counter. But the counter now has to engage with specifics, and specifics are much harder to argue down than a feeling.</p>
+
+        <p>Two or three concrete reasons. Not ten. Ten reads as defensive.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Sequencing buyers: the reason the first offer on a used car is usually the weakest one</h2>
+
+        <p>Early enquirers on a fresh private listing skew heavily towards resellers and brokers, not end buyers. That is structural, a feature of how the market works rather than bad luck.</p>
+
+        <p>Brokers monitor new inventory continuously. Their entire model depends on buying below the private band and reselling inside it, which means speed matters more to them than fit. An end buyer, by contrast, is usually comparing three or four cars across a couple of weekends and will not commit on day one.</p>
+
+        <p>So the first number a seller hears is often the lowest number they will hear. Not always. Occasionally a genuinely motivated end buyer arrives first. But often enough that treating the first offer as a market signal is a mistake.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">How to tell a broker from an end buyer in the first two minutes</h3>
+
+        <p>The tells are consistent and they show up early:</p>
+
+        <ul class="list-disc ml-6 space-y-2">
+          <li>Asks the price before asking anything about the car</li>
+          <li>Ownership status and RC name come up before service history does</li>
+          <li>Wants to inspect at their location, not yours</li>
+          <li>Asks whether the price is "flexible" before having seen the vehicle</li>
+          <li>Enquires on multiple listings from the same seller if more than one exists</li>
+        </ul>
+
+        <p>None of these makes a buyer illegitimate. Brokers buy cars, and sometimes a broker's clean, fast, cash transaction is worth accepting. The point is knowing which conversation is happening so the price expectation matches it.</p>
+
+        <p>The sequencing move itself is straightforward. Set a viewing window, the first weekend after listing being the obvious one, and schedule every serious enquiry inside it. Respond to interest. Do not respond to numbers until the window closes.</p>
+
+        <p>Interest then becomes parallel rather than sequential. Three people seeing the car within the same 48 hours changes the seller's posture, and buyers can usually sense it.</p>
+
+        <p>An early lowballer should not be shut out. "That's below where this is going to land, but the car's available through the weekend if you want another look." Some of them come back at the asking price once they have seen what else is on the market.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Countering a lowball offer: the three checks before any counter, and the split-the-difference trap</h2>
+
+        <p>Countering a lowball offer starts with three checks, whether the buyer has physically inspected the car, whether the deduction is itemised, and whether the number is anchored to any external reference.</p>
+
+        <p>A lowball, in this context, means an offer materially below the bottom of the fair-market band, usually arriving before an inspection or immediately after a cursory one. It is not an insult and it is not a mistake. It is a probe.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The three-question response before any counter</h3>
+
+        <ol class="list-decimal ml-6 space-y-2">
+          <li><strong class="text-navy-900">Has the buyer seen the car in person?</strong> An un-inspected offer should not receive a real counter-number. Countering it converts a guess into a negotiating position. The response is a viewing invitation, not a figure.</li>
+          <li><strong class="text-navy-900">Is the deduction itemised?</strong> "It needs about ₹50,000 of work" is not a deduction. It is a mood. "Two tyres at ₹9,000 each, and the rear bumper respray at ₹8,000" is a deduction, and it can be discussed line by line.</li>
+          <li><strong class="text-navy-900">Is the number anchored to anything?</strong> A buyer quoting a comparable listing, a valuation tool output, or a workshop estimate is negotiating. A buyer quoting nothing is testing.</li>
+        </ol>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Why splitting the difference rewards the more extreme opening number</h3>
+
+        <p>Work the arithmetic and it becomes obvious. Asking price: ₹6,40,000. Buyer's opening offer: ₹5,40,000. Split the difference and it lands at ₹5,90,000.</p>
+
+        <p>Now look at what happened. If the buyer's actual target was ₹5,90,000 all along, they simply opened ₹50,000 below it and let the "fair compromise" carry them exactly where they intended. The seller conceded ₹50,000. The buyer conceded nothing, because the ₹5,40,000 was never real.</p>
+
+        <p>The correction: split from the last positions, not the opening ones, and only after both sides have moved at least once. Seller comes down to ₹6,25,000. Buyer moves up to ₹5,75,000. A split at ₹6,00,000 now reflects genuine movement from both sides.</p>
+
+        <p>Sounds straightforward on paper. The process has more steps, because buyers often refuse to move first, and holding position through that stall is where most private sellers give ground.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Conceding on something other than price</h3>
+
+        <p>Price is one variable. It is rarely the only one that matters to the buyer.</p>
+
+        <p>Things a seller can trade instead of rupees: an earlier handover date, the buyer's preferred payment method, agreeing to make the RTO visit at the buyer's convenience, leaving the accessories in, or accepting that the buyer takes the car with its existing tyres rather than the seller replacing them.</p>
+
+        <p>Every concession should buy something. "I can hold ₹6,10,000 and do the transfer visit on Saturday morning, which saves you a working day." That is a trade. A unilateral drop is not.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The one deduction worth conceding immediately</h3>
+
+        <p>If there is a genuine, verifiable defect the seller already knew about, conceding it fast is the strongest move available.</p>
+
+        <p>Credibility transfers. A seller who says "you're right about the tyres, that's ₹18,000, I'll take it off" has earned the standing to say "the quarter panel respray isn't costing you anything, so I'm not deducting for it" and be believed.</p>
+
+        <p>A worked case: 2018 Hyundai Creta 1.6 SX diesel, around 68,000 km, single owner, Bengaluru. The buyer's inspection flags three things:</p>
+
+        <p><strong class="text-navy-900">Two tyres near the wear indicator.</strong> Legitimate. Replacement is a real, imminent, quotable cost the buyer will incur. Concede it, at the actual price of the tyres, not at the ₹25,000 the buyer suggests for "tyres and alignment and all."</p>
+
+        <p><strong class="text-navy-900">An overdue 70,000 km service.</strong> Partly legitimate. The service is due, and the buyer will pay for it. But it would have been due for the seller too, in another 2,000 km. The band already assumes a car at 68,000 km has not just been serviced. Split it or absorb a portion, do not pay the full invoice.</p>
+
+        <p><strong class="text-navy-900">A repainted rear-left quarter panel.</strong> This is the negotiating instrument. Repaint on a quarter panel, absent structural damage, does not cost the buyer anything going forward: the panel is painted, the car drives, resale impact at the next sale is marginal if the underlying repair was sound. Buyers routinely price repaint as though it were accident damage. It usually is not.</p>
+
+        <p>Which is why the conversation changes entirely when there is a paint-thickness reading on paper rather than a phone torch held at an angle.</p>
+
+        <p>For the wider picture on which conditions genuinely move value and which do not, see <a href="/blogs/factors-affecting-used-car-resale-value">what buyers weigh most when assessing a used car</a>.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The documentation card: what buyers stop arguing about once the RC, service book and insurance are on the table</h2>
+
+        <p>The documents a private used car seller in India should have ready before the first viewing are the Registration Certificate, the service history, the current insurance policy, a valid PUC certificate, and the loan No Objection Certificate if the car was ever financed.</p>
+
+        <p>Most people assume price arguments in private sales are about the car's condition. That is only half the story. A large share of them are about the buyer's uncertainty, and uncertainty is exactly where deductions get invented, because an unknown can be assigned any cost the buyer likes.</p>
+
+        <p>Every document produced converts an unknown into a known.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The document set to have ready before the first viewing</h3>
+
+        <ul class="list-disc ml-6 space-y-2">
+          <li><strong class="text-navy-900">Registration Certificate (RC)</strong>, the ownership record. Confirm the name on it matches the seller's ID exactly. A mismatch, even a spelling variation, stalls the transfer later. Kills the doubt: is this person actually entitled to sell this car?</li>
+          <li><strong class="text-navy-900">Service history or workshop invoices.</strong> Kills the doubt: has this been looked after or just driven?</li>
+          <li><strong class="text-navy-900">Current insurance policy</strong>, with its expiry date visible. Kills the doubt: am I buying a car I have to insure from scratch tomorrow?</li>
+          <li><strong class="text-navy-900">Valid PUC certificate.</strong> Pollution Under Control. Short validity, cheap to renew, and its absence reads as neglect out of proportion to its cost.</li>
+          <li><strong class="text-navy-900">Loan closure letter and No Objection Certificate (NOC)</strong>, if the car was ever financed. Kills the largest doubt of all, covered below.</li>
+        </ul>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The hypothecation removal question buyers ask before they make an offer</h3>
+
+        <p>Hypothecation is the entry on the RC showing that a bank or finance company has a claim on the car because it was bought on a loan. Once the loan is repaid, the lender issues an NOC, and the owner applies to the RTO to have the entry removed. Until that removal is recorded, the RC still shows the financier's name.</p>
+
+        <p>An unresolved hypothecation entry is one of the strongest discount triggers in a private sale, because it moves an administrative problem onto the buyer. Buyers price that problem generously in their own favour.</p>
+
+        <p>Worth checking before listing. If the loan closed three years ago and nobody filed the removal, that is fixable, and fixing it costs far less than negotiating around it. Fuller treatment in <a href="/blogs/car-loan-vs-resale-value">selling a car that still has a loan on it</a>.</p>
+
+        <p>Producing all of this unprompted shifts the frame. The buyer arrives asking what is wrong with this car. A folder on the table changes the question to what am I paying for this car. Those two conversations end at different numbers.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The walkaway number: how to set the price below which selling privately stops being worth it</h2>
+
+        <p>A walkaway number is the pre-committed price below which a private seller stops negotiating and switches to a dealer or instant-buy route, set from the best standing offer plus holding cost and time value.</p>
+
+        <p>Three inputs go into the arithmetic. The best dealer or instant-buy offer already in hand. The cost of continuing to own the car through the extra weeks a private sale takes, meaning insurance running, parking, and the depreciation those weeks carry. And an honest value on the seller's own time across viewings, calls, and the RTO visit.</p>
+
+        <p>Add the second and third to the first. That is roughly where private stops paying.</p>
+
+        <p>Private sales usually clear higher than dealer offers. Usually is not always, and the gap narrows fast once holding costs and four weekends of viewings enter the calculation.</p>
+
+        <p>Write the number down before the first buyer calls. This step matters more than it looks, because a walkaway decided in the middle of a negotiation is not a walkaway, it is a mood. The buyer sitting across the table is applying pressure precisely so that the number moves, and it will, unless it was fixed in advance.</p>
+
+        <p>Anchoring it to a current band rather than to what the car felt like it was worth last year helps too, so <a href="/valuation">check what your car is currently worth</a> at the point of setting it.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What changes the walkaway number legitimately</h3>
+
+        <p>Some things genuinely justify moving it:</p>
+
+        <ul class="list-disc ml-6 space-y-2">
+          <li>A real defect surfaced during inspection that the seller did not know about</li>
+          <li>An insurance renewal falling due, which the seller either pays or discounts against</li>
+          <li>The registration anniversary crossing into a new depreciation year</li>
+          <li>The seasonal demand window closing, which shifts the realistic private ceiling downward</li>
+        </ul>
+
+        <p>A buyer's persistence is not on that list.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Negotiation scripts: what to say to each of the four buyer moves</h2>
+
+        <p>Short lines. Neutral tone. Nothing that needs to be memorised.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Buyer says</th>
+                <th class="py-2">Seller response</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">"What's your lowest price?" (before viewing)</td><td class="py-2">"The listed price reflects what the car is. Happy to answer anything specific, service record, tyres, insurance. Numbers are easier after you've seen it."</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">"I'll pay cash today if you take ₹80,000 off."</td><td class="py-2">"Same-day payment is worth something to me. It isn't worth ₹80,000. If you can close today at ₹X, that works."</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">"My mechanic says it needs ₹60,000 of work."</td><td class="py-2">"Send me the list with the items priced separately. Anything on it that's genuinely due, I'll factor in."</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Names a number. Then silence.</td><td class="py-2">"That's below where this sells. I'm at ₹X. What's making you land at your figure?" (then stop)</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">"Someone's selling the same car for ₹90,000 less."</td><td class="py-2">"Send me the listing. If it's a single owner with full service history and the same kilometres, that's worth knowing."</td></tr>
+              <tr><td class="py-2 pr-3">Verbal agreement reached</td><td class="py-2">"Let's write down the agreed figure and take a token now, and I'll block the car. Balance and handover on [date]."</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Two of these deserve a note.</p>
+
+        <p>The silence script decides most negotiations. The rule is worth stating plainly: the party who speaks next after a number is named is the party who moves. Restate the last seller number, add no movement, ask a question, then wait. It is uncomfortable for about eight seconds.</p>
+
+        <p>The comparable-listing script works because the comparison usually collapses on inspection. Same model, same year, ₹90,000 cheaper, and it turns out to be a third owner with no service book and 30,000 more kilometres on it. Asking for the listing is not confrontational. It is the fastest way to make a vague threat concrete, and concrete things can be answered.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Where private car sale negotiations break down after the handshake, and how to keep the price you agreed</h2>
+
+        <p>Agreement is not completion. A meaningful share of private deals get re-negotiated in the gap between the handshake and the money moving.</p>
+
+        <p>The pattern repeats. Buyer agrees on Sunday evening. Calls back Tuesday having "shown the photos to someone" or "got a quote for the tyres," and arrives with a new deduction. The car has not changed. The buyer's confidence has, usually because someone else in their household questioned the price.</p>
+
+        <p>Closing the loop the same day is the single most effective preventive: a token payment plus a written note of the agreed figure, the agreed handover date, and both parties' details. Small amounts work. The money is not the point; a buyer who has paid something is psychologically committed to the number they paid it against.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The insurance and No Claim Bonus question</h3>
+
+        <p>No Claim Bonus is the discount an insurer applies at renewal for claim-free years. It attaches to the person, not to the car, and can generally be carried across to the seller's next vehicle when the existing policy is transferred or cancelled on sale.</p>
+
+        <p>Buyers often assume the NCB comes with the car. It does not, and a seller giving it away without noticing is conceding real money.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The exposure that continues if the transfer never completes</h3>
+
+        <p>Until the transfer is recorded, the person named on the RC remains the traceable registered owner. Challans generated by the new driver, and liability arising from the car's use, continue to trace back to that name.</p>
+
+        <p>Which is why the transfer is not paperwork to be done "whenever." It is the seller's exit from the car.</p>
+
+        <p>Practical close: retain a copy of every document handed over, retain the signed delivery note with the date and the buyer's ID details, and check the VAHAN record afterwards to confirm the new owner's name has been recorded.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Frequently asked questions</h2>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">How much above market value should I list my used car in India?</h3>
+        <p>Anchor at or slightly above the top of the fair-market band, not above the band entirely. The band is a range, the spread between what a private buyer would pay and what a dealer would offer. The diagnostic is enquiry volume, not instinct: no genuine enquiries in seven to ten days means the price sits outside the band. <a href="/valuation">Check the current band for your car</a> before setting the figure.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What should I say when a buyer asks for my lowest price before seeing the car?</h3>
+        <p>Do not name a floor before an inspection. Any number given at that stage becomes the new ceiling, and the negotiation starts below it. Redirect to a viewing slot and offer to answer specific questions about service history, tyres, or insurance status instead. Buyers who refuse to view before hearing a floor are usually testing urgency rather than buying.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What do I do when a buyer lowballs my used car?</h3>
+        <p>Ask three things before countering. Has the buyer physically inspected the car? Is the deduction itemised line by line, or is it a lump figure? Is the number anchored to a comparable listing or a workshop quote, or to nothing? An un-inspected offer gets a viewing invitation, not a counter-number. Concede verifiable defects quickly, decline unspecified ones.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is it a bad approach to split the difference when selling a car privately?</h3>
+        <p>Splitting from the opening pair rewards whichever side opened more extremely. Asking ₹6,40,000 against an offer of ₹5,40,000 splits to ₹5,90,000, which may be exactly the buyer's target, reached at zero cost to them. Split only after both sides have moved at least once, using the latest positions rather than the opening ones.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Should I accept the first offer I get on my used car?</h3>
+        <p>Usually not immediately. Early enquirers on a fresh listing skew towards resellers and brokers scanning new inventory, whose model requires buying below the private band. Hold a defined viewing window, typically the first weekend, before responding to any number. Keep the door open with early lowballers; some return at the asking price after seeing the alternatives.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">How do I know if a buyer is a broker and not an actual buyer?</h3>
+        <p>The tells appear in the first two minutes. Asks the price before asking anything about the car. Asks about RC ownership status before asking about service history. Wants to inspect at their location rather than yours. Asks whether the price is flexible before viewing the vehicle. None of this disqualifies them as buyers; it just tells the seller which negotiation is starting.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What documents should I have ready before a buyer comes to see the car?</h3>
+        <p>The Registration Certificate with the name matching the seller's ID, full service history or workshop invoices, the current insurance policy with its expiry date, a valid PUC certificate, and the loan closure letter and NOC if the car was ever financed. Producing them unprompted removes the uncertainty that invented deductions are built on.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Can a buyer reduce the price after we have already agreed?</h3>
+        <p>It happens, typically 24 to 72 hours after the handshake, and usually after the buyer has discussed the deal with someone else. The standard preventive is a token payment plus a written note of the agreed figure and handover date, taken at the moment of agreement. A buyer who has paid something against a number tends to stay with that number.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does the No Claim Bonus go to the buyer when I sell my car?</h3>
+        <p>No Claim Bonus attaches to the policyholder, not to the vehicle, and can generally be carried to the seller's next car rather than passing with the sale. Buyers sometimes assume it is included in what they are purchasing. It is a seller asset and should be treated as one during the negotiation.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Am I still responsible for the car if the buyer never transfers the RC?</h3>
+        <p>The person named on the Registration Certificate remains the traceable registered owner until the transfer is recorded, which means challans and liability arising after the sale continue to point back to the seller. The practical step is to confirm on the VAHAN record after handover that the new owner's name has been entered.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is selling privately actually worth more than a dealer offer?</h3>
+        <p>Often, but not automatically. The private price advantage has to survive the holding cost of extra weeks of ownership, the insurance and parking running through those weeks, and the seller's own time across viewings and the RTO visit. Run the walkaway arithmetic with real figures.</p>
+
+        <p class="mt-10">Before the listing goes live, do one thing: write the walkaway number on paper, along with the two or three specific facts that justify the asking price. Fifteen minutes. Every conversation after that becomes a matter of reading which of the four moves is being run, then answering it rather than reacting to it.</p>
+
+        <div class="card-institutional bg-cream-100 mt-10">
+          <h3 class="text-xl font-serif text-navy-900 mb-3">Set your asking price against a real fair-price band</h3>
+          <p class="text-graphite mb-4">Free, no signup, no phone number. See the private, dealer and instant-buy range for your car in 30 seconds before writing the listing.</p>
+          <a href="/valuation" class="inline-block px-6 py-3 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors no-underline">Check car value →</a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>

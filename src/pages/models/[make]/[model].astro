@@ -32,11 +32,11 @@ const avgExShowroom: Record<string, number> = Object.fromEntries(
 
 // Depreciation SVG geometry
 const chartW = 600;
-const chartH = 220;
+const chartH = 240;
 const padL = 42;
 const padR = 16;
 const padT = 20;
-const padB = 34;
+const padB = 40;
 const innerW = chartW - padL - padR;
 const innerH = chartH - padT - padB;
 const curve = data.retentionCurve;
@@ -46,7 +46,14 @@ const yFor = (pct: number) => padT + (1 - pct / 100) * innerH;
 const linePath = curve
   .map((c: any, i: number) => `${i === 0 ? 'M' : 'L'} ${xFor(c.ageYears)} ${yFor(c.retentionPct)}`)
   .join(' ');
-const segAvg5y = data.segmentAverageRetention['5year'];
+const yr1  = curve.find((c: any) => c.ageYears === 1);
+const yr3  = curve.find((c: any) => c.ageYears === 3);
+const yr5  = curve.find((c: any) => c.ageYears === 5);
+const yr10 = curve.find((c: any) => c.ageYears === 10);
+const segAvg5y  = data.segmentAverageRetention['5year'];
+const segAvg10y = data.segmentAverageRetention['10year'];
+const integerYearPoints = curve.filter((c: any) => Number.isInteger(c.ageYears));
+const labelledYears = new Set([1, 3, 5, 7, 10]);
 
 // Meta
 const title = `${data.make} ${data.model} resale value in India, ${currentYear} price range, depreciation & variants | TheResaleValue`;
@@ -123,7 +130,7 @@ const description = `${data.make} ${data.model} resale value in India: value ret
       <!-- 3. Depreciation curve (inline SVG) -->
       <section aria-labelledby="dep-heading" class="mb-12">
         <h2 id="dep-heading" class="text-2xl font-serif text-navy-900 mb-3">{data.model} depreciation curve, year on year</h2>
-        <p class="text-base text-graphite leading-relaxed mb-4">The {data.model} depreciates roughly 15% in year one, another 10% in year two, then approximately 7–8% per year through years three to five. Five-year retention lands at about {curve[4].retentionPct}%, compared with a B-segment hatchback average of about {segAvg5y}%.</p>
+        <p class="text-base text-graphite leading-relaxed mb-4">The {data.model} depreciates roughly 15% in year one, another 10% in year two, then approximately 7–8% per year through years three to five, tapering to 3–4% per year after year seven. Five-year retention lands at about {yr5?.retentionPct}% and ten-year retention at about {yr10?.retentionPct}%, compared with a segment average of about {segAvg5y}% at five years and {segAvg10y}% at ten. The chart below shows retention at 20 half-yearly points across the first ten years.</p>
         <div class="card-institutional bg-white">
           <svg
             role="img"
@@ -132,8 +139,8 @@ const description = `${data.make} ${data.model} resale value in India: value ret
             class="w-full h-auto"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title id="dep-svg-title">{data.make} {data.model} value retention curve, years 1 to 5</title>
-            <desc id="dep-svg-desc">Line chart showing {data.model} resale value retention percentage against age in years: year 1 {curve[0].retentionPct}%, year 2 {curve[1].retentionPct}%, year 3 {curve[2].retentionPct}%, year 4 {curve[3].retentionPct}%, year 5 {curve[4].retentionPct}%. Segment average at year 5 is {segAvg5y}%.</desc>
+            <title id="dep-svg-title">{data.make} {data.model} value retention curve, years 0.5 to 10 in half-year steps</title>
+            <desc id="dep-svg-desc">Line chart showing {data.model} resale value retention percentage against age in years across 20 half-yearly points. Year 1 {yr1?.retentionPct}%, year 3 {yr3?.retentionPct}%, year 5 {yr5?.retentionPct}%, year 10 {yr10?.retentionPct}%. Segment average at year 5 is {segAvg5y}% and at year 10 is {segAvg10y}%.</desc>
 
             {/* Y-axis gridlines and labels at 25/50/75/100 */}
             {[100, 75, 50, 25].map((pct) => (
@@ -143,64 +150,80 @@ const description = `${data.make} ${data.model} resale value in India: value ret
               </>
             ))}
 
-            {/* Segment average reference line at year 5 */}
-            <line x1={xFor(maxAge)} x2={xFor(maxAge)} y1={yFor(segAvg5y)} y2={yFor(curve[4].retentionPct)} stroke="#C4B79F" stroke-dasharray="3 3" />
-            <text x={xFor(maxAge) - 6} y={yFor(segAvg5y) + 4} text-anchor="end" font-size="10" fill="#7A7268">seg avg {segAvg5y}%</text>
+            {/* Segment average reference marker at year 5 */}
+            {yr5 && (
+              <>
+                <line x1={xFor(5)} x2={xFor(5)} y1={yFor(segAvg5y)} y2={yFor(yr5.retentionPct)} stroke="#C4B79F" stroke-dasharray="3 3" />
+                <text x={xFor(5) - 6} y={yFor(segAvg5y) - 4} text-anchor="end" font-size="10" fill="#7A7268">seg avg {segAvg5y}%</text>
+              </>
+            )}
 
-            {/* X-axis labels (years) */}
-            {curve.map((c: any) => (
-              <text x={xFor(c.ageYears)} y={chartH - padB + 18} text-anchor="middle" font-size="11" fill="#7A7268">Year {c.ageYears}</text>
+            {/* Segment average reference marker at year 10 */}
+            {yr10 && (
+              <>
+                <line x1={xFor(10)} x2={xFor(10)} y1={yFor(segAvg10y)} y2={yFor(yr10.retentionPct)} stroke="#C4B79F" stroke-dasharray="3 3" />
+                <text x={xFor(10) - 6} y={yFor(segAvg10y) - 4} text-anchor="end" font-size="10" fill="#7A7268">seg avg {segAvg10y}%</text>
+              </>
+            )}
+
+            {/* X-axis labels (integer years only, keeps the axis readable) */}
+            {integerYearPoints.map((c: any) => (
+              <text x={xFor(c.ageYears)} y={chartH - padB + 18} text-anchor="middle" font-size="11" fill="#7A7268">Yr {c.ageYears}</text>
             ))}
 
             {/* Retention line */}
             <path d={linePath} fill="none" stroke="#B8412C" stroke-width="2.5" />
 
-            {/* Data points + inline labels */}
+            {/* Data points (all 20) + inline labels only on select integer years */}
             {curve.map((c: any) => (
               <>
-                <circle cx={xFor(c.ageYears)} cy={yFor(c.retentionPct)} r="4" fill="#B8412C" />
-                <text x={xFor(c.ageYears)} y={yFor(c.retentionPct) - 10} text-anchor="middle" font-size="11" fill="#1B2A3F" font-weight="600">{c.retentionPct}%</text>
+                <circle cx={xFor(c.ageYears)} cy={yFor(c.retentionPct)} r={labelledYears.has(c.ageYears) ? 4 : 2.5} fill="#B8412C" />
+                {labelledYears.has(c.ageYears) && (
+                  <text x={xFor(c.ageYears)} y={yFor(c.retentionPct) - 10} text-anchor="middle" font-size="11" fill="#1B2A3F" font-weight="600">{c.retentionPct}%</text>
+                )}
               </>
             ))}
           </svg>
-          <div class="text-xs text-slate-soft mt-3">Chart values are aggregated across all variants and fuel types. Individual permutations vary, use the calculator above for a specific year/km/fuel combination.</div>
+          <div class="text-xs text-slate-soft mt-3">Chart values are aggregated across all variants and fuel types, plotted at 20 half-yearly points from six months to ten years. Individual permutations vary, use the calculator above for a specific year/km/fuel combination.</div>
         </div>
       </section>
 
       <!-- 4. Variant × fuel table -->
       <section aria-labelledby="variant-heading" class="mb-12">
         <h2 id="variant-heading" class="text-2xl font-serif text-navy-900 mb-3">{data.model} variants and ex-showroom pricing ({currentYear})</h2>
-        <p class="text-base text-graphite leading-relaxed mb-4">Current {data.model} variants and on-record ex-showroom prices, alongside the value retention at three years for a car with 25,000–50,000 km on the odometer.</p>
+        <p class="text-base text-graphite leading-relaxed mb-4">Current {data.model} variants and on-record ex-showroom prices, alongside the residual rupee value each variant is expected to hold at the five-year and ten-year mark, using the aggregate depreciation curve for this model. Retention rupees are approximate and assume a 25,000–50,000 km at five years / 75,000–1,00,000 km at ten years usage pattern with a clean service record.</p>
         <div class="overflow-x-auto">
           <table class="w-full text-base border-collapse">
-            <caption class="sr-only">{data.make} {data.model} variant-wise ex-showroom price and three-year value retention.</caption>
+            <caption class="sr-only">{data.make} {data.model} variant-wise ex-showroom price and five- and ten-year value retention in lakhs.</caption>
             <thead class="bg-cream-100">
               <tr>
                 <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Variant</th>
                 <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Fuel</th>
                 <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Gearbox</th>
                 <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">Ex-showroom (₹L)</th>
-                <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">3-yr retention</th>
+                <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">5-yr value (₹L)</th>
+                <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">10-yr value (₹L)</th>
               </tr>
             </thead>
             <tbody>
               {data.variants.map((v: any) => {
-                const perm3yr = data.permutations.find((p: any) => p.year === 2022 && p.kmBand === '25-50k' && p.fuel === v.fuel);
-                const retention = perm3yr ? Math.round((perm3yr.mid / v.exShowroom) * 100) : null;
+                const val5  = yr5  ? (v.exShowroom * yr5.retentionPct  / 100) : null;
+                const val10 = yr10 ? (v.exShowroom * yr10.retentionPct / 100) : null;
                 return (
                   <tr>
                     <td class="p-3 border border-cream-200 text-navy-900 font-medium">{v.name}</td>
                     <td class="p-3 border border-cream-200">{v.fuel}</td>
                     <td class="p-3 border border-cream-200">{v.transmission}</td>
                     <td class="p-3 border border-cream-200 text-right font-data">{v.exShowroom.toFixed(2)}</td>
-                    <td class="p-3 border border-cream-200 text-right font-data">{retention ? `${retention}%` : '-'}</td>
+                    <td class="p-3 border border-cream-200 text-right font-data">{val5 !== null ? val5.toFixed(2) : '-'}</td>
+                    <td class="p-3 border border-cream-200 text-right font-data">{val10 !== null ? val10.toFixed(2) : '-'}</td>
                   </tr>
                 );
               })}
             </tbody>
           </table>
         </div>
-        <div class="text-xs text-slate-soft mt-3">3-yr retention uses the 2022 model year at 25,000–50,000 km as reference, divided by variant ex-showroom. CNG factory-fitted units retain roughly 3–5 percentage points more than equivalent petrol variants.</div>
+        <div class="text-xs text-slate-soft mt-3">5-yr and 10-yr rupee values apply the model's aggregate retention curve ({yr5?.retentionPct}% at 5 yrs, {yr10?.retentionPct}% at 10 yrs) to each variant's current ex-showroom. Actual rupee bands vary with variant liquidity, kilometres, city and inspection score. For a rupee price band tuned to your specific car, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation calculator</a>.</div>
       </section>
 
       <!-- 5. City variance -->
@@ -247,48 +270,6 @@ const description = `${data.make} ${data.model} resale value in India: value ret
           {data.context.map((para: string) => <p>{para}</p>)}
         </div>
       </section>
-
-      <!-- 7b. Recent transactions (historical proof) -->
-      {data.recentTransactions?.length > 0 && (
-        <section aria-labelledby="txn-heading" class="mb-12">
-          <h2 id="txn-heading" class="text-2xl font-serif text-navy-900 mb-3">Recent {data.model} transactions</h2>
-          <p class="text-base text-graphite leading-relaxed mb-4">A sample of {data.recentTransactions.length} anonymised {data.model} sales from Cars24 wholesale transactions over the last four months. Prices are actual sold values in lakhs, not asking prices or list bands. Use the calculator above for retention percentages against your own permutation.</p>
-          <div class="overflow-x-auto">
-            <table class="w-full text-base border-collapse">
-              <caption class="sr-only">Recent anonymised {data.make} {data.model} sale transactions with year, kilometres, fuel, variant, city and sold price.</caption>
-              <thead class="bg-cream-100">
-                <tr>
-                  <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Sold</th>
-                  <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Year</th>
-                  <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">KM driven</th>
-                  <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Fuel</th>
-                  <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">Variant</th>
-                  <th class="text-left p-3 border border-cream-200 font-semibold text-navy-900">City</th>
-                  <th class="text-right p-3 border border-cream-200 font-semibold text-navy-900">Sold price (₹L)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.recentTransactions.map((t: any) => {
-                  const [yr, mo] = t.soldMonth.split('-');
-                  const soldLabel = new Date(parseInt(yr, 10), parseInt(mo, 10) - 1, 1).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' });
-                  return (
-                    <tr>
-                      <td class="p-3 border border-cream-200 text-graphite">{soldLabel}</td>
-                      <td class="p-3 border border-cream-200 text-navy-900 font-medium">{t.year}</td>
-                      <td class="p-3 border border-cream-200 text-right font-data">{t.kmDriven.toLocaleString('en-IN')}</td>
-                      <td class="p-3 border border-cream-200">{t.fuel}</td>
-                      <td class="p-3 border border-cream-200">{t.variant}</td>
-                      <td class="p-3 border border-cream-200">{t.city}</td>
-                      <td class="p-3 border border-cream-200 text-right font-data">{t.soldPriceLakh.toFixed(2)}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-          <div class="text-xs text-slate-soft mt-3">Rows anonymised. RC serial, owner details and inspection score omitted. Refreshed monthly alongside the retention bands above.</div>
-        </section>
-      )}
 
       <!-- 8. Methodology callout -->
       <section class="card-institutional bg-white border border-cream-200 mb-12 text-sm">

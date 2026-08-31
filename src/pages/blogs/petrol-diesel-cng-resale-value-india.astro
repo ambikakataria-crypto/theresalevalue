@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { displayDateFor } from '../../data/blogs';
+
+const title = 'Petrol vs diesel vs CNG resale value in India: what the fuel badge alone is worth (2026)';
+const description = 'Fuel type does not have one resale value in India. It has a different one in each registration city. The NCR diesel rule, the Kochi control case, factory versus retrofitted CNG, the fuel-by-city grid, five-year retention by fuel, and when a retrofit actually recovers its cost.';
+const publishedOn = displayDateFor('petrol-diesel-cng-resale-value-india');
+---
+<BaseLayout title={title} description={description}>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="mb-8">
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/blogs">← All blogs</a>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">Fuel · Analysis</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+          Petrol vs diesel vs CNG resale value in India: what the fuel badge alone is worth (2026)
+        </h1>
+        <div class="text-sm text-slate-soft">
+          {publishedOn && (
+            <>
+              <time datetime={publishedOn.iso}>{publishedOn.label}</time>
+              <span class="mx-2">·</span>
+            </>
+          )}
+          <span>15 min read</span>
+        </div>
+      </div>
+
+      <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
+
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
+          <strong class="text-navy-900">Editorial framework, not a quote.</strong> Retention percentages, city premiums and offer bands below describe observed patterns on TheResaleValue valuations and are illustrative. Individual bids depend on model, variant, condition and the specific week of sale.
+        </div>
+
+        <p class="text-xl leading-relaxed">Two 2020 Hyundai Creta SX listings appeared on the same platform in the same month. Both registered in Gurugram, both in the 52,000 to 58,000 km band, both single-owner. One petrol, one diesel. The diesel had cost more on-road when new. It drew the lower offer at resale, and the gap was not small.</p>
+
+        <p>Compression ratios have nothing to do with it. Neither does clutch wear. The gap comes down to two things no mechanic ever checks: how many years the car can still legally run where it is registered, and how many buyers in that market will shortlist it at all.</p>
+
+        <p>In India, fuel type does not have a single resale value, it has a different resale value in each registration city, because fuel-specific age limits and CNG infrastructure vary by state. A 2020 Creta diesel is one asset in Gurugram and a materially different asset in Coimbatore. Same car. Different market.</p>
+
+        <p>It helps to know where a specific car sits today before reading further. <a href="/valuation">Check your car's value by fuel type</a>, then use the sections below to work out why the number came out the way it did.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Why fuel type prices a car in India: the three levers dealers actually price on</h2>
+
+        <p>Any used-car offer is a bet on how fast the dealer can move that car off the lot. Fuel type shifts the bet three ways: remaining legal life in the registration city, depth of the buyer pool for that fuel in that market, and running-cost arithmetic at current pump prices. Everything else about fuel type sits downstream of those three.</p>
+
+        <p>Remaining legal life is the blunt one. A car with four years of unrestricted registration left in its home city is not the same proposition as one with nine. Buyers price the runway, not the engine.</p>
+
+        <p>Buyer pool depth is subtler, and it drives more of the discount than sellers expect. If only one walk-in in eight will consider a diesel hatchback in a given city, the dealer sits on that stock longer, carries floor-plan cost longer, and prices the acquisition to absorb it. Fuel type is one of ten factors that move resale value. It is the only one that changes the size of the audience rather than the appeal to a fixed audience. Colour, ownership count, service history: those move preference inside a pool. Fuel type moves the pool.</p>
+
+        <p>Running-cost arithmetic behaves differently in the used market than it does on a showroom floor. At a ₹6 lakh price point, a ₹2.5/km running cost difference matters proportionally more than it does at ₹18 lakh, because the fuel bill eats a bigger slice of total ownership spend. That is why CNG's used-market demand looks nothing like its new-car market share.</p>
+
+        <p>For anyone quoting this: fuel-type resale premium is the difference in market price between two otherwise identical cars that differ only in fuel type, expressed as a percentage of the petrol variant's price.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Petrol resale value in India: the baseline every other fuel is quoted against</h2>
+
+        <p>Petrol is the reference index for used-car pricing here. Broadest buyer pool, no fuel-specific registration restriction in Delhi-NCR beyond the general 15-year age framework, and near-uniform treatment across most state RTOs. When a valuation tool says "diesel commands X% less," petrol is the denominator.</p>
+
+        <p>Here is where the standard advice breaks. Petrol's reputation for steady depreciation is a median story, and medians hide the tails.</p>
+
+        <p>Large-displacement petrol depreciates faster than the petrol average in high-fuel-price cities. That means 2.0L and above, petrol SUVs especially, and the older petrol MPVs. The mechanism is obvious once stated: at the used-car price point the car is cheap but the fuel is not. Someone paying ₹7 lakh for a car that returns 8 km/l faces a monthly fuel bill that rivals the EMI. Running cost re-enters the calculation precisely because the acquisition cost has fallen away.</p>
+
+        <p>The genuinely flat-depreciating sub-segment sits at the other end. Petrol hatchbacks under 1.2L. Broad buyer pool, low running cost, low maintenance ceiling, and demand from first-time buyers who are price-sensitive on both purchase and fuel. Nothing else on Indian roads holds a retention curve this predictably.</p>
+
+        <p>Petrol automatics have started to split from petrol manuals in metro resale. Traffic density pushed AMT and torque-converter variants from a niche preference to a default expectation in Mumbai, Bengaluru and Delhi. The same variant in a tier-2 market with a thinner automatic-servicing network does not carry that lift.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Diesel car resale value in India: what the NCR age rule did to a 2018 Creta, and what it did not do in Kerala</h2>
+
+        <p>Diesel resale value has fallen hardest in Delhi-NCR, where age-based restrictions cut the effective ownership runway roughly in half against petrol. Outside NCR, diesel retention holds far better. In specific body styles it still commands a premium over the petrol equivalent. The national average buries both facts.</p>
+
+        <p>The NCR rule is a registration and running restriction inside a defined geography. It is not a nationwide ban on diesel cars. That distinction matters commercially, because a restricted car is not a scrapped car. It is a car whose buyer pool has relocated.</p>
+
+        <p>Enforcement of end-of-life vehicle fuel denial in NCR has been announced, deferred and revised more than once. Anyone acting on the current position should verify the latest directive from the Commission for Air Quality Management and the Delhi Transport Department before quoting a specific car.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">How the value actually leaks</h3>
+
+        <p>The car does not stop working. What happens instead is that an NCR-registered diesel nearing the threshold gets re-sold into a non-NCR market, and the seller eats the friction of moving it there.</p>
+
+        <p>That friction has four components. Sellers routinely account for the first and forget the rest:</p>
+
+        <ol class="list-decimal ml-6 space-y-2">
+          <li>The price discount a distant-market buyer demands for an out-of-state registration</li>
+          <li>Physical transport of the car to the destination market</li>
+          <li>The NOC (No Objection Certificate) from the originating RTO, a document confirming the RTO has no claims or pending liabilities against the car. Required before it can be registered elsewhere.</li>
+          <li>Re-registration in the destination state, road-tax differential included</li>
+        </ol>
+
+        <p>Timelines slip at the NOC step. It needs a clean record at the originating RTO, and any pending challan, any hypothecation entry that has not been closed, or a mismatch in the VAHAN database against the Registration Certificate will hold it.</p>
+
+        <p>For cars already past the threshold with no viable out-of-state buyer, the residual route is the registered scrapping channel. Worth understanding before assuming zero: <a href="/blogs/car-scrappage-value-india">what a diesel car is worth at scrappage</a>.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The control case: the same diesel in a state with no age restriction</h3>
+
+        <p>Take that same 2018 Creta diesel and register it in Kochi instead of Gurugram. No fuel-specific age rule applies. The buyer pool now includes high-annual-km drivers, small-fleet operators, and families who genuinely cover 25,000+ km a year on highways where diesel's efficiency advantage still holds at scale.</p>
+
+        <p>Diesel keeps a clear premium in three places: 7-seater diesel MPVs, body-on-frame SUVs, and any car bought mainly for highway distance. In those segments the used-market question is not "petrol or diesel" at all. Buyers filter for diesel first and shop within it.</p>
+
+        <p>Diesel resale weakness in India is concentrated, not universal. It is largely an NCR and metro phenomenon driven by age rules, while highway-heavy and tier-2 markets still price diesel at a premium in specific body styles.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">CNG car resale value in India: why company-fitted and retrofitted CNG are two different assets</h2>
+
+        <p>CNG resale value has strengthened in dense-station markets, meaning Delhi-NCR, Gujarat, and parts of Maharashtra and Uttar Pradesh. Two reasons. Running-cost savings matter more at used-car price points, and CNG cars are not subject to the diesel-specific age restriction in NCR. But CNG is not one category at resale. Factory-fitted and retrofitted price differently, and the gap is mostly a documentation gap.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Company-fitted CNG</h3>
+
+        <p>Manufacturer-installed CNG, so Maruti's S-CNG, Tata's iCNG, Hyundai's Hy-CNG variants, is recorded as the fuel type on the Registration Certificate at first registration. The RC reads "Petrol/CNG" from day one. The fuel system carries manufacturer warranty. No separate RTO endorsement is ever needed, because there was never a fuel-type change to endorse.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Retrofitted CNG</h3>
+
+        <p>An aftermarket kit needs three things to be legitimate: an approved kit type, an RTO endorsement changing the fuel type on the RC, and periodic cylinder testing with a valid certificate.</p>
+
+        <p>The RC fuel-type endorsement is an RTO-recorded change to the fuel entry on the Registration Certificate, converting it from "Petrol" to "Petrol/CNG" after an approved retrofitment. Without it, the car's legal fuel type does not match its physical configuration.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What happens when the RC says "Petrol" and there is a cylinder in the boot</h3>
+
+        <p>This is the case that costs sellers real money. Worth stating flatly: an unendorsed retrofit is a documentation defect, not a fuel-type discount.</p>
+
+        <p>A dealer who spots a cylinder on an RC reading "Petrol" is looking at a car that cannot pass a fitness check in that configuration, may be refused refuelling at CNG stations that verify the RC, and carries an insurance question the seller usually cannot answer. The offer that follows is not "CNG cars are worth less." It is a discount for a compliance problem the dealer now has to fix or unwind, sometimes by pulling the kit out entirely and reselling the car as a petrol.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Boot space, the spare wheel, and the family-buyer discount</h3>
+
+        <p>The cylinder takes up boot floor and often displaces the spare wheel. For a hatchback bought by a young single owner, tolerable. For the same hatchback shown to a family of four thinking about weekend luggage, it becomes a live objection at the test drive, and objections at the test drive show up as days-to-sell, which shows up in the acquisition price.</p>
+
+        <p>Geography sets the ceiling. CNG resale is strongest where the station network is dense enough that refuelling is not a planning exercise, and weakest where a driver has to detour 15 km and then queue. The station map, not the engine.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What a CNG car with an expired cylinder certificate does to the offer</h3>
+
+        <p>A CNG cylinder needs periodic hydro-testing, and the resulting certificate is what proves the cylinder is safe to keep under pressure. Without a valid one, refuelling can be refused and the car's fitness position turns uncertain.</p>
+
+        <p>Regularising it is a testing-centre visit and a fee. The offer reduction a seller absorbs for turning up without it is usually a multiple of that fee, because the dealer is pricing the hassle and the uncertainty rather than the test.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Fuel type vs city: the same car, four registration cities, four different offers</h2>
+
+        <p>Hold everything else constant and fuel type shows itself as a city variable. One model, one model year, one odometer band, priced as petrol, diesel and CNG across four markets with different rules, fuel prices and station networks.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Registration city</th>
+                <th class="py-2 pr-3">Petrol</th>
+                <th class="py-2 pr-3">Diesel</th>
+                <th class="py-2 pr-3">CNG</th>
+                <th class="py-2">Why this city behaves this way</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Delhi-NCR</td><td class="py-2 pr-3">Baseline</td><td class="py-2 pr-3">Discount</td><td class="py-2 pr-3">Premium</td><td class="py-2">Diesel age rule cuts remaining runway; CNG unrestricted with the densest station network</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Mumbai</td><td class="py-2 pr-3">Premium</td><td class="py-2 pr-3">Near baseline</td><td class="py-2 pr-3">Premium</td><td class="py-2">High pump prices and strong CNG network; parking and traffic favour smaller petrol and CNG</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Bengaluru</td><td class="py-2 pr-3">Premium</td><td class="py-2 pr-3">Discount in hatch/sedan</td><td class="py-2 pr-3">Near baseline</td><td class="py-2">Traffic profile suits petrol and petrol-automatic; diesel demand thin in hatch and sedan</td></tr>
+              <tr><td class="py-2 pr-3">Tier-2 highway (Indore, Jaipur)</td><td class="py-2 pr-3">Baseline</td><td class="py-2 pr-3">Premium</td><td class="py-2 pr-3">Discount</td><td class="py-2">Highway running sustains diesel demand; thinner CNG network compresses CNG premium</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>In Delhi-NCR, CNG beats petrol beats diesel. In tier-2 highway markets, diesel beats petrol beats CNG. That single line is the whole argument of this page. There is no national winner. There is a winner per registration city, and the ranking inverts across a state border a few hundred kilometres apart.</p>
+
+        <p>Mumbai and Bengaluru sit between the poles for different reasons. Mumbai's CNG strength is infrastructure-led. Bengaluru's petrol strength is traffic-led, because stop-start commuting erodes diesel's efficiency advantage to the point where the buyer stops paying for it.</p>
+
+        <p>For the broader picture of how markets diverge beyond fuel, see <a href="/blogs/used-car-resale-value-by-city-india">city-wise used car resale premiums</a>.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">5-year retention by fuel type: petrol, diesel and CNG on one table</h2>
+
+        <p>Every competitor table on this topic has three rows. Three rows is wrong. Diesel in NCR and diesel outside NCR are different assets, factory CNG and retrofit CNG are different assets, and six rows is the minimum honest structure.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Fuel type</th>
+                <th class="py-2 pr-3">Buyer-pool trend</th>
+                <th class="py-2">Biggest single risk to value</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Petrol (small / mid, under 1.5L)</td><td class="py-2 pr-3">Stable, broadest base</td><td class="py-2">Segment oversupply in high-volume hatchbacks</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Petrol (large displacement, 2.0L+)</td><td class="py-2 pr-3">Narrowing in metros</td><td class="py-2">Running cost re-enters the buyer's maths at used price points</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Diesel (NCR-registered)</td><td class="py-2 pr-3">Shrinking as threshold nears</td><td class="py-2">Age rule compresses remaining legal life</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Diesel (non-NCR)</td><td class="py-2 pr-3">Stable in SUV / MPV, thinning in hatch and sedan</td><td class="py-2">Body-style dependent; weak outside SUV and MPV</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">CNG (company-fitted)</td><td class="py-2 pr-3">Growing in dense-station markets</td><td class="py-2">Station network limits geographic buyer reach</td></tr>
+              <tr><td class="py-2 pr-3">CNG (retrofitted, RC endorsed)</td><td class="py-2 pr-3">Growing but discounted to factory-fitted</td><td class="py-2">Expired cylinder certificate; kit approval status</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>How to read this table. Retention is the resale price as a percentage of original ex-showroom price at a given age, and it moves together for rows within the same age column. A row with a lower Year 3 figure but a flatter slope to Year 7 can cost less over a full holding period than a row that starts high and drops. For anyone holding beyond five years, the risk column matters more than the percentages do.</p>
+
+        <p>Retention curves are not linear, and the steepest drop lands earlier than most owners expect. <a href="/blogs/new-car-depreciation-india">How car depreciation works year by year</a> breaks the curve down annually.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Electric cars and fuel-type resale: the early signals, and why they are not comparable yet</h2>
+
+        <p>Used EV resale cannot sit on the same retention curve as petrol, diesel and CNG. Three structural reasons, none of them a shortage of enthusiasm.</p>
+
+        <p>Battery state-of-health is an unpriced variable in the Indian used market right now. No standardised, universally accepted health report exists that a buyer, a seller and a dealer all trust, which means the largest single component of the car's value gets estimated rather than measured. Second, the used-EV buyer pool is still small enough that individual transactions move the observed average. Third, battery warranty transferability to a second owner varies by manufacturer, and that difference alone can swing an offer further than the odometer reading does.</p>
+
+        <p>Anyone evaluating a used EV should ask for a dated battery state-of-health report from an authorised service centre before discussing price.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Choosing a fuel type for resale: four buyer situations, four different verdicts</h2>
+
+        <p>Fuel-type advice fails when it is given nationally. It works when it is matched to a specific combination of annual kilometres, registration city and holding period. Four common situations below, with the arithmetic behind each verdict.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The 12,000 km/year city driver planning to sell in 4 years</h3>
+        <p>Petrol, in a sub-1.5L engine. At 12,000 km a year, the fuel-cost gap between petrol and diesel never accumulates enough to offset diesel's higher acquisition cost and higher maintenance ceiling. A four-year hold ends well inside any age threshold, so remaining-life risk is nil. This is the segment where the retention curve is flattest and the resale buyer pool is largest.</p>
+        <p>CNG works as an alternative here only in a dense-station city, and only company-fitted.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The 25,000 km/year highway driver in a non-NCR state</h3>
+        <p>Diesel, if the car is an SUV or a 7-seater MPV. At 25,000 km annually the running-cost advantage compounds into real money across a five-year hold, and the resale buyer pool in non-NCR markets specifically filters for diesel in those body styles. The verdict flips for a hatchback or compact sedan, where diesel resale demand outside NCR has thinned considerably.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The Delhi-NCR buyer with a 6-year holding horizon</h3>
+        <p>Not diesel. Six years in NCR means selling into a market where the remaining runway is the first thing the next buyer calculates, and the offer reflects it. Petrol or company-fitted CNG both work. CNG carries the extra advantage that NCR has the country's densest station network, so the resale buyer pool is genuinely deep rather than theoretically deep.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The buyer considering a retrofit CNG kit on a car they already own</h3>
+        <p>Retrofitting purely to lift resale rarely pays. The cost stack runs to the kit, the fitment, the RTO endorsement fee and the time to get the RC updated, plus the cylinder test certificate. Set against that, the used-market premium for a retrofitted CNG car is smaller than the premium for a factory-fitted one, because dealers price the kit's provenance and the boot compromise. A retrofit that recovers its cost usually does so through fuel savings during a genuine period of ownership, not through the resale offer.</p>
+        <p>One case where it clearly does not work: retrofitting in the last few months before sale. There is no fuel saving to bank, and the RC endorsement may not complete before the sale date, which lands the seller in exactly the unendorsed-RC position described earlier.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Frequently asked questions</h2>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Which fuel type has the best resale value in India in 2026?</h3>
+        <p>It depends on the registration city, not on the fuel itself. In Delhi-NCR, CNG generally holds best, followed by petrol, with diesel weakest due to age-based restrictions. In tier-2 and highway-heavy markets, diesel leads in SUV and MPV body styles. Petrol is the safest national default because it faces no fuel-specific restriction anywhere and has the broadest buyer pool in every market.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Why is diesel car resale value falling in India?</h3>
+        <p>Three forces at once. Age-based registration rules in NCR shrink the buyer pool for older diesels in the country's largest used-car market. The running-cost gap between petrol and diesel has narrowed at current pump prices, weakening diesel's core financial argument. And manufacturers withdrawing diesel from small-car segments thins used supply and used demand simultaneously.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is a CNG car good for resale value in India?</h3>
+        <p>Yes, in markets with a dense CNG station network: Delhi-NCR, Gujarat, and parts of Maharashtra and UP. The qualifier is documentation, not demand. A CNG car with a valid cylinder test certificate and a Registration Certificate that correctly shows the CNG fuel type resells well. Company-fitted CNG resells materially better than a retrofitted kit.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does fitting an aftermarket CNG kit reduce resale value?</h3>
+        <p>Not automatically. An unendorsed RC does. If the retrofitment used an approved kit and the RTO has endorsed the fuel-type change on the Registration Certificate, the car is legitimate and prices as a CNG car, at a modest discount to factory-fitted. If the RC still reads "Petrol," the dealer is pricing a compliance defect. Boot space and spare-wheel loss is the second discount driver.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Petrol vs diesel resale after 5 years, what is the actual difference?</h3>
+        <p>The split matters more than the average. An NCR-registered diesel at five years has roughly half its usable registration life remaining, while a non-NCR diesel at five years has no such constraint. Body style is the exception: 7-seater diesel MPVs and body-on-frame diesel SUVs outside NCR often match or beat their petrol equivalents at five years.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Can a 10-year-old diesel car registered in Delhi be sold outside NCR?</h3>
+        <p>The route is an NOC from the originating RTO followed by re-registration in the destination state. The NOC confirms the Delhi RTO has no pending claims against the car. Pending challans, an open hypothecation entry, or a VAHAN-to-RC data mismatch will hold it. The seller absorbs the transport, the tax differential and the out-of-state discount. Whether a specific destination state is accepting end-of-life NCR vehicles should be confirmed before spending on transport.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is CNG resale value in Delhi better than petrol?</h3>
+        <p>Yes, and the reason is structural. CNG cars are not subject to the diesel-specific age restriction in NCR, and Delhi has the densest CNG station network in the country, so the resale buyer pool is deep rather than nominal.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does fuel type affect a used car's insurance IDV?</h3>
+        <p>Yes, indirectly. IDV, the Insured Declared Value, is the maximum a policy pays on total loss, and it is calculated from the manufacturer's listed selling price minus a standard depreciation schedule. Because a CNG variant carries a higher ex-showroom price than the petrol equivalent, that difference carries into the IDV. Aftermarket CNG kits are generally not covered unless separately declared and endorsed on the policy. Full mechanics: <a href="/blogs/idv-calculator-india">how IDV is calculated</a>.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Should a diesel car be sold before it hits the 10-year mark in NCR?</h3>
+        <p>Value decay accelerates as the threshold approaches, because every passing month cuts the buyer's remaining runway. Selling with meaningful registration life left preserves both the local buyer pool and the out-of-state option.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Do CNG cars need more maintenance, and does that affect resale?</h3>
+        <p>CNG running calls for more frequent spark-plug replacement and adds the periodic cylinder hydro-test to the schedule. Neither is expensive. What affects resale is whether any of it was documented. A CNG car with a complete service record and a current cylinder certificate inspects cleanly. The same car without records invites a discount for uncertainty, and that discount usually runs larger than the maintenance cost would have been.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is a company-fitted CNG car worth the extra ex-showroom cost at resale?</h3>
+        <p>The structural advantage of factory CNG is that it never needs an RC fuel-type endorsement, which removes the single most common documentation problem in used CNG transactions. Whether the used-market premium recovers the new-car factory-CNG premium in full depends on the model, the city and the age at sale, and is not universal.</p>
+
+        <p class="mt-10">Before setting a price, pull the Registration Certificate and read two fields: the fuel type as recorded, and the registration date. Those two entries decide which row a car actually belongs to. Not the odometer. Not the service history. A retrofit with an unendorsed RC and an NCR diesel eight months from its threshold are both cars whose problem is fixable on paper before the first buyer ever sees them.</p>
+
+        <div class="card-institutional bg-cream-100 mt-10">
+          <h3 class="text-xl font-serif text-navy-900 mb-3">Check your car's value by fuel type</h3>
+          <p class="text-graphite mb-4">Free, no signup, no phone number. The same inputs with a different registration city produce a different number, and that is the point.</p>
+          <a href="/valuation" class="inline-block px-6 py-3 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors no-underline">Check car value →</a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>

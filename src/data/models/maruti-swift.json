@@ -109,15 +109,31 @@
     { "city": "Ahmedabad",  "variancePct":  0, "note": "CNG-heavy, near-baseline overall" }
   ],
   "retentionCurve": [
-    { "ageYears": 1, "retentionPct": 85 },
-    { "ageYears": 2, "retentionPct": 75 },
-    { "ageYears": 3, "retentionPct": 67 },
-    { "ageYears": 4, "retentionPct": 60 },
-    { "ageYears": 5, "retentionPct": 53 }
+    { "ageYears": 0.5, "retentionPct": 92 },
+    { "ageYears": 1,   "retentionPct": 85 },
+    { "ageYears": 1.5, "retentionPct": 80 },
+    { "ageYears": 2,   "retentionPct": 75 },
+    { "ageYears": 2.5, "retentionPct": 71 },
+    { "ageYears": 3,   "retentionPct": 67 },
+    { "ageYears": 3.5, "retentionPct": 63 },
+    { "ageYears": 4,   "retentionPct": 60 },
+    { "ageYears": 4.5, "retentionPct": 56 },
+    { "ageYears": 5,   "retentionPct": 53 },
+    { "ageYears": 5.5, "retentionPct": 50 },
+    { "ageYears": 6,   "retentionPct": 47 },
+    { "ageYears": 6.5, "retentionPct": 44 },
+    { "ageYears": 7,   "retentionPct": 41 },
+    { "ageYears": 7.5, "retentionPct": 38 },
+    { "ageYears": 8,   "retentionPct": 36 },
+    { "ageYears": 8.5, "retentionPct": 34 },
+    { "ageYears": 9,   "retentionPct": 32 },
+    { "ageYears": 9.5, "retentionPct": 30 },
+    { "ageYears": 10,  "retentionPct": 28 }
   ],
   "segmentAverageRetention": {
     "3year": 60,
-    "5year": 46
+    "5year": 46,
+    "10year": 22
   },
   "context": [
     "The Swift has been India's highest-volume hatchback in most years since its 2005 launch, and that scale is the single biggest driver of its resale strength. Parts availability at Maruti's Arena network, mechanic familiarity in every town, and buyer trust in the badge together create a resale floor no direct competitor matches.",

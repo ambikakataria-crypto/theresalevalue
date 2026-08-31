@@ -141,6 +141,7 @@ const DEFAULT_PREVIEW = {
 export default function NewCarDepreciationCalculator() {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
+  const [variant, setVariant] = useState('');
   const [mfgYear, setMfgYear] = useState<number>(new Date().getFullYear());
   const [exShowroom, setExShowroom] = useState<number>(DEFAULT_PREVIEW.exShowroom);
   const [fuel, setFuel] = useState<Fuel>(DEFAULT_PREVIEW.fuel);
@@ -156,7 +157,7 @@ export default function NewCarDepreciationCalculator() {
       return;
     }
     setHasInteracted(true);
-  }, [make, model, mfgYear, exShowroom, fuel, citySlug]);
+  }, [make, model, variant, mfgYear, exShowroom, fuel, citySlug]);
 
   // Year picker: allow current year and 4 back (used but very lightly aged buys).
   const currentYear = new Date().getFullYear();
@@ -282,6 +283,18 @@ export default function NewCarDepreciationCalculator() {
           </div>
 
           <div>
+            <label className="block text-sm font-medium text-navy-900 mb-1.5">Variant</label>
+            <input
+              type="text"
+              value={variant}
+              onChange={(e) => setVariant(e.target.value)}
+              placeholder="e.g. VXi, Alpha, Creative"
+              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
+            />
+            <div className="text-xs text-slate-soft mt-1">Enter trim as it appears on the RC or brochure.</div>
+          </div>
+
+          <div>
             <label className="block text-sm font-medium text-navy-900 mb-1.5">
               Year of manufacture
             </label>
@@ -376,7 +389,7 @@ export default function NewCarDepreciationCalculator() {
             <div className="text-xs uppercase tracking-widest text-slate-soft mb-1">10-year forecast</div>
             <div className="text-xl font-serif text-navy-900">
               {hasInteracted
-                ? `${selectedMake?.title || 'Your'} ${selectedModel?.title || 'new car'}`
+                ? `${selectedMake?.title || 'Your'} ${selectedModel?.title || 'new car'}${variant.trim() ? ` ${variant.trim()}` : ''}`
                 : `${DEFAULT_PREVIEW.makeLabel} ${DEFAULT_PREVIEW.modelLabel}`}
             </div>
             <div className="text-sm text-graphite mt-1">

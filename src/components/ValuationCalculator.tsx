@@ -58,7 +58,59 @@ function deriveConfidence(low: number, high: number, expected: number): 'High' |
   return 'Lower';
 }
 
+// Two-letter state code to canonical Cars24 city slug we can prefill after
+// parsing a registration number. Not exhaustive but covers the metros and
+// tier-1 cities that account for the bulk of valuation requests. Anything
+// outside this map falls back to the user picking a city manually.
+const STATE_CODE_TO_CITY_SLUG: Record<string, string> = {
+  DL: 'delhi',
+  HR: 'gurgaon',
+  UP: 'noida',
+  MH: 'mumbai',
+  KA: 'bengaluru',
+  TN: 'chennai',
+  TS: 'hyderabad',
+  AP: 'visakhapatnam',
+  WB: 'kolkata',
+  GJ: 'ahmedabad',
+  RJ: 'jaipur',
+  PB: 'ludhiana',
+  KL: 'kochi',
+  MP: 'indore',
+  CH: 'chandigarh',
+  JK: 'jammu',
+  UK: 'dehradun',
+  BR: 'patna',
+  OD: 'bhubaneswar',
+  JH: 'ranchi',
+  AS: 'guwahati',
+};
+
+// Loose but forgiving Indian RC pattern: XX 00 X(X) 0000
+// Accepts the common variants "DL01AB1234", "DL 01 AB 1234", "MH-12-AB-1234"
+// and the newer BH-series numbers.
+function normaliseReg(raw: string): string {
+  return raw.replace(/[\s-]+/g, '').toUpperCase();
+}
+
+function isValidReg(reg: string): boolean {
+  const r = normaliseReg(reg);
+  if (/^[A-Z]{2}\d{2}[A-Z]{1,2}\d{4}$/.test(r)) return true;      // Standard state series
+  if (/^\d{2}BH\d{4}[A-Z]{1,2}$/.test(r)) return true;             // BH-series (year prefix)
+  return false;
+}
+
+function stateCodeFor(reg: string): string | null {
+  const r = normaliseReg(reg);
+  if (/^\d{2}BH/.test(r)) return null; // BH-series has no state
+  const m = r.match(/^([A-Z]{2})/);
+  return m ? m[1] : null;
+}
+
 export default function ValuationCalculator() {
+  const [regNumber, setRegNumber] = useState('');
+  const [regBusy, setRegBusy] = useState(false);
+  const [regMessage, setRegMessage] = useState<string | null>(null);
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [year, setYear] = useState('');
@@ -204,6 +256,84 @@ export default function ValuationCalculator() {
     setPricingError(null);
   };
 
+  // Attempt to auto-fill make, model and city from an Indian registration
+  // number. The state-code -> city prefill runs entirely client-side. A real
+  // RC to make/model lookup requires a licensed VAHAN backend; when one is
+  // wired up at `/api/rc-lookup`, we consume it here. Until then we tell
+  // the user to fill make/model manually and we prefill city where we can.
+  const detectFromReg = async () => {
+    const reg = normaliseReg(regNumber);
+    if (!reg) {
+      setRegMessage('Enter a registration number to try auto-detect.');
+      return;
+    }
+    if (!isValidReg(reg)) {
+      setRegMessage('That does not look like a valid Indian registration. Example: DL01AB1234.');
+      return;
+    }
+    setRegBusy(true);
+    setRegMessage(null);
+
+    // Prefill city from state code (free, no lookup required).
+    const stateCode = stateCodeFor(reg);
+    const citySlugGuess = stateCode ? STATE_CODE_TO_CITY_SLUG[stateCode] : null;
+    if (citySlugGuess && cities.some((c) => c.slug === citySlugGuess)) {
+      setCity(citySlugGuess);
+    }
+
+    // Try a real RC lookup if the backend is wired. Fails silently when the
+    // endpoint is absent so the user still gets the state-based city prefill.
+    try {
+      const res = await fetch(`/api/rc-lookup?reg=${encodeURIComponent(reg)}`);
+      if (res.ok) {
+        const data = await res.json() as {
+          make?: string;
+          model?: string;
+          year?: string;
+          fuelType?: string;
+        };
+        if (data.make) {
+          const matched = makes.find((m) => slugify(m.title) === slugify(data.make!));
+          if (matched) setMake(slugify(matched.title));
+        }
+        // Model and year prefill happen after the make-triggered list loads,
+        // so we stash them for a follow-up effect once options arrive.
+        if (data.model) setPendingModel(slugify(data.model));
+        if (data.year) setPendingYear(data.year);
+        setRegMessage(`Found ${data.make || ''} ${data.model || ''} ${data.year ? `(${data.year})` : ''}. Confirm and add km driven below.`.trim());
+        setRegBusy(false);
+        return;
+      }
+    } catch {
+      // Ignore; fall through to the fallback message below.
+    }
+
+    setRegMessage(
+      citySlugGuess
+        ? `Registered in ${stateCode}. City set to ${citySlugGuess.replace(/^\w/, (c) => c.toUpperCase())}. Please confirm make, model and variant below.`
+        : 'Registration read. Please enter make, model and variant below.'
+    );
+    setRegBusy(false);
+  };
+
+  // Deferred prefills that need dropdown options to finish loading first.
+  const [pendingModel, setPendingModel] = useState<string | null>(null);
+  const [pendingYear, setPendingYear] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (pendingModel && models.some((m) => slugify(m.title) === pendingModel)) {
+      setModel(pendingModel);
+      setPendingModel(null);
+    }
+  }, [pendingModel, models]);
+
+  useEffect(() => {
+    if (pendingYear && years.some((y) => y.id === pendingYear)) {
+      setYear(pendingYear);
+      setPendingYear(null);
+    }
+  }, [pendingYear, years]);
+
   if (submitted && result) {
     const tier = result.byCondition[condition];
     const low = toLakhs(tier.low);
@@ -346,6 +476,40 @@ export default function ValuationCalculator() {
     <form onSubmit={handleSubmit} className="card-institutional bg-white max-w-2xl">
       <div className="text-xs uppercase tracking-widest text-slate-soft mb-4">Free · 30 seconds · No signup</div>
       <h2 className="text-2xl font-serif text-navy-900 mb-6">Tell us about your vehicle</h2>
+
+      {/* Lead-in: registration number. Auto-fills make/model/year/city where
+          we can, and falls through to the manual dropdowns below otherwise. */}
+      <div className="mb-6 p-4 bg-cream-100 rounded-md border border-cream-200">
+        <label htmlFor="rc-number" className="block text-xs uppercase tracking-widest text-slate-soft mb-2">
+          Start with your registration number
+        </label>
+        <div className="flex flex-col sm:flex-row gap-2">
+          <input
+            id="rc-number"
+            type="text"
+            value={regNumber}
+            onChange={(e) => { setRegNumber(e.target.value); setRegMessage(null); }}
+            placeholder="e.g. DL 01 AB 1234"
+            autoComplete="off"
+            inputMode="text"
+            className="flex-1 px-3 py-2.5 bg-white border border-cream-200 rounded-md text-sm font-data uppercase tracking-wider focus:border-navy-900 focus:outline-none"
+          />
+          <button
+            type="button"
+            onClick={detectFromReg}
+            disabled={regBusy || !regNumber.trim()}
+            className="px-5 py-2.5 bg-navy-900 !text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors disabled:opacity-50 whitespace-nowrap"
+          >
+            {regBusy ? 'Detecting…' : 'Auto-detect'}
+          </button>
+        </div>
+        {regMessage && (
+          <div className="text-xs text-graphite mt-2 leading-relaxed">{regMessage}</div>
+        )}
+        <div className="text-xs text-slate-soft mt-2 leading-relaxed">
+          We use it only to look up make, model, and city. We don't store it, and we don't share it.
+        </div>
+      </div>
 
       {pricingError && (
         <div role="alert" className="mb-6 p-3 bg-caution-500/10 border border-caution-500/30 rounded-md text-xs text-graphite leading-relaxed">

@@ -98,15 +98,31 @@
     { "city": "Ahmedabad",  "variancePct":  1, "note": "CNG-heavy, near-baseline" }
   ],
   "retentionCurve": [
-    { "ageYears": 1, "retentionPct": 82 },
-    { "ageYears": 2, "retentionPct": 71 },
-    { "ageYears": 3, "retentionPct": 62 },
-    { "ageYears": 4, "retentionPct": 54 },
-    { "ageYears": 5, "retentionPct": 47 }
+    { "ageYears": 0.5, "retentionPct": 91 },
+    { "ageYears": 1,   "retentionPct": 82 },
+    { "ageYears": 1.5, "retentionPct": 76 },
+    { "ageYears": 2,   "retentionPct": 71 },
+    { "ageYears": 2.5, "retentionPct": 66 },
+    { "ageYears": 3,   "retentionPct": 62 },
+    { "ageYears": 3.5, "retentionPct": 58 },
+    { "ageYears": 4,   "retentionPct": 54 },
+    { "ageYears": 4.5, "retentionPct": 50 },
+    { "ageYears": 5,   "retentionPct": 47 },
+    { "ageYears": 5.5, "retentionPct": 44 },
+    { "ageYears": 6,   "retentionPct": 41 },
+    { "ageYears": 6.5, "retentionPct": 38 },
+    { "ageYears": 7,   "retentionPct": 36 },
+    { "ageYears": 7.5, "retentionPct": 33 },
+    { "ageYears": 8,   "retentionPct": 31 },
+    { "ageYears": 8.5, "retentionPct": 29 },
+    { "ageYears": 9,   "retentionPct": 27 },
+    { "ageYears": 9.5, "retentionPct": 25 },
+    { "ageYears": 10,  "retentionPct": 24 }
   ],
   "segmentAverageRetention": {
     "3year": 63,
-    "5year": 48
+    "5year": 48,
+    "10year": 24
   },
   "context": [
     "The Nexon is Tata's best-selling model and India's top-selling sub-4m SUV in most quarters since 2022. Resale strength lags Maruti and Hyundai peers by 3 to 5 percentage points at three years, reflecting Tata's smaller service network and slower parts turnaround in tier-2 cities, though the gap has narrowed each year since the 2023 facelift.",

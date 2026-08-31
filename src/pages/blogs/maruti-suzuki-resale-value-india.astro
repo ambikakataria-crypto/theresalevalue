@@ -1,0 +1,369 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { displayDateFor } from '../../data/blogs';
+
+const title = 'Maruti Suzuki resale value in India: 10 models ranked by 5-year retention (2026)';
+const description = 'Roughly 20 percentage points separate the strongest-holding Maruti from the weakest at five years. The Maruti vs Hyundai brand gap is closer to 5. Ten models ranked, the variant trap, Nexa vs Arena, the city effect, and what a full inspection actually finds before an offer is made.';
+const publishedOn = displayDateFor('maruti-suzuki-resale-value-india');
+---
+<BaseLayout title={title} description={description}>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="mb-8">
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/blogs">← All blogs</a>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">Model · Brand</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+          Maruti Suzuki resale value in India: 10 models ranked by 5-year retention (2026)
+        </h1>
+        <div class="text-sm text-slate-soft">
+          {publishedOn && (
+            <>
+              <time datetime={publishedOn.iso}>{publishedOn.label}</time>
+              <span class="mx-2">·</span>
+            </>
+          )}
+          <span>16 min read</span>
+        </div>
+      </div>
+
+      <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
+
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
+          <strong class="text-navy-900">Editorial framework, not a quote.</strong> Retention percentages, spread figures and offer bands below describe observed patterns on TheResaleValue valuations and are illustrative. Actual bids depend on the specific car, its condition, and the city and week of sale.
+        </div>
+
+        <p class="text-xl leading-relaxed">At five years, roughly 20 percentage points separate the strongest-holding Maruti from the weakest-holding one. Maruti's brand average against Hyundai's brand average? Closer to 5. That bit of arithmetic reverses the advice most buyers act on. Picking the right Maruti model matters roughly four times more to the resale outcome than picking Maruti over a rival badge.</p>
+
+        <p>This page carries a 10-model retention table, segment-level retention curves from Year 1 to Year 7, variant-level spread inside the same model, and the city effects that swing the same car's bid by tens of thousands of rupees between Delhi and Kochi. A <a href="/valuation">free used car valuation</a> will give a number for one specific car. This page explains why that number lands where it does.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Maruti Suzuki's resale premium is a liquidity premium: what buyers are actually paying for</h2>
+
+        <p>Maruti resale value in India is high mainly because Maruti cars sell fast, not because they last longer than everything else. The premium is a liquidity premium: buyers pay extra for a car they know they can exit quickly, at a predictable price, to a large pool of second-hand buyers spread across metros, tier-2 and tier-3 towns.</p>
+
+        <p>Liquidity premium, in plain language, means the extra amount a buyer will pay because the car can be resold again easily. A share that trades every second is worth more than an identical share nobody buys. Used cars work the same way.</p>
+
+        <p>Three mechanisms produce it. The first is buyer-pool depth. A used Swift listed in Nashik, Hubballi or Muzaffarpur draws enquiries within days, because there is a service point within reach and every mechanic on the highway has opened up a K-series engine at some point. A European-badged hatchback listed in the same town often draws none, and the seller ends up shipping it to Pune or Bengaluru to find a buyer at all.</p>
+
+        <p>Repair-cost certainty is the second. A used-car buyer inspecting a WagonR can predict what a clutch job costs, what a set of front struts costs, what a windshield costs. That predictability gets priced in. Uncertainty about a future repair bill is always discounted at purchase.</p>
+
+        <p>Third is exit certainty. Organised buyers, whether that is Maruti True Value, the platform buyers, or the local multi-brand dealer on the arterial road, will always bid on a clean Maruti. That creates a floor. Even a poorly presented car has a buyer at some price, which means the seller is never negotiating from zero.</p>
+
+        <p>Most people read Maruti's resale premium as a durability signal. That is only half the story. Several non-Maruti models are mechanically comparable or better and still retain less, purely because their resale queue is shorter. Which sets up the point that follows: the Maruti premium collapses on Maruti models whose own buyer pool is thin.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The intra-brand spread: why the gap between the best and worst Maruti is wider than the Maruti-vs-Hyundai gap</h2>
+
+        <p>Choosing the right Maruti model matters more for resale than choosing Maruti over another brand. The spread between the best-holding and weakest-holding Maruti at five years is around 20 percentage points, while the Maruti-versus-Hyundai brand-average spread sits near 5. Model choice, not badge choice, drives the outcome.</p>
+
+        <p>Four variables create that spread. None of them is build quality.</p>
+
+        <p><strong class="text-navy-900">Body style demand.</strong> Compact SUV and MPV bodies have a wider second-hand audience today than mid-size sedans do. A Brezza and a Ciaz of identical age and condition are competing for very different queues.</p>
+
+        <p><strong class="text-navy-900">Fuel option availability.</strong> A model offered with factory CNG has a demand layer the petrol-only version does not: commercial users, high-running private owners, and buyers in Gujarat, Delhi-NCR and coastal Maharashtra where CNG infrastructure is dense.</p>
+
+        <p><strong class="text-navy-900">New-car discount depth.</strong> When a model carries heavy scheme support at the dealership, the price of the equivalent one-year-old car has to sit meaningfully below the discounted new price. Discounting on the new car quietly drags the used car down with it.</p>
+
+        <p><strong class="text-navy-900">Finance-driven new-car substitution.</strong> Under-discussed, this one. When a brand-new entry hatchback is available at a very low monthly EMI with a small down payment, a buyer who was considering a four-year-old version of that same car often buys new instead. The used queue for entry models thins out because the alternative is a new car with a warranty at a similar monthly outgo. That mechanism is why entry hatchbacks sit at the bottom of the retention table despite being the brand's most reliable products.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Which Maruti has the best resale value: the five models that clear the mid-50s at five years</h2>
+
+        <p>The Maruti Swift holds value best over five years, followed closely by the Baleno, Brezza, Ertiga and the factory-CNG WagonR. All five clear the mid-50s in percentage retention at five years and average kilometres. Each one holds because of a specific demand mechanism, not because of a spec-sheet advantage.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Swift: the resale benchmark the whole segment is priced against</h3>
+
+        <p>The Swift is the reference price for the used premium-hatchback band. Dealers quote other hatchbacks relative to it: "₹40,000 under a same-year Swift" is an actual sentence used at procurement desks. That reference status feeds itself, because a car everyone prices against is a car everyone can price quickly.</p>
+
+        <p>Retention runs roughly 68 to 72% at three years and 55 to 60% at five years at average kilometres.</p>
+
+        <p>Fuel history matters more than most sellers realise. The Swift has been petrol-only since the 2020 BS6 transition, so any diesel Swift in the market is a pre-2020 DDiS car. In Delhi-NCR those cars ran into the vehicle-age restriction well before their mechanical life ended, and their values reset accordingly. A 2013 or 2015 DDiS Swift in Delhi trades on its value in Jaipur or Lucknow, not in Delhi.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Baleno: the Nexa-channel premium hatchback and its narrower buyer pool</h3>
+
+        <p>The Baleno retains strongly in percentage terms, roughly 66 to 70% at three years and 54 to 58% at five. But the absolute prices are higher, so the rupee loss is larger than the Swift's even when the percentage looks similar. A seller comparing the two should be clear about which number matters to them.</p>
+
+        <p>Its buyer pool is also narrower at the top end. A fully loaded Baleno's used price starts overlapping with entry compact SUVs, and at that overlap point a chunk of buyers walks across the segment line. That ceiling is what the variant section below deals with in detail.</p>
+
+        <p>Buyers in Hyderabad often find Baleno inventory moves faster than in tier-3 Telangana towns, where the Nexa service question comes up during the negotiation itself.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Brezza: the compact SUV that keeps a floor under itself</h3>
+
+        <p>The Brezza holds because the body style holds. Compact SUV demand in the used market has been the strongest structural trend of the last five years, and the Brezza sits in the middle of the band where budgets concentrate.</p>
+
+        <p>Retention is roughly 67 to 71% at three years and 56 to 60% at five.</p>
+
+        <p>The diesel story splits by geography, and this is where the same car is not the same asset. The 1.3 DDiS Brezza built before the petrol-only switch is effectively locked out of Delhi-NCR once it crosses the age line, so NCR bids on those cars get quoted assuming an interstate sale. In Kerala and interior Maharashtra, the same diesel Brezza retains meaningfully better, because there is no age restriction and running-cost economics still favour diesel over long daily distances. Kochi is different again: a large share of buyers there run 60 to 80 km daily commutes on state highways, and diesel demand has not softened the way it has up north.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Ertiga: the MPV with a second, non-retail demand source</h3>
+
+        <p>Everything above competes for private buyers only. The Ertiga does not. It has a second bidder class in tourist-permit operators, corporate transport fleets, airport and hotel contract runs, and that layer puts a hard floor under 5 to 7-year values that no hatchback enjoys.</p>
+
+        <p>Retention sits around 70 to 73% at three years and 58 to 62% at five, and the seven-year figure holds up better than anything else in the range.</p>
+
+        <p>The practical effect shows up in cities with heavy contract-transport activity. In Bengaluru, where IT-park employee transport runs on MPVs, a high-kilometre Ertiga that a private buyer would reject outright still gets a serious fleet bid.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">WagonR CNG: the factory-fitted CNG anomaly</h3>
+
+        <p>The WagonR is usually filed as a resale laggard. That is half the picture. The petrol WagonR and the factory-fitted S-CNG WagonR do not behave like the same car in the used market.</p>
+
+        <p>Factory CNG carries a resale premium. An aftermarket kit generally does not, and can subtract value. Two reasons for that. The factory car's CNG system is endorsed on the Registration Certificate from day one and is covered under the manufacturer warranty history, so there is no paperwork risk for the next buyer. An aftermarket installation has to be endorsed on the RC separately, and when that endorsement is missing, the buyer inherits a compliance problem and a possible insurance complication.</p>
+
+        <p>Delhi-NCR and Gujarat carry the strongest CNG bids, and the premium narrows sharply in cities with thin CNG station coverage. The fuel-type layer is covered in detail in <a href="/blogs/petrol-diesel-cng-resale-value-india">petrol, diesel and CNG resale differences in 2026</a>.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Alto, S-Presso and Ciaz: the three weakest Maruti resale performers and the structural reason behind each</h2>
+
+        <p>A low retention percentage does not indicate a mechanical problem. The Alto K10, S-Presso and Ciaz retain least among mainstream Maruti models, and in each case the cause is structural, low new-car price, a young secondary market, or a shrinking body style, not build quality.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Alto: low new-car price is the cause, not low quality</h3>
+
+        <p>The percentage-versus-rupees trap catches almost every Alto seller. When the new price is small, an ordinary rupee drop reads as a large percentage drop. A ₹60,000 fall on a ₹5 lakh car is 12%; the identical ₹60,000 fall on a ₹12 lakh car is 5%. The Alto is not depreciating harder in absolute money. It is depreciating from a smaller base.</p>
+
+        <p>Finance substitution compounds it. A new Alto K10 at a low EMI competes directly with a four-year-old Alto K10, and enough buyers choose new that the used queue stays short.</p>
+
+        <p>Then there is the age horizon. The oldest Alto examples on the road are approaching the 15-year mark in NCR, and once a car sits within two or three years of a de-registration limit, bids in that region drop steeply regardless of condition.</p>
+
+        <p>Five-year retention typically lands in the low 40s.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">S-Presso: a thin secondary market because the model is still young</h3>
+
+        <p>The S-Presso's production history is short, which means fewer comparable transactions, which means wider price uncertainty, which means conservative dealer bids. That chain is the whole explanation.</p>
+
+        <p>Dealers price against comparables. When only a handful of same-year, same-variant S-Presso sales exist in a given market, the desk protects itself by bidding low and holding a bigger margin buffer. This is a market-maturity effect, and it narrows as volume accumulates. The same pattern showed up on the Ignis and on early Brezza stock before their comparable sets filled out.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Ciaz: the mid-size sedan segment contraction</h3>
+
+        <p>The Ciaz's retention curve tracks its body style, not its badge. Used mid-size sedan demand has been absorbed almost entirely by compact SUVs, because at any given used budget a buyer can now choose between a sedan and an SUV of similar age, and a large majority chooses the SUV for ground clearance and perceived resale.</p>
+
+        <p>That is a segment-wide movement affecting every mid-size sedan in the used market, regardless of manufacturer. Worth noting that Ciaz owners often report strong ownership satisfaction; retention and satisfaction are measuring different things entirely.</p>
+
+        <p>Where the Ciaz does hold better is in markets with heavy self-drive and outstation taxi use. In Chennai, contract sedans still move, and a well-kept Ciaz finds a bidder faster than the national average would suggest.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Maruti resale value comparison table: 10 models with 3-year and 5-year retention</h2>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Model</th>
+                <th class="py-2 pr-3">Segment</th>
+                <th class="py-2 pr-3">Fuel options</th>
+                <th class="py-2 pr-3">3-yr retention</th>
+                <th class="py-2 pr-3">5-yr retention</th>
+                <th class="py-2">Key value driver</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Ertiga</td><td class="py-2 pr-3">MPV</td><td class="py-2 pr-3">Petrol, CNG</td><td class="py-2 pr-3">~71%</td><td class="py-2 pr-3">~60%</td><td class="py-2">Fleet plus private dual demand</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Swift</td><td class="py-2 pr-3">Premium hatch</td><td class="py-2 pr-3">Petrol</td><td class="py-2 pr-3">~70%</td><td class="py-2 pr-3">~58%</td><td class="py-2">Segment benchmark, deepest buyer pool</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Brezza</td><td class="py-2 pr-3">Compact SUV</td><td class="py-2 pr-3">Petrol, CNG</td><td class="py-2 pr-3">~69%</td><td class="py-2 pr-3">~57%</td><td class="py-2">Body-style demand</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Baleno</td><td class="py-2 pr-3">Premium hatch (Nexa)</td><td class="py-2 pr-3">Petrol, CNG</td><td class="py-2 pr-3">~68%</td><td class="py-2 pr-3">~56%</td><td class="py-2">Strong % retention, higher rupee loss</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">WagonR (CNG)</td><td class="py-2 pr-3">Entry hatch</td><td class="py-2 pr-3">Factory CNG</td><td class="py-2 pr-3">~67%</td><td class="py-2 pr-3">~55%</td><td class="py-2">Running-cost demand plus RC endorsement</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Dzire</td><td class="py-2 pr-3">Compact sedan</td><td class="py-2 pr-3">Petrol, CNG</td><td class="py-2 pr-3">~66%</td><td class="py-2 pr-3">~54%</td><td class="py-2">Taxi-permit floor in select states</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">WagonR (petrol)</td><td class="py-2 pr-3">Entry hatch</td><td class="py-2 pr-3">Petrol</td><td class="py-2 pr-3">~62%</td><td class="py-2 pr-3">~49%</td><td class="py-2">High volume, low differentiation</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Alto K10</td><td class="py-2 pr-3">Entry hatch</td><td class="py-2 pr-3">Petrol, CNG</td><td class="py-2 pr-3">~58%</td><td class="py-2 pr-3">~43%</td><td class="py-2">Low base price, new-car substitution</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">S-Presso</td><td class="py-2 pr-3">Entry hatch</td><td class="py-2 pr-3">Petrol, CNG</td><td class="py-2 pr-3">~57%</td><td class="py-2 pr-3">~42%</td><td class="py-2">Thin comparable set</td></tr>
+              <tr><td class="py-2 pr-3">Ciaz</td><td class="py-2 pr-3">Mid-size sedan</td><td class="py-2 pr-3">Petrol</td><td class="py-2 pr-3">~55%</td><td class="py-2 pr-3">~40%</td><td class="py-2">Segment contraction</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong class="text-navy-900">How to read this table.</strong> Retention = actual resale transaction price divided by original ex-showroom price, measured at the average kilometre reading for that age band. Kilometres and age do not move value at the same rate; each has its own curve. The Fronx and Grand Vitara are excluded from the five-year column because neither has enough five-year transactions in the underlying dataset to publish a defensible figure yet.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Nexa vs Arena resale value: does the showroom channel change what a used Maruti sells for?</h2>
+
+        <p>The Nexa versus Arena channel does not itself create resale value. Price band does. Nexa models sit at higher price points where the used buyer pool is smaller and the rupee depreciation is larger, even when percentage retention looks similar to an Arena model.</p>
+
+        <p>For readers unfamiliar with the split: Maruti Suzuki retails through two networks. Arena carries the mass-market range, so Swift, WagonR, Alto K10, Dzire, Ertiga, Brezza. Nexa carries the premium-positioned range: Baleno, Fronx, Grand Vitara, Ignis, XL6, Jimny. Same manufacturer, same parts supply chain, different showroom experience and different price positioning.</p>
+
+        <p>In the used market, the badge on the showroom does not reach the buyer. The price band does. At ₹6 lakh, the pool of buyers is enormous. At ₹11 lakh it is a fraction of that size, and every additional lakh narrows it further. A car in a narrow band sits longer, and inventory that sits longer gets bid lower at procurement.</p>
+
+        <p>Service access is the second variable, and it is geographic. Arena workshops are far more widely distributed than Nexa workshops, so a Nexa-model owner in a district town may be driving further for scheduled service. Used buyers in those markets factor that in. The effect is negligible in Mumbai, Pune or Chennai, where both networks are dense. It becomes visible in tier-3 procurement.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">The variant trap: why a top-trim Maruti loses more rupees than a base-trim one</h2>
+
+        <p>Used car buyers shop by budget band, not by feature list. Someone with ₹5.5 lakh looks at everything priced between ₹5.2 and ₹5.8 lakh, then picks the best car in that window. Nobody searches for "ZXi+". That is the mechanism behind the variant trap.</p>
+
+        <p>Work through a Baleno. Suppose the gap between an LXi and a ZXi+ is around ₹2.3 lakh when new. At five years, the same-year, same-kilometre pair typically sits about ₹80,000 to ₹1,00,000 apart. That is a recovery ratio near 35 to 40% on the feature premium. The base car recovered a higher share of what its owner paid.</p>
+
+        <p>What does recover reasonably well: an AMT or automatic gearbox, factory-fitted CNG, and, in the compact SUV band specifically, a sunroof, which used buyers actively filter for. What recovers little: paint packages, dealer-fitted accessory bundles, cosmetic body kits, extended feature packs that do not change the driving experience.</p>
+
+        <p>The AMT premium is geographically uneven, and that is worth planning around at purchase. Bengaluru and Mumbai used-car demand for automatics is materially stronger than in most tier-2 markets, because the daily driving is stop-start and buyers there have already decided they want two pedals. Bengaluru is different again because the ORR commute has turned AMT into a search filter rather than a nice-to-have.</p>
+
+        <p>The practical rule: mid-trim usually recovers best. It clears the safety and convenience features buyers actually filter for, without paying for the top-trim items that do not survive into the used-market price.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">What a full inspection finds on used Maruti models, and how each finding is priced into the offer</h2>
+
+        <p>Two Swifts, same year, same 62,000 km, same colour. One gets an offer ₹70,000 higher than the other. The difference is almost never anything the seller was aware of.</p>
+
+        <p>Every finding below feeds into the same pricing logic covered in <a href="/blogs/factors-affecting-used-car-resale-value">the 10 factors that decide resale value</a>. This section is the operational layer underneath it.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The findings that quietly cost the most money</h3>
+
+        <ul class="list-disc ml-6 space-y-2">
+          <li><strong class="text-navy-900">Paint thickness readings.</strong> A gauge reading well above factory range on a single panel indicates a repaint. On a door or a fender, that is a modest deduction. On a pillar or a quarter panel, it suggests structural repair, the deduction multiplies, and some buyers will not bid at all.</li>
+          <li><strong class="text-navy-900">Suspension bush and strut wear.</strong> High-kilometre hatchbacks driven on Mumbai's east-west link roads or Bengaluru's older arterials show worn front strut mounts and control arm bushes far earlier than the same model in, say, Chandigarh. Road surface is a resale variable that no brochure mentions.</li>
+          <li><strong class="text-navy-900">Clutch travel on manual city cars.</strong> A Swift or a Dzire that spent its life in Bengaluru peak-hour traffic frequently shows a high biting point at 60,000 km. It is a known, priceable job, and it gets priced in.</li>
+          <li><strong class="text-navy-900">AMT actuator behaviour.</strong> On Celerio, WagonR and Alto AMT cars, the inspection checks shift smoothness under load and any hesitation on the 1-2 upshift. Actuator replacement costs significantly more than a clutch job, so a hesitant AMT moves the offer sharply.</li>
+          <li><strong class="text-navy-900">Timing chain noise on older 1.3 DDiS units.</strong> Older diesel Swifts, Dzires and Brezzas get listened to at cold start specifically for chain rattle.</li>
+          <li><strong class="text-navy-900">Cabin electricals on older top trims.</strong> Touchscreen units, reverse camera feeds and power-window modules on 6 to 8-year-old ZXi+ cars fail more often than the mechanicals do, and because these are top-trim features, the deduction lands on the car that cost more when new.</li>
+        </ul>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The paperwork findings buyers never think about</h3>
+
+        <ul class="list-disc ml-6 space-y-2">
+          <li><strong class="text-navy-900">Missing service history for the middle years.</strong> Full history for years 1, 2 and year 6, nothing in between, reads as neglect regardless of the car's actual condition.</li>
+          <li><strong class="text-navy-900">RC fuel type not matching the actual setup.</strong> Most common on aftermarket CNG cars where the endorsement was never done. This is a compliance issue for the next owner, not a bargaining chip.</li>
+          <li><strong class="text-navy-900">Hypothecation not removed after loan closure.</strong> The RC still names the financier. Until that is cleared with the NOC from the bank and the RTO endorsement, transfer is blocked.</li>
+          <li><strong class="text-navy-900">Address mismatch between RC and current city.</strong> A Pune-registered car being sold in Hyderabad by an owner who moved years ago adds an interstate step to the transfer.</li>
+          <li><strong class="text-navy-900">Pending challans against the registration number.</strong> These surface instantly on a VAHAN check and get netted off the offer.</li>
+        </ul>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Finding</th>
+                <th class="py-2">Directional offer impact</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Single repainted non-structural panel</td><td class="py-2">₹5,000 to ₹12,000</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Repaint indicating pillar or structural repair</td><td class="py-2">₹40,000+ or no bid</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Worn front suspension (bushes plus struts)</td><td class="py-2">₹8,000 to ₹18,000</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Clutch at end of life</td><td class="py-2">₹10,000 to ₹15,000</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Hesitant AMT actuator</td><td class="py-2">₹25,000 to ₹45,000</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Missing 2+ years of service history</td><td class="py-2">₹10,000 to ₹25,000</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Unendorsed aftermarket CNG kit</td><td class="py-2">₹20,000 to ₹35,000 or no bid</td></tr>
+              <tr><td class="py-2 pr-3">Hypothecation not cleared</td><td class="py-2">Transaction blocked until resolved</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Maruti resale value by segment: hatchback, sedan, SUV and MPV retention curves compared</h2>
+
+        <p>Hatchbacks lose the most in Year 1 and then flatten. Compact SUVs lose less early but decline more steadily year on year. MPVs hold longest because of the fleet demand layer. Mid-size sedans decline earliest and do not flatten.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Body style</th>
+                <th class="py-2 pr-3">Year 1</th>
+                <th class="py-2 pr-3">Year 3</th>
+                <th class="py-2 pr-3">Year 5</th>
+                <th class="py-2">Year 7</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Entry hatchback</td><td class="py-2 pr-3">~80%</td><td class="py-2 pr-3">~59%</td><td class="py-2 pr-3">~45%</td><td class="py-2">~33%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Premium hatchback</td><td class="py-2 pr-3">~84%</td><td class="py-2 pr-3">~69%</td><td class="py-2 pr-3">~57%</td><td class="py-2">~44%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Compact sedan</td><td class="py-2 pr-3">~83%</td><td class="py-2 pr-3">~66%</td><td class="py-2 pr-3">~54%</td><td class="py-2">~41%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Compact SUV</td><td class="py-2 pr-3">~86%</td><td class="py-2 pr-3">~69%</td><td class="py-2 pr-3">~57%</td><td class="py-2">~43%</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">MPV</td><td class="py-2 pr-3">~85%</td><td class="py-2 pr-3">~71%</td><td class="py-2 pr-3">~60%</td><td class="py-2">~49%</td></tr>
+              <tr><td class="py-2 pr-3">Mid-size sedan</td><td class="py-2 pr-3">~80%</td><td class="py-2 pr-3">~55%</td><td class="py-2 pr-3">~40%</td><td class="py-2">~28%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The flattening matters for one specific decision: sell now or hold one more year. Between Year 1 and Year 3, a hatchback shedding 10-plus points annually makes waiting expensive. Between Year 5 and Year 6, the same car might shed 5 or 6 points, at which point the cost of holding sits closer to the cost of a year's insurance and servicing, and the calculation changes.</p>
+
+        <p>Compact SUVs behave differently, and this trips up Brezza owners. The curve does not flatten as sharply, so "one more year" carries a steadier cost right through Year 7. The fuel-type layer sits on top of all of this. CNG and diesel variants follow their own curves, covered separately.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Maruti vs Hyundai, Honda and Tata: where the brand premium actually appears</h2>
+
+        <p>Maruti resale value is strongest against comparable models in the entry and compact segments, and the gap narrows considerably in the compact SUV band, where several competing models have built strong independent used-market demand. The difference is a demand and network effect, not a judgement on product quality.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Like-for-like pair</th>
+                <th class="py-2 pr-3">5-yr retention (indicative)</th>
+                <th class="py-2 pr-3">Typical days-to-sell</th>
+                <th class="py-2">Parts-cost predictability</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Swift vs i20-class hatchback</td><td class="py-2 pr-3">Swift ahead by 4 to 6 pts</td><td class="py-2 pr-3">Swift shorter</td><td class="py-2">Both high; Swift marginally wider network</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Dzire vs Amaze-class compact sedan</td><td class="py-2 pr-3">Dzire ahead by 3 to 5 pts</td><td class="py-2 pr-3">Dzire shorter</td><td class="py-2">Both high</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Brezza vs Nexon or Venue-class compact SUV</td><td class="py-2 pr-3">Within 1 to 3 pts</td><td class="py-2 pr-3">Comparable</td><td class="py-2">All three well supported</td></tr>
+              <tr><td class="py-2 pr-3">Ertiga vs MPV alternatives</td><td class="py-2 pr-3">Ertiga ahead by 3 to 5 pts</td><td class="py-2 pr-3">Ertiga shorter, fleet demand</td><td class="py-2">High</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Why the SUV band is close is straightforward enough. Compact SUVs from Tata and Hyundai have accumulated enough used-market volume, service coverage and buyer familiarity that their resale queues are now deep too. Liquidity is not exclusive to one manufacturer. It gets earned through volume and network density, and several models have earned it.</p>
+
+        <p>Where the Maruti advantage stays widest is in smaller towns. In a district headquarters town in Bihar or eastern UP, the service network available to a used-car buyer is a genuine constraint, and Maruti's presence there is dense. That geography is where the retention gap shows up most clearly, and it is why national averages understate the difference for buyers outside the metros.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">City effect: how Delhi's diesel age rule and Bengaluru's demand queue change the same Maruti's resale value</h2>
+
+        <p>The same 2019 Brezza, same 55,000 km, same condition, gets four different bids in four cities. Regional patterns like this are unpacked further in <a href="/blogs/used-car-resale-value-by-city-india">city-wise used car resale premiums</a>.</p>
+
+        <p><strong class="text-navy-900">Delhi-NCR.</strong> Vehicle-age restrictions in the National Capital Region mean diesel cars beyond a defined age and petrol cars beyond a longer defined age cannot be operated or re-registered there. In plain language: once a car crosses the limit, its Delhi resale market disappears, and its value is set by whatever a buyer in another state will pay after re-registration costs. A diesel car three years short of the limit already trades at a discount, because buyers price in the shortened usable life.</p>
+
+        <p><strong class="text-navy-900">Bengaluru.</strong> Demand-side pressure rather than regulation. Automatic and AMT cars command a wider premium than the national average, and clean single-owner hatchbacks clear quickly because of continuous inbound migration. The queue of buyers is long; the queue of good cars is not.</p>
+
+        <p><strong class="text-navy-900">Kochi and coastal markets.</strong> Diesel demand holds better, but corrosion findings are more common and get checked more aggressively at inspection: underbody, rear beam, door bottoms. A coastal car with visible surface rust takes a deduction a Delhi car of the same age would not.</p>
+
+        <p><strong class="text-navy-900">Pune.</strong> Works differently again. Proximity to Mumbai means cars move between the two markets constantly, so pricing tracks Mumbai closely, but registration transfer between MH-12 and MH-01/02 series is intra-state and therefore simpler than a genuine interstate move.</p>
+
+        <p><strong class="text-navy-900">The interstate route.</strong> When a car cannot be re-registered in its home state, it gets sold into another one. That requires an NOC, a no-objection certificate from the originating RTO confirming there are no dues or cases against the vehicle, followed by re-registration at the destination RTO, and in most cases a road tax payment in the new state with a refund claim filed against the old one. The refund process is separate, slower, and frequently abandoned by sellers. Buyers price all of this in, which is why an out-of-state car sells below an equivalent local-registration car.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Five decisions made at purchase that set a Maruti's resale value years later</h2>
+
+        <ol class="list-decimal ml-6 space-y-3">
+          <li><strong class="text-navy-900">Variant.</strong> Within any budget, the mid-trim recovers best. It carries the features used buyers filter for, without the top-trim premium that does not survive depreciation.</li>
+          <li><strong class="text-navy-900">Fuel and transmission, matched to the city.</strong> Factory CNG is worth ordering if the car will live in Delhi-NCR, Gujarat or coastal Maharashtra where station density is high and CNG demand is deep. An AMT is worth the premium in Bengaluru or Mumbai. Neither holds the same value in a market where the demand is not there.</li>
+          <li><strong class="text-navy-900">Colour.</strong> White and silver clear fastest in the Maruti used market and take the smallest condition-adjusted discount. Unusual shades lengthen days-to-sell, and days-to-sell shows up in the acquisition price.</li>
+          <li><strong class="text-navy-900">Service discipline from year one.</strong> A complete authorised-workshop record removes the single largest deduction a buyer can impose for uncertainty. Missing history in the middle years costs more than the servicing itself would have.</li>
+          <li><strong class="text-navy-900">Exit timing.</strong> On hatchbacks, selling before the year-5 to year-6 crossover captures the flattening curve. On compact SUVs, the curve does not flatten as sharply, so the calculation is different. On diesels registered in NCR, the answer is unambiguous: sell earlier than the calendar suggests, because every month closer to the age line is a month of runway lost.</li>
+        </ol>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Frequently asked questions</h2>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Which Maruti model has the best resale value in India?</h3>
+        <p>The Swift and the Ertiga trade top spots depending on how the question is framed. The Swift holds best among mainstream hatchbacks because it is the segment benchmark and has the deepest buyer pool. The Ertiga holds best in absolute retention across five and seven years, because it carries a second demand layer, tourist-permit and corporate transport buyers, that puts a floor under the private-buyer bid.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does Maruti actually have the best resale value in India?</h3>
+        <p>On average, yes, but by a smaller brand-level margin than most buyers assume. The Maruti versus Hyundai average gap is close to 5 percentage points at five years. The gap between the best and worst Maruti at five years is closer to 20. Model choice inside Maruti moves the outcome roughly four times more than the badge choice does.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Why do Marutis sell so quickly in the used market?</h3>
+        <p>Three reasons: a wide service network that keeps parts and repair costs predictable across the country, a deep second-hand buyer pool in metros and smaller towns alike, and organised buyers who will bid on any clean Maruti. Days-to-sell is short, which is what the used-car market translates into a price premium.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Which Maruti has the worst resale value?</h3>
+        <p>Among mainstream models, the Ciaz and the S-Presso currently retain least. The Ciaz reflects a segment-wide contraction in mid-size sedan demand, not a Maruti issue. The S-Presso reflects a young comparable set that leads dealers to bid conservatively. Neither is a durability signal.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does the Swift or the Baleno have better resale value?</h3>
+        <p>The Swift retains a higher percentage of its ex-showroom price, but the Baleno starts from a higher price so the rupee loss on the Baleno at five years is often larger. If the question is percentage retention, Swift. If the question is rupees preserved, Swift again, on a lifecycle basis. If the question is monthly ownership cost, the two are closer than the raw percentages suggest.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is factory-fitted CNG better than an aftermarket CNG kit for resale?</h3>
+        <p>Yes, and the gap is largely documentary rather than mechanical. Factory CNG is registered on the RC from day one and carries manufacturer warranty history. An aftermarket kit must be endorsed on the RC by the RTO, and when the endorsement is missing the buyer inherits a compliance problem that gets priced as a defect. Company-fitted CNG generally holds a resale premium; retrofitted kits with proper endorsement hold at a modest discount to it; unendorsed kits get discounted hard or refused.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Do Nexa cars have better resale value than Arena cars?</h3>
+        <p>Not because of the channel. Nexa models sit in higher price bands where the used buyer pool is smaller and the rupee loss at any given percentage is larger. Percentage retention can look similar across the two channels; the rupees lost are not the same. In tier-3 markets, the sparser Nexa service network can also compress bids on Nexa-badged cars.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does the top variant of a Maruti hold more resale value than the base?</h3>
+        <p>In rupee terms, usually less. Used buyers shop by budget band, not by feature list. A top variant that cost ₹2.3 lakh more when new often recovers only ₹80,000 to ₹1,00,000 of that premium at five years. What does recover: automatic gearboxes, factory CNG, and, in compact SUVs specifically, sunroofs. What does not: cosmetic packs, dealer-fitted accessories, extended feature bundles.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">At what age is the best time to sell a Maruti for maximum resale value?</h3>
+        <p>Segment matters. Hatchbacks lose the most in Year 1 and flatten around Year 5 to Year 6, so exiting before the flattening captures value that is about to be given up. Compact SUVs decline more steadily, so the "one more year" calculation is closer. On NCR-registered diesels, sell earlier than the calendar suggests, because runway is being lost month by month.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">How much does colour affect a Maruti's resale value?</h3>
+        <p>Colour is one of the smaller factors, but it is a real one. White and silver clear fastest and take the smallest condition-adjusted discount. Unusual shades usually cost more in days-to-sell than in headline price, which then shows up in the offer. Paint condition beats paint colour every time.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does a Delhi-registered Maruti sell for less than the same car registered in Bengaluru?</h3>
+        <p>Petrol Marutis with substantial remaining registration life mostly trade close, with Delhi generally softer on headline price. Diesel Marutis registered in NCR trade meaningfully lower, because buyers price the shortened runway rather than the mechanical condition.</p>
+
+        <p class="mt-10">Two decisions decide most of what the offer looks like years later: match the variant, fuel and transmission to the city the car will live in, and keep the service record intact from year one. Everything else can be argued about at the inspection bay. Those two cannot be reconstructed on the day of sale.</p>
+
+        <div class="card-institutional bg-cream-100 mt-10">
+          <h3 class="text-xl font-serif text-navy-900 mb-3">Check your Maruti's resale value in 30 seconds</h3>
+          <p class="text-graphite mb-4">Free, no signup, no phone number, no dealer calls. Get a band backed by real transaction data before you list.</p>
+          <a href="/valuation" class="inline-block px-6 py-3 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors no-underline">Check car value →</a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>

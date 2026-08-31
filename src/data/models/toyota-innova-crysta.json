@@ -81,15 +81,31 @@
     { "city": "Ahmedabad",  "variancePct":  1, "note": "Steady demand" }
   ],
   "retentionCurve": [
-    { "ageYears": 1, "retentionPct": 92 },
-    { "ageYears": 2, "retentionPct": 84 },
-    { "ageYears": 3, "retentionPct": 77 },
-    { "ageYears": 4, "retentionPct": 70 },
-    { "ageYears": 5, "retentionPct": 63 }
+    { "ageYears": 0.5, "retentionPct": 96 },
+    { "ageYears": 1,   "retentionPct": 92 },
+    { "ageYears": 1.5, "retentionPct": 88 },
+    { "ageYears": 2,   "retentionPct": 84 },
+    { "ageYears": 2.5, "retentionPct": 80 },
+    { "ageYears": 3,   "retentionPct": 77 },
+    { "ageYears": 3.5, "retentionPct": 73 },
+    { "ageYears": 4,   "retentionPct": 70 },
+    { "ageYears": 4.5, "retentionPct": 66 },
+    { "ageYears": 5,   "retentionPct": 63 },
+    { "ageYears": 5.5, "retentionPct": 60 },
+    { "ageYears": 6,   "retentionPct": 57 },
+    { "ageYears": 6.5, "retentionPct": 54 },
+    { "ageYears": 7,   "retentionPct": 52 },
+    { "ageYears": 7.5, "retentionPct": 49 },
+    { "ageYears": 8,   "retentionPct": 47 },
+    { "ageYears": 8.5, "retentionPct": 45 },
+    { "ageYears": 9,   "retentionPct": 43 },
+    { "ageYears": 9.5, "retentionPct": 41 },
+    { "ageYears": 10,  "retentionPct": 39 }
   ],
   "segmentAverageRetention": {
     "3year": 70,
-    "5year": 55
+    "5year": 55,
+    "10year": 32
   },
   "context": [
     "The Innova Crysta is the highest resale-holding non-luxury vehicle sold in India, and has been for eight consecutive years. Three drivers explain it: Toyota's diesel engine reliability, the taxi and fleet buyer base which absorbs stock across the entire age range, and the private-family buyer segment which values proven durability over new-car features.",

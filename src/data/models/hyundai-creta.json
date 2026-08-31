@@ -93,15 +93,31 @@
     { "city": "Ahmedabad",  "variancePct":  0, "note": "Baseline" }
   ],
   "retentionCurve": [
-    { "ageYears": 1, "retentionPct": 87 },
-    { "ageYears": 2, "retentionPct": 78 },
-    { "ageYears": 3, "retentionPct": 71 },
-    { "ageYears": 4, "retentionPct": 63 },
-    { "ageYears": 5, "retentionPct": 56 }
+    { "ageYears": 0.5, "retentionPct": 93 },
+    { "ageYears": 1,   "retentionPct": 87 },
+    { "ageYears": 1.5, "retentionPct": 82 },
+    { "ageYears": 2,   "retentionPct": 78 },
+    { "ageYears": 2.5, "retentionPct": 74 },
+    { "ageYears": 3,   "retentionPct": 71 },
+    { "ageYears": 3.5, "retentionPct": 67 },
+    { "ageYears": 4,   "retentionPct": 63 },
+    { "ageYears": 4.5, "retentionPct": 59 },
+    { "ageYears": 5,   "retentionPct": 56 },
+    { "ageYears": 5.5, "retentionPct": 53 },
+    { "ageYears": 6,   "retentionPct": 50 },
+    { "ageYears": 6.5, "retentionPct": 47 },
+    { "ageYears": 7,   "retentionPct": 45 },
+    { "ageYears": 7.5, "retentionPct": 42 },
+    { "ageYears": 8,   "retentionPct": 40 },
+    { "ageYears": 8.5, "retentionPct": 38 },
+    { "ageYears": 9,   "retentionPct": 36 },
+    { "ageYears": 9.5, "retentionPct": 34 },
+    { "ageYears": 10,  "retentionPct": 32 }
   ],
   "segmentAverageRetention": {
     "3year": 66,
-    "5year": 51
+    "5year": 51,
+    "10year": 28
   },
   "context": [
     "The Creta has been India's best-selling mid-size SUV in most quarters since 2015 and holds value close to the top of its segment. Its resale strength is a function of two things: sustained demand for SUV body-styles across every metro and non-metro, and Hyundai's extensive service network second only to Maruti.",

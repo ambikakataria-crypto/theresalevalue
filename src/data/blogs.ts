@@ -136,6 +136,42 @@ export const rawArticles: BlogArticle[] = [
     category: 'Selling · Timing',
     queued: true,
   },
+  {
+    slug: 'used-car-resale-value-by-city-india',
+    title: 'Used car resale value by city: Delhi vs Mumbai vs Bengaluru (2026 data)',
+    excerpt: 'Same car, eight metros, eight different offers. Four levers that set the spread: remaining legal life, fuel-type buyer mix, city wear signature, and transfer friction. When crossing state lines actually pays, and when the road tax refund still sitting with the origin state closes the gap.',
+    date: '',
+    readTime: '14 min read',
+    category: 'Valuation · City data',
+    queued: true,
+  },
+  {
+    slug: 'negotiating-private-used-car-sale-india',
+    title: 'Negotiating a private used car sale in India: the buyer\'s playbook and its counters',
+    excerpt: 'The four-move sequence most private buyers run to reduce an asking price, the split-the-difference trap, the documentation folder that stops arguments before they start, and the walkaway number worth writing down before the first buyer calls.',
+    date: '',
+    readTime: '13 min read',
+    category: 'Selling · Negotiation',
+    queued: true,
+  },
+  {
+    slug: 'petrol-diesel-cng-resale-value-india',
+    title: 'Petrol vs diesel vs CNG resale value in India: what the fuel badge alone is worth (2026)',
+    excerpt: 'Fuel type does not have one resale value in India. It has a different one in each registration city. The NCR diesel rule, the Kochi control case, factory versus retrofitted CNG, the fuel-by-city grid, five-year retention by fuel, and when a retrofit actually recovers its cost.',
+    date: '',
+    readTime: '15 min read',
+    category: 'Fuel · Analysis',
+    queued: true,
+  },
+  {
+    slug: 'maruti-suzuki-resale-value-india',
+    title: 'Maruti Suzuki resale value in India: 10 models ranked by 5-year retention (2026)',
+    excerpt: 'Roughly 20 percentage points separate the strongest-holding Maruti from the weakest at five years. The Maruti vs Hyundai brand gap is closer to 5. Ten models ranked, the variant trap, Nexa vs Arena, the city effect, and what a full inspection actually finds before an offer is made.',
+    date: '',
+    readTime: '16 min read',
+    category: 'Model · Brand',
+    queued: true,
+  },
 ];
 
 export const allBlogs: BlogArticle[] = rawArticles

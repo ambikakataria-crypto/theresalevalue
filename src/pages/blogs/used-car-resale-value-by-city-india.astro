@@ -1,0 +1,280 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { displayDateFor } from '../../data/blogs';
+
+const title = 'Used car resale value by city: Delhi vs Mumbai vs Bengaluru (2026 data)';
+const description = 'Same car, eight metros, eight different offers. Four levers that set the spread: remaining legal life, fuel-type buyer mix, city wear signature, and transfer friction. When crossing state lines actually pays, and when the road tax refund still sitting with the origin state closes the gap.';
+const publishedOn = displayDateFor('used-car-resale-value-by-city-india');
+---
+<BaseLayout title={title} description={description}>
+  <article class="py-12 md:py-16">
+    <div class="container-tight max-w-3xl">
+      <div class="mb-8">
+        <div class="text-xs uppercase tracking-widest text-slate-soft mb-3">
+          <a href="/blogs">← All blogs</a>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-signal-600 font-semibold mb-3">Valuation · City data</div>
+        <h1 class="text-4xl md:text-5xl font-serif text-navy-900 mb-4 leading-tight">
+          Used car resale value by city: Delhi vs Mumbai vs Bengaluru (2026 data)
+        </h1>
+        <div class="text-sm text-slate-soft">
+          {publishedOn && (
+            <>
+              <time datetime={publishedOn.iso}>{publishedOn.label}</time>
+              <span class="mx-2">·</span>
+            </>
+          )}
+          <span>14 min read</span>
+        </div>
+      </div>
+
+      <div class="prose-content space-y-6 text-lg leading-relaxed text-graphite">
+
+        <div class="card-institutional bg-cream-100 border-l-4 border-signal-600 text-sm text-graphite">
+          <strong class="text-navy-900">Editorial framework, not a quote.</strong> Ranges below describe observed spreads on TheResaleValue valuations and are illustrative. Actual bids depend on the specific car, its condition, its current registration, and how each metro's used-car market is priced in the week of sale.
+        </div>
+
+        <p class="text-xl leading-relaxed">One car. One condition grade. Eight quotes that do not agree with each other.</p>
+
+        <p>That is the entire premise of a used car price city comparison, and it is the part most owners discover late, usually after a quote from a buyer three states away lands higher than the one from the dealer down the road. The resale value city difference in India is not noise. It is structural, it repeats month after month, and it traces back to four identifiable causes. Before reading further, it is worth putting the actual car through a <a href="/valuation">free used car valuation</a> so the numbers below have something to sit against.</p>
+
+        <p>A caution up front, because it changes how the rest of this should be read. The city with the highest retail premium is not automatically the city that pays a seller the most.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Why used car resale value differs by city in India: four levers, not one</h2>
+
+        <p>Used car resale value differs across Indian cities because the same car carries different amounts of usable legal life, faces a different fuel-type buyer mix, arrives at inspection with a different wear signature, and costs a different amount to move out of state. Those four levers stack. A car can be penalised on all four at once, which is how a five-figure gap becomes a six-figure one.</p>
+
+        <p>The order matters, and this article follows it:</p>
+
+        <ol class="list-decimal ml-6 space-y-2">
+          <li><strong class="text-navy-900">Remaining legal life of the registration.</strong> How many years the car is still permitted to ply where it is registered.</li>
+          <li><strong class="text-navy-900">Fuel-type buyer mix.</strong> Petrol, diesel or CNG, and how strongly local buyers want it.</li>
+          <li><strong class="text-navy-900">City wear signature.</strong> What the roads, traffic and climate have already done to the car's mechanicals and body.</li>
+          <li><strong class="text-navy-900">Transfer friction.</strong> The cost, in money and elapsed weeks, of taking the car somewhere else.</li>
+        </ol>
+
+        <p>City is one input among many. Age, kilometres, variant and service history still do the heavy lifting, and <a href="/blogs/factors-affecting-used-car-resale-value">the 10 factors that affect used car resale value</a> covers how they rank against each other.</p>
+
+        <p>Here is the thesis, stated plainly so it is not mistaken for a "sell in Bengaluru" listicle. In the highest-premium metros, a larger share of the retail spread gets absorbed by dealer margin and pre-sale reconditioning than in the discount metros. The retail gap between two cities is almost always wider than the seller-payout gap between the same two cities. Anyone planning around the headline number is planning around the wrong number.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Used car price city comparison: how the same benchmark car prices across eight metros</h2>
+
+        <p>A generic city table proves nothing. So the comparison below is fixed to a single car, a single variant and a single kilometre band, then read across eight registration markets. Benchmark A: a 2019 Maruti Suzuki Baleno Zeta petrol manual at roughly 45,000 km, single owner, no accident history, full service record.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Registration market</th>
+                <th class="py-2 pr-3">Position vs national median</th>
+                <th class="py-2">Dominant demand driver</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Delhi-NCR</td><td class="py-2 pr-3">Discount</td><td class="py-2">Shortened legal life on petrol (15 yrs) compresses residuals</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Mumbai (MMR)</td><td class="py-2 pr-3">Premium</td><td class="py-2">Short daily running favours compact petrol</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Bengaluru</td><td class="py-2 pr-3">Highest premium</td><td class="py-2">Salaried first-time buyers, deep 3 to 7 year hatch demand</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Chennai</td><td class="py-2 pr-3">Near median</td><td class="py-2">Service-history-led buyers; corrosion checks bite</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Hyderabad</td><td class="py-2 pr-3">Premium</td><td class="py-2">Fast-growing buyer base for 3 to 5 year mid-segment</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Pune</td><td class="py-2 pr-3">Near median</td><td class="py-2">Two-way inventory flow with MMR caps the spread</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Kolkata</td><td class="py-2 pr-3">Softest</td><td class="py-2">Price-sensitive mix, older average fleet</td></tr>
+              <tr><td class="py-2 pr-3">Ahmedabad</td><td class="py-2 pr-3">Discount</td><td class="py-2">Value-led buyers, strong CNG tilt</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The petrol-only benchmark hides half the picture. The same eight-market read across a 2018 Hyundai Creta SX diesel at 70,000 km inverts several positions, because the petrol and diesel lines move in opposite directions in Delhi-NCR. That is why a single-fuel table misrepresents the country badly.</p>
+
+        <p class="text-sm text-slate-soft"><strong class="text-navy-900">Method note.</strong> "Premium" here means the difference between a city's price for this exact car and the national median for the same car in the same month. It is a comparison across markets, not a forecast for any individual car. Two cars of the same model and year can quote differently in the same city on condition alone.</p>
+
+        <p>The buy column at a dealer desk and the retail column at the same dealer's front lot are not the same number, and the difference is not arbitrary. It covers reconditioning, holding cost, warranty provisioning and margin. That gap gets unpacked separately in a comparison of fair-market value, asking price and dealer offer, when that page publishes.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Delhi used car resale value: how the 10-year diesel and 15-year petrol rule prices a car by its birthdate</h2>
+
+        <p>In Delhi-NCR, a car is not priced primarily by condition. It is priced by how many months of permitted registration life it has left. That single fact explains why used cars are cheaper in Delhi than in most other metros, and why the Delhi depreciation curve behaves like a cliff rather than a slope.</p>
+
+        <p>The rule, in plain language: within the National Capital Region, diesel vehicles older than 10 years and petrol vehicles older than 15 years are not permitted to ply on the roads. The restriction originates in National Green Tribunal directions and has been carried forward through Commission for Air Quality Management orders and Delhi Transport Department de-registration notices. Enforcement has been announced, deferred and revised more than once. Anyone acting on the current position should verify the latest directive before quoting a specific car.</p>
+
+        <p>The ripple runs across the whole NCR. Gurugram, Noida, Ghaziabad and Faridabad registrations sit under the same regime. Re-registering the car within NCR does not reset the clock.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The 8-year diesel wall: what happens to a Delhi diesel's price in its ninth year</h3>
+
+        <p>A Delhi buyer inherits only the remaining months, not the car's mechanical life. So the discount applied has nothing to do with how well the engine runs.</p>
+
+        <p>Take the Creta SX diesel benchmark at three ages in Delhi-NCR. At six years old, it prices close to a national-median diesel of the same age. At eight years, the discount widens noticeably because a buyer is now purchasing roughly two usable years. At nine, local demand thins to the point where quotes stop reflecting resale logic altogether and start reflecting relocation or scrappage logic. Owners in this band are often comparing a local offer against a <a href="/blogs/car-scrappage-value-india">scrappage value output</a> rather than against another resale offer.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The NOC exit route: why a Delhi diesel is worth more outside Delhi than inside it</h3>
+
+        <p>A diesel that has run out of permitted life in NCR may still hold value in a state that allows it to be re-registered, provided the origin RTO issues a valid No Objection Certificate, a written clearance confirming the registering authority has no objection to the car being registered elsewhere.</p>
+
+        <p>Conditional, not automatic. That is the key detail. Several states have restricted or refused re-registration of vehicles that have reached end-of-life status in NCR, and the position has changed over time. Anyone planning a cross-state exit should confirm the destination state's current acceptance position before spending on transport.</p>
+
+        <p>Who buys these cars? Typically dealers operating outside NCR who consolidate stock, and buyers in markets where an older diesel still has a functioning second life. The price they pay is set by the destination market's rules, minus transport and re-registration cost.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Car resale value in Bengaluru: the highest premium in India, and the suspension bill that eats part of it</h2>
+
+        <p>Bengaluru consistently carries the strongest demand-side pull among Indian metros for mainstream used cars, and it also produces the country's most consistent city-specific mechanical defect pattern. Both halves are real. Quoting only the first half gives sellers a number they will not receive.</p>
+
+        <p>Demand first. Bengaluru's used-car buyer base skews heavily toward salaried first-time buyers and short-tenure residents who need a car for a defined period. That sustains unusually high absorption of 3 to 7 year-old hatchbacks and compact SUVs. Baleno, Swift, Nexon, i20 and the compact SUV set move quickly and hold price.</p>
+
+        <p>Then there is the gearbox. The automatic transmission premium is wider in Bengaluru than in any other Indian metro, and it is not close. Commute density does that. The same AMT or torque-converter variant of a model commands a distinctly higher spread over its manual sibling in Bengaluru than the identical pair does in Ahmedabad.</p>
+
+        <p>No Karnataka age cap of the NCR type applies, which is why 12 and 14-year-old petrol cars still trade in Bengaluru in a market that has effectively closed in Delhi.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">What a full inspection finds on a Bengaluru car that it does not find on an Ahmedabad car</h3>
+
+        <p>The city's road surface and traffic pattern show up in the inspection bay before they show up in the offer. Front lower-arm bushes, suspension links and strut mounts wear earlier on Bengaluru-registered cars than they do on the same model registered elsewhere. Alloy rim kerb and pothole damage is more frequent. Clutch or AMT wear from stop-go running turns up at lower kilometre readings. Steering rack play appears at above-average rates on the older arterial routes.</p>
+
+        <p>The commercial consequence is straightforward. A car that arrives at a Bengaluru retail lot needing suspension work absorbs part of the city premium before it reaches the display floor. So the seller-side gap between Bengaluru and a median city is narrower than the retail-side gap in the table above. Sellers weighing the routes should look at the private, dealer and instant-buy comparison, when that page publishes, before assuming the premium reaches them.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Used car price Delhi vs Mumbai: same model, opposite fuel logic</h2>
+
+        <p>For the same benchmark car, Mumbai and Delhi diverge because their buyers run different distances on different fuels in different body types. Mumbai rewards small petrol and automatic cars with short daily running. Delhi rewards large SUVs and premium sedans with long running, while simultaneously discounting every car for shortened legal life. The same Baleno and the same Creta land on opposite sides of that logic.</p>
+
+        <p>Distance and space dictate Mumbai's structure. Average daily running in MMR is short, traffic is dense, and parking is genuinely constrained. Diesel's running-cost advantage only pays back over distance, so where distances are shortest, the diesel premium is structurally thin. Compact petrol and automatic variants pick up the demand instead.</p>
+
+        <p>Most people treat parking as a lifestyle irritation rather than a pricing variable. That is only half the story. In parts of Mumbai, society parking allocation and physical bay length narrow the buyer pool for longer SUVs and full-size sedans, and a car that cannot fit a stilt bay loses a slice of its local audience.</p>
+
+        <p>Delhi's counter-position is a deeper large-SUV and premium-sedan market, longer average running that keeps diesel demand alive right up to the age limit, and stronger commercial and fleet resale flow. All of it sitting on a shorter clock.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">The monsoon file: what a Mumbai inspection checks that a Delhi inspection does not</h3>
+
+        <p>Water-damage checks on a Mumbai-registered car are line items that a Delhi inspection barely touches. Boot-well and spare-wheel cavity staining. Sill and underbody corrosion. Seat-rail rust. Wiring-harness and ECU moisture markers. Mismatched or replaced carpet. Silt residue in the cabin blower housing. A car flagged for flood exposure is often quoted at a steep discount rather than declined outright, but the discount is wide enough that some sellers prefer to disclose in writing and let the buyer walk away from a low offer at the kerb rather than accept a re-negotiation on the day of handover.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-navy-900 text-navy-900 text-left">
+                <th class="py-2 pr-3">Axis</th>
+                <th class="py-2 pr-3">Delhi-NCR</th>
+                <th class="py-2">Mumbai (MMR)</th>
+              </tr>
+            </thead>
+            <tbody class="text-graphite">
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Dominant fuel in resale demand</td><td class="py-2 pr-3">Petrol, with diesel demand strong until the age wall</td><td class="py-2">Petrol, with a real CNG presence</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Dominant body type</td><td class="py-2 pr-3">Large SUV and premium sedan</td><td class="py-2">Compact hatch and sub-4m SUV</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Average vehicle age at resale</td><td class="py-2 pr-3">Lower, forced by the age rule</td><td class="py-2">Higher</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Remaining legal life</td><td class="py-2 pr-3">Capped: 10 yrs diesel / 15 yrs petrol</td><td class="py-2">No comparable NCR-type cap</td></tr>
+              <tr class="border-b border-cream-200"><td class="py-2 pr-3">Transmission mix</td><td class="py-2 pr-3">Manual-weighted, AT growing</td><td class="py-2">AT-weighted, wide AT premium</td></tr>
+              <tr><td class="py-2 pr-3">Corrosion / water-damage risk</td><td class="py-2 pr-3">Low; dust and paint fade instead</td><td class="py-2">High; monsoon and coastal exposure</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Chennai, Hyderabad, Pune, Kolkata and Ahmedabad: five markets with five different price-setters</h2>
+
+        <p>Each of these five has one dominant force setting its used car prices. Identifying that force explains the premium faster than any table row.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Chennai</h3>
+        <p>Salt-laden coastal air is the defining inspection variable. Cars that have lived near the coast show corrosion on underbody members, brake lines and door bottoms earlier than inland cars of the same age. Chennai buyers also weight service-history completeness more heavily than buyers in most other metros, and locally manufactured models carry visible demand support. A patchy service book costs more here than it does in Hyderabad.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Hyderabad</h3>
+        <p>A fast-expanding salaried buyer base drives strong appetite for 3 to 5 year-old mid-segment cars, which supports a genuine premium. The offsetting factor is the road-tax structure on re-registration. Telangana levies lifetime road tax when an out-of-state vehicle is re-registered, and that outlay is a real cash cost the buyer discounts straight off the offer.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Pune</h3>
+        <p>Pune has a two-market problem. Its proximity to MMR means inventory flows in both directions: Mumbai dealers source from Pune when Mumbai stock is thin, and Pune dealers source from Mumbai when Pune retail runs hot. Two-way flow caps the spread in either direction. Pune rarely posts the highest premium and rarely posts the deepest discount.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Kolkata</h3>
+        <p>Kolkata typically carries the softest premium among the eight. The drivers are demand-side: an older average fleet age, a price-sensitive buyer mix, and a higher commercial-vehicle share of used transactions than the other metros. West Bengal has also operated vehicle-age restrictions within the Kolkata metropolitan area, which affects what older stock can legally do there.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Ahmedabad</h3>
+        <p>Value-led buyers, and a strong CNG tilt. The specific thing to know here is the gap between factory-fitted and retrofitted CNG. A factory-fitted CNG car carries the manufacturer's warranty logic and a clean entry on the Registration Certificate. A retrofitted kit must be endorsed on the RC by the RTO to be compliant, and an unendorsed kit is a quote-killer in this market. It forces either an endorsement process or a kit removal before retail.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Best city to sell a used car in India: what a cross-city sale actually nets after NOC, transport and tax refund</h2>
+
+        <p>Cross-city selling works on a threshold, not on a preference. The gross city premium has to clear a stack of costs that stays roughly the same whether the car is worth ₹3 lakh or ₹12 lakh, which is why the arbitrage is far more attractive on higher-value cars than on cheap ones.</p>
+
+        <p>Here is what actually happens when a car is sold across state lines:</p>
+
+        <ol class="list-decimal ml-6 space-y-2">
+          <li><strong class="text-navy-900">Transport or drive-down.</strong> Either a truck, or a driver plus fuel, tolls and a return ticket.</li>
+          <li><strong class="text-navy-900">No Objection Certificate</strong>, applied for at the registering RTO using Form 28, the application for an NOC. It confirms no dues, no pending challans and no theft record against the registration number. Government fee is modest; the real cost is elapsed time.</li>
+          <li><strong class="text-navy-900">Transfer of ownership.</strong> Form 29 is the notice of transfer filed by the seller, and Form 30 is the intimation and application filed by the buyer to record the change in the RC.</li>
+          <li><strong class="text-navy-900">Destination re-registration and road tax.</strong> The buyer pays road tax again in the destination state, knows it, and discounts the offer accordingly.</li>
+          <li><strong class="text-navy-900">Road tax refund from the origin state</strong>, partial and proportionate to the unexpired portion, subject to that state's rules, claimed after surrender of registration.</li>
+        </ol>
+
+        <p>The threshold rule: cross-city selling only clears its own costs above a meaningful gross premium, because NOC, transport and re-registration friction is close to fixed regardless of what the car is worth. On a cheap car, the friction eats the premium. On an expensive car, the friction is a small share of it.</p>
+
+        <p>That is the arithmetic. The refund lag is the part most sellers underestimate, since the money that closes the gap often arrives months after the car is gone.</p>
+
+        <p>One exception overrides the threshold entirely. For an NCR diesel past its permitted life, the question is not premium, because there is no legal local buyer. Moving the car is the only route to a resale outcome at all, subject to the destination state accepting it.</p>
+
+        <p>Timing compounds location. Pairing the where decision with the best time of year to sell, when that page publishes, is usually worth more than either factor alone.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Best city to buy a used car in India: the buyer's side of the same premium table</h2>
+
+        <p>The cheapest acquisition markets are, by definition, the discount cities in the table: Delhi-NCR, Kolkata and Ahmedabad on the petrol benchmark. What a buyer saves on sticker, they partly inherit as that city's defect signature, plus re-registration cost and fresh road tax if the car crosses state lines.</p>
+
+        <p>The specific trap is the Delhi diesel. It is cheap for a structural reason, and its onward resale is constrained by exactly the same rule that made it cheap.</p>
+
+        <p>Before buying an out-of-state car, verify:</p>
+
+        <ul class="list-disc ml-6 space-y-2">
+          <li><strong class="text-navy-900">NOC status</strong>, issued, and issued to the correct destination state.</li>
+          <li><strong class="text-navy-900">Hypothecation</strong>, meaning whether a lender's charge still sits on the RC. If the loan is closed, the RC needs a hypothecation termination entry, not just a bank NOC.</li>
+          <li><strong class="text-navy-900">Pending challans</strong> against the registration number, checkable on Parivahan and state e-challan portals.</li>
+          <li><strong class="text-navy-900">Whether the VAHAN record matches the physical car</strong>, engine number, chassis number plate and colour.</li>
+          <li><strong class="text-navy-900">Destination state acceptance</strong> for that car's age and fuel type.</li>
+        </ul>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Where the city premium disappears: three cases when location stops mattering</h2>
+
+        <p>City stops being a pricing lever in three situations. Recognising them saves a pointless cross-country transport bill.</p>
+
+        <p><strong class="text-navy-900">Very old cars.</strong> Below a certain residual value, all eight markets converge because the car is being priced against scrap weight and part-out value, not resale demand. At that point the relevant comparison is a registered vehicle scrapping facility quote, not another city's dealer.</p>
+
+        <p><strong class="text-navy-900">Damage or adverse history.</strong> A recorded flood loss, a total-loss or salvage entry, or a chassis-level repair collapses the quote to a similar floor everywhere. Strong local demand does not rescue a structurally compromised car. Bengaluru pays no premium for a bent B-pillar.</p>
+
+        <p><strong class="text-navy-900">Luxury and low-volume models.</strong> Above a certain price band, the buyer pool is national rather than local. These cars already move between cities as a matter of routine, so local dispersion largely dissolves.</p>
+
+        <h2 class="text-2xl md:text-3xl font-serif text-navy-900 mt-12 mb-4">Frequently asked questions</h2>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Which city in India has the highest used car resale value?</h3>
+        <p>Bengaluru consistently records the highest used car resale premium among Indian metros for mainstream models. Two demand-side reasons drive it: a large salaried first-time-buyer base, and unusually strong appetite for automatics. The caveat matters. The highest retail premium is not the highest seller payout, because Bengaluru cars typically absorb more reconditioning spend before retail.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Why are used cars cheaper in Delhi?</h3>
+        <p>Delhi-registered cars carry a shortened legal registration life. Within NCR, diesel vehicles beyond 10 years and petrol vehicles beyond 15 years are not permitted to ply, so buyers price the remaining permitted years rather than the car's condition. A larger supply of ageing stock exiting the market adds downward pressure. This applies to Delhi and NCR-registered cars specifically, not to the model nationally.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is a used car cheaper in Delhi or Mumbai?</h3>
+        <p>Delhi is generally cheaper for the same car, but the gap flips by body type and fuel. Mumbai pays more for compact petrol and automatic cars because daily running distances are short and parking is constrained. Delhi pays more for large SUVs and premium sedans, where the buyer base is deeper and average running is longer.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Can I sell my car in another city in India?</h3>
+        <p>Yes. The car needs a No Objection Certificate from the RTO where it is registered, applied for using Form 28, confirming no dues or theft record. Ownership transfer then runs on Form 29, the seller's notice of transfer, and Form 30, the buyer's intimation to record the change. The buyer re-registers in the destination state.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Is it worth transporting my car to another city to sell it?</h3>
+        <p>Only above a gross premium threshold, because the friction cost is nearly fixed regardless of the car's value. Four deductions apply: transport or drive-down cost, NOC processing, the buyer's re-registration and road tax outlay, and the lag on the origin-state road tax refund. The clear exception is an NCR diesel past its permitted life, which has no legal local buyer.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Do I get a road tax refund if I move my car to another state?</h3>
+        <p>A partial refund is generally available from the origin state, proportionate to the unexpired portion of the tax period, claimed after the registration is surrendered and re-registration in the new state is completed. Rules and calculation vary by state. Documentation typically includes the new RC, the NOC and proof of tax paid. Settlement is rarely quick.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does a Delhi-registered car sell for less in Bengaluru?</h3>
+        <p>A Delhi-registered petrol car with substantial remaining legal life is not inherently penalised in Bengaluru. What the buyer factors in is re-registration cost and Karnataka road tax, which they discount from the offer. Diesel is the material exception: a Delhi diesel approaching or past the 10-year NCR limit is priced against relocation acceptance rules, not normal resale demand.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Which city is cheapest to buy a used car in India?</h3>
+        <p>Among the eight metros tracked, Delhi-NCR and Kolkata typically show the deepest discounts against the national median on petrol benchmarks, with Ahmedabad close behind. A cross-state buyer must add back two costs: destination-state road tax on re-registration, and any reconditioning the origin city's wear signature has already caused.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Do CNG cars have different resale value in different cities?</h3>
+        <p>Yes, strongly. CNG resale tracks local station density and the petrol-to-CNG price gap, which is why Ahmedabad, Delhi-NCR and Mumbai support CNG resale far better than cities with thin refuelling networks. The larger gap within a city is factory-fitted versus retro-fitted. A retro-fitted kit must be endorsed on the Registration Certificate; an unendorsed kit reduces the quote materially.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Does city affect the resale value of an automatic car?</h3>
+        <p>Yes. The automatic premium is widest in the densest-traffic metros, with Bengaluru and Mumbai at the top and value-led markets like Ahmedabad at the bottom. The same AMT variant of a hatchback can carry a visibly different spread over its manual sibling depending purely on which city is quoting.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">Will my car's resale value drop if I move from Bengaluru to Delhi?</h3>
+        <p>It depends almost entirely on fuel and age. A petrol car with more than a few years before the 15-year NCR limit takes a modest hit, mostly from Delhi's generally softer pricing. A diesel approaching 10 years takes a severe hit, because it loses permitted life the moment it becomes an NCR-registered car.</p>
+
+        <h3 class="text-xl md:text-2xl font-serif text-navy-900 mt-8 mb-3">How much does city affect used car price compared to age and kilometres?</h3>
+        <p>City ranks below age and condition, roughly level with kilometres, and above colour or variant trim for most mainstream cars. The exception is NCR, where the age rule turns location into the dominant variable for diesels. For the fuller ranking, see <a href="/blogs/factors-affecting-used-car-resale-value">the 10 factors that affect used car resale value</a>.</p>
+
+        <p class="mt-10">Before acting on any city gap, do one thing first: pull a quote in the home city and a quote in the target city for the identical car, same week, and subtract the full friction stack from the difference. If what is left is smaller than the road tax refund still sitting with the origin state, the car is better sold where it is.</p>
+
+        <div class="card-institutional bg-cream-100 mt-10">
+          <h3 class="text-xl font-serif text-navy-900 mb-3">Check your car's fair-price band by city in 30 seconds</h3>
+          <p class="text-graphite mb-4">Free, no signup, no phone number, no dealer calls. Get a band backed by real transaction data before you decide where to sell.</p>
+          <a href="/valuation" class="inline-block px-6 py-3 bg-navy-900 text-white text-sm font-medium rounded-md hover:bg-navy-800 transition-colors no-underline">Check car value →</a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>
