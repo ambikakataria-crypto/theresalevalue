@@ -17,4 +17,5 @@ export const blogLastmod: Record<string, string> = {
   '/blogs/idv-calculator-india/': '2026-07-30',
   '/blogs/car-scrappage-value-india/': '2026-07-30',
   '/blogs/factors-affecting-used-car-resale-value/': '2026-08-31',
+  '/blogs/fair-market-value-vs-asking-price-vs-dealer-offer/': '2026-09-02',
 };

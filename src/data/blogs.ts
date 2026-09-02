@@ -94,10 +94,9 @@ export const rawArticles: BlogArticle[] = [
     slug: 'fair-market-value-vs-asking-price-vs-dealer-offer',
     title: 'Fair market value vs asking price vs dealer offer: three prices for one car in India',
     excerpt: 'One car, three numbers, one fortnight in Pune. Why fair market value is a band, not a figure; what asking price actually reflects; how dealer offers are built; and where each rupee of the spread sits.',
-    date: '',
+    date: '2026-09-02',
     readTime: '11 min read',
     category: 'Valuation · Framework',
-    queued: true,
   },
   {
     slug: 'private-vs-dealer-vs-instant-buy',
