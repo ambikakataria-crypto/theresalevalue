@@ -109,21 +109,13 @@ const description = `${data.make} ${data.model} resale value in India: value ret
             </select>
           </label>
         </div>
-        <label class="block text-sm mb-6">
-          <span class="block text-xs uppercase tracking-widest text-slate-soft mb-1.5">City (optional)</span>
-          <select id="calc-city" class="w-full md:w-1/2 border border-cream-200 rounded-md px-3 py-2 bg-white text-navy-900">
-            <option value="0">All-India baseline</option>
-            {data.cityVariance.map((c: any) => <option value={c.variancePct}>{c.city} ({c.variancePct >= 0 ? '+' : ''}{c.variancePct}%)</option>)}
-          </select>
-        </label>
-
         <div id="calc-result" class="border-t border-cream-200 pt-5">
           <div class="text-xs uppercase tracking-widest text-slate-soft mb-1">Value retention</div>
           <div class="flex items-baseline gap-3 mb-1">
             <span id="calc-mid" class="font-data text-4xl text-navy-900">77%</span>
             <span id="calc-band" class="text-sm text-slate-soft">Band: 72% – 82%</span>
           </div>
-          <div id="calc-note" class="text-xs text-slate-soft mt-2">All-India baseline. Select a city for a city-adjusted retention band. For a rupee value on your car, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation calculator</a>.</div>
+          <div id="calc-note" class="text-xs text-slate-soft mt-2">All-India baseline. For a rupee value on your car, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation calculator</a>.</div>
         </div>
       </section>
 
@@ -330,16 +322,13 @@ const description = `${data.make} ${data.model} resale value in India: value ret
       const yearEl = $('calc-year');
       const kmEl = $('calc-km');
       const fuelEl = $('calc-fuel');
-      const cityEl = $('calc-city');
       const midEl = $('calc-mid');
       const bandEl = $('calc-band');
-      const noteEl = $('calc-note');
 
       function update() {
         const year = parseInt(yearEl.value, 10);
         const km = kmEl.value;
         const fuel = fuelEl.value;
-        const cityPct = parseFloat(cityEl.value) || 0;
         const match = perms.find(p => p.year === year && p.kmBand === km && p.fuel === fuel);
         const base = avgEx[fuel];
         if (!match || !base) {
@@ -347,20 +336,14 @@ const description = `${data.make} ${data.model} resale value in India: value ret
           bandEl.textContent = 'No data for this combination';
           return;
         }
-        const factor = 1 + cityPct / 100;
-        const retMid = Math.round((match.mid * factor / base) * 100);
-        const retLow = Math.round((match.low * factor / base) * 100);
-        const retHigh = Math.round((match.high * factor / base) * 100);
+        const retMid = Math.round((match.mid / base) * 100);
+        const retLow = Math.round((match.low / base) * 100);
+        const retHigh = Math.round((match.high / base) * 100);
         midEl.textContent = `${retMid}%`;
         bandEl.textContent = `Band: ${retLow}% – ${retHigh}%`;
-        const cityLabel = cityEl.options[cityEl.selectedIndex].text;
-        const cityText = cityPct === 0
-          ? 'All-India baseline. Select a city for a city-adjusted retention band.'
-          : `Adjusted for ${cityLabel.split(' (')[0]} (${cityPct >= 0 ? '+' : ''}${cityPct}%).`;
-        noteEl.innerHTML = `${cityText} For a rupee value on your car, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation calculator</a>.`;
       }
 
-      [yearEl, kmEl, fuelEl, cityEl].forEach(el => el.addEventListener('change', update));
+      [yearEl, kmEl, fuelEl].forEach(el => el.addEventListener('change', update));
       update();
     })();
   </script>
