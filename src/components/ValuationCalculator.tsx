@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import {
   fetchVehicleScreenItems,
   fetchVariants,
+  fetchVariantsWithPrice,
   fetchPricing,
   fetchVehicleByReg,
   RegNotFoundError,
@@ -197,7 +198,10 @@ export default function ValuationCalculator() {
     }
     let cancelled = false;
     setVariantsLoading(true);
-    fetchVariants(selectedMake.id, selectedModel.id, year)
+    // Prefer the priced list so depreciation can be shown; fall back to the
+    // mmv screen, which still drives the form but carries no ex-showroom price.
+    fetchVariantsWithPrice(selectedModel.id, year)
+      .catch(() => fetchVariants(selectedMake.id, selectedModel.id, year))
       .then((data) => { if (!cancelled) setVariants(data); })
       .catch(() => { if (!cancelled) setVariants([]); })
       .finally(() => { if (!cancelled) setVariantsLoading(false); });
@@ -372,7 +376,7 @@ export default function ValuationCalculator() {
     const match =
       variants.find((v) => v.id === pendingVariantId) ??
       (pendingVariantCode
-        ? variants.find((v) => v.title.toLowerCase() === pendingVariantCode.toLowerCase())
+        ? variants.find((v) => v.name.toLowerCase() === pendingVariantCode.toLowerCase())
         : undefined);
     if (match) setVariant(match.id);
     setPendingVariantId(null);
@@ -388,6 +392,23 @@ export default function ValuationCalculator() {
     const expectedPos = bandRange > 0 ? ((expected - low) / bandRange) * 100 : 50;
     const routes = computeRoutes(expected);
     const confidence = deriveConfidence(result.low, result.high, expected);
+
+    // Depreciation against the variant's ex-showroom price when new. Nominal,
+    // not inflation-adjusted, and only available from the priced variant list.
+    const exShowroom = selectedVariant?.exShowroomPrice ?? null;
+    const age = Math.max(0, new Date().getFullYear() - Number(year));
+    const depreciation =
+      exShowroom && exShowroom > expected
+        ? {
+            exShowroom,
+            lost: exShowroom - expected,
+            lostPct: Math.round(((exShowroom - expected) / exShowroom) * 100),
+            retainedPct: Math.round((expected / exShowroom) * 100),
+            // Compound, not total/age: depreciation applies to the remaining
+            // value each year, so a linear average badly understates it.
+            perYear: age > 0 ? (1 - Math.pow(expected / exShowroom, 1 / age)) * 100 : null,
+          }
+        : null;
 
     return (
       <div className="card-institutional bg-white max-w-2xl">
@@ -443,6 +464,42 @@ export default function ValuationCalculator() {
           <span>{formatPrice(low)}</span>
           <span>{formatPrice(high)}</span>
         </div>
+
+        {/* Depreciation since new */}
+        {depreciation && (
+          <div className="pt-6 border-t border-cream-200">
+            <div className="text-xs uppercase tracking-widest text-slate-soft mb-3">
+              Depreciation since new
+            </div>
+            <div className="grid grid-cols-3 gap-4 mb-3">
+              <div>
+                <div className="text-xs text-slate-soft mb-1">Ex-showroom when new</div>
+                <div className="font-data text-lg text-navy-900">{formatPrice(depreciation.exShowroom)}</div>
+              </div>
+              <div>
+                <div className="text-xs text-slate-soft mb-1">Value lost</div>
+                <div className="font-data text-lg text-navy-900">{formatPrice(depreciation.lost)}</div>
+              </div>
+              <div>
+                <div className="text-xs text-slate-soft mb-1">Value retained</div>
+                <div className="font-data text-lg text-signal-600">{depreciation.retainedPct}%</div>
+              </div>
+            </div>
+            <div className="relative h-2 bg-cream-200 rounded-full mb-2 overflow-hidden">
+              <div
+                className="absolute inset-y-0 left-0 bg-navy-900 rounded-full"
+                style={{ width: `${Math.min(100, depreciation.retainedPct)}%` }}
+              ></div>
+            </div>
+            <p className="text-[11px] text-slate-soft leading-relaxed">
+              This {selectedVariant?.title} listed at {formatPrice(depreciation.exShowroom)} ex-showroom and is
+              worth {formatPrice(expected)} today, {depreciation.lostPct}% less
+              {age > 0 ? ` after ${age} year${age === 1 ? '' : 's'}` : ''}
+              {depreciation.perYear !== null ? `, averaging ${depreciation.perYear.toFixed(1)}% a year` : ''}.
+              Ex-showroom is the launch price and is not adjusted for inflation.
+            </p>
+          </div>
+        )}
 
         {/* Sell / buy route breakdown */}
         <div className="pt-6 border-t border-cream-200">

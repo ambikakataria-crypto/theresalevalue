@@ -35,9 +35,13 @@ export async function fetchVehicleScreenItems(
 export interface Variant {
   id: string;
   title: string;
+  /** Bare trim name ("LP"), which several variants can share. Used for matching. */
+  name: string;
   subTitle: string;
   fuelType: string;
   transmissionType: string;
+  /** Ex-showroom price when new, in rupees. Only variant-fuel-list carries it. */
+  exShowroomPrice: number | null;
 }
 
 /**
@@ -65,9 +69,11 @@ export async function fetchVariants(make: string, model: string, year: string): 
       transmission.variant.items.map((variant) => ({
         id: variant.id,
         title: variant.title,
+        name: variant.title,
         subTitle: variant.sub_title,
         fuelType: fuel.id,
         transmissionType: transmission.id,
+        exShowroomPrice: null,
       }))
     )
   );
@@ -201,6 +207,46 @@ export async function fetchVehicleByReg(reg: string): Promise<RegLookup> {
     color: str(d.color),
     rcModel: str(d.rc_model),
   };
+}
+
+const VARIANT_FUEL_LIST_URL = 'https://vehicle-service-stage.qac24svc.dev/variant-fuel-list';
+
+/**
+ * Variants for a model/year including ex-showroom price, which the mmv
+ * variant_screen does not carry and depreciation needs. Nests fuel ->
+ * transmission group -> variants. Keyed on model alone, so no make is needed.
+ */
+export async function fetchVariantsWithPrice(modelId: string, year: string): Promise<Variant[]> {
+  if (!REG_AUTH) throw new Error('Variant price lookup is not configured.');
+
+  const url = new URL(VARIANT_FUEL_LIST_URL);
+  url.searchParams.set('modelId', modelId);
+  url.searchParams.set('year', year);
+
+  const res = await fetch(url, { headers: { x_basic_a: REG_AUTH } });
+  if (!res.ok) throw new Error(`Failed to fetch variant-fuel-list: ${res.status}`);
+
+  const body = await res.json();
+  const detail: Record<string, Array<{ variants: Array<Record<string, unknown>> }>> = body?.detail ?? {};
+
+  return Object.entries(detail).flatMap(([fuel, groups]) =>
+    groups.flatMap((group) =>
+      (group.variants ?? []).map((v) => {
+        const price = Number(v.ex_showroom_price);
+        return {
+          id: String(v.variant_id),
+          // Several variants share a bare name, so the dated display name is
+          // what keeps the dropdown unambiguous.
+          title: String(v.variant_display_name || v.variant_name || ''),
+          name: String(v.variant_name || ''),
+          subTitle: '',
+          fuelType: String(v.fuel_type || fuel),
+          transmissionType: String(v.transmission_type || ''),
+          exShowroomPrice: Number.isFinite(price) && price > 0 ? price : null,
+        };
+      })
+    )
+  );
 }
 
 const PRICING_URL = 'https://c24-bff-service-stage.qac24svc.dev/api/v1/fgvge-pricing';
