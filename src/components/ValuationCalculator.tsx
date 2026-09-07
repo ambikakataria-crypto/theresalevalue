@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   fetchVehicleScreenItems,
   fetchVariants,
   fetchPricing,
+  fetchVehicleByReg,
+  RegNotFoundError,
   type City,
   type Variant,
   type PricingResult,
+  type RegLookup,
 } from '../lib/cars24';
 
 interface ScreenItem {
@@ -18,8 +21,15 @@ function slugify(s: string) {
   return s.toLowerCase().replace(/\s+/g, '-');
 }
 
-function toLakhs(v: number) {
-  return Math.round((v / 100000) * 10) / 10;
+/**
+ * Indian price formatting. Lakh notation loses all resolution below ~₹1L, where
+ * a whole band collapses to a single "₹0.5L", so sub-lakh values are shown in
+ * full rupees instead.
+ */
+function formatPrice(rupees: number) {
+  if (rupees >= 10000000) return `₹${(rupees / 10000000).toFixed(2).replace(/\.?0+$/, '')}Cr`;
+  if (rupees >= 100000) return `₹${(rupees / 100000).toFixed(1).replace(/\.0$/, '')}L`;
+  return `₹${Math.round(rupees).toLocaleString('en-IN')}`;
 }
 
 // Route multipliers applied to fair-market expected value.
@@ -41,12 +51,14 @@ const CONDITION_LABEL = {
 
 type Condition = keyof typeof CONDITION_LABEL;
 
+/** Works in rupees and rounds to the nearest hundred, so routes stay distinct. */
 function computeRoutes(expected: number) {
+  const r = (mult: number) => Math.round((expected * mult) / 100) * 100;
   return {
-    individual: Math.round(expected * ROUTE_MULT.individual * 10) / 10,
-    dealer: Math.round(expected * ROUTE_MULT.dealer * 10) / 10,
-    online: Math.round(expected * ROUTE_MULT.online * 10) / 10,
-    buy: Math.round(expected * ROUTE_MULT.buy * 10) / 10,
+    individual: r(ROUTE_MULT.individual),
+    dealer: r(ROUTE_MULT.dealer),
+    online: r(ROUTE_MULT.online),
+    buy: r(ROUTE_MULT.buy),
   };
 }
 
@@ -58,34 +70,6 @@ function deriveConfidence(low: number, high: number, expected: number): 'High' |
   return 'Lower';
 }
 
-// Two-letter state code to canonical Cars24 city slug we can prefill after
-// parsing a registration number. Not exhaustive but covers the metros and
-// tier-1 cities that account for the bulk of valuation requests. Anything
-// outside this map falls back to the user picking a city manually.
-const STATE_CODE_TO_CITY_SLUG: Record<string, string> = {
-  DL: 'delhi',
-  HR: 'gurgaon',
-  UP: 'noida',
-  MH: 'mumbai',
-  KA: 'bengaluru',
-  TN: 'chennai',
-  TS: 'hyderabad',
-  AP: 'visakhapatnam',
-  WB: 'kolkata',
-  GJ: 'ahmedabad',
-  RJ: 'jaipur',
-  PB: 'ludhiana',
-  KL: 'kochi',
-  MP: 'indore',
-  CH: 'chandigarh',
-  JK: 'jammu',
-  UK: 'dehradun',
-  BR: 'patna',
-  OD: 'bhubaneswar',
-  JH: 'ranchi',
-  AS: 'guwahati',
-};
-
 // Loose but forgiving Indian RC pattern: XX 00 X(X) 0000
 // Accepts the common variants "DL01AB1234", "DL 01 AB 1234", "MH-12-AB-1234"
 // and the newer BH-series numbers.
@@ -95,28 +79,28 @@ function normaliseReg(raw: string): string {
 
 function isValidReg(reg: string): boolean {
   const r = normaliseReg(reg);
-  if (/^[A-Z]{2}\d{2}[A-Z]{1,2}\d{4}$/.test(r)) return true;      // Standard state series
+  // State series: 2-letter state, 1-2 digit RTO district, 0-3 letter series,
+  // 4 digits. Covers DL3CAB1234, MH12AB1234, KA01AB1111 and older DL1C1234.
+  if (/^[A-Z]{2}\d{1,2}[A-Z]{0,3}\d{4}$/.test(r)) return true;
   if (/^\d{2}BH\d{4}[A-Z]{1,2}$/.test(r)) return true;             // BH-series (year prefix)
   return false;
-}
-
-function stateCodeFor(reg: string): string | null {
-  const r = normaliseReg(reg);
-  if (/^\d{2}BH/.test(r)) return null; // BH-series has no state
-  const m = r.match(/^([A-Z]{2})/);
-  return m ? m[1] : null;
 }
 
 export default function ValuationCalculator() {
   const [regNumber, setRegNumber] = useState('');
   const [regBusy, setRegBusy] = useState(false);
   const [regMessage, setRegMessage] = useState<string | null>(null);
+  const [regDetails, setRegDetails] = useState<RegLookup | null>(null);
+  const [autoPrice, setAutoPrice] = useState(false);
+  const [awaitingKm, setAwaitingKm] = useState(false);
+  const kmInputRef = useRef<HTMLInputElement>(null);
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [year, setYear] = useState('');
   const [variant, setVariant] = useState('');
   const [km, setKm] = useState('');
   const [city, setCity] = useState('');
+  const [owners, setOwners] = useState('');
   const [result, setResult] = useState<PricingResult | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [condition, setCondition] = useState<Condition>('good');
@@ -223,12 +207,18 @@ export default function ValuationCalculator() {
   const selectedVariant = variants.find(v => v.id === variant);
   const selectedCity = cities.find(c => c.slug === city);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!selectedVariant || !selectedCity) return;
+  const runPricing = async () => {
+    if (!selectedVariant || !selectedCity || !km) return;
 
     setPricingLoading(true);
     setPricingError(null);
+
+    // Registration facts only apply while the plate in the box is still the one
+    // we looked up; otherwise fall back to the derived defaults.
+    const rc = regDetails && normaliseReg(regNumber) === regDetails.registrationNumber
+      ? regDetails
+      : null;
+
     try {
       const priced = await fetchPricing({
         variantId: selectedVariant.id,
@@ -238,7 +228,12 @@ export default function ValuationCalculator() {
         kms: Number(km),
         cityId: selectedCity.id,
         stateId: selectedCity.stateId,
-        rtoCode: `${selectedCity.stateCode}01`,
+        rtoCode: rc?.rtoCode ?? `${selectedCity.stateCode}01`,
+        manufacturingDate: rc?.manufacturingDate,
+        insuranceDate: rc?.insuranceDate,
+        // The picker wins over the RC value, since the user may have corrected it.
+        ownershipNumber: owners || rc?.ownershipNumber,
+        color: rc?.color,
       });
       setResult(priced);
       setSubmitted(true);
@@ -249,18 +244,34 @@ export default function ValuationCalculator() {
     }
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    void runPricing();
+  };
+
+  // When auto-detect fills the car and kilometres are already on file, price it
+  // straight away. The prefill cascade resolves over several async steps, so we
+  // wait for the variant and city to land rather than pricing immediately.
+  useEffect(() => {
+    if (!autoPrice) return;
+    if (pricingLoading || !selectedVariant || !selectedCity || !km) return;
+    setAutoPrice(false);
+    void runPricing();
+  }, [autoPrice, pricingLoading, selectedVariant?.id, selectedCity?.id, km]);
+
   const reset = () => {
     setSubmitted(false);
     setResult(null);
     setCondition('good');
     setPricingError(null);
+    setAutoPrice(false);
+    setAwaitingKm(false);
   };
 
-  // Attempt to auto-fill make, model and city from an Indian registration
-  // number. The state-code -> city prefill runs entirely client-side. A real
-  // RC to make/model lookup requires a licensed VAHAN backend; when one is
-  // wired up at `/api/rc-lookup`, we consume it here. Until then we tell
-  // the user to fill make/model manually and we prefill city where we can.
+  // Auto-fill the form from an Indian registration number. The RC lookup also
+  // returns the real manufacturing month, RTO code, insurance expiry and owner
+  // count, which are better than the defaults the manual path has to assume,
+  // so we keep the whole record and feed it into the pricing call.
   const detectFromReg = async () => {
     const reg = normaliseReg(regNumber);
     if (!reg) {
@@ -273,59 +284,79 @@ export default function ValuationCalculator() {
     }
     setRegBusy(true);
     setRegMessage(null);
+    setRegDetails(null);
 
-    // Prefill city from state code (free, no lookup required).
-    const stateCode = stateCodeFor(reg);
-    const citySlugGuess = stateCode ? STATE_CODE_TO_CITY_SLUG[stateCode] : null;
-    if (citySlugGuess && cities.some((c) => c.slug === citySlugGuess)) {
-      setCity(citySlugGuess);
-    }
-
-    // Try a real RC lookup if the backend is wired. Fails silently when the
-    // endpoint is absent so the user still gets the state-based city prefill.
     try {
-      const res = await fetch(`/api/rc-lookup?reg=${encodeURIComponent(reg)}`);
-      if (res.ok) {
-        const data = await res.json() as {
-          make?: string;
-          model?: string;
-          year?: string;
-          fuelType?: string;
-        };
-        if (data.make) {
-          const matched = makes.find((m) => slugify(m.title) === slugify(data.make!));
-          if (matched) setMake(slugify(matched.title));
-        }
-        // Model and year prefill happen after the make-triggered list loads,
-        // so we stash them for a follow-up effect once options arrive.
-        if (data.model) setPendingModel(slugify(data.model));
-        if (data.year) setPendingYear(data.year);
-        setRegMessage(`Found ${data.make || ''} ${data.model || ''} ${data.year ? `(${data.year})` : ''}. Confirm and add km driven below.`.trim());
-        setRegBusy(false);
-        return;
-      }
-    } catch {
-      // Ignore; fall through to the fallback message below.
-    }
+      const rc = await fetchVehicleByReg(reg);
+      setRegDetails(rc);
 
-    setRegMessage(
-      citySlugGuess
-        ? `Registered in ${stateCode}. City set to ${citySlugGuess.replace(/^\w/, (c) => c.toUpperCase())}. Please confirm make, model and variant below.`
-        : 'Registration read. Please enter make, model and variant below.'
-    );
-    setRegBusy(false);
+      // City comes back as a catalogue id, so it needs no guessing.
+      const matchedCity = rc.cityId ? cities.find((c) => c.id === rc.cityId) : undefined;
+      if (matchedCity) setCity(matchedCity.slug);
+
+      // Make resolves immediately; the rest need their lists to load first, so
+      // they are stashed and applied by the effects below as options arrive.
+      if (rc.makeId) {
+        const matchedMake = makes.find((m) => m.id === rc.makeId);
+        if (matchedMake) setMake(slugify(matchedMake.title));
+      }
+      if (rc.modelId) setPendingModelId(rc.modelId);
+      if (rc.year) setPendingYear(rc.year);
+      if (rc.variantId) setPendingVariantId(rc.variantId);
+      if (rc.variantCode) setPendingVariantCode(rc.variantCode);
+      // The RC counts owners without an upper bound; the picker tops out at 4+.
+      const ownerSr = Number(rc.ownershipNumber);
+      if (Number.isFinite(ownerSr) && ownerSr >= 1) setOwners(String(Math.min(ownerSr, 4)));
+
+      // ds_details can supply make/model ids without display names, so treat
+      // resolved ids as the success signal and name the car from the catalogue.
+      if (rc.makeId && rc.modelId) {
+        const makeLabel = rc.makeName ?? makes.find((m) => m.id === rc.makeId)?.title ?? '';
+        const found = [rc.year, makeLabel, rc.modelName, rc.variantName].filter(Boolean).join(' ');
+        const where = matchedCity ? ` registered in ${matchedCity.name}` : '';
+        if (km) {
+          // Everything we need is on file, so go straight to the valuation once
+          // the prefilled dropdowns finish resolving.
+          setAutoPrice(true);
+          setRegMessage(`Found your ${found}${where}. Fetching your valuation…`);
+        } else {
+          setAwaitingKm(true);
+          setRegMessage(`Found your ${found}${where}. Just add kilometres driven below to see your valuation.`);
+          requestAnimationFrame(() => {
+            kmInputRef.current?.focus();
+            kmInputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          });
+        }
+      } else {
+        setRegMessage(
+          `Registration found${rc.rcModel ? ` (${rc.rcModel})` : ''}${matchedCity ? `, registered in ${matchedCity.name}` : ''}, but we could not match it to a catalogue model. Please pick make, model and variant below.`
+        );
+      }
+    } catch (err) {
+      setRegMessage(
+        err instanceof RegNotFoundError
+          ? 'We could not find that registration number. Please enter your car details below.'
+          : 'Auto-detect is unavailable right now. Please enter your car details below.'
+      );
+    } finally {
+      setRegBusy(false);
+    }
   };
 
   // Deferred prefills that need dropdown options to finish loading first.
-  const [pendingModel, setPendingModel] = useState<string | null>(null);
+  const [pendingModelId, setPendingModelId] = useState<string | null>(null);
   const [pendingYear, setPendingYear] = useState<string | null>(null);
+  const [pendingVariantId, setPendingVariantId] = useState<string | null>(null);
+  const [pendingVariantCode, setPendingVariantCode] = useState<string | null>(null);
 
   useEffect(() => {
-    if (pendingModel && models.some((m) => slugify(m.title) === pendingModel)) {
-      setModel(pendingModel);
-      setPendingModel(null);
+    if (!pendingModelId) return;
+    const match = models.find((m) => m.id === pendingModelId);
+    if (match) {
+      setModel(slugify(match.title));
+      setPendingModelId(null);
     }
-  }, [pendingModel, models]);
+  }, [pendingModelId, models]);
 
   useEffect(() => {
     if (pendingYear && years.some((y) => y.id === pendingYear)) {
@@ -334,15 +365,29 @@ export default function ValuationCalculator() {
     }
   }, [pendingYear, years]);
 
+  // The RC variant id is scoped to its own year bucket, so it often misses the
+  // list for the selected year. Fall back to matching the bare trim name.
+  useEffect(() => {
+    if ((!pendingVariantId && !pendingVariantCode) || !variants.length) return;
+    const match =
+      variants.find((v) => v.id === pendingVariantId) ??
+      (pendingVariantCode
+        ? variants.find((v) => v.title.toLowerCase() === pendingVariantCode.toLowerCase())
+        : undefined);
+    if (match) setVariant(match.id);
+    setPendingVariantId(null);
+    setPendingVariantCode(null);
+  }, [pendingVariantId, pendingVariantCode, variants]);
+
   if (submitted && result) {
     const tier = result.byCondition[condition];
-    const low = toLakhs(tier.low);
-    const high = toLakhs(tier.high);
-    const expected = Math.round(((low + high) / 2) * 10) / 10;
+    const low = tier.low;
+    const high = tier.high;
+    const expected = Math.round((low + high) / 2);
     const bandRange = high - low;
     const expectedPos = bandRange > 0 ? ((expected - low) / bandRange) * 100 : 50;
     const routes = computeRoutes(expected);
-    const confidence = deriveConfidence(toLakhs(result.low), toLakhs(result.high), expected);
+    const confidence = deriveConfidence(result.low, result.high, expected);
 
     return (
       <div className="card-institutional bg-white max-w-2xl">
@@ -353,7 +398,7 @@ export default function ValuationCalculator() {
             {year} {selectedMake?.title} {selectedModel?.title} {selectedVariant?.title} · {Number(km).toLocaleString('en-IN')} km · {selectedCity?.name} · condition {CONDITION_LABEL[condition]}
           </div>
           <div className="flex items-baseline gap-3 mb-1">
-            <div className="font-data text-4xl font-medium text-navy-900">₹{expected}L</div>
+            <div className="font-data text-4xl font-medium text-navy-900">{formatPrice(expected)}</div>
             <div className="text-sm text-slate-soft">expected value</div>
           </div>
         </div>
@@ -395,8 +440,8 @@ export default function ValuationCalculator() {
           ></div>
         </div>
         <div className="flex justify-between text-sm font-data text-navy-900 mb-6">
-          <span>₹{low}L</span>
-          <span>₹{high}L</span>
+          <span>{formatPrice(low)}</span>
+          <span>{formatPrice(high)}</span>
         </div>
 
         {/* Sell / buy route breakdown */}
@@ -405,22 +450,22 @@ export default function ValuationCalculator() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-3">
             <div className="border border-navy-900 rounded-md p-3">
               <div className="text-[10px] uppercase tracking-widest text-slate-soft mb-1">Sell to individual</div>
-              <div className="font-data text-lg text-navy-900">₹{routes.individual}L</div>
+              <div className="font-data text-lg text-navy-900">{formatPrice(routes.individual)}</div>
               <div className="text-[11px] text-slate-soft mt-0.5">private sale, highest</div>
             </div>
             <div className="border border-cream-200 rounded-md p-3">
               <div className="text-[10px] uppercase tracking-widest text-slate-soft mb-1">Sell to dealer</div>
-              <div className="font-data text-lg text-navy-900">₹{routes.dealer}L</div>
+              <div className="font-data text-lg text-navy-900">{formatPrice(routes.dealer)}</div>
               <div className="text-[11px] text-slate-soft mt-0.5">trade-in / wholesale</div>
             </div>
             <div className="border border-cream-200 rounded-md p-3">
               <div className="text-[10px] uppercase tracking-widest text-slate-soft mb-1">Instant online sale</div>
-              <div className="font-data text-lg text-navy-900">₹{routes.online}L</div>
+              <div className="font-data text-lg text-navy-900">{formatPrice(routes.online)}</div>
               <div className="text-[11px] text-slate-soft mt-0.5">same-day, pre-inspection</div>
             </div>
             <div className="border border-cream-200 rounded-md p-3">
               <div className="text-[10px] uppercase tracking-widest text-slate-soft mb-1">Buy from dealer</div>
-              <div className="font-data text-lg text-navy-900">₹{routes.buy}L</div>
+              <div className="font-data text-lg text-navy-900">{formatPrice(routes.buy)}</div>
               <div className="text-[11px] text-slate-soft mt-0.5">retail asking</div>
             </div>
           </div>
@@ -446,7 +491,7 @@ export default function ValuationCalculator() {
         </div>
 
         <div className="mt-6 p-4 bg-cream-100 rounded-md text-sm text-graphite leading-relaxed">
-          <strong className="text-navy-900">What this means.</strong> If you sell in the next 30 days, the market is likely to pay you between <strong>₹{low}L and ₹{high}L</strong>. Any offer significantly below ₹{low}L is under-market. Any offer above ₹{high}L is above-market. Good outcome, but verify buyer credibility.
+          <strong className="text-navy-900">What this means.</strong> If you sell in the next 30 days, the market is likely to pay you between <strong>{formatPrice(low)} and {formatPrice(high)}</strong>. Any offer significantly below {formatPrice(low)} is under-market. Any offer above {formatPrice(high)} is above-market. Good outcome, but verify buyer credibility.
         </div>
 
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -563,15 +608,36 @@ export default function ValuationCalculator() {
         <div>
           <label className="block text-sm font-medium text-navy-900 mb-1.5">Kilometres driven</label>
           <input
+            ref={kmInputRef}
             type="number"
             required
             min="0"
             max="500000"
             value={km}
-            onChange={(e) => setKm(e.target.value)}
+            onChange={(e) => { setKm(e.target.value); if (e.target.value) setAwaitingKm(false); }}
             placeholder="e.g. 45000"
-            className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
+            className={
+              'w-full px-3 py-2.5 bg-cream border rounded-md text-sm focus:border-navy-900 focus:outline-none ' +
+              (awaitingKm && !km ? 'border-signal-500 ring-2 ring-signal-500/30' : 'border-cream-200')
+            }
           />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-navy-900 mb-1.5">
+            Owners <span className="text-slate-soft font-normal">(optional)</span>
+          </label>
+          <select
+            value={owners}
+            onChange={(e) => setOwners(e.target.value)}
+            className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
+          >
+            <option value="">Not sure</option>
+            <option value="1">1st owner</option>
+            <option value="2">2nd owner</option>
+            <option value="3">3rd owner</option>
+            <option value="4">4th owner or more</option>
+          </select>
         </div>
 
         <div className="md:col-span-2">

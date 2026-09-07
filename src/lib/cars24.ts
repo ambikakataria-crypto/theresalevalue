@@ -107,6 +107,102 @@ export async function fetchCityList(): Promise<City[]> {
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
+const REG_LOOKUP_URL = 'https://vehicle-service-stage.qac24svc.dev/v1/2025-09/vehicle-number';
+
+/**
+ * Basic credential for the vehicle-service RC lookup. Kept in an env var rather
+ * than the source so it stays out of git history. Being a PUBLIC_ var it is
+ * still inlined into the client bundle at build time, which is unavoidable
+ * while the site is statically hosted and the browser calls the API directly.
+ */
+const REG_AUTH = import.meta.env.PUBLIC_C24_VEHICLE_AUTH;
+
+export interface RegLookup {
+  registrationNumber: string;
+  makeId: string | null;
+  makeName: string | null;
+  modelId: string | null;
+  modelName: string | null;
+  variantId: string | null;
+  variantName: string | null;
+  /** Bare trim name ("LP") used to match a variant when the id is year-scoped. */
+  variantCode: string | null;
+  fuelType: string | null;
+  transmissionType: string | null;
+  /** Present when the MMV came from the ds_details prediction rather than the RC. */
+  mmvConfidence: number | null;
+  year: string | null;
+  cityId: string | null;
+  stateId: number | null;
+  /** Pricing expects an unpunctuated code ("DL03"); the RC returns "DL-03". */
+  rtoCode: string | null;
+  manufacturingDate: string | null;
+  insuranceDate: string | null;
+  ownershipNumber: string | null;
+  color: string | null;
+  /** Raw RC model string, shown when the catalogue MMV block is absent. */
+  rcModel: string | null;
+}
+
+export class RegNotFoundError extends Error {}
+
+/**
+ * Looks up a vehicle by registration number. `vehicleMmv` comes back null for
+ * plates the catalogue cannot resolve, so every MMV field is optional and the
+ * caller prefills whatever is present.
+ */
+export async function fetchVehicleByReg(reg: string): Promise<RegLookup> {
+  if (!REG_AUTH) throw new Error('Registration lookup is not configured.');
+
+  const res = await fetch(`${REG_LOOKUP_URL}/${encodeURIComponent(reg)}`, {
+    headers: {
+      'Content-Type': 'application/json',
+      x_basic_a: REG_AUTH,
+      platform: 'seller',
+      origin_source: 'c2b-website',
+      device_category: 'mSite',
+    },
+  });
+
+  if (res.status === 404) throw new RegNotFoundError('No record found for that registration number.');
+  if (!res.ok) throw new Error(`Registration lookup failed: ${res.status}`);
+
+  const body = await res.json();
+  if (!body?.success || !body?.detail) throw new RegNotFoundError('No record found for that registration number.');
+
+  const d = body.detail;
+  const mmv = d.vehicleMmv ?? null;
+  // vehicleMmv is frequently null; ds_details carries a scored prediction of the
+  // same make/model/variant, so it serves as the fallback. Its variant id is
+  // scoped to a different year bucket, hence variantCode for name matching.
+  const ds = Array.isArray(d.ds_details) && d.ds_details.length ? d.ds_details[0] : null;
+  const dsv = ds?.variant ?? null;
+  const str = (v: unknown) => (v === null || v === undefined || v === '' ? null : String(v));
+
+  return {
+    registrationNumber: str(d.registrationNumber) ?? reg,
+    makeId: str(mmv?.makeId) ?? str(ds?.make_id),
+    makeName: str(mmv?.makeDisplay) ?? str(d.brand?.make_display),
+    modelId: str(mmv?.modelId) ?? str(ds?.model_id),
+    modelName: str(mmv?.modelDisplay) ?? str(d.model?.model_display),
+    variantId: str(mmv?.variantId) ?? str(dsv?.variant_id),
+    variantName: str(mmv?.variantDisplayName) ?? str(dsv?.variant_display_name),
+    variantCode: str(dsv?.variant_name),
+    fuelType: str(mmv?.fuelType) ?? str(dsv?.fuel_type) ?? str(d.fuelType),
+    transmissionType: str(mmv?.transmissionType) ?? str(dsv?.transmission_type),
+    mmvConfidence: !mmv && typeof ds?.confidence_score === 'number' ? ds.confidence_score : null,
+    year: str(d.year?.year) ?? str(d.regn_year),
+    cityId: str(d.RTO?.city_id),
+    stateId: typeof d.states?.state_id === 'number' ? d.states.state_id : null,
+    rtoCode: str(d.RTO?.rto_code)?.replace(/[^A-Z0-9]/gi, '') ?? null,
+    manufacturingDate: str(d.manufacturingMonthYr),
+    insuranceDate: str(d.insuranceUpTo),
+    ownershipNumber: str(d.rc_owner_sr),
+    color: str(d.color),
+    rcModel: str(d.rc_model),
+  };
+}
+
 const PRICING_URL = 'https://c24-bff-service-stage.qac24svc.dev/api/v1/fgvge-pricing';
 
 // Fixed condition ratings sent upstream. The response returns quote bands for
@@ -140,6 +236,14 @@ export interface PricingInput {
   cityId: string;
   stateId: number;
   rtoCode: string;
+  /**
+   * Real values from an RC lookup when the user auto-detected their car.
+   * Absent on the manual path, where they fall back to derived defaults.
+   */
+  manufacturingDate?: string | null;
+  insuranceDate?: string | null;
+  ownershipNumber?: string | null;
+  color?: string | null;
 }
 
 /** Local-date YYYY-MM-DD. toISOString() would shift the day for IST users. */
@@ -165,7 +269,7 @@ async function requestPricing(input: PricingInput): Promise<PricingResult> {
     body: JSON.stringify({
       variant_id: Number(input.variantId),
       year: input.year,
-      manufacturing_date: `01/${input.year}`,
+      manufacturing_date: input.manufacturingDate ?? `01/${input.year}`,
       state_id: input.stateId,
       kms: input.kms,
       odo_optional: 0,
@@ -178,9 +282,9 @@ async function requestPricing(input: PricingInput): Promise<PricingResult> {
       channel_partner_token: 'NA',
       city_id: Number(input.cityId),
       test_type: 'CONTROL',
-      color: '',
-      insurance_date: insuranceDate,
-      ownership_number: 'NA',
+      color: input.color ?? '',
+      insurance_date: input.insuranceDate ?? insuranceDate,
+      ownership_number: input.ownershipNumber ?? 'NA',
       priceExplainer: 0,
       similar_car_exp: 1,
       source_identifier: 'c2b_cars24',
