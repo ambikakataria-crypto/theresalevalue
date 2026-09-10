@@ -35,9 +35,13 @@ export async function fetchVehicleScreenItems(
 export interface Variant {
   id: string;
   title: string;
+  /** Bare trim name ("LP"), which several variants can share. Used for matching. */
+  name: string;
   subTitle: string;
   fuelType: string;
   transmissionType: string;
+  /** Ex-showroom price when new, in rupees. Only variant-fuel-list carries it. */
+  exShowroomPrice: number | null;
 }
 
 /**
@@ -65,9 +69,11 @@ export async function fetchVariants(make: string, model: string, year: string): 
       transmission.variant.items.map((variant) => ({
         id: variant.id,
         title: variant.title,
+        name: variant.title,
         subTitle: variant.sub_title,
         fuelType: fuel.id,
         transmissionType: transmission.id,
+        exShowroomPrice: null,
       }))
     )
   );
@@ -203,6 +209,46 @@ export async function fetchVehicleByReg(reg: string): Promise<RegLookup> {
   };
 }
 
+const VARIANT_FUEL_LIST_URL = 'https://vehicle-service-stage.qac24svc.dev/variant-fuel-list';
+
+/**
+ * Variants for a model/year including ex-showroom price, which the mmv
+ * variant_screen does not carry and depreciation needs. Nests fuel ->
+ * transmission group -> variants. Keyed on model alone, so no make is needed.
+ */
+export async function fetchVariantsWithPrice(modelId: string, year: string): Promise<Variant[]> {
+  if (!REG_AUTH) throw new Error('Variant price lookup is not configured.');
+
+  const url = new URL(VARIANT_FUEL_LIST_URL);
+  url.searchParams.set('modelId', modelId);
+  url.searchParams.set('year', year);
+
+  const res = await fetch(url, { headers: { x_basic_a: REG_AUTH } });
+  if (!res.ok) throw new Error(`Failed to fetch variant-fuel-list: ${res.status}`);
+
+  const body = await res.json();
+  const detail: Record<string, Array<{ variants: Array<Record<string, unknown>> }>> = body?.detail ?? {};
+
+  return Object.entries(detail).flatMap(([fuel, groups]) =>
+    groups.flatMap((group) =>
+      (group.variants ?? []).map((v) => {
+        const price = Number(v.ex_showroom_price);
+        return {
+          id: String(v.variant_id),
+          // Several variants share a bare name, so the dated display name is
+          // what keeps the dropdown unambiguous.
+          title: String(v.variant_display_name || v.variant_name || ''),
+          name: String(v.variant_name || ''),
+          subTitle: '',
+          fuelType: String(v.fuel_type || fuel),
+          transmissionType: String(v.transmission_type || ''),
+          exShowroomPrice: Number.isFinite(price) && price > 0 ? price : null,
+        };
+      })
+    )
+  );
+}
+
 const PRICING_URL = 'https://c24-bff-service-stage.qac24svc.dev/api/v1/fgvge-pricing';
 
 // Fixed condition ratings sent upstream. The response returns quote bands for
@@ -331,4 +377,36 @@ export async function fetchPricing(input: PricingInput, attempts = 3): Promise<P
     }
   }
   throw lastError;
+}
+
+/**
+ * Same-origin proxy in front of the fgvge-pricing model server. The credential
+ * lives on that route, not here, so this is the only pricing call in the file
+ * that does not need a token in the browser.
+ */
+const PREDICT_PROXY_URL = '/api/v1/fgvge-pricing-predict';
+
+export interface DepreciationInput {
+  variantId: string;
+  /** Manufacture year to price at. The model returns depreciation buckets only
+   *  up to the queried car's age, so ask for an old one to get the full table. */
+  year: number;
+  exShowroomPrice: number;
+  kms: number;
+  stateId?: number;
+}
+
+/** Depreciation percent keyed by vehicle age in years, e.g. { "1": 24, "3": 38 }. */
+export async function fetchDepreciationTable(
+  input: DepreciationInput
+): Promise<Record<string, number>> {
+  const res = await fetch(PREDICT_PROXY_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...input, variantId: Number(input.variantId) }),
+  });
+
+  const body = await res.json();
+  if (!res.ok) throw new Error(body?.error ?? `Depreciation lookup failed: ${res.status}`);
+  return body.yearlyDep ?? {};
 }
