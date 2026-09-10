@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { fetchVariants, fetchVariantsWithPrice, fetchDepreciationTable, type Variant } from '../lib/cars24';
 
 /**
  * Standalone new-car depreciation calculator.
@@ -74,6 +75,19 @@ const FUEL_LABEL: Record<Fuel, string> = {
   ev:     'Electric (BEV)',
 };
 
+// Maps the catalogue's fuel-group name (from variant-fuel-list) to our Fuel
+// enum, so picking a variant keeps the Fuel selector in sync with it rather
+// than leaving a stale, contradictory choice sitting next to a real variant.
+function mapApiFuel(apiFuel: string): Fuel | null {
+  const key = apiFuel.trim().toLowerCase();
+  if (key === 'petrol') return 'petrol';
+  if (key === 'diesel') return 'diesel';
+  if (key === 'cng' || key === 'lpg') return 'cng';
+  if (key === 'electric' || key === 'ev') return 'ev';
+  if (key.includes('hybrid')) return 'hybrid';
+  return null;
+}
+
 // Metro + Tier 1 city name lookups. Everything else falls to Tier 2.
 const METRO_CITIES = new Set([
   'delhi', 'new delhi', 'delhi ncr', 'gurgaon', 'gurugram', 'noida', 'ghaziabad', 'faridabad',
@@ -124,6 +138,65 @@ function computeCurve(exShowroom: number, fuel: Fuel, city: CityTier): number[] 
     const fCompound = Math.pow(fMult, y);
     const cCompound = y >= 3 ? Math.pow(cMult, y - 2) : 1;
     return exShowroom * (pct / 100) * fCompound * cCompound;
+  });
+}
+
+// The model only reports depreciation for a car it can price, and returns
+// buckets up to the queried car's age — so ask about a 9-year-old one to get
+// the whole {1,3,5,7,9} table in a single call. 12,000 km/yr matches the usage
+// assumption stated under the chart.
+const DEP_PROBE_AGE = 9;
+const KMS_PER_YEAR = 12000;
+
+// A variant too new to be priced at DEP_PROBE_AGE comes back with a short
+// table, and carrying a young car's steep slope far past its last anchor
+// understates the tail badly — a table ending at age 3 put a ₹7.5L car at
+// ₹0.97L by year 10. Ending at age 5 is still close enough to use; shorter
+// than that and the built-in segment curve is the better answer.
+const MAX_EXTRAPOLATED_YEARS = 5;
+
+/**
+ * Turns the model's odd-year depreciation table into an 11-point value curve:
+ * interpolate between anchors, then carry the closing slope out to year 10.
+ * Returns null when too few anchors came back to draw a curve from.
+ */
+function curveFromDepTable(
+  exShowroom: number,
+  yearlyDep: Record<string, number>,
+  city: CityTier,
+): number[] | null {
+  const anchors = Object.entries(yearlyDep)
+    .map(([age, pct]) => [Number(age), 100 - pct] as [number, number])
+    .filter(([age, retention]) => Number.isFinite(age) && Number.isFinite(retention))
+    .sort((a, b) => a[0] - b[0]);
+  if (anchors.length < 2) return null;
+  if (anchors[anchors.length - 1][0] < 10 - MAX_EXTRAPOLATED_YEARS) return null;
+
+  const points: [number, number][] = [[0, 100], ...anchors];
+  const cMult = CITY_MULT[city];
+
+  return Array.from({ length: 11 }, (_, age) => {
+    if (age === 0) return exShowroom;
+
+    const last = points[points.length - 1];
+    let retention: number;
+    if (age >= last[0]) {
+      const prev = points[points.length - 2];
+      const slope = (last[1] - prev[1]) / (last[0] - prev[0]);
+      retention = last[1] + slope * (age - last[0]);
+    } else {
+      const upper = points.findIndex(([x]) => age <= x);
+      const [x1, y1] = points[upper - 1];
+      const [x2, y2] = points[upper];
+      retention = y1 + ((age - x1) / (x2 - x1)) * (y2 - y1);
+    }
+
+    // Fuel is not re-applied here: the variant already encodes it, so the
+    // model's own figure accounts for it. The city tier still is, on a
+    // different axis — the model varies its early years by state (1-3pp), but
+    // cannot tell a metro from a small town inside that same state.
+    const cCompound = age >= 3 ? Math.pow(cMult, age - 2) : 1;
+    return (exShowroom * Math.max(retention, 0) * cCompound) / 100;
   });
 }
 
@@ -207,10 +280,73 @@ export default function NewCarDepreciationCalculator() {
   const selectedCity = cities.find((c) => c.slug === citySlug);
   const cityTier: CityTier = selectedCity ? tierFor(selectedCity.name) : 'tier1';
 
-  const curve = useMemo(
-    () => computeCurve(exShowroom, fuel, cityTier),
-    [exShowroom, fuel, cityTier],
-  );
+  // Variants (with ex-showroom price) for the chosen model + year. Falls back
+  // to the price-less mmv list if variant-fuel-list has no data for this
+  // model/year, so the dropdown still populates even without pricing.
+  const [variants, setVariants] = useState<Variant[]>([]);
+  const [variantsLoading, setVariantsLoading] = useState(false);
+
+  useEffect(() => {
+    if (!selectedMake || !selectedModel) {
+      setVariants([]);
+      return;
+    }
+    let cancelled = false;
+    setVariantsLoading(true);
+    fetchVariantsWithPrice(selectedModel.id, String(mfgYear))
+      .catch(() => fetchVariants(selectedMake.id, selectedModel.id, String(mfgYear)))
+      .then((data) => { if (!cancelled) setVariants(data); })
+      .catch(() => { if (!cancelled) setVariants([]); })
+      .finally(() => { if (!cancelled) setVariantsLoading(false); });
+    return () => { cancelled = true; };
+  }, [selectedMake?.id, selectedModel?.id, mfgYear]);
+
+  const selectedVariant = variants.find((v) => v.id === variant);
+  // The fallback mmv list carries no prices, so the copy below must not promise
+  // an auto-filled ex-showroom the user is never going to see.
+  const variantsHavePrice = variants.some((v) => v.exShowroomPrice);
+
+  // Picking a variant sets its real ex-showroom price and fuel type, rather
+  // than leaving those as guesses next to a specific, known trim.
+  useEffect(() => {
+    if (!selectedVariant) return;
+    if (selectedVariant.exShowroomPrice) {
+      setExShowroom(Math.round((selectedVariant.exShowroomPrice / 100000) * 10) / 10);
+    }
+    const mappedFuel = mapApiFuel(selectedVariant.fuelType);
+    if (mappedFuel) setFuel(mappedFuel);
+  }, [selectedVariant?.id]);
+
+  // Real depreciation for the chosen trim, from the pricing model. Only a
+  // priced variant can be looked up, and any failure simply leaves the
+  // built-in segment benchmarks in charge.
+  const [depTable, setDepTable] = useState<Record<string, number> | null>(null);
+
+  useEffect(() => {
+    if (!selectedVariant?.exShowroomPrice) {
+      setDepTable(null);
+      return;
+    }
+    let cancelled = false;
+    fetchDepreciationTable({
+      variantId: selectedVariant.id,
+      year: currentYear - DEP_PROBE_AGE,
+      exShowroomPrice: selectedVariant.exShowroomPrice,
+      kms: DEP_PROBE_AGE * KMS_PER_YEAR,
+      stateId: selectedCity ? Number(selectedCity.stateId) : undefined,
+    })
+      .then((yearlyDep) => { if (!cancelled) setDepTable(yearlyDep); })
+      .catch(() => { if (!cancelled) setDepTable(null); });
+    return () => { cancelled = true; };
+  }, [selectedVariant?.id, selectedCity?.id]);
+
+  const { curve, modelDerived } = useMemo(() => {
+    if (depTable) {
+      const fromModel = curveFromDepTable(exShowroom, depTable, cityTier);
+      if (fromModel) return { curve: fromModel, modelDerived: true };
+    }
+    return { curve: computeCurve(exShowroom, fuel, cityTier), modelDerived: false };
+  }, [exShowroom, fuel, cityTier, depTable]);
 
   const y5Retention = Math.round((curve[5] / curve[0]) * 100);
   const y10Retention = Math.round((curve[10] / curve[0]) * 100);
@@ -255,7 +391,7 @@ export default function NewCarDepreciationCalculator() {
             <select
               required
               value={make}
-              onChange={(e) => { setMake(e.target.value); setModel(''); }}
+              onChange={(e) => { setMake(e.target.value); setModel(''); setVariant(''); }}
               disabled={makesLoading}
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
             >
@@ -271,7 +407,7 @@ export default function NewCarDepreciationCalculator() {
             <select
               required
               value={model}
-              onChange={(e) => setModel(e.target.value)}
+              onChange={(e) => { setModel(e.target.value); setVariant(''); }}
               disabled={!make || modelsLoading}
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
             >
@@ -284,14 +420,38 @@ export default function NewCarDepreciationCalculator() {
 
           <div>
             <label className="block text-sm font-medium text-navy-900 mb-1.5">Variant</label>
-            <input
-              type="text"
+            <select
               value={variant}
               onChange={(e) => setVariant(e.target.value)}
-              placeholder="e.g. VXi, Alpha, Creative"
-              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
-            />
-            <div className="text-xs text-slate-soft mt-1">Enter trim as it appears on the RC or brochure.</div>
+              disabled={!selectedModel || variantsLoading}
+              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
+            >
+              <option value="">
+                {!selectedModel
+                  ? 'Select a model first'
+                  : variantsLoading
+                    ? 'Loading variants…'
+                    : variants.length > 0
+                      ? 'Select variant'
+                      : 'No variants listed for this year'}
+              </option>
+              {variants.map((v) => (
+                <option key={v.id} value={v.id}>
+                  {v.title}{v.exShowroomPrice ? ` · ${fmtInr(v.exShowroomPrice / 100000)}` : ''}
+                </option>
+              ))}
+            </select>
+            <div className="text-xs text-slate-soft mt-1">
+              {!selectedModel
+                ? 'Optional — pick a make and model to list trims.'
+                : variantsLoading
+                  ? 'Fetching trims for this model and year…'
+                  : variants.length === 0
+                    ? 'No catalogue trims for this year — enter ex-showroom price manually below.'
+                    : variantsHavePrice
+                      ? 'Picking a variant fills its real ex-showroom price and fuel type below.'
+                      : 'Prices are unavailable for this year — enter ex-showroom price manually below.'}
+            </div>
           </div>
 
           <div>
@@ -301,7 +461,7 @@ export default function NewCarDepreciationCalculator() {
             <select
               required
               value={mfgYear}
-              onChange={(e) => setMfgYear(Number(e.target.value))}
+              onChange={(e) => { setMfgYear(Number(e.target.value)); setVariant(''); }}
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
             >
               {yearOptions.map((y) => (
@@ -324,7 +484,11 @@ export default function NewCarDepreciationCalculator() {
               placeholder="e.g. 8.5"
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm font-data focus:border-navy-900 focus:outline-none"
             />
-            <div className="text-xs text-slate-soft mt-1">On-road adds ~10-15% but resale is anchored to ex-showroom.</div>
+            <div className="text-xs text-slate-soft mt-1">
+              {selectedVariant?.exShowroomPrice
+                ? 'Filled from the catalogue for this variant — edit if your quote differs.'
+                : 'On-road adds ~10-15% but resale is anchored to ex-showroom.'}
+            </div>
           </div>
 
           <div>
@@ -389,7 +553,7 @@ export default function NewCarDepreciationCalculator() {
             <div className="text-xs uppercase tracking-widest text-slate-soft mb-1">10-year forecast</div>
             <div className="text-xl font-serif text-navy-900">
               {hasInteracted
-                ? `${selectedMake?.title || 'Your'} ${selectedModel?.title || 'new car'}${variant.trim() ? ` ${variant.trim()}` : ''}`
+                ? `${selectedMake?.title || 'Your'} ${selectedModel?.title || 'new car'}${selectedVariant ? ` ${selectedVariant.title}` : ''}`
                 : `${DEFAULT_PREVIEW.makeLabel} ${DEFAULT_PREVIEW.modelLabel}`}
             </div>
             <div className="text-sm text-graphite mt-1">
@@ -401,7 +565,7 @@ export default function NewCarDepreciationCalculator() {
             </div>
           </div>
           <span className="text-[10px] uppercase tracking-widest px-2 py-1 rounded-full bg-signal-500/10 text-signal-600 font-semibold self-start">
-            {hasInteracted ? 'Live estimate' : 'Example'}
+            {!hasInteracted ? 'Example' : modelDerived ? 'Model-derived' : 'Live estimate'}
           </span>
         </div>
 
@@ -554,8 +718,10 @@ export default function NewCarDepreciationCalculator() {
         </details>
 
         <p className="text-xs text-slate-soft mt-4 leading-relaxed">
-          Curve is calibrated to Indian resale patterns using segment-level retention benchmarks, adjusted for fuel type and city.
-          Assumes average annual usage (~12,000 km/yr), average condition, and no accident history.
+          {modelDerived
+            ? 'Curve comes from the Cars24 pricing model for this exact variant, interpolated between the ages it reports and adjusted for city.'
+            : 'Curve is calibrated to Indian resale patterns using segment-level retention benchmarks, adjusted for fuel type and city.'}
+          {' '}Assumes average annual usage (~12,000 km/yr), average condition, and no accident history.
           For a model-specific forecast with variant-level detail, open the report from the top 50 list below.
         </p>
       </div>

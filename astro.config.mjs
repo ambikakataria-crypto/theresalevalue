@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel';
 import { blogLastmod } from './src/data/blog-lastmod.ts';
 import { rawArticles } from './src/data/blogs.ts';
 
@@ -15,6 +16,10 @@ const queuedBlogPaths = new Set(
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.theresalevalue.com',
+  // Pages stay prerendered by default; only routes that opt out with
+  // `prerender = false` become Vercel functions. Today that is just the
+  // pricing proxy, which needs a server to keep its token off the client.
+  adapter: vercel(),
   vite: {
     plugins: [tailwindcss()]
   },

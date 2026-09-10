@@ -378,3 +378,35 @@ export async function fetchPricing(input: PricingInput, attempts = 3): Promise<P
   }
   throw lastError;
 }
+
+/**
+ * Same-origin proxy in front of the fgvge-pricing model server. The credential
+ * lives on that route, not here, so this is the only pricing call in the file
+ * that does not need a token in the browser.
+ */
+const PREDICT_PROXY_URL = '/api/v1/fgvge-pricing-predict';
+
+export interface DepreciationInput {
+  variantId: string;
+  /** Manufacture year to price at. The model returns depreciation buckets only
+   *  up to the queried car's age, so ask for an old one to get the full table. */
+  year: number;
+  exShowroomPrice: number;
+  kms: number;
+  stateId?: number;
+}
+
+/** Depreciation percent keyed by vehicle age in years, e.g. { "1": 24, "3": 38 }. */
+export async function fetchDepreciationTable(
+  input: DepreciationInput
+): Promise<Record<string, number>> {
+  const res = await fetch(PREDICT_PROXY_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...input, variantId: Number(input.variantId) }),
+  });
+
+  const body = await res.json();
+  if (!res.ok) throw new Error(body?.error ?? `Depreciation lookup failed: ${res.status}`);
+  return body.yearlyDep ?? {};
+}
