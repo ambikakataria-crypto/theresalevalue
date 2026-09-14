@@ -379,12 +379,14 @@ export async function fetchPricing(input: PricingInput, attempts = 3): Promise<P
   throw lastError;
 }
 
-/**
- * Same-origin proxy in front of the fgvge-pricing model server. The credential
- * lives on that route, not here, so this is the only pricing call in the file
- * that does not need a token in the browser.
- */
-const PREDICT_PROXY_URL = '/api/v1/fgvge-pricing-predict';
+// state_id is mandatory upstream, so an unknown city still needs a value.
+const FALLBACK_STATE_ID = 16;
+
+/** "24%" -> 24. The model returns each depreciation bucket as a percent string. */
+function depPercent(value: unknown): number | null {
+  const n = Number(String(value ?? '').replace('%', '').trim());
+  return Number.isFinite(n) ? n : null;
+}
 
 export interface DepreciationInput {
   variantId: string;
@@ -396,17 +398,41 @@ export interface DepreciationInput {
   stateId?: number;
 }
 
-/** Depreciation percent keyed by vehicle age in years, e.g. { "1": 24, "3": 38 }. */
+/**
+ * Depreciation percent keyed by vehicle age, e.g. { "1": 24, "3": 38 }.
+ *
+ * Same endpoint as fetchPricing but a different question, so it sends its own
+ * payload rather than sharing one: dep_report is omitted entirely unless a real
+ * ex_showroom_price is sent, and manufacturing_date is what carries the table
+ * out to age 9 instead of stopping at 7. Everything else the pricing call sends
+ * leaves the table unchanged.
+ */
 export async function fetchDepreciationTable(
   input: DepreciationInput
 ): Promise<Record<string, number>> {
-  const res = await fetch(PREDICT_PROXY_URL, {
+  const res = await fetch(PRICING_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ...input, variantId: Number(input.variantId) }),
+    body: JSON.stringify({
+      variant_id: Number(input.variantId),
+      year: input.year,
+      manufacturing_date: `3/${input.year}`,
+      state_id: input.stateId ?? FALLBACK_STATE_ID,
+      kms: input.kms,
+      ex_showroom_price: input.exShowroomPrice,
+    }),
   });
 
   const body = await res.json();
-  if (!res.ok) throw new Error(body?.error ?? `Depreciation lookup failed: ${res.status}`);
-  return body.yearlyDep ?? {};
+  if (!res.ok || body.error) {
+    throw new Error(body.detail || body.error || `Depreciation lookup failed: ${res.status}`);
+  }
+
+  const table: Record<string, number> = {};
+  for (const [bucket, pct] of Object.entries(body?.dep_report?.yearly_dep ?? {})) {
+    const age = Number(String(bucket).replace('year', ''));
+    const percent = depPercent(pct);
+    if (Number.isInteger(age) && age > 0 && percent !== null) table[String(age)] = percent;
+  }
+  return table;
 }

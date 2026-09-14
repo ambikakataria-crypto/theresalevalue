@@ -128,16 +128,22 @@ function fmtInr(lakh: number): string {
   return `₹${lakh.toFixed(2)}L`;
 }
 
-function computeCurve(exShowroom: number, fuel: Fuel, city: CityTier): number[] {
+/** One plotted point. Ages are irregular when they come from the model. */
+interface CurvePoint {
+  age: number;
+  value: number;
+}
+
+function computeCurve(exShowroom: number, fuel: Fuel, city: CityTier): CurvePoint[] {
   const segment = inferSegment(exShowroom);
   const base = BASE_CURVE[segment];
   const fMult = FUEL_MULT[fuel];
   const cMult = CITY_MULT[city];
-  return base.map((pct, y) => {
-    if (y === 0) return exShowroom;
-    const fCompound = Math.pow(fMult, y);
-    const cCompound = y >= 3 ? Math.pow(cMult, y - 2) : 1;
-    return exShowroom * (pct / 100) * fCompound * cCompound;
+  return base.map((pct, age) => {
+    if (age === 0) return { age, value: exShowroom };
+    const fCompound = Math.pow(fMult, age);
+    const cCompound = age >= 3 ? Math.pow(cMult, age - 2) : 1;
+    return { age, value: exShowroom * (pct / 100) * fCompound * cCompound };
   });
 }
 
@@ -148,56 +154,38 @@ function computeCurve(exShowroom: number, fuel: Fuel, city: CityTier): number[] 
 const DEP_PROBE_AGE = 9;
 const KMS_PER_YEAR = 12000;
 
-// A variant too new to be priced at DEP_PROBE_AGE comes back with a short
-// table, and carrying a young car's steep slope far past its last anchor
-// understates the tail badly — a table ending at age 3 put a ₹7.5L car at
-// ₹0.97L by year 10. Ending at age 5 is still close enough to use; shorter
-// than that and the built-in segment curve is the better answer.
-const MAX_EXTRAPOLATED_YEARS = 5;
+// Above this many points the value labels start colliding at chart width, so
+// only every other one is drawn. The model's 6 points stay fully labelled.
+const LABEL_ALL_UP_TO = 7;
 
 /**
- * Turns the model's odd-year depreciation table into an 11-point value curve:
- * interpolate between anchors, then carry the closing slope out to year 10.
- * Returns null when too few anchors came back to draw a curve from.
+ * Value at each age the model actually reports — ages 1, 3, 5, 7 and 9, plus
+ * ex-showroom at age 0. Nothing is invented between or beyond them: the points
+ * are plotted where the data is, so the chart never implies a figure the model
+ * did not give. Returns null when the table came back empty.
  */
 function curveFromDepTable(
   exShowroom: number,
   yearlyDep: Record<string, number>,
   city: CityTier,
-): number[] | null {
-  const anchors = Object.entries(yearlyDep)
-    .map(([age, pct]) => [Number(age), 100 - pct] as [number, number])
-    .filter(([age, retention]) => Number.isFinite(age) && Number.isFinite(retention))
-    .sort((a, b) => a[0] - b[0]);
-  if (anchors.length < 2) return null;
-  if (anchors[anchors.length - 1][0] < 10 - MAX_EXTRAPOLATED_YEARS) return null;
-
-  const points: [number, number][] = [[0, 100], ...anchors];
+): CurvePoint[] | null {
   const cMult = CITY_MULT[city];
 
-  return Array.from({ length: 11 }, (_, age) => {
-    if (age === 0) return exShowroom;
+  const anchors = Object.entries(yearlyDep)
+    .map(([age, pct]) => ({ age: Number(age), retention: 100 - pct }))
+    .filter((a) => Number.isFinite(a.age) && a.age > 0 && Number.isFinite(a.retention))
+    .sort((a, b) => a.age - b.age)
+    .map(({ age, retention }) => {
+      // Fuel is not re-applied here: the variant already encodes it, so the
+      // model's own figure accounts for it. The city tier still is, on a
+      // different axis — the model varies its early years by state (1-3pp),
+      // but cannot tell a metro from a small town inside that same state.
+      const cCompound = age >= 3 ? Math.pow(cMult, age - 2) : 1;
+      return { age, value: (exShowroom * Math.max(retention, 0) * cCompound) / 100 };
+    });
 
-    const last = points[points.length - 1];
-    let retention: number;
-    if (age >= last[0]) {
-      const prev = points[points.length - 2];
-      const slope = (last[1] - prev[1]) / (last[0] - prev[0]);
-      retention = last[1] + slope * (age - last[0]);
-    } else {
-      const upper = points.findIndex(([x]) => age <= x);
-      const [x1, y1] = points[upper - 1];
-      const [x2, y2] = points[upper];
-      retention = y1 + ((age - x1) / (x2 - x1)) * (y2 - y1);
-    }
-
-    // Fuel is not re-applied here: the variant already encodes it, so the
-    // model's own figure accounts for it. The city tier still is, on a
-    // different axis — the model varies its early years by state (1-3pp), but
-    // cannot tell a metro from a small town inside that same state.
-    const cCompound = age >= 3 ? Math.pow(cMult, age - 2) : 1;
-    return (exShowroom * Math.max(retention, 0) * cCompound) / 100;
-  });
+  if (!anchors.length) return null;
+  return [{ age: 0, value: exShowroom }, ...anchors];
 }
 
 // Default preview state: Maruti Swift, ₹6.5L ex-showroom, petrol, All-India.
@@ -218,6 +206,10 @@ export default function NewCarDepreciationCalculator() {
   const [mfgYear, setMfgYear] = useState<number>(new Date().getFullYear());
   const [exShowroom, setExShowroom] = useState<number>(DEFAULT_PREVIEW.exShowroom);
   const [fuel, setFuel] = useState<Fuel>(DEFAULT_PREVIEW.fuel);
+  // Whether the ex-showroom price and fuel on screen were filled in by a
+  // variant rather than typed. Changing the car clears the former and leaves
+  // the latter alone, so nobody loses a figure they entered by hand.
+  const [derivedFromVariant, setDerivedFromVariant] = useState(false);
   const [citySlug, setCitySlug] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
@@ -312,33 +304,30 @@ export default function NewCarDepreciationCalculator() {
     if (!selectedVariant) return;
     if (selectedVariant.exShowroomPrice) {
       setExShowroom(Math.round((selectedVariant.exShowroomPrice / 100000) * 10) / 10);
+      setDerivedFromVariant(true);
     }
     const mappedFuel = mapApiFuel(selectedVariant.fuelType);
     if (mappedFuel) setFuel(mappedFuel);
   }, [selectedVariant?.id]);
 
-  // Real depreciation for the chosen trim, from the pricing model. Only a
-  // priced variant can be looked up, and any failure simply leaves the
-  // built-in segment benchmarks in charge.
+  // Real depreciation for the chosen trim, fetched on submit. Only a priced
+  // variant can be looked up; anything else leaves the built-in segment
+  // benchmarks in charge.
   const [depTable, setDepTable] = useState<Record<string, number> | null>(null);
+  const [depLoading, setDepLoading] = useState(false);
+  const [depError, setDepError] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (!selectedVariant?.exShowroomPrice) {
-      setDepTable(null);
-      return;
-    }
-    let cancelled = false;
-    fetchDepreciationTable({
-      variantId: selectedVariant.id,
-      year: currentYear - DEP_PROBE_AGE,
-      exShowroomPrice: selectedVariant.exShowroomPrice,
-      kms: DEP_PROBE_AGE * KMS_PER_YEAR,
-      stateId: selectedCity ? Number(selectedCity.stateId) : undefined,
-    })
-      .then((yearlyDep) => { if (!cancelled) setDepTable(yearlyDep); })
-      .catch(() => { if (!cancelled) setDepTable(null); });
-    return () => { cancelled = true; };
-  }, [selectedVariant?.id, selectedCity?.id]);
+  // Changing the car invalidates the trim, anything that trim filled in, and
+  // any curve already fetched for it.
+  const clearVariantSelection = () => {
+    setVariant('');
+    setDepTable(null);
+    setDepError(null);
+    if (!derivedFromVariant) return;
+    setExShowroom(DEFAULT_PREVIEW.exShowroom);
+    setFuel(DEFAULT_PREVIEW.fuel);
+    setDerivedFromVariant(false);
+  };
 
   const { curve, modelDerived } = useMemo(() => {
     if (depTable) {
@@ -348,18 +337,60 @@ export default function NewCarDepreciationCalculator() {
     return { curve: computeCurve(exShowroom, fuel, cityTier), modelDerived: false };
   }, [exShowroom, fuel, cityTier, depTable]);
 
-  const y5Retention = Math.round((curve[5] / curve[0]) * 100);
-  const y10Retention = Math.round((curve[10] / curve[0]) * 100);
-  const y5Loss = curve[0] - curve[5];
-  const y10Loss = curve[0] - curve[10];
+  // Headline figures come from points the curve actually has. The model stops
+  // at age 9, the benchmark curve runs to 10, so the last point is whichever
+  // that source reached rather than a fixed year.
+  const newValue = curve[0].value;
+  const midPoint = curve.find((p) => p.age === 5) ?? curve[Math.floor(curve.length / 2)];
+  const finalPoint = curve[curve.length - 1];
+  const midRetention = Math.round((midPoint.value / newValue) * 100);
+  const finalRetention = Math.round((finalPoint.value / newValue) * 100);
+  const midLoss = newValue - midPoint.value;
+  const finalLoss = newValue - finalPoint.value;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // The curve is drawn on submit, not while typing: a priced trim gets a real
+  // table from the pricing model, anything else falls back to the benchmarks.
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // The button is disabled mid-flight, but Enter in a field still submits,
+    // and two overlapping fetches have no guaranteed resolution order.
+    if (depLoading) return;
     setSubmitted(true);
+    setDepError(null);
+
+    if (!selectedVariant?.exShowroomPrice) {
+      setDepTable(null);
+      setDepError(
+        !selectedVariant
+          ? 'Pick a variant above to price this car against the model. Showing our benchmark curve meanwhile.'
+          : `The catalogue has no ex-showroom price for ${selectedVariant.title}, which the model needs. Showing our benchmark curve instead — pick another trim for a priced one.`
+      );
+      return;
+    }
+
+    setDepLoading(true);
+    try {
+      setDepTable(
+        await fetchDepreciationTable({
+          variantId: selectedVariant.id,
+          year: currentYear - DEP_PROBE_AGE,
+          exShowroomPrice: selectedVariant.exShowroomPrice,
+          kms: DEP_PROBE_AGE * KMS_PER_YEAR,
+          stateId: selectedCity ? Number(selectedCity.stateId) : undefined,
+        })
+      );
+    } catch {
+      setDepTable(null);
+      setDepError('Could not reach the pricing model. Showing our benchmark curve instead.');
+    } finally {
+      setDepLoading(false);
+    }
   };
 
   const reset = () => {
     setSubmitted(false);
+    setDepTable(null);
+    setDepError(null);
   };
 
   // Chart geometry
@@ -369,13 +400,15 @@ export default function NewCarDepreciationCalculator() {
   const padR = 20;
   const padT = 24;
   const padB = 44;
-  const yTop = Math.ceil(curve[0]);
+  const yTop = Math.ceil(newValue);
   const yBot = 0;
-  const years = Array.from({ length: 11 }, (_, i) => i);
-  const x = (i: number) => padL + (i / 10) * (chartW - padL - padR);
+  // Positioned by age, not by index, so the irregular model ages (1, 3, 5, 7,
+  // 9) land in the right place instead of being spaced evenly.
+  const maxAge = finalPoint.age;
+  const x = (age: number) => padL + (age / maxAge) * (chartW - padL - padR);
   const y = (v: number) => padT + (1 - (v - yBot) / (yTop - yBot)) * (chartH - padT - padB);
-  const linePath = curve.map((v, i) => `${i === 0 ? 'M' : 'L'} ${x(i)} ${y(v)}`).join(' ');
-  const areaPath = `${linePath} L ${x(10)} ${chartH - padB} L ${x(0)} ${chartH - padB} Z`;
+  const linePath = curve.map((p, i) => `${i === 0 ? 'M' : 'L'} ${x(p.age)} ${y(p.value)}`).join(' ');
+  const areaPath = `${linePath} L ${x(maxAge)} ${chartH - padB} L ${x(0)} ${chartH - padB} Z`;
   const yTicks = [yTop, yTop * 0.75, yTop * 0.5, yTop * 0.25, 0];
 
   return (
@@ -391,7 +424,7 @@ export default function NewCarDepreciationCalculator() {
             <select
               required
               value={make}
-              onChange={(e) => { setMake(e.target.value); setModel(''); setVariant(''); }}
+              onChange={(e) => { setMake(e.target.value); setModel(''); clearVariantSelection(); }}
               disabled={makesLoading}
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
             >
@@ -407,7 +440,7 @@ export default function NewCarDepreciationCalculator() {
             <select
               required
               value={model}
-              onChange={(e) => { setModel(e.target.value); setVariant(''); }}
+              onChange={(e) => { setModel(e.target.value); clearVariantSelection(); }}
               disabled={!make || modelsLoading}
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
             >
@@ -418,11 +451,30 @@ export default function NewCarDepreciationCalculator() {
             </select>
           </div>
 
+          {/* Year sits above Variant because the trim list is fetched per
+              model *and* year — picking a trim first only to have the year
+              change it out from under you is the wrong order to ask in. */}
+          <div>
+            <label className="block text-sm font-medium text-navy-900 mb-1.5">
+              Year of manufacture
+            </label>
+            <select
+              required
+              value={mfgYear}
+              onChange={(e) => { setMfgYear(Number(e.target.value)); clearVariantSelection(); }}
+              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
+            >
+              {yearOptions.map((y) => (
+                <option key={y} value={y}>{y}</option>
+              ))}
+            </select>
+          </div>
+
           <div>
             <label className="block text-sm font-medium text-navy-900 mb-1.5">Variant</label>
             <select
               value={variant}
-              onChange={(e) => setVariant(e.target.value)}
+              onChange={(e) => { setVariant(e.target.value); setDepTable(null); setDepError(null); }}
               disabled={!selectedModel || variantsLoading}
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
             >
@@ -433,7 +485,7 @@ export default function NewCarDepreciationCalculator() {
                     ? 'Loading variants…'
                     : variants.length > 0
                       ? 'Select variant'
-                      : 'No variants listed for this year'}
+                      : `No variants listed for ${mfgYear}`}
               </option>
               {variants.map((v) => (
                 <option key={v.id} value={v.id}>
@@ -445,29 +497,13 @@ export default function NewCarDepreciationCalculator() {
               {!selectedModel
                 ? 'Optional — pick a make and model to list trims.'
                 : variantsLoading
-                  ? 'Fetching trims for this model and year…'
+                  ? `Fetching ${mfgYear} trims for this model…`
                   : variants.length === 0
-                    ? 'No catalogue trims for this year — enter ex-showroom price manually below.'
+                    ? `This model has no catalogue trims for ${mfgYear} — try another year, or enter ex-showroom price manually below.`
                     : variantsHavePrice
                       ? 'Picking a variant fills its real ex-showroom price and fuel type below.'
-                      : 'Prices are unavailable for this year — enter ex-showroom price manually below.'}
+                      : `No prices listed for ${mfgYear} — enter ex-showroom price manually below.`}
             </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-navy-900 mb-1.5">
-              Year of manufacture
-            </label>
-            <select
-              required
-              value={mfgYear}
-              onChange={(e) => { setMfgYear(Number(e.target.value)); setVariant(''); }}
-              className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
-            >
-              {yearOptions.map((y) => (
-                <option key={y} value={y}>{y}</option>
-              ))}
-            </select>
           </div>
 
           <div>
@@ -480,12 +516,12 @@ export default function NewCarDepreciationCalculator() {
               step="0.1"
               min="0.5"
               value={exShowroom}
-              onChange={(e) => setExShowroom(Number(e.target.value))}
+              onChange={(e) => { setExShowroom(Number(e.target.value)); setDerivedFromVariant(false); }}
               placeholder="e.g. 8.5"
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm font-data focus:border-navy-900 focus:outline-none"
             />
             <div className="text-xs text-slate-soft mt-1">
-              {selectedVariant?.exShowroomPrice
+              {derivedFromVariant
                 ? 'Filled from the catalogue for this variant — edit if your quote differs.'
                 : 'On-road adds ~10-15% but resale is anchored to ex-showroom.'}
             </div>
@@ -510,7 +546,7 @@ export default function NewCarDepreciationCalculator() {
             <select
               required
               value={citySlug}
-              onChange={(e) => setCitySlug(e.target.value)}
+              onChange={(e) => { setCitySlug(e.target.value); setDepTable(null); setDepError(null); }}
               disabled={citiesLoading}
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none disabled:opacity-50"
             >
@@ -526,10 +562,15 @@ export default function NewCarDepreciationCalculator() {
 
         <button
           type="submit"
-          className="mt-6 w-full py-3 bg-navy-900 !text-white font-medium rounded-md hover:bg-navy-800 transition-colors"
+          disabled={depLoading}
+          className="mt-6 w-full py-3 bg-navy-900 !text-white font-medium rounded-md hover:bg-navy-800 transition-colors disabled:opacity-60"
         >
-          Show 10-year depreciation curve →
+          {depLoading ? 'Fetching depreciation…' : 'Show 10-year depreciation curve →'}
         </button>
+
+        {depError && (
+          <p className="mt-3 text-xs text-slate-soft leading-relaxed">{depError}</p>
+        )}
 
         {submitted && (
           <button
@@ -550,7 +591,11 @@ export default function NewCarDepreciationCalculator() {
       <div className="lg:col-span-7 card-institutional bg-white">
         <div className="flex items-start justify-between mb-4 flex-wrap gap-3">
           <div>
-            <div className="text-xs uppercase tracking-widest text-slate-soft mb-1">10-year forecast</div>
+            {/* The model stops at age 9, the benchmark curve runs to 10, so
+                the headline follows whichever source is driving the chart. */}
+            <div className="text-xs uppercase tracking-widest text-slate-soft mb-1">
+              {finalPoint.age}-year forecast
+            </div>
             <div className="text-xl font-serif text-navy-900">
               {hasInteracted
                 ? `${selectedMake?.title || 'Your'} ${selectedModel?.title || 'new car'}${selectedVariant ? ` ${selectedVariant.title}` : ''}`
@@ -575,11 +620,13 @@ export default function NewCarDepreciationCalculator() {
           </div>
         )}
 
+        {/* Dimmed while fetching, so the curve on screen is not mistaken for
+            the answer to the request still in flight. */}
         <svg
           viewBox={`0 0 ${chartW} ${chartH}`}
-          className="w-full h-auto"
+          className={`w-full h-auto transition-opacity ${depLoading ? 'opacity-40' : 'opacity-100'}`}
           role="img"
-          aria-label="10-year depreciation curve"
+          aria-label={`Depreciation curve: ${fmtInr(newValue)} new in ${mfgYear}, falling to ${fmtInr(finalPoint.value)} by ${mfgYear + finalPoint.age}, ${finalRetention}% retained.`}
         >
           <defs>
             <linearGradient id="grad-newcar-curve" x1="0" y1="0" x2="0" y2="1">
@@ -614,52 +661,73 @@ export default function NewCarDepreciationCalculator() {
             strokeLinejoin="round"
           />
 
-          {curve.map((v, i) => (
-            <circle
-              key={`dot-${i}`}
-              cx={x(i)}
-              cy={y(v)}
-              r={i === 5 || i === 10 ? 5 : 3}
-              fill={i === 5 || i === 10 ? '#10B981' : '#0A2540'}
-              stroke="white"
-              strokeWidth={i === 5 || i === 10 ? 2 : 1.5}
-            />
-          ))}
+          {curve.map((p) => {
+            const highlighted = p.age === midPoint.age || p.age === finalPoint.age;
+            return (
+              <circle
+                key={`dot-${p.age}`}
+                cx={x(p.age)}
+                cy={y(p.value)}
+                r={highlighted ? 5 : 3}
+                fill={highlighted ? '#10B981' : '#0A2540'}
+                stroke="white"
+                strokeWidth={highlighted ? 2 : 1.5}
+              />
+            );
+          })}
 
-          <text
-            x={x(5)}
-            y={y(curve[5]) - 12}
-            textAnchor="middle"
-            fontSize={11}
-            fontWeight={600}
-            fill="#0A2540"
-            fontFamily="'JetBrains Mono', monospace"
-          >
-            {mfgYear + 5}: {fmtInr(curve[5])}
-          </text>
-          <text
-            x={x(10) - 4}
-            y={y(curve[10]) - 12}
-            textAnchor="end"
-            fontSize={11}
-            fontWeight={600}
-            fill="#0A2540"
-            fontFamily="'JetBrains Mono', monospace"
-          >
-            {mfgYear + 10}: {fmtInr(curve[10])}
-          </text>
+          {/* Value for every year the curve has a figure for. First and last
+              are anchored inward so they do not clip the plot edges. The
+              benchmark curve has 11 points, too many to label without
+              collisions, so it gets every other one. */}
+          {curve.map((p, i) => {
+            const isFirst = i === 0;
+            const isLast = i === curve.length - 1;
+            if (curve.length > LABEL_ALL_UP_TO && !isFirst && !isLast && i % 2 === 1) return null;
+            return (
+              <text
+                key={`val-${p.age}`}
+                x={isLast ? x(p.age) - 4 : isFirst ? x(p.age) + 2 : x(p.age)}
+                y={y(p.value) - 11}
+                textAnchor={isLast ? 'end' : isFirst ? 'start' : 'middle'}
+                fontSize={10}
+                fontWeight={600}
+                fill="#0A2540"
+                fontFamily="'JetBrains Mono', monospace"
+              >
+                {fmtInr(p.value)}
+              </text>
+            );
+          })}
 
-          {years.map((yr) => (
+          {curve.map((p) => (
             <text
-              key={`x-${yr}`}
-              x={x(yr)}
+              key={`x-${p.age}`}
+              x={x(p.age)}
               y={chartH - padB + 18}
               textAnchor="middle"
               fontSize={10}
               fill="#6B7280"
               fontFamily="'Inter', sans-serif"
             >
-              {mfgYear + yr}
+              {mfgYear + p.age}
+            </text>
+          ))}
+
+          {/* The drop from new underneath each year — the figure the pricing
+              model actually returns, derived from the plotted value so the two
+              can never disagree. */}
+          {curve.map((p) => (
+            <text
+              key={`dep-${p.age}`}
+              x={x(p.age)}
+              y={chartH - padB + 31}
+              textAnchor="middle"
+              fontSize={9}
+              fill="#9CA3AF"
+              fontFamily="'JetBrains Mono', monospace"
+            >
+              {p.age === 0 ? 'new' : `−${Math.round((1 - p.value / newValue) * 100)}%`}
             </text>
           ))}
         </svg>
@@ -667,24 +735,24 @@ export default function NewCarDepreciationCalculator() {
         {/* Retention summary */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-5 mt-3 border-t border-cream-200 text-sm">
           <div>
-            <div className="text-[10px] uppercase text-slate-soft mb-1">{mfgYear + 5} value</div>
-            <div className="font-data text-navy-900 font-semibold">{fmtInr(curve[5])}</div>
-            <div className="text-[11px] text-slate-soft mt-0.5">{y5Retention}% retained</div>
+            <div className="text-[10px] uppercase text-slate-soft mb-1">{mfgYear + midPoint.age} value</div>
+            <div className="font-data text-navy-900 font-semibold">{fmtInr(midPoint.value)}</div>
+            <div className="text-[11px] text-slate-soft mt-0.5">{midRetention}% retained</div>
           </div>
           <div>
-            <div className="text-[10px] uppercase text-slate-soft mb-1">{mfgYear + 10} value</div>
-            <div className="font-data text-navy-900 font-semibold">{fmtInr(curve[10])}</div>
-            <div className="text-[11px] text-slate-soft mt-0.5">{y10Retention}% retained</div>
+            <div className="text-[10px] uppercase text-slate-soft mb-1">{mfgYear + finalPoint.age} value</div>
+            <div className="font-data text-navy-900 font-semibold">{fmtInr(finalPoint.value)}</div>
+            <div className="text-[11px] text-slate-soft mt-0.5">{finalRetention}% retained</div>
           </div>
           <div>
-            <div className="text-[10px] uppercase text-slate-soft mb-1">5-year loss</div>
-            <div className="font-data text-caution-600 font-semibold">{fmtInr(y5Loss)}</div>
-            <div className="text-[11px] text-slate-soft mt-0.5">{fmtInr(y5Loss / 5)}/yr</div>
+            <div className="text-[10px] uppercase text-slate-soft mb-1">{midPoint.age}-year loss</div>
+            <div className="font-data text-caution-600 font-semibold">{fmtInr(midLoss)}</div>
+            <div className="text-[11px] text-slate-soft mt-0.5">{fmtInr(midLoss / midPoint.age)}/yr</div>
           </div>
           <div>
-            <div className="text-[10px] uppercase text-slate-soft mb-1">10-year loss</div>
-            <div className="font-data text-caution-600 font-semibold">{fmtInr(y10Loss)}</div>
-            <div className="text-[11px] text-slate-soft mt-0.5">{fmtInr(y10Loss / 10)}/yr</div>
+            <div className="text-[10px] uppercase text-slate-soft mb-1">{finalPoint.age}-year loss</div>
+            <div className="font-data text-caution-600 font-semibold">{fmtInr(finalLoss)}</div>
+            <div className="text-[11px] text-slate-soft mt-0.5">{fmtInr(finalLoss / finalPoint.age)}/yr</div>
           </div>
         </div>
 
@@ -704,12 +772,12 @@ export default function NewCarDepreciationCalculator() {
                 </tr>
               </thead>
               <tbody className="font-data text-navy-900">
-                {curve.map((v, i) => (
-                  <tr key={i} className="border-t border-cream-200">
-                    <td className="py-2 pr-4">{mfgYear + i}{i === 0 ? ' (new)' : ''}</td>
-                    <td className="py-2 pr-4">{fmtInr(v)}</td>
-                    <td className="py-2 pr-4">{Math.round((v / curve[0]) * 100)}%</td>
-                    <td className="py-2 text-caution-600">{fmtInr(curve[0] - v)}</td>
+                {curve.map((p) => (
+                  <tr key={p.age} className="border-t border-cream-200">
+                    <td className="py-2 pr-4">{mfgYear + p.age}{p.age === 0 ? ' (new)' : ''}</td>
+                    <td className="py-2 pr-4">{fmtInr(p.value)}</td>
+                    <td className="py-2 pr-4">{Math.round((p.value / newValue) * 100)}%</td>
+                    <td className="py-2 text-caution-600">{fmtInr(newValue - p.value)}</td>
                   </tr>
                 ))}
               </tbody>
