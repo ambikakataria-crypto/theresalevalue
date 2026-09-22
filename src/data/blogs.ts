@@ -102,10 +102,9 @@ export const rawArticles: BlogArticle[] = [
     slug: 'private-vs-dealer-vs-instant-buy',
     title: 'Private vs dealer vs instant buy in India: what each route actually pays',
     excerpt: 'Three exit routes, three different net cheques for the same car. Ledger-level comparison of private sale, dealer trade-in and instant-buy, with paperwork timelines, NCB retention, and where the consignment option fits.',
-    date: '',
+    date: '2026-09-22',
     readTime: '12 min read',
     category: 'Selling · Framework',
-    queued: true,
   },
   {
     slug: 'online-used-car-valuation-accuracy-india',
