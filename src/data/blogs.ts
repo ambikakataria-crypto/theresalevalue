@@ -110,10 +110,9 @@ export const rawArticles: BlogArticle[] = [
     slug: 'online-used-car-valuation-accuracy-india',
     title: 'How accurate are online used car valuations in India: a benchmark of 4 tools',
     excerpt: 'Cars24, Spinny, OLX and CarWale quotes compared against the price the seller actually received. Why the three engine types behind identical forms explain most of the spread, and how to read four quotes as a range instead of averaging them.',
-    date: '',
+    date: '2026-09-28',
     readTime: '13 min read',
     category: 'Valuation · Benchmark',
-    queued: true,
   },
   {
     slug: 'kilometres-vs-age-used-car-resale',
