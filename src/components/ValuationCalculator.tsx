@@ -40,7 +40,6 @@ const ROUTE_MULT = {
   individual: 1.05,
   dealer: 0.93,
   online: 0.90,
-  buy: 1.10,
 };
 
 const CONDITION_LABEL = {
@@ -59,7 +58,6 @@ function computeRoutes(expected: number) {
     individual: r(ROUTE_MULT.individual),
     dealer: r(ROUTE_MULT.dealer),
     online: r(ROUTE_MULT.online),
-    buy: r(ROUTE_MULT.buy),
   };
 }
 
@@ -504,7 +502,7 @@ export default function ValuationCalculator() {
         {/* Sell / buy route breakdown */}
         <div className="pt-6 border-t border-cream-200">
           <div className="text-xs uppercase tracking-widest text-slate-soft mb-3">What you would get, by route</div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-3">
             <div className="border border-navy-900 rounded-md p-3">
               <div className="text-[10px] uppercase tracking-widest text-slate-soft mb-1">Sell to individual</div>
               <div className="font-data text-lg text-navy-900">{formatPrice(routes.individual)}</div>
@@ -519,11 +517,6 @@ export default function ValuationCalculator() {
               <div className="text-[10px] uppercase tracking-widest text-slate-soft mb-1">Instant online sale</div>
               <div className="font-data text-lg text-navy-900">{formatPrice(routes.online)}</div>
               <div className="text-[11px] text-slate-soft mt-0.5">same-day, pre-inspection</div>
-            </div>
-            <div className="border border-cream-200 rounded-md p-3">
-              <div className="text-[10px] uppercase tracking-widest text-slate-soft mb-1">Buy from dealer</div>
-              <div className="font-data text-lg text-navy-900">{formatPrice(routes.buy)}</div>
-              <div className="text-[11px] text-slate-soft mt-0.5">retail asking</div>
             </div>
           </div>
           <div className="p-3 bg-caution-500/10 border border-caution-500/30 rounded-md text-xs text-graphite leading-relaxed">
