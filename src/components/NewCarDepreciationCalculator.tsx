@@ -317,13 +317,18 @@ export default function NewCarDepreciationCalculator() {
   const [depLoading, setDepLoading] = useState(false);
   const [depError, setDepError] = useState<string | null>(null);
 
-  // Changing the car invalidates the trim, anything that trim filled in, and
-  // any curve already fetched for it.
-  const clearVariantSelection = () => {
+  // Changing make/model/year invalidates the trim and any curve already
+  // fetched for it — the variant list and depreciation table are both keyed
+  // to the old selection. Ex-showroom and fuel are a separate call: a make or
+  // model change is a different car, so a price derived from the old one is
+  // just wrong and gets reset. A year change is still the same car, pending a
+  // new trim pick for that year, so the curve on screen should hold steady
+  // rather than snap back to the generic default the moment the year moves.
+  const clearVariantSelection = ({ resetDerivedPrice = true } = {}) => {
     setVariant('');
     setDepTable(null);
     setDepError(null);
-    if (!derivedFromVariant) return;
+    if (!resetDerivedPrice || !derivedFromVariant) return;
     setExShowroom(DEFAULT_PREVIEW.exShowroom);
     setFuel(DEFAULT_PREVIEW.fuel);
     setDerivedFromVariant(false);
@@ -461,7 +466,7 @@ export default function NewCarDepreciationCalculator() {
             <select
               required
               value={mfgYear}
-              onChange={(e) => { setMfgYear(Number(e.target.value)); clearVariantSelection(); }}
+              onChange={(e) => { setMfgYear(Number(e.target.value)); clearVariantSelection({ resetDerivedPrice: false }); }}
               className="w-full px-3 py-2.5 bg-cream border border-cream-200 rounded-md text-sm focus:border-navy-900 focus:outline-none"
             >
               {yearOptions.map((y) => (
