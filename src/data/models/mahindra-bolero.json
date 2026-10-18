@@ -1,0 +1,408 @@
+{
+  "slug": {
+    "make": "mahindra",
+    "model": "bolero"
+  },
+  "make": "Mahindra",
+  "model": "Bolero",
+  "segment": "Large SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "B4",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 9.53
+    },
+    {
+      "name": "B6",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 10
+    },
+    {
+      "name": "B6 (O)",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 10.48
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 8.37,
+      "mid": 9,
+      "high": 9.63
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 8.05,
+      "mid": 8.65,
+      "high": 9.26
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 7.59,
+      "mid": 8.16,
+      "high": 8.73
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 7.07,
+      "mid": 7.6,
+      "high": 8.13
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 6.54,
+      "mid": 7.03,
+      "high": 7.52
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 7.33,
+      "mid": 7.88,
+      "high": 8.43
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 7.04,
+      "mid": 7.57,
+      "high": 8.1
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 6.64,
+      "mid": 7.14,
+      "high": 7.64
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 6.18,
+      "mid": 6.65,
+      "high": 7.11
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 5.72,
+      "mid": 6.15,
+      "high": 6.58
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 6.67,
+      "mid": 7.18,
+      "high": 7.68
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 6.41,
+      "mid": 6.9,
+      "high": 7.38
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 6.05,
+      "mid": 6.5,
+      "high": 6.96
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 5.63,
+      "mid": 6.06,
+      "high": 6.48
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 5.21,
+      "mid": 5.6,
+      "high": 6
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 5.89,
+      "mid": 6.33,
+      "high": 6.77
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 5.66,
+      "mid": 6.08,
+      "high": 6.51
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 5.33,
+      "mid": 5.73,
+      "high": 6.14
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 4.97,
+      "mid": 5.34,
+      "high": 5.72
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 4.6,
+      "mid": 4.94,
+      "high": 5.29
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 5.23,
+      "mid": 5.63,
+      "high": 6.02
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 5.03,
+      "mid": 5.41,
+      "high": 5.79
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 4.74,
+      "mid": 5.1,
+      "high": 5.45
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 4.42,
+      "mid": 4.75,
+      "high": 5.08
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 4.09,
+      "mid": 4.39,
+      "high": 4.7
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": -1,
+      "note": "Niche demand against SUV-lifestyle rivals"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 0,
+      "note": "Limited urban appeal, fleet-driven"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 0,
+      "note": "Baseline"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady rural and semi-urban demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 1,
+      "note": "Steady commercial and farm-linked demand"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 0,
+      "note": "Baseline"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -1,
+      "note": "Softer urban demand, rural pockets firmer"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 2,
+      "note": "Strong rural and fleet demand across Gujarat"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 93
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 87
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 82
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 75
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 69
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 66
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 61
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 57
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 55
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 49
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 43
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 64,
+    "5year": 50,
+    "10year": 28
+  },
+  "context": [
+    "The Bolero has been Mahindra's highest-volume nameplate for most of the last two decades, built around a simple body-on-frame construction and the 1.5-litre mHawk diesel engine, both tuned deliberately for low cost of ownership rather than refinement. This single-minded focus is the main reason the Bolero retains value unusually well: buyers in the rural, fleet, and small-commercial segments it dominates care far more about running cost and repairability than about features, and that demand barely softens with age.",
+    "Unlike most SUVs in its price range, the Bolero has stayed diesel-only and manual-only through BS6 and beyond, with no automatic or petrol variant ever offered. That narrow focus limits its urban private-buyer appeal but keeps its core rural and fleet market extremely loyal, which shows up in the Bolero holding value well above the typical large-SUV curve at every age band in this dataset.",
+    "The Bolero's body-on-frame chassis, once shared with a 4x4 variant in earlier generations, is now sold exclusively as rear-wheel drive, trading off-road capability for lower cost and simpler maintenance. Buyers who specifically need genuine 4x4 capability tend to look at the pricier Bolero Neo or Scorpio range instead, which keeps the standard Bolero's used-market pricing stable and predictable.",
+    "A dense service network across small towns, where Mahindra has historically invested more than most rivals, and a reputation for shrugging off poor road conditions with minimal fuss, together support a resale floor that dips far more slowly than other body-on-frame SUVs as the vehicle ages past the five-year mark."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Mahindra Bolero in India?",
+      "a": "A well-maintained Bolero retains approximately 78% of its ex-showroom price after two years, 72% after three years, and 61% after five years, among the strongest retention of any vehicle in the large-SUV bracket. For a 2022 B6(O) diesel with 25,000–50,000 km, the current fair-market band is roughly ₹6.05–6.96 lakh."
+    },
+    {
+      "q": "Why does the Bolero hold value better than other large SUVs?",
+      "a": "Its three-year retention of about 72% is roughly 8 percentage points above the large-SUV segment average of 64%, driven by deep, stable rural and fleet demand that cares more about running cost and repairability than features, and by a diesel-manual-only lineup that keeps the used market simple and predictable."
+    },
+    {
+      "q": "Is the Bolero a good buy used for commercial or fleet use?",
+      "a": "Yes. Its low running cost, wide service network reach into small towns, and simple mechanicals make it a default choice for fleet and rural buyers, which is exactly the demand base that keeps its resale values firm even at higher kilometres."
+    },
+    {
+      "q": "How much does a Bolero depreciate per year?",
+      "a": "Roughly 13% in year one and 9% more in year two, slower than most body-on-frame SUVs. By five years a Bolero still retains about 61% of its ex-showroom value, compared to a large-SUV segment average of around 50%."
+    },
+    {
+      "q": "Which city gives the best resale price for a Bolero?",
+      "a": "Ahmedabad currently trades at approximately +2% above the national mid on strong rural and fleet demand across Gujarat. Delhi NCR and Kolkata are marginally softer at around −1%, reflecting narrower urban-SUV-lifestyle appeal."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "mahindra",
+      "model": "bolero-neo",
+      "label": "Mahindra Bolero Neo"
+    },
+    {
+      "make": "mahindra",
+      "model": "scorpio",
+      "label": "Mahindra Scorpio"
+    },
+    {
+      "make": "mahindra",
+      "model": "thar",
+      "label": "Mahindra Thar"
+    }
+  ]
+}

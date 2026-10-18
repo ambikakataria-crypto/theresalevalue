@@ -1,0 +1,450 @@
+{
+  "slug": {
+    "make": "renault",
+    "model": "kiger"
+  },
+  "make": "Renault",
+  "model": "Kiger",
+  "segment": "Compact SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "RXE MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 5.99
+    },
+    {
+      "name": "RXT MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 7.5
+    },
+    {
+      "name": "RXT (O) MT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 8.05
+    },
+    {
+      "name": "RXT (O) AMT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 8.37
+    },
+    {
+      "name": "RXT (O) AMT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 8.6
+    },
+    {
+      "name": "RXZ AMT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 8.94
+    },
+    {
+      "name": "RXZ AMT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 9.17
+    },
+    {
+      "name": "RXZ TURBO MT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 9.72
+    },
+    {
+      "name": "RXT (O) TURBO CVT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 10
+    },
+    {
+      "name": "RXZ TURBO CVT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 10.62
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.28,
+      "mid": 7.83,
+      "high": 8.37
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.99,
+      "mid": 7.52,
+      "high": 8.05
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.59,
+      "mid": 7.09,
+      "high": 7.59
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.14,
+      "mid": 6.61,
+      "high": 7.07
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.68,
+      "mid": 6.11,
+      "high": 6.54
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.37,
+      "mid": 6.85,
+      "high": 7.33
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.12,
+      "mid": 6.58,
+      "high": 7.04
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.77,
+      "mid": 6.2,
+      "high": 6.64
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.38,
+      "mid": 5.78,
+      "high": 6.18
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.97,
+      "mid": 5.35,
+      "high": 5.72
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.8,
+      "mid": 6.24,
+      "high": 6.67
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.57,
+      "mid": 5.99,
+      "high": 6.41
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.26,
+      "mid": 5.65,
+      "high": 6.05
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.9,
+      "mid": 5.26,
+      "high": 5.63
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.53,
+      "mid": 4.87,
+      "high": 5.21
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.12,
+      "mid": 5.5,
+      "high": 5.89
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.92,
+      "mid": 5.29,
+      "high": 5.66
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.64,
+      "mid": 4.98,
+      "high": 5.33
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.32,
+      "mid": 4.64,
+      "high": 4.97
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4,
+      "mid": 4.3,
+      "high": 4.6
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.55,
+      "mid": 4.89,
+      "high": 5.23
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.37,
+      "mid": 4.7,
+      "high": 5.03
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.12,
+      "mid": 4.43,
+      "high": 4.74
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.84,
+      "mid": 4.13,
+      "high": 4.42
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.55,
+      "mid": 3.82,
+      "high": 4.09
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 0,
+      "note": "Baseline demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 1,
+      "note": "Steady compact-SUV demand"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": -1,
+      "note": "Thin Renault service network"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 2,
+      "note": "Renault's nearby plant supports brand trust"
+    },
+    {
+      "city": "Pune",
+      "variancePct": -1,
+      "note": "Thin Renault service network"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Softer demand, thin service network"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -2,
+      "note": "Thin Renault service network"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 87
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 79
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 66
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 57
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 43
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 35
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 33
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 31
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 29
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 27
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 25
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 24
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 22
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 62,
+    "5year": 48,
+    "10year": 25
+  },
+  "context": [
+    "The Kiger, launched in 2021, was Renault's bid for the booming sub-4-metre SUV segment, sharing its platform with the Nissan Magnite and built at the Renault-Nissan plant near Chennai. A 2023 update brought minor cosmetic and feature revisions without changing the core lineup.",
+    "Two petrol engines are offered: a naturally aspirated 1.0-litre on base and mid trims, and a 1.0-litre turbo-petrol with up to 100 bhp on the top RXZ trim, paired with a 5-speed manual, AMT, or CVT depending on variant. There is no diesel or CNG option. In the used market, turbo-CVT RXZ examples command a clear premium over naturally aspirated manual trims.",
+    "Renault's service network in India is noticeably thinner than Maruti's, Hyundai's, or even Kia's, particularly outside metros, and this is the single biggest drag on Kiger resale. Buyers factor in the extra effort of finding an authorized service centre, which compresses prices relative to feature-equivalent competitors like the Venue or Sonet.",
+    "Chennai is a partial exception to this pattern: Renault's manufacturing presence nearby supports stronger brand familiarity and parts availability, and Kiger resale in that market holds up noticeably better than in most other Indian cities."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Renault Kiger?",
+      "a": "A well-maintained Kiger retains about 66% of its ex-showroom price after two years and roughly 43% after five years, based on transaction data across Indian metros as of September 2026, below the compact-SUV segment average of about 48% at five years, reflecting Renault's thinner service network relative to Maruti, Hyundai, or Kia. A 2022 RXT petrol manual with 25,000-50,000 km typically trades around ₹4.3-5.0 lakh."
+    },
+    {
+      "q": "Does the turbo-petrol CVT Kiger resell better than the base manual?",
+      "a": "Yes, the turbo-CVT RXZ trim trades at a clear premium over naturally aspirated manual trims at equivalent age, since it is the most feature-rich and convenient variant in the lineup."
+    },
+    {
+      "q": "Why does the Kiger depreciate faster than the Hyundai Venue or Kia Sonet?",
+      "a": "Renault's thinner authorized-service network outside metros is the main factor. Used buyers discount for the extra effort of finding service and parts, which compresses Kiger resale relative to feature-equivalent competitors with denser dealer networks."
+    },
+    {
+      "q": "How much does a Kiger depreciate per year?",
+      "a": "The Kiger loses about 21% of its value in year one, a further 11 points in year two, then roughly 7-8% annually through year five, reaching about 43% retention."
+    },
+    {
+      "q": "Which city gives the best resale price for a Kiger?",
+      "a": "Chennai currently trades at about +2% above the national mid, supported by Renault's nearby manufacturing presence and stronger local brand familiarity, while Kolkata trades roughly -3% below it."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "nissan",
+      "model": "magnite",
+      "label": "Nissan Magnite"
+    },
+    {
+      "make": "hyundai",
+      "model": "venue",
+      "label": "Hyundai Venue"
+    },
+    {
+      "make": "kia",
+      "model": "sonet",
+      "label": "Kia Sonet"
+    }
+  ]
+}

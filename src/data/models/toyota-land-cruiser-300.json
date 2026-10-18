@@ -1,0 +1,116 @@
+{
+  "slug": { "make": "toyota", "model": "land-cruiser-300" },
+  "make": "Toyota",
+  "model": "Land Cruiser 300",
+  "segment": "Large SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-09-30",
+  "refreshCadence": "Monthly",
+  "variants": [
+    { "name": "VX",                 "fuel": "Diesel", "transmission": "10AT", "exShowroom": 219.00 },
+    { "name": "VX Executive",       "fuel": "Diesel", "transmission": "10AT", "exShowroom": 225.00 },
+    { "name": "ZX",                 "fuel": "Diesel", "transmission": "10AT", "exShowroom": 232.00 },
+    { "name": "ZX Black Edition",   "fuel": "Diesel", "transmission": "10AT", "exShowroom": 238.00 }
+  ],
+  "permutations": [
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Diesel", "low": 191.26, "mid": 205.65, "high": 220.05 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "Diesel", "low": 183.80, "mid": 197.63, "high": 211.47 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Diesel", "low": 173.28, "mid": 186.32, "high": 199.36 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Diesel", "low": 161.42, "mid": 173.57, "high": 185.72 },
+    { "year": 2024, "kmBand": "75k+",   "fuel": "Diesel", "low": 149.37, "mid": 160.61, "high": 171.85 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Diesel", "low": 167.34, "mid": 179.94, "high": 192.54 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "Diesel", "low": 160.83, "mid": 172.94, "high": 185.05 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Diesel", "low": 151.64, "mid": 163.05, "high": 174.46 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Diesel", "low": 141.20, "mid": 151.83, "high": 162.46 },
+    { "year": 2023, "kmBand": "75k+",   "fuel": "Diesel", "low": 130.69, "mid": 140.53, "high": 150.37 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Diesel", "low": 152.43, "mid": 163.90, "high": 175.37 },
+    { "year": 2022, "kmBand": "10-25k", "fuel": "Diesel", "low": 146.45, "mid": 157.47, "high": 168.49 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "Diesel", "low": 138.10, "mid": 148.49, "high": 158.88 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Diesel", "low": 128.65, "mid": 138.33, "high": 148.01 },
+    { "year": 2022, "kmBand": "75k+",   "fuel": "Diesel", "low": 119.05, "mid": 128.01, "high": 136.97 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "Diesel", "low": 134.45, "mid": 144.57, "high": 154.69 },
+    { "year": 2021, "kmBand": "10-25k", "fuel": "Diesel", "low": 129.21, "mid": 138.93, "high": 148.66 },
+    { "year": 2021, "kmBand": "25-50k", "fuel": "Diesel", "low": 121.81, "mid": 130.98, "high": 140.15 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "Diesel", "low": 113.48, "mid": 122.02, "high": 130.56 },
+    { "year": 2021, "kmBand": "75k+",   "fuel": "Diesel", "low": 105.01, "mid": 112.91, "high": 120.81 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "Diesel", "low": 119.53, "mid": 128.53, "high": 137.53 },
+    { "year": 2020, "kmBand": "10-25k", "fuel": "Diesel", "low": 114.84, "mid": 123.48, "high": 132.12 },
+    { "year": 2020, "kmBand": "25-50k", "fuel": "Diesel", "low": 108.34, "mid": 116.49, "high": 124.64 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "Diesel", "low": 100.89, "mid": 108.48, "high": 116.07 },
+    { "year": 2020, "kmBand": "75k+",   "fuel": "Diesel", "low": 93.35, "mid": 100.38, "high": 107.41 }
+  ],
+  "cityVariance": [
+    { "city": "Delhi NCR",  "variancePct":  4, "note": "Scarcity premium, strongest buyer pool" },
+    { "city": "Mumbai",     "variancePct":  4, "note": "Deepest ultra-luxury SUV demand" },
+    { "city": "Bengaluru",  "variancePct":  2, "note": "Growing ultra-luxury SUV base" },
+    { "city": "Hyderabad",  "variancePct":  1, "note": "Limited but present demand" },
+    { "city": "Chennai",    "variancePct":  0, "note": "Baseline, thin transaction volume" },
+    { "city": "Pune",       "variancePct": -1, "note": "Very few transactions" },
+    { "city": "Kolkata",    "variancePct": -3, "note": "Negligible ultra-luxury SUV market" },
+    { "city": "Ahmedabad",  "variancePct": -2, "note": "Minimal demand, long holding period" }
+  ],
+  "retentionCurve": [
+    { "ageYears": 0.5, "retentionPct": 97 },
+    { "ageYears": 1,   "retentionPct": 95 },
+    { "ageYears": 1.5, "retentionPct": 92 },
+    { "ageYears": 2,   "retentionPct": 90 },
+    { "ageYears": 2.5, "retentionPct": 88 },
+    { "ageYears": 3,   "retentionPct": 85 },
+    { "ageYears": 3.5, "retentionPct": 83 },
+    { "ageYears": 4,   "retentionPct": 80 },
+    { "ageYears": 4.5, "retentionPct": 78 },
+    { "ageYears": 5,   "retentionPct": 75 },
+    { "ageYears": 5.5, "retentionPct": 73 },
+    { "ageYears": 6,   "retentionPct": 70 },
+    { "ageYears": 6.5, "retentionPct": 68 },
+    { "ageYears": 7,   "retentionPct": 65 },
+    { "ageYears": 7.5, "retentionPct": 63 },
+    { "ageYears": 8,   "retentionPct": 61 },
+    { "ageYears": 8.5, "retentionPct": 59 },
+    { "ageYears": 9,   "retentionPct": 57 },
+    { "ageYears": 9.5, "retentionPct": 55 },
+    { "ageYears": 10,  "retentionPct": 53 }
+  ],
+  "segmentAverageRetention": {
+    "3year": 65,
+    "5year": 50,
+    "10year": 30
+  },
+  "context": [
+    "The Land Cruiser 300 replaced the long-running Land Cruiser 200 globally in 2021 and arrived in India as a fully imported CBU on Toyota's new GA-F platform, shared with the latest Land Cruiser Prado and the Lexus LX. It is powered exclusively by a 3.3-litre V6 twin-turbo diesel paired with a 10-speed automatic, since Toyota does not offer a petrol engine option for this model in any market it imports into India, and it comes standard with full-time four-wheel drive and a multi-terrain select system.",
+    "India's import duty structure on fully built CBUs this size pushes the ex-showroom price well past ₹2 crore, and Toyota allocates only a small number of units to the Indian market each year. That allocation has historically run years behind demand, producing waiting lists long enough that some buyers have paid above ex-showroom price in the grey market simply to take delivery sooner, a dynamic that keeps used values unusually firm relative to a normal depreciation curve.",
+    "The Land Cruiser nameplate carries one of the strongest reliability reputations of any vehicle sold in India, built over decades of use by diplomatic missions, expedition operators, and off-road buyers in some of the harshest conditions in the country. That reputation, combined with the car's extreme scarcity, is the primary reason the LC300 retains value far above every other large SUV sold here.",
+    "Because transaction volumes are so low, a handful of sales can meaningfully move the perceived used-market price in either direction, and buyers are concentrated almost entirely in Delhi NCR and Mumbai. Outside the top two or three metros, genuine LC300 resale transactions are rare enough that pricing is effectively set by the national market rather than any local one."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Toyota Land Cruiser 300 in India?",
+      "a": "A well-maintained Land Cruiser 300 retains roughly 90% of its ex-showroom price after two years, 85% after three years, and 75% after five years, as of September 2026, far above every other large SUV sold in India. For a 2023 diesel VX with 25,000-50,000 km, the current fair-market band is approximately ₹151.6-174.5 lakh."
+    },
+    {
+      "q": "Why does the Land Cruiser 300 hold its value so well?",
+      "a": "Toyota's extremely limited annual allocation to India, combined with multi-year waiting lists and the model's reputation for exceptional reliability, keeps demand well ahead of supply. Ten-year retention of around 53% is nearly double the roughly 30% segment average for large SUVs."
+    },
+    {
+      "q": "Is the Land Cruiser 300 available with a petrol engine in India?",
+      "a": "No. Toyota sells the LC300 in India exclusively with the 3.3-litre V6 twin-turbo diesel and 10-speed automatic. No petrol, hybrid, or CNG variant is offered."
+    },
+    {
+      "q": "How much does a Land Cruiser 300 depreciate per year?",
+      "a": "Depreciation is unusually gradual for the first several years, roughly 5% in year one and 2-3% per year through year five, before gradually widening to around 5% per year by year ten. This reflects persistent scarcity-driven demand rather than a typical SUV depreciation curve."
+    },
+    {
+      "q": "Which city gives the best resale price for a Land Cruiser 300?",
+      "a": "Delhi NCR and Mumbai trade at approximately +4% above the national mid, reflecting the deepest ultra-luxury SUV buyer pools and the strongest scarcity premium. Kolkata trades at around -3%, where genuine transactions are rare."
+    }
+  ],
+  "relatedModels": [
+    { "make": "land-rover", "model": "range-rover", "label": "Land Rover Range Rover" },
+    { "make": "mercedes-benz", "model": "g-class", "label": "Mercedes-Benz G-Class" },
+    { "make": "toyota", "model": "fortuner", "label": "Toyota Fortuner" }
+  ]
+}

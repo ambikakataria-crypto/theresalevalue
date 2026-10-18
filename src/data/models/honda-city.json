@@ -1,0 +1,620 @@
+{
+  "slug": {
+    "make": "honda",
+    "model": "city"
+  },
+  "make": "Honda",
+  "model": "City",
+  "segment": "Sedan",
+  "bodyType": "Sedan",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "1.5L I-VTEC V MT 4TH GEN",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 10
+    },
+    {
+      "name": "1.5L I-VTE V CVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 13.62
+    },
+    {
+      "name": "1.5L I-VTEC ZX CVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 15.97
+    },
+    {
+      "name": "EHEV V",
+      "fuel": "Hybrid",
+      "transmission": "AT",
+      "exShowroom": 18.89
+    },
+    {
+      "name": "EHEV ZX",
+      "fuel": "Hybrid",
+      "transmission": "AT",
+      "exShowroom": 20.39
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 11.05,
+      "mid": 11.88,
+      "high": 12.71
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.61,
+      "mid": 11.41,
+      "high": 12.21
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 10.01,
+      "mid": 10.76,
+      "high": 11.51
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 9.32,
+      "mid": 10.02,
+      "high": 10.73
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.63,
+      "mid": 9.28,
+      "high": 9.93
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 9.66,
+      "mid": 10.39,
+      "high": 11.12
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 9.29,
+      "mid": 9.99,
+      "high": 10.69
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.76,
+      "mid": 9.42,
+      "high": 10.07
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.16,
+      "mid": 8.77,
+      "high": 9.39
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.55,
+      "mid": 8.12,
+      "high": 8.68
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.8,
+      "mid": 9.47,
+      "high": 10.13
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.46,
+      "mid": 9.1,
+      "high": 9.73
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.98,
+      "mid": 8.58,
+      "high": 9.18
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.43,
+      "mid": 7.99,
+      "high": 8.55
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.88,
+      "mid": 7.39,
+      "high": 7.91
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.77,
+      "mid": 8.35,
+      "high": 8.93
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 7.46,
+      "mid": 8.02,
+      "high": 8.59
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.04,
+      "mid": 7.56,
+      "high": 8.09
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.55,
+      "mid": 7.05,
+      "high": 7.54
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.06,
+      "mid": 6.52,
+      "high": 6.98
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.9,
+      "mid": 7.42,
+      "high": 7.94
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.63,
+      "mid": 7.13,
+      "high": 7.63
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.25,
+      "mid": 6.73,
+      "high": 7.2
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.83,
+      "mid": 6.27,
+      "high": 6.7
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.39,
+      "mid": 5.8,
+      "high": 6.2
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 16.44,
+      "mid": 17.68,
+      "high": 18.91
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 15.8,
+      "mid": 16.99,
+      "high": 18.18
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 14.89,
+      "mid": 16.01,
+      "high": 17.14
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 13.87,
+      "mid": 14.92,
+      "high": 15.96
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 12.84,
+      "mid": 13.8,
+      "high": 14.77
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 14.38,
+      "mid": 15.47,
+      "high": 16.55
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 13.82,
+      "mid": 14.86,
+      "high": 15.9
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 13.03,
+      "mid": 14.01,
+      "high": 14.99
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 12.14,
+      "mid": 13.05,
+      "high": 13.97
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 11.23,
+      "mid": 12.08,
+      "high": 12.92
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 13.1,
+      "mid": 14.09,
+      "high": 15.07
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 12.59,
+      "mid": 13.54,
+      "high": 14.49
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 11.87,
+      "mid": 12.76,
+      "high": 13.66
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 11.06,
+      "mid": 11.89,
+      "high": 12.72
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 10.23,
+      "mid": 11,
+      "high": 11.77
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 11.56,
+      "mid": 12.43,
+      "high": 13.3
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 11.11,
+      "mid": 11.94,
+      "high": 12.78
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 10.47,
+      "mid": 11.26,
+      "high": 12.05
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 9.75,
+      "mid": 10.49,
+      "high": 11.22
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 9.03,
+      "mid": 9.7,
+      "high": 10.38
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 10.27,
+      "mid": 11.05,
+      "high": 11.82
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 9.87,
+      "mid": 10.62,
+      "high": 11.36
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 9.31,
+      "mid": 10.01,
+      "high": 10.71
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 8.67,
+      "mid": 9.32,
+      "high": 9.98
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 8.02,
+      "mid": 8.63,
+      "high": 9.23
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 0,
+      "note": "Balanced demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 1,
+      "note": "Strong premium-sedan buyer pool"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 2,
+      "note": "Honda brand loyalty is strong"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 2,
+      "note": "Honda resonates strongly in the south"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 3,
+      "note": "Deep Honda brand loyalty and service trust"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Softer premium-sedan demand"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 0,
+      "note": "Balanced demand"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 91
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 85
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 80
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 75
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 61
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 58
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 55
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 49
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 32
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 63,
+    "5year": 50,
+    "10year": 28
+  },
+  "context": [
+    "The fifth-generation City launched in India in July 2020 with a more premium design language and a longer wheelbase, continuing a nameplate that has anchored Honda's India business since 1998. Honda dropped diesel entirely from the City after BS6 Phase 2 made the 1.5-litre i-DTEC uneconomical to certify, making this generation petrol-only at launch, a deliberate bet on the strength of its 1.5-litre i-VTEC petrol and CVT combination.",
+    "In 2022 Honda added the City e:HEV, a full self-charging hybrid using Honda's two-motor system rather than a cheaper mild-hybrid setup, positioning it as the only strong-hybrid sedan at this price point without a plug. The e:HEV's running-cost advantage is salient enough to used buyers that it typically commands a resale premium over equivalent-age petrol City units, even though its higher purchase price means the absolute rupee depreciation can look similar.",
+    "The City nameplate carries two decades of accumulated brand trust in India built on Honda's reputation for engine longevity and refinement, and that trust has historically translated into resale values that sit above the broader mid-size sedan segment average. This generation continues that pattern, helped by Honda's loyal following in southern markets like Chennai and Hyderabad where the brand's service reputation runs especially deep.",
+    "CVT variants have closed most of the historical price gap with manual transmissions as automatic preference has risen among urban sedan buyers, and a well-documented service history at an authorised Honda centre remains the single biggest lever on what a specific used City fetches, more so than trim level once the car is past its third year."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Honda City in India?",
+      "a": "A well-maintained City retains roughly 75% of its ex-showroom value after two years and 67% after three years, as of September 2026, a few points above the mid-size sedan segment average of 63% at three years. A 2023 petrol V-CVT with 25,000-50,000 km currently trades in a fair-market band of roughly ₹11.1-11.9 lakh."
+    },
+    {
+      "q": "Does the City e:HEV hybrid hold value better than the petrol City?",
+      "a": "Yes, the e:HEV typically commands a resale premium over equivalent-age petrol variants because its running-cost savings remain a strong draw for used buyers, though its higher new price means the premium is smaller as a percentage than it is in absolute rupees."
+    },
+    {
+      "q": "How much does a Honda City depreciate per year?",
+      "a": "The City loses roughly 15% in year one and 9% in year two, then declines 6-7% annually through years three to five, reaching about 55% retention at the five-year mark."
+    },
+    {
+      "q": "Why doesn't the Honda City come with a diesel option anymore?",
+      "a": "Honda discontinued the City's 1.5-litre diesel after BS6 Phase 2 emission norms made it too costly to re-certify at this price point, so every City sold since the current generation's 2020 launch is petrol or, from 2022, strong hybrid."
+    },
+    {
+      "q": "Which city gives the best resale price for a Honda City?",
+      "a": "Chennai currently trades at roughly +3% above the national mid, reflecting deep Honda brand loyalty in the south, while Kolkata trades at around -2% due to softer premium-sedan demand."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "hyundai",
+      "model": "verna",
+      "label": "Hyundai Verna"
+    },
+    {
+      "make": "volkswagen",
+      "model": "virtus",
+      "label": "Volkswagen Virtus"
+    },
+    {
+      "make": "honda",
+      "model": "amaze",
+      "label": "Honda Amaze"
+    }
+  ]
+}

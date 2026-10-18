@@ -1,5 +1,8 @@
 {
-  "slug": { "make": "hyundai", "model": "creta" },
+  "slug": {
+    "make": "hyundai",
+    "model": "creta"
+  },
   "make": "Hyundai",
   "model": "Creta",
   "segment": "Mid-size SUV",
@@ -10,15 +13,23 @@
     "launchedIndia": "January 2024 facelift on 2nd gen SU2i platform",
     "engine": "1.5L Kappa MPi petrol (115 bhp), 1.5L Kappa T-GDi turbo-petrol (158 bhp), 1.5L CRDi diesel (114 bhp)",
     "gearbox": "6MT, IVT (CVT), 7DCT, 6AT",
-    "fuelOptions": ["Petrol", "Turbo Petrol", "Diesel"]
+    "fuelOptions": [
+      "Petrol",
+      "Turbo Petrol",
+      "Diesel"
+    ]
   },
   "priorGeneration": {
     "genNumber": 2,
     "yearsInIndia": "2020 to 2023",
     "engine": "1.5L MPi petrol, 1.4L T-GDi, 1.5L CRDi diesel"
   },
-  "currentExShowroomRange": { "low": 11.1, "high": 20.5, "unit": "lakh" },
-  "lastRefreshedISO": "2026-07-31",
+  "currentExShowroomRange": {
+    "low": 11.1,
+    "high": 20.5,
+    "unit": "lakh"
+  },
+  "lastRefreshedISO": "2026-10-18",
   "refreshCadence": "Monthly",
   "dataSourceNote": "Prices aggregated from Cars24 wholesale-transaction bands across metros. Non-metro adjustments applied via cityVariance below.",
   "heroImage": {
@@ -26,93 +37,593 @@
     "alt": "Hyundai Creta 2024 facelift front three-quarter in Titan Grey on an Indian highway"
   },
   "variants": [
-    { "name": "E",              "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 11.10 },
-    { "name": "EX",             "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 12.25 },
-    { "name": "S",              "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 13.50 },
-    { "name": "S IVT",          "fuel": "Petrol",       "transmission": "IVT", "exShowroom": 14.75 },
-    { "name": "SX",             "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 15.10 },
-    { "name": "SX(O)",          "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 17.35 },
-    { "name": "SX(O) Knight",   "fuel": "Petrol",       "transmission": "6MT", "exShowroom": 17.85 },
-    { "name": "SX T-GDi DCT",   "fuel": "Turbo Petrol", "transmission": "7DCT","exShowroom": 18.20 },
-    { "name": "SX(O) T-GDi DCT","fuel": "Turbo Petrol", "transmission": "7DCT","exShowroom": 20.45 },
-    { "name": "E Diesel",       "fuel": "Diesel",       "transmission": "6MT", "exShowroom": 12.35 },
-    { "name": "S Diesel",       "fuel": "Diesel",       "transmission": "6MT", "exShowroom": 14.75 },
-    { "name": "S Diesel AT",    "fuel": "Diesel",       "transmission": "6AT", "exShowroom": 16.10 },
-    { "name": "SX Diesel",      "fuel": "Diesel",       "transmission": "6MT", "exShowroom": 16.40 },
-    { "name": "SX(O) Diesel AT","fuel": "Diesel",       "transmission": "6AT", "exShowroom": 20.20 }
+    {
+      "name": "EX 1.5 DIESEL",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 13.68
+    },
+    {
+      "name": "S (O) 1.5 DIESEL",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 15.82
+    },
+    {
+      "name": "SX TECH 1.5 DIESEL DUAL TONE",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 17.6
+    },
+    {
+      "name": "SX (O) 1.5 DIESEL DUAL TONE",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 18.89
+    },
+    {
+      "name": "SX (O) 1.5 DIESEL AT DUAL TONE",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 20.15
+    },
+    {
+      "name": "EX 1.5 PETROL",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 12.18
+    },
+    {
+      "name": "SX 1.5 PETROL DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 15.42
+    },
+    {
+      "name": "SX (O) 1.5 PETROL",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 17.24
+    },
+    {
+      "name": "SX (O) 1.5 PETROL CVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 18.7
+    },
+    {
+      "name": "SX (O) 1.5 TURBO DCT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 20.15
+    }
   ],
   "permutations": [
-    { "year": 2024, "kmBand": "0-10k",  "fuel": "Petrol", "low": 10.85, "mid": 11.80, "high": 12.65 },
-    { "year": 2024, "kmBand": "10-25k", "fuel": "Petrol", "low": 10.35, "mid": 11.25, "high": 12.10 },
-    { "year": 2024, "kmBand": "25-50k", "fuel": "Petrol", "low":  9.75, "mid": 10.55, "high": 11.35 },
-    { "year": 2024, "kmBand": "50-75k", "fuel": "Petrol", "low":  9.10, "mid":  9.85, "high": 10.60 },
-
-    { "year": 2023, "kmBand": "0-10k",  "fuel": "Petrol", "low":  9.85, "mid": 10.70, "high": 11.55 },
-    { "year": 2023, "kmBand": "10-25k", "fuel": "Petrol", "low":  9.40, "mid": 10.20, "high": 11.00 },
-    { "year": 2023, "kmBand": "25-50k", "fuel": "Petrol", "low":  8.80, "mid":  9.55, "high": 10.30 },
-    { "year": 2023, "kmBand": "50-75k", "fuel": "Petrol", "low":  8.20, "mid":  8.85, "high": 9.55 },
-
-    { "year": 2022, "kmBand": "0-10k",  "fuel": "Petrol", "low":  8.95, "mid":  9.70, "high": 10.45 },
-    { "year": 2022, "kmBand": "25-50k", "fuel": "Petrol", "low":  8.05, "mid":  8.70, "high": 9.40 },
-    { "year": 2022, "kmBand": "50-75k", "fuel": "Petrol", "low":  7.45, "mid":  8.05, "high": 8.65 },
-
-    { "year": 2021, "kmBand": "0-10k",  "fuel": "Petrol", "low":  8.10, "mid":  8.75, "high": 9.45 },
-    { "year": 2021, "kmBand": "25-50k", "fuel": "Petrol", "low":  7.30, "mid":  7.90, "high": 8.50 },
-    { "year": 2021, "kmBand": "50-75k", "fuel": "Petrol", "low":  6.75, "mid":  7.30, "high": 7.85 },
-
-    { "year": 2020, "kmBand": "0-10k",  "fuel": "Petrol", "low":  7.30, "mid":  7.90, "high": 8.50 },
-    { "year": 2020, "kmBand": "25-50k", "fuel": "Petrol", "low":  6.60, "mid":  7.15, "high": 7.70 },
-    { "year": 2020, "kmBand": "50-75k", "fuel": "Petrol", "low":  6.10, "mid":  6.60, "high": 7.10 },
-
-    { "year": 2024, "kmBand": "0-10k",  "fuel": "Diesel", "low": 11.85, "mid": 12.80, "high": 13.75 },
-    { "year": 2024, "kmBand": "25-50k", "fuel": "Diesel", "low": 10.70, "mid": 11.55, "high": 12.40 },
-    { "year": 2024, "kmBand": "50-75k", "fuel": "Diesel", "low": 10.00, "mid": 10.80, "high": 11.60 },
-
-    { "year": 2023, "kmBand": "0-10k",  "fuel": "Diesel", "low": 10.85, "mid": 11.75, "high": 12.65 },
-    { "year": 2023, "kmBand": "25-50k", "fuel": "Diesel", "low":  9.75, "mid": 10.55, "high": 11.35 },
-    { "year": 2023, "kmBand": "50-75k", "fuel": "Diesel", "low":  9.10, "mid":  9.85, "high": 10.60 },
-
-    { "year": 2022, "kmBand": "0-10k",  "fuel": "Diesel", "low":  9.90, "mid": 10.70, "high": 11.50 },
-    { "year": 2022, "kmBand": "50-75k", "fuel": "Diesel", "low":  8.30, "mid":  9.00, "high": 9.70 },
-
-    { "year": 2021, "kmBand": "0-10k",  "fuel": "Diesel", "low":  8.95, "mid":  9.70, "high": 10.45 },
-    { "year": 2021, "kmBand": "50-75k", "fuel": "Diesel", "low":  7.50, "mid":  8.15, "high": 8.80 },
-
-    { "year": 2020, "kmBand": "0-10k",  "fuel": "Diesel", "low":  8.10, "mid":  8.75, "high": 9.45 },
-    { "year": 2020, "kmBand": "50-75k", "fuel": "Diesel", "low":  6.80, "mid":  7.40, "high": 8.00 }
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 14.42,
+      "mid": 15.51,
+      "high": 16.59
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 13.86,
+      "mid": 14.9,
+      "high": 15.94
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 13.06,
+      "mid": 14.05,
+      "high": 15.03
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 12.17,
+      "mid": 13.09,
+      "high": 14
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 11.26,
+      "mid": 12.11,
+      "high": 12.96
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 12.62,
+      "mid": 13.57,
+      "high": 14.52
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 12.13,
+      "mid": 13.04,
+      "high": 13.95
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 11.43,
+      "mid": 12.29,
+      "high": 13.15
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 10.65,
+      "mid": 11.45,
+      "high": 12.25
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 9.85,
+      "mid": 10.6,
+      "high": 11.34
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 11.49,
+      "mid": 12.36,
+      "high": 13.22
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 11.04,
+      "mid": 11.88,
+      "high": 12.71
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 10.41,
+      "mid": 11.2,
+      "high": 11.98
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 9.7,
+      "mid": 10.43,
+      "high": 11.16
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 8.98,
+      "mid": 9.65,
+      "high": 10.33
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 10.14,
+      "mid": 10.9,
+      "high": 11.66
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 9.74,
+      "mid": 10.48,
+      "high": 11.21
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 9.18,
+      "mid": 9.88,
+      "high": 10.57
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 8.56,
+      "mid": 9.2,
+      "high": 9.84
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.92,
+      "mid": 8.51,
+      "high": 9.11
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 9.01,
+      "mid": 9.69,
+      "high": 10.37
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 8.66,
+      "mid": 9.31,
+      "high": 9.96
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 8.17,
+      "mid": 8.78,
+      "high": 9.39
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 7.61,
+      "mid": 8.18,
+      "high": 8.75
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.04,
+      "mid": 7.57,
+      "high": 8.1
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 14.01,
+      "mid": 15.06,
+      "high": 16.12
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 13.46,
+      "mid": 14.48,
+      "high": 15.49
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 12.69,
+      "mid": 13.65,
+      "high": 14.6
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 11.82,
+      "mid": 12.71,
+      "high": 13.6
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 10.94,
+      "mid": 11.77,
+      "high": 12.59
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 12.26,
+      "mid": 13.18,
+      "high": 14.1
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 11.78,
+      "mid": 12.67,
+      "high": 13.55
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 11.11,
+      "mid": 11.94,
+      "high": 12.78
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 10.35,
+      "mid": 11.12,
+      "high": 11.9
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 9.57,
+      "mid": 10.29,
+      "high": 11.02
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 11.17,
+      "mid": 12.01,
+      "high": 12.85
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.73,
+      "mid": 11.54,
+      "high": 12.35
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 10.12,
+      "mid": 10.88,
+      "high": 11.64
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 9.42,
+      "mid": 10.13,
+      "high": 10.84
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.72,
+      "mid": 9.38,
+      "high": 10.03
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 9.85,
+      "mid": 10.59,
+      "high": 11.33
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 9.46,
+      "mid": 10.18,
+      "high": 10.89
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.92,
+      "mid": 9.59,
+      "high": 10.27
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.31,
+      "mid": 8.94,
+      "high": 9.56
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.69,
+      "mid": 8.27,
+      "high": 8.85
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.76,
+      "mid": 9.42,
+      "high": 10.07
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.41,
+      "mid": 9.05,
+      "high": 9.68
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.93,
+      "mid": 8.53,
+      "high": 9.13
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.39,
+      "mid": 7.95,
+      "high": 8.5
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.84,
+      "mid": 7.35,
+      "high": 7.87
+    }
   ],
   "cngNote": "Not applicable. The current Creta is not offered with a factory CNG option in India. Aftermarket CNG on the Creta is very rare and penalised heavily on resale, typically 12 to 18% below equivalent petrol.",
   "cityVariance": [
-    { "city": "Delhi NCR",  "variancePct":  3, "note": "Diesel demand strong for pre-BS6.2 units; NCR emission rules apply for 10-year cutoff on diesels" },
-    { "city": "Mumbai",     "variancePct":  4, "note": "SUV demand and tight supply; automatic Creta trades at a strong premium" },
-    { "city": "Bengaluru",  "variancePct":  5, "note": "Highest SUV demand in the country, IT-corridor buyers, tight liquidity" },
-    { "city": "Hyderabad",  "variancePct":  3, "note": "Strong SUV pull, moderate liquidity" },
-    { "city": "Chennai",    "variancePct":  1, "note": "Baseline plus one; automatic diesel Creta particularly firm" },
-    { "city": "Pune",       "variancePct":  3, "note": "Follows Mumbai band" },
-    { "city": "Kolkata",    "variancePct": -2, "note": "Softer prices, longer selling cycle" },
-    { "city": "Ahmedabad",  "variancePct":  0, "note": "Baseline" }
+    {
+      "city": "Delhi NCR",
+      "variancePct": 3,
+      "note": "Diesel demand strong for pre-BS6.2 units; NCR emission rules apply for 10-year cutoff on diesels"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 4,
+      "note": "SUV demand and tight supply; automatic Creta trades at a strong premium"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 5,
+      "note": "Highest SUV demand in the country, IT-corridor buyers, tight liquidity"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 3,
+      "note": "Strong SUV pull, moderate liquidity"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 1,
+      "note": "Baseline plus one; automatic diesel Creta particularly firm"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 3,
+      "note": "Follows Mumbai band"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Softer prices, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 0,
+      "note": "Baseline"
+    }
   ],
   "retentionCurve": [
-    { "ageYears": 0.5, "retentionPct": 93 },
-    { "ageYears": 1,   "retentionPct": 87 },
-    { "ageYears": 1.5, "retentionPct": 82 },
-    { "ageYears": 2,   "retentionPct": 78 },
-    { "ageYears": 2.5, "retentionPct": 74 },
-    { "ageYears": 3,   "retentionPct": 71 },
-    { "ageYears": 3.5, "retentionPct": 67 },
-    { "ageYears": 4,   "retentionPct": 63 },
-    { "ageYears": 4.5, "retentionPct": 59 },
-    { "ageYears": 5,   "retentionPct": 56 },
-    { "ageYears": 5.5, "retentionPct": 53 },
-    { "ageYears": 6,   "retentionPct": 50 },
-    { "ageYears": 6.5, "retentionPct": 47 },
-    { "ageYears": 7,   "retentionPct": 45 },
-    { "ageYears": 7.5, "retentionPct": 42 },
-    { "ageYears": 8,   "retentionPct": 40 },
-    { "ageYears": 8.5, "retentionPct": 38 },
-    { "ageYears": 9,   "retentionPct": 36 },
-    { "ageYears": 9.5, "retentionPct": 34 },
-    { "ageYears": 10,  "retentionPct": 32 }
+    {
+      "ageYears": 0.5,
+      "retentionPct": 93
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 87
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 82
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 74
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 63
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 32
+    }
   ],
   "segmentAverageRetention": {
     "3year": 66,
@@ -133,27 +644,123 @@
     "Panoramic sunroof drainage clog on 2020 to 2022 SX(O) units driven in tree-heavy areas. Routine cleaning solves it; if ignored, causes water ingress into the A-pillar. Inspect closely."
   ],
   "recentTransactions": [
-    { "soldMonth": "2026-07", "year": 2023, "kmDriven": 24500, "fuel": "Petrol", "variant": "SX",           "city": "Delhi NCR", "soldPriceLakh": 10.35 },
-    { "soldMonth": "2026-07", "year": 2022, "kmDriven": 38700, "fuel": "Diesel", "variant": "SX Diesel",    "city": "Bengaluru", "soldPriceLakh": 10.85 },
-    { "soldMonth": "2026-07", "year": 2024, "kmDriven": 11200, "fuel": "Petrol", "variant": "S IVT",        "city": "Mumbai",    "soldPriceLakh": 12.90 },
-    { "soldMonth": "2026-06", "year": 2021, "kmDriven": 56800, "fuel": "Diesel", "variant": "SX(O) Diesel AT","city": "Pune",     "soldPriceLakh":  9.65 },
-    { "soldMonth": "2026-06", "year": 2023, "kmDriven": 27300, "fuel": "Diesel", "variant": "S Diesel",     "city": "Hyderabad", "soldPriceLakh": 10.70 },
-    { "soldMonth": "2026-06", "year": 2020, "kmDriven": 74200, "fuel": "Petrol", "variant": "SX",           "city": "Chennai",   "soldPriceLakh":  6.75 },
-    { "soldMonth": "2026-05", "year": 2022, "kmDriven": 32100, "fuel": "Turbo Petrol", "variant": "SX T-GDi DCT","city": "Bengaluru", "soldPriceLakh":  9.80 },
-    { "soldMonth": "2026-05", "year": 2023, "kmDriven": 42600, "fuel": "Petrol", "variant": "EX",           "city": "Kolkata",   "soldPriceLakh":  9.45 },
-    { "soldMonth": "2026-05", "year": 2024, "kmDriven": 15800, "fuel": "Diesel", "variant": "SX Diesel",    "city": "Delhi NCR", "soldPriceLakh": 13.20 },
-    { "soldMonth": "2026-04", "year": 2021, "kmDriven": 47400, "fuel": "Petrol", "variant": "SX(O)",        "city": "Mumbai",    "soldPriceLakh":  8.15 },
-    { "soldMonth": "2026-04", "year": 2020, "kmDriven": 82500, "fuel": "Diesel", "variant": "SX Diesel AT", "city": "Ahmedabad", "soldPriceLakh":  7.25 },
-    { "soldMonth": "2026-04", "year": 2022, "kmDriven": 21400, "fuel": "Petrol", "variant": "S",            "city": "Bengaluru", "soldPriceLakh":  9.55 }
+    {
+      "soldMonth": "2026-07",
+      "year": 2023,
+      "kmDriven": 24500,
+      "fuel": "Petrol",
+      "variant": "SX",
+      "city": "Delhi NCR",
+      "soldPriceLakh": 10.35
+    },
+    {
+      "soldMonth": "2026-07",
+      "year": 2022,
+      "kmDriven": 38700,
+      "fuel": "Diesel",
+      "variant": "SX Diesel",
+      "city": "Bengaluru",
+      "soldPriceLakh": 10.85
+    },
+    {
+      "soldMonth": "2026-07",
+      "year": 2024,
+      "kmDriven": 11200,
+      "fuel": "Petrol",
+      "variant": "S IVT",
+      "city": "Mumbai",
+      "soldPriceLakh": 12.9
+    },
+    {
+      "soldMonth": "2026-06",
+      "year": 2021,
+      "kmDriven": 56800,
+      "fuel": "Diesel",
+      "variant": "SX(O) Diesel AT",
+      "city": "Pune",
+      "soldPriceLakh": 9.65
+    },
+    {
+      "soldMonth": "2026-06",
+      "year": 2023,
+      "kmDriven": 27300,
+      "fuel": "Diesel",
+      "variant": "S Diesel",
+      "city": "Hyderabad",
+      "soldPriceLakh": 10.7
+    },
+    {
+      "soldMonth": "2026-06",
+      "year": 2020,
+      "kmDriven": 74200,
+      "fuel": "Petrol",
+      "variant": "SX",
+      "city": "Chennai",
+      "soldPriceLakh": 6.75
+    },
+    {
+      "soldMonth": "2026-05",
+      "year": 2022,
+      "kmDriven": 32100,
+      "fuel": "Turbo Petrol",
+      "variant": "SX T-GDi DCT",
+      "city": "Bengaluru",
+      "soldPriceLakh": 9.8
+    },
+    {
+      "soldMonth": "2026-05",
+      "year": 2023,
+      "kmDriven": 42600,
+      "fuel": "Petrol",
+      "variant": "EX",
+      "city": "Kolkata",
+      "soldPriceLakh": 9.45
+    },
+    {
+      "soldMonth": "2026-05",
+      "year": 2024,
+      "kmDriven": 15800,
+      "fuel": "Diesel",
+      "variant": "SX Diesel",
+      "city": "Delhi NCR",
+      "soldPriceLakh": 13.2
+    },
+    {
+      "soldMonth": "2026-04",
+      "year": 2021,
+      "kmDriven": 47400,
+      "fuel": "Petrol",
+      "variant": "SX(O)",
+      "city": "Mumbai",
+      "soldPriceLakh": 8.15
+    },
+    {
+      "soldMonth": "2026-04",
+      "year": 2020,
+      "kmDriven": 82500,
+      "fuel": "Diesel",
+      "variant": "SX Diesel AT",
+      "city": "Ahmedabad",
+      "soldPriceLakh": 7.25
+    },
+    {
+      "soldMonth": "2026-04",
+      "year": 2022,
+      "kmDriven": 21400,
+      "fuel": "Petrol",
+      "variant": "S",
+      "city": "Bengaluru",
+      "soldPriceLakh": 9.55
+    }
   ],
   "faq": [
     {
       "q": "What is the resale value of a Hyundai Creta in India?",
-      "a": "A well-maintained Creta retains approximately 78% of its ex-showroom price after two years, 71% after three years, and 56% after five years. For a 2022 SX petrol with 25,000 to 50,000 km, the current fair-market band is roughly ₹8.05 to ₹9.40 lakh."
+      "a": "A well-maintained Creta retains approximately 78% of its ex-showroom price after two years, 71% after three years, and 56% after five years. For a 2022 SX petrol with 25,000 to 50,000 km, the current fair-market band is roughly ₹10.12 to ₹11.64 lakh."
     },
     {
       "q": "Does the Creta hold value better than the Kia Seltos?",
-      "a": "Marginally. The Creta retains about 71% at three years versus 68 to 70% for the Seltos, driven by Hyundai's larger service network and the Creta's longer brand history in India. In smaller metros and tier-2 cities, the gap widens to 3 to 4 percentage points in Creta's favour."
+      "a": "Yes, by a meaningful margin. The Creta retains about 71% at three years versus roughly 63% for the Seltos, driven by Hyundai's larger service network and the Creta's longer brand history in India. In smaller metros and tier-2 cities, the gap can widen further in Creta's favour."
     },
     {
       "q": "Is a diesel Creta a good used-car buy?",
@@ -169,9 +776,21 @@
     }
   ],
   "relatedModels": [
-    { "make": "kia", "model": "seltos", "label": "Kia Seltos" },
-    { "make": "mahindra", "model": "xuv700", "label": "Mahindra XUV700" },
-    { "make": "tata", "model": "harrier", "label": "Tata Harrier" }
+    {
+      "make": "kia",
+      "model": "seltos",
+      "label": "Kia Seltos"
+    },
+    {
+      "make": "toyota",
+      "model": "hyryder",
+      "label": "Toyota Hyryder"
+    },
+    {
+      "make": "tata",
+      "model": "harrier",
+      "label": "Tata Harrier"
+    }
   ],
   "authorSlug": "vaishnav-mishra"
 }

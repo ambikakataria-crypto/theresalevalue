@@ -1,0 +1,420 @@
+{
+  "slug": {
+    "make": "mahindra",
+    "model": "bolero-neo"
+  },
+  "make": "Mahindra",
+  "model": "Bolero Neo",
+  "segment": "Compact SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "N 4",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 9.29
+    },
+    {
+      "name": "N 8",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 10
+    },
+    {
+      "name": "N 10",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 11
+    },
+    {
+      "name": "N10 R",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 11
+    },
+    {
+      "name": "N 10 (O)",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 11.78
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 8.88,
+      "mid": 9.55,
+      "high": 10.22
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 8.54,
+      "mid": 9.18,
+      "high": 9.82
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 8.05,
+      "mid": 8.65,
+      "high": 9.26
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 7.5,
+      "mid": 8.06,
+      "high": 8.63
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 6.94,
+      "mid": 7.46,
+      "high": 7.98
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 7.77,
+      "mid": 8.36,
+      "high": 8.94
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 7.47,
+      "mid": 8.03,
+      "high": 8.59
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 7.04,
+      "mid": 7.57,
+      "high": 8.1
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 6.56,
+      "mid": 7.05,
+      "high": 7.55
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 6.07,
+      "mid": 6.53,
+      "high": 6.98
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 7.08,
+      "mid": 7.61,
+      "high": 8.15
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 6.8,
+      "mid": 7.32,
+      "high": 7.83
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 6.41,
+      "mid": 6.9,
+      "high": 7.38
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 5.98,
+      "mid": 6.43,
+      "high": 6.88
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 5.53,
+      "mid": 5.95,
+      "high": 6.36
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 6.25,
+      "mid": 6.72,
+      "high": 7.19
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 6,
+      "mid": 6.45,
+      "high": 6.91
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 5.66,
+      "mid": 6.08,
+      "high": 6.51
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 5.27,
+      "mid": 5.67,
+      "high": 6.06
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 4.88,
+      "mid": 5.24,
+      "high": 5.61
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 5.55,
+      "mid": 5.97,
+      "high": 6.39
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 5.34,
+      "mid": 5.74,
+      "high": 6.14
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 5.03,
+      "mid": 5.41,
+      "high": 5.79
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 4.69,
+      "mid": 5.04,
+      "high": 5.39
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 4.34,
+      "mid": 4.66,
+      "high": 4.99
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": -3,
+      "note": "NGT diesel-age rules weigh on older units"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": -1,
+      "note": "Limited space, smaller SUV demand pool"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": -2,
+      "note": "Softer diesel preference, hilly-terrain SUVs compete"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady fleet and semi-rural buyer base"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 2,
+      "note": "Strong commercial and taxi-segment demand"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 0,
+      "note": "Baseline; balanced urban and rural mix"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": 1,
+      "note": "Rural-belt demand supports resale"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 3,
+      "note": "Diesel-friendly, strong rural and commercial pull"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 83
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 73
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 69
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 61
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 58
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 55
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 49
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 39
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 37
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 35
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 33
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 31
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 29
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 61,
+    "5year": 47,
+    "10year": 23
+  },
+  "context": [
+    "The Bolero Neo arrived in 2021 as a rebadge and update of what was previously the TUV300, but its real lineage traces back to the same ladder-frame, rear-wheel-drive architecture that underpins the original Bolero. That body-on-frame toughness is unusual in a segment where rivals like the Brezza, Venue, and Sonet are all monocoque hatchback-based crossovers, and it is the single biggest reason the Neo holds a resale floor closer to a traditional SUV than a soft-roader.",
+    "The Neo is sold exclusively with the mHawk 1.5-litre three-cylinder turbo-diesel making around 100 bhp, paired only with a 5-speed manual. There has never been a petrol or CNG version, and no automatic gearbox has been offered. That narrow powertrain lineup simplifies ownership and keeps the used lineup easy to compare, but it also means the Neo's resale fortunes rise and fall entirely with diesel sentiment.",
+    "Buyer demographics for the Neo skew heavily toward fleet operators, rural and semi-urban commercial users, and first-time SUV buyers moving up from a hatchback, rather than urban passenger-car shoppers. That's why it tends to trade firmer in commercially active markets like Chennai and Ahmedabad than in tech-metro cities such as Bengaluru and Mumbai, where compact-SUV buyers lean more toward petrol crossovers.",
+    "Because the Neo is diesel-only, it carries more policy exposure than most of its rivals, particularly in Delhi NCR where NGT rules bar over-10-year-old diesel vehicles from registration. Offsetting that, the body-on-frame construction gives it unusually strong third- and fourth-owner demand for load-carrying and rough-road use, which keeps depreciation from Mahindra's diesel compact SUV from falling off a cliff the way it might for a monocoque rival."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Mahindra Bolero Neo?",
+      "a": "A well-maintained Bolero Neo retains approximately 73% of its ex-showroom price after two years and 52% after five years, as of September 2026. For a 2022 N10 diesel with 25,000–50,000 km, the current fair-market band is roughly ₹6.41–7.38 lakh."
+    },
+    {
+      "q": "Does the Bolero Neo hold value better than monocoque compact SUVs?",
+      "a": "The Neo's body-on-frame construction and sustained commercial/rural demand help it track close to, and in some markets slightly above, the compact SUV segment average of 61% at three years and 47% at five years — against the Neo's own 65% and 52% respectively."
+    },
+    {
+      "q": "Is diesel-only a problem for the Bolero Neo's resale?",
+      "a": "It narrows the buyer pool compared with multi-fuel rivals, and in Delhi NCR specifically, NGT rules on ageing diesel vehicles apply a roughly 3% discount versus the national baseline. In commercially active markets like Chennai and Ahmedabad, demand from fleet and rural buyers more than offsets this, with resale running 2–3% above baseline."
+    },
+    {
+      "q": "How much does a Bolero Neo depreciate per year?",
+      "a": "The Bolero Neo depreciates around 17% in the first year, then roughly 5–7% per year through year five, reaching about 52% retention at five years — broadly in line with the body-on-frame SUV category."
+    },
+    {
+      "q": "Which city gives the best resale price for a Bolero Neo?",
+      "a": "Ahmedabad currently trades around 3% above the national mid, followed by Chennai at roughly 2% above, both reflecting strong diesel and commercial-use demand. Delhi NCR trades about 3% below baseline due to diesel age-registration restrictions."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "mahindra",
+      "model": "thar",
+      "label": "Mahindra Thar"
+    },
+    {
+      "make": "mahindra",
+      "model": "bolero",
+      "label": "Mahindra Bolero"
+    },
+    {
+      "make": "tata",
+      "model": "punch",
+      "label": "Tata Punch"
+    }
+  ]
+}

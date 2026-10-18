@@ -1,0 +1,426 @@
+{
+  "slug": {
+    "make": "hyundai",
+    "model": "i20"
+  },
+  "make": "Hyundai",
+  "model": "i20",
+  "segment": "Hatchback",
+  "bodyType": "Hatchback",
+  "lastRefreshedISO": "2026-09-30",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "Era 1.2",
+      "fuel": "Petrol",
+      "transmission": "5MT",
+      "exShowroom": 7.1
+    },
+    {
+      "name": "Magna 1.2",
+      "fuel": "Petrol",
+      "transmission": "5MT",
+      "exShowroom": 8.3
+    },
+    {
+      "name": "Sportz 1.2",
+      "fuel": "Petrol",
+      "transmission": "5MT",
+      "exShowroom": 9.2
+    },
+    {
+      "name": "Sportz 1.0 Turbo iMT",
+      "fuel": "Petrol",
+      "transmission": "iMT",
+      "exShowroom": 10.5
+    },
+    {
+      "name": "SX(O) 1.0 Turbo DCT",
+      "fuel": "Petrol",
+      "transmission": "DCT",
+      "exShowroom": 11.8
+    },
+    {
+      "name": "N Line N8 1.0 Turbo DCT",
+      "fuel": "Petrol",
+      "transmission": "DCT",
+      "exShowroom": 12.5
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.15,
+      "mid": 8.76,
+      "high": 9.37
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 7.74,
+      "mid": 8.32,
+      "high": 8.91
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.21,
+      "mid": 7.75,
+      "high": 8.3
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.6,
+      "mid": 7.1,
+      "high": 7.59
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.99,
+      "mid": 6.44,
+      "high": 6.89
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.09,
+      "mid": 7.62,
+      "high": 8.16
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.73,
+      "mid": 7.24,
+      "high": 7.75
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.27,
+      "mid": 6.75,
+      "high": 7.22
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.74,
+      "mid": 6.17,
+      "high": 6.61
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.21,
+      "mid": 5.6,
+      "high": 5.99
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.36,
+      "mid": 6.83,
+      "high": 7.31
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.04,
+      "mid": 6.49,
+      "high": 6.95
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.62,
+      "mid": 6.05,
+      "high": 6.47
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.15,
+      "mid": 5.54,
+      "high": 5.92
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.67,
+      "mid": 5.02,
+      "high": 5.37
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.62,
+      "mid": 6.05,
+      "high": 6.47
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.34,
+      "mid": 5.74,
+      "high": 6.15
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.98,
+      "mid": 5.35,
+      "high": 5.72
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.55,
+      "mid": 4.9,
+      "high": 5.24
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.13,
+      "mid": 4.44,
+      "high": 4.75
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.01,
+      "mid": 5.39,
+      "high": 5.77
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.76,
+      "mid": 5.12,
+      "high": 5.48
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.43,
+      "mid": 4.77,
+      "high": 5.1
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.06,
+      "mid": 4.36,
+      "high": 4.67
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.68,
+      "mid": 3.96,
+      "high": 4.24
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 2,
+      "note": "Steady premium-hatchback demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 3,
+      "note": "Tight supply, feature-rich trims firm"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 3,
+      "note": "Strong demand for turbo-DCT and N Line"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline demand"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Follows Mumbai band, slightly softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Softer hatchback resale, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -1,
+      "note": "Mild preference for Maruti alternatives"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 89
+    },
+    {
+      "ageYears": 1.0,
+      "retentionPct": 82
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 2.0,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 3.0,
+      "retentionPct": 63
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 4.0,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 5.0,
+      "retentionPct": 49
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 6.0,
+      "retentionPct": 43
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 7.0,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 8.0,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 9.0,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 28
+    },
+    {
+      "ageYears": 10.0,
+      "retentionPct": 26
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 61,
+    "5year": 47,
+    "10year": 24
+  },
+  "context": [
+    "The third-generation i20, on sale since 2020 and facelifted in 2023, positioned itself as the premium choice in the hatchback segment, with styling, cabin quality, and features aimed above the Swift and Altroz. Hyundai discontinued the diesel option after the BS6 Phase 2 transition, leaving the lineup entirely petrol.",
+    "Two petrol engines are offered: a 1.2-litre naturally aspirated unit on lower trims and a 1.0-litre turbo-petrol, paired with a manual, iMT, or 7-speed DCT, on higher trims including the sporty N Line. In the used market, turbo-DCT i20s, particularly N Line examples, hold a clear premium over the 1.2-litre manual at equivalent age, reflecting the strong enthusiast following the N Line has built.",
+    "The i20 competes for the same buyers as the Swift but is priced and positioned a notch higher, which narrows its addressable resale market slightly, since fewer non-metro buyers shop at this price point for a hatchback rather than stepping into a compact SUV. This shows up as a marginally steeper depreciation curve than the segment-leading Swift, even though the i20 comfortably outperforms the hatchback segment average overall.",
+    "Hyundai's dealer network, while extensive, is somewhat thinner than Maruti's in smaller towns, and this is reflected in city-level resale variance: metro markets with strong Hyundai service presence hold value noticeably better than non-metro markets for the i20."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Hyundai i20?",
+      "a": "A well-maintained i20 retains about 71% of its ex-showroom price after two years and roughly 49% after five years, based on transaction data across Indian metros as of September 2026. A 2022 Sportz petrol manual with 25,000-50,000 km typically trades around ₹6.1-6.9 lakh."
+    },
+    {
+      "q": "Does the i20 N Line hold value better than the regular i20?",
+      "a": "Yes, N Line and other turbo-DCT variants trade at a premium over the 1.2-litre manual at equivalent age, supported by a strong enthusiast following and higher demand for automatic hatchbacks in metros."
+    },
+    {
+      "q": "Why does the i20 depreciate faster than the Swift?",
+      "a": "The i20 is priced a notch above the Swift and draws from a slightly smaller pool of hatchback-focused buyers, many of whom step into a compact SUV instead at this price. Combined with Maruti's denser non-metro service network advantage, this gives the i20 a marginally steeper resale curve than the Swift, though it still sits comfortably above the hatchback segment average."
+    },
+    {
+      "q": "How much does an i20 depreciate per year?",
+      "a": "The i20 loses about 18% of its value in year one, a further 9 points in year two, then roughly 6-7% annually through year five, reaching about 49% retention."
+    },
+    {
+      "q": "Which city gives the best resale price for an i20?",
+      "a": "Mumbai and Bengaluru currently trade at about +3% above the national mid, while Kolkata trades roughly -3% below it, reflecting softer hatchback demand in that market."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "maruti",
+      "model": "swift",
+      "label": "Maruti Swift"
+    },
+    {
+      "make": "tata",
+      "model": "altroz",
+      "label": "Tata Altroz"
+    },
+    {
+      "make": "maruti",
+      "model": "wagon-r",
+      "label": "Maruti Wagon R"
+    }
+  ]
+}

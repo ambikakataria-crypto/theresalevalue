@@ -1,0 +1,620 @@
+{
+  "slug": {
+    "make": "mercedes-benz",
+    "model": "e-class"
+  },
+  "make": "Mercedes-Benz",
+  "model": "E-Class",
+  "segment": "Sedan",
+  "bodyType": "Sedan",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "E 200 Avantgarde",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 76.5
+    },
+    {
+      "name": "E 200 Exclusive",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 78
+    },
+    {
+      "name": "E 220d Avantgarde",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 79.5
+    },
+    {
+      "name": "E 220d Exclusive",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 82
+    },
+    {
+      "name": "E 450 4MATIC AMG Line",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 92
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 68.77,
+      "mid": 73.95,
+      "high": 79.13
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 66.09,
+      "mid": 71.07,
+      "high": 76.04
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 62.31,
+      "mid": 67,
+      "high": 71.69
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 58.04,
+      "mid": 62.41,
+      "high": 66.78
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 53.71,
+      "mid": 57.75,
+      "high": 61.8
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 60.18,
+      "mid": 64.71,
+      "high": 69.24
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 57.83,
+      "mid": 62.18,
+      "high": 66.54
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 54.52,
+      "mid": 58.62,
+      "high": 62.73
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 50.79,
+      "mid": 54.61,
+      "high": 58.43
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 47,
+      "mid": 50.54,
+      "high": 54.07
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 54.81,
+      "mid": 58.94,
+      "high": 63.06
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 52.67,
+      "mid": 56.64,
+      "high": 60.6
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 49.66,
+      "mid": 53.4,
+      "high": 57.14
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 46.26,
+      "mid": 49.74,
+      "high": 53.23
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 42.81,
+      "mid": 46.03,
+      "high": 49.25
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 48.35,
+      "mid": 51.99,
+      "high": 55.63
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 46.46,
+      "mid": 49.96,
+      "high": 53.46
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 43.8,
+      "mid": 47.1,
+      "high": 50.4
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 40.81,
+      "mid": 43.88,
+      "high": 46.95
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 37.76,
+      "mid": 40.6,
+      "high": 43.44
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 42.98,
+      "mid": 46.22,
+      "high": 49.45
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 41.31,
+      "mid": 44.42,
+      "high": 47.53
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 38.94,
+      "mid": 41.87,
+      "high": 44.81
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 36.28,
+      "mid": 39.01,
+      "high": 41.74
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 33.57,
+      "mid": 36.1,
+      "high": 38.62
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 67.59,
+      "mid": 72.68,
+      "high": 77.76
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 64.95,
+      "mid": 69.84,
+      "high": 74.73
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 61.23,
+      "mid": 65.84,
+      "high": 70.45
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 57.04,
+      "mid": 61.34,
+      "high": 65.63
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 52.79,
+      "mid": 56.76,
+      "high": 60.73
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 59.14,
+      "mid": 63.59,
+      "high": 68.04
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 56.83,
+      "mid": 61.11,
+      "high": 65.39
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 53.58,
+      "mid": 57.61,
+      "high": 61.65
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 49.91,
+      "mid": 53.67,
+      "high": 57.43
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 46.19,
+      "mid": 49.66,
+      "high": 53.14
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 53.87,
+      "mid": 57.92,
+      "high": 61.98
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 51.77,
+      "mid": 55.66,
+      "high": 59.56
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 48.8,
+      "mid": 52.48,
+      "high": 56.15
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 45.46,
+      "mid": 48.89,
+      "high": 52.31
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 42.07,
+      "mid": 45.24,
+      "high": 48.4
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 47.51,
+      "mid": 51.09,
+      "high": 54.67
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 45.66,
+      "mid": 49.1,
+      "high": 52.53
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 43.05,
+      "mid": 46.29,
+      "high": 49.53
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 40.1,
+      "mid": 43.12,
+      "high": 46.14
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 37.11,
+      "mid": 39.9,
+      "high": 42.69
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 42.24,
+      "mid": 45.42,
+      "high": 48.6
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 40.59,
+      "mid": 43.65,
+      "high": 46.71
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 38.27,
+      "mid": 41.15,
+      "high": 44.03
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 35.65,
+      "mid": 38.34,
+      "high": 41.02
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 32.99,
+      "mid": 35.47,
+      "high": 37.96
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 4,
+      "note": "Largest luxury-sedan resale pool"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 4,
+      "note": "Deepest HNI buyer base"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 2,
+      "note": "Strong but smaller luxury pool"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Emerging luxury-sedan demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline, modest luxury-sedan churn"
+    },
+    {
+      "city": "Pune",
+      "variancePct": -1,
+      "note": "Thin luxury-sedan resale market"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Very limited luxury-sedan buyer pool"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -2,
+      "note": "Niche demand, longer holding period"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 88
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 55
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 35
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 33
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 31
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 29
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 27
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 25
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 23
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 22
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 20
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 52,
+    "5year": 38,
+    "10year": 19
+  },
+  "context": [
+    "The E-Class sold in India is exclusively the long-wheelbase body, a market-specific decision Mercedes-Benz has carried across generations because Indian buyers overwhelmingly use the car as a chauffeur-driven rear-seat executive sedan rather than a driver's car. The current W214 generation arrived in India in 2024, replacing the W213 that had been on sale since 2017, and is offered as the E 200 petrol and E 220d diesel, both paired exclusively with a 9-speed 9G-TRONIC automatic.",
+    "As a fully imported, CKD-assembled luxury product, the E-Class carries India's steep luxury-vehicle duty structure baked into its price, and that same structure works against it at resale: used buyers at this price point can often step into a newer entry-luxury model or a well-kept previous-generation E-Class for similar money, which caps how much a used W214 can command once the initial ownership cycle ends.",
+    "Resale value falls off faster once the standard new-car warranty period lapses, because secondhand buyers price in the real cost of out-of-warranty service, parts, and electronics repair on a car this complex. This is a pattern shared across the German luxury-sedan segment rather than specific to Mercedes, and it is the single biggest driver of the E-Class's steeper percentage depreciation relative to mainstream sedans, even though the absolute rupee value retained remains large.",
+    "Diesel E 220d variants have historically commanded a firmer resale floor than petrol E 200 variants among India's luxury-sedan buyers, since high-mileage chauffeur-driven usage patterns favour diesel's lower running cost, and that preference has persisted even as diesel registration restrictions tighten in some metros."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Mercedes-Benz E-Class in India?",
+      "a": "A well-maintained E-Class retains roughly 65% of its ex-showroom price after two years, 55% after three years, and 41% after five years, as of September 2026. For a 2023 E 220d with 25,000-50,000 km, the current fair-market band is approximately ₹53.6-61.7 lakh."
+    },
+    {
+      "q": "Does the diesel E 220d hold value better than the petrol E 200?",
+      "a": "Yes. Across every year and km band in current data, the E 220d diesel trades roughly 10-11% above the equivalent E 200 petrol, reflecting stronger demand among high-mileage, chauffeur-driven buyers who prioritise diesel's lower running cost."
+    },
+    {
+      "q": "Why does the E-Class depreciate faster in percentage terms than mass-market sedans?",
+      "a": "Luxury sedans like the E-Class lose value faster once the factory warranty expires, because used buyers price in higher expected service and parts costs. The E-Class retains about 41% at five years versus a segment benchmark of roughly 38%, so it actually holds a touch better than its luxury-sedan peers despite the steep overall curve."
+    },
+    {
+      "q": "How much does an E-Class depreciate per year?",
+      "a": "The E-Class loses roughly 22% of its value in year one and another 13-14% in year two, before settling into a steadier 8-9% annual decline from year three onward. Ten-year retention sits at around 20%."
+    },
+    {
+      "q": "Which city gives the best resale price for an E-Class?",
+      "a": "Delhi NCR and Mumbai currently trade at approximately +4% above the national mid, reflecting the deepest luxury-sedan buyer pools in the country. Kolkata trades at around -3%, where the used luxury-sedan market is comparatively thin."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "toyota",
+      "model": "camry",
+      "label": "Toyota Camry"
+    },
+    {
+      "make": "mercedes-benz",
+      "model": "g-class",
+      "label": "Mercedes-Benz G-Class"
+    },
+    {
+      "make": "land-rover",
+      "model": "range-rover",
+      "label": "Land Rover Range Rover"
+    }
+  ]
+}

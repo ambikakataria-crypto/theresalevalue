@@ -1,0 +1,414 @@
+{
+  "slug": {
+    "make": "mercedes-benz",
+    "model": "g-class"
+  },
+  "make": "Mercedes-Benz",
+  "model": "G-Class",
+  "segment": "Large SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-09-30",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "G 500",
+      "fuel": "Petrol",
+      "transmission": "9G-TRONIC AT",
+      "exShowroom": 300.0
+    },
+    {
+      "name": "G 500 Night Edition",
+      "fuel": "Petrol",
+      "transmission": "9G-TRONIC AT",
+      "exShowroom": 315.0
+    },
+    {
+      "name": "G 63 AMG",
+      "fuel": "Petrol",
+      "transmission": "9G-TRONIC AT",
+      "exShowroom": 380.0
+    },
+    {
+      "name": "G 63 AMG Edition",
+      "fuel": "Petrol",
+      "transmission": "9G-TRONIC AT",
+      "exShowroom": 420.0
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 286.54,
+      "mid": 318.38,
+      "high": 350.21
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 282.24,
+      "mid": 313.6,
+      "high": 344.96
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 276.51,
+      "mid": 307.23,
+      "high": 337.96
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 269.35,
+      "mid": 299.27,
+      "high": 329.2
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 260.75,
+      "mid": 289.72,
+      "high": 318.69
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 273.64,
+      "mid": 304.05,
+      "high": 334.45
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 269.54,
+      "mid": 299.49,
+      "high": 329.44
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 264.07,
+      "mid": 293.41,
+      "high": 322.75
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 257.22,
+      "mid": 285.81,
+      "high": 314.39
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 249.02,
+      "mid": 276.68,
+      "high": 304.35
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 261.33,
+      "mid": 290.37,
+      "high": 319.4
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 257.41,
+      "mid": 286.01,
+      "high": 314.61
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 252.18,
+      "mid": 280.2,
+      "high": 308.22
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 245.65,
+      "mid": 272.94,
+      "high": 300.24
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 237.81,
+      "mid": 264.23,
+      "high": 290.66
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 249.57,
+      "mid": 277.3,
+      "high": 305.03
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 245.83,
+      "mid": 273.14,
+      "high": 300.45
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 240.83,
+      "mid": 267.59,
+      "high": 294.35
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 234.6,
+      "mid": 260.66,
+      "high": 286.73
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 227.11,
+      "mid": 252.34,
+      "high": 277.58
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 238.34,
+      "mid": 264.82,
+      "high": 291.3
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 234.76,
+      "mid": 260.85,
+      "high": 286.93
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 230.0,
+      "mid": 255.55,
+      "high": 281.11
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 224.04,
+      "mid": 248.93,
+      "high": 273.82
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 216.89,
+      "mid": 240.99,
+      "high": 265.09
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 3,
+      "note": "Largest ultra-luxury buyer base in the country"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 4,
+      "note": "Deepest pool of HNI buyers, fastest resale"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 1,
+      "note": "Smaller but growing ultra-luxury demand"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Pockets of strong demand among business families"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": -1,
+      "note": "Thin ultra-luxury resale market"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 0,
+      "note": "Baseline; occasional demand spillover from Mumbai"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Very limited ultra-luxury buyer pool"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -1,
+      "note": "Small but present business-family demand"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 97
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 94
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 92
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 88
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 86
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 84
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 82
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 80
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 74
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 70
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 68
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 66
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 58
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 60,
+    "5year": 47,
+    "10year": 27
+  },
+  "context": [
+    "The G-Class traces its silhouette back to a 1979 military design that Mercedes-Benz has deliberately kept almost unchanged in appearance across four decades, even as the underlying W463 platform was fully re-engineered in 2018. In India it is sold exclusively through a handful of dealerships in petrol form, as the G 500 and the AMG-tuned G 63, with volumes so low that each unit is effectively a bespoke, allocation-based sale rather than a showroom-floor purchase.",
+    "This extreme scarcity, combined with import duties that make a new G-Class meaningfully more expensive each time prices are revised, is the main reason it depreciates far more slowly than any mass-market SUV and even most other luxury SUVs; a handful of well-documented, low-mileage examples have resold in India at or close to their original price during periods of high demand and import-cost escalation.",
+    "Unlike volume luxury SUVs, the G-Class's value is driven almost entirely by scarcity and brand cachet rather than feature depreciation or technology obsolescence, so buyers should expect resale price to track global production allocation and import-duty trends as much as the age or condition of the specific vehicle.",
+    "The used market for the G-Class in India is extremely thin, concentrated almost entirely in Mumbai and Delhi NCR, which means finding a buyer can take considerably longer than for any mainstream SUV even though the eventual price realised is high relative to depreciation elsewhere in the large SUV segment."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Mercedes-Benz G-Class in India?",
+      "a": "A G-Class retains roughly 90% of its ex-showroom price after two years and about 86% after three years, still holding near 78% at year five, among the slowest depreciation curves of any vehicle sold in India as of September 2026."
+    },
+    {
+      "q": "Why does the G-Class hold value so much better than other luxury SUVs?",
+      "a": "Its 3-year retention of about 86% is roughly 26 points above the Large SUV segment average of 60%, driven by extremely limited allocation, rising import duties on each price revision, and strong brand cachet that keeps demand ahead of the very small supply of used units."
+    },
+    {
+      "q": "Is the G 63 AMG a better resale bet than the G 500?",
+      "a": "Both trade at similarly strong retention percentages, but the G 63 AMG's higher starting price and stronger halo status typically mean it finds a buyer faster in the thin resale market, even though percentage retention is comparable across the range."
+    },
+    {
+      "q": "How much does a G-Class depreciate per year?",
+      "a": "A G-Class loses only about 6% of value in year one and continues at a slow 2-3 percentage point annual retention drop through year five, where it still holds roughly 78%, far flatter than any volume SUV in India."
+    },
+    {
+      "q": "Which city gives the best resale price for a G-Class?",
+      "a": "Mumbai trades around +4% above the national mid due to the country's deepest ultra-luxury buyer pool, while Kolkata trades roughly -3% because of a very limited local market for vehicles at this price point."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "land-rover",
+      "model": "range-rover",
+      "label": "Land Rover Range Rover"
+    },
+    {
+      "make": "land-rover",
+      "model": "defender",
+      "label": "Land Rover Defender"
+    },
+    {
+      "make": "toyota",
+      "model": "land-cruiser-300",
+      "label": "Toyota Land Cruiser 300"
+    }
+  ]
+}

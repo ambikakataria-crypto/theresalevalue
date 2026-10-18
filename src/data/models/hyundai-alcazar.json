@@ -1,0 +1,650 @@
+{
+  "slug": {
+    "make": "hyundai",
+    "model": "alcazar"
+  },
+  "make": "Hyundai",
+  "model": "Alcazar",
+  "segment": "Midsize SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "2.0 PRESTIGE EXE 7S",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 15.89
+    },
+    {
+      "name": "PLATINUM 1.5 TURBO PETROL MT 7STR",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 18.68
+    },
+    {
+      "name": "2.0 SIGNATURE (O) AT 6STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 19.95
+    },
+    {
+      "name": "SIGNATURE (O) DCT 1.5 PETROL 6STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 20.28
+    },
+    {
+      "name": "SIGNATURE (O) DCT 1.5 PETROL 7STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 26
+    },
+    {
+      "name": "1.5 PRESTIGE EXE 6S",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 16.3
+    },
+    {
+      "name": "PRESTIGE(O) EXE 1.5 AT 7STR",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 17.77
+    },
+    {
+      "name": "1.5 SIGNATURE MT 6STR",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 19.25
+    },
+    {
+      "name": "PLATINUM(O) 7STR 1.5 AT",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 19.89
+    },
+    {
+      "name": "1.5 SIGNATURE (O) AT 6STR DUAL TONE",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 20.25
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 16.87,
+      "mid": 18.14,
+      "high": 19.41
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 16.22,
+      "mid": 17.44,
+      "high": 18.66
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 15.29,
+      "mid": 16.44,
+      "high": 17.59
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 14.24,
+      "mid": 15.31,
+      "high": 16.39
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 13.18,
+      "mid": 14.17,
+      "high": 15.16
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 14.76,
+      "mid": 15.88,
+      "high": 16.99
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 14.19,
+      "mid": 15.26,
+      "high": 16.32
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 13.38,
+      "mid": 14.38,
+      "high": 15.39
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 12.46,
+      "mid": 13.4,
+      "high": 14.34
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 11.53,
+      "mid": 12.4,
+      "high": 13.27
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 13.45,
+      "mid": 14.46,
+      "high": 15.47
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 12.92,
+      "mid": 13.9,
+      "high": 14.87
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 12.18,
+      "mid": 13.1,
+      "high": 14.02
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 11.35,
+      "mid": 12.2,
+      "high": 13.06
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 10.5,
+      "mid": 11.29,
+      "high": 12.08
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 11.86,
+      "mid": 12.76,
+      "high": 13.65
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 11.4,
+      "mid": 12.26,
+      "high": 13.12
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 10.75,
+      "mid": 11.56,
+      "high": 12.37
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 10.01,
+      "mid": 10.77,
+      "high": 11.52
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 9.26,
+      "mid": 9.96,
+      "high": 10.66
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 10.55,
+      "mid": 11.34,
+      "high": 12.13
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.13,
+      "mid": 10.9,
+      "high": 11.66
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 9.55,
+      "mid": 10.27,
+      "high": 10.99
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.9,
+      "mid": 9.57,
+      "high": 10.24
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.24,
+      "mid": 8.86,
+      "high": 9.48
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 15.65,
+      "mid": 16.82,
+      "high": 18
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 15.04,
+      "mid": 16.17,
+      "high": 17.3
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 14.17,
+      "mid": 15.24,
+      "high": 16.31
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 13.2,
+      "mid": 14.2,
+      "high": 15.19
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 12.22,
+      "mid": 13.14,
+      "high": 14.06
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 13.69,
+      "mid": 14.72,
+      "high": 15.75
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 13.16,
+      "mid": 14.15,
+      "high": 15.14
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 12.4,
+      "mid": 13.34,
+      "high": 14.27
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 11.55,
+      "mid": 12.42,
+      "high": 13.29
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 10.69,
+      "mid": 11.5,
+      "high": 12.3
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 12.47,
+      "mid": 13.41,
+      "high": 14.35
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 11.98,
+      "mid": 12.88,
+      "high": 13.79
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 11.3,
+      "mid": 12.15,
+      "high": 13
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 10.52,
+      "mid": 11.32,
+      "high": 12.11
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 9.74,
+      "mid": 10.47,
+      "high": 11.2
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 11,
+      "mid": 11.83,
+      "high": 12.65
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 10.57,
+      "mid": 11.37,
+      "high": 12.16
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 9.96,
+      "mid": 10.71,
+      "high": 11.46
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 9.28,
+      "mid": 9.98,
+      "high": 10.68
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 8.59,
+      "mid": 9.24,
+      "high": 9.88
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 9.78,
+      "mid": 10.51,
+      "high": 11.25
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 9.4,
+      "mid": 10.1,
+      "high": 10.81
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 8.86,
+      "mid": 9.53,
+      "high": 10.19
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 8.25,
+      "mid": 8.87,
+      "high": 9.5
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.64,
+      "mid": 8.21,
+      "high": 8.79
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 1,
+      "note": "Strong 6/7-seater family demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 1,
+      "note": "Steady demand, space constraints favour SUVs over MPVs"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 2,
+      "note": "Large joint-family and tech-sector buyer base"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 2,
+      "note": "Strong 3-row SUV culture"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 1,
+      "note": "Good Hyundai dealer trust and resale network"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Steady family-SUV demand"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -1,
+      "note": "Slightly softer 3-row SUV turnover"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 1,
+      "note": "Diesel long-distance demand healthy"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 92
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 85
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 80
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 75
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 57
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 49
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 33
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 62,
+    "5year": 49,
+    "10year": 28
+  },
+  "context": [
+    "Launched in 2021, the Alcazar is a stretched, three-row version of the Hyundai Creta built on the same platform, aimed at families who want extra seating capacity without stepping up to a larger, pricier SUV, and it was refreshed in 2023 with revised styling and ADAS features on top trims.",
+    "The line-up spans a 2.0-litre naturally aspirated petrol, a 1.5-litre turbo-petrol added with the 2023 refresh, and a 1.5-litre diesel, each available with a manual or automatic, giving buyers more powertrain choice than most three-row SUVs in its price bracket; the diesel-automatic combination is particularly popular with buyers planning frequent long-distance family travel.",
+    "Because it shares its underpinnings, engines, and much of its parts bin with the high-volume Creta, the Alcazar benefits from strong parts availability and mechanic familiarity nationwide, which supports resale confidence even in smaller towns where buyers might otherwise be wary of less common three-row SUVs.",
+    "Hyundai's established resale reputation in India, built over two decades of consistent dealer-network expansion, gives the Alcazar a depreciation curve a few points better than the midsize SUV segment average, trailing Toyota's hybrid-equipped Hyryder but ahead of newer-brand rivals like the MG Hector."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Hyundai Alcazar in India?",
+      "a": "A Hyundai Alcazar retains roughly 75% of its ex-showroom price after two years and about 67% after three years, settling near 54% at year five, as of September 2026 transaction data. A 2022 Platinum diesel with 25,000-50,000 km currently trades around ₹11.3-13 lakh."
+    },
+    {
+      "q": "Is the diesel or petrol Alcazar better for resale?",
+      "a": "The diesel-automatic combination tends to attract the most consistent buyer demand because of its appeal to long-distance family travellers, though the petrol-automatic trades within a close range of it, and the gap narrows further past 75,000 km."
+    },
+    {
+      "q": "Why does the Alcazar hold value better than the MG Hector?",
+      "a": "The Alcazar's 3-year retention of about 67% sits a few points above the Midsize SUV segment average of 62% and well ahead of newer-brand rivals, largely because it shares parts and service infrastructure with the high-volume Creta, which supports resale confidence nationwide."
+    },
+    {
+      "q": "How much does an Alcazar depreciate per year?",
+      "a": "An Alcazar loses about 15% of value in year one, with 5-7 percentage point annual retention drops through year five (to roughly 54%), slightly better than the midsize SUV segment average of 49% at the same age."
+    },
+    {
+      "q": "Which city gives the best resale price for an Alcazar?",
+      "a": "Bengaluru and Hyderabad trade around +2% above the national mid due to strong joint-family and 3-row SUV demand, while Kolkata trades roughly -1% because of comparatively slower 3-row SUV turnover."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "toyota",
+      "model": "hyryder",
+      "label": "Toyota Hyryder"
+    },
+    {
+      "make": "tata",
+      "model": "harrier",
+      "label": "Tata Harrier"
+    },
+    {
+      "make": "hyundai",
+      "model": "creta",
+      "label": "Hyundai Creta"
+    }
+  ]
+}

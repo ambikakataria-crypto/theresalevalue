@@ -1,0 +1,632 @@
+{
+  "slug": {
+    "make": "hyundai",
+    "model": "aura"
+  },
+  "make": "Hyundai",
+  "model": "Aura",
+  "segment": "Sedan",
+  "bodyType": "Sedan",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "E 1.2",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 6.09
+    },
+    {
+      "name": "S 1.2 AMT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 7.43
+    },
+    {
+      "name": "SX 1.2",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 7.62
+    },
+    {
+      "name": "SX PLUS 1.2 AMT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 8.37
+    },
+    {
+      "name": "SX+ 1.0 TURBO GDI MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 8.87
+    },
+    {
+      "name": "S 1.2 CNG",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 7.88
+    },
+    {
+      "name": "SX 1.2 CNG",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 8.57
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.42,
+      "mid": 6.91,
+      "high": 7.39
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.17,
+      "mid": 6.64,
+      "high": 7.1
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.82,
+      "mid": 6.26,
+      "high": 6.7
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.42,
+      "mid": 5.83,
+      "high": 6.24
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.02,
+      "mid": 5.4,
+      "high": 5.77
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.62,
+      "mid": 6.04,
+      "high": 6.47
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.4,
+      "mid": 5.81,
+      "high": 6.22
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.09,
+      "mid": 5.48,
+      "high": 5.86
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.74,
+      "mid": 5.1,
+      "high": 5.46
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.39,
+      "mid": 4.72,
+      "high": 5.05
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.12,
+      "mid": 5.51,
+      "high": 5.89
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.92,
+      "mid": 5.29,
+      "high": 5.66
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.64,
+      "mid": 4.99,
+      "high": 5.34
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.32,
+      "mid": 4.65,
+      "high": 4.97
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4,
+      "mid": 4.3,
+      "high": 4.6
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.52,
+      "mid": 4.86,
+      "high": 5.2
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.34,
+      "mid": 4.67,
+      "high": 4.99
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.09,
+      "mid": 4.4,
+      "high": 4.71
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.81,
+      "mid": 4.1,
+      "high": 4.39
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.53,
+      "mid": 3.79,
+      "high": 4.06
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.02,
+      "mid": 4.32,
+      "high": 4.62
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 3.86,
+      "mid": 4.15,
+      "high": 4.44
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 3.64,
+      "mid": 3.91,
+      "high": 4.19
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.39,
+      "mid": 3.64,
+      "high": 3.9
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.14,
+      "mid": 3.37,
+      "high": 3.61
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 6.88,
+      "mid": 7.4,
+      "high": 7.92
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 6.62,
+      "mid": 7.11,
+      "high": 7.61
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 6.24,
+      "mid": 6.71,
+      "high": 7.18
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 5.81,
+      "mid": 6.25,
+      "high": 6.69
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 5.38,
+      "mid": 5.78,
+      "high": 6.19
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 6.02,
+      "mid": 6.48,
+      "high": 6.93
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5.79,
+      "mid": 6.22,
+      "high": 6.66
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 5.46,
+      "mid": 5.87,
+      "high": 6.28
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 5.08,
+      "mid": 5.47,
+      "high": 5.85
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.7,
+      "mid": 5.06,
+      "high": 5.41
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.49,
+      "mid": 5.9,
+      "high": 6.31
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5.27,
+      "mid": 5.67,
+      "high": 6.07
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.97,
+      "mid": 5.35,
+      "high": 5.72
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.63,
+      "mid": 4.98,
+      "high": 5.33
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.29,
+      "mid": 4.61,
+      "high": 4.93
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.84,
+      "mid": 5.2,
+      "high": 5.57
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.65,
+      "mid": 5,
+      "high": 5.35
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.38,
+      "mid": 4.71,
+      "high": 5.04
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.08,
+      "mid": 4.39,
+      "high": 4.7
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.78,
+      "mid": 4.06,
+      "high": 4.35
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.3,
+      "mid": 4.63,
+      "high": 4.95
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.13,
+      "mid": 4.45,
+      "high": 4.76
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 3.9,
+      "mid": 4.19,
+      "high": 4.49
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.63,
+      "mid": 3.9,
+      "high": 4.18
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.36,
+      "mid": 3.61,
+      "high": 3.87
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 3,
+      "note": "CNG demand firms up resale"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 1,
+      "note": "Tight compact-sedan supply"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 0,
+      "note": "Balanced demand, mostly petrol"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 0,
+      "note": "Steady fleet and personal mix"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 1,
+      "note": "Consistent sedan preference"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 0,
+      "note": "Follows national baseline"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Softer sedan demand, slower sales"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 2,
+      "note": "CNG-heavy market, firmer pricing"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 83
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 77
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 68
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 57
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 37
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 35
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 33
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 31
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 29
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 27
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 61,
+    "5year": 47,
+    "10year": 24
+  },
+  "context": [
+    "The Aura arrived in late 2020 as Hyundai's sub-four-metre sedan, built on the same platform as the Grand i10 Nios and positioned to capture the tax benefit that compact-SUV-style dimensions give sedans in India. That shared underpinning means its mechanical reliability and parts costs track closely with one of Hyundai's highest-volume models, which keeps running costs low and helps the Aura hold a resale floor above niche competitors.",
+    "Diesel was dropped industry-wide on small Hyundai cars after the BS6 Phase 2 emission norms made the 1.2-litre CRDi unviable to certify at this price point, so the Aura line has been petrol-and-CNG only since roughly 2020. The 1.0-litre turbo GDI petrol, offered with a 7-speed DCT and later an iMT, was added to give the Aura a performance variant without reviving diesel, and used buyers searching for that combination pay a slight premium over naturally aspirated cars with similar age and kilometres.",
+    "A large share of Aura registrations go through ride-hailing and corporate fleets, since sub-four-metre sedans remain a preferred shape for airport and city taxi work. Fleet-run cars typically carry higher odometer readings relative to age than personally owned cars, which is the single biggest factor pulling down the Aura's resale compared to showroom-only models like the Verna, and buyers should weight service history more heavily than age alone when assessing a used Aura.",
+    "Factory CNG, available on the S trim, trades firmer than equivalent petrol in Delhi NCR and Ahmedabad where piped gas infrastructure is dense, while in cities with thinner CNG networks the petrol variant is easier to resell. Overall the Aura's resale curve mirrors the broader budget-sedan segment: a sharp first-year drop followed by a steadier decline, with Hyundai's wide service network acting as the main support for value retention beyond year five."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Hyundai Aura in India?",
+      "a": "A well-kept Hyundai Aura retains roughly 72% of its ex-showroom price after two years and 64% after three years, based on transaction bands as of September 2026. A 2023 petrol SX with 25,000-50,000 km currently trades in a fair-market band of roughly ₹5.8-6.1 lakh."
+    },
+    {
+      "q": "Does the Aura CNG hold value better than the petrol version?",
+      "a": "Yes, in CNG-dense markets like Delhi NCR and Ahmedabad, factory-fitted CNG Aura units trade close to or slightly above equivalent petrol cars of the same age, reflecting lower running costs that used buyers actively search for in this segment."
+    },
+    {
+      "q": "How much does a Hyundai Aura depreciate per year?",
+      "a": "The Aura loses roughly 17% of value in its first year and another 9-10% in year two, settling into a 7-8% annual decline through years three to five, landing at approximately 51% retention at the five-year mark."
+    },
+    {
+      "q": "Does heavy taxi or fleet use hurt Aura resale?",
+      "a": "Yes, meaningfully. A large portion of Auras are registered to ride-hailing fleets, and these units typically carry far higher kilometres for their age. Buyers should check the RC for commercial registration and weigh actual kilometres over the model year."
+    },
+    {
+      "q": "Which city gives the best resale price for a Hyundai Aura?",
+      "a": "Delhi NCR currently trades at roughly +3% above the national mid on the strength of CNG demand, while Kolkata trades at around -3% due to softer overall sedan demand in that market."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "maruti",
+      "model": "dzire",
+      "label": "Maruti Dzire"
+    },
+    {
+      "make": "hyundai",
+      "model": "verna",
+      "label": "Hyundai Verna"
+    },
+    {
+      "make": "honda",
+      "model": "amaze",
+      "label": "Honda Amaze"
+    }
+  ]
+}

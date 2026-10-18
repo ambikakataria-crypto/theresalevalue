@@ -1,0 +1,650 @@
+{
+  "slug": {
+    "make": "hyundai",
+    "model": "venue"
+  },
+  "make": "Hyundai",
+  "model": "Venue",
+  "segment": "Compact SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "E 1.2",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 7.53
+    },
+    {
+      "name": "S (O) 1.2 KNIGHT EDITION",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 10.13
+    },
+    {
+      "name": "S (O) 1.0 TURBO DCT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 10.97
+    },
+    {
+      "name": "SX PLUS 1.0 TURBO DCT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 11.88
+    },
+    {
+      "name": "SX (O) 1.0 TURBO DCT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 12.72
+    },
+    {
+      "name": "S PLUS 1.5 CRDI",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 10
+    },
+    {
+      "name": "SX 1.5 CRDI",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 11.43
+    },
+    {
+      "name": "SX 1.5 CRDI DUAL TONE",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 11.58
+    },
+    {
+      "name": "SX (O) 1.5 CRDI",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 12.32
+    },
+    {
+      "name": "SX 1.5 (O) CRDI DUAL TONE",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 12.47
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.91,
+      "mid": 9.58,
+      "high": 10.25
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.56,
+      "mid": 9.21,
+      "high": 9.85
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.07,
+      "mid": 8.68,
+      "high": 9.29
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.52,
+      "mid": 8.09,
+      "high": 8.65
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.96,
+      "mid": 7.48,
+      "high": 8.01
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.8,
+      "mid": 8.38,
+      "high": 8.97
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 7.49,
+      "mid": 8.06,
+      "high": 8.62
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.06,
+      "mid": 7.6,
+      "high": 8.13
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.58,
+      "mid": 7.08,
+      "high": 7.57
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.09,
+      "mid": 6.55,
+      "high": 7.01
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.1,
+      "mid": 7.64,
+      "high": 8.17
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.82,
+      "mid": 7.34,
+      "high": 7.85
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.43,
+      "mid": 6.92,
+      "high": 7.4
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.99,
+      "mid": 6.45,
+      "high": 6.9
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.55,
+      "mid": 5.96,
+      "high": 6.38
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.26,
+      "mid": 6.74,
+      "high": 7.21
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.02,
+      "mid": 6.47,
+      "high": 6.93
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.68,
+      "mid": 6.1,
+      "high": 6.53
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.29,
+      "mid": 5.68,
+      "high": 6.08
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.89,
+      "mid": 5.26,
+      "high": 5.63
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.57,
+      "mid": 5.99,
+      "high": 6.41
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.35,
+      "mid": 5.75,
+      "high": 6.16
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.05,
+      "mid": 5.43,
+      "high": 5.81
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.7,
+      "mid": 5.05,
+      "high": 5.41
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.35,
+      "mid": 4.68,
+      "high": 5
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 9.68,
+      "mid": 10.4,
+      "high": 11.13
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 9.3,
+      "mid": 10,
+      "high": 10.7
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 8.77,
+      "mid": 9.43,
+      "high": 10.09
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 8.17,
+      "mid": 8.78,
+      "high": 9.4
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.56,
+      "mid": 8.13,
+      "high": 8.69
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 8.47,
+      "mid": 9.1,
+      "high": 9.74
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 8.14,
+      "mid": 8.75,
+      "high": 9.36
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 7.67,
+      "mid": 8.25,
+      "high": 8.83
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 7.15,
+      "mid": 7.68,
+      "high": 8.22
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 6.61,
+      "mid": 7.11,
+      "high": 7.61
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 7.71,
+      "mid": 8.29,
+      "high": 8.87
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 7.41,
+      "mid": 7.97,
+      "high": 8.53
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 6.99,
+      "mid": 7.51,
+      "high": 8.04
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 6.51,
+      "mid": 7,
+      "high": 7.49
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 6.02,
+      "mid": 6.48,
+      "high": 6.93
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 6.8,
+      "mid": 7.31,
+      "high": 7.83
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 6.54,
+      "mid": 7.03,
+      "high": 7.52
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 6.16,
+      "mid": 6.63,
+      "high": 7.09
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 5.74,
+      "mid": 6.17,
+      "high": 6.61
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 5.31,
+      "mid": 5.71,
+      "high": 6.11
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 6.05,
+      "mid": 6.5,
+      "high": 6.96
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 5.81,
+      "mid": 6.25,
+      "high": 6.69
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 5.48,
+      "mid": 5.89,
+      "high": 6.3
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 5.1,
+      "mid": 5.49,
+      "high": 5.87
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 4.72,
+      "mid": 5.08,
+      "high": 5.43
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 3,
+      "note": "Strong compact-SUV demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 2,
+      "note": "Tight supply, feature-rich trims firm"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 3,
+      "note": "Young-buyer SUV preference, turbo-DCT premium"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline demand"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Follows Mumbai band, slightly softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Softer SUV resale, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 0,
+      "note": "Near-baseline overall"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 83
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 77
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 68
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 57
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 39
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 37
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 35
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 33
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 31
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 29
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 27
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 62,
+    "5year": 48,
+    "10year": 25
+  },
+  "context": [
+    "The Venue arrived in 2019 as Hyundai's answer to the then-emerging compact-SUV boom in India, and the 2023 facelift carried it into its current form with a revised face, bigger touchscreen, and a dedicated N Line sporty variant. It remains one of the best-selling nameplates in its segment, and that volume keeps parts and service readily available at Hyundai's wide dealer network, which supports resale confidence outside metros.",
+    "Hyundai dropped the 1.5-litre diesel option from the Venue lineup as the segment shifted decisively toward petrol, leaving two petrol engines today: a naturally aspirated 1.2-litre for value-focused buyers and a 1.0-litre turbo-petrol, available with a 6-speed manual, iMT clutchless manual, or 7-speed DCT, for buyers who want more performance. In the used market, turbo-DCT Venues hold a noticeable premium over the 1.2 manual at the same age, reflecting how strongly feature-rich variants are sought after in this segment.",
+    "Compact SUVs as a class have displaced hatchbacks as the default first car for a large share of urban Indian buyers over the last five years, and the Venue has been a consistent beneficiary of that shift. Resale demand is strongest in cities with younger, SUV-preferring buyer pools, while more price-sensitive markets continue to favour the cheaper 1.2-litre variants.",
+    "The N Line variant, introduced as a sportier trim rather than a mechanically distinct model, trades close to the equivalent SX(O) turbo-DCT variant at resale. Buyers value the cosmetic differentiation but are not yet paying a structural premium for it the way they might for a genuinely different model."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Hyundai Venue?",
+      "a": "A well-maintained Venue retains about 72% of its ex-showroom price after two years and roughly 50% after five years, based on transaction data across Indian metros as of September 2026. A 2022 SX 1.0 turbo-petrol with 25,000-50,000 km typically trades around ₹7.0-8.0 lakh depending on city and transmission."
+    },
+    {
+      "q": "Does the turbo-DCT Venue hold value better than the 1.2 manual?",
+      "a": "Yes. Turbo-DCT variants consistently trade at a premium over the 1.2-litre manual at equivalent age and mileage, because feature-rich, automatic compact SUVs see stronger used-buyer demand in metros. The premium is most visible in Mumbai and Bengaluru, both running a positive city variance in this data."
+    },
+    {
+      "q": "How does the Venue compare with the Kia Sonet or Nissan Magnite for resale?",
+      "a": "The Venue's five-year retention of roughly 50% is a shade above the compact-SUV segment average of about 48% used here, benefiting from Hyundai's dealer density and strong brand trust relative to newer entrants in the segment."
+    },
+    {
+      "q": "How much does a Venue depreciate per year?",
+      "a": "The Venue depreciates around 17% in year one, a further 9 points in year two, and then 6-7% annually through year five, landing at roughly 50% retention."
+    },
+    {
+      "q": "Which city gives the best resale price for a Venue?",
+      "a": "Bengaluru and Delhi NCR currently trade at about +3% above the national mid, driven by strong SUV demand among younger buyers, while Kolkata trades roughly -2% below it."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "kia",
+      "model": "sonet",
+      "label": "Kia Sonet"
+    },
+    {
+      "make": "tata",
+      "model": "nexon",
+      "label": "Tata Nexon"
+    },
+    {
+      "make": "renault",
+      "model": "kiger",
+      "label": "Renault Kiger"
+    }
+  ]
+}

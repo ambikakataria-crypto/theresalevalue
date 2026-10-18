@@ -1,0 +1,650 @@
+{
+  "slug": {
+    "make": "jeep",
+    "model": "compass"
+  },
+  "make": "Jeep",
+  "model": "Compass",
+  "segment": "Midsize SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "SPORT 1.4 PETROL",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 19.29
+    },
+    {
+      "name": "80 ANNIVERSARY 1.4 PETROL DCT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 23.76
+    },
+    {
+      "name": "NIGHT EAGLE (O) 1.4 PETROL DCT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 24.25
+    },
+    {
+      "name": "LIMITED (O) 1.4 PETROL DCT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 26.09
+    },
+    {
+      "name": "MODEL S (O) 1.4 PETROL DCT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 28.29
+    },
+    {
+      "name": "SPORT 2.0 DIESEL",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 21.09
+    },
+    {
+      "name": "NIGHT EAGLE (O) 2.0 DIESEL",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 23.45
+    },
+    {
+      "name": "80 ANNIVERSARY 2.0 DIESEL 4X4 AT",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 26.76
+    },
+    {
+      "name": "LIMITED (O) 2.0 DIESEL 4X4 AT",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 29.09
+    },
+    {
+      "name": "TRAILHAWK 2.0 4X4",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 32.67
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 20.37,
+      "mid": 21.9,
+      "high": 23.44
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 19.57,
+      "mid": 21.05,
+      "high": 22.52
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 18.45,
+      "mid": 19.84,
+      "high": 21.23
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 17.19,
+      "mid": 18.49,
+      "high": 19.78
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 15.91,
+      "mid": 17.11,
+      "high": 18.3
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 17.82,
+      "mid": 19.16,
+      "high": 20.51
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 17.13,
+      "mid": 18.42,
+      "high": 19.71
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 16.15,
+      "mid": 17.36,
+      "high": 18.58
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 15.04,
+      "mid": 16.17,
+      "high": 17.31
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 13.92,
+      "mid": 14.97,
+      "high": 16.02
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 16.23,
+      "mid": 17.46,
+      "high": 18.68
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 15.6,
+      "mid": 16.78,
+      "high": 17.95
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 14.71,
+      "mid": 15.82,
+      "high": 16.92
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 13.7,
+      "mid": 14.73,
+      "high": 15.76
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 12.68,
+      "mid": 13.63,
+      "high": 14.59
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 14.32,
+      "mid": 15.4,
+      "high": 16.48
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 13.76,
+      "mid": 14.8,
+      "high": 15.83
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 12.97,
+      "mid": 13.95,
+      "high": 14.93
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 12.09,
+      "mid": 13,
+      "high": 13.91
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 11.18,
+      "mid": 12.03,
+      "high": 12.87
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 12.73,
+      "mid": 13.69,
+      "high": 14.65
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 12.23,
+      "mid": 13.16,
+      "high": 14.08
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 11.53,
+      "mid": 12.4,
+      "high": 13.27
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 10.74,
+      "mid": 11.55,
+      "high": 12.36
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 9.94,
+      "mid": 10.69,
+      "high": 11.44
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 22.27,
+      "mid": 23.95,
+      "high": 25.63
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 21.41,
+      "mid": 23.02,
+      "high": 24.63
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 20.18,
+      "mid": 21.7,
+      "high": 23.22
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 18.8,
+      "mid": 20.21,
+      "high": 21.63
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 17.4,
+      "mid": 18.71,
+      "high": 20.01
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 19.49,
+      "mid": 20.96,
+      "high": 22.42
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 18.73,
+      "mid": 20.14,
+      "high": 21.55
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 17.66,
+      "mid": 18.99,
+      "high": 20.32
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 16.45,
+      "mid": 17.69,
+      "high": 18.93
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 15.22,
+      "mid": 16.37,
+      "high": 17.51
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 17.75,
+      "mid": 19.09,
+      "high": 20.43
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 17.06,
+      "mid": 18.34,
+      "high": 19.63
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 16.08,
+      "mid": 17.29,
+      "high": 18.51
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 14.98,
+      "mid": 16.11,
+      "high": 17.24
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 13.86,
+      "mid": 14.91,
+      "high": 15.95
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 15.66,
+      "mid": 16.84,
+      "high": 18.02
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 15.05,
+      "mid": 16.18,
+      "high": 17.31
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 14.19,
+      "mid": 15.25,
+      "high": 16.32
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 13.22,
+      "mid": 14.21,
+      "high": 15.21
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 12.23,
+      "mid": 13.15,
+      "high": 14.07
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 13.92,
+      "mid": 14.97,
+      "high": 16.02
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 13.38,
+      "mid": 14.39,
+      "high": 15.39
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 12.61,
+      "mid": 13.56,
+      "high": 14.51
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 11.75,
+      "mid": 12.63,
+      "high": 13.52
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 10.87,
+      "mid": 11.69,
+      "high": 12.51
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 1,
+      "note": "Decent service network, moderate demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 2,
+      "note": "Affluent SUV buyers, loyal Jeep following"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 1,
+      "note": "Steady demand among enthusiast buyers"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": -1,
+      "note": "Smaller buyer pool, service access thinner"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": -2,
+      "note": "Sparse dealer network, Korean/Japanese rivals favoured"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 2,
+      "note": "Strong SUV culture, established Jeep presence"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Very limited service network, parts-cost concern"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -1,
+      "note": "Diesel SUV competition from domestic brands"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 86
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 69
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 63
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 58
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 49
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 39
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 33
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 31
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 29
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 27
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 25
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 23
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 22
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 20
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 19
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 58,
+    "5year": 44,
+    "10year": 23
+  },
+  "context": [
+    "The Compass launched in India in 2017 as Jeep's first locally manufactured model, built at the Ranjangaon plant near Pune on the small-wide 4x4 architecture it shares internationally with the Renegade. A comprehensive 2021 facelift brought a redesigned dashboard, a bigger touchscreen, and sharper exterior styling, while leaving the core mechanicals largely untouched.",
+    "Powertrains have stayed consistent through that facelift: a 1.4-litre turbo-petrol offered only in front-wheel drive with a manual or dual-clutch automatic, and a 2.0-litre Multijet diesel offered in both front-wheel drive and a part-time all-wheel-drive setup paired with a 9-speed torque-converter automatic on the range-topping Model S and the AWD trims. The diesel AWD combination has historically been the one genuine off-road buyers hold onto longest.",
+    "Resale-wise, the Compass sits behind Korean and Japanese midsize SUV rivals mainly because of Jeep's thinner dealer and service footprint outside large metros, higher-than-average spare-parts costs, and persistent buyer perception that European-platform SUVs are costlier to maintain once out of warranty. That perception shows up directly in the city-level variance below, where Compass resale is weakest in cities with sparse Jeep service coverage.",
+    "Jeep's own aggressive end-of-quarter and end-of-model-year discounting on new Compass units has, over the years, compressed the price gap between a brand-new car and a lightly used one, which pulls down the percentage of ex-showroom price a used Compass can command relative to segment leaders like the Creta or Seltos that see thinner new-car discounts."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Jeep Compass in India?",
+      "a": "A well-maintained Compass retains approximately 63% of its ex-showroom price after two years and around 39% after five years, as of September 2026. For a 2022 diesel Night Eagle with 25,000–50,000 km, the current fair-market band is roughly ₹16.08–18.51 lakh."
+    },
+    {
+      "q": "Does the Compass depreciate faster than Korean or Japanese midsize SUVs?",
+      "a": "Yes. The midsize SUV segment averages around 58% retention at three years and 44% at five years, while the Compass sits lower at 53% and 39% respectively, reflecting higher perceived running costs and a thinner service network."
+    },
+    {
+      "q": "Does diesel or petrol hold value better on the Compass?",
+      "a": "Diesel variants trade higher in absolute terms given their higher ex-showroom price and AWD availability on top trims, but both fuels follow broadly the same depreciation curve — the gap between them stays roughly proportional across every year and km band in current data."
+    },
+    {
+      "q": "How much does a Jeep Compass depreciate per year?",
+      "a": "The Compass loses about 24% of its value in year one and a further 13 percentage points by year two, settling into roughly 5–6 percentage points of retention lost per year through year five, when it sits near 39% of ex-showroom."
+    },
+    {
+      "q": "Which city gives the best resale price for a Jeep Compass?",
+      "a": "Mumbai and Pune currently trade around 2% above the national mid, supported by an established dealer and enthusiast base. Kolkata trades roughly 3% below baseline due to a sparse service network and higher perceived ownership risk."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "hyundai",
+      "model": "creta",
+      "label": "Hyundai Creta"
+    },
+    {
+      "make": "kia",
+      "model": "seltos",
+      "label": "Kia Seltos"
+    },
+    {
+      "make": "toyota",
+      "model": "hyryder",
+      "label": "Toyota Hyryder"
+    }
+  ]
+}

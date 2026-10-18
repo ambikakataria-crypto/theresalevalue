@@ -1,0 +1,414 @@
+{
+  "slug": {
+    "make": "mahindra",
+    "model": "scorpio"
+  },
+  "make": "Mahindra",
+  "model": "Scorpio",
+  "segment": "Large SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "S 7STR",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 11.99
+    },
+    {
+      "name": "S 9STR",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 11.99
+    },
+    {
+      "name": "S11 7STR",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 15.49
+    },
+    {
+      "name": "S11 MT 7S CC",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 15.49
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 11.5,
+      "mid": 12.37,
+      "high": 13.23
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 11.05,
+      "mid": 11.88,
+      "high": 12.72
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 10.42,
+      "mid": 11.2,
+      "high": 11.99
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 9.71,
+      "mid": 10.44,
+      "high": 11.17
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 8.98,
+      "mid": 9.66,
+      "high": 10.33
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 10.06,
+      "mid": 10.82,
+      "high": 11.58
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 9.67,
+      "mid": 10.4,
+      "high": 11.13
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 9.12,
+      "mid": 9.8,
+      "high": 10.49
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 8.49,
+      "mid": 9.13,
+      "high": 9.77
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.86,
+      "mid": 8.45,
+      "high": 9.04
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 9.17,
+      "mid": 9.86,
+      "high": 10.55
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 8.81,
+      "mid": 9.47,
+      "high": 10.13
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 8.3,
+      "mid": 8.93,
+      "high": 9.55
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 7.74,
+      "mid": 8.32,
+      "high": 8.9
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.16,
+      "mid": 7.7,
+      "high": 8.24
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 8.08,
+      "mid": 8.69,
+      "high": 9.3
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 7.77,
+      "mid": 8.35,
+      "high": 8.94
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 7.32,
+      "mid": 7.88,
+      "high": 8.43
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 6.82,
+      "mid": 7.34,
+      "high": 7.85
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 6.31,
+      "mid": 6.79,
+      "high": 7.26
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 7.19,
+      "mid": 7.73,
+      "high": 8.27
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 6.91,
+      "mid": 7.43,
+      "high": 7.95
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 6.51,
+      "mid": 7,
+      "high": 7.49
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 6.07,
+      "mid": 6.52,
+      "high": 6.98
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 5.61,
+      "mid": 6.04,
+      "high": 6.46
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": -1,
+      "note": "Diesel age-registration restrictions dampen demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": -2,
+      "note": "Tighter demand for older diesel SUVs in city core"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 0,
+      "note": "Baseline demand"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 2,
+      "note": "Strong semi-urban and rural-adjacent demand"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 3,
+      "note": "Strong rugged-SUV demand"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 92
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 87
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 83
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 79
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 73
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 70
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 40
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 65,
+    "5year": 52,
+    "10year": 30
+  },
+  "context": [
+    "The Scorpio Classic is the continuation of the original Scorpio body style that Mahindra has sold since 2002, kept alive alongside the newer Scorpio-N for buyers who specifically want the older ladder-frame silhouette, a lower price of entry, and a nameplate with two decades of rural and semi-urban trust behind it. It is sold only with the 2.2-litre mHawk diesel and a 6-speed manual, with no automatic and no petrol option.",
+    "Because the Classic shares its basic architecture and engine with Scorpios sold over the past several years, parts commonality and mechanic familiarity are exceptional even in small towns, which supports resale in markets far from Mahindra's metro dealer density. The S11 4WD variant, in particular, retains a loyal following among buyers who need genuine all-wheel capability for rural terrain or light commercial use.",
+    "The Classic's resale base is built on reputation rather than features: buyers choosing a used Scorpio Classic are typically prioritising toughness, diesel torque, and low cost of ownership over cabin tech, which keeps demand relatively stable through economic cycles compared with feature-led SUVs that can fall out of favour quickly.",
+    "Since the Scorpio-N's 2022 launch, the Classic has settled into a lower, more value-oriented price tier, and its resale curve has adjusted accordingly. It depreciates a little faster in percentage terms than the Scorpio-N because feature-seeking buyers increasingly gravitate to the newer model, but it still comfortably outperforms the broader large-SUV segment average."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Mahindra Scorpio Classic?",
+      "a": "A well-maintained Scorpio Classic retains about 79% of its ex-showroom price after two years and roughly 62% after five years, based on transaction data across Indian metros as of September 2026, comfortably above the large-SUV segment average of about 52% at five years. A 2022 S9 diesel manual with 25,000-50,000 km typically trades around ₹12.5-13.8 lakh."
+    },
+    {
+      "q": "Does the Scorpio Classic hold value as well as the Scorpio-N?",
+      "a": "Almost, but not quite. The Classic trails the Scorpio-N by a few percentage points at equivalent age, since buyers increasingly prefer the newer platform's automatic option and features, but both nameplates sit well above the segment average thanks to the Scorpio name's reputation for ruggedness."
+    },
+    {
+      "q": "Does the S11 4WD variant resell better than 2WD trims?",
+      "a": "Yes, the S11 4WD commands a premium over equivalent 2WD trims, particularly in markets with semi-commercial or rural buyers who specifically need all-wheel capability."
+    },
+    {
+      "q": "How much does a Scorpio Classic depreciate per year?",
+      "a": "The Scorpio Classic depreciates around 13% in year one and roughly 5-6% annually thereafter, landing at about 62% retention after five years and 40% after ten, a shallower curve than most diesel SUVs of similar age."
+    },
+    {
+      "q": "Which city gives the best resale price for a Scorpio Classic?",
+      "a": "Ahmedabad and Pune currently trade at about +2 to +3% above the national mid, reflecting strong demand among semi-urban and rural-adjacent buyers, while Mumbai trades roughly -2% due to tighter demand for older diesel SUVs in the city core."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "mahindra",
+      "model": "scorpio-n",
+      "label": "Mahindra Scorpio-N"
+    },
+    {
+      "make": "mahindra",
+      "model": "bolero",
+      "label": "Mahindra Bolero"
+    },
+    {
+      "make": "toyota",
+      "model": "fortuner",
+      "label": "Toyota Fortuner"
+    }
+  ]
+}

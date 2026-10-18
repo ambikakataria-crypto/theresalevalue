@@ -1,0 +1,632 @@
+{
+  "slug": {
+    "make": "maruti",
+    "model": "fronx"
+  },
+  "make": "Maruti Suzuki",
+  "model": "Fronx",
+  "segment": "Compact SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "SIGMA 1.2 MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 7.47
+    },
+    {
+      "name": "DELTA 1.2 AGS",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 8.88
+    },
+    {
+      "name": "DELTA PLUS 1.2L AGS",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 10.56
+    },
+    {
+      "name": "ALPHA 1.0L TURBO MT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 11.64
+    },
+    {
+      "name": "ALPHA 1.0L TURBO 6 AT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 13.14
+    },
+    {
+      "name": "SIGMA CNG 1.2 MT",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 8.41
+    },
+    {
+      "name": "DELTA CNG 1.2 MT",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 9.28
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.65,
+      "mid": 9.3,
+      "high": 9.96
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.32,
+      "mid": 8.94,
+      "high": 9.57
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.84,
+      "mid": 8.43,
+      "high": 9.02
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.3,
+      "mid": 7.85,
+      "high": 8.4
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.76,
+      "mid": 7.27,
+      "high": 7.78
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.57,
+      "mid": 8.14,
+      "high": 8.71
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 7.28,
+      "mid": 7.82,
+      "high": 8.37
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.86,
+      "mid": 7.38,
+      "high": 7.89
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.39,
+      "mid": 6.87,
+      "high": 7.35
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.91,
+      "mid": 6.36,
+      "high": 6.8
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.9,
+      "mid": 7.42,
+      "high": 7.93
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.63,
+      "mid": 7.13,
+      "high": 7.63
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.25,
+      "mid": 6.72,
+      "high": 7.19
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.82,
+      "mid": 6.26,
+      "high": 6.7
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.39,
+      "mid": 5.79,
+      "high": 6.2
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.08,
+      "mid": 6.54,
+      "high": 7
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.85,
+      "mid": 6.29,
+      "high": 6.73
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.51,
+      "mid": 5.93,
+      "high": 6.34
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.13,
+      "mid": 5.52,
+      "high": 5.91
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.75,
+      "mid": 5.11,
+      "high": 5.47
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.41,
+      "mid": 5.82,
+      "high": 6.22
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.2,
+      "mid": 5.59,
+      "high": 5.98
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.9,
+      "mid": 5.27,
+      "high": 5.64
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.56,
+      "mid": 4.91,
+      "high": 5.25
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.22,
+      "mid": 4.54,
+      "high": 4.86
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 7.4,
+      "mid": 7.96,
+      "high": 8.52
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 7.11,
+      "mid": 7.65,
+      "high": 8.19
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 6.71,
+      "mid": 7.21,
+      "high": 7.72
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 6.25,
+      "mid": 6.72,
+      "high": 7.19
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 5.78,
+      "mid": 6.22,
+      "high": 6.65
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 6.48,
+      "mid": 6.97,
+      "high": 7.45
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 6.23,
+      "mid": 6.69,
+      "high": 7.16
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 5.87,
+      "mid": 6.31,
+      "high": 6.75
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 5.47,
+      "mid": 5.88,
+      "high": 6.29
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 5.06,
+      "mid": 5.44,
+      "high": 5.82
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.9,
+      "mid": 6.34,
+      "high": 6.79
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5.67,
+      "mid": 6.1,
+      "high": 6.52
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 5.35,
+      "mid": 5.75,
+      "high": 6.15
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.98,
+      "mid": 5.35,
+      "high": 5.73
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.61,
+      "mid": 4.96,
+      "high": 5.3
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.2,
+      "mid": 5.6,
+      "high": 5.99
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5,
+      "mid": 5.38,
+      "high": 5.75
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.72,
+      "mid": 5.07,
+      "high": 5.43
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.39,
+      "mid": 4.72,
+      "high": 5.05
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.06,
+      "mid": 4.37,
+      "high": 4.68
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.63,
+      "mid": 4.98,
+      "high": 5.32
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.45,
+      "mid": 4.78,
+      "high": 5.12
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.19,
+      "mid": 4.51,
+      "high": 4.82
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.91,
+      "mid": 4.2,
+      "high": 4.49
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.61,
+      "mid": 3.89,
+      "high": 4.16
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 2,
+      "note": "CNG-friendly, strong crossover demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 3,
+      "note": "Tight supply, strong first-SUV demand"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 3,
+      "note": "Popular with young professional buyers"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady demand, moderate liquidity"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 2,
+      "note": "Follows Mumbai band"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Softer prices, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 2,
+      "note": "CNG-heavy, firm demand"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 89
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 82
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 63
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 43
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 39
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 37
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 35
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 33
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 31
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 29
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 62,
+    "5year": 48,
+    "10year": 27
+  },
+  "context": [
+    "The Fronx, launched in April 2023, was Maruti's first attempt at a crossover-styled compact SUV built on the Baleno's platform rather than a traditional body-on-frame or raised-hatchback approach. Its urban-styled coupe-SUV silhouette, pitched deliberately at buyers who want SUV looks without the bulk, has made it one of Maruti's fastest-growing nameplates and given it a resale profile closer to the Baleno than to boxier rivals like the Brezza.",
+    "The Fronx is the first Maruti model in India to offer the 1.0-litre Boosterjet turbo-petrol engine paired with a conventional 6-speed torque-converter automatic, alongside the familiar naturally aspirated 1.2-litre K-series engine. Turbo variants, which also get a mild-hybrid style idle-start system, hold a modest resale premium over the 1.2-litre range in metros where buyers value the quicker, more refined drive.",
+    "Factory CNG, offered on the 1.2-litre Delta and Zeta trims, is a strong resale driver in Delhi NCR and Gujarat, where running-cost-conscious buyers are willing to pay close to equivalent petrol pricing. CNG is not offered on the turbo-petrol variants, which keeps that segment of the lineup purely petrol-driven at resale.",
+    "As a newer nameplate without a direct predecessor, the Fronx's long-term depreciation curve is still being established by the market, but early data tracks close to the Baleno and Brezza, both benefiting from the same Nexa retail network, parts commonality, and brand trust that support resale across Maruti's crossover and compact-SUV range."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Maruti Fronx in India?",
+      "a": "A well-maintained Fronx retains approximately 71% of its ex-showroom price after two years, 63% after three years, and 50% after five years. For a 2022 Zeta Turbo petrol with 25,000–50,000 km, the current fair-market band is roughly ₹6.25–7.19 lakh."
+    },
+    {
+      "q": "Does the turbo-petrol Fronx hold value better than the 1.2-litre version?",
+      "a": "Yes, modestly. The turbo-petrol's quicker drive and 6-speed automatic availability give it a small resale edge over the 1.2-litre range at the same age, typically 3–5%, concentrated in metros where buyers value refinement over outright running cost."
+    },
+    {
+      "q": "Is CNG available on the Fronx, and does it affect resale?",
+      "a": "Factory CNG is available on the 1.2-litre Delta and Zeta trims only, not on the turbo-petrol range. CNG Fronx units trade close to equivalent petrol pricing and are in particularly strong demand in Delhi NCR and Gujarat."
+    },
+    {
+      "q": "How much does a Fronx depreciate per year?",
+      "a": "Roughly 18% in year one and 11% more in year two, before settling into 7–8% annual declines. The five-year retention of about 50% is a couple of points above the compact-SUV segment average of 48%."
+    },
+    {
+      "q": "Which city gives the best resale price for a Fronx?",
+      "a": "Mumbai and Bengaluru currently trade at approximately +3% above the national mid on strong crossover demand among younger buyers. Kolkata is the softest market at around −2%."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "maruti",
+      "model": "brezza",
+      "label": "Maruti Brezza"
+    },
+    {
+      "make": "hyundai",
+      "model": "exter",
+      "label": "Hyundai Exter"
+    },
+    {
+      "make": "nissan",
+      "model": "magnite",
+      "label": "Nissan Magnite"
+    }
+  ]
+}

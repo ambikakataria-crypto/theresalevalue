@@ -1,0 +1,450 @@
+{
+  "slug": {
+    "make": "hyundai",
+    "model": "exter"
+  },
+  "make": "Hyundai",
+  "model": "Exter",
+  "segment": "Compact SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "EX 1.2 MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 6
+    },
+    {
+      "name": "S 1.2 MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 7.27
+    },
+    {
+      "name": "S 1.2 AMT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 8.1
+    },
+    {
+      "name": "SX 1.2 MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 8.1
+    },
+    {
+      "name": "SX 1.2 MT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 8.34
+    },
+    {
+      "name": "SX 1.2 AMT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 8.9
+    },
+    {
+      "name": "SX 1.2 AMT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 9.02
+    },
+    {
+      "name": "SX(O) 1.2 AMT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 9.41
+    },
+    {
+      "name": "SX (O) CONNECT 1.2 MT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 9.58
+    },
+    {
+      "name": "SX(O) CONNECT 1.2 AMT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 10.15
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.1,
+      "mid": 7.64,
+      "high": 8.17
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.83,
+      "mid": 7.34,
+      "high": 7.85
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.44,
+      "mid": 6.92,
+      "high": 7.4
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6,
+      "mid": 6.45,
+      "high": 6.9
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.55,
+      "mid": 5.97,
+      "high": 6.38
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.22,
+      "mid": 6.68,
+      "high": 7.15
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.97,
+      "mid": 6.42,
+      "high": 6.87
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.63,
+      "mid": 6.06,
+      "high": 6.48
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.25,
+      "mid": 5.64,
+      "high": 6.04
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.85,
+      "mid": 5.22,
+      "high": 5.59
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.66,
+      "mid": 6.09,
+      "high": 6.51
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.44,
+      "mid": 5.85,
+      "high": 6.26
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.13,
+      "mid": 5.52,
+      "high": 5.9
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.78,
+      "mid": 5.14,
+      "high": 5.5
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.42,
+      "mid": 4.75,
+      "high": 5.09
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.99,
+      "mid": 5.37,
+      "high": 5.75
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.8,
+      "mid": 5.16,
+      "high": 5.52
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.52,
+      "mid": 4.86,
+      "high": 5.21
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.21,
+      "mid": 4.53,
+      "high": 4.85
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.9,
+      "mid": 4.19,
+      "high": 4.49
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.44,
+      "mid": 4.77,
+      "high": 5.11
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.27,
+      "mid": 4.59,
+      "high": 4.91
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.02,
+      "mid": 4.33,
+      "high": 4.63
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.75,
+      "mid": 4.03,
+      "high": 4.31
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.47,
+      "mid": 3.73,
+      "high": 3.99
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 3,
+      "note": "Strong CNG-variant demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 1,
+      "note": "Steady compact-SUV demand"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 2,
+      "note": "Styling-led demand among young buyers"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline compact-SUV churn"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Follows Mumbai band"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Softer compact-SUV churn"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 3,
+      "note": "CNG-heavy market, strong liquidity"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 83
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 73
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 69
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 61
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 58
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 55
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 49
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 39
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 37
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 35
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 33
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 31
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 29
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 62,
+    "5year": 48,
+    "10year": 26
+  },
+  "context": [
+    "The Exter launched in July 2023 on Hyundai's K1 platform, the same architecture shared with the Grand i10 Nios and Aura, positioning it as a micro-SUV between the Grand i10 Nios hatchback and the Venue compact SUV. It is powered by Hyundai's 1.2-litre Kappa petrol engine with a 5-speed manual or AMT, and factory-fitted CNG has been offered on the S and SX trims since launch.",
+    "Hyundai made 6 airbags standard across every Exter variant from launch, a notable move in a segment where safety equipment is usually reserved for top trims, and that decision has resonated with safety-conscious resale buyers who increasingly ask about airbag count before purchase.",
+    "As one of the newest nameplates in its class, the Exter has limited used-market history beyond its first two to three model years, so resale data is still being established relative to the longer-tenured Venue and Brezza. Early transactions suggest the Exter tracks closely with Hyundai's broader compact-SUV resale pattern, benefiting from the brand's extensive service network and strong buyer trust.",
+    "Factory CNG variants hold a firmer resale floor in Delhi NCR, Ahmedabad, and other high gas-penetration markets, consistent with the pattern seen across Hyundai's CNG-equipped lineup, while AMT variants have gained ground steadily against manuals as automatic preference grows among first-time SUV buyers."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Hyundai Exter in India?",
+      "a": "A well-maintained Exter retains roughly 73% of its ex-showroom price after two years, 65% after three years, and 52% after five years, as of September 2026. For a 2023 petrol SX with 10,000-25,000 km, the current fair-market band is approximately ₹5.97–6.87 lakh."
+    },
+    {
+      "q": "Does Exter CNG hold value better than the petrol version?",
+      "a": "Yes, factory CNG Exter units trade at a small but consistent premium over equivalent petrol across the current data, strongest in Delhi NCR and Ahmedabad, reflecting the running-cost advantage that CNG offers in those high-penetration markets."
+    },
+    {
+      "q": "Does the Exter's standard 6-airbag safety package help resale value?",
+      "a": "It is a meaningful factor for safety-conscious buyers, and likely contributes to the Exter's five-year retention of about 52%, roughly 4 points above the compact-SUV segment average of 48%."
+    },
+    {
+      "q": "How much does an Exter depreciate per year?",
+      "a": "The Exter depreciates roughly 17% in year one and another 10% in year two, before settling into a steadier 6-7% annual decline from year three onward. Ten-year retention sits at around 29%."
+    },
+    {
+      "q": "Which city gives the best resale price for an Exter?",
+      "a": "Delhi NCR and Ahmedabad currently trade at +3% above the national mid, driven by strong CNG-variant demand. Kolkata trades at around -2%, where compact-SUV resale cycles run slightly longer."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "tata",
+      "model": "punch",
+      "label": "Tata Punch"
+    },
+    {
+      "make": "maruti",
+      "model": "fronx",
+      "label": "Maruti Fronx"
+    },
+    {
+      "make": "kia",
+      "model": "sonet",
+      "label": "Kia Sonet"
+    }
+  ]
+}

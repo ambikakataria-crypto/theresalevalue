@@ -1,0 +1,632 @@
+{
+  "slug": {
+    "make": "hyundai",
+    "model": "grand-i10-nios"
+  },
+  "make": "Hyundai",
+  "model": "Grand i10 Nios",
+  "segment": "Hatchback",
+  "bodyType": "Hatchback",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "ERA 1.2 KAPPA VTVT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 5.69
+    },
+    {
+      "name": "SPORTZ 1.2 KAPPA VTVT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 7.2
+    },
+    {
+      "name": "SPORTZ 1.2 KAPPA VTVT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 7.44
+    },
+    {
+      "name": "SPORTZ EXECUTIVE AMT 1.2 KAPPA VTVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 7.75
+    },
+    {
+      "name": "ASTA AMT 1.2 KAPPA VTVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 8.47
+    },
+    {
+      "name": "MAGNA 1.2 KAPPA VTVT CNG",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 7.58
+    },
+    {
+      "name": "SPORTZ 1.2 KAPPA VTVT CNG",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 8.13
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.12,
+      "mid": 6.58,
+      "high": 7.04
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.88,
+      "mid": 6.32,
+      "high": 6.76
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.54,
+      "mid": 5.96,
+      "high": 6.38
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.16,
+      "mid": 5.55,
+      "high": 5.94
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.78,
+      "mid": 5.14,
+      "high": 5.5
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.35,
+      "mid": 5.76,
+      "high": 6.16
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.14,
+      "mid": 5.53,
+      "high": 5.92
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.85,
+      "mid": 5.22,
+      "high": 5.58
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.52,
+      "mid": 4.86,
+      "high": 5.2
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.18,
+      "mid": 4.5,
+      "high": 4.81
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.88,
+      "mid": 5.24,
+      "high": 5.61
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.69,
+      "mid": 5.04,
+      "high": 5.39
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.42,
+      "mid": 4.75,
+      "high": 5.08
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.12,
+      "mid": 4.43,
+      "high": 4.74
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.81,
+      "mid": 4.1,
+      "high": 4.38
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.3,
+      "mid": 4.63,
+      "high": 4.95
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.13,
+      "mid": 4.44,
+      "high": 4.76
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 3.9,
+      "mid": 4.19,
+      "high": 4.48
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.63,
+      "mid": 3.9,
+      "high": 4.18
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.36,
+      "mid": 3.61,
+      "high": 3.87
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 3.82,
+      "mid": 4.11,
+      "high": 4.4
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 3.67,
+      "mid": 3.95,
+      "high": 4.23
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 3.46,
+      "mid": 3.73,
+      "high": 3.99
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.23,
+      "mid": 3.47,
+      "high": 3.71
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 2.99,
+      "mid": 3.21,
+      "high": 3.44
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 6.57,
+      "mid": 7.07,
+      "high": 7.56
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 6.32,
+      "mid": 6.79,
+      "high": 7.27
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 5.96,
+      "mid": 6.4,
+      "high": 6.85
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 5.55,
+      "mid": 5.97,
+      "high": 6.38
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 5.13,
+      "mid": 5.52,
+      "high": 5.91
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.75,
+      "mid": 6.19,
+      "high": 6.62
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5.53,
+      "mid": 5.94,
+      "high": 6.36
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 5.21,
+      "mid": 5.6,
+      "high": 6
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.86,
+      "mid": 5.22,
+      "high": 5.59
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.49,
+      "mid": 4.83,
+      "high": 5.17
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.24,
+      "mid": 5.63,
+      "high": 6.03
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5.04,
+      "mid": 5.41,
+      "high": 5.79
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.75,
+      "mid": 5.1,
+      "high": 5.46
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.42,
+      "mid": 4.76,
+      "high": 5.09
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.09,
+      "mid": 4.4,
+      "high": 4.71
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.62,
+      "mid": 4.97,
+      "high": 5.32
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.44,
+      "mid": 4.78,
+      "high": 5.11
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.19,
+      "mid": 4.5,
+      "high": 4.82
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.9,
+      "mid": 4.19,
+      "high": 4.49
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.61,
+      "mid": 3.88,
+      "high": 4.15
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.11,
+      "mid": 4.42,
+      "high": 4.73
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 3.95,
+      "mid": 4.25,
+      "high": 4.54
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 3.72,
+      "mid": 4,
+      "high": 4.28
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.47,
+      "mid": 3.73,
+      "high": 3.99
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.21,
+      "mid": 3.45,
+      "high": 3.69
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 2,
+      "note": "CNG trim is strongly favoured"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 2,
+      "note": "Tight entry-hatch supply"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 1,
+      "note": "Steady first-car buyer demand"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 0,
+      "note": "Balanced demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Follows Mumbai, slightly softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Softer entry-hatch pricing"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 2,
+      "note": "CNG-heavy, firm pricing"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 83
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 77
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 68
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 57
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 43
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 28
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 61,
+    "5year": 47,
+    "10year": 24
+  },
+  "context": [
+    "Launched in 2019 as a replacement for the original Grand i10, the Nios was built specifically for the Indian market on a modified version of Hyundai's small-car platform, with the sedan-bodied Aura later derived from the same underpinnings. As Hyundai's entry hatchback, the Nios typically serves as a first car for young buyers and small families, and that ownership profile, generally gentler usage and more consistent servicing, is a meaningful contributor to its resale strength relative to fleet-heavy competitors.",
+    "Diesel was offered only in the Nios's first year before the 1.2-litre CRDi was discontinued industry-wide ahead of BS6 Phase 2, so the overwhelming majority of used Nios units on the market today are petrol or CNG, both built around the naturally aspirated 1.2-litre Kappa engine. AMT-equipped Magna and Sportz trims hold a small premium over the manual for buyers who specifically want the convenience of an automatic in city traffic.",
+    "Factory-fitted CNG on the Magna trim has proven consistently popular in Delhi NCR, Ahmedabad, and other piped-gas-dense cities, where the running-cost savings are large enough that CNG Nios units often resell within a few percentage points of equivalent petrol cars despite the higher upfront variant price. In markets with thinner CNG infrastructure, the plain petrol variant remains easier to sell quickly.",
+    "Hyundai's extensive dealer and service network across tier-2 and tier-3 towns underpins the Nios's resale floor more than any single feature of the car itself; parts availability and predictable service costs matter disproportionately at this price point. The depreciation curve is typical of the segment, a steep first eighteen months followed by a steadier decline, with well-documented service history being the single biggest swing factor in what a specific car fetches."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Hyundai Grand i10 Nios in India?",
+      "a": "A well-maintained Grand i10 Nios retains roughly 72% of its ex-showroom value after two years and 64% after three years, as of September 2026. A 2023 petrol Sportz with 25,000-50,000 km currently trades in a fair-market band of roughly ₹5.4-5.8 lakh."
+    },
+    {
+      "q": "Does the Nios CNG hold value better than petrol?",
+      "a": "In CNG-dense markets such as Delhi NCR and Ahmedabad, yes, the Magna CNG trades close to equivalent petrol cars of the same age because buyers actively seek out the running-cost savings. In markets with thinner CNG infrastructure, petrol variants resell faster."
+    },
+    {
+      "q": "How much does the Grand i10 Nios depreciate per year?",
+      "a": "The Nios loses roughly 17% in year one and 9-10% in year two, then settles into a 6-7% annual decline through years three to five, reaching about 51% retention at the five-year mark."
+    },
+    {
+      "q": "Is the AMT Nios worth more on resale than the manual?",
+      "a": "It commands a small premium, generally 3-5%, among buyers who specifically want the convenience of an automatic for city traffic, though the gap narrows considerably on cars above 50,000 km."
+    },
+    {
+      "q": "Which city gives the best resale price for a Grand i10 Nios?",
+      "a": "Delhi NCR, Mumbai, and Ahmedabad currently trade at roughly +2% above the national mid, while Kolkata trades at around -2% due to softer entry-hatchback demand."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "maruti",
+      "model": "wagon-r",
+      "label": "Maruti Wagon R"
+    },
+    {
+      "make": "maruti",
+      "model": "alto-k10",
+      "label": "Maruti Alto K10"
+    },
+    {
+      "make": "tata",
+      "model": "tiago",
+      "label": "Tata Tiago"
+    }
+  ]
+}

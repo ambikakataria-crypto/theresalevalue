@@ -1,0 +1,438 @@
+{
+  "slug": {
+    "make": "hyundai",
+    "model": "verna"
+  },
+  "make": "Hyundai",
+  "model": "Verna",
+  "segment": "Sedan",
+  "bodyType": "Sedan",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "EX 1.5 MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 10.96
+    },
+    {
+      "name": "SX 1.5 MPI",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 12.99
+    },
+    {
+      "name": "SX (O) 1.5 MPI MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 14.66
+    },
+    {
+      "name": "1.5 TURBO GDI MT SX",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 14.84
+    },
+    {
+      "name": "SX (O) 1.5 TURBO PETROL MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 15.99
+    },
+    {
+      "name": "SX 1.5 TURBO DCT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 16.08
+    },
+    {
+      "name": "SX (O) 1.5 VTVT IVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 16.2
+    },
+    {
+      "name": "SX (O) 1.5 TURBO DCT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 17.38
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 12.46,
+      "mid": 13.4,
+      "high": 14.34
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 11.97,
+      "mid": 12.88,
+      "high": 13.78
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 11.29,
+      "mid": 12.14,
+      "high": 12.99
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 10.52,
+      "mid": 11.31,
+      "high": 12.1
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 9.73,
+      "mid": 10.46,
+      "high": 11.2
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 10.9,
+      "mid": 11.72,
+      "high": 12.54
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.48,
+      "mid": 11.27,
+      "high": 12.06
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 9.88,
+      "mid": 10.62,
+      "high": 11.37
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 9.2,
+      "mid": 9.89,
+      "high": 10.59
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.52,
+      "mid": 9.16,
+      "high": 9.8
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 9.93,
+      "mid": 10.68,
+      "high": 11.43
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 9.54,
+      "mid": 10.26,
+      "high": 10.98
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 9,
+      "mid": 9.67,
+      "high": 10.35
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.38,
+      "mid": 9.01,
+      "high": 9.64
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.76,
+      "mid": 8.34,
+      "high": 8.92
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.76,
+      "mid": 9.42,
+      "high": 10.08
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.42,
+      "mid": 9.05,
+      "high": 9.69
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.94,
+      "mid": 8.53,
+      "high": 9.13
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.39,
+      "mid": 7.95,
+      "high": 8.51
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.84,
+      "mid": 7.36,
+      "high": 7.87
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.79,
+      "mid": 8.37,
+      "high": 8.96
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 7.48,
+      "mid": 8.05,
+      "high": 8.61
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.06,
+      "mid": 7.59,
+      "high": 8.12
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.57,
+      "mid": 7.07,
+      "high": 7.56
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.08,
+      "mid": 6.54,
+      "high": 7
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 1,
+      "note": "Steady sedan demand, turbo variants firm"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 2,
+      "note": "Tight supply, CVT and DCT variants firmer"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 2,
+      "note": "Strong IT-corridor sedan demand"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady demand, moderate liquidity"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Follows Mumbai band, slightly softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Softening sedan demand, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -1,
+      "note": "SUV preference dominates, sedans trade softer"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 87
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 79
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 58
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 31
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 29
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 28
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 27
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 60,
+    "5year": 46,
+    "10year": 25
+  },
+  "context": [
+    "The sixth-generation Verna, launched in March 2023, moved to a sharper, more angular design language and dropped the diesel engine entirely, continuing a transition that began around 2020 when BS6 norms made Hyundai's 1.6-litre CRDi diesel unviable to keep across the sedan range. Today the Verna is sold purely as a petrol sedan, split between a 1.5-litre naturally aspirated engine for value-focused trims and a 1.5-litre turbo-GDI engine for the performance-oriented SX(O) range.",
+    "Sedans as a body style have lost ground to SUVs across most of urban India over the past five years, and the Verna's resale curve reflects that broader shift: its retention trails both the Dzire in the compact-sedan space and most compact SUVs at the same age, even though Hyundai's build quality and service reputation remain strong.",
+    "The turbo-GDI variants, offered with either a 7-speed DCT or a clutchless manual iMT, appeal to a smaller but more enthusiast-driven buyer pool than the naturally aspirated range. These variants hold their value only marginally better than the standard engine in absolute percentage terms, since the segment they compete in is niche and the DCT's long-term reliability reputation among used buyers is still being established.",
+    "Hyundai's dealer network and HMove connected-car features, standard from mid-trim upward, support resale among younger, tech-oriented buyers, but the Verna's overall depreciation curve remains a touch steeper than segment-leading Maruti sedans, largely because Hyundai's resale ecosystem outside metros is thinner than Maruti's."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Hyundai Verna in India?",
+      "a": "A well-maintained Verna retains approximately 67% of its ex-showroom price after two years, 58% after three years, and 45% after five years. For a 2022 SX petrol with 25,000–50,000 km, the current fair-market band is roughly ₹9–10.35 lakh."
+    },
+    {
+      "q": "Does the turbo Verna hold value better than the standard petrol?",
+      "a": "Only marginally, typically 2–3% at the same age and kilometres. The turbo-GDI's DCT and iMT variants appeal to a smaller enthusiast buyer pool, which limits how much of a resale premium they can command despite the extra performance."
+    },
+    {
+      "q": "Why does the Verna depreciate faster than the Maruti Dzire?",
+      "a": "The Verna's three-year retention of about 58% trails the Dzire's roughly 65%, reflecting Maruti's larger service network, stronger fleet and taxi demand floor, and the broader shift of urban buyers away from sedans toward SUVs, a trend that affects Hyundai's sedan range more than Maruti's high-volume compact models."
+    },
+    {
+      "q": "How much does a Verna depreciate per year?",
+      "a": "Roughly 21% in year one and 12% more in year two, before settling into 7–8% annual declines. The five-year retention of about 45% sits a touch below the sedan segment average of 46%."
+    },
+    {
+      "q": "Which city gives the best resale price for a Verna?",
+      "a": "Mumbai and Bengaluru currently trade at approximately +2% above the national mid on tight supply and strong IT-corridor demand. Kolkata is the softest market at around −3%, reflecting a broader cooling in sedan demand."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "honda",
+      "model": "city",
+      "label": "Honda City"
+    },
+    {
+      "make": "volkswagen",
+      "model": "virtus",
+      "label": "Volkswagen Virtus"
+    },
+    {
+      "make": "maruti",
+      "model": "dzire",
+      "label": "Maruti Dzire"
+    }
+  ]
+}

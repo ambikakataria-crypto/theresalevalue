@@ -1,0 +1,450 @@
+{
+  "slug": {
+    "make": "maruti",
+    "model": "jimny"
+  },
+  "make": "Maruti Suzuki",
+  "model": "Jimny",
+  "segment": "Compact SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "ZETA ALL GRIP PRO THUNDER EDITION",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 10.74
+    },
+    {
+      "name": "ZETA ALL GRIP PRO THUNDER EDITION AT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 11.94
+    },
+    {
+      "name": "ALPHA ALL GRIP PRO THUNDER EDITION",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 12.69
+    },
+    {
+      "name": "ALPHA ALL GRIP PRO THUNDER EDITION DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 12.85
+    },
+    {
+      "name": "ALPHA ALL GRIP PRO MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 13.69
+    },
+    {
+      "name": "ALPHA ALL GRIP PRO MT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 13.85
+    },
+    {
+      "name": "ALPHA ALL GRIP PRO THUNDER EDITION AT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 13.89
+    },
+    {
+      "name": "ALPHA ALL GRIP PRO THUNDER EDITION DUAL TONE AT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 14.05
+    },
+    {
+      "name": "ALPHA ALL GRIP PRO AT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 14.89
+    },
+    {
+      "name": "ALPHA ALL GRIP PRO AT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 15.05
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 11.19,
+      "mid": 12.03,
+      "high": 12.87
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.75,
+      "mid": 11.56,
+      "high": 12.37
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 10.13,
+      "mid": 10.9,
+      "high": 11.66
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 9.44,
+      "mid": 10.15,
+      "high": 10.86
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.74,
+      "mid": 9.39,
+      "high": 10.05
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 9.79,
+      "mid": 10.52,
+      "high": 11.26
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 9.41,
+      "mid": 10.11,
+      "high": 10.82
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.87,
+      "mid": 9.53,
+      "high": 10.2
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.26,
+      "mid": 8.88,
+      "high": 9.5
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.64,
+      "mid": 8.22,
+      "high": 8.79
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.91,
+      "mid": 9.59,
+      "high": 10.26
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.57,
+      "mid": 9.21,
+      "high": 9.86
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.08,
+      "mid": 8.68,
+      "high": 9.29
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.52,
+      "mid": 8.09,
+      "high": 8.66
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.96,
+      "mid": 7.49,
+      "high": 8.01
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.86,
+      "mid": 8.46,
+      "high": 9.05
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 7.56,
+      "mid": 8.13,
+      "high": 8.69
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.12,
+      "mid": 7.66,
+      "high": 8.2
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.64,
+      "mid": 7.14,
+      "high": 7.64
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.14,
+      "mid": 6.6,
+      "high": 7.07
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.99,
+      "mid": 7.52,
+      "high": 8.04
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.72,
+      "mid": 7.22,
+      "high": 7.73
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.33,
+      "mid": 6.81,
+      "high": 7.29
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.9,
+      "mid": 6.34,
+      "high": 6.79
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.46,
+      "mid": 5.87,
+      "high": 6.28
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 2,
+      "note": "Strong lifestyle-SUV and weekend off-roading buyer base"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 3,
+      "note": "Limited supply, high enthusiast demand"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 3,
+      "note": "Weekend-trail culture keeps demand firm"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Growing lifestyle-SUV interest, moderate supply"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline; smaller enthusiast pool than other metros"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 2,
+      "note": "Proximity to off-road trails supports demand"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Smaller niche-SUV buyer pool, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 1,
+      "note": "Steady interest among lifestyle-SUV buyers"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 94
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 89
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 84
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 80
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 69
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 36
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 61,
+    "5year": 48,
+    "10year": 27
+  },
+  "context": [
+    "The 5-door Jimny launched in India in June 2023, bringing Suzuki's long-running ladder-frame off-roader nameplate to the mainstream market for the first time with a 1.5-litre K15B petrol engine, standard AllGrip Pro 4WD, and a 5-speed manual or 4-speed torque-converter automatic. Unlike most of Maruti's line-up, the Jimny is positioned as a lifestyle and weekend off-roading vehicle rather than daily-use family transport.",
+    "Demand at launch significantly outstripped supply, with waiting periods stretching past a year in several cities, and that scarcity has carried over into the used market: low-production-volume, high-demand dynamics keep resale values unusually firm for a Maruti product in this price bracket, closer to what enthusiast-driven imports or limited-run models command.",
+    "Because the Jimny is bought primarily by enthusiasts rather than commuters, odometer readings tend to be lower than class norms, and well-kept, low-km examples attract a buyer pool willing to pay close to new-car pricing in the first two to three years, a pattern not seen on volume-selling Maruti models like the Swift or Brezza.",
+    "The ladder-frame construction and body-on-frame practicality (removable rear seats, genuine 4WD with low-range transfer case) give it strong cross-shop appeal against the Mahindra Thar, and this body type's enduring popularity in India underpins a depreciation curve that is notably flatter than typical compact SUVs through the first five years."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Maruti Jimny in India?",
+      "a": "A well-kept Jimny retains roughly 80% of its ex-showroom price after two years and about 72% after three years, still at around 59% by year five, among the strongest retention curves in the compact SUV segment as of September 2026. A 2024 Zeta MT with under 10,000 km trades close to its original ex-showroom price."
+    },
+    {
+      "q": "Why does the Jimny hold value better than other Maruti models?",
+      "a": "Demand has consistently outstripped supply since its 2023 launch, and its enthusiast-driven buyer base keeps resale values firm. Its 3-year retention of about 72% sits well above the compact SUV segment average of 61%."
+    },
+    {
+      "q": "Does the automatic Jimny resell better than the manual?",
+      "a": "The 4AT variants trade only a small premium over the manual at resale, since most buyers value the Jimny's off-road capability and styling over transmission choice, unlike more commuter-focused SUVs where automatics command a larger gap."
+    },
+    {
+      "q": "How much does a Jimny depreciate per year?",
+      "a": "A Jimny loses only about 11% of value in year one and continues at a slower 4-6 percentage point annual retention drop through year five, reaching roughly 59% retention, meaningfully flatter than the typical compact SUV curve."
+    },
+    {
+      "q": "Which city gives the best resale price for a Jimny?",
+      "a": "Mumbai and Bengaluru trade around +3% above the national mid due to limited supply and strong weekend off-roading demand, while Kolkata trades roughly -2% because of a smaller niche-SUV buyer pool."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "mahindra",
+      "model": "thar",
+      "label": "Mahindra Thar"
+    },
+    {
+      "make": "tata",
+      "model": "punch",
+      "label": "Tata Punch"
+    },
+    {
+      "make": "maruti",
+      "model": "brezza",
+      "label": "Maruti Brezza"
+    }
+  ]
+}

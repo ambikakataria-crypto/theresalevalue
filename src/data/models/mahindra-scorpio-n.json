@@ -1,0 +1,650 @@
+{
+  "slug": {
+    "make": "mahindra",
+    "model": "scorpio-n"
+  },
+  "make": "Mahindra",
+  "model": "Scorpio-N",
+  "segment": "Large SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "Z2 DIESEL MT 7 STR",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 12.49
+    },
+    {
+      "name": "Z4 DIESEL AT 2WD 7 STR",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 15.95
+    },
+    {
+      "name": "Z4 DIESEL MT 4WD 7 STR (E)",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 17.69
+    },
+    {
+      "name": "Z8 L DIESEL AT 2WD 7 STR",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 21.45
+    },
+    {
+      "name": "Z8 L DIESEL AT 4WD 7 STR",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 23.9
+    },
+    {
+      "name": "Z2 PETROL MT 7 STR",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 11.99
+    },
+    {
+      "name": "Z4 PETROL MT 7 STR (E)",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 14.74
+    },
+    {
+      "name": "Z8 PETROL AT 7 STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 18.95
+    },
+    {
+      "name": "Z8 L PETROL MT 6 STR",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 19.19
+    },
+    {
+      "name": "Z8 L PETROL AT 6 STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 21.15
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 15.31,
+      "mid": 16.47,
+      "high": 17.62
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 14.72,
+      "mid": 15.82,
+      "high": 16.93
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 13.87,
+      "mid": 14.92,
+      "high": 15.96
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 12.92,
+      "mid": 13.9,
+      "high": 14.87
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 11.96,
+      "mid": 12.86,
+      "high": 13.76
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 13.4,
+      "mid": 14.41,
+      "high": 15.42
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 12.88,
+      "mid": 13.85,
+      "high": 14.82
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 12.14,
+      "mid": 13.05,
+      "high": 13.97
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 11.31,
+      "mid": 12.16,
+      "high": 13.01
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 10.47,
+      "mid": 11.25,
+      "high": 12.04
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 12.21,
+      "mid": 13.12,
+      "high": 14.04
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 11.73,
+      "mid": 12.61,
+      "high": 13.49
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 11.06,
+      "mid": 11.89,
+      "high": 12.72
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 10.3,
+      "mid": 11.08,
+      "high": 11.85
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 9.53,
+      "mid": 10.25,
+      "high": 10.97
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 10.77,
+      "mid": 11.58,
+      "high": 12.39
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 10.35,
+      "mid": 11.12,
+      "high": 11.9
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 9.75,
+      "mid": 10.49,
+      "high": 11.22
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 9.09,
+      "mid": 9.77,
+      "high": 10.45
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 8.41,
+      "mid": 9.04,
+      "high": 9.67
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 9.57,
+      "mid": 10.29,
+      "high": 11.01
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 9.2,
+      "mid": 9.89,
+      "high": 10.58
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 8.67,
+      "mid": 9.32,
+      "high": 9.98
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 8.08,
+      "mid": 8.69,
+      "high": 9.29
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.48,
+      "mid": 8.04,
+      "high": 8.6
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 14.4,
+      "mid": 15.48,
+      "high": 16.57
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 13.84,
+      "mid": 14.88,
+      "high": 15.92
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 13.05,
+      "mid": 14.03,
+      "high": 15.01
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 12.15,
+      "mid": 13.07,
+      "high": 13.98
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 11.25,
+      "mid": 12.09,
+      "high": 12.94
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 12.6,
+      "mid": 13.55,
+      "high": 14.5
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 12.11,
+      "mid": 13.02,
+      "high": 13.93
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 11.42,
+      "mid": 12.27,
+      "high": 13.13
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 10.63,
+      "mid": 11.43,
+      "high": 12.24
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 9.84,
+      "mid": 10.58,
+      "high": 11.32
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 11.48,
+      "mid": 12.34,
+      "high": 13.2
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 11.03,
+      "mid": 11.86,
+      "high": 12.69
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 10.4,
+      "mid": 11.18,
+      "high": 11.96
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 9.69,
+      "mid": 10.42,
+      "high": 11.14
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.96,
+      "mid": 9.64,
+      "high": 10.31
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 10.12,
+      "mid": 10.88,
+      "high": 11.65
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 9.73,
+      "mid": 10.46,
+      "high": 11.19
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 9.17,
+      "mid": 9.86,
+      "high": 10.55
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.54,
+      "mid": 9.19,
+      "high": 9.83
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.91,
+      "mid": 8.5,
+      "high": 9.1
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 9,
+      "mid": 9.68,
+      "high": 10.35
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.65,
+      "mid": 9.3,
+      "high": 9.95
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.15,
+      "mid": 8.77,
+      "high": 9.38
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.6,
+      "mid": 8.17,
+      "high": 8.74
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.03,
+      "mid": 7.56,
+      "high": 8.09
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": -2,
+      "note": "Diesel age-registration restrictions dampen demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": -1,
+      "note": "Space constraints temper large-SUV demand"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 1,
+      "note": "Steady SUV demand"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 2,
+      "note": "Strong diesel-SUV demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 2,
+      "note": "Strong semi-urban demand"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": 0,
+      "note": "Baseline demand"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 3,
+      "note": "Strong rugged-SUV demand"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 94
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 89
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 85
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 81
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 75
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 69
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 66
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 61
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 58
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 42
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 65,
+    "5year": 52,
+    "10year": 30
+  },
+  "context": [
+    "The Scorpio-N, launched in 2022, is Mahindra's ground-up reboot of its best-known nameplate: a new body-on-frame platform, a more modern cabin, and for the first time a factory automatic gearbox and a turbo-petrol engine alongside the familiar mHawk diesel. It sits above the carried-over Scorpio Classic in Mahindra's lineup and has quickly become the brand's volume driver in the large-SUV space.",
+    "The 2.2-litre mHawk diesel is offered in two power outputs, a lower-output version on manual base trims and a higher-output version paired with either manual or the 6-speed torque-converter automatic on upper trims, while a 2.0-litre turbo-petrol serves buyers who want to avoid diesel. In the used market, diesel AT variants, particularly the 4WD Z8L, command the strongest demand because they combine the engine Indian SUV buyers trust most with the convenience most now expect.",
+    "Body-on-frame SUVs with genuine off-road ability and a strong perceived toughness have historically held Indian resale value better than monocoque crossovers of similar price, and the Scorpio-N continues that pattern. Fleet and semi-commercial buyers who value the Scorpio's load-carrying and durability reputation provide a resale floor that many car-based SUVs don't get.",
+    "Because the Scorpio-N and Scorpio Classic are sold side by side with overlapping price points, used buyers sometimes compare them directly. The Scorpio-N's newer platform, automatic option, and longer waiting lists at launch have kept its resale noticeably firmer than the Classic's at equivalent age, even though both nameplates benefit from the same brand reputation for ruggedness."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Mahindra Scorpio-N?",
+      "a": "A well-maintained Scorpio-N retains around 81% of its ex-showroom price after two years and roughly 64% after five years, based on transaction data across Indian metros as of September 2026, well above the large-SUV segment average of about 52% at five years. A 2022 Z8 diesel manual with 25,000-50,000 km typically trades around ₹13.5-15.0 lakh."
+    },
+    {
+      "q": "Does the diesel automatic Scorpio-N resell better than the manual?",
+      "a": "Yes. Diesel automatic variants, especially the 4WD Z8L, trade at a clear premium over equivalent manual trims at the same age and mileage, as automatic diesel SUVs see the deepest used-buyer demand in this segment."
+    },
+    {
+      "q": "How does the Scorpio-N compare with the Scorpio Classic for resale?",
+      "a": "The Scorpio-N holds value a few points better than the Scorpio Classic at equivalent age, reflecting its newer platform and automatic-gearbox option, though both nameplates sit comfortably above the large-SUV segment average thanks to Mahindra's reputation for ruggedness."
+    },
+    {
+      "q": "How much does a Scorpio-N depreciate per year?",
+      "a": "The Scorpio-N depreciates about 11% in year one and roughly 4-5% annually thereafter, a notably shallower curve than most SUVs of similar price, landing at about 64% retention after five years and 42% after ten."
+    },
+    {
+      "q": "Which city gives the best resale price for a Scorpio-N?",
+      "a": "Ahmedabad and Hyderabad currently trade at about +2 to +3% above the national mid, reflecting strong SUV demand outside the strictest diesel-restriction markets, while Delhi NCR trades roughly -2% due to diesel-vehicle age restrictions in the NCR region."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "mahindra",
+      "model": "scorpio",
+      "label": "Mahindra Scorpio"
+    },
+    {
+      "make": "mahindra",
+      "model": "bolero",
+      "label": "Mahindra Bolero"
+    },
+    {
+      "make": "toyota",
+      "model": "fortuner",
+      "label": "Toyota Fortuner"
+    }
+  ]
+}

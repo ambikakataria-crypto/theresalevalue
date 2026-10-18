@@ -1,0 +1,644 @@
+{
+  "slug": {
+    "make": "maruti",
+    "model": "wagon-r"
+  },
+  "make": "Maruti Suzuki",
+  "model": "Wagon R",
+  "segment": "Hatchback",
+  "bodyType": "Hatchback",
+  "lastRefreshedISO": "2026-09-30",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "LXi 1.0",
+      "fuel": "Petrol",
+      "transmission": "5MT",
+      "exShowroom": 5.7
+    },
+    {
+      "name": "LXi CNG 1.0",
+      "fuel": "CNG",
+      "transmission": "5MT",
+      "exShowroom": 6.59
+    },
+    {
+      "name": "VXi 1.0",
+      "fuel": "Petrol",
+      "transmission": "5MT",
+      "exShowroom": 6.1
+    },
+    {
+      "name": "VXi 1.2",
+      "fuel": "Petrol",
+      "transmission": "5MT",
+      "exShowroom": 6.46
+    },
+    {
+      "name": "VXi CNG 1.0",
+      "fuel": "CNG",
+      "transmission": "5MT",
+      "exShowroom": 6.99
+    },
+    {
+      "name": "VXi AGS 1.2",
+      "fuel": "Petrol",
+      "transmission": "AMT",
+      "exShowroom": 6.96
+    },
+    {
+      "name": "ZXi 1.2",
+      "fuel": "Petrol",
+      "transmission": "5MT",
+      "exShowroom": 6.95
+    },
+    {
+      "name": "ZXi AGS 1.2",
+      "fuel": "Petrol",
+      "transmission": "AMT",
+      "exShowroom": 7.45
+    },
+    {
+      "name": "ZXi+ AGS 1.2",
+      "fuel": "Petrol",
+      "transmission": "AMT",
+      "exShowroom": 7.49
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.68,
+      "mid": 6.11,
+      "high": 6.54
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5.43,
+      "mid": 5.84,
+      "high": 6.24
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 5.11,
+      "mid": 5.5,
+      "high": 5.88
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.72,
+      "mid": 5.07,
+      "high": 5.43
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.32,
+      "mid": 4.64,
+      "high": 4.97
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.0,
+      "mid": 5.38,
+      "high": 5.75
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.78,
+      "mid": 5.14,
+      "high": 5.5
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.5,
+      "mid": 4.84,
+      "high": 5.18
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.15,
+      "mid": 4.46,
+      "high": 4.78
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.8,
+      "mid": 4.09,
+      "high": 4.37
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.55,
+      "mid": 4.89,
+      "high": 5.23
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.34,
+      "mid": 4.67,
+      "high": 5.0
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.09,
+      "mid": 4.4,
+      "high": 4.71
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.77,
+      "mid": 4.06,
+      "high": 4.34
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.46,
+      "mid": 3.72,
+      "high": 3.98
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.06,
+      "mid": 4.37,
+      "high": 4.68
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 3.88,
+      "mid": 4.17,
+      "high": 4.46
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 3.66,
+      "mid": 3.93,
+      "high": 4.21
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.37,
+      "mid": 3.63,
+      "high": 3.88
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.09,
+      "mid": 3.32,
+      "high": 3.55
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 3.61,
+      "mid": 3.88,
+      "high": 4.15
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 3.45,
+      "mid": 3.71,
+      "high": 3.97
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 3.25,
+      "mid": 3.49,
+      "high": 3.74
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.0,
+      "mid": 3.22,
+      "high": 3.45
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 2.74,
+      "mid": 2.95,
+      "high": 3.16
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.63,
+      "mid": 6.06,
+      "high": 6.48
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.38,
+      "mid": 5.78,
+      "high": 6.19
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.07,
+      "mid": 5.45,
+      "high": 5.83
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.68,
+      "mid": 5.03,
+      "high": 5.38
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.28,
+      "mid": 4.6,
+      "high": 4.93
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.96,
+      "mid": 5.33,
+      "high": 5.7
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.73,
+      "mid": 5.09,
+      "high": 5.45
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.46,
+      "mid": 4.8,
+      "high": 5.13
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.11,
+      "mid": 4.42,
+      "high": 4.73
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.77,
+      "mid": 4.05,
+      "high": 4.33
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.51,
+      "mid": 4.85,
+      "high": 5.18
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.3,
+      "mid": 4.63,
+      "high": 4.95
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.06,
+      "mid": 4.36,
+      "high": 4.67
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.74,
+      "mid": 4.02,
+      "high": 4.3
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.42,
+      "mid": 3.68,
+      "high": 3.94
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.03,
+      "mid": 4.33,
+      "high": 4.63
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 3.85,
+      "mid": 4.14,
+      "high": 4.43
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 3.62,
+      "mid": 3.9,
+      "high": 4.17
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.34,
+      "mid": 3.59,
+      "high": 3.85
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.06,
+      "mid": 3.29,
+      "high": 3.52
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 3.58,
+      "mid": 3.85,
+      "high": 4.12
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 3.42,
+      "mid": 3.67,
+      "high": 3.93
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 3.22,
+      "mid": 3.46,
+      "high": 3.7
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 2.97,
+      "mid": 3.19,
+      "high": 3.42
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 2.72,
+      "mid": 2.92,
+      "high": 3.13
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 3,
+      "note": "Strong factory-CNG demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 2,
+      "note": "Tight used-hatchback supply"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 1,
+      "note": "Steady first-car demand"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 0,
+      "note": "Baseline demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": -1,
+      "note": "Mild preference for sedans/compact SUVs"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Follows Mumbai band, slightly softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Softer hatchback resale, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 3,
+      "note": "CNG-heavy market, firm demand"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 91
+    },
+    {
+      "ageYears": 1.0,
+      "retentionPct": 84
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 2.0,
+      "retentionPct": 73
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 69
+    },
+    {
+      "ageYears": 3.0,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 61
+    },
+    {
+      "ageYears": 4.0,
+      "retentionPct": 58
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 5.0,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 6.0,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 7.0,
+      "retentionPct": 39
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 37
+    },
+    {
+      "ageYears": 8.0,
+      "retentionPct": 35
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 33
+    },
+    {
+      "ageYears": 9.0,
+      "retentionPct": 31
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 29
+    },
+    {
+      "ageYears": 10.0,
+      "retentionPct": 27
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 66,
+    "5year": 50,
+    "10year": 25
+  },
+  "context": [
+    "The Wagon R has been a fixture in Maruti Suzuki's India lineup since 1999, and the current tall-boy generation, on sale since 2019 and lightly updated in 2022, continues to lean on the formula that built its reputation: maximum cabin space for its footprint, a familiar silhouette, and Maruti's unmatched Arena service network. That network density is the single biggest lever on Wagon R resale, since owners in smaller towns can get parts and service almost anywhere, which keeps buyer confidence high even on higher-mileage examples.",
+    "Two petrol engines are sold alongside each other: the smaller 1.0-litre K10C three-cylinder on base trims and the 1.2-litre K12N four-cylinder from VXi upward, with the 1.2 also offering Maruti's AGS automated-manual gearbox. In the used market, 1.2-litre cars with AGS have gained ground over the last two years as city buyers increasingly prioritise an automatic for stop-go traffic, narrowing what used to be a wider price gap with manual variants.",
+    "Factory-fitted CNG, offered on LXi and VXi trims, is a meaningful share of Wagon R sales in Delhi NCR, Gujarat, and parts of Maharashtra, and it resells at a premium over equivalent petrol in those markets because running-cost-conscious used buyers actively seek it out. Outside CNG-infrastructure-heavy states, the premium narrows or disappears, and buyers show a mild preference for straightforward petrol cars instead.",
+    "Because the Wagon R competes directly with the Swift and Celerio for the same used-car budget, its resale curve tracks the broader Maruti hatchback segment closely, trailing the Swift by a small margin at every age band. The tall-boy shape has slightly narrower appeal among younger, style-conscious buyers who dominate hatchback resale demand, even though practicality-focused family buyers continue to value it highly."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Maruti Wagon R in India?",
+      "a": "A well-kept Wagon R retains close to 73% of its ex-showroom price after two years and around 51% after five years, based on transaction data across Indian metros as of September 2026. A 2022 VXi 1.2 petrol with 25,000-50,000 km typically trades in a band of roughly ₹4.1-4.7 lakh depending on city and condition."
+    },
+    {
+      "q": "Does CNG improve Wagon R resale value?",
+      "a": "Yes, in CNG-strong markets. Factory-fitted CNG Wagon R units trade at a premium over equivalent petrol in Delhi NCR and Ahmedabad, both of which carry a positive city variance in this data, because fuel-cost-conscious buyers actively search for factory CNG. In cities with thinner CNG infrastructure, the premium shrinks toward parity with petrol."
+    },
+    {
+      "q": "Is the 1.2-litre AGS automatic worth more at resale than the manual?",
+      "a": "AGS variants have closed most of the price gap with manual Wagon Rs over the past two years as automatic-transmission demand has risen sharply among city buyers. At equivalent age and mileage, an AGS Wagon R typically commands a modest premium over a manual VXi or ZXi, though it narrows the gap rather than reversing it."
+    },
+    {
+      "q": "How much does a Wagon R depreciate per year?",
+      "a": "The Wagon R loses roughly 16% of its value in year one and another 9-10 percentage points in year two, settling into a steadier 6-7% annual decline from year three onward. Five-year retention of about 51% is roughly in line with the hatchback segment average of about 50% used here."
+    },
+    {
+      "q": "Which city gives the best resale price for a Wagon R?",
+      "a": "Delhi NCR and Ahmedabad currently trade at about +3% above the national mid, driven by strong CNG demand, while Kolkata trades at roughly -3%, reflecting softer used-hatchback demand in that market."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "maruti",
+      "model": "swift",
+      "label": "Maruti Swift"
+    },
+    {
+      "make": "tata",
+      "model": "tiago",
+      "label": "Tata Tiago"
+    },
+    {
+      "make": "hyundai",
+      "model": "grand-i10-nios",
+      "label": "Hyundai Grand i10 Nios"
+    }
+  ]
+}

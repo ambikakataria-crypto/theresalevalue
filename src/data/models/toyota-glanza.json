@@ -1,0 +1,632 @@
+{
+  "slug": {
+    "make": "toyota",
+    "model": "glanza"
+  },
+  "make": "Toyota",
+  "model": "Glanza",
+  "segment": "Hatchback",
+  "bodyType": "Hatchback",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "E",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 6.59
+    },
+    {
+      "name": "S CVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 7.98
+    },
+    {
+      "name": "G",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 8.51
+    },
+    {
+      "name": "V",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 9.51
+    },
+    {
+      "name": "V CVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 9.99
+    },
+    {
+      "name": "S E-CNG",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 8.43
+    },
+    {
+      "name": "G E-CNG",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 9.46
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.13,
+      "mid": 7.66,
+      "high": 8.2
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.85,
+      "mid": 7.37,
+      "high": 7.88
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.46,
+      "mid": 6.94,
+      "high": 7.43
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.02,
+      "mid": 6.47,
+      "high": 6.92
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.57,
+      "mid": 5.99,
+      "high": 6.4
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.24,
+      "mid": 6.71,
+      "high": 7.18
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.99,
+      "mid": 6.44,
+      "high": 6.9
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.65,
+      "mid": 6.08,
+      "high": 6.5
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.26,
+      "mid": 5.66,
+      "high": 6.06
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.87,
+      "mid": 5.24,
+      "high": 5.6
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.68,
+      "mid": 6.11,
+      "high": 6.54
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.46,
+      "mid": 5.87,
+      "high": 6.28
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.15,
+      "mid": 5.53,
+      "high": 5.92
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.79,
+      "mid": 5.16,
+      "high": 5.52
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.44,
+      "mid": 4.77,
+      "high": 5.1
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.01,
+      "mid": 5.39,
+      "high": 5.77
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.82,
+      "mid": 5.18,
+      "high": 5.54
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.54,
+      "mid": 4.88,
+      "high": 5.22
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.23,
+      "mid": 4.55,
+      "high": 4.87
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.91,
+      "mid": 4.21,
+      "high": 4.5
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.45,
+      "mid": 4.79,
+      "high": 5.13
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.28,
+      "mid": 4.6,
+      "high": 4.93
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.04,
+      "mid": 4.34,
+      "high": 4.64
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.76,
+      "mid": 4.04,
+      "high": 4.33
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.48,
+      "mid": 3.74,
+      "high": 4
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 7.49,
+      "mid": 8.05,
+      "high": 8.61
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 7.19,
+      "mid": 7.74,
+      "high": 8.28
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 6.78,
+      "mid": 7.29,
+      "high": 7.8
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 6.32,
+      "mid": 6.79,
+      "high": 7.27
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 5.85,
+      "mid": 6.29,
+      "high": 6.73
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 6.55,
+      "mid": 7.04,
+      "high": 7.54
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 6.3,
+      "mid": 6.77,
+      "high": 7.24
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 5.94,
+      "mid": 6.38,
+      "high": 6.83
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 5.53,
+      "mid": 5.95,
+      "high": 6.36
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 5.12,
+      "mid": 5.5,
+      "high": 5.89
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.97,
+      "mid": 6.42,
+      "high": 6.87
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5.73,
+      "mid": 6.17,
+      "high": 6.6
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 5.41,
+      "mid": 5.81,
+      "high": 6.22
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 5.04,
+      "mid": 5.42,
+      "high": 5.79
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.66,
+      "mid": 5.01,
+      "high": 5.36
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.26,
+      "mid": 5.66,
+      "high": 6.06
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5.06,
+      "mid": 5.44,
+      "high": 5.82
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.77,
+      "mid": 5.13,
+      "high": 5.49
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.44,
+      "mid": 4.78,
+      "high": 5.11
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.11,
+      "mid": 4.42,
+      "high": 4.73
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.68,
+      "mid": 5.03,
+      "high": 5.38
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.5,
+      "mid": 4.84,
+      "high": 5.17
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.24,
+      "mid": 4.56,
+      "high": 4.88
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.95,
+      "mid": 4.25,
+      "high": 4.54
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.65,
+      "mid": 3.93,
+      "high": 4.2
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 0,
+      "note": "Baseline, broad hatchback demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 1,
+      "note": "Toyota resale trust adds modest premium"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 3,
+      "note": "Strong Toyota loyalty, IT-corridor buyers"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 2,
+      "note": "Steady Toyota brand pull"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 4,
+      "note": "Toyota home turf, highest brand loyalty"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Follows Mumbai band, slightly softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Softer hatchback demand, longer cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -1,
+      "note": "Maruti-dominant market, weaker Glanza pull"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 83
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 77
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 68
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 57
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 28
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 26
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 65,
+    "5year": 51,
+    "10year": 29
+  },
+  "context": [
+    "The Glanza exists because of the Toyota-Suzuki global alliance, under which Toyota sells a re-badged Maruti Baleno through its own dealer network rather than developing a separate hatchback for India. It shares its platform, the 1.2-litre K15C petrol engine, and its CVT and manual gearboxes entirely with the Baleno, with differences limited to the grille, badging, infotainment branding, and Toyota's own warranty and service terms.",
+    "Because Toyota historically offers a longer standard warranty than Maruti on the same mechanical package, some buyers choose the Glanza specifically for that peace of mind, and that group tends to carry the car through its first ownership cycle with better-documented service records. That slightly improves condition at resale, though it rarely creates the independent brand premium seen on Toyota's own-engineered models.",
+    "Used-market data for the Glanza is thinner than for the Baleno simply because far fewer Glanzas are sold each year. With fewer comparable listings to anchor a price, dealers and valuation tools sometimes default to pricing the Glanza at a small discount to an equivalent Baleno, even though the cars are mechanically identical. This gap has narrowed since 2023 as the Glanza's used supply has grown.",
+    "The factory-fitted CNG option, offered on the S and G trims, follows the same demand pattern as other factory CNG hatchbacks: it holds value well in NCR, Gujarat, and other high gas-penetration markets, while trading closer to petrol parity elsewhere. CVT variants have also gained resale ground as automatic preference rises among city buyers, narrowing what was once a wider gap with manual trims."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Toyota Glanza in India?",
+      "a": "A well-maintained Glanza retains roughly 72% of its ex-showroom price after two years, 64% after three years, and 50% after five years, as of September 2026. For a 2022 petrol G with 25,000-50,000 km, the current fair-market band is approximately ₹5.15–5.92 lakh."
+    },
+    {
+      "q": "Does the Glanza resell for less than the Maruti Baleno it's based on?",
+      "a": "Generally yes, by a small margin. Because the Glanza shares its platform and engine entirely with the Baleno but sells in much lower volumes, used listings are scarcer and dealers often default to a 2-4% discount versus an equivalent Baleno, even though the underlying car is identical."
+    },
+    {
+      "q": "Is Glanza CNG worth more at resale than the petrol version?",
+      "a": "Factory-fitted Glanza CNG (S and G trims) trades close to petrol parity in most cities and commands a modest premium in CNG-heavy markets like Delhi NCR and Ahmedabad, reflecting the running-cost advantage for high-mileage owners in those regions."
+    },
+    {
+      "q": "How much does a Glanza depreciate per year?",
+      "a": "The Glanza depreciates roughly 17% in year one and another 11% in year two, before settling into a steadier 7-8% annual decline from year three onward. Five-year retention of about 50% sits a few points below the overall hatchback segment average of 51%."
+    },
+    {
+      "q": "Which city gives the best resale price for a Glanza?",
+      "a": "Chennai and Bengaluru currently trade at +3% to +4% above the national mid, reflecting strong regional Toyota brand loyalty. Kolkata trades at around -3%, and Ahmedabad is slightly soft at -1% given the Maruti-dominant local market."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "maruti",
+      "model": "swift",
+      "label": "Maruti Swift"
+    },
+    {
+      "make": "hyundai",
+      "model": "i20",
+      "label": "Hyundai i20"
+    },
+    {
+      "make": "tata",
+      "model": "altroz",
+      "label": "Tata Altroz"
+    }
+  ]
+}

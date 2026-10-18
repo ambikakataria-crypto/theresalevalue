@@ -1,0 +1,414 @@
+{
+  "slug": {
+    "make": "toyota",
+    "model": "camry"
+  },
+  "make": "Toyota",
+  "model": "Camry",
+  "segment": "Sedan",
+  "bodyType": "Sedan",
+  "lastRefreshedISO": "2026-09-30",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "Hybrid",
+      "fuel": "Hybrid",
+      "transmission": "e-CVT",
+      "exShowroom": 48.0
+    },
+    {
+      "name": "Hybrid (MY2025 spec)",
+      "fuel": "Hybrid",
+      "transmission": "e-CVT",
+      "exShowroom": 48.9
+    },
+    {
+      "name": "Hybrid (MY2026 spec)",
+      "fuel": "Hybrid",
+      "transmission": "e-CVT",
+      "exShowroom": 49.8
+    },
+    {
+      "name": "Hybrid Premium (White Pearl Crystal Shine)",
+      "fuel": "Hybrid",
+      "transmission": "e-CVT",
+      "exShowroom": 50.6
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 39.95,
+      "mid": 43.9,
+      "high": 47.85
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 38.55,
+      "mid": 42.36,
+      "high": 46.18
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 36.75,
+      "mid": 40.39,
+      "high": 44.02
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 34.76,
+      "mid": 38.19,
+      "high": 41.63
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 32.76,
+      "mid": 36.0,
+      "high": 39.24
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 35.95,
+      "mid": 39.51,
+      "high": 43.07
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 34.7,
+      "mid": 38.13,
+      "high": 41.56
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 33.08,
+      "mid": 36.35,
+      "high": 39.62
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 31.28,
+      "mid": 34.37,
+      "high": 37.47
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 29.48,
+      "mid": 32.4,
+      "high": 35.31
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 32.36,
+      "mid": 35.56,
+      "high": 38.76
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 31.23,
+      "mid": 34.31,
+      "high": 37.4
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 29.77,
+      "mid": 32.71,
+      "high": 35.66
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 28.15,
+      "mid": 30.94,
+      "high": 33.72
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 26.53,
+      "mid": 29.16,
+      "high": 31.78
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 29.12,
+      "mid": 32.0,
+      "high": 34.88
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 28.1,
+      "mid": 30.88,
+      "high": 33.66
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 26.79,
+      "mid": 29.44,
+      "high": 32.09
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 25.34,
+      "mid": 27.84,
+      "high": 30.35
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 23.88,
+      "mid": 26.24,
+      "high": 28.6
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 26.21,
+      "mid": 28.8,
+      "high": 31.39
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 25.29,
+      "mid": 27.79,
+      "high": 30.3
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 24.11,
+      "mid": 26.5,
+      "high": 28.88
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 22.8,
+      "mid": 25.06,
+      "high": 27.31
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 21.49,
+      "mid": 23.62,
+      "high": 25.74
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 2,
+      "note": "Largest pool of executive/chauffeur-driven buyers"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 2,
+      "note": "Strong corporate and HNI demand"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 1,
+      "note": "Executive demand present among senior corporate buyers"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 0,
+      "note": "Baseline; small but steady premium-sedan pool"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline; limited but consistent demand"
+    },
+    {
+      "city": "Pune",
+      "variancePct": -1,
+      "note": "Thinner premium-sedan resale market"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Very limited premium hybrid-sedan buyer pool"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -1,
+      "note": "Smaller executive-sedan demand than SUVs"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 91
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 85
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 80
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 68
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 49
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 43
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 39
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 36
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 58,
+    "5year": 45,
+    "10year": 24
+  },
+  "context": [
+    "The current Camry generation (XV70) was reintroduced to India in 2019 exclusively as a self-charging hybrid, after Toyota discontinued the plain-petrol Camry that had been sold here since the early 2000s, making it one of the first full-hybrid sedans sold at scale in the country.",
+    "Sold in essentially a single, fully-loaded trim throughout its run, the Camry's buyer base is almost entirely corporate fleets, senior executives, and chauffeur-driven owners rather than self-driven retail buyers, which keeps odometer readings on used examples unusually low relative to the car's age.",
+    "Toyota's hybrid reliability reputation, built over more than a decade of Camry and Prius hybrid systems globally, gives the car unusually strong percentage retention for a low-volume premium sedan, but the very small number of cars sold each year means the resale market is thin and a buyer may take longer to find than for a higher-volume luxury sedan.",
+    "Because the Camry has no petrol-only or diesel sibling in India, every used Camry on the market is a hybrid, which removes the powertrain-choice complexity that complicates resale comparisons for most other sedans in this bracket, such as the Mercedes-Benz E-Class or Honda City."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Toyota Camry in India?",
+      "a": "A Toyota Camry Hybrid retains roughly 76% of its ex-showroom price after two years and about 68% after three years, still around 56% at year five, well above typical premium sedan retention as of September 2026."
+    },
+    {
+      "q": "Why does the Camry hold value better than most sedans in its price range?",
+      "a": "Its 3-year retention of about 68% sits roughly 10 points above the Sedan segment average of 58%, a combination of Toyota's hybrid reliability reputation and low-mileage usage patterns from its mostly chauffeur-driven, corporate-fleet ownership base."
+    },
+    {
+      "q": "Is it hard to resell a Toyota Camry in India?",
+      "a": "The percentage value retained is strong, but the Camry's very low sales volumes mean the pool of interested used-car buyers is small, so sellers should expect a longer time-to-sale than a higher-volume luxury sedan, even at a favourable price."
+    },
+    {
+      "q": "How much does a Camry depreciate per year?",
+      "a": "A Camry Hybrid loses about 15% of value in year one, with 3-5 percentage point annual retention drops through year five (to roughly 56%), a notably flatter curve than the sedan segment average of 45% at the same age."
+    },
+    {
+      "q": "Which city gives the best resale price for a Camry?",
+      "a": "Delhi NCR and Mumbai trade around +2% above the national mid, reflecting the largest pools of executive and chauffeur-driven buyers, while Kolkata trades roughly -2% because of a very limited premium hybrid-sedan market there."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "label": "Mercedes-Benz E-Class"
+    },
+    {
+      "make": "honda",
+      "model": "city",
+      "label": "Honda City"
+    },
+    {
+      "make": "hyundai",
+      "model": "verna",
+      "label": "Hyundai Verna"
+    }
+  ]
+}

@@ -1,0 +1,650 @@
+{
+  "slug": {
+    "make": "kia",
+    "model": "seltos"
+  },
+  "make": "Kia",
+  "model": "Seltos",
+  "segment": "Midsize SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "HTK 1.5 DIESEL IMT",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 13.69
+    },
+    {
+      "name": "HTK PLUS 1.5 DIESEL IMT",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 15
+    },
+    {
+      "name": "HTX PLUS 1.5 DIESEL IMT DUAL TONE",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 17.79
+    },
+    {
+      "name": "HTX PLUS 1.5 IMT DIESEL",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 18.3
+    },
+    {
+      "name": "X LINE 1.5 DIESEL AT",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 20
+    },
+    {
+      "name": "HTE 1.5 PETROL MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 10.9
+    },
+    {
+      "name": "HTK PLUS 1.5 PETROL MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 13.5
+    },
+    {
+      "name": "HTX CVT G",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 15.45
+    },
+    {
+      "name": "HTX PLUS 1.5 TURBO PETROL IMT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 18.3
+    },
+    {
+      "name": "1.5 GTX+ TURBO GDI PETROL DCT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 20
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 14.19,
+      "mid": 15.26,
+      "high": 16.33
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 13.64,
+      "mid": 14.67,
+      "high": 15.69
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 12.86,
+      "mid": 13.83,
+      "high": 14.79
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 11.98,
+      "mid": 12.88,
+      "high": 13.78
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 11.08,
+      "mid": 11.92,
+      "high": 12.75
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 12.42,
+      "mid": 13.35,
+      "high": 14.29
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 11.93,
+      "mid": 12.83,
+      "high": 13.73
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 11.25,
+      "mid": 12.1,
+      "high": 12.94
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 10.48,
+      "mid": 11.27,
+      "high": 12.06
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 9.7,
+      "mid": 10.43,
+      "high": 11.16
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 11.31,
+      "mid": 12.16,
+      "high": 13.01
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 10.87,
+      "mid": 11.69,
+      "high": 12.51
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 10.25,
+      "mid": 11.02,
+      "high": 11.79
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 9.55,
+      "mid": 10.27,
+      "high": 10.98
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 8.83,
+      "mid": 9.5,
+      "high": 10.16
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 9.98,
+      "mid": 10.73,
+      "high": 11.48
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 9.59,
+      "mid": 10.31,
+      "high": 11.03
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 9.04,
+      "mid": 9.72,
+      "high": 10.4
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 8.42,
+      "mid": 9.05,
+      "high": 9.69
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.79,
+      "mid": 8.38,
+      "high": 8.97
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 8.87,
+      "mid": 9.54,
+      "high": 10.21
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 8.52,
+      "mid": 9.17,
+      "high": 9.81
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 8.04,
+      "mid": 8.64,
+      "high": 9.25
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 7.49,
+      "mid": 8.05,
+      "high": 8.61
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 6.93,
+      "mid": 7.45,
+      "high": 7.97
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 13.08,
+      "mid": 14.07,
+      "high": 15.05
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 12.57,
+      "mid": 13.52,
+      "high": 14.46
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 11.85,
+      "mid": 12.74,
+      "high": 13.64
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 11.04,
+      "mid": 11.87,
+      "high": 12.7
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 10.22,
+      "mid": 10.99,
+      "high": 11.76
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 11.45,
+      "mid": 12.31,
+      "high": 13.17
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 11,
+      "mid": 11.83,
+      "high": 12.66
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 10.37,
+      "mid": 11.15,
+      "high": 11.93
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 9.66,
+      "mid": 10.39,
+      "high": 11.12
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.94,
+      "mid": 9.61,
+      "high": 10.29
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 10.43,
+      "mid": 11.21,
+      "high": 12
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.02,
+      "mid": 10.77,
+      "high": 11.53
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 9.45,
+      "mid": 10.16,
+      "high": 10.87
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.8,
+      "mid": 9.46,
+      "high": 10.12
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.14,
+      "mid": 8.76,
+      "high": 9.37
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 9.2,
+      "mid": 9.89,
+      "high": 10.58
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.84,
+      "mid": 9.5,
+      "high": 10.17
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.33,
+      "mid": 8.96,
+      "high": 9.59
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.76,
+      "mid": 8.35,
+      "high": 8.93
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.18,
+      "mid": 7.72,
+      "high": 8.26
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.18,
+      "mid": 8.79,
+      "high": 9.41
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 7.86,
+      "mid": 8.45,
+      "high": 9.04
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.41,
+      "mid": 7.97,
+      "high": 8.52
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.9,
+      "mid": 7.42,
+      "high": 7.94
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.39,
+      "mid": 6.87,
+      "high": 7.35
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 2,
+      "note": "Strong demand for feature-rich SUVs"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 3,
+      "note": "Strong demand among urban professionals"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 3,
+      "note": "Strong demand for turbo-DCT trims"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline demand"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Follows Mumbai band, slightly softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Softer demand, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -1,
+      "note": "Mild preference for Maruti/Hyundai alternatives"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 89
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 82
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 63
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 28
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 62,
+    "5year": 48,
+    "10year": 27
+  },
+  "context": [
+    "Kia entered India with the Seltos in 2019, and it immediately validated the brand here, consistently ranking among the top-selling midsize SUVs alongside the Hyundai Creta with which it shares its platform. The 2023 facelift added a revised face, bigger screens, and carried forward Kia's widest engine range in the segment.",
+    "The Seltos is sold with three distinct engines, a naturally aspirated 1.5-litre petrol, a 1.5-litre turbo-petrol with up to 160 bhp, and a 1.5-litre diesel, paired variously with manual, iMT, CVT, 6-speed torque-converter automatic (diesel), and 7-speed dual-clutch (turbo-petrol) gearboxes. This breadth means resale value varies meaningfully by exact powertrain: turbo-DCT and diesel-AT variants hold the strongest demand, while base naturally aspirated manual trims see the softest.",
+    "Because Kia is a newer entrant than Hyundai or Maruti in India, its dealer and service network, while now extensive in metros, is thinner in smaller towns, which mildly tempers resale outside major cities relative to an equivalent Hyundai or Maruti product. This shows up as a modestly steeper depreciation curve for the Seltos than for the Creta in non-metro resale data.",
+    "The GTX+ and X-Line turbo-DCT variants, positioned as the sporty flagship trims, have developed a strong enthusiast following in the used market, and well-kept examples with full service history often trade close to naturally aspirated cars several months newer."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Kia Seltos?",
+      "a": "A well-maintained Seltos retains about 71% of its ex-showroom price after two years and roughly 50% after five years, based on transaction data across Indian metros as of September 2026. A 2022 HTX diesel manual with 25,000-50,000 km typically trades around ₹10.5-11.8 lakh."
+    },
+    {
+      "q": "Does the turbo-petrol DCT Seltos resell better than the naturally aspirated manual?",
+      "a": "Yes, turbo-DCT and diesel-automatic Seltos variants consistently command a premium over naturally aspirated manual trims at equivalent age, as feature-rich and automatic SUVs see the deepest used-buyer demand in this segment."
+    },
+    {
+      "q": "How does Seltos resale compare with the Hyundai Creta?",
+      "a": "The Seltos depreciates slightly faster than its platform-mate Creta in percentage terms, largely because Kia's non-metro service network is thinner than Hyundai's, though the gap is modest and both sit above the midsize-SUV segment average of about 48% retention at five years."
+    },
+    {
+      "q": "How much does a Seltos depreciate per year?",
+      "a": "The Seltos loses about 18% of its value in year one, a further 9 points in year two, then settles into roughly 6% annual declines from year three onward, reaching about 50% retention at five years."
+    },
+    {
+      "q": "Which city gives the best resale price for a Seltos?",
+      "a": "Mumbai and Bengaluru currently trade at about +3% above the national mid, driven by strong demand for feature-rich SUVs among urban professionals, while Kolkata trades roughly -2% below it."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "hyundai",
+      "model": "creta",
+      "label": "Hyundai Creta"
+    },
+    {
+      "make": "toyota",
+      "model": "hyryder",
+      "label": "Toyota Hyryder"
+    },
+    {
+      "make": "tata",
+      "model": "harrier",
+      "label": "Tata Harrier"
+    }
+  ]
+}

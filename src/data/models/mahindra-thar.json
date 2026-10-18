@@ -1,0 +1,650 @@
+{
+  "slug": {
+    "make": "mahindra",
+    "model": "thar"
+  },
+  "make": "Mahindra",
+  "model": "Thar",
+  "segment": "Compact SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "AX (O) D 2WD HT",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 10.55
+    },
+    {
+      "name": "AX MT D 4WD ST",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 13.43
+    },
+    {
+      "name": "AX(O) D MT 4WD CONVERTIBLE",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 14.16
+    },
+    {
+      "name": "LX D 4*4 MT HT",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 15.07
+    },
+    {
+      "name": "LX D 4WD AT CONVERTIBLE",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 16.4
+    },
+    {
+      "name": "AX P MT 4WD ST",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 12.92
+    },
+    {
+      "name": "AX (O) P 4WD MT CT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 13.59
+    },
+    {
+      "name": "LX HT PETROL 4WD MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 14.28
+    },
+    {
+      "name": "LX P 4WD AT CONVERTIBLE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 15.74
+    },
+    {
+      "name": "LX PETROL HT 4WD AT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 15.76
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 11.65,
+      "mid": 12.53,
+      "high": 13.41
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 11.2,
+      "mid": 12.04,
+      "high": 12.88
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 10.56,
+      "mid": 11.35,
+      "high": 12.15
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 9.83,
+      "mid": 10.58,
+      "high": 11.32
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 9.1,
+      "mid": 9.79,
+      "high": 10.47
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 10.2,
+      "mid": 10.96,
+      "high": 11.73
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 9.8,
+      "mid": 10.54,
+      "high": 11.27
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 9.24,
+      "mid": 9.93,
+      "high": 10.63
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 8.61,
+      "mid": 9.25,
+      "high": 9.9
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.96,
+      "mid": 8.56,
+      "high": 9.16
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 9.29,
+      "mid": 9.99,
+      "high": 10.69
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 8.93,
+      "mid": 9.6,
+      "high": 10.27
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 8.41,
+      "mid": 9.05,
+      "high": 9.68
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 7.84,
+      "mid": 8.43,
+      "high": 9.02
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.25,
+      "mid": 7.8,
+      "high": 8.35
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 8.19,
+      "mid": 8.81,
+      "high": 9.43
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 7.87,
+      "mid": 8.46,
+      "high": 9.06
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 7.42,
+      "mid": 7.98,
+      "high": 8.54
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 6.91,
+      "mid": 7.43,
+      "high": 7.95
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 6.4,
+      "mid": 6.88,
+      "high": 7.36
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 7.28,
+      "mid": 7.83,
+      "high": 8.38
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 7,
+      "mid": 7.53,
+      "high": 8.05
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 6.6,
+      "mid": 7.09,
+      "high": 7.59
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 6.15,
+      "mid": 6.61,
+      "high": 7.07
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 5.69,
+      "mid": 6.12,
+      "high": 6.54
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 12.1,
+      "mid": 13.01,
+      "high": 13.92
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 11.63,
+      "mid": 12.5,
+      "high": 13.38
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 10.96,
+      "mid": 11.79,
+      "high": 12.61
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 10.21,
+      "mid": 10.98,
+      "high": 11.75
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 9.45,
+      "mid": 10.16,
+      "high": 10.87
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 10.59,
+      "mid": 11.39,
+      "high": 12.18
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.18,
+      "mid": 10.94,
+      "high": 11.71
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 9.59,
+      "mid": 10.32,
+      "high": 11.04
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.94,
+      "mid": 9.61,
+      "high": 10.28
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.27,
+      "mid": 8.89,
+      "high": 9.51
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 9.64,
+      "mid": 10.37,
+      "high": 11.1
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 9.27,
+      "mid": 9.97,
+      "high": 10.66
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.74,
+      "mid": 9.4,
+      "high": 10.05
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.14,
+      "mid": 8.75,
+      "high": 9.37
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.53,
+      "mid": 8.1,
+      "high": 8.67
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.51,
+      "mid": 9.15,
+      "high": 9.79
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.18,
+      "mid": 8.79,
+      "high": 9.41
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.71,
+      "mid": 8.29,
+      "high": 8.87
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.18,
+      "mid": 7.72,
+      "high": 8.26
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.64,
+      "mid": 7.14,
+      "high": 7.64
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.56,
+      "mid": 8.13,
+      "high": 8.7
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 7.27,
+      "mid": 7.82,
+      "high": 8.36
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.85,
+      "mid": 7.37,
+      "high": 7.88
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.38,
+      "mid": 6.86,
+      "high": 7.34
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.91,
+      "mid": 6.35,
+      "high": 6.8
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 3,
+      "note": "Strong lifestyle-buyer demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 2,
+      "note": "Tight supply, brand pull outweighs parking size"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 4,
+      "note": "Young-professional off-road and trekking crowd"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady, moderate liquidity"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": -1,
+      "note": "Smaller off-road culture, slower turnover"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 3,
+      "note": "Proximity to Western Ghats off-road circuits"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Narrow niche demand, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 1,
+      "note": "Active Kutch off-road community"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 95
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 86
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 83
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 80
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 77
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 74
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 69
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 66
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 64
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 61
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 57
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 55
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 49
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 45
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 63,
+    "5year": 49,
+    "10year": 28
+  },
+  "context": [
+    "The third-generation Thar, launched in October 2020 on Mahindra's new ladder-frame platform shared with the Scorpio-N, replaced a far more rudimentary predecessor and transformed the model from a niche off-roader into a genuine lifestyle SUV. That shift is the main reason the Thar now commands resale strength well above typical compact-SUV norms: it sells on image and capability rather than on feature-sheet competition with mainstream crossovers.",
+    "Long waiting periods through 2021 and 2022, often six to twelve months at launch, meant early buyers paid close to ex-showroom and used supply stayed thin for years afterward. That scarcity still shows up today: 2021 and 2022 Thars with low kilometres trade closer to their original price than almost any other SUV of that vintage, because so few changed hands in the first place.",
+    "Within the lineup, 4WD variants hold a clear resale edge over 2WD, since serious off-road buyers specifically seek out the shift-on-the-fly transfer case, and the diesel mHawk engine remains slightly more sought after than the mStallion turbo-petrol for long-distance and off-road use, even though petrol take-rates have risen in cities. Automatic transmission Thars, a relatively recent addition, are still a minority of used-market supply and trade at a premium where available.",
+    "The Thar's soft-top and hard-top body styles, limited rear practicality, and firm low-speed ride are known trade-offs that matter less at resale than they would on a family SUV, because the buyer pool is self-selecting. The 2024 launch of the five-door Thar Roxx expanded the nameplate's family appeal but has not meaningfully dented demand for the original three-door, which continues to be bought as a dedicated weekend and off-road vehicle."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Mahindra Thar in India?",
+      "a": "A well-maintained Thar retains approximately 83% of its ex-showroom price after two years, 77% after three years, and 66% after five years, among the strongest retention of any SUV in its price bracket. For a 2022 LX diesel 4WD with 25,000–50,000 km, the current fair-market band is roughly ₹8.41–9.68 lakh."
+    },
+    {
+      "q": "Does the Thar hold value better than other compact SUVs?",
+      "a": "Yes, significantly. The Thar's three-year retention of around 77% is roughly 14 percentage points above the compact-SUV segment average of 63%, driven by its cult following, long launch-period waiting lists that kept used supply thin, and genuine off-road capability that mainstream rivals don't offer."
+    },
+    {
+      "q": "Is diesel or petrol Thar better for resale?",
+      "a": "Diesel 4WD variants command a small but consistent premium over equivalent petrol Thars in the used market, since serious off-road and long-distance buyers specifically seek out the mHawk diesel. The gap is narrow, typically within 5–6%, and has closed further as the mStallion turbo-petrol's urban take-rate has grown."
+    },
+    {
+      "q": "How much does a Thar depreciate per year?",
+      "a": "Roughly 10% in year one and a further 7% in year two, noticeably slower than the typical SUV curve. By five years a Thar still retains about 66% of its ex-showroom value, compared to a segment average of around 49%."
+    },
+    {
+      "q": "Which city gives the best resale price for a Thar?",
+      "a": "Bengaluru currently trades at approximately +4% above the national mid, reflecting a strong base of young, off-road-oriented buyers, with Delhi NCR and Pune close behind at +3% each. Kolkata is the softest market at around −2%."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "maruti",
+      "model": "jimny",
+      "label": "Maruti Jimny"
+    },
+    {
+      "make": "mahindra",
+      "model": "scorpio-n",
+      "label": "Mahindra Scorpio-N"
+    },
+    {
+      "make": "mahindra",
+      "model": "bolero-neo",
+      "label": "Mahindra Bolero Neo"
+    }
+  ]
+}

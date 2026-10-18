@@ -1,0 +1,408 @@
+{
+  "slug": {
+    "make": "toyota",
+    "model": "hilux"
+  },
+  "make": "Toyota",
+  "model": "Hilux",
+  "segment": "Large SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "STD 4X4 MT",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 33.99
+    },
+    {
+      "name": "HIGH 4X4 MT",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 35.8
+    },
+    {
+      "name": "HIGH 4X4 AT",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 36.8
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 29.74,
+      "mid": 31.98,
+      "high": 34.22
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 28.58,
+      "mid": 30.73,
+      "high": 32.88
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 26.94,
+      "mid": 28.97,
+      "high": 31
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 25.1,
+      "mid": 26.99,
+      "high": 28.88
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 23.23,
+      "mid": 24.97,
+      "high": 26.72
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 26.02,
+      "mid": 27.98,
+      "high": 29.94
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 25.01,
+      "mid": 26.89,
+      "high": 28.77
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 23.58,
+      "mid": 25.35,
+      "high": 27.12
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 21.96,
+      "mid": 23.62,
+      "high": 25.27
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 20.32,
+      "mid": 21.85,
+      "high": 23.38
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 23.7,
+      "mid": 25.49,
+      "high": 27.27
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 22.78,
+      "mid": 24.49,
+      "high": 26.21
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 21.47,
+      "mid": 23.09,
+      "high": 24.71
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 20,
+      "mid": 21.51,
+      "high": 23.02
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 18.51,
+      "mid": 19.9,
+      "high": 21.3
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 20.91,
+      "mid": 22.48,
+      "high": 24.05
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 20.09,
+      "mid": 21.6,
+      "high": 23.12
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 18.94,
+      "mid": 20.37,
+      "high": 21.79
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 17.64,
+      "mid": 18.97,
+      "high": 20.3
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 16.33,
+      "mid": 17.56,
+      "high": 18.79
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 18.59,
+      "mid": 19.99,
+      "high": 21.38
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 17.86,
+      "mid": 19.21,
+      "high": 20.55
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 16.84,
+      "mid": 18.11,
+      "high": 19.37
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 15.69,
+      "mid": 16.87,
+      "high": 18.05
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 14.52,
+      "mid": 15.61,
+      "high": 16.7
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": -3,
+      "note": "Diesel large-SUV registration curbs soften demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": -1,
+      "note": "Thin lifestyle-pickup buyer pool"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 2,
+      "note": "Lifestyle and off-road buyer community"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 3,
+      "note": "Strong lifestyle-pickup and semi-rural pull"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 1,
+      "note": "Steady Toyota diesel loyalty"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 0,
+      "note": "Baseline demand"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Very limited pickup resale market"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 1,
+      "note": "Moderate lifestyle-SUV demand"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 92
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 86
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 81
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 68
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 34
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 62,
+    "5year": 47,
+    "10year": 26
+  },
+  "context": [
+    "The Hilux launched in India in January 2022 as a lifestyle double-cab pickup, positioned above and distinct from the commercial pickups that dominate the segment elsewhere in the world. It shares its 2.8-litre GD6 turbo-diesel engine and body-on-frame underpinnings with the Fortuner and the Innova Crysta's diesel variant, and is offered exclusively in 4x4 form with a 6-speed manual or 6-speed automatic, since Toyota does not sell the Hilux with a petrol engine, a rear-wheel-drive-only variant, or a CNG option in India.",
+    "India's GST classification treats double-cab pickups like the Hilux as SUVs for tax purposes rather than commercial vehicles, which pushes ex-showroom pricing well above what pickups command in most other right-hand-drive markets. Combined with low annual volumes, this keeps the Hilux a genuinely niche purchase rather than a mainstream one.",
+    "Resale demand is concentrated among off-road and outdoor-lifestyle enthusiasts, large landholders, and buyers who specifically want a dual-purpose vehicle that can tow and go off-road while remaining privately registered. This buyer pool is narrow compared to mainstream large SUVs, but it is also highly loyal to Toyota's diesel reliability reputation, which keeps per-unit resale firm relative to the pickup body style's usual depreciation fears.",
+    "Because the Hilux shares its drivetrain with the Fortuner, used buyers often weigh the two directly against each other, and the Hilux's resale curve tracks noticeably above the general large-SUV segment average as a result, even though its narrower body style and absence of a third row limit its addressable buyer pool."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Toyota Hilux in India?",
+      "a": "A well-maintained Hilux retains roughly 76% of its ex-showroom price after two years, 68% after three years, and 56% after five years, as of September 2026. For a 2023 diesel High 4x4 with 10,000-25,000 km, the current fair-market band is approximately ₹25.01–28.77 lakh."
+    },
+    {
+      "q": "Does the Hilux hold value better than mainstream large SUVs?",
+      "a": "Yes. Five-year retention of about 56% is roughly 9 points above the large-SUV segment average of 47%, a gap driven by Toyota's diesel reliability reputation and the Hilux sharing its drivetrain with the well-regarded Fortuner."
+    },
+    {
+      "q": "Is the Toyota Hilux available with a petrol or CNG engine in India?",
+      "a": "No. Toyota sells the Hilux in India exclusively with the 2.8-litre GD6 diesel engine, paired with either a 6-speed manual or 6-speed automatic, both in 4x4 configuration only."
+    },
+    {
+      "q": "How much does a Hilux depreciate per year?",
+      "a": "The Hilux depreciates roughly 14% in year one and another 10% in year two, before settling into a steadier 5-6% annual decline from year three onward. Ten-year retention sits at around 34%."
+    },
+    {
+      "q": "Which city gives the best resale price for a Hilux?",
+      "a": "Hyderabad trades at +3% above the national mid, reflecting strong lifestyle-pickup and semi-rural demand, with Bengaluru close behind at +2%. Delhi NCR is the softest market at roughly -3%, where diesel large-SUV registration restrictions weigh on demand."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "toyota",
+      "model": "fortuner",
+      "label": "Toyota Fortuner"
+    },
+    {
+      "make": "toyota",
+      "model": "land-cruiser-300",
+      "label": "Toyota Land Cruiser 300"
+    },
+    {
+      "make": "mahindra",
+      "model": "scorpio-n",
+      "label": "Mahindra Scorpio-N"
+    }
+  ]
+}

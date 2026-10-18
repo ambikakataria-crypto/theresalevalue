@@ -1,0 +1,650 @@
+{
+  "slug": {
+    "make": "kia",
+    "model": "carens"
+  },
+  "make": "Kia",
+  "model": "Carens",
+  "segment": "MPV",
+  "bodyType": "MPV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "PREMIUM 1.5 PETROL 7 STR",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 9.6
+    },
+    {
+      "name": "PRESTIGE PLUS 1.4 PETROL 7 STR",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 13.9
+    },
+    {
+      "name": "PRESTIGE PLUS 1.5 TURBO PETROL DCT 7 STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 15.75
+    },
+    {
+      "name": "LUXURY PLUS 1.4 PETROL DCT 6 STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 17.45
+    },
+    {
+      "name": "LUXURY PLUS 1.5 PETROL DCT 7 STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 21.65
+    },
+    {
+      "name": "PREMIUM 1.5 DIESEL 7 STR",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 11.4
+    },
+    {
+      "name": "PRESTIGE 1.5 DIESEL IMT 7 STR",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 13.85
+    },
+    {
+      "name": "LUXURY 1.5 DIESEL 7 STR",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 15.5
+    },
+    {
+      "name": "LUXURY PLUS 1.5 DIESEL IMT",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 17.55
+    },
+    {
+      "name": "LUXURY PLUS 1.5 DIESEL AT 7 STR",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 17.7
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 13.12,
+      "mid": 14.1,
+      "high": 15.09
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 12.6,
+      "mid": 13.55,
+      "high": 14.5
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 11.88,
+      "mid": 12.78,
+      "high": 13.67
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 11.07,
+      "mid": 11.9,
+      "high": 12.74
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 10.24,
+      "mid": 11.01,
+      "high": 11.79
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 11.48,
+      "mid": 12.34,
+      "high": 13.2
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 11.03,
+      "mid": 11.86,
+      "high": 12.69
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 10.4,
+      "mid": 11.18,
+      "high": 11.96
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 9.69,
+      "mid": 10.42,
+      "high": 11.14
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.96,
+      "mid": 9.64,
+      "high": 10.31
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 10.45,
+      "mid": 11.24,
+      "high": 12.03
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.05,
+      "mid": 10.8,
+      "high": 11.56
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 9.47,
+      "mid": 10.18,
+      "high": 10.9
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.82,
+      "mid": 9.49,
+      "high": 10.15
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.16,
+      "mid": 8.78,
+      "high": 9.39
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 9.22,
+      "mid": 9.91,
+      "high": 10.61
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.86,
+      "mid": 9.53,
+      "high": 10.19
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.35,
+      "mid": 8.98,
+      "high": 9.61
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.78,
+      "mid": 8.37,
+      "high": 8.95
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.2,
+      "mid": 7.74,
+      "high": 8.29
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.2,
+      "mid": 8.81,
+      "high": 9.43
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 7.88,
+      "mid": 8.47,
+      "high": 9.06
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.43,
+      "mid": 7.99,
+      "high": 8.54
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.92,
+      "mid": 7.44,
+      "high": 7.96
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.4,
+      "mid": 6.88,
+      "high": 7.37
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 12.72,
+      "mid": 13.68,
+      "high": 14.64
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 12.23,
+      "mid": 13.15,
+      "high": 14.07
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 11.53,
+      "mid": 12.39,
+      "high": 13.26
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 10.74,
+      "mid": 11.55,
+      "high": 12.35
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 9.94,
+      "mid": 10.68,
+      "high": 11.43
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 11.13,
+      "mid": 11.97,
+      "high": 12.81
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 10.7,
+      "mid": 11.5,
+      "high": 12.31
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 10.09,
+      "mid": 10.84,
+      "high": 11.6
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 9.4,
+      "mid": 10.1,
+      "high": 10.81
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 8.69,
+      "mid": 9.35,
+      "high": 10
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 10.14,
+      "mid": 10.9,
+      "high": 11.67
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 9.74,
+      "mid": 10.48,
+      "high": 11.21
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 9.19,
+      "mid": 9.88,
+      "high": 10.57
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 8.56,
+      "mid": 9.2,
+      "high": 9.85
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.92,
+      "mid": 8.52,
+      "high": 9.11
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 8.94,
+      "mid": 9.62,
+      "high": 10.29
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 8.6,
+      "mid": 9.24,
+      "high": 9.89
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 8.1,
+      "mid": 8.71,
+      "high": 9.32
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 7.55,
+      "mid": 8.12,
+      "high": 8.68
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 6.99,
+      "mid": 7.51,
+      "high": 8.04
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 7.95,
+      "mid": 8.55,
+      "high": 9.15
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 7.64,
+      "mid": 8.22,
+      "high": 8.79
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 7.2,
+      "mid": 7.75,
+      "high": 8.29
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 6.71,
+      "mid": 7.22,
+      "high": 7.72
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 6.21,
+      "mid": 6.68,
+      "high": 7.14
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 1,
+      "note": "Large family-SUV-MPV crossover demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 0,
+      "note": "Baseline; space-constrained parking is a mild drag"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 2,
+      "note": "Kia's feature-rich positioning appeals to tech-sector buyers"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady 6/7-seater family demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 1,
+      "note": "Good Kia dealer network supports resale confidence"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Family-heavy suburbs favour 3-row MPVs"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -1,
+      "note": "Slightly softer MPV demand than sedans/SUVs"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 1,
+      "note": "Diesel and CNG demand both healthy"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 82
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 66
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 58
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 55
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 43
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 29
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 27
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 64,
+    "5year": 50,
+    "10year": 29
+  },
+  "context": [
+    "The Carens launched in February 2022 as Kia's first dedicated three-row MPV for India, positioned between the sub-4-metre compact SUV segment and the larger Innova-class MPVs, with styling that deliberately borrowed SUV-like proportions to appeal to buyers who wanted MPV practicality without the traditional van-like look.",
+    "The line-up spans a 1.5-litre petrol and a 1.5-litre diesel, with no factory CNG option unlike several compact-SUV rivals it's cross-shopped against. The diesel remains the preferred choice for buyers covering long highway distances, while the petrol holds up well for lower-mileage, city-first ownership.",
+    "Kia's dealer network and service reputation in India have matured quickly since the Seltos' 2019 launch, and that brand trust transfers to the Carens, giving it noticeably better resale retention than older-generation or less-established MPV rivals, even though it still trails the Innova nameplate's decades of reputation.",
+    "Because the Carens competes directly against both MPVs and three-row SUVs, its depreciation curve sits almost exactly at the segment MPV average; buyers rarely pay a premium or steep discount purely for the Kia badge the way they might for a Toyota or an MG."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Kia Carens in India?",
+      "a": "A Kia Carens retains roughly 71% of its ex-showroom price after two years and about 62% after three years, settling near 48% by year five, based on September 2026 transaction patterns. A 2022 Prestige diesel with 25,000-50,000 km currently trades around ₹8-9 lakh."
+    },
+    {
+      "q": "Does the Carens hold value as well as the Toyota Innova Crysta?",
+      "a": "Not quite — the Innova Crysta's decades of reputation give it a stronger resale floor, but the Carens closes much of that gap against other three-row rivals and comfortably outperforms older-generation or less-established MPVs."
+    },
+    {
+      "q": "Is the diesel or petrol Carens better for resale?",
+      "a": "Diesel Carens units generally attract a slightly larger and more consistent buyer pool because of their highway-driving appeal, though the gap to petrol narrows significantly once a car crosses 75,000 km, where maintenance-cost concerns start to offset the diesel's efficiency advantage."
+    },
+    {
+      "q": "How much does a Carens depreciate per year?",
+      "a": "A Carens loses about 18% of value in year one, with 6-8 percentage point annual retention drops through year five (down to roughly 48%), a pace almost identical to the MPV segment average of 50% at the same age."
+    },
+    {
+      "q": "Which city gives the best resale price for a Carens?",
+      "a": "Bengaluru trades around +2% above the national mid thanks to strong demand for feature-rich MPVs among tech-sector buyers, while Kolkata trades roughly -1% due to comparatively softer MPV demand there."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "renault",
+      "model": "triber",
+      "label": "Renault Triber"
+    },
+    {
+      "make": "toyota",
+      "model": "innova-hycross",
+      "label": "Toyota Innova HyCross"
+    },
+    {
+      "make": "kia",
+      "model": "seltos",
+      "label": "Kia Seltos"
+    }
+  ]
+}

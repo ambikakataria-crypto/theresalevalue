@@ -1,0 +1,638 @@
+{
+  "slug": {
+    "make": "mg",
+    "model": "hector"
+  },
+  "make": "MG",
+  "model": "Hector",
+  "segment": "Large SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "STYLE 1.5 PETROL",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 14.73
+    },
+    {
+      "name": "SMART PRO 1.5 TURBO MT PETROL",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 17.99
+    },
+    {
+      "name": "SHARP PRO EX 1.5 TURBO MT PETROL",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 19.35
+    },
+    {
+      "name": "SHARP PRO 1.5 TURBO CVT PETROL",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 20.78
+    },
+    {
+      "name": "SAVVY PRO 1.5 TURBO CVT PETROL",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 21.73
+    },
+    {
+      "name": "SMART 2.0 TURBO DIESEL",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 19.06
+    },
+    {
+      "name": "SMART PRO 2.0 TURBO DIESEL",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 20.1
+    },
+    {
+      "name": "SHARP PRO 2.0 TURBO DIESEL",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 21.51
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 15.83,
+      "mid": 17.02,
+      "high": 18.22
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 15.22,
+      "mid": 16.36,
+      "high": 17.51
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 14.34,
+      "mid": 15.42,
+      "high": 16.5
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 13.36,
+      "mid": 14.37,
+      "high": 15.37
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 12.37,
+      "mid": 13.3,
+      "high": 14.23
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 13.85,
+      "mid": 14.9,
+      "high": 15.94
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 13.31,
+      "mid": 14.32,
+      "high": 15.32
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 12.55,
+      "mid": 13.5,
+      "high": 14.44
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 11.69,
+      "mid": 12.57,
+      "high": 13.45
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 10.82,
+      "mid": 11.63,
+      "high": 12.45
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 12.62,
+      "mid": 13.57,
+      "high": 14.52
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 12.13,
+      "mid": 13.04,
+      "high": 13.95
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 11.43,
+      "mid": 12.29,
+      "high": 13.15
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 10.65,
+      "mid": 11.45,
+      "high": 12.25
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 9.86,
+      "mid": 10.6,
+      "high": 11.34
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 11.13,
+      "mid": 11.97,
+      "high": 12.81
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.7,
+      "mid": 11.5,
+      "high": 12.31
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 10.08,
+      "mid": 10.84,
+      "high": 11.6
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 9.39,
+      "mid": 10.1,
+      "high": 10.81
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.69,
+      "mid": 9.35,
+      "high": 10
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 9.9,
+      "mid": 10.64,
+      "high": 11.39
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 9.51,
+      "mid": 10.23,
+      "high": 10.94
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.97,
+      "mid": 9.64,
+      "high": 10.31
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.35,
+      "mid": 8.98,
+      "high": 9.61
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.73,
+      "mid": 8.31,
+      "high": 8.89
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 16.93,
+      "mid": 18.2,
+      "high": 19.48
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 16.27,
+      "mid": 17.49,
+      "high": 18.72
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 15.34,
+      "mid": 16.49,
+      "high": 17.64
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 14.29,
+      "mid": 15.36,
+      "high": 16.44
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 13.22,
+      "mid": 14.21,
+      "high": 15.21
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 14.81,
+      "mid": 15.93,
+      "high": 17.04
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 14.23,
+      "mid": 15.3,
+      "high": 16.38
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 13.42,
+      "mid": 14.43,
+      "high": 15.44
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 12.5,
+      "mid": 13.44,
+      "high": 14.38
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 11.57,
+      "mid": 12.44,
+      "high": 13.31
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 13.49,
+      "mid": 14.51,
+      "high": 15.52
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 12.96,
+      "mid": 13.94,
+      "high": 14.92
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 12.22,
+      "mid": 13.14,
+      "high": 14.06
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 11.39,
+      "mid": 12.24,
+      "high": 13.1
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 10.54,
+      "mid": 11.33,
+      "high": 12.12
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 11.9,
+      "mid": 12.8,
+      "high": 13.69
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 11.44,
+      "mid": 12.3,
+      "high": 13.16
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 10.78,
+      "mid": 11.59,
+      "high": 12.4
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 10.04,
+      "mid": 10.8,
+      "high": 11.56
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 9.29,
+      "mid": 9.99,
+      "high": 10.69
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 10.58,
+      "mid": 11.38,
+      "high": 12.17
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 10.17,
+      "mid": 10.93,
+      "high": 11.7
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 9.58,
+      "mid": 10.31,
+      "high": 11.03
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 8.93,
+      "mid": 9.6,
+      "high": 10.27
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 8.26,
+      "mid": 8.88,
+      "high": 9.51
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 1,
+      "note": "Large-SUV demand strong, diesel still preferred"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 1,
+      "note": "Space premium favours feature-loaded SUVs"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 2,
+      "note": "Tech-forward buyers respond to MG's connected features"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady demand for loaded SUVs"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": -1,
+      "note": "Thinner MG resale network than Japanese/Korean rivals"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 0,
+      "note": "Baseline; follows Mumbai but softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Weakest MG resale liquidity among metros"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -1,
+      "note": "Diesel demand present but buyers favour established brands"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 88
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 79
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 66
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 61
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 39
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 28
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 26
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 24
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 23
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 21
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 60,
+    "5year": 47,
+    "10year": 27
+  },
+  "context": [
+    "MG entered India in 2019 and the Hector was its first product, built on a stretched version of the Baojun/Wuling architecture with a heavy emphasis on in-car connectivity, a large touchscreen, and segment-leading feature counts. That gadget-first positioning won early attention but a newer, less-proven badge means resale buyers discount it more heavily than they would an equivalent Hyundai or Tata product.",
+    "The current Hector line-up spans a 1.5-litre turbo-petrol and a 2.0-litre diesel, with the diesel still dominating highway-driven, high-km Hectors and the petrol more common on city-first, lower-mileage cars.",
+    "As a newer, China-linked brand without the multi-decade dealer trust Maruti, Hyundai, or Toyota enjoy in India, MG's depreciation curve is steeper than segment peers like the Tata Harrier, particularly past the three-year mark when extended-warranty coverage lapses and buyers become more price-sensitive about future parts support.",
+    "Early software and infotainment glitches reported on 2019-2021 units, since resolved via updates, still linger in buyer perception and widen price negotiation on older examples, even when the issues have been fully patched at the dealership."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of an MG Hector in India?",
+      "a": "An MG Hector retains roughly 66% of its ex-showroom price after two years and around 56% after three years, dropping to about 42% by year five, as of September 2026 transaction data. A 2022 Sharp diesel with 25,000-50,000 km currently trades in the low-to-mid ₹11-12 lakh range."
+    },
+    {
+      "q": "Is diesel or petrol better for Hector resale?",
+      "a": "The diesel remains the most liquid used-market option because it dominates the high-km, long-distance segment of Hector buyers, while the turbo-petrol holds up well on lower-mileage, city-first cars."
+    },
+    {
+      "q": "Why does the Hector depreciate faster than a Tata Harrier?",
+      "a": "The Hector's 5-year retention of about 42% sits roughly 5 points below the Large SUV segment average of 47%, largely because MG is a newer entrant in India and buyers apply a bigger resale discount for brand and long-term parts-support uncertainty than they do for Tata."
+    },
+    {
+      "q": "How much does a Hector depreciate per year?",
+      "a": "A Hector typically loses about 21% of value in year one, settling into 7-9 percentage point annual retention drops through year five (to roughly 42%), and flattening gradually from there to around 21% retention at 10 years."
+    },
+    {
+      "q": "Which city gives the best resale price for a Hector?",
+      "a": "Bengaluru trades around +2% above the national mid, helped by strong demand for connected-feature SUVs among tech-sector buyers, while Kolkata trades roughly -3% due to the thinnest MG resale liquidity among major metros."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "tata",
+      "model": "harrier",
+      "label": "Tata Harrier"
+    },
+    {
+      "make": "mahindra",
+      "model": "scorpio-n",
+      "label": "Mahindra Scorpio-N"
+    },
+    {
+      "make": "toyota",
+      "model": "fortuner",
+      "label": "Toyota Fortuner"
+    }
+  ]
+}

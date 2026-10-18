@@ -1,0 +1,149 @@
+{
+  "slug": { "make": "tata", "model": "sierra" },
+  "make": "Tata",
+  "model": "Sierra",
+  "segment": "Midsize SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-09-30",
+  "refreshCadence": "Monthly",
+  "variants": [
+    { "name": "Smart Petrol",            "fuel": "Petrol", "transmission": "6MT", "exShowroom": 12.0 },
+    { "name": "Pure Petrol",             "fuel": "Petrol", "transmission": "6MT", "exShowroom": 13.2 },
+    { "name": "Pure Diesel",             "fuel": "Diesel", "transmission": "6MT", "exShowroom": 14.0 },
+    { "name": "Adventure Petrol DCT",    "fuel": "Petrol", "transmission": "DCT", "exShowroom": 15.5 },
+    { "name": "Adventure Diesel AT",     "fuel": "Diesel", "transmission": "AT",  "exShowroom": 16.8 },
+    { "name": "Accomplished Diesel AT",  "fuel": "Diesel", "transmission": "AT",  "exShowroom": 19.0 },
+    { "name": "Accomplished+ Diesel AWD AT", "fuel": "Diesel", "transmission": "AT", "exShowroom": 21.5 }
+  ],
+  "permutations": [
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Petrol", "low": 9.21, "mid": 9.90, "high": 10.59 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "Petrol", "low": 8.85, "mid": 9.51, "high": 10.18 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Petrol", "low": 8.34, "mid": 8.97, "high": 9.60 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Petrol", "low": 7.77, "mid": 8.36, "high": 8.95 },
+    { "year": 2024, "kmBand": "75k+",   "fuel": "Petrol", "low": 7.19, "mid": 7.73, "high": 8.27 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Petrol", "low": 8.20, "mid": 8.82, "high": 9.44 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "Petrol", "low": 7.88, "mid": 8.47, "high": 9.06 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Petrol", "low": 7.43, "mid": 7.99, "high": 8.55 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Petrol", "low": 6.92, "mid": 7.44, "high": 7.96 },
+    { "year": 2023, "kmBand": "75k+",   "fuel": "Petrol", "low": 6.41, "mid": 6.89, "high": 7.37 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Petrol", "low": 7.32, "mid": 7.87, "high": 8.42 },
+    { "year": 2022, "kmBand": "10-25k", "fuel": "Petrol", "low": 7.03, "mid": 7.56, "high": 8.09 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "Petrol", "low": 6.63, "mid": 7.13, "high": 7.63 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Petrol", "low": 6.17, "mid": 6.64, "high": 7.10 },
+    { "year": 2022, "kmBand": "75k+",   "fuel": "Petrol", "low": 5.72, "mid": 6.15, "high": 6.58 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "Petrol", "low": 6.57, "mid": 7.06, "high": 7.56 },
+    { "year": 2021, "kmBand": "10-25k", "fuel": "Petrol", "low": 6.31, "mid": 6.78, "high": 7.25 },
+    { "year": 2021, "kmBand": "25-50k", "fuel": "Petrol", "low": 5.95, "mid": 6.40, "high": 6.85 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "Petrol", "low": 5.54, "mid": 5.96, "high": 6.38 },
+    { "year": 2021, "kmBand": "75k+",   "fuel": "Petrol", "low": 5.13, "mid": 5.52, "high": 5.91 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "Petrol", "low": 5.80, "mid": 6.24, "high": 6.68 },
+    { "year": 2020, "kmBand": "10-25k", "fuel": "Petrol", "low": 5.58, "mid": 6.00, "high": 6.42 },
+    { "year": 2020, "kmBand": "25-50k", "fuel": "Petrol", "low": 5.26, "mid": 5.65, "high": 6.05 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "Petrol", "low": 4.90, "mid": 5.27, "high": 5.64 },
+    { "year": 2020, "kmBand": "75k+",   "fuel": "Petrol", "low": 4.53, "mid": 4.87, "high": 5.21 },
+
+    { "year": 2024, "kmBand": "0-10k",  "fuel": "Diesel", "low": 12.10, "mid": 13.01, "high": 13.92 },
+    { "year": 2024, "kmBand": "10-25k", "fuel": "Diesel", "low": 11.63, "mid": 12.50, "high": 13.38 },
+    { "year": 2024, "kmBand": "25-50k", "fuel": "Diesel", "low": 10.97, "mid": 11.79, "high": 12.61 },
+    { "year": 2024, "kmBand": "50-75k", "fuel": "Diesel", "low": 10.21, "mid": 10.98, "high": 11.75 },
+    { "year": 2024, "kmBand": "75k+",   "fuel": "Diesel", "low": 9.45,  "mid": 10.16, "high": 10.87 },
+
+    { "year": 2023, "kmBand": "0-10k",  "fuel": "Diesel", "low": 10.78, "mid": 11.59, "high": 12.40 },
+    { "year": 2023, "kmBand": "10-25k", "fuel": "Diesel", "low": 10.36, "mid": 11.14, "high": 11.92 },
+    { "year": 2023, "kmBand": "25-50k", "fuel": "Diesel", "low": 9.77,  "mid": 10.50, "high": 11.24 },
+    { "year": 2023, "kmBand": "50-75k", "fuel": "Diesel", "low": 9.10,  "mid": 9.78,  "high": 10.47 },
+    { "year": 2023, "kmBand": "75k+",   "fuel": "Diesel", "low": 8.42,  "mid": 9.05,  "high": 9.69 },
+
+    { "year": 2022, "kmBand": "0-10k",  "fuel": "Diesel", "low": 9.62, "mid": 10.34, "high": 11.06 },
+    { "year": 2022, "kmBand": "10-25k", "fuel": "Diesel", "low": 9.24, "mid": 9.93,  "high": 10.63 },
+    { "year": 2022, "kmBand": "25-50k", "fuel": "Diesel", "low": 8.71, "mid": 9.37,  "high": 10.03 },
+    { "year": 2022, "kmBand": "50-75k", "fuel": "Diesel", "low": 8.12, "mid": 8.73,  "high": 9.34 },
+    { "year": 2022, "kmBand": "75k+",   "fuel": "Diesel", "low": 7.51, "mid": 8.07,  "high": 8.63 },
+
+    { "year": 2021, "kmBand": "0-10k",  "fuel": "Diesel", "low": 8.62, "mid": 9.27, "high": 9.92 },
+    { "year": 2021, "kmBand": "10-25k", "fuel": "Diesel", "low": 8.29, "mid": 8.91, "high": 9.53 },
+    { "year": 2021, "kmBand": "25-50k", "fuel": "Diesel", "low": 7.81, "mid": 8.40, "high": 8.99 },
+    { "year": 2021, "kmBand": "50-75k", "fuel": "Diesel", "low": 7.28, "mid": 7.82, "high": 8.37 },
+    { "year": 2021, "kmBand": "75k+",   "fuel": "Diesel", "low": 6.73, "mid": 7.24, "high": 7.75 },
+
+    { "year": 2020, "kmBand": "0-10k",  "fuel": "Diesel", "low": 7.63, "mid": 8.20, "high": 8.77 },
+    { "year": 2020, "kmBand": "10-25k", "fuel": "Diesel", "low": 7.33, "mid": 7.88, "high": 8.43 },
+    { "year": 2020, "kmBand": "25-50k", "fuel": "Diesel", "low": 6.91, "mid": 7.43, "high": 7.95 },
+    { "year": 2020, "kmBand": "50-75k", "fuel": "Diesel", "low": 6.44, "mid": 6.92, "high": 7.41 },
+    { "year": 2020, "kmBand": "75k+",   "fuel": "Diesel", "low": 5.95, "mid": 6.40, "high": 6.85 }
+  ],
+  "cityVariance": [
+    { "city": "Delhi NCR",  "variancePct":  0, "note": "Baseline; neutral launch-period demand" },
+    { "city": "Mumbai",     "variancePct":  2, "note": "Strong SUV appetite, nostalgia around the badge" },
+    { "city": "Bengaluru",  "variancePct":  3, "note": "Waitlists at launch supporting early used pricing" },
+    { "city": "Hyderabad",  "variancePct":  1, "note": "Steady midsize SUV demand" },
+    { "city": "Chennai",    "variancePct": -1, "note": "Crowded segment, strong Korean/Japanese competition" },
+    { "city": "Pune",       "variancePct":  2, "note": "Good Tata dealer network, enthusiastic early adopters" },
+    { "city": "Kolkata",    "variancePct": -2, "note": "Slower uptake of new nameplate" },
+    { "city": "Ahmedabad",  "variancePct":  1, "note": "Solid Tata brand presence, diesel-friendly market" }
+  ],
+  "retentionCurve": [
+    { "ageYears": 0.5, "retentionPct": 91 },
+    { "ageYears": 1,   "retentionPct": 84 },
+    { "ageYears": 1.5, "retentionPct": 78 },
+    { "ageYears": 2,   "retentionPct": 73 },
+    { "ageYears": 2.5, "retentionPct": 69 },
+    { "ageYears": 3,   "retentionPct": 65 },
+    { "ageYears": 3.5, "retentionPct": 61 },
+    { "ageYears": 4,   "retentionPct": 58 },
+    { "ageYears": 4.5, "retentionPct": 55 },
+    { "ageYears": 5,   "retentionPct": 52 },
+    { "ageYears": 5.5, "retentionPct": 49 },
+    { "ageYears": 6,   "retentionPct": 46 },
+    { "ageYears": 6.5, "retentionPct": 44 },
+    { "ageYears": 7,   "retentionPct": 41 },
+    { "ageYears": 7.5, "retentionPct": 39 },
+    { "ageYears": 8,   "retentionPct": 37 },
+    { "ageYears": 8.5, "retentionPct": 35 },
+    { "ageYears": 9,   "retentionPct": 33 },
+    { "ageYears": 9.5, "retentionPct": 31 },
+    { "ageYears": 10,  "retentionPct": 29 }
+  ],
+  "segmentAverageRetention": {
+    "3year": 58,
+    "5year": 44,
+    "10year": 23
+  },
+  "context": [
+    "The Sierra name first appeared on Indian roads between 1991 and 2002, built on a shortened Tata Estate platform and remembered for its distinctive wraparound rear glass greenhouse — one of the earliest dedicated SUVs sold in India and a genuine cult favourite decades after it left showrooms. Tata shelved the name for over twenty years before reviving it, first as a concept at Auto Expo 2020 and later as a full production midsize SUV built on the company's newer SUV architecture, slotted between the Nexon and the Harrier.",
+    "The modern Sierra is offered with both a turbo-petrol and the Kryotec diesel engine, each available with manual and automatic gearboxes, giving it a broader powertrain spread than most midsize SUV rivals. That flexibility is good for buyers but means used-market pricing bands vary more by fuel and gearbox combination than on single-engine competitors.",
+    "Because the Sierra is a recently relaunched nameplate, its resale figures here reflect early-market estimates rather than a long depreciation track record the way the Swift or the Fortuner have. Early demand has been boosted by nostalgia around the badge and launch-period waiting lists at Tata dealerships, both of which tend to support used pricing in a model's first two to three years before the curve settles into a more typical midsize SUV shape.",
+    "Longer term, the Sierra's resale will hinge on whether Tata's wide service network and steadily improving build-quality perception for its newer-generation SUVs can keep pace with a crowded midsize SUV segment dominated by the Creta and the Seltos. Sustaining demand beyond the initial launch novelty, rather than the badge's heritage alone, will determine whether the Sierra holds value as well as the segment's established leaders."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of the new Tata Sierra?",
+      "a": "Based on current model-level estimates, a well-maintained Sierra retains approximately 73% of its ex-showroom price after two years and around 52% after five years, as of September 2026. For a 2023 Pure diesel with 10,000–25,000 km, the fair-market band is roughly ₹10.36–11.14 lakh."
+    },
+    {
+      "q": "Is it risky to buy a used Sierra given it's a new nameplate?",
+      "a": "The figures here are model-level estimates rather than a long sales history, since the Sierra only recently relaunched. Early resale has benefited from launch-period waiting lists and badge nostalgia, both of which tend to fade over the first two to three years as supply catches up with demand."
+    },
+    {
+      "q": "Does the Sierra hold value better than the midsize SUV segment average?",
+      "a": "Currently, yes — the Sierra's own retention of 65% at three years and 52% at five years runs a few points above the segment benchmark of 58% and 44%, largely reflecting sustained launch-period demand rather than a long-run depreciation trend."
+    },
+    {
+      "q": "Does diesel or petrol hold value better on the Sierra?",
+      "a": "Both fuels follow the same underlying depreciation curve; diesel variants carry a higher absolute resale value because of their higher ex-showroom pricing and AWD availability on the Accomplished+ trim, not because diesel retains a higher percentage of its original price."
+    },
+    {
+      "q": "Which city gives the best resale price for a Tata Sierra?",
+      "a": "Bengaluru currently trades around 3% above the national mid, reflecting strong early waitlists, followed by Mumbai and Pune at roughly 2% above. Kolkata trades about 2% below baseline, reflecting slower early uptake of the new nameplate."
+    }
+  ],
+  "relatedModels": [
+    { "make": "tata", "model": "harrier", "label": "Tata Harrier" },
+    { "make": "hyundai", "model": "creta", "label": "Hyundai Creta" },
+    { "make": "kia", "model": "seltos", "label": "Kia Seltos" }
+  ]
+}

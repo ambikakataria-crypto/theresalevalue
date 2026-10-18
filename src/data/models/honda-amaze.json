@@ -1,0 +1,432 @@
+{
+  "slug": {
+    "make": "honda",
+    "model": "amaze"
+  },
+  "make": "Honda",
+  "model": "Amaze",
+  "segment": "Sedan",
+  "bodyType": "Sedan",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "1.2L I-VTEC E",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 6.63
+    },
+    {
+      "name": "1.2L I-VTEC S",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 7.47
+    },
+    {
+      "name": "1.2L I-VTEC S CVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 8.37
+    },
+    {
+      "name": "1.2L I-VTEC VX",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 8.66
+    },
+    {
+      "name": "1.2L I-VTEC ELITE EDITION",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 9.04
+    },
+    {
+      "name": "1.2L I-VTEC VX CVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 9.36
+    },
+    {
+      "name": "1.2L I-VTEC ELITE EDITION CVT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 9.86
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.1,
+      "mid": 7.64,
+      "high": 8.17
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.82,
+      "mid": 7.34,
+      "high": 7.85
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.43,
+      "mid": 6.92,
+      "high": 7.4
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.99,
+      "mid": 6.44,
+      "high": 6.9
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.55,
+      "mid": 5.96,
+      "high": 6.38
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.21,
+      "mid": 6.68,
+      "high": 7.15
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.97,
+      "mid": 6.42,
+      "high": 6.87
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.63,
+      "mid": 6.05,
+      "high": 6.48
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.24,
+      "mid": 5.64,
+      "high": 6.03
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.85,
+      "mid": 5.22,
+      "high": 5.58
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.66,
+      "mid": 6.09,
+      "high": 6.51
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.44,
+      "mid": 5.85,
+      "high": 6.26
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.13,
+      "mid": 5.51,
+      "high": 5.9
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.78,
+      "mid": 5.14,
+      "high": 5.5
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.42,
+      "mid": 4.75,
+      "high": 5.09
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.99,
+      "mid": 5.37,
+      "high": 5.74
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.8,
+      "mid": 5.16,
+      "high": 5.52
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.52,
+      "mid": 4.86,
+      "high": 5.2
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.21,
+      "mid": 4.53,
+      "high": 4.85
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.9,
+      "mid": 4.19,
+      "high": 4.49
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.44,
+      "mid": 4.77,
+      "high": 5.11
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.27,
+      "mid": 4.59,
+      "high": 4.91
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.02,
+      "mid": 4.32,
+      "high": 4.63
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.75,
+      "mid": 4.03,
+      "high": 4.31
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.47,
+      "mid": 3.73,
+      "high": 3.99
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 0,
+      "note": "Balanced demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 1,
+      "note": "Steady compact-sedan demand"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 2,
+      "note": "Honda brand loyalty is strong"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 2,
+      "note": "Honda resonates strongly in the south"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 3,
+      "note": "Deep Honda brand loyalty, popular for corporate transport"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Steady demand"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Softer compact-sedan demand"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 0,
+      "note": "Balanced demand"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 83
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 73
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 69
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 42
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 30
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 62,
+    "5year": 49,
+    "10year": 27
+  },
+  "context": [
+    "The second-generation Amaze launched in 2018 on Honda's then-new global small-car platform and was given a facelift in 2021, continuing its role as Honda's sub-four-metre sedan and typically the brand's most accessible entry point in India. It discontinued the 1.5-litre i-DTEC diesel after BS6 Phase 2 norms made the engine uneconomical to certify, so every Amaze built since roughly 2020 is petrol-only, offered with either a 5-speed manual or a CVT.",
+    "The Amaze's generous boot space and comfortable rear seat relative to its footprint have made it a popular choice for corporate and airport transport fleets as well as private owner-drivers, a dual ownership profile that is broader than the Aura's heavier fleet skew but still means buyers should weigh actual usage and service records over age alone when assessing a used car.",
+    "Resale benefits from Honda's long-standing reputation for engine durability, though the Amaze generally trails its City sibling in absolute resale premium since its trims carry less feature content and the car is positioned as the value entry point in Honda's range rather than the flagship. Within its own segment of sub-four-metre sedans, however, it holds up competitively against rivals like the Dzire and Aura.",
+    "CVT variants have increasingly closed the resale gap with manual Amaze units as automatic transmissions have become the default preference among urban sedan buyers, and the brand's particularly strong loyalty in southern India means Amaze units in Chennai and Hyderabad tend to resell faster and at firmer prices than the national average."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Honda Amaze in India?",
+      "a": "A well-maintained Amaze retains roughly 73% of its ex-showroom value after two years and 65% after three years, as of September 2026. A 2023 petrol V-CVT with 25,000-50,000 km currently trades in a fair-market band of roughly ₹7.0-7.5 lakh."
+    },
+    {
+      "q": "Does the Honda Amaze hold value as well as the Honda City?",
+      "a": "It comes close but generally trails the City by a few percentage points at the same age, since the Amaze is positioned as Honda's value entry sedan with less feature content, though it remains competitive against direct segment rivals like the Dzire and Aura."
+    },
+    {
+      "q": "How much does a Honda Amaze depreciate per year?",
+      "a": "The Amaze loses roughly 17% in year one and 9% in year two, then declines 6-7% annually through years three to five, reaching about 53% retention at the five-year mark."
+    },
+    {
+      "q": "Why doesn't the Honda Amaze come with a diesel option anymore?",
+      "a": "Honda discontinued the Amaze's 1.5-litre i-DTEC diesel after BS6 Phase 2 emission norms made it uneconomical to re-certify, so every Amaze sold since around 2020 is petrol-only with a manual or CVT."
+    },
+    {
+      "q": "Which city gives the best resale price for a Honda Amaze?",
+      "a": "Chennai currently trades at roughly +3% above the national mid thanks to strong Honda brand loyalty and demand from corporate transport buyers, while Kolkata trades at around -2%."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "maruti",
+      "model": "dzire",
+      "label": "Maruti Dzire"
+    },
+    {
+      "make": "hyundai",
+      "model": "aura",
+      "label": "Hyundai Aura"
+    },
+    {
+      "make": "honda",
+      "model": "city",
+      "label": "Honda City"
+    }
+  ]
+}

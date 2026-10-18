@@ -1,0 +1,632 @@
+{
+  "slug": {
+    "make": "land-rover",
+    "model": "defender"
+  },
+  "make": "Land Rover",
+  "model": "Defender",
+  "segment": "Large SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-09-30",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "110 S",
+      "fuel": "Diesel",
+      "transmission": "8AT",
+      "exShowroom": 100.0
+    },
+    {
+      "name": "110 S",
+      "fuel": "Petrol",
+      "transmission": "8AT",
+      "exShowroom": 108.0
+    },
+    {
+      "name": "110 SE",
+      "fuel": "Diesel",
+      "transmission": "8AT",
+      "exShowroom": 118.0
+    },
+    {
+      "name": "110 HSE",
+      "fuel": "Diesel",
+      "transmission": "8AT",
+      "exShowroom": 135.0
+    },
+    {
+      "name": "130 HSE",
+      "fuel": "Diesel",
+      "transmission": "8AT",
+      "exShowroom": 148.0
+    },
+    {
+      "name": "110 X-Dynamic HSE",
+      "fuel": "Petrol",
+      "transmission": "8AT",
+      "exShowroom": 152.0
+    },
+    {
+      "name": "110 V8",
+      "fuel": "Petrol",
+      "transmission": "8AT",
+      "exShowroom": 171.0
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 120.9,
+      "mid": 129.3,
+      "high": 137.7
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 114.85,
+      "mid": 122.84,
+      "high": 130.82
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 107.6,
+      "mid": 115.08,
+      "high": 122.56
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 99.13,
+      "mid": 106.03,
+      "high": 112.92
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 90.67,
+      "mid": 96.98,
+      "high": 103.28
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 102.76,
+      "mid": 109.91,
+      "high": 117.05
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 97.62,
+      "mid": 104.41,
+      "high": 111.2
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 91.46,
+      "mid": 97.82,
+      "high": 104.17
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 84.26,
+      "mid": 90.12,
+      "high": 95.98
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 77.07,
+      "mid": 82.43,
+      "high": 87.79
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 87.04,
+      "mid": 93.1,
+      "high": 99.15
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 82.69,
+      "mid": 88.44,
+      "high": 94.19
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 77.47,
+      "mid": 82.86,
+      "high": 88.24
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 71.38,
+      "mid": 76.34,
+      "high": 81.3
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 65.28,
+      "mid": 69.82,
+      "high": 74.36
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 72.54,
+      "mid": 77.58,
+      "high": 82.62
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 68.91,
+      "mid": 73.7,
+      "high": 78.49
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 64.56,
+      "mid": 69.05,
+      "high": 73.53
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 59.48,
+      "mid": 63.62,
+      "high": 67.75
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 54.4,
+      "mid": 58.19,
+      "high": 61.97
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 60.45,
+      "mid": 64.65,
+      "high": 68.85
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 57.43,
+      "mid": 61.42,
+      "high": 65.41
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 53.8,
+      "mid": 57.54,
+      "high": 61.28
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 49.57,
+      "mid": 53.01,
+      "high": 56.46
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 45.34,
+      "mid": 48.49,
+      "high": 51.64
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 105.4,
+      "mid": 112.72,
+      "high": 120.05
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 100.13,
+      "mid": 107.09,
+      "high": 114.05
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 93.8,
+      "mid": 100.33,
+      "high": 106.85
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 86.43,
+      "mid": 92.43,
+      "high": 98.44
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 79.05,
+      "mid": 84.54,
+      "high": 90.04
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 89.59,
+      "mid": 95.82,
+      "high": 102.04
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 85.11,
+      "mid": 91.03,
+      "high": 96.94
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 79.73,
+      "mid": 85.28,
+      "high": 90.82
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 73.46,
+      "mid": 78.57,
+      "high": 83.68
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 67.19,
+      "mid": 71.86,
+      "high": 76.53
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 75.89,
+      "mid": 81.16,
+      "high": 86.44
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 72.09,
+      "mid": 77.1,
+      "high": 82.12
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 67.54,
+      "mid": 72.23,
+      "high": 76.93
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 62.23,
+      "mid": 66.55,
+      "high": 70.88
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 56.91,
+      "mid": 60.87,
+      "high": 64.83
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 63.24,
+      "mid": 67.63,
+      "high": 72.03
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 60.08,
+      "mid": 64.25,
+      "high": 68.43
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 56.28,
+      "mid": 60.2,
+      "high": 64.11
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 51.86,
+      "mid": 55.46,
+      "high": 59.07
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 47.43,
+      "mid": 50.73,
+      "high": 54.02
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 52.7,
+      "mid": 56.36,
+      "high": 60.03
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 50.06,
+      "mid": 53.54,
+      "high": 57.02
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 46.9,
+      "mid": 50.16,
+      "high": 53.42
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 43.21,
+      "mid": 46.22,
+      "high": 49.22
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 39.52,
+      "mid": 42.27,
+      "high": 45.02
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 4,
+      "note": "Largest concentration of buyers"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 4,
+      "note": "Strong luxury-SUV demand"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 3,
+      "note": "Deep-pocketed tech-sector buyers"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 0,
+      "note": "Thin but present luxury demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": -2,
+      "note": "Very few listings, longer sale cycle"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 0,
+      "note": "Spillover demand from Mumbai"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Minimal ultra-luxury SUV market"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -1,
+      "note": "Niche demand, few authorised buyers"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 86
+    },
+    {
+      "ageYears": 1.0,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 2.0,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 3.0,
+      "retentionPct": 55
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 4.0,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 5.0,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 6.0,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 7.0,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 8.0,
+      "retentionPct": 28
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 27
+    },
+    {
+      "ageYears": 9.0,
+      "retentionPct": 25
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 24
+    },
+    {
+      "ageYears": 10.0,
+      "retentionPct": 23
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 59,
+    "5year": 46,
+    "10year": 28
+  },
+  "context": [
+    "The current Defender, internally the L663, is a ground-up reinterpretation launched globally in 2019 and in India in 2020, replacing the old ladder-frame, leaf-sprung original with a stiff monocoque D7x platform shared with other modern Land Rovers. This unibody switch made the new Defender dramatically more comfortable and capable on-road than its utilitarian predecessor, but it also means the car is mechanically closer to a Range Rover than to a traditional body-on-frame off-roader, a distinction that matters to resale buyers evaluating long-term running costs.",
+    "India sells the Defender entirely as a fully built-up import; JLR's Pune plant handles locally-assembled models like the Discovery Sport and XE/XF, but not the Defender. Volumes remain small by Indian car-market standards, a few hundred units a year across the entire range, which means the used Defender market is thin and prices are negotiated car-by-car rather than set by a deep pool of comparable listings.",
+    "Running costs are the single biggest factor pulling down resale value in percentage terms. Authorised service centres are limited to a handful of major cities, parts are imported, and routine maintenance on the air suspension and electronics common to this generation can be expensive outside the factory warranty period, which pushes many used buyers toward certified pre-owned programmes rather than private resale and compresses what private sellers can realistically ask.",
+    "Despite the steep percentage depreciation typical of ultra-luxury imports, the Defender retains a genuine enthusiast following built on its design heritage and real off-road capability, and exceptionally low-mileage, well-documented examples in sought-after configurations like the V8 can hold a floor value that mass-market large SUVs in rupee terms never approach, even as their retention percentage looks weaker on paper."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Land Rover Defender in India?",
+      "a": "A well-maintained Defender retains roughly 65% of its ex-showroom price after two years and 55% after three years, as of September 2026, reflecting the steep percentage depreciation typical of ultra-luxury imports, even though absolute values remain high. A 2023 diesel 110 with under 25,000 km currently trades in a fair-market band of roughly ₹88-96 lakh."
+    },
+    {
+      "q": "Why does the Defender depreciate faster in percentage terms than mass-market SUVs?",
+      "a": "High service costs at a limited number of authorised centres, imported parts, and a thin pool of qualified used buyers all push down what the Defender retains at 5 and 10 years (41% and 23% respectively) compared with the broader large-SUV segment average of 46% and 28%, even though the car itself holds a stronger demand floor than most imports."
+    },
+    {
+      "q": "How much does a Land Rover Defender depreciate per year?",
+      "a": "The Defender loses roughly 22% of value in its first year, a further 10-12% in year two, then continues declining 5-8% annually, settling around 41% retention at the five-year mark."
+    },
+    {
+      "q": "Does the Defender V8 hold value better than the diesel variants?",
+      "a": "The V8 petrol depreciates at a similar percentage rate to other Defenders, but because its starting price is far higher, a clean low-mileage V8 can still command a meaningfully larger absolute resale value than any diesel variant at the same age."
+    },
+    {
+      "q": "Where is the Defender easiest to resell in India?",
+      "a": "Delhi NCR and Mumbai concentrate the large majority of India's Defender ownership and used-buyer interest, trading roughly 4% above the national mid, while cities like Kolkata and Chennai see very few listings and longer selling cycles."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "land-rover",
+      "model": "range-rover",
+      "label": "Land Rover Range Rover"
+    },
+    {
+      "make": "toyota",
+      "model": "land-cruiser-300",
+      "label": "Toyota Land Cruiser 300"
+    },
+    {
+      "make": "mercedes-benz",
+      "model": "g-class",
+      "label": "Mercedes-Benz G-Class"
+    }
+  ]
+}

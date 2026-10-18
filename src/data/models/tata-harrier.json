@@ -1,0 +1,450 @@
+{
+  "slug": {
+    "make": "tata",
+    "model": "harrier"
+  },
+  "make": "Tata",
+  "model": "Harrier",
+  "segment": "Midsize SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "SMART",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 15.49
+    },
+    {
+      "name": "PURE (O)",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 17.49
+    },
+    {
+      "name": "PURE PLUS S",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 19.69
+    },
+    {
+      "name": "ADVENTURE",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 20.19
+    },
+    {
+      "name": "PURE PLUS S DARK EDITION AT",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 21.39
+    },
+    {
+      "name": "ADVENTURE PLUS A",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 22.69
+    },
+    {
+      "name": "ADVENTURE PLUS AT",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 23.09
+    },
+    {
+      "name": "FEARLESS DUAL TONE AT",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 24.39
+    },
+    {
+      "name": "FEARLESS DARK EDITION AT",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 24.94
+    },
+    {
+      "name": "FEARLESS PLUS DARK EDITION AT",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 26.44
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 18.06,
+      "mid": 19.42,
+      "high": 20.78
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 17.36,
+      "mid": 18.66,
+      "high": 19.97
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 16.36,
+      "mid": 17.6,
+      "high": 18.83
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 15.24,
+      "mid": 16.39,
+      "high": 17.54
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 14.11,
+      "mid": 15.17,
+      "high": 16.23
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 15.8,
+      "mid": 16.99,
+      "high": 18.18
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 15.19,
+      "mid": 16.33,
+      "high": 17.47
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 14.32,
+      "mid": 15.4,
+      "high": 16.47
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 13.34,
+      "mid": 14.34,
+      "high": 15.35
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 12.34,
+      "mid": 13.27,
+      "high": 14.2
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 14.4,
+      "mid": 15.48,
+      "high": 16.56
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 13.83,
+      "mid": 14.88,
+      "high": 15.92
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 13.04,
+      "mid": 14.02,
+      "high": 15.01
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 12.15,
+      "mid": 13.06,
+      "high": 13.98
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 11.24,
+      "mid": 12.09,
+      "high": 12.94
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 12.7,
+      "mid": 13.65,
+      "high": 14.61
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 12.2,
+      "mid": 13.12,
+      "high": 14.04
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 11.5,
+      "mid": 12.37,
+      "high": 13.24
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 10.72,
+      "mid": 11.52,
+      "high": 12.33
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 9.92,
+      "mid": 10.66,
+      "high": 11.41
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 11.29,
+      "mid": 12.14,
+      "high": 12.99
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 10.85,
+      "mid": 11.67,
+      "high": 12.48
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 10.23,
+      "mid": 11,
+      "high": 11.77
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 9.53,
+      "mid": 10.25,
+      "high": 10.96
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 8.82,
+      "mid": 9.48,
+      "high": 10.14
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": -2,
+      "note": "Diesel-SUV demand softening with registration curbs"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 2,
+      "note": "Tight premium-SUV supply"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 3,
+      "note": "Strong family-SUV and highway demand"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 2,
+      "note": "Steady demand among upgrade buyers"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Follows Mumbai, slightly softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Softer prices, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 0,
+      "note": "Near-baseline overall"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 89
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 81
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 75
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 70
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 61
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 57
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 51
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 45
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 43
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 40
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 29
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 27
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 58,
+    "5year": 45,
+    "10year": 25
+  },
+  "context": [
+    "The Harrier launched in 2019 as Tata's first genuine midsize SUV built on the Land Rover-derived OMEGA platform, and it has remained diesel-only throughout its life, powered by the 2.0-litre Kryotec engine sourced from the same Fiat-derived block used across the Jeep Compass and older Fiat SUVs sold in India. Unlike most of its direct rivals, Tata has never offered a petrol engine on the Harrier, which keeps its resale pool narrower but also more predictable.",
+    "The 2023 facelift brought a redesigned dashboard, a new grille, and, for the first time, an electronically controlled all-wheel-drive option on the range-topping trim. Pre-facelift 2019–2023 Harriers have re-rated downward since, roughly in line with a typical mid-cycle update, though the AWD variant's resale premium has been modest so far given how few buyers opt for it.",
+    "Diesel demand for SUVs in this segment has softened gradually in several metros as registration-cost differentials between petrol and diesel widen and as urban buyers increasingly default to petrol or hybrid rivals like the Hyryder. Even so, the Harrier's retention currently sits a few points ahead of the midsize-SUV average at every age band in this dataset, helped by a loyal diesel-SUV buyer base that specifically seeks it out.",
+    "Tata's smaller dealer and parts network outside major metros, relative to Maruti or Hyundai, remains a drag on resale in tier-2 and tier-3 markets, even though the Harrier's 5-star Global NCAP rating and strong highway ride comfort continue to pull in safety-conscious family buyers at the three- to five-year mark."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Tata Harrier in India?",
+      "a": "A well-maintained Harrier retains approximately 70% of its ex-showroom price after two years, 61% after three years, and 48% after five years. For a 2022 Adventure diesel with 25,000–50,000 km, the current fair-market band is roughly ₹13.04–15.01 lakh."
+    },
+    {
+      "q": "Is the diesel-only Harrier a resale disadvantage?",
+      "a": "It is a smaller cost than you'd expect. Without a petrol option, the Harrier's buyer pool is narrower than dual-fuel rivals, but its three-year retention of about 61% still sits a few points ahead of the midsize-SUV segment average of roughly 58%, helped by a loyal diesel-SUV buyer base that specifically seeks it out."
+    },
+    {
+      "q": "Does the AWD Harrier hold value better?",
+      "a": "AWD variants trade at only a small premium over equivalent front-wheel-drive trims in the used market, typically 3–5%, since few owners genuinely use the off-road capability and the resale pool for AWD cars is thinner."
+    },
+    {
+      "q": "How much does a Harrier depreciate per year?",
+      "a": "Roughly 19% in year one and 11% more in year two, before slowing to 7–8% per year through year five. The five-year retention of about 48% is a few points above the midsize-SUV segment average of 45%."
+    },
+    {
+      "q": "Which city gives the best resale price for a Harrier?",
+      "a": "Bengaluru currently trades at approximately +3% above the national mid on strong family-SUV demand, with Mumbai close behind at +2%. Delhi NCR and Kolkata are the softest markets at around −2% to −3%, reflecting diesel registration cost pressure and slower turnover respectively."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "mg",
+      "model": "hector",
+      "label": "MG Hector"
+    },
+    {
+      "make": "toyota",
+      "model": "hyryder",
+      "label": "Toyota Hyryder"
+    },
+    {
+      "make": "hyundai",
+      "model": "alcazar",
+      "label": "Hyundai Alcazar"
+    }
+  ]
+}

@@ -1,0 +1,432 @@
+{
+  "slug": {
+    "make": "volkswagen",
+    "model": "virtus"
+  },
+  "make": "Volkswagen",
+  "model": "Virtus",
+  "segment": "Sedan",
+  "bodyType": "Sedan",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "COMFORTLINE TSI 1.0 MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 11.32
+    },
+    {
+      "name": "HIGHLINE TSI 1.0 MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 13.18
+    },
+    {
+      "name": "HIGHLINE TSI 1.0 AT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 14.48
+    },
+    {
+      "name": "TOPLINE TSI 1.0 MT",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 14.7
+    },
+    {
+      "name": "TOPLINE TSI 1.0 AT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 16
+    },
+    {
+      "name": "GT PLUS 1.5 TSI",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 16.89
+    },
+    {
+      "name": "GT PLUS TSI 1.5 EVO DSG",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 18.42
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 12.55,
+      "mid": 13.5,
+      "high": 14.44
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 12.06,
+      "mid": 12.97,
+      "high": 13.88
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 11.37,
+      "mid": 12.23,
+      "high": 13.09
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 10.6,
+      "mid": 11.39,
+      "high": 12.19
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 9.8,
+      "mid": 10.54,
+      "high": 11.28
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 10.98,
+      "mid": 11.81,
+      "high": 12.64
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.56,
+      "mid": 11.35,
+      "high": 12.15
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 9.95,
+      "mid": 10.7,
+      "high": 11.45
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 9.27,
+      "mid": 9.97,
+      "high": 10.67
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.58,
+      "mid": 9.22,
+      "high": 9.87
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 10.01,
+      "mid": 10.76,
+      "high": 11.51
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 9.62,
+      "mid": 10.34,
+      "high": 11.06
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 9.06,
+      "mid": 9.75,
+      "high": 10.43
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.44,
+      "mid": 9.08,
+      "high": 9.72
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.81,
+      "mid": 8.4,
+      "high": 8.99
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 8.83,
+      "mid": 9.49,
+      "high": 10.15
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 8.48,
+      "mid": 9.12,
+      "high": 9.76
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8,
+      "mid": 8.6,
+      "high": 9.2
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 7.45,
+      "mid": 8.01,
+      "high": 8.57
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.89,
+      "mid": 7.41,
+      "high": 7.93
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 7.85,
+      "mid": 8.44,
+      "high": 9.03
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 7.54,
+      "mid": 8.11,
+      "high": 8.68
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 7.11,
+      "mid": 7.64,
+      "high": 8.18
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 6.62,
+      "mid": 7.12,
+      "high": 7.62
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 6.13,
+      "mid": 6.59,
+      "high": 7.05
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 0,
+      "note": "Baseline; neutral sedan demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 2,
+      "note": "Enthusiast and VW loyalist buyer base"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 2,
+      "note": "Tech-corridor sedan buyers, strong VW/Skoda following"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 0,
+      "note": "Steady but unremarkable demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": -1,
+      "note": "Sedan demand softening versus SUVs"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Reasonable service network, moderate demand"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -3,
+      "note": "Sedans less popular, thin service network"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": -2,
+      "note": "SUV-biased market, softer sedan uptake"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 85
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 75
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 68
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 57
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 35
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 28
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 26
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 24
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 22
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 21
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 19
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 18
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 57,
+    "5year": 43,
+    "10year": 22
+  },
+  "context": [
+    "The Virtus launched in June 2022 on the MQB-A0-IN platform, a localised architecture it shares with the Skoda Slavia and, underneath, the Taigun and Kushaq compact SUVs. It replaced the long-running Vento, which had spent most of its life in India as a heavily CBU-dependent product, making the Virtus the first Volkswagen sedan built specifically around India's higher-localisation 'India 2.0' push and priced more sharply as a result.",
+    "Two engines carry the range: a 1.0-litre TSI three-cylinder turbo-petrol making around 115 bhp, offered with a manual or a torque-converter automatic, and a 1.5-litre TSI four-cylinder making around 150 bhp, offered with a manual or a 7-speed DSG dual-clutch gearbox. There is no diesel or CNG option, which narrows the used-buyer pool compared with multi-fuel sedan rivals like the Verna or the City.",
+    "The Virtus earns genuine enthusiast loyalty for its driving dynamics, structural rigidity, and build quality, but that doesn't fully translate into resale strength. A comparatively thin Volkswagen dealer and service footprint outside major cities, costlier scheduled maintenance once outside the standard warranty window, and buyer caution around long-term DSG clutch durability all weigh on used pricing relative to Honda, Hyundai, and Maruti sedans.",
+    "India's broader shift toward SUVs, even among buyers who might once have defaulted to a sedan, has thinned demand for the entire sedan category in the used market. Virtus and Slavia owners also tend to be first owners who keep the car longer rather than flip it quickly, which reduces used supply in the sought-after one-to-two-year window and widens the price gap once cars cross into higher age and km bands."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Volkswagen Virtus in India?",
+      "a": "A well-maintained Virtus retains approximately 62% of its ex-showroom price after two years and around 38% after five years, as of September 2026. For a 2023 Highline petrol with 10,000–25,000 km, the current fair-market band is roughly ₹10.56–12.15 lakh."
+    },
+    {
+      "q": "Does the Virtus hold value as well as other sedans in its segment?",
+      "a": "Not quite. The sedan segment averages around 57% retention at three years and 43% at five years, while the Virtus trails slightly at 52% and 38% respectively, reflecting a thinner service network and buyer caution around long-term maintenance costs."
+    },
+    {
+      "q": "Does the automatic (DSG) Virtus resell differently from the manual?",
+      "a": "Both manual and automatic Virtus variants follow the same underlying depreciation curve in current data; the DSG's higher ex-showroom price carries through proportionally to resale, rather than the gearbox itself changing the retention percentage materially."
+    },
+    {
+      "q": "How much does a Virtus depreciate per year?",
+      "a": "The Virtus loses about 25% of its value in year one and settles into roughly 5 percentage points of retention lost per year through year five, when it sits near 38% of ex-showroom — a faster curve than domestic and Japanese/Korean sedan rivals."
+    },
+    {
+      "q": "Which city gives the best resale price for a Virtus?",
+      "a": "Mumbai and Bengaluru currently trade around 2% above the national mid, supported by a loyal enthusiast buyer base. Kolkata trades roughly 3% below baseline, reflecting softer sedan demand and a thinner service network."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "hyundai",
+      "model": "verna",
+      "label": "Hyundai Verna"
+    },
+    {
+      "make": "honda",
+      "model": "city",
+      "label": "Honda City"
+    },
+    {
+      "make": "maruti",
+      "model": "dzire",
+      "label": "Maruti Dzire"
+    }
+  ]
+}

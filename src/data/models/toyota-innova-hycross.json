@@ -1,0 +1,832 @@
+{
+  "slug": {
+    "make": "toyota",
+    "model": "innova-hycross"
+  },
+  "make": "Toyota",
+  "model": "Innova HyCross",
+  "segment": "MPV",
+  "bodyType": "MPV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "G-SLF 7 STR",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 18.3
+    },
+    {
+      "name": "G-SLF 8 STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 18.35
+    },
+    {
+      "name": "GX 7 STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 19.15
+    },
+    {
+      "name": "GX 8 STR",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 19.2
+    },
+    {
+      "name": "VX HYBRID 7 STR",
+      "fuel": "Hybrid",
+      "transmission": "AT",
+      "exShowroom": 24.01
+    },
+    {
+      "name": "ZX HYBRID 7 STR",
+      "fuel": "Hybrid",
+      "transmission": "AT",
+      "exShowroom": 28.33
+    },
+    {
+      "name": "ZX (O) HYBRID 7 STR",
+      "fuel": "Hybrid",
+      "transmission": "AT",
+      "exShowroom": 30.68
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 15.32,
+      "mid": 16.47,
+      "high": 17.62
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 14.72,
+      "mid": 15.83,
+      "high": 16.94
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 13.88,
+      "mid": 14.92,
+      "high": 15.97
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 12.93,
+      "mid": 13.9,
+      "high": 14.87
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 11.96,
+      "mid": 12.86,
+      "high": 13.76
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 13.4,
+      "mid": 14.41,
+      "high": 15.42
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 12.88,
+      "mid": 13.85,
+      "high": 14.82
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 12.14,
+      "mid": 13.06,
+      "high": 13.97
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 11.31,
+      "mid": 12.16,
+      "high": 13.01
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 10.47,
+      "mid": 11.26,
+      "high": 12.04
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 12.21,
+      "mid": 13.13,
+      "high": 14.05
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 11.73,
+      "mid": 12.61,
+      "high": 13.5
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 11.06,
+      "mid": 11.89,
+      "high": 12.73
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 10.3,
+      "mid": 11.08,
+      "high": 11.85
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 9.53,
+      "mid": 10.25,
+      "high": 10.97
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 10.77,
+      "mid": 11.58,
+      "high": 12.39
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 10.35,
+      "mid": 11.13,
+      "high": 11.91
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 9.76,
+      "mid": 10.49,
+      "high": 11.22
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 9.09,
+      "mid": 9.77,
+      "high": 10.46
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 8.41,
+      "mid": 9.04,
+      "high": 9.68
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 9.57,
+      "mid": 10.29,
+      "high": 11.01
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 9.2,
+      "mid": 9.89,
+      "high": 10.58
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 8.67,
+      "mid": 9.33,
+      "high": 9.98
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 8.08,
+      "mid": 8.69,
+      "high": 9.3
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 7.48,
+      "mid": 8.04,
+      "high": 8.6
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 15.82,
+      "mid": 17.01,
+      "high": 18.2
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 15.2,
+      "mid": 16.35,
+      "high": 17.49
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 14.33,
+      "mid": 15.41,
+      "high": 16.49
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 13.35,
+      "mid": 14.36,
+      "high": 15.36
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 12.35,
+      "mid": 13.28,
+      "high": 14.21
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 13.84,
+      "mid": 14.88,
+      "high": 15.93
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 13.3,
+      "mid": 14.3,
+      "high": 15.3
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 12.54,
+      "mid": 13.48,
+      "high": 14.43
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 11.68,
+      "mid": 12.56,
+      "high": 13.44
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 10.81,
+      "mid": 11.62,
+      "high": 12.44
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 12.61,
+      "mid": 13.56,
+      "high": 14.51
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 12.12,
+      "mid": 13.03,
+      "high": 13.94
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 11.42,
+      "mid": 12.28,
+      "high": 13.14
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 10.64,
+      "mid": 11.44,
+      "high": 12.24
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 9.85,
+      "mid": 10.59,
+      "high": 11.33
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 11.12,
+      "mid": 11.96,
+      "high": 12.8
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 10.69,
+      "mid": 11.49,
+      "high": 12.3
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 10.08,
+      "mid": 10.83,
+      "high": 11.59
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 9.39,
+      "mid": 10.09,
+      "high": 10.8
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 8.69,
+      "mid": 9.34,
+      "high": 9.99
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 9.89,
+      "mid": 10.63,
+      "high": 11.38
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 9.5,
+      "mid": 10.22,
+      "high": 10.93
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 8.96,
+      "mid": 9.63,
+      "high": 10.31
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 8.34,
+      "mid": 8.97,
+      "high": 9.6
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 7.72,
+      "mid": 8.3,
+      "high": 8.88
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 23.16,
+      "mid": 24.91,
+      "high": 26.65
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 22.26,
+      "mid": 23.93,
+      "high": 25.61
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 20.99,
+      "mid": 22.56,
+      "high": 24.14
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 19.55,
+      "mid": 21.02,
+      "high": 22.49
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 18.09,
+      "mid": 19.45,
+      "high": 20.81
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 20.27,
+      "mid": 21.79,
+      "high": 23.32
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 19.48,
+      "mid": 20.94,
+      "high": 22.41
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 18.36,
+      "mid": 19.74,
+      "high": 21.13
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 17.11,
+      "mid": 18.39,
+      "high": 19.68
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 15.83,
+      "mid": 17.02,
+      "high": 18.21
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 18.46,
+      "mid": 19.85,
+      "high": 21.24
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 17.74,
+      "mid": 19.08,
+      "high": 20.41
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 16.73,
+      "mid": 17.98,
+      "high": 19.24
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 15.58,
+      "mid": 16.75,
+      "high": 17.93
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 14.42,
+      "mid": 15.5,
+      "high": 16.59
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 16.28,
+      "mid": 17.51,
+      "high": 18.73
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 15.65,
+      "mid": 16.83,
+      "high": 18
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 14.75,
+      "mid": 15.86,
+      "high": 16.97
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 13.74,
+      "mid": 14.78,
+      "high": 15.81
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 12.72,
+      "mid": 13.67,
+      "high": 14.63
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Hybrid",
+      "low": 14.48,
+      "mid": 15.57,
+      "high": 16.66
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Hybrid",
+      "low": 13.91,
+      "mid": 14.96,
+      "high": 16.01
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Hybrid",
+      "low": 13.12,
+      "mid": 14.1,
+      "high": 15.09
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Hybrid",
+      "low": 12.22,
+      "mid": 13.14,
+      "high": 14.06
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Hybrid",
+      "low": 11.31,
+      "mid": 12.16,
+      "high": 13.01
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 2,
+      "note": "Strong fleet and premium MPV demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 3,
+      "note": "Hybrid variants command the largest premium"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 3,
+      "note": "High hybrid demand, cab-aggregator pull"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 2,
+      "note": "Steady hybrid and petrol demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 1,
+      "note": "Strong Toyota loyalty, steady demand"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 1,
+      "note": "Follows Mumbai band, slightly softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Softer MPV churn, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 2,
+      "note": "Strong fleet and family-buyer demand lifts overall band"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 95
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 91
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 87
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 84
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 81
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 78
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 75
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 72
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 70
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 62
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 58
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 46
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 60,
+    "5year": 45,
+    "10year": 24
+  },
+  "context": [
+    "The Innova HyCross launched in January 2023 on an all-new monocoque platform derived from Toyota's TNGA-C architecture, a fundamental shift from the body-on-frame construction of the Innova Crysta it was positioned to eventually replace in retail sales. Toyota offers it with a 2.0-litre petrol engine paired to a CVT, and a 2.0-litre strong-hybrid powertrain paired to an e-CVT that combines the petrol engine with an electric motor without any plug-in charging requirement.",
+    "A diesel option sits alongside the petrol and hybrid on the base G-SLF trim, aimed at buyers who put on heavy highway mileage and want the running-cost advantage, though it is a minority of the lineup next to the strong-hybrid's fuel-efficiency pitch.",
+    "Toyota's hybrid powertrain, shared in concept with the Camry and Hyryder, has built an exceptionally strong reliability reputation among Indian owners for its fuel efficiency and low long-term running costs. That reputation, combined with waiting periods that have at times stretched to many months for hybrid variants, has pushed used HyCross hybrid prices unusually close to on-road prices shortly after a sale, a pattern rarely seen elsewhere in the mainstream MPV segment.",
+    "Because the Innova Crysta continues to be sold separately for fleet and taxi use with its older diesel engine, the HyCross has effectively taken over the retail, family-buyer segment of the Innova franchise. This has let the HyCross build its own distinct resale identity relatively quickly, with hybrid variants trading at a consistent premium over petrol and CNG across every city tracked."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Toyota Innova HyCross in India?",
+      "a": "A well-maintained HyCross retains roughly 84% of its ex-showroom price after two years, 78% after three years, and 67% after five years, as of September 2026, among the strongest retention of any mainstream vehicle in India. For a 2023 hybrid VX with 10,000-25,000 km, the current fair-market band is approximately ₹19.48–22.41 lakh."
+    },
+    {
+      "q": "Does the HyCross hybrid hold value better than the petrol version?",
+      "a": "Yes, by a wide margin. Across every year and km band in current data, the hybrid variants trade roughly 45% above the equivalent petrol variants, reflecting the hybrid's fuel-efficiency reputation and persistently long waiting periods for new units."
+    },
+    {
+      "q": "Does the HyCross diesel hold its value as well as the hybrid?",
+      "a": "No — the diesel trades below both the petrol and hybrid variants, since most buyers drawn to the HyCross specifically want the strong-hybrid's fuel-efficiency story, leaving the diesel a smaller, more price-sensitive segment of the used market."
+    },
+    {
+      "q": "How much does an Innova HyCross depreciate per year?",
+      "a": "The HyCross depreciates only about 9% in year one and a further 7% in year two, then settles into a steady 3-4% annual decline through year five. Ten-year retention of around 46% is roughly 22 points above the broader MPV segment average of 24%."
+    },
+    {
+      "q": "Which city gives the best resale price for a HyCross?",
+      "a": "Mumbai and Bengaluru currently trade at +3% above the national mid, driven by strong demand for hybrid variants among cab-aggregator and premium-MPV buyers. Kolkata trades at around -2%, where MPV resale cycles run longer."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "toyota",
+      "model": "innova-crysta",
+      "label": "Toyota Innova Crysta"
+    },
+    {
+      "make": "kia",
+      "model": "carens",
+      "label": "Kia Carens"
+    },
+    {
+      "make": "renault",
+      "model": "triber",
+      "label": "Renault Triber"
+    }
+  ]
+}

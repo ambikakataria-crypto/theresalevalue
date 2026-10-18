@@ -1,0 +1,632 @@
+{
+  "slug": {
+    "make": "toyota",
+    "model": "fortuner"
+  },
+  "make": "Toyota",
+  "model": "Fortuner",
+  "segment": "Large SUV",
+  "bodyType": "SUV",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "4X2 MT 2.7 PETROL",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 32.4
+    },
+    {
+      "name": "4X2 AT 2.7 PETROL",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 33.99
+    },
+    {
+      "name": "4X2 MT 2.8 DIESEL",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 34.9
+    },
+    {
+      "name": "4X4 MT 2.8 DIESEL",
+      "fuel": "Diesel",
+      "transmission": "MT",
+      "exShowroom": 38.54
+    },
+    {
+      "name": "4X4 AT 2.8 DIESEL",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 40.83
+    },
+    {
+      "name": "4X4 AT 2.8 LEGENDER",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 45.77
+    },
+    {
+      "name": "GR-S",
+      "fuel": "Diesel",
+      "transmission": "AT",
+      "exShowroom": 49.57
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 27.78,
+      "mid": 29.88,
+      "high": 31.97
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 26.7,
+      "mid": 28.71,
+      "high": 30.72
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 25.17,
+      "mid": 27.07,
+      "high": 28.96
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 23.45,
+      "mid": 25.21,
+      "high": 26.98
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 21.7,
+      "mid": 23.33,
+      "high": 24.97
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 24.31,
+      "mid": 26.14,
+      "high": 27.97
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 23.36,
+      "mid": 25.12,
+      "high": 26.88
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 22.03,
+      "mid": 23.68,
+      "high": 25.34
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 20.52,
+      "mid": 22.06,
+      "high": 23.61
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 18.99,
+      "mid": 20.42,
+      "high": 21.85
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 22.14,
+      "mid": 23.81,
+      "high": 25.48
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 21.28,
+      "mid": 22.88,
+      "high": 24.48
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 20.06,
+      "mid": 21.57,
+      "high": 23.08
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 18.69,
+      "mid": 20.1,
+      "high": 21.5
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 17.29,
+      "mid": 18.6,
+      "high": 19.9
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 19.53,
+      "mid": 21,
+      "high": 22.47
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 18.77,
+      "mid": 20.18,
+      "high": 21.6
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 17.7,
+      "mid": 19.03,
+      "high": 20.36
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 16.49,
+      "mid": 17.73,
+      "high": 18.97
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 15.25,
+      "mid": 16.4,
+      "high": 17.55
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 17.37,
+      "mid": 18.67,
+      "high": 19.98
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 16.69,
+      "mid": 17.94,
+      "high": 19.2
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 15.73,
+      "mid": 16.92,
+      "high": 18.1
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 14.66,
+      "mid": 15.76,
+      "high": 16.86
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 13.56,
+      "mid": 14.58,
+      "high": 15.6
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 35.09,
+      "mid": 37.73,
+      "high": 40.37
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 33.72,
+      "mid": 36.26,
+      "high": 38.8
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 31.79,
+      "mid": 34.18,
+      "high": 36.58
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 29.61,
+      "mid": 31.84,
+      "high": 34.07
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 27.4,
+      "mid": 29.47,
+      "high": 31.53
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 30.7,
+      "mid": 33.01,
+      "high": 35.32
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 29.51,
+      "mid": 31.73,
+      "high": 33.95
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 27.82,
+      "mid": 29.91,
+      "high": 32
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 25.91,
+      "mid": 27.86,
+      "high": 29.81
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 23.98,
+      "mid": 25.78,
+      "high": 27.59
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 27.97,
+      "mid": 30.07,
+      "high": 32.18
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 26.88,
+      "mid": 28.9,
+      "high": 30.92
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 25.34,
+      "mid": 27.24,
+      "high": 29.15
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 23.6,
+      "mid": 25.38,
+      "high": 27.16
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 21.84,
+      "mid": 23.49,
+      "high": 25.13
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 24.67,
+      "mid": 26.52,
+      "high": 28.38
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 23.71,
+      "mid": 25.49,
+      "high": 27.27
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 22.35,
+      "mid": 24.03,
+      "high": 25.71
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 20.82,
+      "mid": 22.39,
+      "high": 23.95
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 19.27,
+      "mid": 20.72,
+      "high": 22.17
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Diesel",
+      "low": 21.93,
+      "mid": 23.58,
+      "high": 25.23
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Diesel",
+      "low": 21.08,
+      "mid": 22.66,
+      "high": 24.25
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Diesel",
+      "low": 19.87,
+      "mid": 21.36,
+      "high": 22.86
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Diesel",
+      "low": 18.51,
+      "mid": 19.9,
+      "high": 21.3
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Diesel",
+      "low": 17.13,
+      "mid": 18.42,
+      "high": 19.71
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 3,
+      "note": "Strong demand, persistent waiting lists"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 2,
+      "note": "High demand, tight new-car allocation"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 4,
+      "note": "Historically the longest waiting lists in India"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 3,
+      "note": "Very strong demand, limited new-car supply"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 2,
+      "note": "Consistently firm demand"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 3,
+      "note": "Strong SUV culture, tight supply"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": 1,
+      "note": "Firm demand, slightly thinner premium buyer pool"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 2,
+      "note": "Strong diesel SUV demand, steady waitlists"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 95
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 90
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 86
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 82
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 79
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 73
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 70
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 68
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 65
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 63
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 58
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 54
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 48
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 44
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 62,
+    "5year": 48,
+    "10year": 27
+  },
+  "context": [
+    "The Fortuner has been sold in India since 2009, built on Toyota's IMV ladder-frame platform shared with the Hilux pickup. Now in its third generation, launched in 2016 and facelifted in 2020 and again in 2024, Toyota has broadened the range with the style-focused Legender and the off-road-leaning GR-Sport without altering the core body-on-frame underpinnings that define the model.",
+    "Two engines anchor the lineup: a 2.7-litre petrol offered only in rear-wheel drive, and a 2.8-litre GD diesel offered in both rear-wheel drive and a part-time 4x4 system, each paired with a manual or a 6-speed torque-converter automatic. The diesel 4x4 automatic has historically been the strongest resale combination, valued by both family buyers and genuine off-road users.",
+    "The Fortuner is arguably the strongest resale performer in the Indian large-SUV segment. That reputation rests on persistent multi-month waiting lists for new units, Toyota's industry-leading reliability perception built over more than a decade of Fortuner and Innova ownership in India, and a body-on-frame design that owners associate with a long service life and strong structural integrity.",
+    "Unlike most SUVs, Fortuner resale is demand-constrained rather than supply-driven. New-vehicle waiting lists in cities like Bengaluru and Hyderabad have at times stretched past a year, pushing buyers toward lightly used examples and keeping one- to two-year-old Fortuners trading unusually close to their original ex-showroom price compared with any other vehicle in this price band."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Toyota Fortuner in India?",
+      "a": "A well-maintained Fortuner retains approximately 82% of its ex-showroom price after two years and around 65% after five years, as of September 2026 — among the strongest retention curves of any vehicle sold in India. For a 2023 diesel 4x4 AT with 10,000–25,000 km, the current fair-market band is roughly ₹29.57–34.03 lakh."
+    },
+    {
+      "q": "Why does the Fortuner hold value so much better than other large SUVs?",
+      "a": "The large SUV segment averages around 62% retention at three years and 48% at five years, while the Fortuner sits well above at 76% and 65% respectively. This gap is driven mainly by persistent new-car waiting lists, which push buyers toward the used market and keep used pricing firm."
+    },
+    {
+      "q": "Does diesel or petrol hold value better on the Fortuner?",
+      "a": "Both fuels follow the same underlying retention curve; diesel variants trade at a higher absolute price because of their higher ex-showroom cost and the availability of 4x4, not because diesel retains a different percentage of value."
+    },
+    {
+      "q": "How much does a Fortuner depreciate per year?",
+      "a": "The Fortuner loses only about 10% of its value in year one and roughly 3–4 percentage points of retention per year through year five, when it still sits near 65% of ex-showroom — far slower than most SUVs in its price band."
+    },
+    {
+      "q": "Which city gives the best resale price for a Fortuner?",
+      "a": "Bengaluru currently trades around 4% above the national mid, reflecting the longest-standing waiting lists in the country, followed by Hyderabad and Pune at roughly 3% above. Kolkata trades closest to baseline at about 1% above."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "toyota",
+      "model": "land-cruiser-300",
+      "label": "Toyota Land Cruiser 300"
+    },
+    {
+      "make": "mahindra",
+      "model": "scorpio-n",
+      "label": "Mahindra Scorpio-N"
+    },
+    {
+      "make": "mg",
+      "model": "hector",
+      "label": "MG Hector"
+    }
+  ]
+}

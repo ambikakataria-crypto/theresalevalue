@@ -1,5 +1,8 @@
 {
-  "slug": { "make": "maruti", "model": "swift" },
+  "slug": {
+    "make": "maruti",
+    "model": "swift"
+  },
   "make": "Maruti Suzuki",
   "model": "Swift",
   "segment": "B-segment hatchback",
@@ -10,15 +13,22 @@
     "launchedIndia": "May 2024",
     "engine": "1.2L Z12E 3-cylinder petrol, 82 bhp / 112 Nm",
     "gearbox": "5MT, AMT (Manual, AGS)",
-    "fuelOptions": ["Petrol", "CNG (bi-fuel factory-fitted, ZXi and ZXi+ variants)"]
+    "fuelOptions": [
+      "Petrol",
+      "CNG (bi-fuel factory-fitted, ZXi and ZXi+ variants)"
+    ]
   },
   "priorGeneration": {
     "genNumber": 3,
     "yearsInIndia": "2018–2024",
     "engine": "1.2L K12N Dualjet petrol"
   },
-  "currentExShowroomRange": { "low": 6.5, "high": 9.6, "unit": "lakh" },
-  "lastRefreshedISO": "2026-07-31",
+  "currentExShowroomRange": {
+    "low": 6.5,
+    "high": 9.6,
+    "unit": "lakh"
+  },
+  "lastRefreshedISO": "2026-10-18",
   "refreshCadence": "Monthly",
   "dataSourceNote": "Prices aggregated from Cars24 wholesale-transaction bands across metros. Non-metro adjustments applied via cityVariance below.",
   "heroImage": {
@@ -26,109 +36,575 @@
     "alt": "Maruti Suzuki Swift 4th generation front three-quarter in Metallic Splendid Silver on an Indian city road"
   },
   "variants": [
-    { "name": "LXi",     "fuel": "Petrol", "transmission": "5MT", "exShowroom": 6.55 },
-    { "name": "VXi",     "fuel": "Petrol", "transmission": "5MT", "exShowroom": 7.50 },
-    { "name": "VXi AGS", "fuel": "Petrol", "transmission": "AMT", "exShowroom": 8.05 },
-    { "name": "ZXi",     "fuel": "Petrol", "transmission": "5MT", "exShowroom": 8.55 },
-    { "name": "ZXi AGS", "fuel": "Petrol", "transmission": "AMT", "exShowroom": 9.10 },
-    { "name": "ZXi+",    "fuel": "Petrol", "transmission": "5MT", "exShowroom": 9.10 },
-    { "name": "ZXi+ AGS","fuel": "Petrol", "transmission": "AMT", "exShowroom": 9.65 },
-    { "name": "VXi CNG", "fuel": "CNG",    "transmission": "5MT", "exShowroom": 8.20 },
-    { "name": "ZXi CNG", "fuel": "CNG",    "transmission": "5MT", "exShowroom": 9.20 }
+    {
+      "name": "ZXI",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 6.82
+    },
+    {
+      "name": "VXI",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 7.5
+    },
+    {
+      "name": "ZXI PLUS",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 8.21
+    },
+    {
+      "name": "ZXI PLUS DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 8.35
+    },
+    {
+      "name": "ZXI PLUS AMT DUAL TONE",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 8.85
+    },
+    {
+      "name": "VXI CNG",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 7.77
+    },
+    {
+      "name": "ZXI CNG",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 8.45
+    }
   ],
   "permutations": [
-    { "year": 2024, "kmBand": "0-10k",  "fuel": "Petrol", "low": 5.95, "mid": 6.40, "high": 6.85 },
-    { "year": 2024, "kmBand": "10-25k", "fuel": "Petrol", "low": 5.70, "mid": 6.15, "high": 6.60 },
-    { "year": 2024, "kmBand": "25-50k", "fuel": "Petrol", "low": 5.35, "mid": 5.80, "high": 6.20 },
-    { "year": 2024, "kmBand": "50-75k", "fuel": "Petrol", "low": 4.95, "mid": 5.40, "high": 5.80 },
-    { "year": 2024, "kmBand": "75k+",   "fuel": "Petrol", "low": 4.60, "mid": 5.00, "high": 5.40 },
-
-    { "year": 2023, "kmBand": "0-10k",  "fuel": "Petrol", "low": 5.20, "mid": 5.60, "high": 6.00 },
-    { "year": 2023, "kmBand": "10-25k", "fuel": "Petrol", "low": 4.95, "mid": 5.35, "high": 5.75 },
-    { "year": 2023, "kmBand": "25-50k", "fuel": "Petrol", "low": 4.60, "mid": 5.00, "high": 5.40 },
-    { "year": 2023, "kmBand": "50-75k", "fuel": "Petrol", "low": 4.25, "mid": 4.60, "high": 5.00 },
-    { "year": 2023, "kmBand": "75k+",   "fuel": "Petrol", "low": 3.85, "mid": 4.20, "high": 4.55 },
-
-    { "year": 2022, "kmBand": "0-10k",  "fuel": "Petrol", "low": 4.70, "mid": 5.10, "high": 5.45 },
-    { "year": 2022, "kmBand": "10-25k", "fuel": "Petrol", "low": 4.45, "mid": 4.80, "high": 5.15 },
-    { "year": 2022, "kmBand": "25-50k", "fuel": "Petrol", "low": 4.15, "mid": 4.50, "high": 4.85 },
-    { "year": 2022, "kmBand": "50-75k", "fuel": "Petrol", "low": 3.80, "mid": 4.15, "high": 4.50 },
-    { "year": 2022, "kmBand": "75k+",   "fuel": "Petrol", "low": 3.50, "mid": 3.80, "high": 4.10 },
-
-    { "year": 2021, "kmBand": "0-10k",  "fuel": "Petrol", "low": 4.15, "mid": 4.50, "high": 4.85 },
-    { "year": 2021, "kmBand": "10-25k", "fuel": "Petrol", "low": 3.90, "mid": 4.25, "high": 4.60 },
-    { "year": 2021, "kmBand": "25-50k", "fuel": "Petrol", "low": 3.65, "mid": 3.95, "high": 4.25 },
-    { "year": 2021, "kmBand": "50-75k", "fuel": "Petrol", "low": 3.35, "mid": 3.65, "high": 3.95 },
-    { "year": 2021, "kmBand": "75k+",   "fuel": "Petrol", "low": 3.05, "mid": 3.30, "high": 3.55 },
-
-    { "year": 2020, "kmBand": "0-10k",  "fuel": "Petrol", "low": 3.65, "mid": 4.00, "high": 4.30 },
-    { "year": 2020, "kmBand": "10-25k", "fuel": "Petrol", "low": 3.45, "mid": 3.75, "high": 4.05 },
-    { "year": 2020, "kmBand": "25-50k", "fuel": "Petrol", "low": 3.15, "mid": 3.45, "high": 3.75 },
-    { "year": 2020, "kmBand": "50-75k", "fuel": "Petrol", "low": 2.90, "mid": 3.15, "high": 3.40 },
-    { "year": 2020, "kmBand": "75k+",   "fuel": "Petrol", "low": 2.60, "mid": 2.85, "high": 3.10 },
-
-    { "year": 2024, "kmBand": "0-10k",  "fuel": "CNG", "low": 6.25, "mid": 6.70, "high": 7.15 },
-    { "year": 2024, "kmBand": "10-25k", "fuel": "CNG", "low": 6.00, "mid": 6.45, "high": 6.90 },
-    { "year": 2024, "kmBand": "25-50k", "fuel": "CNG", "low": 5.60, "mid": 6.05, "high": 6.50 },
-    { "year": 2024, "kmBand": "50-75k", "fuel": "CNG", "low": 5.20, "mid": 5.65, "high": 6.10 },
-    { "year": 2024, "kmBand": "75k+",   "fuel": "CNG", "low": 4.85, "mid": 5.25, "high": 5.65 },
-
-    { "year": 2023, "kmBand": "0-10k",  "fuel": "CNG", "low": 5.45, "mid": 5.85, "high": 6.25 },
-    { "year": 2023, "kmBand": "10-25k", "fuel": "CNG", "low": 5.20, "mid": 5.60, "high": 6.00 },
-    { "year": 2023, "kmBand": "25-50k", "fuel": "CNG", "low": 4.85, "mid": 5.25, "high": 5.65 },
-    { "year": 2023, "kmBand": "50-75k", "fuel": "CNG", "low": 4.50, "mid": 4.85, "high": 5.25 },
-    { "year": 2023, "kmBand": "75k+",   "fuel": "CNG", "low": 4.10, "mid": 4.45, "high": 4.80 },
-
-    { "year": 2022, "kmBand": "0-10k",  "fuel": "CNG", "low": 4.25, "mid": 4.60, "high": 4.95 },
-    { "year": 2022, "kmBand": "10-25k", "fuel": "CNG", "low": 4.00, "mid": 4.35, "high": 4.70 },
-    { "year": 2022, "kmBand": "25-50k", "fuel": "CNG", "low": 3.75, "mid": 4.05, "high": 4.35 },
-    { "year": 2022, "kmBand": "50-75k", "fuel": "CNG", "low": 3.40, "mid": 3.70, "high": 4.00 },
-    { "year": 2022, "kmBand": "75k+",   "fuel": "CNG", "low": 3.10, "mid": 3.35, "high": 3.60 },
-
-    { "year": 2021, "kmBand": "0-10k",  "fuel": "CNG", "low": 3.75, "mid": 4.05, "high": 4.35 },
-    { "year": 2021, "kmBand": "10-25k", "fuel": "CNG", "low": 3.50, "mid": 3.80, "high": 4.10 },
-    { "year": 2021, "kmBand": "25-50k", "fuel": "CNG", "low": 3.25, "mid": 3.55, "high": 3.85 },
-    { "year": 2021, "kmBand": "50-75k", "fuel": "CNG", "low": 3.00, "mid": 3.25, "high": 3.50 },
-    { "year": 2021, "kmBand": "75k+",   "fuel": "CNG", "low": 2.70, "mid": 2.90, "high": 3.15 },
-
-    { "year": 2020, "kmBand": "0-10k",  "fuel": "CNG", "low": 3.25, "mid": 3.55, "high": 3.85 },
-    { "year": 2020, "kmBand": "10-25k", "fuel": "CNG", "low": 3.10, "mid": 3.35, "high": 3.60 },
-    { "year": 2020, "kmBand": "25-50k", "fuel": "CNG", "low": 2.80, "mid": 3.05, "high": 3.30 },
-    { "year": 2020, "kmBand": "50-75k", "fuel": "CNG", "low": 2.55, "mid": 2.80, "high": 3.05 },
-    { "year": 2020, "kmBand": "75k+",   "fuel": "CNG", "low": 2.30, "mid": 2.50, "high": 2.70 }
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 6.65,
+      "mid": 7.15,
+      "high": 7.65
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 6.39,
+      "mid": 6.87,
+      "high": 7.35
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 6.03,
+      "mid": 6.48,
+      "high": 6.93
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 5.61,
+      "mid": 6.04,
+      "high": 6.46
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 5.19,
+      "mid": 5.59,
+      "high": 5.98
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.82,
+      "mid": 6.26,
+      "high": 6.7
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.59,
+      "mid": 6.01,
+      "high": 6.43
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 5.27,
+      "mid": 5.67,
+      "high": 6.07
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.91,
+      "mid": 5.28,
+      "high": 5.65
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.54,
+      "mid": 4.89,
+      "high": 5.23
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 5.3,
+      "mid": 5.7,
+      "high": 6.1
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 5.09,
+      "mid": 5.48,
+      "high": 5.86
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.8,
+      "mid": 5.16,
+      "high": 5.53
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 4.47,
+      "mid": 4.81,
+      "high": 5.15
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 4.14,
+      "mid": 4.45,
+      "high": 4.76
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.68,
+      "mid": 5.03,
+      "high": 5.38
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.49,
+      "mid": 4.83,
+      "high": 5.17
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 4.24,
+      "mid": 4.55,
+      "high": 4.87
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.95,
+      "mid": 4.24,
+      "high": 4.54
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.65,
+      "mid": 3.93,
+      "high": 4.2
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.16,
+      "mid": 4.47,
+      "high": 4.78
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 3.99,
+      "mid": 4.3,
+      "high": 4.6
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 3.77,
+      "mid": 4.05,
+      "high": 4.33
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.51,
+      "mid": 3.77,
+      "high": 4.04
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.25,
+      "mid": 3.49,
+      "high": 3.74
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 6.79,
+      "mid": 7.3,
+      "high": 7.81
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 6.52,
+      "mid": 7.01,
+      "high": 7.51
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 6.15,
+      "mid": 6.61,
+      "high": 7.08
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 5.73,
+      "mid": 6.16,
+      "high": 6.59
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 5.3,
+      "mid": 5.7,
+      "high": 6.1
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.94,
+      "mid": 6.39,
+      "high": 6.83
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5.71,
+      "mid": 6.14,
+      "high": 6.57
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 5.38,
+      "mid": 5.79,
+      "high": 6.19
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 5.01,
+      "mid": 5.39,
+      "high": 5.77
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.64,
+      "mid": 4.99,
+      "high": 5.34
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.41,
+      "mid": 5.82,
+      "high": 6.22
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 5.2,
+      "mid": 5.59,
+      "high": 5.98
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.9,
+      "mid": 5.27,
+      "high": 5.64
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.57,
+      "mid": 4.91,
+      "high": 5.25
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 4.23,
+      "mid": 4.54,
+      "high": 4.86
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.77,
+      "mid": 5.13,
+      "high": 5.49
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.59,
+      "mid": 4.93,
+      "high": 5.28
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.32,
+      "mid": 4.65,
+      "high": 4.97
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.03,
+      "mid": 4.33,
+      "high": 4.63
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.73,
+      "mid": 4.01,
+      "high": 4.29
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.24,
+      "mid": 4.56,
+      "high": 4.88
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.08,
+      "mid": 4.38,
+      "high": 4.69
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 3.84,
+      "mid": 4.13,
+      "high": 4.42
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.58,
+      "mid": 3.85,
+      "high": 4.12
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.31,
+      "mid": 3.56,
+      "high": 3.81
+    }
   ],
   "cngNote": "Factory-fitted Swift CNG was launched in 2023 on the 3rd-generation Swift, and continues on the 4th-generation ZXi and ZXi+ from 2024. Pre-2023 CNG figures reflect aftermarket-fitted kits, which typically trade 6–10% below equivalent petrol due to buyer diligence around approvals and tank certification.",
   "cityVariance": [
-    { "city": "Delhi NCR",  "variancePct":  2, "note": "CNG-friendly, high liquidity" },
-    { "city": "Mumbai",     "variancePct":  3, "note": "Tight supply, RTO premium" },
-    { "city": "Bengaluru",  "variancePct":  3, "note": "Strong petrol demand, IT-corridor buyers" },
-    { "city": "Hyderabad",  "variancePct":  1, "note": "Steady demand, moderate liquidity" },
-    { "city": "Chennai",    "variancePct":  0, "note": "Baseline; automatic variants slightly firmer" },
-    { "city": "Pune",       "variancePct":  2, "note": "Follows Mumbai band, slightly softer" },
-    { "city": "Kolkata",    "variancePct": -2, "note": "Softer prices, longer selling cycle" },
-    { "city": "Ahmedabad",  "variancePct":  0, "note": "CNG-heavy, near-baseline overall" }
+    {
+      "city": "Delhi NCR",
+      "variancePct": 2,
+      "note": "CNG-friendly, high liquidity"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 3,
+      "note": "Tight supply, RTO premium"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 3,
+      "note": "Strong petrol demand, IT-corridor buyers"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 1,
+      "note": "Steady demand, moderate liquidity"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": 0,
+      "note": "Baseline; automatic variants slightly firmer"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 2,
+      "note": "Follows Mumbai band, slightly softer"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": -2,
+      "note": "Softer prices, longer selling cycle"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 0,
+      "note": "CNG-heavy, near-baseline overall"
+    }
   ],
   "retentionCurve": [
-    { "ageYears": 0.5, "retentionPct": 92 },
-    { "ageYears": 1,   "retentionPct": 85 },
-    { "ageYears": 1.5, "retentionPct": 80 },
-    { "ageYears": 2,   "retentionPct": 75 },
-    { "ageYears": 2.5, "retentionPct": 71 },
-    { "ageYears": 3,   "retentionPct": 67 },
-    { "ageYears": 3.5, "retentionPct": 63 },
-    { "ageYears": 4,   "retentionPct": 60 },
-    { "ageYears": 4.5, "retentionPct": 56 },
-    { "ageYears": 5,   "retentionPct": 53 },
-    { "ageYears": 5.5, "retentionPct": 50 },
-    { "ageYears": 6,   "retentionPct": 47 },
-    { "ageYears": 6.5, "retentionPct": 44 },
-    { "ageYears": 7,   "retentionPct": 41 },
-    { "ageYears": 7.5, "retentionPct": 38 },
-    { "ageYears": 8,   "retentionPct": 36 },
-    { "ageYears": 8.5, "retentionPct": 34 },
-    { "ageYears": 9,   "retentionPct": 32 },
-    { "ageYears": 9.5, "retentionPct": 30 },
-    { "ageYears": 10,  "retentionPct": 28 }
+    {
+      "ageYears": 0.5,
+      "retentionPct": 92
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 85
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 80
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 75
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 63
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 60
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 53
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 50
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 47
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 44
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 28
+    }
   ],
   "segmentAverageRetention": {
     "3year": 60,
@@ -150,23 +626,119 @@
     "Paint fade on Rustic Orange and Solid Fire Red is visible on 2018–2020 units parked without cover. Cosmetic, but factors into resale negotiation."
   ],
   "recentTransactions": [
-    { "soldMonth": "2026-07", "year": 2023, "kmDriven": 18400, "fuel": "Petrol", "variant": "VXi",     "city": "Delhi NCR", "soldPriceLakh": 5.45 },
-    { "soldMonth": "2026-07", "year": 2022, "kmDriven": 41200, "fuel": "Petrol", "variant": "ZXi",     "city": "Bengaluru", "soldPriceLakh": 4.80 },
-    { "soldMonth": "2026-07", "year": 2024, "kmDriven":  9200, "fuel": "Petrol", "variant": "ZXi+",    "city": "Mumbai",    "soldPriceLakh": 6.75 },
-    { "soldMonth": "2026-06", "year": 2021, "kmDriven": 58600, "fuel": "Petrol", "variant": "VXi",     "city": "Pune",      "soldPriceLakh": 3.60 },
-    { "soldMonth": "2026-06", "year": 2022, "kmDriven": 27300, "fuel": "CNG",    "variant": "VXi CNG", "city": "Ahmedabad", "soldPriceLakh": 4.15 },
-    { "soldMonth": "2026-06", "year": 2020, "kmDriven": 72500, "fuel": "Petrol", "variant": "ZXi",     "city": "Hyderabad", "soldPriceLakh": 3.05 },
-    { "soldMonth": "2026-05", "year": 2023, "kmDriven": 32800, "fuel": "Petrol", "variant": "ZXi AGS", "city": "Chennai",   "soldPriceLakh": 5.10 },
-    { "soldMonth": "2026-05", "year": 2022, "kmDriven": 46100, "fuel": "Petrol", "variant": "VXi",     "city": "Kolkata",   "soldPriceLakh": 4.35 },
-    { "soldMonth": "2026-05", "year": 2024, "kmDriven": 14700, "fuel": "CNG",    "variant": "ZXi CNG", "city": "Delhi NCR", "soldPriceLakh": 6.50 },
-    { "soldMonth": "2026-04", "year": 2021, "kmDriven": 39900, "fuel": "Petrol", "variant": "ZXi",     "city": "Bengaluru", "soldPriceLakh": 4.15 },
-    { "soldMonth": "2026-04", "year": 2020, "kmDriven": 84300, "fuel": "Petrol", "variant": "VXi",     "city": "Pune",      "soldPriceLakh": 2.70 },
-    { "soldMonth": "2026-04", "year": 2023, "kmDriven": 21500, "fuel": "Petrol", "variant": "ZXi+",    "city": "Mumbai",    "soldPriceLakh": 5.85 }
+    {
+      "soldMonth": "2026-07",
+      "year": 2023,
+      "kmDriven": 18400,
+      "fuel": "Petrol",
+      "variant": "VXi",
+      "city": "Delhi NCR",
+      "soldPriceLakh": 5.45
+    },
+    {
+      "soldMonth": "2026-07",
+      "year": 2022,
+      "kmDriven": 41200,
+      "fuel": "Petrol",
+      "variant": "ZXi",
+      "city": "Bengaluru",
+      "soldPriceLakh": 4.8
+    },
+    {
+      "soldMonth": "2026-07",
+      "year": 2024,
+      "kmDriven": 9200,
+      "fuel": "Petrol",
+      "variant": "ZXi+",
+      "city": "Mumbai",
+      "soldPriceLakh": 6.75
+    },
+    {
+      "soldMonth": "2026-06",
+      "year": 2021,
+      "kmDriven": 58600,
+      "fuel": "Petrol",
+      "variant": "VXi",
+      "city": "Pune",
+      "soldPriceLakh": 3.6
+    },
+    {
+      "soldMonth": "2026-06",
+      "year": 2022,
+      "kmDriven": 27300,
+      "fuel": "CNG",
+      "variant": "VXi CNG",
+      "city": "Ahmedabad",
+      "soldPriceLakh": 4.15
+    },
+    {
+      "soldMonth": "2026-06",
+      "year": 2020,
+      "kmDriven": 72500,
+      "fuel": "Petrol",
+      "variant": "ZXi",
+      "city": "Hyderabad",
+      "soldPriceLakh": 3.05
+    },
+    {
+      "soldMonth": "2026-05",
+      "year": 2023,
+      "kmDriven": 32800,
+      "fuel": "Petrol",
+      "variant": "ZXi AGS",
+      "city": "Chennai",
+      "soldPriceLakh": 5.1
+    },
+    {
+      "soldMonth": "2026-05",
+      "year": 2022,
+      "kmDriven": 46100,
+      "fuel": "Petrol",
+      "variant": "VXi",
+      "city": "Kolkata",
+      "soldPriceLakh": 4.35
+    },
+    {
+      "soldMonth": "2026-05",
+      "year": 2024,
+      "kmDriven": 14700,
+      "fuel": "CNG",
+      "variant": "ZXi CNG",
+      "city": "Delhi NCR",
+      "soldPriceLakh": 6.5
+    },
+    {
+      "soldMonth": "2026-04",
+      "year": 2021,
+      "kmDriven": 39900,
+      "fuel": "Petrol",
+      "variant": "ZXi",
+      "city": "Bengaluru",
+      "soldPriceLakh": 4.15
+    },
+    {
+      "soldMonth": "2026-04",
+      "year": 2020,
+      "kmDriven": 84300,
+      "fuel": "Petrol",
+      "variant": "VXi",
+      "city": "Pune",
+      "soldPriceLakh": 2.7
+    },
+    {
+      "soldMonth": "2026-04",
+      "year": 2023,
+      "kmDriven": 21500,
+      "fuel": "Petrol",
+      "variant": "ZXi+",
+      "city": "Mumbai",
+      "soldPriceLakh": 5.85
+    }
   ],
   "faq": [
     {
       "q": "What is the resale value of a Maruti Swift in India?",
-      "a": "A well-maintained Maruti Swift retains approximately 75% of its ex-showroom price after two years, 67% after three years, and 53% after five years, based on transaction data across Indian metros as of July 2026. For a 2022 VXi petrol with 25,000–50,000 km, the current fair-market band is roughly ₹4.15–4.85 lakh."
+      "a": "A well-maintained Maruti Swift retains approximately 75% of its ex-showroom price after two years, 67% after three years, and 53% after five years, based on transaction data across Indian metros as of July 2026. For a 2022 VXi petrol with 25,000–50,000 km, the current fair-market band is roughly ₹4.8–5.53 lakh."
     },
     {
       "q": "Does a Swift CNG hold value better than a Swift petrol?",
@@ -186,9 +758,21 @@
     }
   ],
   "relatedModels": [
-    { "make": "maruti", "model": "baleno", "label": "Maruti Baleno" },
-    { "make": "hyundai", "model": "i20", "label": "Hyundai i20" },
-    { "make": "tata", "model": "altroz", "label": "Tata Altroz" }
+    {
+      "make": "maruti",
+      "model": "wagon-r",
+      "label": "Maruti Wagon R"
+    },
+    {
+      "make": "hyundai",
+      "model": "i20",
+      "label": "Hyundai i20"
+    },
+    {
+      "make": "tata",
+      "model": "altroz",
+      "label": "Tata Altroz"
+    }
   ],
   "authorSlug": "a-verma"
 }

@@ -1,0 +1,632 @@
+{
+  "slug": {
+    "make": "maruti",
+    "model": "s-presso"
+  },
+  "make": "Maruti Suzuki",
+  "model": "S-Presso",
+  "segment": "Hatchback",
+  "bodyType": "Hatchback",
+  "lastRefreshedISO": "2026-10-18",
+  "refreshCadence": "Monthly",
+  "variants": [
+    {
+      "name": "STD",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 4.25
+    },
+    {
+      "name": "LXI",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 4.95
+    },
+    {
+      "name": "VXI+",
+      "fuel": "Petrol",
+      "transmission": "MT",
+      "exShowroom": 5.49
+    },
+    {
+      "name": "VXI (O) AMT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 5.65
+    },
+    {
+      "name": "VXI PLUS (O) AMT",
+      "fuel": "Petrol",
+      "transmission": "AT",
+      "exShowroom": 5.99
+    },
+    {
+      "name": "LXI S-CNG",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 5.92
+    },
+    {
+      "name": "VXI S-CNG",
+      "fuel": "CNG",
+      "transmission": "MT",
+      "exShowroom": 6.1
+    }
+  ],
+  "permutations": [
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 4.41,
+      "mid": 4.74,
+      "high": 5.07
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 4.24,
+      "mid": 4.55,
+      "high": 4.87
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 3.99,
+      "mid": 4.29,
+      "high": 4.59
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.72,
+      "mid": 4,
+      "high": 4.28
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.44,
+      "mid": 3.7,
+      "high": 3.96
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 3.86,
+      "mid": 4.15,
+      "high": 4.44
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 3.71,
+      "mid": 3.99,
+      "high": 4.26
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 3.49,
+      "mid": 3.76,
+      "high": 4.02
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 3.26,
+      "mid": 3.5,
+      "high": 3.75
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 3.01,
+      "mid": 3.24,
+      "high": 3.47
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 3.51,
+      "mid": 3.78,
+      "high": 4.04
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 3.38,
+      "mid": 3.63,
+      "high": 3.88
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 3.18,
+      "mid": 3.42,
+      "high": 3.66
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 2.96,
+      "mid": 3.19,
+      "high": 3.41
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 2.74,
+      "mid": 2.95,
+      "high": 3.16
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 3.1,
+      "mid": 3.33,
+      "high": 3.57
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 2.98,
+      "mid": 3.2,
+      "high": 3.43
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 2.81,
+      "mid": 3.02,
+      "high": 3.23
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 2.62,
+      "mid": 2.81,
+      "high": 3.01
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 2.42,
+      "mid": 2.6,
+      "high": 2.78
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "Petrol",
+      "low": 2.75,
+      "mid": 2.96,
+      "high": 3.17
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "Petrol",
+      "low": 2.65,
+      "mid": 2.85,
+      "high": 3.05
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "Petrol",
+      "low": 2.5,
+      "mid": 2.68,
+      "high": 2.87
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "Petrol",
+      "low": 2.33,
+      "mid": 2.5,
+      "high": 2.68
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "Petrol",
+      "low": 2.15,
+      "mid": 2.31,
+      "high": 2.48
+    },
+    {
+      "year": 2024,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 5.03,
+      "mid": 5.41,
+      "high": 5.79
+    },
+    {
+      "year": 2024,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.83,
+      "mid": 5.2,
+      "high": 5.56
+    },
+    {
+      "year": 2024,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 4.56,
+      "mid": 4.9,
+      "high": 5.24
+    },
+    {
+      "year": 2024,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 4.25,
+      "mid": 4.57,
+      "high": 4.88
+    },
+    {
+      "year": 2024,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.93,
+      "mid": 4.22,
+      "high": 4.52
+    },
+    {
+      "year": 2023,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.4,
+      "mid": 4.73,
+      "high": 5.06
+    },
+    {
+      "year": 2023,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 4.23,
+      "mid": 4.55,
+      "high": 4.87
+    },
+    {
+      "year": 2023,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 3.99,
+      "mid": 4.29,
+      "high": 4.59
+    },
+    {
+      "year": 2023,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.71,
+      "mid": 3.99,
+      "high": 4.27
+    },
+    {
+      "year": 2023,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.44,
+      "mid": 3.7,
+      "high": 3.96
+    },
+    {
+      "year": 2022,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 4.01,
+      "mid": 4.31,
+      "high": 4.61
+    },
+    {
+      "year": 2022,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 3.85,
+      "mid": 4.14,
+      "high": 4.43
+    },
+    {
+      "year": 2022,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 3.63,
+      "mid": 3.91,
+      "high": 4.18
+    },
+    {
+      "year": 2022,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 3.38,
+      "mid": 3.64,
+      "high": 3.89
+    },
+    {
+      "year": 2022,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 3.13,
+      "mid": 3.37,
+      "high": 3.6
+    },
+    {
+      "year": 2021,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 3.54,
+      "mid": 3.8,
+      "high": 4.07
+    },
+    {
+      "year": 2021,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 3.4,
+      "mid": 3.65,
+      "high": 3.91
+    },
+    {
+      "year": 2021,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 3.2,
+      "mid": 3.45,
+      "high": 3.69
+    },
+    {
+      "year": 2021,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 2.98,
+      "mid": 3.21,
+      "high": 3.43
+    },
+    {
+      "year": 2021,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 2.76,
+      "mid": 2.97,
+      "high": 3.18
+    },
+    {
+      "year": 2020,
+      "kmBand": "0-10k",
+      "fuel": "CNG",
+      "low": 3.14,
+      "mid": 3.38,
+      "high": 3.62
+    },
+    {
+      "year": 2020,
+      "kmBand": "10-25k",
+      "fuel": "CNG",
+      "low": 3.02,
+      "mid": 3.25,
+      "high": 3.48
+    },
+    {
+      "year": 2020,
+      "kmBand": "25-50k",
+      "fuel": "CNG",
+      "low": 2.85,
+      "mid": 3.06,
+      "high": 3.28
+    },
+    {
+      "year": 2020,
+      "kmBand": "50-75k",
+      "fuel": "CNG",
+      "low": 2.65,
+      "mid": 2.85,
+      "high": 3.05
+    },
+    {
+      "year": 2020,
+      "kmBand": "75k+",
+      "fuel": "CNG",
+      "low": 2.46,
+      "mid": 2.64,
+      "high": 2.83
+    }
+  ],
+  "cityVariance": [
+    {
+      "city": "Delhi NCR",
+      "variancePct": 0,
+      "note": "Baseline entry-hatchback demand"
+    },
+    {
+      "city": "Mumbai",
+      "variancePct": 1,
+      "note": "Tight compact-car supply"
+    },
+    {
+      "city": "Bengaluru",
+      "variancePct": 1,
+      "note": "Steady entry-level demand"
+    },
+    {
+      "city": "Hyderabad",
+      "variancePct": 0,
+      "note": "Baseline demand"
+    },
+    {
+      "city": "Chennai",
+      "variancePct": -1,
+      "note": "Hatchback demand skews to Alto and Swift"
+    },
+    {
+      "city": "Pune",
+      "variancePct": 0,
+      "note": "Baseline demand"
+    },
+    {
+      "city": "Kolkata",
+      "variancePct": 2,
+      "note": "Strong value-conscious demand"
+    },
+    {
+      "city": "Ahmedabad",
+      "variancePct": 3,
+      "note": "Maruti heartland, highest liquidity"
+    }
+  ],
+  "retentionCurve": [
+    {
+      "ageYears": 0.5,
+      "retentionPct": 89
+    },
+    {
+      "ageYears": 1,
+      "retentionPct": 82
+    },
+    {
+      "ageYears": 1.5,
+      "retentionPct": 76
+    },
+    {
+      "ageYears": 2,
+      "retentionPct": 71
+    },
+    {
+      "ageYears": 2.5,
+      "retentionPct": 67
+    },
+    {
+      "ageYears": 3,
+      "retentionPct": 63
+    },
+    {
+      "ageYears": 3.5,
+      "retentionPct": 59
+    },
+    {
+      "ageYears": 4,
+      "retentionPct": 56
+    },
+    {
+      "ageYears": 4.5,
+      "retentionPct": 52
+    },
+    {
+      "ageYears": 5,
+      "retentionPct": 49
+    },
+    {
+      "ageYears": 5.5,
+      "retentionPct": 46
+    },
+    {
+      "ageYears": 6,
+      "retentionPct": 43
+    },
+    {
+      "ageYears": 6.5,
+      "retentionPct": 41
+    },
+    {
+      "ageYears": 7,
+      "retentionPct": 38
+    },
+    {
+      "ageYears": 7.5,
+      "retentionPct": 36
+    },
+    {
+      "ageYears": 8,
+      "retentionPct": 34
+    },
+    {
+      "ageYears": 8.5,
+      "retentionPct": 32
+    },
+    {
+      "ageYears": 9,
+      "retentionPct": 30
+    },
+    {
+      "ageYears": 9.5,
+      "retentionPct": 28
+    },
+    {
+      "ageYears": 10,
+      "retentionPct": 26
+    }
+  ],
+  "segmentAverageRetention": {
+    "3year": 64,
+    "5year": 50,
+    "10year": 27
+  },
+  "context": [
+    "The S-Presso launched in 2019 as Maruti's entry point into micro-SUV-styled hatchback design, built on a modified version of the platform underpinning the WagonR and powered by the same 1.0-litre 3-cylinder petrol engine used across Maruti's smallest cars. It sits below the WagonR and Alto K10 in Maruti's lineup and is positioned primarily at first-time buyers and ride-hailing operators looking for low running costs.",
+    "Factory-fitted CNG has been available on the S-Presso since 2020, and it follows the broader entry-hatchback pattern of trading close to petrol parity outside high gas-penetration states, with a firmer premium in Gujarat, Delhi NCR, and parts of Maharashtra where CNG infrastructure is dense and running-cost sensitivity is highest.",
+    "The S-Presso benefits enormously from Maruti's unmatched service network and parts availability, which keeps resale liquidity high even for a relatively niche-styled model. Its boxy, raised-SUV-look design draws a mixed reception among some buyers, which caps its resale pull slightly below the more conventionally styled Alto K10 and WagonR at equivalent age and km.",
+    "AGS automatic variants, offered only on the VXi trim, have seen rising demand in the used market as automatic preference grows among first-time and city-only buyers, and the resale gap between AGS and manual S-Presso units has narrowed meaningfully since 2023."
+  ],
+  "faq": [
+    {
+      "q": "What is the resale value of a Maruti S-Presso in India?",
+      "a": "A well-maintained S-Presso retains roughly 71% of its ex-showroom price after two years, 63% after three years, and 49% after five years, as of September 2026. For a 2022 petrol VXi with 25,000-50,000 km, the current fair-market band is approximately ₹3.18–3.66 lakh."
+    },
+    {
+      "q": "Does S-Presso CNG hold value better than the petrol version?",
+      "a": "Factory CNG S-Presso units trade at a modest premium over equivalent petrol across most of the current data, reflecting the running-cost advantage for budget-conscious and ride-hailing buyers, with the firmest premium in Delhi NCR, Ahmedabad, and other high gas-penetration markets."
+    },
+    {
+      "q": "Why does the S-Presso resell for slightly less than the Alto K10 or WagonR?",
+      "a": "The S-Presso's distinctive micro-SUV styling draws a mixed reception among some used-car buyers, which keeps its five-year retention of about 49% a shade below the entry-hatchback segment average of 50%, even though it shares Maruti's service network advantages."
+    },
+    {
+      "q": "How much does an S-Presso depreciate per year?",
+      "a": "The S-Presso depreciates roughly 18% in year one and another 11% in year two, before settling into a steadier 6-7% annual decline from year three onward. Ten-year retention sits at around 26%."
+    },
+    {
+      "q": "Which city gives the best resale price for an S-Presso?",
+      "a": "Ahmedabad currently trades at +3% above the national mid, reflecting Maruti's dominant local presence and high liquidity, with Kolkata close behind at +2%. Chennai is the softest market at roughly -1%, where hatchback demand skews toward the Alto and Swift."
+    }
+  ],
+  "relatedModels": [
+    {
+      "make": "maruti",
+      "model": "alto-k10",
+      "label": "Maruti Alto K10"
+    },
+    {
+      "make": "maruti",
+      "model": "wagon-r",
+      "label": "Maruti Wagon R"
+    },
+    {
+      "make": "hyundai",
+      "model": "grand-i10-nios",
+      "label": "Hyundai Grand i10 Nios"
+    }
+  ]
+}
