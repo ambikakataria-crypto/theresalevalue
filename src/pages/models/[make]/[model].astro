@@ -1,19 +1,32 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import swiftData from '../../../data/models/maruti-swift.json';
-import cretaData from '../../../data/models/hyundai-creta.json';
-import nexonData from '../../../data/models/tata-nexon.json';
-import innovaData from '../../../data/models/toyota-innova-crysta.json';
 
 export function getStaticPaths() {
-  const models = [swiftData, cretaData, nexonData, innovaData];
-  return models.map((m) => ({
-    params: { make: m.slug.make, model: m.slug.model },
-    props: { data: m },
-  }));
+  // Every model report is one JSON file here; adding a file is enough to
+  // publish a page, no import to wire up by hand.
+  const modelModules = import.meta.glob('../../../data/models/*.json', { eager: true });
+  return Object.values(modelModules).map((mod: any) => {
+    const m = mod.default ?? mod;
+    return {
+      params: { make: m.slug.make, model: m.slug.model },
+      props: { data: m },
+    };
+  });
 }
 
 const { data } = Astro.props;
+
+// relatedModels is hand-picked per file and can drift from the actual set of
+// published reports (a model referenced when the content was written, then
+// never added, or since retired) — render only links that resolve to a real
+// page rather than trust the data file blindly.
+const publishedSlugs = new Set(
+  Object.values(import.meta.glob('../../../data/models/*.json', { eager: true })).map((mod: any) => {
+    const m = mod.default ?? mod;
+    return `${m.slug.make}/${m.slug.model}`;
+  })
+);
+const relatedModels = (data.relatedModels ?? []).filter((r: any) => publishedSlugs.has(`${r.make}/${r.model}`));
 
 // Derived stats
 const currentYear = 2026;
@@ -29,6 +42,10 @@ const exShowroomByFuel: Record<string, number> = data.variants.reduce((acc: any,
 const avgExShowroom: Record<string, number> = Object.fromEntries(
   Object.entries(exShowroomByFuel).map(([fuel, { sum, n }]: any) => [fuel, sum / n])
 );
+// Calculator's fuel dropdown: fixed Petrol/CNG options broke on anything
+// diesel-only or petrol-only-no-CNG (most of the catalogue), so it's driven
+// from the variant lineup instead.
+const fuelOptions: string[] = Object.keys(exShowroomByFuel);
 
 // Depreciation SVG geometry
 const chartW = 600;
@@ -72,7 +89,7 @@ const description = `${data.make} ${data.model} resale value in India: value ret
         {data.make} {data.model} resale value in India, {currentYear} market range
       </h1>
       <p class="text-lg text-graphite leading-relaxed mb-4">
-        The {data.model} is India's highest-volume {data.bodyType.toLowerCase()} and one of the strongest resale performers in its segment. Below is the value-retention curve across year, kilometres, and fuel type, alongside variant-wise ex-showroom prices and city-level adjustments. For a rupee price band on your specific car, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation calculator</a>.
+        A look at how the {data.model} holds its value in the Indian used-car market. Below is the value-retention curve across year, kilometres, and fuel type, alongside variant-wise ex-showroom prices and city-level adjustments. For a rupee price band on your specific car, use the <a href="/valuation" class="text-signal-600 hover:underline">valuation calculator</a>.
       </p>
       <div class="flex flex-wrap items-center gap-4 text-sm text-slate-soft">
         <span>Data refreshed {new Date(data.lastRefreshedISO).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · {data.refreshCadence}</span>
@@ -104,8 +121,7 @@ const description = `${data.make} ${data.model} resale value in India: value ret
           <label class="block text-sm">
             <span class="block text-xs uppercase tracking-widest text-slate-soft mb-1.5">Fuel type</span>
             <select id="calc-fuel" class="w-full border border-cream-200 rounded-md px-3 py-2 bg-white text-navy-900">
-              <option value="Petrol">Petrol</option>
-              <option value="CNG">CNG</option>
+              {fuelOptions.map((f: string, i: number) => <option value={f} selected={i === 0}>{f}</option>)}
             </select>
           </label>
         </div>
@@ -293,11 +309,11 @@ const description = `${data.make} ${data.model} resale value in India: value ret
       </div>
 
       <!-- 11. Related models -->
-      {data.relatedModels?.length > 0 && (
+      {relatedModels.length > 0 && (
         <section aria-labelledby="rel-heading" class="mb-4">
           <h2 id="rel-heading" class="text-2xl font-serif text-navy-900 mb-4">Related models in this segment</h2>
           <div class="grid md:grid-cols-3 gap-4">
-            {data.relatedModels.map((r: any) => (
+            {relatedModels.map((r: any) => (
               <a href={`/models/${r.make}/${r.model}`} class="card-institutional bg-white hover:border-signal-600 transition-colors no-underline">
                 <div class="text-xs uppercase tracking-widest text-slate-soft mb-1">Same segment</div>
                 <div class="font-serif text-navy-900 text-lg">{r.label} resale value</div>
