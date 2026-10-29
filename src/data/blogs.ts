@@ -150,19 +150,17 @@ export const rawArticles: BlogArticle[] = [
     slug: 'petrol-diesel-cng-resale-value-india',
     title: 'Petrol vs diesel vs CNG resale value in India: what the fuel badge alone is worth (2026)',
     excerpt: 'Fuel type does not have one resale value in India. It has a different one in each registration city. The NCR diesel rule, the Kochi control case, factory versus retrofitted CNG, the fuel-by-city grid, five-year retention by fuel, and when a retrofit actually recovers its cost.',
-    date: '',
+    date: '2026-10-29',
     readTime: '15 min read',
     category: 'Fuel · Analysis',
-    queued: true,
   },
   {
     slug: 'maruti-suzuki-resale-value-india',
     title: 'Maruti Suzuki resale value in India: 10 models ranked by 5-year retention (2026)',
     excerpt: 'Roughly 20 percentage points separate the strongest-holding Maruti from the weakest at five years. The Maruti vs Hyundai brand gap is closer to 5. Ten models ranked, the variant trap, Nexa vs Arena, the city effect, and what a full inspection actually finds before an offer is made.',
-    date: '',
+    date: '2026-10-29',
     readTime: '16 min read',
     category: 'Model · Brand',
-    queued: true,
   },
 ];
 
